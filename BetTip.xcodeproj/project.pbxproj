@@ -43,6 +43,7 @@
 		B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetTipTests.swift; sourceTree = "<group>"; };
 		B08A45901F9DD5430082BDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
 		BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetTipTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4973F39DC4820D359D81752 /* Pods-BetTipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTipTests/Pods-BetTipTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1E04B9CFB290BDC889BEE1C /* Pods-BetTipTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTipTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetTipTests/Pods-BetTipTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,13 +112,9 @@
 		B08A45781F9DD5430082BDD3 /* BetTip */ = {
 			isa = PBXGroup;
 			children = (
+				B0A8E6701FA7AE27001A8BBA /* SupportedFiles */,
+				B0A8E6731FA7B091001A8BBA /* Sceens */,
 				B08A45791F9DD5430082BDD3 /* AppDelegate.swift */,
-				B08A457B1F9DD5430082BDD3 /* ViewController.swift */,
-				B08A457D1F9DD5430082BDD3 /* Main.storyboard */,
-				B08A45801F9DD5430082BDD3 /* Assets.xcassets */,
-				B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */,
-				B08A45851F9DD5430082BDD3 /* Info.plist */,
-				B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */,
 			);
 			path = BetTip;
 			sourceTree = "<group>";
@@ -129,6 +126,75 @@
 				B08A45901F9DD5430082BDD3 /* Info.plist */,
 			);
 			path = BetTipTests;
+			sourceTree = "<group>";
+		};
+		B0A8E6701FA7AE27001A8BBA /* SupportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B08A45801F9DD5430082BDD3 /* Assets.xcassets */,
+				B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */,
+				B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */,
+				B08A45851F9DD5430082BDD3 /* Info.plist */,
+				B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */,
+			);
+			path = SupportedFiles;
+			sourceTree = "<group>";
+		};
+		B0A8E6731FA7B091001A8BBA /* Sceens */ = {
+			isa = PBXGroup;
+			children = (
+				B0A8E6741FA7B0BF001A8BBA /* Main */,
+			);
+			path = Sceens;
+			sourceTree = "<group>";
+		};
+		B0A8E6741FA7B0BF001A8BBA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B0A8E6751FA7B0C5001A8BBA /* Models */,
+				B0A8E6781FA7B0DB001A8BBA /* Services */,
+				B0A8E6761FA7B0CE001A8BBA /* ViewControllers */,
+				B0A8E6791FA7B0EB001A8BBA /* ViewModels */,
+				B0A8E6771FA7B0D6001A8BBA /* Views */,
+				B08A457D1F9DD5430082BDD3 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B0A8E6751FA7B0C5001A8BBA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B0A8E6761FA7B0CE001A8BBA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B08A457B1F9DD5430082BDD3 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B0A8E6771FA7B0D6001A8BBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0A8E6781FA7B0DB001A8BBA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B0A8E6791FA7B0EB001A8BBA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +255,11 @@
 					B08A45751F9DD5430082BDD3 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					B08A45891F9DD5430082BDD3 = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -506,9 +577,10 @@
 			baseConfigurationReference = 656147D774EE3FD2EC2C1712 /* Pods-BetTip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BetTip/SupportedFiles/BetTip.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7UWG4ECEH7;
-				INFOPLIST_FILE = BetTip/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BetTip/SupportedFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = salieri.BetTipAppFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,10 +596,11 @@
 			baseConfigurationReference = 689B272117A621A948C4580D /* Pods-BetTip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BetTip/SupportedFiles/BetTip.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7UWG4ECEH7;
-				INFOPLIST_FILE = BetTip/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BetTip/SupportedFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = salieri.BetTipAppFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
