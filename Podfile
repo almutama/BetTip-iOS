@@ -1,8 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.2'
 use_frameworks!
-
-# ignore all warnings from all pods
 inhibit_all_warnings!
 
 def testing_pods
@@ -12,7 +10,7 @@ end
 
 def network_pods
   pod 'Moya/RxSwift', '~> 10.0'
-  pod 'ObjectMapper', '~> 2.2'
+  pod 'ObjectMapper'
   pod 'ReachabilitySwift'
 end
 
@@ -30,9 +28,9 @@ def ui_pods
   pod 'SwiftMessages'
   pod 'SideMenu'
   pod 'IGListKit'
-  pod "Hero"
+  pod 'Hero'
   pod 'HGPlaceholders'
-  pod "VegaScrollFlowLayout"
+  pod 'VegaScrollFlowLayout'
 end
 
 def general_pods
@@ -43,6 +41,8 @@ def general_pods
   pod 'SwiftGen'
   pod 'Swinject'
   pod 'SwinjectStoryboard'
+  pod 'KeychainAccess'
+  pod 'IQKeyboardManagerSwift'
 end
 
 def tracking_pods

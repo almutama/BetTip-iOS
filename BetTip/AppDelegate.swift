@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseMessaging
+import IQKeyboardManagerSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
