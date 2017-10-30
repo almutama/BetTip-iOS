@@ -13,7 +13,6 @@ end
 def network_pods
   pod 'Moya/RxSwift', '~> 10.0'
   pod 'ObjectMapper', '~> 2.2'
-  #pod 'Moya-ObjectMapper/RxSwift', '~> 2.4.2'
   pod 'ReachabilitySwift'
 end
 
@@ -28,9 +27,7 @@ end
 
 def ui_pods
   pod 'NVActivityIndicatorView'
-  #pod 'SCLAlertView'
   pod 'SwiftMessages'
-  #pod 'Kingfisher'
   pod 'SideMenu'
   pod 'IGListKit'
   pod "Hero"
@@ -51,6 +48,7 @@ end
 def tracking_pods
   pod 'HockeySDK'
   pod 'Crashlytics'
+  pod 'SwiftLint'
 end
 
 def ad_pods
