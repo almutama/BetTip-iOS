@@ -144,6 +144,7 @@
 				B08A45741F9DD5430082BDD3 /* Resources */,
 				E186F803D130792729DC96D4 /* [CP] Embed Pods Frameworks */,
 				C544BE41E67FBB4478CD02D4 /* [CP] Copy Pods Resources */,
+				B01B24821FA74BB6001F1466 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -281,6 +282,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		B01B24821FA74BB6001F1466 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		C35366029B3BCB78BD805CF8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -497,8 +512,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = salieri.BetTipAppFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "719ccb96-eb1b-4b49-9a0f-c705a2b83eae";
-				PROVISIONING_PROFILE_SPECIFIER = betTipFree_dev;
+				PROVISIONING_PROFILE = "db50dce8-a7c3-403d-b9ba-8994e0dc6faf";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development salieri.BetTipAppFree";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,8 +531,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = salieri.BetTipAppFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "93b8b737-b040-49bb-b5ef-ee2494326b47";
-				PROVISIONING_PROFILE_SPECIFIER = betTipFree_dis;
+				PROVISIONING_PROFILE = "5065f142-c3f1-4732-8b5e-8b4def254e8b";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc salieri.BetTipAppFree";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
