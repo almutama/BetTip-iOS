@@ -15,6 +15,7 @@
 		B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */; };
 		B08A458F1F9DD5430082BDD3 /* BetTipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */; };
 		B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */; };
+		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		ECB2F28AAA96B790E1286F06 /* Pods_BetTip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368ECDF0EA2EEC9691508FDF /* Pods_BetTip.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		B08A45901F9DD5430082BDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
+		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetTipTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4973F39DC4820D359D81752 /* Pods-BetTipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTipTests/Pods-BetTipTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1E04B9CFB290BDC889BEE1C /* Pods-BetTipTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTipTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetTipTests/Pods-BetTipTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,10 +133,11 @@
 		B0A8E6701FA7AE27001A8BBA /* SupportedFiles */ = {
 			isa = PBXGroup;
 			children = (
-				B08A45801F9DD5430082BDD3 /* Assets.xcassets */,
 				B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */,
 				B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */,
 				B08A45851F9DD5430082BDD3 /* Info.plist */,
+				B08A45801F9DD5430082BDD3 /* Assets.xcassets */,
+				B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */,
 				B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */,
 			);
 			path = SupportedFiles;
@@ -292,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */,
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
 				B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */,
 				B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */,
