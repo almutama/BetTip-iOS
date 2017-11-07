@@ -82,11 +82,11 @@ extension AppDelegate {
         print(userInfo)
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     }
 }
 
-extension AppDelegate : UNUserNotificationCenterDelegate {
+extension AppDelegate: UNUserNotificationCenterDelegate {
     
     // Receive displayed notifications for iOS 10 devices.
     @available(iOS 10.0, *)
@@ -102,9 +102,9 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     }
 }
 
-extension AppDelegate : MessagingDelegate {
+extension AppDelegate: MessagingDelegate {
     
-    public func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String){
+    public func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
         connectToMessaging()
     }
     
