@@ -33,6 +33,7 @@
 		368ECDF0EA2EEC9691508FDF /* Pods_BetTip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		656147D774EE3FD2EC2C1712 /* Pods-BetTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.debug.xcconfig"; sourceTree = "<group>"; };
 		689B272117A621A948C4580D /* Pods-BetTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.release.xcconfig"; sourceTree = "<group>"; };
+		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,8 +115,8 @@
 		B08A45781F9DD5430082BDD3 /* BetTip */ = {
 			isa = PBXGroup;
 			children = (
-				B0A8E6701FA7AE27001A8BBA /* SupportedFiles */,
 				B0A8E6731FA7B091001A8BBA /* Sceens */,
+				B0A8E6701FA7AE27001A8BBA /* SupportedFiles */,
 				B08A45791F9DD5430082BDD3 /* AppDelegate.swift */,
 			);
 			path = BetTip;
@@ -139,6 +140,7 @@
 				B08A45801F9DD5430082BDD3 /* Assets.xcassets */,
 				B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */,
 				B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */,
+				B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */,
 			);
 			path = SupportedFiles;
 			sourceTree = "<group>";
@@ -257,6 +259,7 @@
 				TargetAttributes = {
 					B08A45751F9DD5430082BDD3 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -581,6 +584,7 @@
 			baseConfigurationReference = 656147D774EE3FD2EC2C1712 /* Pods-BetTip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BetTip/SupportedFiles/BetTip.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7UWG4ECEH7;
@@ -590,6 +594,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "db50dce8-a7c3-403d-b9ba-8994e0dc6faf";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development salieri.BetTipAppFree";
+				SWIFT_OBJC_BRIDGING_HEADER = "BetTip/SupportedFiles/BetTip-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -600,6 +606,7 @@
 			baseConfigurationReference = 689B272117A621A948C4580D /* Pods-BetTip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BetTip/SupportedFiles/BetTip.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -610,6 +617,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5065f142-c3f1-4732-8b5e-8b4def254e8b";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc salieri.BetTipAppFree";
+				SWIFT_OBJC_BRIDGING_HEADER = "BetTip/SupportedFiles/BetTip-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
