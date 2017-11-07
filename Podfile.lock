@@ -84,6 +84,7 @@ PODS:
   - IGListKit/Diffing (3.1.1)
   - IQKeyboardManagerSwift (5.0.4)
   - KeychainAccess (3.1.0)
+  - Keys (1.0.0)
   - leveldb-library (1.18.3)
   - Moya/Core (10.0.0):
     - Alamofire (~> 4.1)
@@ -137,6 +138,7 @@ DEPENDENCIES:
   - IGListKit
   - IQKeyboardManagerSwift
   - KeychainAccess
+  - Keys (from `Pods/CocoaPodsKeys`)
   - Moya/RxSwift (~> 10.0)
   - Nimble
   - NVActivityIndicatorView
@@ -153,6 +155,10 @@ DEPENDENCIES:
   - Swinject
   - SwinjectStoryboard
   - VegaScrollFlowLayout
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -178,6 +184,7 @@ SPEC CHECKSUMS:
   IGListKit: cb97f405ae43e59fe1da74271e19427ec20d3c07
   IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
   KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
   Moya: adb58b0f4e58430db43cc6e2f6ebab1836501186
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
@@ -199,6 +206,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: 006a53ad3ff5a30fce0285f1e8e8e42d9f99cc2f
+PODFILE CHECKSUM: 5558c2bf9f55d37d00437e0b30a7beacd50d367e
 
 COCOAPODS: 1.2.1

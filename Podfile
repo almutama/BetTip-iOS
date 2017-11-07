@@ -43,6 +43,14 @@ def general_pods
   pod 'SwinjectStoryboard'
   pod 'KeychainAccess'
   pod 'IQKeyboardManagerSwift'
+  
+  plugin 'cocoapods-keys', {
+      :project => "BetTip",
+      :target => "BetTip",
+      :keys => [
+      "HeyzapID"
+      ]
+  }
 end
 
 def tracking_pods

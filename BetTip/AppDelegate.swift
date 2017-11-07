@@ -11,6 +11,7 @@ import Firebase
 import FirebaseMessaging
 import IQKeyboardManagerSwift
 import UserNotifications
+import Keys
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -62,8 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func registerServices() {
+        let keys = BetTipKeys()
         FirebaseApp.configure()
         IQKeyboardManager.sharedManager().enable = true
+        HeyzapAds.start(withPublisherID: keys.heyzapID)
     }
 }
 
