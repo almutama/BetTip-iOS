@@ -19,7 +19,6 @@ extension UIImage {
         self.init(cgImage: (image?.cgImage)!)
     }
     
-    
     convenience init(offscreen view: UIView) {
         UIGraphicsBeginImageContextWithOptions(view.frame.size, false, UIScreen.main.scale)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
