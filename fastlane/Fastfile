@@ -50,18 +50,26 @@ platform :ios do
   # You can define as many lanes as you want
 
   after_all do |lane|
-    # This block is called, only if the executed lane was successful
-
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
+    slack(
+       message: "🚀 Everything went well :)",
+       success: true,
+     )
   end
 
   error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
+    slack(
+       message: "💔 Everything went worng :(",
+       success: false,
+       attachment_properties: {
+           fields: [
+               {
+                   title: "Error message",
+                   value: exception.to_s,
+                   short: false
+               }
+           ]
+       }
+     )
   end
 end
 
@@ -69,5 +77,5 @@ end
 # More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
 # All available actions: https://docs.fastlane.tools/actions
 
-# fastlane reports which actions are used. No personal data is recorded. 
+# fastlane reports which actions are used. No personal data is recorded.
 # Learn more at https://github.com/fastlane/fastlane#metrics
