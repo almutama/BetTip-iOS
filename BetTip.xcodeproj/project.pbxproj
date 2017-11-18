@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B925683303992C61BA36F38 /* Pods_BetTipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */; };
+		B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyApp.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* ViewController.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		656147D774EE3FD2EC2C1712 /* Pods-BetTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.debug.xcconfig"; sourceTree = "<group>"; };
 		689B272117A621A948C4580D /* Pods-BetTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.release.xcconfig"; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
+		B0569A091FC0A73300FF34A1 /* HockeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyApp.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,50 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B0569A061FC061FA00FF34A1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A0B1FC0AFED00FF34A1 /* Extensions */,
+				B0569A081FC0A70F00FF34A1 /* Configuration */,
+				B0FE4A321FBAD33C008F2EE6 /* Constants */,
+				B0FE4A381FBAD3A3008F2EE6 /* Controls */,
+				B0FE4A331FBAD34A008F2EE6 /* Events */,
+				B0FE4A341FBAD351008F2EE6 /* GeneratedCodes */,
+				B0FE4A351FBAD35A008F2EE6 /* Helpers */,
+				B0569A071FC0A61200FF34A1 /* Network */,
+				B0FE4A391FBAD3AC008F2EE6 /* Presenters */,
+				B0FE4A311FBAD32F008F2EE6 /* Services */,
+				B0FE4A361FBAD371008F2EE6 /* Storage */,
+				B0FE4A371FBAD37B008F2EE6 /* Utilities */,
+				B0FE4A3A1FBAD3B1008F2EE6 /* ViewControllers */,
+				B0FE4A3B1FBAD3BF008F2EE6 /* ViewModels */,
+				B0FE4A3C1FBAD3C6008F2EE6 /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B0569A071FC0A61200FF34A1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B0569A081FC0A70F00FF34A1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A091FC0A73300FF34A1 /* HockeyApp.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		B0569A0B1FC0AFED00FF34A1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B08A456D1F9DD5430082BDD3 = {
 			isa = PBXGroup;
 			children = (
@@ -123,10 +169,7 @@
 		B08A45781F9DD5430082BDD3 /* BetTip */ = {
 			isa = PBXGroup;
 			children = (
-				B0FE4A2C1FBAD183008F2EE6 /* Business */,
-				B0FE4A2D1FBAD2D5008F2EE6 /* Commons */,
-				B0FE4A2E1FBAD2E0008F2EE6 /* Presentation */,
-				B0FE4A301FBAD2FD008F2EE6 /* Resource */,
+				B0569A061FC061FA00FF34A1 /* Shared */,
 				B0A8E6731FA7B091001A8BBA /* Sceens */,
 				B0A8E6701FA7AE27001A8BBA /* SupportedFiles */,
 				B08A45791F9DD5430082BDD3 /* AppDelegate.swift */,
@@ -184,47 +227,6 @@
 				B08A457B1F9DD5430082BDD3 /* ViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		B0FE4A2C1FBAD183008F2EE6 /* Business */ = {
-			isa = PBXGroup;
-			children = (
-				B0FE4A311FBAD32F008F2EE6 /* Services */,
-			);
-			path = Business;
-			sourceTree = "<group>";
-		};
-		B0FE4A2D1FBAD2D5008F2EE6 /* Commons */ = {
-			isa = PBXGroup;
-			children = (
-				B0FE4A321FBAD33C008F2EE6 /* Constants */,
-				B0FE4A331FBAD34A008F2EE6 /* Events */,
-				B0FE4A341FBAD351008F2EE6 /* GeneratedCodes */,
-				B0FE4A351FBAD35A008F2EE6 /* Helpers */,
-				B0FE4A361FBAD371008F2EE6 /* Storage */,
-				B0FE4A371FBAD37B008F2EE6 /* Utilities */,
-			);
-			path = Commons;
-			sourceTree = "<group>";
-		};
-		B0FE4A2E1FBAD2E0008F2EE6 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				B0FE4A381FBAD3A3008F2EE6 /* Controls */,
-				B0FE4A391FBAD3AC008F2EE6 /* Presenters */,
-				B0FE4A3A1FBAD3B1008F2EE6 /* ViewControllers */,
-				B0FE4A3B1FBAD3BF008F2EE6 /* ViewModels */,
-				B0FE4A3C1FBAD3C6008F2EE6 /* Views */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		B0FE4A301FBAD2FD008F2EE6 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				B0FE4A3D1FBAD3EB008F2EE6 /* Fonts */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		B0FE4A311FBAD32F008F2EE6 /* Services */ = {
@@ -309,13 +311,6 @@
 			children = (
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		B0FE4A3D1FBAD3EB008F2EE6 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		B0FE4A3E1FBAD401008F2EE6 /* Login */ = {
@@ -579,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
 			);

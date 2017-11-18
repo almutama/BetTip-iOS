@@ -48,7 +48,8 @@ def general_pods
       :project => "BetTip",
       :target => "BetTip",
       :keys => [
-      "HeyzapID"
+      "HeyzapID",
+      "HockeyID"
       ]
   }
 end

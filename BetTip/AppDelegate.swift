@@ -63,10 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func registerServices() {
-        let keys = BetTipKeys()
         FirebaseApp.configure()
         IQKeyboardManager.sharedManager().enable = true
-        HeyzapAds.start(withPublisherID: keys.heyzapID)
+        HockeyApp().setupAuth()
+        HeyzapAds.start(withPublisherID: BetTipKeys().heyzapID)
     }
 }
 
