@@ -10,6 +10,8 @@
 		8B925683303992C61BA36F38 /* Pods_BetTipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */; };
 		B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyApp.swift */; };
 		B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */; };
+		B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */; };
+		B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A101FC0B9B400FF34A1 /* Reusable.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* ViewController.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B0569A091FC0A73300FF34A1 /* HockeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyApp.swift; sourceTree = "<group>"; };
 		B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		B0569A101FC0B9B400FF34A1 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,11 +111,11 @@
 		B0569A061FC061FA00FF34A1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A0B1FC0AFED00FF34A1 /* Extensions */,
 				B0569A081FC0A70F00FF34A1 /* Configuration */,
 				B0FE4A321FBAD33C008F2EE6 /* Constants */,
 				B0FE4A381FBAD3A3008F2EE6 /* Controls */,
 				B0FE4A331FBAD34A008F2EE6 /* Events */,
+				B0569A0B1FC0AFED00FF34A1 /* Extensions */,
 				B0FE4A341FBAD351008F2EE6 /* GeneratedCodes */,
 				B0FE4A351FBAD35A008F2EE6 /* Helpers */,
 				B0569A071FC0A61200FF34A1 /* Network */,
@@ -129,6 +133,7 @@
 		B0569A071FC0A61200FF34A1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 		B0FE4A351FBAD35A008F2EE6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B0569A101FC0B9B400FF34A1 /* Reusable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -577,10 +583,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */,
 				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */,
 				B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
+				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
