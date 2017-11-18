@@ -8,17 +8,17 @@
 
 import Reachability
 
-protocol ReachabilityManagerType : class {
-    var currentReachabilityStatus: Reachability.NetworkStatus { get }
+protocol ReachabilityManagerType: class {
+    var currentReachabilityStatus: Reachability.Connection { get }
 }
 
-enum ReachabilityManagerError : Error {
+enum ReachabilityManagerError: Error {
     case unreachable
 }
 
-final class ReachabilityManager : ReachabilityManagerType {
+final class ReachabilityManager: ReachabilityManagerType {
     fileprivate var reachability: Reachability?
-    fileprivate let fallbackNetworkStatus = Reachability.NetworkStatus.notReachable
+    fileprivate let fallbackNetworkStatus = Reachability.Connection.none
     
     fileprivate init(reachability: Reachability) {
         self.reachability = reachability
@@ -35,15 +35,14 @@ final class ReachabilityManager : ReachabilityManagerType {
         } catch { }
     }
     
-    var currentReachabilityStatus: Reachability.NetworkStatus {
-        return reachability?.currentReachabilityStatus ?? fallbackNetworkStatus
+    var currentReachabilityStatus: Reachability.Connection {
+        return reachability?.connection ?? fallbackNetworkStatus
     }
     
     fileprivate func whenReachable(_ reachability: Reachability) {
     }
     
     fileprivate func whenUnreachable(_ reachability: Reachability) {
-        ErrorHandler.handleError(ReachabilityManagerError.unreachable)
     }
     
     deinit {
