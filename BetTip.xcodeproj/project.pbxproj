@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B925683303992C61BA36F38 /* Pods_BetTipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */; };
 		B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyApp.swift */; };
+		B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* ViewController.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		689B272117A621A948C4580D /* Pods-BetTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.release.xcconfig"; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B0569A091FC0A73300FF34A1 /* HockeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyApp.swift; sourceTree = "<group>"; };
+		B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		B0569A0B1FC0AFED00FF34A1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 			files = (
 				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */,
+				B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
