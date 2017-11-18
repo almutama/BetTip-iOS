@@ -16,6 +16,13 @@
 		B0569A151FC0BA1100FF34A1 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A141FC0BA1100FF34A1 /* UICollectionView+Ext.swift */; };
 		B0569A171FC0BF2800FF34A1 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A161FC0BF2800FF34A1 /* NibView.swift */; };
 		B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A191FC0C40B00FF34A1 /* Style.swift */; };
+		B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A1B1FC0CB8700FF34A1 /* ThemeManager.swift */; };
+		B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A1D1FC0CCA800FF34A1 /* DefaultCompactTheme.swift */; };
+		B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A1F1FC0CCB500FF34A1 /* DefaultTheme.swift */; };
+		B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A211FC0CD4300FF34A1 /* UIScreen+Ext.swift */; };
+		B0569A241FC0CD9C00FF34A1 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A231FC0CD9C00FF34A1 /* UIImage+Ext.swift */; };
+		B0569A261FC0CDF300FF34A1 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A251FC0CDF300FF34A1 /* UIColor+Ext.swift */; };
+		B0569A281FC0CF6700FF34A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A271FC0CF6700FF34A1 /* Constants.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* ViewController.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -54,6 +61,13 @@
 		B0569A141FC0BA1100FF34A1 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		B0569A161FC0BF2800FF34A1 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		B0569A191FC0C40B00FF34A1 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		B0569A1B1FC0CB8700FF34A1 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		B0569A1D1FC0CCA800FF34A1 /* DefaultCompactTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCompactTheme.swift; sourceTree = "<group>"; };
+		B0569A1F1FC0CCB500FF34A1 /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
+		B0569A211FC0CD4300FF34A1 /* UIScreen+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Ext.swift"; sourceTree = "<group>"; };
+		B0569A231FC0CD9C00FF34A1 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		B0569A251FC0CDF300FF34A1 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		B0569A271FC0CF6700FF34A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +133,6 @@
 		B0569A061FC061FA00FF34A1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A181FC0C3D200FF34A1 /* Theme */,
 				B0569A081FC0A70F00FF34A1 /* Configuration */,
 				B0FE4A321FBAD33C008F2EE6 /* Constants */,
 				B0FE4A381FBAD3A3008F2EE6 /* Controls */,
@@ -131,6 +144,7 @@
 				B0FE4A391FBAD3AC008F2EE6 /* Presenters */,
 				B0FE4A311FBAD32F008F2EE6 /* Services */,
 				B0FE4A361FBAD371008F2EE6 /* Storage */,
+				B0569A181FC0C3D200FF34A1 /* Theme */,
 				B0FE4A371FBAD37B008F2EE6 /* Utilities */,
 				B0FE4A3A1FBAD3B1008F2EE6 /* ViewControllers */,
 				B0FE4A3B1FBAD3BF008F2EE6 /* ViewModels */,
@@ -160,7 +174,10 @@
 			children = (
 				B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */,
 				B0569A141FC0BA1100FF34A1 /* UICollectionView+Ext.swift */,
+				B0569A211FC0CD4300FF34A1 /* UIScreen+Ext.swift */,
 				B0569A121FC0B9F800FF34A1 /* UITableView+Ext.swift */,
+				B0569A231FC0CD9C00FF34A1 /* UIImage+Ext.swift */,
+				B0569A251FC0CDF300FF34A1 /* UIColor+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -168,7 +185,10 @@
 		B0569A181FC0C3D200FF34A1 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				B0569A1D1FC0CCA800FF34A1 /* DefaultCompactTheme.swift */,
+				B0569A1F1FC0CCB500FF34A1 /* DefaultTheme.swift */,
 				B0569A191FC0C40B00FF34A1 /* Style.swift */,
+				B0569A1B1FC0CB8700FF34A1 /* ThemeManager.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -266,6 +286,7 @@
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				B0569A271FC0CF6700FF34A1 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -603,16 +624,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0569A241FC0CD9C00FF34A1 /* UIImage+Ext.swift in Sources */,
+				B0569A281FC0CF6700FF34A1 /* Constants.swift in Sources */,
 				B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */,
 				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */,
+				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
+				B0569A261FC0CDF300FF34A1 /* UIColor+Ext.swift in Sources */,
 				B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */,
 				B0569A131FC0B9F800FF34A1 /* UITableView+Ext.swift in Sources */,
 				B0569A171FC0BF2800FF34A1 /* NibView.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
+				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
+				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
 				B0569A151FC0BA1100FF34A1 /* UICollectionView+Ext.swift in Sources */,
 				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
 				B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */,
+				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

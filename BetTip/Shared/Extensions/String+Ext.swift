@@ -9,6 +9,15 @@
 import Foundation
 
 extension String {
+    
+    static func className(_ obj: AnyObject) -> String {
+        return String(describing: obj.self).components(separatedBy: ".").last!
+    }
+    
+    static func className(_ cls: AnyClass) -> String {
+        return String(describing: cls).components(separatedBy: ".").last!
+    }
+    
     func nilIfEmpty() -> String? {
         return self == "" ? nil : self
     }
@@ -17,24 +26,10 @@ extension String {
         return String(NSString(string: self).replacingCharacters(in: range, with: string))
     }
     
-    func truncate(_ length: Int) -> String {
-        let punctuationToRemoveSet = CharacterSet(charactersIn: ",.?!;:")
-        if count > length {
-            var stringArray = self.substring(to: index(startIndex, offsetBy: length)).components(separatedBy: " ")
-            stringArray.removeLast()
-            let last = stringArray.removeLast().components(separatedBy: punctuationToRemoveSet).joined(separator: "")
-            stringArray.append(last)
-            return stringArray.joined(separator: " ") + "..."
-        } else {
-            return self
-        }
-    }
-    
     var prettifiedString: String {
         let separatorCharacterSet = CharacterSet(charactersIn: "-_ ")
         return self.components(separatedBy: separatorCharacterSet).joined(separator: " ").capitalized
     }
-    
     
     func URLEncodedString() -> String? {
         let customAllowedSet =  CharacterSet.urlQueryAllowed
@@ -63,7 +58,7 @@ extension String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
     }
     
-    func localized(withComment:String) -> String {
+    func localized(withComment: String) -> String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: withComment)
     }
     
@@ -74,8 +69,8 @@ extension String {
     func dateValue(with format: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.calendar = Calendar(identifier: .iso8601)
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.timeZone = TimeZone.init(secondsFromGMT: 0) //TODO: (JA) talk to API folks about time zones on timestamps
+        dateFormatter.locale = Locale(identifier: "UTC")
+        dateFormatter.timeZone = TimeZone.init(secondsFromGMT: 0)
         dateFormatter.dateFormat = format
         return dateFormatter.date(from: self)
     }
