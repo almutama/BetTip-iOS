@@ -28,6 +28,7 @@
 		B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A2E1FC0E55400FF34A1 /* BaseViewController.swift */; };
 		B0569A311FC0E5E000FF34A1 /* ColorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A301FC0E5E000FF34A1 /* ColorSheet.swift */; };
 		B0569A331FC220FB00FF34A1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A321FC220FB00FF34A1 /* BaseViewModel.swift */; };
+		B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A341FC2243C00FF34A1 /* PrefrencesStorage.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* ViewController.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		B0569A2E1FC0E55400FF34A1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B0569A301FC0E5E000FF34A1 /* ColorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSheet.swift; sourceTree = "<group>"; };
 		B0569A321FC220FB00FF34A1 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		B0569A341FC2243C00FF34A1 /* PrefrencesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrencesStorage.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,11 +147,9 @@
 			children = (
 				B0569A081FC0A70F00FF34A1 /* Configuration */,
 				B0FE4A321FBAD33C008F2EE6 /* Constants */,
-				B0FE4A381FBAD3A3008F2EE6 /* Controls */,
 				B0FE4A331FBAD34A008F2EE6 /* Events */,
 				B0569A0B1FC0AFED00FF34A1 /* Extensions */,
 				B0FE4A341FBAD351008F2EE6 /* GeneratedCodes */,
-				B0569A291FC0DC6700FF34A1 /* Models */,
 				B0569A071FC0A61200FF34A1 /* Network */,
 				B0FE4A391FBAD3AC008F2EE6 /* Presenters */,
 				B0FE4A361FBAD371008F2EE6 /* Storage */,
@@ -200,14 +200,6 @@
 				B0569A1B1FC0CB8700FF34A1 /* ThemeManager.swift */,
 			);
 			path = Theme;
-			sourceTree = "<group>";
-		};
-		B0569A291FC0DC6700FF34A1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B0569A2A1FC0DC8200FF34A1 /* UserVariableProvider.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		B08A456D1F9DD5430082BDD3 = {
@@ -319,6 +311,8 @@
 		B0FE4A361FBAD371008F2EE6 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				B0569A2A1FC0DC8200FF34A1 /* UserVariableProvider.swift */,
+				B0569A341FC2243C00FF34A1 /* PrefrencesStorage.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -331,13 +325,6 @@
 				B0569A101FC0B9B400FF34A1 /* Reusable.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		B0FE4A381FBAD3A3008F2EE6 /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controls;
 			sourceTree = "<group>";
 		};
 		B0FE4A391FBAD3AC008F2EE6 /* Presenters */ = {
@@ -645,6 +632,7 @@
 				B0569A171FC0BF2800FF34A1 /* NibView.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
+				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
 				B0569A151FC0BA1100FF34A1 /* UICollectionView+Ext.swift in Sources */,
