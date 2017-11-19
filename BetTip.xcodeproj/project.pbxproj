@@ -30,6 +30,14 @@
 		B0569A331FC220FB00FF34A1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A321FC220FB00FF34A1 /* BaseViewModel.swift */; };
 		B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A341FC2243C00FF34A1 /* PrefrencesStorage.swift */; };
 		B0569A371FC226A600FF34A1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A361FC226A600FF34A1 /* Logger.swift */; };
+		B0569A3B1FC22A4800FF34A1 /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A3A1FC22A4800FF34A1 /* EventBus.swift */; };
+		B0569A441FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A431FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift */; };
+		B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A451FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift */; };
+		B0569A481FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A471FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift */; };
+		B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A491FC22B3100FF34A1 /* BGEventBus.swift */; };
+		B0569A4C1FC22B3E00FF34A1 /* BGEventBusEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A4B1FC22B3E00FF34A1 /* BGEventBusEvent.swift */; };
+		B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A4D1FC22BA200FF34A1 /* UIEventBus.swift */; };
+		B0569A501FC22BB300FF34A1 /* UIEventBusEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A4F1FC22BB300FF34A1 /* UIEventBusEvent.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* ViewController.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -82,6 +90,14 @@
 		B0569A321FC220FB00FF34A1 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B0569A341FC2243C00FF34A1 /* PrefrencesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrencesStorage.swift; sourceTree = "<group>"; };
 		B0569A361FC226A600FF34A1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B0569A3A1FC22A4800FF34A1 /* EventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
+		B0569A431FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApplicationDidBecomeActiveEvent.swift; sourceTree = "<group>"; };
+		B0569A451FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApplicationDidEnterBackgroundEvent.swift; sourceTree = "<group>"; };
+		B0569A471FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGNetworkReachabilityChangedEvent.swift; sourceTree = "<group>"; };
+		B0569A491FC22B3100FF34A1 /* BGEventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGEventBus.swift; sourceTree = "<group>"; };
+		B0569A4B1FC22B3E00FF34A1 /* BGEventBusEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGEventBusEvent.swift; sourceTree = "<group>"; };
+		B0569A4D1FC22BA200FF34A1 /* UIEventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEventBus.swift; sourceTree = "<group>"; };
+		B0569A4F1FC22BB300FF34A1 /* UIEventBusEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEventBusEvent.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +220,43 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		B0569A381FC22A2C00FF34A1 /* BGEvents */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A401FC22A6D00FF34A1 /* App */,
+				B0569A411FC22A7200FF34A1 /* Network */,
+				B0569A491FC22B3100FF34A1 /* BGEventBus.swift */,
+				B0569A4B1FC22B3E00FF34A1 /* BGEventBusEvent.swift */,
+			);
+			path = BGEvents;
+			sourceTree = "<group>";
+		};
+		B0569A391FC22A3600FF34A1 /* UIEvents */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A4D1FC22BA200FF34A1 /* UIEventBus.swift */,
+				B0569A4F1FC22BB300FF34A1 /* UIEventBusEvent.swift */,
+			);
+			path = UIEvents;
+			sourceTree = "<group>";
+		};
+		B0569A401FC22A6D00FF34A1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A431FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift */,
+				B0569A451FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B0569A411FC22A7200FF34A1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A471FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		B08A456D1F9DD5430082BDD3 = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +352,9 @@
 		B0FE4A331FBAD34A008F2EE6 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				B0569A391FC22A3600FF34A1 /* UIEvents */,
+				B0569A381FC22A2C00FF34A1 /* BGEvents */,
+				B0569A3A1FC22A4800FF34A1 /* EventBus.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -622,13 +678,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0569A241FC0CD9C00FF34A1 /* UIImage+Ext.swift in Sources */,
+				B0569A4C1FC22B3E00FF34A1 /* BGEventBusEvent.swift in Sources */,
+				B0569A441FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift in Sources */,
+				B0569A3B1FC22A4800FF34A1 /* EventBus.swift in Sources */,
 				B0569A331FC220FB00FF34A1 /* BaseViewModel.swift in Sources */,
 				B0569A281FC0CF6700FF34A1 /* Constants.swift in Sources */,
 				B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */,
 				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
+				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */,
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
+				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
 				B0569A261FC0CDF300FF34A1 /* UIColor+Ext.swift in Sources */,
 				B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */,
@@ -638,11 +699,14 @@
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
+				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
 				B0569A151FC0BA1100FF34A1 /* UICollectionView+Ext.swift in Sources */,
 				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
 				B0569A311FC0E5E000FF34A1 /* ColorSheet.swift in Sources */,
 				B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */,
+				B0569A501FC22BB300FF34A1 /* UIEventBusEvent.swift in Sources */,
+				B0569A481FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift in Sources */,
 				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
 				B0569A2D1FC0E49800FF34A1 /* DebugDetector.swift in Sources */,
 			);
