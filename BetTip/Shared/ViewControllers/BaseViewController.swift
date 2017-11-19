@@ -55,15 +55,15 @@ class BaseViewController: UIViewController {
     }
     
     func isUIViewControllerPresentedAsModal() -> Bool {
-        if((self.presentingViewController) != nil) {
+        if (self.presentingViewController) != nil {
             return true
         }
         
-        if(self.presentingViewController?.presentedViewController == self) {
+        if self.presentingViewController?.presentedViewController == self {
             return true
         }
         
-        if(self.navigationController?.presentingViewController?.presentedViewController == self.navigationController) {
+        if self.navigationController?.presentingViewController?.presentedViewController == self.navigationController {
             return true
         }
         

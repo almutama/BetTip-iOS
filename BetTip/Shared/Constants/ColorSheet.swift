@@ -36,7 +36,6 @@ extension UIColor {
         return withHex(hex: 0xd8d8d8)
     }
     
-    
     class var fieldLabelTextInactive: UIColor {
         return withHex(hex: 0x7B7B7B)
     }
@@ -58,7 +57,7 @@ extension UIColor {
     }
     
     class var popupText: UIColor {
-        return withHex(hex:0x474747)
+        return withHex(hex: 0x474747)
     }
     
     class var navbarShadow: UIColor {

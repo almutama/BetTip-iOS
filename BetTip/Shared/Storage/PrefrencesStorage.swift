@@ -21,11 +21,12 @@ class PrefrencesStorage {
     }
     
     func store(_ value: PrefrenceStorable, key: String) {
-        self.defaults?.set(value, forKey:key)
+        self.defaults?.set(value, forKey: key)
     }
     
     func restore<T>(key: String) -> T? where T: PrefrenceStorable {
-        return self.defaults?.object(forKey: key) as! T?
+        guard let preference = self.defaults?.object(forKey: key) as? T? else { fatalError("Could not initialize generic class!") }
+        return preference
     }
 }
 
