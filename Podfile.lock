@@ -1,5 +1,11 @@
 PODS:
+  - CocoaAsyncSocket (7.6.1)
+  - CocoaLumberjack (3.3.0):
+    - CocoaLumberjack/Default (= 3.3.0)
+    - CocoaLumberjack/Extensions (= 3.3.0)
   - CocoaLumberjack/Default (3.3.0)
+  - CocoaLumberjack/Extensions (3.3.0):
+    - CocoaLumberjack/Default
   - CocoaLumberjack/Swift (3.3.0):
     - CocoaLumberjack/Default
   - Crashlytics (3.9.0):
@@ -75,11 +81,6 @@ PODS:
   - HockeySDK (5.0.0):
     - HockeySDK/DefaultLib (= 5.0.0)
   - HockeySDK/DefaultLib (5.0.0)
-  - IGListKit (3.1.1):
-    - IGListKit/Default (= 3.1.1)
-  - IGListKit/Default (3.1.1):
-    - IGListKit/Diffing
-  - IGListKit/Diffing (3.1.1)
   - IQKeyboardManagerSwift (5.0.4)
   - KeychainAccess (3.1.0)
   - Keys (1.0.0)
@@ -94,6 +95,12 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.0.0)
   - NVActivityIndicatorView/Presenter (4.0.0)
   - ObjectMapper (3.0.0)
+  - PaperTrailLumberjack/Core (0.1.8):
+    - CocoaAsyncSocket (~> 7.5)
+    - CocoaLumberjack (~> 3.0)
+  - PaperTrailLumberjack/Swift (0.1.8):
+    - CocoaLumberjack/Swift (~> 3.0)
+    - PaperTrailLumberjack/Core
   - Protobuf (3.4.0)
   - Quick (1.2.0)
   - ReachabilitySwift (4.1.0)
@@ -112,7 +119,6 @@ PODS:
   - VegaScrollFlowLayout (1.1)
 
 DEPENDENCIES:
-  - CocoaLumberjack/Swift
   - Crashlytics
   - Fabric
   - Firebase/Auth
@@ -125,13 +131,13 @@ DEPENDENCIES:
   - Heyzap
   - HGPlaceholders
   - HockeySDK
-  - IGListKit
   - IQKeyboardManagerSwift
   - KeychainAccess
   - Keys (from `Pods/CocoaPodsKeys`)
   - Nimble
   - NVActivityIndicatorView
   - ObjectMapper
+  - PaperTrailLumberjack/Swift
   - Quick
   - ReachabilitySwift
   - RxCocoa
@@ -149,6 +155,7 @@ EXTERNAL SOURCES:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
+  CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
   CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
   Fabric: e6be012366472553807dada21243c5ab8d904151
@@ -167,7 +174,6 @@ SPEC CHECKSUMS:
   Heyzap: 3acd64a26fee466728fb7d977f70e33b4de68254
   HGPlaceholders: b05be87025781e6fe9f7739d3529f2209b92ed80
   HockeySDK: 82bf8dcbe1af3c87c24dc98924fcf2e2ba5be8c4
-  IGListKit: cb97f405ae43e59fe1da74271e19427ec20d3c07
   IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
   KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
@@ -176,6 +182,7 @@ SPEC CHECKSUMS:
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  PaperTrailLumberjack: afd1a729641ebb2e10975db30a5f8ebc890cccd6
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
@@ -189,6 +196,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: 4886276fe2e5952111deb97d6686b2029d618505
+PODFILE CHECKSUM: b3c47c4949f358d9e85dd08fc699fa8b98ce9506
 
 COCOAPODS: 1.2.1

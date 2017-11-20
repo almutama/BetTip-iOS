@@ -8,11 +8,6 @@ def testing_pods
   pod 'Nimble'
 end
 
-def network_pods
-  pod 'ObjectMapper'
-  pod 'ReachabilitySwift'
-end
-
 def firebase_pods
   pod 'Firebase/Core'
   pod 'Firebase/Crash'
@@ -25,14 +20,14 @@ end
 def ui_pods
   pod 'NVActivityIndicatorView'
   pod 'SwiftMessages'
-  pod 'IGListKit'
   pod 'Hero'
   pod 'HGPlaceholders'
   pod 'VegaScrollFlowLayout'
 end
 
 def general_pods
-  pod 'CocoaLumberjack/Swift'
+  pod 'ObjectMapper'
+  pod 'ReachabilitySwift'
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa'
   pod 'RxOptional'
@@ -53,6 +48,7 @@ def general_pods
 end
 
 def tracking_pods
+  pod 'PaperTrailLumberjack/Swift'
   pod 'HockeySDK'
   pod 'Fabric'
   pod 'Crashlytics'
@@ -64,7 +60,6 @@ def ad_pods
 end
 
 target 'BetTip' do
-  network_pods
   firebase_pods
   general_pods
   tracking_pods
@@ -74,7 +69,6 @@ end
 
 target 'BetTipTests' do
   testing_pods
-  network_pods
   firebase_pods
   general_pods
 end
