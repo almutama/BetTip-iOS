@@ -9,7 +9,6 @@ def testing_pods
 end
 
 def network_pods
-  pod 'Moya/RxSwift', '~> 10.0'
   pod 'ObjectMapper'
   pod 'ReachabilitySwift'
 end
@@ -26,7 +25,6 @@ end
 def ui_pods
   pod 'NVActivityIndicatorView'
   pod 'SwiftMessages'
-  pod 'SideMenu'
   pod 'IGListKit'
   pod 'Hero'
   pod 'HGPlaceholders'
@@ -56,13 +54,13 @@ end
 
 def tracking_pods
   pod 'HockeySDK'
+  pod 'Fabric'
   pod 'Crashlytics'
   pod 'SwiftLint'
 end
 
 def ad_pods
   pod 'Heyzap'
-  pod 'FyberSDK'
 end
 
 target 'BetTip' do
