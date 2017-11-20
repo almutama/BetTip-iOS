@@ -38,8 +38,11 @@
 		B0569A4C1FC22B3E00FF34A1 /* BGEventBusEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A4B1FC22B3E00FF34A1 /* BGEventBusEvent.swift */; };
 		B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A4D1FC22BA200FF34A1 /* UIEventBus.swift */; };
 		B0569A501FC22BB300FF34A1 /* UIEventBusEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A4F1FC22BB300FF34A1 /* UIEventBusEvent.swift */; };
+		B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A521FC3490C00FF34A1 /* Admin.storyboard */; };
+		B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A561FC35F7100FF34A1 /* Basketball.storyboard */; };
+		B0569A5A1FC3745D00FF34A1 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A591FC3745D00FF34A1 /* Coupon.storyboard */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
-		B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* ViewController.swift */; };
+		B08A457C1F9DD5430082BDD3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainViewController.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
 		B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B08A45801F9DD5430082BDD3 /* Assets.xcassets */; };
 		B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */; };
@@ -47,7 +50,7 @@
 		B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0FE4A441FBAD4EB008F2EE6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A431FBAD4EB008F2EE6 /* Profile.storyboard */; };
-		B0FE4A461FBAD4F8008F2EE6 /* Bet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A451FBAD4F8008F2EE6 /* Bet.storyboard */; };
+		B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */; };
 		B0FE4A481FBAD504008F2EE6 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A471FBAD504008F2EE6 /* Onboarding.storyboard */; };
 		B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A491FBAD518008F2EE6 /* Login.storyboard */; };
 		ECB2F28AAA96B790E1286F06 /* Pods_BetTip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368ECDF0EA2EEC9691508FDF /* Pods_BetTip.framework */; };
@@ -98,9 +101,12 @@
 		B0569A4B1FC22B3E00FF34A1 /* BGEventBusEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGEventBusEvent.swift; sourceTree = "<group>"; };
 		B0569A4D1FC22BA200FF34A1 /* UIEventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEventBus.swift; sourceTree = "<group>"; };
 		B0569A4F1FC22BB300FF34A1 /* UIEventBusEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEventBusEvent.swift; sourceTree = "<group>"; };
+		B0569A521FC3490C00FF34A1 /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
+		B0569A561FC35F7100FF34A1 /* Basketball.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Basketball.storyboard; sourceTree = "<group>"; };
+		B0569A591FC3745D00FF34A1 /* Coupon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B08A457B1F9DD5430082BDD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B08A457B1F9DD5430082BDD3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B08A457E1F9DD5430082BDD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B08A45801F9DD5430082BDD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B08A45831F9DD5430082BDD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,7 +118,7 @@
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0FE4A431FBAD4EB008F2EE6 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		B0FE4A451FBAD4F8008F2EE6 /* Bet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bet.storyboard; sourceTree = "<group>"; };
+		B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Football.storyboard; sourceTree = "<group>"; };
 		B0FE4A471FBAD504008F2EE6 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		B0FE4A491FBAD518008F2EE6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetTipTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +263,70 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		B0569A511FC348F400FF34A1 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A521FC3490C00FF34A1 /* Admin.storyboard */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		B0569A551FC35F5A00FF34A1 /* Basketball */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A5F1FC374A500FF34A1 /* Services */,
+				B0569A5E1FC3749F00FF34A1 /* Views */,
+				B0569A5D1FC3749700FF34A1 /* Models */,
+				B0569A5C1FC3748B00FF34A1 /* ViewModels */,
+				B0569A5B1FC3748200FF34A1 /* ViewControllers */,
+				B0569A561FC35F7100FF34A1 /* Basketball.storyboard */,
+			);
+			path = Basketball;
+			sourceTree = "<group>";
+		};
+		B0569A581FC3744E00FF34A1 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A591FC3745D00FF34A1 /* Coupon.storyboard */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		B0569A5B1FC3748200FF34A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B0569A5C1FC3748B00FF34A1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B0569A5D1FC3749700FF34A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B0569A5E1FC3749F00FF34A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0569A5F1FC374A500FF34A1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B08A456D1F9DD5430082BDD3 = {
 			isa = PBXGroup;
 			children = (
@@ -314,11 +384,14 @@
 		B0A8E6731FA7B091001A8BBA /* Sceens */ = {
 			isa = PBXGroup;
 			children = (
-				B0FE4A421FBAD467008F2EE6 /* Profile */,
-				B0FE4A411FBAD44D008F2EE6 /* Bet */,
-				B0FE4A3F1FBAD406008F2EE6 /* Onboarding */,
+				B0569A511FC348F400FF34A1 /* Admin */,
+				B0569A551FC35F5A00FF34A1 /* Basketball */,
+				B0569A581FC3744E00FF34A1 /* Coupon */,
+				B0FE4A411FBAD44D008F2EE6 /* Football */,
 				B0FE4A3E1FBAD401008F2EE6 /* Login */,
 				B0A8E6741FA7B0BF001A8BBA /* Main */,
+				B0FE4A3F1FBAD406008F2EE6 /* Onboarding */,
+				B0FE4A421FBAD467008F2EE6 /* Profile */,
 			);
 			path = Sceens;
 			sourceTree = "<group>";
@@ -335,7 +408,7 @@
 		B0A8E6761FA7B0CE001A8BBA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B08A457B1F9DD5430082BDD3 /* ViewController.swift */,
+				B08A457B1F9DD5430082BDD3 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -432,12 +505,12 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		B0FE4A411FBAD44D008F2EE6 /* Bet */ = {
+		B0FE4A411FBAD44D008F2EE6 /* Football */ = {
 			isa = PBXGroup;
 			children = (
-				B0FE4A451FBAD4F8008F2EE6 /* Bet.storyboard */,
+				B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */,
 			);
-			path = Bet;
+			path = Football;
 			sourceTree = "<group>";
 		};
 		B0FE4A421FBAD467008F2EE6 /* Profile */ = {
@@ -462,6 +535,7 @@
 				E186F803D130792729DC96D4 /* [CP] Embed Pods Frameworks */,
 				C544BE41E67FBB4478CD02D4 /* [CP] Copy Pods Resources */,
 				B01B24821FA74BB6001F1466 /* SwiftLint */,
+				B0569A541FC35D0000FF34A1 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -546,10 +620,13 @@
 			files = (
 				B0FE4A441FBAD4EB008F2EE6 /* Profile.storyboard in Resources */,
 				B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */,
-				B0FE4A461FBAD4F8008F2EE6 /* Bet.storyboard in Resources */,
+				B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */,
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
+				B0569A5A1FC3745D00FF34A1 /* Coupon.storyboard in Resources */,
 				B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */,
+				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
 				B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */,
+				B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */,
 				B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */,
 				B0FE4A481FBAD504008F2EE6 /* Onboarding.storyboard in Resources */,
 				B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */,
@@ -625,6 +702,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
+		B0569A541FC35D0000FF34A1 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"";
+		};
 		C35366029B3BCB78BD805CF8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -686,7 +777,7 @@
 				B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */,
 				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
 				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
-				B08A457C1F9DD5430082BDD3 /* ViewController.swift in Sources */,
+				B08A457C1F9DD5430082BDD3 /* MainViewController.swift in Sources */,
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
@@ -867,6 +958,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BetTip/SupportedFiles/BetTip.entitlements;
 				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7UWG4ECEH7;
 				INFOPLIST_FILE = "$(SRCROOT)/BetTip/SupportedFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
