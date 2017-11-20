@@ -20,7 +20,7 @@
                         <viewLayoutGuide key="safeArea" id="fc0-WT-LHZ"/>
                     </view>
                     <connections>
-                        <segue destination="PW2-qu-elW" kind="show" id="fnV-sn-8qY"/>
+                        <segue destination="PW2-qu-elW" kind="show" identifier="AdminSegue" id="fnV-sn-8qY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzA-Cx-JlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
