@@ -67,6 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         HockeyApp().setupAuth()
         HeyzapAds.start(withPublisherID: BetTipKeys().heyzapID)
+        _ = Log.createLogger()
     }
 }
 
