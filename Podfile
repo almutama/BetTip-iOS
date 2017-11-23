@@ -28,6 +28,7 @@ end
 def general_pods
   pod 'ObjectMapper'
   pod 'ReachabilitySwift'
+  pod 'Result', '~> 3.0.0'
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa'
   pod 'RxOptional'
