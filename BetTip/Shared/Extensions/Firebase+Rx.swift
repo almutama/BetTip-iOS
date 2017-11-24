@@ -16,26 +16,6 @@ protocol FirebaseEntity {
     var id: String? { get set }
 }
 
-protocol FirebaseValue {
-    associatedtype FirebaseRepresentationType
-    
-    func serialize() -> FirebaseRepresentationType?
-    
-    static func deserialize(firebaseValue: FirebaseRepresentationType) -> Self?
-}
-
-extension String: FirebaseValue {
-    typealias FirebaseRepresentationType = String
-    
-    func serialize() -> FirebaseRepresentationType? {
-        return self
-    }
-    
-    static func deserialize(firebaseValue: FirebaseRepresentationType) -> String? {
-        return firebaseValue
-    }
-}
-
 enum FirebaseFetchError: Error {
     case deserializeError(DataSnapshot)
     case readDenied(Error)
@@ -71,13 +51,12 @@ extension DatabaseQuery {
         }
     }
     
-    func fetch<T: FirebaseValue>(_: T.Type = T.self, event: DataEventType = .value)
+    func fetch<T: Mappable>(_: T.Type = T.self, event: DataEventType = .value)
         -> Observable<Result<T, FirebaseFetchError>> {
             return Observable.create { observer in
                 let handle = self.observe(event, with: { snapshot in
-                    if let
-                        snapshotValue = snapshot.value as? T.FirebaseRepresentationType,
-                        let object = T.deserialize(firebaseValue: snapshotValue) {
+                    if let snapshotDictionary = snapshot.value as? [String: AnyObject],
+                        let object: T = Mapper<T>().map(JSON: snapshotDictionary) {
                         observer.onNext(.success(object))
                     } else {
                         observer.onNext(.failure(.deserializeError(snapshot)))
@@ -130,7 +109,7 @@ extension DatabaseReference {
             
             let dictionary = Mapper<T>().toJSON(mutableObject)
             
-            self.child(key).setValue(dictionary) { error, reference in
+            self.child(key).setValue(dictionary) { error, _ in
                 if let error = error {
                     observer.onLast(.failure(.writeDenied(error)))
                 } else {
@@ -150,7 +129,7 @@ extension DatabaseReference {
                 
                 dictionary["id"] = childKey
                 
-                self.child(childKey).setValue(dictionary) { error, reference in
+                self.child(childKey).setValue(dictionary) { error, _ in
                     if let error = error {
                         observer.onLast(.failure(.writeDenied(error)))
                     } else {
@@ -161,7 +140,7 @@ extension DatabaseReference {
             }
     }
     
-    // TODO: Fix success condition
+    //TODO: .success condition
     func delete<T: Mappable>(_ object: T) -> Observable<Result<Void, FirebaseStoreError>> where T: FirebaseEntity {
         return Observable.create { observer in
             guard let key = object.id else {
@@ -169,7 +148,7 @@ extension DatabaseReference {
                 return Disposables.create()
             }
             
-            self.child(key).removeValue { error, reference in
+            self.child(key).removeValue { error, _ in
                 if let error = error {
                     observer.onLast(.failure(.writeDenied(error)))
                 } else {
