@@ -12,7 +12,12 @@ import FirebaseDatabase
 import Reactant
 import Result
 
-final class UserService {
+protocol UserServiceType {
+    func users() -> Observable<[UserModel]>
+    func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>>
+}
+
+class UserService: UserServiceType {
     
     func addOrReplaceUser(accumulator: [UserModel], user: UserModel) -> [UserModel] {
         var resultantArray = accumulator.filter { $0.id != user.id }
