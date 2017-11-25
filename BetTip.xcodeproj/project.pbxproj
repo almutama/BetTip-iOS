@@ -80,6 +80,7 @@
 		B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */; };
 		B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */; };
 		B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA231FC85A7B00DC4F62 /* UserService.swift */; };
+		B0A7AA261FC8627800DC4F62 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */; };
 		B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0FE4A441FBAD4EB008F2EE6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A431FBAD4EB008F2EE6 /* Profile.storyboard */; };
@@ -180,6 +181,7 @@
 		B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Rx.swift"; sourceTree = "<group>"; };
 		B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleType.swift; sourceTree = "<group>"; };
 		B0A7AA231FC85A7B00DC4F62 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 		B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -657,6 +659,7 @@
 			children = (
 				B0569A2C1FC0E49800FF34A1 /* DebugDetector.swift */,
 				B0569A361FC226A600FF34A1 /* Logger.swift */,
+				B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1006,6 +1009,7 @@
 				B0569A6D1FC37B2600FF34A1 /* BasketballAssembly.swift in Sources */,
 				B0569AA71FC621F700FF34A1 /* PrivacyPolicyVC.swift in Sources */,
 				B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */,
+				B0A7AA261FC8627800DC4F62 /* FirebaseError.swift in Sources */,
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
