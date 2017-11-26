@@ -25,4 +25,12 @@ extension UIScreen {
     var isCompactPhone: Bool {
         return self.bounds.size.width <= 320.0
     }
+    
+    var screenWidth: CGFloat {
+        return self.bounds.size.width
+    }
+    
+    var screenHeight: CGFloat {
+        return self.bounds.size.height
+    }
 }
