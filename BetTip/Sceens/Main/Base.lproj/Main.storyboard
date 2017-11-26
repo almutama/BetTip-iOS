@@ -19,8 +19,8 @@
                     <connections>
                         <segue destination="mdy-hr-pdj" kind="relationship" relationship="viewControllers" id="pmH-eX-75g"/>
                         <segue destination="0TX-dr-aGh" kind="relationship" relationship="viewControllers" id="fGZ-vj-xJB"/>
-                        <segue destination="h77-XN-RQG" kind="relationship" relationship="viewControllers" id="D5T-2E-Jt5"/>
                         <segue destination="XU3-iH-fw3" kind="relationship" relationship="viewControllers" id="HxX-OX-lFA"/>
+                        <segue destination="h77-XN-RQG" kind="relationship" relationship="viewControllers" id="D5T-2E-Jt5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGP-xr-WXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -31,7 +31,7 @@
         <scene sceneID="rAg-o0-atO">
             <objects>
                 <viewControllerPlaceholder storyboardName="Football" id="mdy-hr-pdj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2zx-c5-KFU"/>
+                    <tabBarItem key="tabBarItem" title="Futbol" image="tab_football" selectedImage="tabSel_football" id="2zx-c5-KFU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DJ-5n-m48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +41,7 @@
         <scene sceneID="zVK-Sx-cc9">
             <objects>
                 <viewControllerPlaceholder storyboardName="Basketball" id="0TX-dr-aGh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="R5u-Y8-1ye"/>
+                    <tabBarItem key="tabBarItem" title="Basketbol" image="tab_basketball" selectedImage="tabSel_basketball" id="R5u-Y8-1ye"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ef5-n1-FLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
         <scene sceneID="yAh-0a-dcm">
             <objects>
                 <viewControllerPlaceholder storyboardName="Coupon" id="XU3-iH-fw3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Yez-Qd-QCI"/>
+                    <tabBarItem key="tabBarItem" title="Premium" image="tab_premium" selectedImage="tabSel_premium" id="Yez-Qd-QCI"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxI-aQ-NCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,11 +61,21 @@
         <scene sceneID="enx-Ok-6py">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" id="h77-XN-RQG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="PR5-Ba-pm1"/>
+                    <tabBarItem key="tabBarItem" title="Daha" image="tab_more" selectedImage="tabSel_more" id="PR5-Ba-pm1"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEC-lq-qrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="291" y="249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabSel_basketball" width="22" height="22"/>
+        <image name="tabSel_football" width="22" height="22"/>
+        <image name="tabSel_more" width="22" height="22"/>
+        <image name="tabSel_premium" width="22" height="22"/>
+        <image name="tab_basketball" width="22" height="22"/>
+        <image name="tab_football" width="22" height="22"/>
+        <image name="tab_more" width="22" height="22"/>
+        <image name="tab_premium" width="22" height="22"/>
+    </resources>
 </document>
