@@ -13,6 +13,7 @@ class RegisterVC: BaseViewController {
     
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmTextField: UITextField!
     
     var viewModel: RegisterVM!
     
@@ -24,4 +25,14 @@ class RegisterVC: BaseViewController {
         super.didReceiveMemoryWarning()
     }
     
+}
+
+extension RegisterVC: Theming {
+    var theme: ThemeType {
+        return ThemeManager.shared.currentTheme
+    }
+    
+    func apply() {
+        
+    }
 }

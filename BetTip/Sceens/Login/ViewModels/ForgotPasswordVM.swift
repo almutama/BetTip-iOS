@@ -1,19 +1,19 @@
 //
-//  LoginVM.swift
+//  ForgotPasswordVM.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 23.11.2017.
+//  Created by Haydar Karkin on 26.11.2017.
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
 import ObjectMapper
 import RxSwift
 
-class LoginVM: BaseViewModel {
+class ForgotPasswordVM: BaseViewModel {
     
     let disposeBag = DisposeBag()
     
-    func login(email: String, password: String) {
+    func sendMail(email: String) {
         
     }
 }

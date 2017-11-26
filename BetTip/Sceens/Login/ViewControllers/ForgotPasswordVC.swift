@@ -1,17 +1,19 @@
 //
-//  LoginWelcomeVC.swift
+//  ForgotPasswordVC.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 23.11.2017.
+//  Created by Haydar Karkin on 26.11.2017.
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 
-class LoginWelcomeVC: BaseViewController {
+class ForgotPasswordVC: BaseViewController {
     
-    var viewModel: LoginVM!
+    @IBOutlet weak var mailTextField: UITextField!
+    
+    var viewModel: ForgotPasswordVM!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +22,10 @@ class LoginWelcomeVC: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
 }
 
-extension LoginWelcomeVC: Theming {
+extension ForgotPasswordVC: Theming {
     var theme: ThemeType {
         return ThemeManager.shared.currentTheme
     }

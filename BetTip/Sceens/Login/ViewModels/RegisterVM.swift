@@ -6,4 +6,10 @@
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
+import RxSwift
+
+class RegisterVM: BaseViewModel {
+    
+    let disposeBag = DisposeBag()
+}
