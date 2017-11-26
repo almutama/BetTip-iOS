@@ -65,7 +65,7 @@
 		B0569A9E1FC6219000FF34A1 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A9D1FC6219000FF34A1 /* LoginService.swift */; };
 		B0569AA11FC621BC00FF34A1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AA01FC621BC00FF34A1 /* LoginVC.swift */; };
 		B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AA21FC621C900FF34A1 /* LoginWelcomeVC.swift */; };
-		B0569AA51FC621D400FF34A1 /* RegisterVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AA41FC621D400FF34A1 /* RegisterVc.swift */; };
+		B0569AA51FC621D400FF34A1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AA41FC621D400FF34A1 /* RegisterVC.swift */; };
 		B0569AA71FC621F700FF34A1 /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AA61FC621F700FF34A1 /* PrivacyPolicyVC.swift */; };
 		B0569AAA1FC6221200FF34A1 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AA91FC6221200FF34A1 /* LoginVM.swift */; };
 		B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AAB1FC6221D00FF34A1 /* RegisterVM.swift */; };
@@ -76,6 +76,8 @@
 		B0569AB81FC9890D00FF34A1 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB71FC9890D00FF34A1 /* AuthStore.swift */; };
 		B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB91FC9892600FF34A1 /* AuthError.swift */; };
 		B0569ABC1FC9894800FF34A1 /* CredentialAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABB1FC9894800FF34A1 /* CredentialAuthProvider.swift */; };
+		B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABD1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift */; };
+		B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABF1FCB3FFB00FF34A1 /* ForgotPasswordVM.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -167,7 +169,7 @@
 		B0569A9D1FC6219000FF34A1 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		B0569AA01FC621BC00FF34A1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B0569AA21FC621C900FF34A1 /* LoginWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWelcomeVC.swift; sourceTree = "<group>"; };
-		B0569AA41FC621D400FF34A1 /* RegisterVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVc.swift; sourceTree = "<group>"; };
+		B0569AA41FC621D400FF34A1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		B0569AA61FC621F700FF34A1 /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
 		B0569AA91FC6221200FF34A1 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		B0569AAB1FC6221D00FF34A1 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
@@ -178,6 +180,8 @@
 		B0569AB71FC9890D00FF34A1 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
 		B0569AB91FC9892600FF34A1 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		B0569ABB1FC9894800FF34A1 /* CredentialAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialAuthProvider.swift; sourceTree = "<group>"; };
+		B0569ABD1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		B0569ABF1FCB3FFB00FF34A1 /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 		B0569A181FC0C3D200FF34A1 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				B0569A301FC0E5E000FF34A1 /* ColorSheet.swift */,
 				B0569A1D1FC0CCA800FF34A1 /* DefaultCompactTheme.swift */,
 				B0569A1F1FC0CCB500FF34A1 /* DefaultTheme.swift */,
 				B0569A191FC0C40B00FF34A1 /* Style.swift */,
@@ -512,7 +517,8 @@
 				B0569AA01FC621BC00FF34A1 /* LoginVC.swift */,
 				B0569AA21FC621C900FF34A1 /* LoginWelcomeVC.swift */,
 				B0569AA61FC621F700FF34A1 /* PrivacyPolicyVC.swift */,
-				B0569AA41FC621D400FF34A1 /* RegisterVc.swift */,
+				B0569AA41FC621D400FF34A1 /* RegisterVC.swift */,
+				B0569ABD1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				B0569AA91FC6221200FF34A1 /* LoginVM.swift */,
 				B0569AAD1FC6222A00FF34A1 /* PrivacyPolicyVM.swift */,
 				B0569AAB1FC6221D00FF34A1 /* RegisterVM.swift */,
+				B0569ABF1FCB3FFB00FF34A1 /* ForgotPasswordVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -645,7 +652,6 @@
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A301FC0E5E000FF34A1 /* ColorSheet.swift */,
 				B0569A271FC0CF6700FF34A1 /* Constants.swift */,
 			);
 			path = Constants;
@@ -1026,6 +1032,7 @@
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
 				B0569A7D1FC37C9C00FF34A1 /* CouponVM.swift in Sources */,
 				B0569A9E1FC6219000FF34A1 /* LoginService.swift in Sources */,
+				B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */,
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
 				B0569A641FC37A9200FF34A1 /* BasketballCell.swift in Sources */,
 				B0569A811FC37CC600FF34A1 /* CouponAssembly.swift in Sources */,
@@ -1050,7 +1057,7 @@
 				B0569ABC1FC9894800FF34A1 /* CredentialAuthProvider.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CouponVC.swift in Sources */,
 				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
-				B0569AA51FC621D400FF34A1 /* RegisterVc.swift in Sources */,
+				B0569AA51FC621D400FF34A1 /* RegisterVC.swift in Sources */,
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
 				B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */,
 				B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */,
@@ -1071,6 +1078,7 @@
 				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
 				B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */,
 				B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */,
+				B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */,
 				B0569A611FC37A6700FF34A1 /* BasketballServices.swift in Sources */,
 				B0569A671FC37AA900FF34A1 /* BasketballVC.swift in Sources */,
 				B0569A2D1FC0E49800FF34A1 /* DebugDetector.swift in Sources */,
