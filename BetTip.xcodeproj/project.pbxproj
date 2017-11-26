@@ -539,10 +539,10 @@
 		B0569AB21FC988D200FF34A1 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B0569AB91FC9892600FF34A1 /* AuthError.swift */,
 				B0569AB31FC988EB00FF34A1 /* AuthManager.swift */,
 				B0569AB51FC988F800FF34A1 /* AuthProvider.swift */,
 				B0569AB71FC9890D00FF34A1 /* AuthStore.swift */,
-				B0569AB91FC9892600FF34A1 /* AuthError.swift */,
 				B0569ABB1FC9894800FF34A1 /* CredentialAuthProvider.swift */,
 			);
 			path = Auth;
