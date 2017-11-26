@@ -8,8 +8,7 @@
 
 import Foundation
 
-protocol PrefrenceStorable {
-}
+protocol PrefrenceStorable { }
 
 class PrefrencesStorage {
     static let shared = PrefrencesStorage()

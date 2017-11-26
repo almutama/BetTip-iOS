@@ -71,6 +71,11 @@
 		B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AAB1FC6221D00FF34A1 /* RegisterVM.swift */; };
 		B0569AAE1FC6222A00FF34A1 /* PrivacyPolicyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AAD1FC6222A00FF34A1 /* PrivacyPolicyVM.swift */; };
 		B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB01FC7663D00FF34A1 /* UserModel.swift */; };
+		B0569AB41FC988EB00FF34A1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB31FC988EB00FF34A1 /* AuthManager.swift */; };
+		B0569AB61FC988F800FF34A1 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB51FC988F800FF34A1 /* AuthProvider.swift */; };
+		B0569AB81FC9890D00FF34A1 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB71FC9890D00FF34A1 /* AuthStore.swift */; };
+		B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB91FC9892600FF34A1 /* AuthError.swift */; };
+		B0569ABC1FC9894800FF34A1 /* CredentialAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABB1FC9894800FF34A1 /* CredentialAuthProvider.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -168,6 +173,11 @@
 		B0569AAB1FC6221D00FF34A1 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		B0569AAD1FC6222A00FF34A1 /* PrivacyPolicyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVM.swift; sourceTree = "<group>"; };
 		B0569AB01FC7663D00FF34A1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B0569AB31FC988EB00FF34A1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		B0569AB51FC988F800FF34A1 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		B0569AB71FC9890D00FF34A1 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
+		B0569AB91FC9892600FF34A1 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		B0569ABB1FC9894800FF34A1 /* CredentialAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialAuthProvider.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -237,6 +247,7 @@
 		B0569A061FC061FA00FF34A1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B0569AB21FC988D200FF34A1 /* Auth */,
 				B0569A081FC0A70F00FF34A1 /* Configuration */,
 				B0FE4A321FBAD33C008F2EE6 /* Constants */,
 				B0FE4A331FBAD34A008F2EE6 /* Events */,
@@ -523,6 +534,18 @@
 				B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B0569AB21FC988D200FF34A1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AB31FC988EB00FF34A1 /* AuthManager.swift */,
+				B0569AB51FC988F800FF34A1 /* AuthProvider.swift */,
+				B0569AB71FC9890D00FF34A1 /* AuthStore.swift */,
+				B0569AB91FC9892600FF34A1 /* AuthError.swift */,
+				B0569ABB1FC9894800FF34A1 /* CredentialAuthProvider.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		B08A456D1F9DD5430082BDD3 = {
@@ -1013,6 +1036,7 @@
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
+				B0569AB41FC988EB00FF34A1 /* AuthManager.swift in Sources */,
 				B0569A261FC0CDF300FF34A1 /* UIColor+Ext.swift in Sources */,
 				B0569A881FC37D1F00FF34A1 /* AdminAssembly.swift in Sources */,
 				B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */,
@@ -1023,6 +1047,7 @@
 				B0569A771FC37C8100FF34A1 /* CouponServices.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
+				B0569ABC1FC9894800FF34A1 /* CredentialAuthProvider.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CouponVC.swift in Sources */,
 				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
 				B0569AA51FC621D400FF34A1 /* RegisterVc.swift in Sources */,
@@ -1032,11 +1057,14 @@
 				B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */,
 				B0569A151FC0BA1100FF34A1 /* UICollectionView+Ext.swift in Sources */,
 				B0569AAA1FC6221200FF34A1 /* LoginVM.swift in Sources */,
+				B0569AB81FC9890D00FF34A1 /* AuthStore.swift in Sources */,
+				B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */,
 				B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */,
 				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
 				B0569A311FC0E5E000FF34A1 /* ColorSheet.swift in Sources */,
 				B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */,
 				B0569A9B1FC6216E00FF34A1 /* RegisterModel.swift in Sources */,
+				B0569AB61FC988F800FF34A1 /* AuthProvider.swift in Sources */,
 				B0569A751FC37C7200FF34A1 /* CouponModel.swift in Sources */,
 				B0569A501FC22BB300FF34A1 /* UIEventBusEvent.swift in Sources */,
 				B0569A481FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift in Sources */,
