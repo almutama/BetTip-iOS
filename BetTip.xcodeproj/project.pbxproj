@@ -199,8 +199,8 @@
 		B0A7AA231FC85A7B00DC4F62 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 		B0A7AA271FCC057900DC4F62 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		B0A7AA2C1FCC23D300DC4F62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B0A7AA2E1FCC23F600DC4F62 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B0A7AA311FCC54FF00DC4F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 				B0FE4A321FBAD33C008F2EE6 /* Constants */,
 				B0FE4A331FBAD34A008F2EE6 /* Events */,
 				B0569A0B1FC0AFED00FF34A1 /* Extensions */,
-				B0FE4A341FBAD351008F2EE6 /* GeneratedCodes */,
+				B0A7AA301FCC54BD00DC4F62 /* GeneratedCodes */,
 				B0569A071FC0A61200FF34A1 /* Network */,
 				B0FE4A391FBAD3AC008F2EE6 /* Presenters */,
 				B0FE4A361FBAD371008F2EE6 /* Storage */,
@@ -606,6 +606,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B0A7AA301FCC54BD00DC4F62 /* GeneratedCodes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GeneratedCodes;
+			sourceTree = "<group>";
+		};
 		B0A8E6701FA7AE27001A8BBA /* SupportedFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,13 +676,6 @@
 				B0569A3A1FC22A4800FF34A1 /* EventBus.swift */,
 			);
 			path = Events;
-			sourceTree = "<group>";
-		};
-		B0FE4A341FBAD351008F2EE6 /* GeneratedCodes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GeneratedCodes;
 			sourceTree = "<group>";
 		};
 		B0FE4A361FBAD371008F2EE6 /* Storage */ = {
@@ -786,6 +786,7 @@
 				C544BE41E67FBB4478CD02D4 /* [CP] Copy Pods Resources */,
 				B01B24821FA74BB6001F1466 /* SwiftLint */,
 				B0569A541FC35D0000FF34A1 /* Fabric */,
+				B0A7AA2F1FCC4C9200DC4F62 /* GeneratedCodes */,
 			);
 			buildRules = (
 			);
@@ -970,6 +971,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\"";
 		};
+		B0A7AA2F1FCC4C9200DC4F62 /* GeneratedCodes */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = GeneratedCodes;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# swiftgen bin from pods\nSWIFTGEN=\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n\n# Make sure it is there\nif which \"$SWIFTGEN\" >/dev/null; then\n\n# Folder for output\nSWIFTGEN_FOLDER=\"$SOURCE_ROOT/BetTip/Shared/GeneratedCodes\"\n\n# Project folder\nPROJECT_FOLDER=\"${SOURCE_ROOT}\"\n\n# Make sure output folder exists\nmkdir -p \"$SWIFTGEN_FOLDER\"\n\n# Get all storyboards into Storyboards.swift\n\"$SWIFTGEN\" storyboards -t swift4 \"$PROJECT_FOLDER\" --output \"$SWIFTGEN_FOLDER/Storyboards.swift\"\n\n# Get all images into Images.swift\n\"$SWIFTGEN\" images -t swift4 \"BetTip/SupportedFiles/Assets.xcassets\" --output \"$SWIFTGEN_FOLDER/Images.swift\"\n\n# Get all english strings (as a base for all others) into Strings.swift\n\"$SWIFTGEN\" strings -t swift4 \"BetTip/SupportedFiles/Base.lproj/Localizable.strings\" --output \"$SWIFTGEN_FOLDER/Localizables.swift\"\nelse\necho \"SwiftGen does not exist, download from https://github.com/AliSoftware/SwiftGen\"\nfi";
+		};
 		C35366029B3BCB78BD805CF8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1135,8 +1150,8 @@
 		B0A7AA2D1FCC23D300DC4F62 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B0A7AA2C1FCC23D300DC4F62 /* en */,
 				B0A7AA2E1FCC23F600DC4F62 /* tr */,
+				B0A7AA311FCC54FF00DC4F62 /* Base */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
