@@ -34,8 +34,37 @@ class LoginVM: BaseViewModel {
                 .subscribe(onNext: self.loginSuccessful)
                 .disposed(by: disposeBag)
             
+            login.errorOnly()
+                .map { error in
+                    switch error {
+                    case .wrongPassword, .common(.userNotFound):
+                        return L10n.Auth.Error.wrongPassword
+                    case .userDisabled:
+                        return L10n.Auth.Error.userDisabled
+                    default:
+                        return L10n.Auth.Error.unknown
+                    }
+                }
+                .subscribe(onNext: {
+                    LocalNotificationView.shared.showError(L10n.Auth.Error.loginTitle, body: $0)
+                })
+                .disposed(by: disposeBag)
+            
         case .failure(let error):
-            print(error)
+            let errorMessage: String
+            switch error {
+            case .emailInvalid(.empty):
+                errorMessage = L10n.Auth.Error.emptyEmail
+            case .emailInvalid(.invalid):
+                errorMessage = L10n.Auth.Error.invalidEmail
+            case .passwordEmpty:
+                errorMessage = L10n.Auth.Error.emptyPassword
+            case .passwordTooShort(let minLength):
+                errorMessage = L10n.Auth.Error.shortPassword(minLength)
+            case .confirmNotMatch:
+                errorMessage = L10n.Common.tryAgainLater
+            }
+            LocalNotificationView.shared.showError(L10n.Auth.Error.loginTitle, body: errorMessage)
         }
     }
     
