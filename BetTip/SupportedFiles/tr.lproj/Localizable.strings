@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  BetTip
+
+  Created by Haydar Karkin on 27.11.2017.
+  Copyright © 2017 Haydar Karkin. All rights reserved.
+*/
+
+"Common.TryAgainLater" = "Lütfen tekrar deneyiniz.";
+"Common.Loading" = "Yükleniyor ..";
+"Common.Cancel" = "İptal";
+"Common.Done" = "Tamam";
+
+"Role.User" = "Kullanıcı";
+"Role.Moderator" = "Moderatör";
+"Role.Admin" = "Yönetici";
+
+"Auth.Login" = "Giriş Yap";
+"Auth.SignUp" = "Kayıt Ol";
+"Auth.Email" = "E-posta";
+"Auth.Password" = "Şifre";
+"Auth.Logout" = "Çıkış Yap";
+"Auth.ConfirmLogout" = "Çıkış yapmak istediğinize emin misiniz?";
+
+"Auth.Error.EmptyEmail" = "E-posta boş olamaz.";
+"Auth.Error.InvalidEmail" = "E-posta geçersiz.";
+"Auth.Error.EmptyPassword" = "Şifre boş olamaz.";
+"Auth.Error.ShortPassword" = "Şifreniz en az %d karakter uzunluğunda olmalıdır.";
+"Auth.Error.WrongPassword" = "Yanlış e-posya yada şifre girdiniz.";
+"Auth.Error.UserDisabled" = "Hesabınız engellendi. Bir yanlışlık olduğunu düşünüyorsanız eğer lütfen bizimle iletişime geçin.";
+"Auth.Error.Unknown" = "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.";
+"Auth.Error.EmailAlreadyInUse" = "E-posta adresi halihazırda kullanılmaktadır.";
+"Auth.Error.SignupTitle" = "Üye yapılamıyor.";
+"Auth.Error.LoginTitle" = "Giriş yapılamıyor.";

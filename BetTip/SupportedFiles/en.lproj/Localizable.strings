@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  BetTip
+
+  Created by Haydar Karkin on 27.11.2017.
+  Copyright © 2017 Haydar Karkin. All rights reserved.
+*/
+
+"Common.TryAgainLater" = "Please try again later.";
+"Common.Loading" = "Loading ..";
+"Common.Cancel" = "Cancel";
+"Common.Done" = "Done";
+
+"Role.User" = "User";
+"Role.Moderator" = "Moderator";
+"Role.Admin" = "Administrator";
+
+"Auth.Login" = "Log in";
+"Auth.SignUp" = "Sign up";
+"Auth.Email" = "Email";
+"Auth.Password" = "Password";
+"Auth.Logout" = "Log out";
+"Auth.ConfirmLogout" = "Do you want to log out?";
+
+"Auth.Error.EmptyEmail" = "Email can't be empty.";
+"Auth.Error.InvalidEmail" = "Email is not valid.";
+"Auth.Error.EmptyPassword" = "Password can't be empty.";
+"Auth.Error.ShortPassword" = "Password has to be at least %d characters long.";
+"Auth.Error.WrongPassword" = "You've entered a wrong email or password.";
+"Auth.Error.UserDisabled" = "Your account has been disabled. Please contact us if you think this is a mistake.";
+"Auth.Error.Unknown" = "An internal error occured. Please try again later.";
+"Auth.Error.EmailAlreadyInUse" = "Email already registered.";
+"Auth.Error.SignupTitle" = "Can't register";
+"Auth.Error.LoginTitle" = "Can't log in";
