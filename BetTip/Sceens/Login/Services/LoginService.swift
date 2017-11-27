@@ -95,4 +95,18 @@ class LoginService: LoginServiceType {
                 }
         }
     }
+    
+    func resetPassword(email: String) -> Observable<Result<Void, FirebaseLoginError>> {
+        return Observable<Result<Void, FirebaseLoginError>>
+            .create { observer in
+                Auth.auth().sendPasswordReset(withEmail: email) { error in
+                    if let error = error {
+                        observer.onLast(.failure(FirebaseLoginError(error: error as NSError)))
+                    } else {
+                        observer.onLast(.success(()))
+                    }
+                }
+                return Disposables.create()
+            }
+    }
 }
