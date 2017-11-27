@@ -46,6 +46,10 @@ final class CredentialAuthProvider: AuthProvider {
             })
     }
     
+    func resetPassword(email: String, password: String) -> Observable<Result<Void, FirebaseLoginError>> {
+        return loginService.resetPassword(email: email).take(1)
+    }
+    
     func saveState(email: String, password: String) {
         activate()
         

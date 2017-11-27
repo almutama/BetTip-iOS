@@ -701,8 +701,8 @@
 		B0FE4A391FBAD3AC008F2EE6 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */,
 				B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */,
+				B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
