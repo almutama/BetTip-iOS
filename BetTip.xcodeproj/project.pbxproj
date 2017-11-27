@@ -78,6 +78,7 @@
 		B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABF1FCB3FFB00FF34A1 /* ForgotPasswordVM.swift */; };
 		B0569AC21FCB64B100FF34A1 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */; };
 		B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */; };
+		B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC51FCCB12200FF34A1 /* LocalNotificationView.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -187,6 +188,7 @@
 		B0569ABF1FCB3FFB00FF34A1 /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
 		B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		B0569AC51FCCB12200FF34A1 /* LocalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationView.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -712,6 +714,7 @@
 			children = (
 				B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */,
 				B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */,
+				B0569AC51FCCB12200FF34A1 /* LocalNotificationView.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -1114,6 +1117,7 @@
 				B0569A481FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift in Sources */,
 				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
 				B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */,
+				B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */,
 				B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */,
 				B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */,
 				B0569A611FC37A6700FF34A1 /* BasketballServices.swift in Sources */,
