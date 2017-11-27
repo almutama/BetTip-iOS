@@ -147,7 +147,7 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
   - SnapKit (4.0.0)
-  - SwiftGen (5.2.0)
+  - SwiftGen (5.2.1)
   - SwiftKeychainWrapper (3.0.1)
   - SwiftLint (0.23.1)
   - SwiftMessages (4.0.0)
@@ -243,7 +243,7 @@ SPEC CHECKSUMS:
   RxOptional: e5448d3e21024489e07c31f6a262f2b50c975367
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SwiftGen: d75f6c3a1ecfed4a5ae372e477d452297efdb718
+  SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
   SwiftMessages: cd565e0e7d095584be1770c012c6b5be4183b5ee
