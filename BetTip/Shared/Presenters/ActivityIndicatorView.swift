@@ -8,19 +8,21 @@
 
 import UIKit
 import NVActivityIndicatorView
-import Foundation
+import RxSwift
+import RxCocoa
+import Reactant
 
 let ActivityViewTag = 353535
 
-class ActivityIndicator {
+class ActivityIndicatorView {
     
     // MARK: Initializers
-    static let sharedInstance = ActivityIndicator()
+    static let sharedInstance = ActivityIndicatorView()
     var hud: ProgressHUD!
     let window = (UIApplication.shared.delegate!.window ?? nil)! as UIWindow
     
     func show(_ status: String? = nil) -> ProgressHUD {
-        return ActivityIndicator.sharedInstance.showProgress(status, center: (window.center))
+        return ActivityIndicatorView.sharedInstance.showProgress(status, center: (window.center))
     }
     
     func showProgress(_ status: String? = nil, center: CGPoint) -> ProgressHUD {
@@ -62,7 +64,7 @@ class ActivityIndicator {
     
 }
 
-extension ActivityIndicator: ProgressHUDDelegate {
+extension ActivityIndicatorView: ProgressHUDDelegate {
     
     func hudDidHidden(_ hud: ProgressHUD) {
         print(#function)
@@ -71,3 +73,18 @@ extension ActivityIndicator: ProgressHUDDelegate {
         }
     }
 }
+
+let loadingIndicator: ActivityIndicator<String> = {
+    let activityIndicator = ActivityIndicator<String>()
+    let hud = ActivityIndicatorView.sharedInstance
+    
+    activityIndicator.asDriver().drive(onNext: { loading, _ in
+        if loading {
+             _ = hud.show()
+        } else if !loading {
+             hud.hide()
+        }
+    }).disposed(by: activityIndicator.disposeBag)
+    
+    return activityIndicator
+}()

@@ -79,7 +79,7 @@
 		B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABD1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift */; };
 		B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABF1FCB3FFB00FF34A1 /* ForgotPasswordVM.swift */; };
 		B0569AC21FCB64B100FF34A1 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */; };
-		B0569AC41FCB65E400FF34A1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC31FCB65E400FF34A1 /* ActivityIndicator.swift */; };
+		B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -187,7 +187,7 @@
 		B0569ABD1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		B0569ABF1FCB3FFB00FF34A1 /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
 		B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
-		B0569AC31FCB65E400FF34A1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -708,7 +708,7 @@
 			isa = PBXGroup;
 			children = (
 				B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */,
-				B0569AC31FCB65E400FF34A1 /* ActivityIndicator.swift */,
+				B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -1087,7 +1087,7 @@
 				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
 				B0569A311FC0E5E000FF34A1 /* ColorSheet.swift in Sources */,
 				B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */,
-				B0569AC41FCB65E400FF34A1 /* ActivityIndicator.swift in Sources */,
+				B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */,
 				B0569A9B1FC6216E00FF34A1 /* RegisterModel.swift in Sources */,
 				B0569AB61FC988F800FF34A1 /* AuthProvider.swift in Sources */,
 				B0569A751FC37C7200FF34A1 /* CouponModel.swift in Sources */,
