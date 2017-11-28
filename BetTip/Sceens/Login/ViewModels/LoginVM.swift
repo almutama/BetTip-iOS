@@ -11,12 +11,12 @@ import RxSwift
 
 class LoginVM: BaseViewModel {
     
-    let credentialAuthProvider: CredentialAuthProvider!
+    let authProvider: AuthProviderType!
     let disposeBag = DisposeBag()
     var isLoginSuccess = Variable<Bool>(false)
     
-    init(credentialAuthProvider: CredentialAuthProvider) {
-        self.credentialAuthProvider = credentialAuthProvider
+    init(authProvider: AuthProviderType) {
+        self.authProvider = authProvider
         super.init()
     }
     
@@ -26,7 +26,7 @@ class LoginVM: BaseViewModel {
         switch validatedCredentials {
         case .success(let email, let password):
             print("")
-            let login = self.credentialAuthProvider.login(email: email, password: password)
+            let login = self.authProvider.login(email: email, password: password)
                 .trackActivity(in: loadingIndicator)
                 .share(replay: 1)
             
