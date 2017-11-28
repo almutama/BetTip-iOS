@@ -94,9 +94,11 @@
 		B0A7AA351FCC58C900DC4F62 /* Localizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA321FCC58C800DC4F62 /* Localizables.swift */; };
 		B0A7AA361FCC58C900DC4F62 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA331FCC58C900DC4F62 /* Images.swift */; };
 		B0A7AA371FCC58C900DC4F62 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA341FCC58C900DC4F62 /* Storyboards.swift */; };
+		B0A7AA391FCD7BE000DC4F62 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA381FCD7BE000DC4F62 /* AppAssembly.swift */; };
+		B0A7AA3B1FCD7C6800DC4F62 /* UserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */; };
 		B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
-		B0FE4A441FBAD4EB008F2EE6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A431FBAD4EB008F2EE6 /* Profile.storyboard */; };
+		B0FE4A441FBAD4EB008F2EE6 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */; };
 		B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */; };
 		B0FE4A481FBAD504008F2EE6 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A471FBAD504008F2EE6 /* Onboarding.storyboard */; };
 		B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A491FBAD518008F2EE6 /* Login.storyboard */; };
@@ -209,10 +211,12 @@
 		B0A7AA321FCC58C800DC4F62 /* Localizables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizables.swift; sourceTree = "<group>"; };
 		B0A7AA331FCC58C900DC4F62 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		B0A7AA341FCC58C900DC4F62 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		B0A7AA381FCD7BE000DC4F62 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAssembly.swift; sourceTree = "<group>"; };
 		B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		B0FE4A431FBAD4EB008F2EE6 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Football.storyboard; sourceTree = "<group>"; };
 		B0FE4A471FBAD504008F2EE6 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		B0FE4A491FBAD518008F2EE6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -593,6 +597,7 @@
 				B0A8E6731FA7B091001A8BBA /* Sceens */,
 				B0A8E6701FA7AE27001A8BBA /* SupportedFiles */,
 				B08A45791F9DD5430082BDD3 /* AppDelegate.swift */,
+				B0A7AA381FCD7BE000DC4F62 /* AppAssembly.swift */,
 			);
 			path = BetTip;
 			sourceTree = "<group>";
@@ -649,7 +654,7 @@
 				B0FE4A3E1FBAD401008F2EE6 /* Login */,
 				B0A8E6741FA7B0BF001A8BBA /* Main */,
 				B0FE4A3F1FBAD406008F2EE6 /* Onboarding */,
-				B0FE4A421FBAD467008F2EE6 /* Profile */,
+				B0FE4A421FBAD467008F2EE6 /* User */,
 			);
 			path = Sceens;
 			sourceTree = "<group>";
@@ -773,14 +778,15 @@
 			path = Football;
 			sourceTree = "<group>";
 		};
-		B0FE4A421FBAD467008F2EE6 /* Profile */ = {
+		B0FE4A421FBAD467008F2EE6 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				B0569AAF1FC7662E00FF34A1 /* Models */,
 				B0A7AA221FC85A6B00DC4F62 /* Services */,
-				B0FE4A431FBAD4EB008F2EE6 /* Profile.storyboard */,
+				B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */,
+				B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */,
 			);
-			path = Profile;
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -882,7 +888,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0FE4A441FBAD4EB008F2EE6 /* Profile.storyboard in Resources */,
+				B0FE4A441FBAD4EB008F2EE6 /* User.storyboard in Resources */,
 				B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */,
 				B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */,
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
@@ -1108,8 +1114,10 @@
 				B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */,
 				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
 				B0569A311FC0E5E000FF34A1 /* ColorSheet.swift in Sources */,
+				B0A7AA3B1FCD7C6800DC4F62 /* UserAssembly.swift in Sources */,
 				B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */,
 				B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */,
+				B0A7AA391FCD7BE000DC4F62 /* AppAssembly.swift in Sources */,
 				B0569A9B1FC6216E00FF34A1 /* RegisterModel.swift in Sources */,
 				B0569AB61FC988F800FF34A1 /* AuthProvider.swift in Sources */,
 				B0569A751FC37C7200FF34A1 /* CouponModel.swift in Sources */,

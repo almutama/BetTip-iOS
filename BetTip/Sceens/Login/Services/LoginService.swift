@@ -19,9 +19,9 @@ protocol LoginServiceType {
 
 class LoginService: LoginServiceType {
     
-    private let userService: UserService
+    private let userService: UserServiceType
     
-    init(userService: UserService) {
+    init(userService: UserServiceType) {
         self.userService = userService
     }
     

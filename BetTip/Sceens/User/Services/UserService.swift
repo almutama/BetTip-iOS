@@ -15,6 +15,7 @@ import Result
 protocol UserServiceType {
     func users() -> Observable<[UserModel]>
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>>
+    func userDisabled(userId: String) -> Observable<Bool>
 }
 
 class UserService: UserServiceType {
