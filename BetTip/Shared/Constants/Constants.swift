@@ -11,6 +11,7 @@ import UIKit
 struct Constants {
     static let emailKey = "email"
     static let passwordKey = "password"
+    static let profileKey = "profile"
     static let onboardingDefaults  = "onboarding"
     static let authTypeKey = "authType"
     static let activeAuthProviderKey = "activeAuthProvider"

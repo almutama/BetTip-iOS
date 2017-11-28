@@ -44,8 +44,6 @@ class AuthStore: AuthStoreType {
     
     init() {}
     
-    private static let profileKey = "AuthStore.Profile"
-    
     var authorization: Observable<Authorization> {
         return authorizationSubject
     }
@@ -63,7 +61,7 @@ class AuthStore: AuthStoreType {
     }
     
     func storedProfile() -> UserModel? {
-        if let jsonData = KeychainWrapper.standard.string(forKey: AuthStore.profileKey) {
+        if let jsonData = KeychainWrapper.standard.string(forKey: Constants.profileKey) {
             return Mapper<UserModel>().map(JSONObject: jsonData)
         } else {
             return nil
@@ -72,11 +70,11 @@ class AuthStore: AuthStoreType {
     
     private func storeProfile(profile: UserModel) {
         if let jsonData = Mapper<UserModel>().toJSONString(profile) {
-            KeychainWrapper.standard.set(jsonData, forKey: AuthStore.profileKey)
+            KeychainWrapper.standard.set(jsonData, forKey: Constants.profileKey)
         }
     }
     
     private func deleteUserInfo() {
-        KeychainWrapper.standard.removeObject(forKey: AuthStore.profileKey)
+        KeychainWrapper.standard.removeObject(forKey: Constants.profileKey)
     }
 }
