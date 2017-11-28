@@ -10,37 +10,30 @@ import RxSwift
 import Reactant
 import Result
 
-final class AuthManager {
+protocol AuthManagerType {
+    func restoreState() -> Observable<Result<UserModel, AuthenticationError>>
+    func logout() -> Observable<Result<Void, DeauthenticationError>>
+}
+
+class AuthManager: AuthManagerType {
     
-    var activeProvider: AuthProviderType? {
-        for provider in providers.values where provider.active {
-            return provider
-        }
-        return nil
-    }
-    let authStore: AuthStoreType
+    private let authStore: AuthStoreType
+    private let authProvider: AuthProviderType
     
-    private let providers: [String: AuthProviderType]
-    
-    init(authStore: AuthStoreType, providers: [AuthProviderType]) {
+    init(authStore: AuthStoreType, authProvider: AuthProviderType) {
         self.authStore = authStore
-        
-        var providerDictionary: [String: AuthProviderType] = [:]
-        for provider in providers {
-            providerDictionary[type(of: provider).key] = provider
-        }
-        self.providers = providerDictionary
+        self.authProvider = authProvider
     }
     
     func restoreState() -> Observable<Result<UserModel, AuthenticationError>> {
         let userInfo = authStore.storedProfile()
-        return activeProvider?.restoreState(profile: userInfo) ?? Observable.just(.failure(.unknown))
+        return authProvider.restoreState(profile: userInfo)
     }
     
     func logout() -> Observable<Result<Void, DeauthenticationError>> {
-        return (activeProvider?.deleteState() ?? Observable.just(.success(()))).do(onNext: { [weak self] in
+        return (authProvider.deleteState() ).do(onNext: { [weak self] in
             if case .success = $0 {
-                self?.activeProvider?.deactivate()
+                self?.authProvider.deactivate()
                 self?.authStore.deauthorize()
             }
         })

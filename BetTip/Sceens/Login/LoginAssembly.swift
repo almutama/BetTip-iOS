@@ -18,7 +18,9 @@ class LoginAssembly: Assembly {
         assembler = Assembler([LoginViewModelAssembly(), LoginServiceAssembly()])
         Container.loggingFunction = nil
         
-        
+        container.storyboardInitCompleted(LoginVC.self) { r, c in
+            c.viewModel = r.resolve(LoginVM.self)
+        }
     }
     
 }
@@ -26,6 +28,9 @@ class LoginAssembly: Assembly {
 class LoginViewModelAssembly: Assembly {
     
     func assemble(container: Container) {
+        container.register(LoginVM.self) { r in
+            LoginVM(authProvider: r.resolve(AuthProvider.self)!)
+            }.inObjectScope(.container)
     }
     
 }
@@ -34,9 +39,7 @@ class LoginServiceAssembly: Assembly {
     
     func assemble(container: Container) {
         container.register(LoginServiceType.self) { r in
-            LoginService(
-                userService: r.resolve(UserServiceType.self)!)
+            LoginService(userService: r.resolve(UserServiceType.self)!)
             }.inObjectScope(.container)
     }
-    
 }
