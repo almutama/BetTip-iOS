@@ -10,8 +10,6 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -47,11 +45,6 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         self.view.backgroundColor = UIColor.mainBackground
-        
-        self.activityIndicator.isHidden = true
-        self.activityIndicator.hidesWhenStopped = true
-        self.activityIndicator.center = self.view.center
-        self.view.addSubview(activityIndicator)
     }
     
     func isUIViewControllerPresentedAsModal() -> Bool {
