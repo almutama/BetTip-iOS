@@ -11,7 +11,15 @@ import SwiftKeychainWrapper
 import ObjectMapper
 import Reactant
 
-final class AuthStore {
+protocol AuthStoreType {
+    func authorize(with profile: UserModel)
+    func deauthorize()
+    func storedProfile() -> UserModel?
+}
+
+class AuthStore: AuthStoreType {
+    
+    init() {}
     
     private static let profileKey = "AuthStore.Profile"
     

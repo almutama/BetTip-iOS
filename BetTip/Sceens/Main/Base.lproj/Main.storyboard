@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="326" y="112"/>
         </scene>
-        <!--Profile-->
+        <!--User-->
         <scene sceneID="enx-Ok-6py">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="h77-XN-RQG" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="User" id="h77-XN-RQG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Daha" image="tab_more" selectedImage="tabSel_more" id="PR5-Ba-pm1"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEC-lq-qrK" userLabel="First Responder" sceneMemberID="firstResponder"/>

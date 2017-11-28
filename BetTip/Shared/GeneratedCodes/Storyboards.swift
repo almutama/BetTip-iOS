@@ -93,10 +93,10 @@ enum StoryboardScene {
 
     static let initialScene = InitialSceneType<UIViewController>(storyboard: Onboarding.self)
   }
-  enum Profile: StoryboardType {
-    static let storyboardName = "Profile"
+  enum User: StoryboardType {
+    static let storyboardName = "User"
 
-    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Profile.self)
+    static let initialScene = InitialSceneType<UINavigationController>(storyboard: User.self)
   }
 }
 
@@ -106,7 +106,7 @@ enum StoryboardSegue {
     case loginSegue
     case registerSegue
   }
-  enum Profile: String, SegueType {
+  enum User: String, SegueType {
     case adminSegue = "AdminSegue"
   }
 }

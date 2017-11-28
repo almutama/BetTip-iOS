@@ -15,6 +15,7 @@ protocol LoginServiceType {
     func login(email: String, password: String) -> Observable<Result<UserModel, FirebaseLoginError>>
     func logout() -> Observable<Result<Void, FirebaseCommonError>>
     func register(email: String, password: String) -> Observable<Result<UserModel, FirebaseSignupError>>
+    func resetPassword(email: String) -> Observable<Result<Void, FirebaseLoginError>>
 }
 
 class LoginService: LoginServiceType {

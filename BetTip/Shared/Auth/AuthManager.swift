@@ -12,20 +12,20 @@ import Result
 
 final class AuthManager {
     
-    var activeProvider: AuthProvider? {
+    var activeProvider: AuthProviderType? {
         for provider in providers.values where provider.active {
             return provider
         }
         return nil
     }
-    let authStore: AuthStore
+    let authStore: AuthStoreType
     
-    private let providers: [String: AuthProvider]
+    private let providers: [String: AuthProviderType]
     
-    init(authStore: AuthStore, providers: [AuthProvider]) {
+    init(authStore: AuthStoreType, providers: [AuthProviderType]) {
         self.authStore = authStore
         
-        var providerDictionary: [String: AuthProvider] = [:]
+        var providerDictionary: [String: AuthProviderType] = [:]
         for provider in providers {
             providerDictionary[type(of: provider).key] = provider
         }
