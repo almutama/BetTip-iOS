@@ -17,6 +17,7 @@ import Keys
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    fileprivate let appAssembler = AppAssembly()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.setupNotification(application: application)

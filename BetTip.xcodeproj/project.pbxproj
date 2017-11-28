@@ -593,8 +593,8 @@
 				B0569A061FC061FA00FF34A1 /* Shared */,
 				B0A8E6731FA7B091001A8BBA /* Sceens */,
 				B0A8E6701FA7AE27001A8BBA /* SupportedFiles */,
-				B08A45791F9DD5430082BDD3 /* AppDelegate.swift */,
 				B0A7AA381FCD7BE000DC4F62 /* AppAssembly.swift */,
+				B08A45791F9DD5430082BDD3 /* AppDelegate.swift */,
 			);
 			path = BetTip;
 			sourceTree = "<group>";

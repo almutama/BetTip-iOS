@@ -21,6 +21,14 @@ class LoginAssembly: Assembly {
         container.storyboardInitCompleted(LoginVC.self) { r, c in
             c.viewModel = r.resolve(LoginVM.self)
         }
+        
+        container.storyboardInitCompleted(RegisterVC.self) { r, c in
+            c.viewModel = r.resolve(RegisterVM.self)
+        }
+        
+        container.storyboardInitCompleted(ForgotPasswordVC.self) { r, c in
+            c.viewModel = r.resolve(ForgotPasswordVM.self)
+        }
     }
     
 }
