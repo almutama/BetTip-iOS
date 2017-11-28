@@ -70,7 +70,6 @@
 		B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AAB1FC6221D00FF34A1 /* RegisterVM.swift */; };
 		B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB01FC7663D00FF34A1 /* UserModel.swift */; };
 		B0569AB41FC988EB00FF34A1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB31FC988EB00FF34A1 /* AuthManager.swift */; };
-		B0569AB61FC988F800FF34A1 /* AuthProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB51FC988F800FF34A1 /* AuthProviderType.swift */; };
 		B0569AB81FC9890D00FF34A1 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB71FC9890D00FF34A1 /* AuthStore.swift */; };
 		B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AB91FC9892600FF34A1 /* AuthError.swift */; };
 		B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABB1FC9894800FF34A1 /* AuthProvider.swift */; };
@@ -182,7 +181,6 @@
 		B0569AAB1FC6221D00FF34A1 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		B0569AB01FC7663D00FF34A1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B0569AB31FC988EB00FF34A1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		B0569AB51FC988F800FF34A1 /* AuthProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProviderType.swift; sourceTree = "<group>"; };
 		B0569AB71FC9890D00FF34A1 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
 		B0569AB91FC9892600FF34A1 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		B0569ABB1FC9894800FF34A1 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
@@ -564,7 +562,6 @@
 				B0569AB91FC9892600FF34A1 /* AuthError.swift */,
 				B0569AB31FC988EB00FF34A1 /* AuthManager.swift */,
 				B0569ABB1FC9894800FF34A1 /* AuthProvider.swift */,
-				B0569AB51FC988F800FF34A1 /* AuthProviderType.swift */,
 				B0569AB71FC9890D00FF34A1 /* AuthStore.swift */,
 			);
 			path = Auth;
@@ -1119,7 +1116,6 @@
 				B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */,
 				B0A7AA391FCD7BE000DC4F62 /* AppAssembly.swift in Sources */,
 				B0569A9B1FC6216E00FF34A1 /* RegisterModel.swift in Sources */,
-				B0569AB61FC988F800FF34A1 /* AuthProviderType.swift in Sources */,
 				B0569A751FC37C7200FF34A1 /* CouponModel.swift in Sources */,
 				B0569A501FC22BB300FF34A1 /* UIEventBusEvent.swift in Sources */,
 				B0569A481FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift in Sources */,

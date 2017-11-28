@@ -11,10 +11,36 @@ import SwiftKeychainWrapper
 import Reactant
 import Result
 
-class AuthProvider: AuthProviderType {
+protocol AuthProviderType {
+    static var key: String { get }
+    var active: Bool { get }
     
-    private static let emailKey = "email"
-    private static let passwordKey = "password"
+    func restoreState(profile: UserModel?) -> Observable<Result<UserModel, AuthenticationError>>
+    func deleteState() -> Observable<Result<Void, DeauthenticationError>>
+    
+    func activate()
+    func deactivate()
+    
+    func login(email: String, password: String) -> Observable<Result<UserModel, FirebaseLoginError>>
+    func register(email: String, password: String) -> Observable<Result<UserModel, FirebaseSignupError>>
+    func resetPassword(email: String) -> Observable<Result<Void, FirebaseLoginError>>
+}
+
+extension AuthProviderType {
+    var active: Bool {
+        return KeychainWrapper.standard.string(forKey: Constants.activeAuthProviderKey) == Self.key
+    }
+    
+    func activate() {
+        KeychainWrapper.standard.set(Self.key, forKey: Constants.activeAuthProviderKey)
+    }
+    
+    func deactivate() {
+        KeychainWrapper.standard.removeObject(forKey: Constants.activeAuthProviderKey)
+    }
+}
+
+class AuthProvider: AuthProviderType {
     
     static let key: String = "credential"
     
@@ -53,15 +79,15 @@ class AuthProvider: AuthProviderType {
     func saveState(email: String, password: String) {
         activate()
         
-        KeychainWrapper.standard.set(email, forKey: AuthProvider.emailKey)
-        KeychainWrapper.standard.set(password, forKey: AuthProvider.passwordKey)
+        KeychainWrapper.standard.set(email, forKey: Constants.emailKey)
+        KeychainWrapper.standard.set(password, forKey: Constants.passwordKey)
     }
     
     func restoreState(profile: UserModel?)
         -> Observable<Result<UserModel, AuthenticationError>> {
             if let
-                email = KeychainWrapper.standard.string(forKey: AuthProvider.emailKey),
-                let password = KeychainWrapper.standard.string(forKey: AuthProvider.passwordKey) {
+                email = KeychainWrapper.standard.string(forKey: Constants.emailKey),
+                let password = KeychainWrapper.standard.string(forKey: Constants.passwordKey) {
                 return login(email: email, password: password).mapError(AuthenticationError.firebaseError)
             } else {
                 deactivate()
@@ -74,8 +100,8 @@ class AuthProvider: AuthProviderType {
     }
     
     func deleteState() -> Observable<Result<Void, DeauthenticationError>> {
-        KeychainWrapper.standard.removeObject(forKey: AuthProvider.emailKey)
-        KeychainWrapper.standard.removeObject(forKey: AuthProvider.passwordKey)
+        KeychainWrapper.standard.removeObject(forKey: Constants.emailKey)
+        KeychainWrapper.standard.removeObject(forKey: Constants.passwordKey)
         
         return loginService.logout().mapError(DeauthenticationError.firebaseError)
     }

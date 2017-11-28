@@ -11,6 +11,29 @@ import SwiftKeychainWrapper
 import ObjectMapper
 import Reactant
 
+enum Authorization {
+    case authenticated(UserModel)
+    case unauthenticated
+    
+    var authorized: Bool {
+        switch self {
+        case .authenticated:
+            return true
+        case .unauthenticated:
+            return false
+        }
+    }
+    
+    var email: String? {
+        switch self {
+        case .authenticated(let user):
+            return user.email
+        case .unauthenticated:
+            return nil
+        }
+    }
+}
+
 protocol AuthStoreType {
     func authorize(with profile: UserModel)
     func deauthorize()

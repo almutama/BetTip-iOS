@@ -9,9 +9,11 @@
 import UIKit
 
 struct Constants {
-    static let usernameDefaults = "username"
-    static let passwordDefaults = "password"
+    static let emailKey = "email"
+    static let passwordKey = "password"
     static let onboardingDefaults  = "onboarding"
+    static let authTypeKey = "authType"
+    static let activeAuthProviderKey = "activeAuthProvider"
     
     //Profile
     static let firstNameString = "firstName"
