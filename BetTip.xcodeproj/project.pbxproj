@@ -78,6 +78,17 @@
 		B0569AC21FCB64B100FF34A1 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */; };
 		B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */; };
 		B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC51FCCB12200FF34A1 /* LocalNotificationView.swift */; };
+		B0569ACA1FCDEAB600FF34A1 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC91FCDEAB600FF34A1 /* SplashVC.swift */; };
+		B0569ACD1FCDED7C00FF34A1 /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ACC1FCDED7C00FF34A1 /* SplashVM.swift */; };
+		B0569ACF1FCDEDAD00FF34A1 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ACE1FCDEDAD00FF34A1 /* SplashAssembly.swift */; };
+		B0569AD11FCDEDC000FF34A1 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569AD01FCDEDC000FF34A1 /* Splash.storyboard */; };
+		B0569AD31FCDF65300FF34A1 /* UIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AD21FCDF65300FF34A1 /* UIService.swift */; };
+		B0569AD61FCDF6BD00FF34A1 /* BGDidLoginEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AD51FCDF6BD00FF34A1 /* BGDidLoginEvent.swift */; };
+		B0569AD81FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AD71FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift */; };
+		B0569ADA1FCDF6DE00FF34A1 /* BGDidRefreshEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AD91FCDF6DE00FF34A1 /* BGDidRefreshEvent.swift */; };
+		B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ADB1FCDF6EC00FF34A1 /* BGUpdateUserEvent.swift */; };
+		B0569AE11FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AE01FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift */; };
+		B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AE21FCDF78800FF34A1 /* UIShowMainScreenEvent.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -189,6 +200,17 @@
 		B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		B0569AC51FCCB12200FF34A1 /* LocalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationView.swift; sourceTree = "<group>"; };
+		B0569AC91FCDEAB600FF34A1 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		B0569ACC1FCDED7C00FF34A1 /* SplashVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVM.swift; sourceTree = "<group>"; };
+		B0569ACE1FCDEDAD00FF34A1 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
+		B0569AD01FCDEDC000FF34A1 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		B0569AD21FCDF65300FF34A1 /* UIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIService.swift; sourceTree = "<group>"; };
+		B0569AD51FCDF6BD00FF34A1 /* BGDidLoginEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGDidLoginEvent.swift; sourceTree = "<group>"; };
+		B0569AD71FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGDidLogoutEvent.swift; sourceTree = "<group>"; };
+		B0569AD91FCDF6DE00FF34A1 /* BGDidRefreshEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGDidRefreshEvent.swift; sourceTree = "<group>"; };
+		B0569ADB1FCDF6EC00FF34A1 /* BGUpdateUserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGUpdateUserEvent.swift; sourceTree = "<group>"; };
+		B0569AE01FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShowLoginScreenEvent.swift; sourceTree = "<group>"; };
+		B0569AE21FCDF78800FF34A1 /* UIShowMainScreenEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShowMainScreenEvent.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -331,6 +353,7 @@
 			children = (
 				B0569A401FC22A6D00FF34A1 /* App */,
 				B0569A411FC22A7200FF34A1 /* Network */,
+				B0569AD41FCDF6A400FF34A1 /* User */,
 				B0569A491FC22B3100FF34A1 /* BGEventBus.swift */,
 				B0569A4B1FC22B3E00FF34A1 /* BGEventBusEvent.swift */,
 			);
@@ -340,8 +363,10 @@
 		B0569A391FC22A3600FF34A1 /* UIEvents */ = {
 			isa = PBXGroup;
 			children = (
+				B0569ADD1FCDF74C00FF34A1 /* ScreenEvents */,
 				B0569A4D1FC22BA200FF34A1 /* UIEventBus.swift */,
 				B0569A4F1FC22BB300FF34A1 /* UIEventBusEvent.swift */,
+				B0569AD21FCDF65300FF34A1 /* UIService.swift */,
 			);
 			path = UIEvents;
 			sourceTree = "<group>";
@@ -567,6 +592,53 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		B0569AC71FCDEA8900FF34A1 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AC81FCDEA9B00FF34A1 /* ViewControllers */,
+				B0569ACB1FCDED6900FF34A1 /* ViewModels */,
+				B0569ACE1FCDEDAD00FF34A1 /* SplashAssembly.swift */,
+				B0569AD01FCDEDC000FF34A1 /* Splash.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B0569AC81FCDEA9B00FF34A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AC91FCDEAB600FF34A1 /* SplashVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B0569ACB1FCDED6900FF34A1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B0569ACC1FCDED7C00FF34A1 /* SplashVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B0569AD41FCDF6A400FF34A1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AD51FCDF6BD00FF34A1 /* BGDidLoginEvent.swift */,
+				B0569AD71FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift */,
+				B0569AD91FCDF6DE00FF34A1 /* BGDidRefreshEvent.swift */,
+				B0569ADB1FCDF6EC00FF34A1 /* BGUpdateUserEvent.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B0569ADD1FCDF74C00FF34A1 /* ScreenEvents */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AE01FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift */,
+				B0569AE21FCDF78800FF34A1 /* UIShowMainScreenEvent.swift */,
+			);
+			path = ScreenEvents;
+			sourceTree = "<group>";
+		};
 		B08A456D1F9DD5430082BDD3 = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +723,7 @@
 				B0FE4A3E1FBAD401008F2EE6 /* Login */,
 				B0A8E6741FA7B0BF001A8BBA /* Main */,
 				B0FE4A3F1FBAD406008F2EE6 /* Onboarding */,
+				B0569AC71FCDEA8900FF34A1 /* Splash */,
 				B0FE4A421FBAD467008F2EE6 /* User */,
 			);
 			path = Sceens;
@@ -888,6 +961,7 @@
 				B0FE4A441FBAD4EB008F2EE6 /* User.storyboard in Resources */,
 				B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */,
 				B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */,
+				B0569AD11FCDEDC000FF34A1 /* Splash.storyboard in Resources */,
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
 				B0569A5A1FC3745D00FF34A1 /* Coupon.storyboard in Resources */,
 				B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */,
@@ -1057,12 +1131,16 @@
 				B0569AC21FCB64B100FF34A1 /* ProgressHUD.swift in Sources */,
 				B0569AA11FC621BC00FF34A1 /* LoginVC.swift in Sources */,
 				B0569A241FC0CD9C00FF34A1 /* UIImage+Ext.swift in Sources */,
+				B0569AD61FCDF6BD00FF34A1 /* BGDidLoginEvent.swift in Sources */,
+				B0569AD81FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift in Sources */,
 				B0569A4C1FC22B3E00FF34A1 /* BGEventBusEvent.swift in Sources */,
 				B0569A441FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift in Sources */,
 				B0569A3B1FC22A4800FF34A1 /* EventBus.swift in Sources */,
 				B0569A331FC220FB00FF34A1 /* BaseViewModel.swift in Sources */,
 				B0569A281FC0CF6700FF34A1 /* Constants.swift in Sources */,
+				B0569AE11FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift in Sources */,
 				B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */,
+				B0569ADA1FCDF6DE00FF34A1 /* BGDidRefreshEvent.swift in Sources */,
 				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
 				B0569A8C1FC37D3500FF34A1 /* AdminServices.swift in Sources */,
 				B0A7AA361FCC58C900DC4F62 /* Images.swift in Sources */,
@@ -1091,14 +1169,17 @@
 				B0A7AA371FCC58C900DC4F62 /* Storyboards.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
+				B0569ACD1FCDED7C00FF34A1 /* SplashVM.swift in Sources */,
 				B0569A771FC37C8100FF34A1 /* CouponServices.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
+				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CouponVC.swift in Sources */,
 				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
 				B0569AA51FC621D400FF34A1 /* RegisterVC.swift in Sources */,
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
+				B0569ACA1FCDEAB600FF34A1 /* SplashVC.swift in Sources */,
 				B0A7AA351FCC58C900DC4F62 /* Localizables.swift in Sources */,
 				B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */,
 				B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */,
@@ -1108,6 +1189,7 @@
 				B0A7AA281FCC057900DC4F62 /* Validator.swift in Sources */,
 				B0569AB81FC9890D00FF34A1 /* AuthStore.swift in Sources */,
 				B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */,
+				B0569ACF1FCDEDAD00FF34A1 /* SplashAssembly.swift in Sources */,
 				B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */,
 				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
 				B0569A311FC0E5E000FF34A1 /* ColorSheet.swift in Sources */,
@@ -1116,9 +1198,11 @@
 				B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */,
 				B0A7AA391FCD7BE000DC4F62 /* AppAssembly.swift in Sources */,
 				B0569A9B1FC6216E00FF34A1 /* RegisterModel.swift in Sources */,
+				B0569AD31FCDF65300FF34A1 /* UIService.swift in Sources */,
 				B0569A751FC37C7200FF34A1 /* CouponModel.swift in Sources */,
 				B0569A501FC22BB300FF34A1 /* UIEventBusEvent.swift in Sources */,
 				B0569A481FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift in Sources */,
+				B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */,
 				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
 				B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */,
 				B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */,

@@ -93,6 +93,11 @@ enum StoryboardScene {
 
     static let initialScene = InitialSceneType<UIViewController>(storyboard: Onboarding.self)
   }
+  enum Splash: StoryboardType {
+    static let storyboardName = "Splash"
+
+    static let initialScene = InitialSceneType<UIViewController>(storyboard: Splash.self)
+  }
   enum User: StoryboardType {
     static let storyboardName = "User"
 
