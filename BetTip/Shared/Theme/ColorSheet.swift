@@ -12,8 +12,12 @@ import UIKit
 
 extension UIColor {
     
-    class var mainBackground: UIColor {
+    class var main: UIColor {
         return mainViolet
+    }
+    
+    class var secondary: UIColor {
+        return secondaryViolet
     }
     
     class var navbarBackground: UIColor {
@@ -29,15 +33,15 @@ extension UIColor {
     }
     
     class var mainViolet: UIColor {
-        return withHex(hex: 0x282828)
+        return withHex(hex: 0x2C3940)
     }
     
-    class var lightGrayViolet: UIColor {
-        return withHex(hex: 0xd8d8d8)
+    class var secondaryViolet: UIColor {
+        return withHex(hex: 0x43DBA8)
     }
     
     class var fieldLabelTextInactive: UIColor {
-        return withHex(hex: 0x7B7B7B)
+        return withHex(hex: 0xFFFFFF)
     }
     
     class var fieldLabelTextActive: UIColor {
