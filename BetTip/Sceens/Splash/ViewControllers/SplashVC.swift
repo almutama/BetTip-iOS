@@ -24,9 +24,12 @@ class SplashVC: BaseViewController {
     }
     
     func bindViewModel() {
-        self.viewModel.checkAuth()
-        self.viewModel.userModel.asObservable().subscribe(onNext: {[weak self] (_) in
-            print("")
-        }).disposed(by: self.disposeBag)
+        self.viewModel.checkAuth { user in
+            if let user = user {
+                BGDidLoginEvent(user: user).send()
+            } else {
+                UIShowLoginScreenEvent(.transitionCrossDissolve).send()
+            }
+        }
     }
 }

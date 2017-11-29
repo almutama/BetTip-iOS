@@ -13,22 +13,17 @@ class SplashVM: BaseViewModel {
     
     private let authManager: AuthManagerType!
     private let disposeBag = DisposeBag()
-    var userModel = Variable<UserModel?>(nil)
     
     init(authManager: AuthManagerType) {
         self.authManager = authManager
         super.init()
     }
     
-    func checkAuth() {
+    func checkAuth(initComplete: @escaping (UserModel?) -> Void) {
         self.authManager.restoreState()
             .delaySubscription(0, scheduler: MainScheduler.instance)
             .map { $0.value }
-            .subscribe(onNext: self.sendUser)
+            .subscribe(onNext: initComplete)
             .disposed(by: disposeBag)
-    }
-    
-    func sendUser(_ userModel: UserModel?) {
-        self.userModel.value = userModel
     }
 }
