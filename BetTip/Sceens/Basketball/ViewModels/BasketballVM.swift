@@ -11,11 +11,11 @@ import RxSwift
 
 class BasketballVM: BaseViewModel {
     
-    private let authManager: AuthManagerType!
+    private let basketballService: BasketballServiceType!
     private let disposeBag = DisposeBag()
     
-    init(authManager: AuthManagerType) {
-        self.authManager = authManager
+    init(basketballService: BasketballServiceType) {
+        self.basketballService = basketballService
         super.init()
     }
 }

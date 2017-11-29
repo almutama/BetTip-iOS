@@ -15,7 +15,7 @@ class BasketballAssembly: Assembly {
     
     func assemble(container: Container) {
         
-        assembler = Assembler([SplashViewModelAssembly()])
+        assembler = Assembler([BasketballViewModelAssembly(), BasketballServiceAssembly()])
         Container.loggingFunction = nil
         
         container.storyboardInitCompleted(BasketballVC.self) {_, c in
@@ -29,7 +29,16 @@ class BasketballViewModelAssembly: Assembly {
     
     func assemble(container: Container) {
         container.register( BasketballVM.self) { r in
-            BasketballVM(authManager: r.resolve(AuthManagerType.self)!)
+            BasketballVM(basketballService: r.resolve(BasketballServiceType.self)!)
+            }.inObjectScope(.container)
+    }
+}
+
+class BasketballServiceAssembly: Assembly {
+    
+    func assemble(container: Container) {
+        container.register(BasketballServiceType.self) { _ in
+            BasketballService()
             }.inObjectScope(.container)
     }
 }
