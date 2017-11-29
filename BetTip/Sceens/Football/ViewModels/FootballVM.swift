@@ -19,4 +19,3 @@ class FootballVM: BaseViewModel {
         super.init()
     }
 }
-

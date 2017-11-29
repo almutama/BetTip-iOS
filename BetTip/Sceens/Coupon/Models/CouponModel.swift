@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import ObjectMapper
+
+struct CouponModel: Mappable {
+    var id: String = ""
+    
+    init?(map: Map) {}
+    
+    mutating func mapping(map: Map) {
+        id <- map["id"]
+    }
+}

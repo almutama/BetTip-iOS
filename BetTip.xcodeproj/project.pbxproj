@@ -52,8 +52,8 @@
 		B0569A771FC37C8100FF34A1 /* CouponServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A761FC37C8100FF34A1 /* CouponServices.swift */; };
 		B0569A7A1FC37C8E00FF34A1 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A781FC37C8E00FF34A1 /* CouponCell.swift */; };
 		B0569A7B1FC37C8E00FF34A1 /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0569A791FC37C8E00FF34A1 /* CouponCell.xib */; };
-		B0569A7D1FC37C9C00FF34A1 /* CouponVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A7C1FC37C9C00FF34A1 /* CouponVM.swift */; };
-		B0569A7F1FC37CA600FF34A1 /* CouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A7E1FC37CA600FF34A1 /* CouponVC.swift */; };
+		B0569A7D1FC37C9C00FF34A1 /* CouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A7C1FC37C9C00FF34A1 /* CouponsVM.swift */; };
+		B0569A7F1FC37CA600FF34A1 /* CouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A7E1FC37CA600FF34A1 /* CouponsVC.swift */; };
 		B0569A811FC37CC600FF34A1 /* CouponAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A801FC37CC600FF34A1 /* CouponAssembly.swift */; };
 		B0569A881FC37D1F00FF34A1 /* AdminAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A871FC37D1F00FF34A1 /* AdminAssembly.swift */; };
 		B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A891FC37D2A00FF34A1 /* AdminVM.swift */; };
@@ -183,8 +183,8 @@
 		B0569A761FC37C8100FF34A1 /* CouponServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponServices.swift; sourceTree = "<group>"; };
 		B0569A781FC37C8E00FF34A1 /* CouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
 		B0569A791FC37C8E00FF34A1 /* CouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
-		B0569A7C1FC37C9C00FF34A1 /* CouponVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponVM.swift; sourceTree = "<group>"; };
-		B0569A7E1FC37CA600FF34A1 /* CouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponVC.swift; sourceTree = "<group>"; };
+		B0569A7C1FC37C9C00FF34A1 /* CouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsVM.swift; sourceTree = "<group>"; };
+		B0569A7E1FC37CA600FF34A1 /* CouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsVC.swift; sourceTree = "<group>"; };
 		B0569A801FC37CC600FF34A1 /* CouponAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAssembly.swift; sourceTree = "<group>"; };
 		B0569A871FC37D1F00FF34A1 /* AdminAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAssembly.swift; sourceTree = "<group>"; };
 		B0569A891FC37D2A00FF34A1 /* AdminVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminVM.swift; sourceTree = "<group>"; };
@@ -490,7 +490,7 @@
 		B0569A6E1FC37B4C00FF34A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A7E1FC37CA600FF34A1 /* CouponVC.swift */,
+				B0569A7E1FC37CA600FF34A1 /* CouponsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -498,7 +498,7 @@
 		B0569A701FC37B5F00FF34A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A7C1FC37C9C00FF34A1 /* CouponVM.swift */,
+				B0569A7C1FC37C9C00FF34A1 /* CouponsVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1234,7 +1234,7 @@
 				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */,
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
-				B0569A7D1FC37C9C00FF34A1 /* CouponVM.swift in Sources */,
+				B0569A7D1FC37C9C00FF34A1 /* CouponsVM.swift in Sources */,
 				B0569A9E1FC6219000FF34A1 /* LoginService.swift in Sources */,
 				B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */,
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
@@ -1266,7 +1266,7 @@
 				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
 				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
-				B0569A7F1FC37CA600FF34A1 /* CouponVC.swift in Sources */,
+				B0569A7F1FC37CA600FF34A1 /* CouponsVC.swift in Sources */,
 				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
 				B0569AA51FC621D400FF34A1 /* RegisterVC.swift in Sources */,
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
