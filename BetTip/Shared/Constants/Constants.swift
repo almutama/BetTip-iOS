@@ -15,6 +15,7 @@ struct Constants {
     static let onboardingDefaults  = "onboarding"
     static let authTypeKey = "authType"
     static let activeAuthProviderKey = "activeAuthProvider"
+    static let credentialKey: String = "credential"
     
     //Profile
     static let firstNameString = "firstName"

@@ -42,7 +42,7 @@ extension AuthProviderType {
 
 class AuthProvider: AuthProviderType {
     
-    static let key: String = "credential"
+    static let key: String = Constants.credentialKey
     
     private let authStore: AuthStoreType
     private let loginService: LoginServiceType
