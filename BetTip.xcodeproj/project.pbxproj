@@ -89,6 +89,13 @@
 		B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ADB1FCDF6EC00FF34A1 /* BGUpdateUserEvent.swift */; };
 		B0569AE11FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AE01FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift */; };
 		B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AE21FCDF78800FF34A1 /* UIShowMainScreenEvent.swift */; };
+		B0569AEA1FCF3D6200FF34A1 /* FootballModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AE91FCF3D6200FF34A1 /* FootballModel.swift */; };
+		B0569AEC1FCF3D7600FF34A1 /* FootballServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AEB1FCF3D7600FF34A1 /* FootballServices.swift */; };
+		B0569AEE1FCF3D8100FF34A1 /* FootballVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AED1FCF3D8100FF34A1 /* FootballVC.swift */; };
+		B0569AF01FCF3D8C00FF34A1 /* FootballVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AEF1FCF3D8C00FF34A1 /* FootballVM.swift */; };
+		B0569AF31FCF3DA100FF34A1 /* FootballCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF11FCF3DA100FF34A1 /* FootballCell.swift */; };
+		B0569AF41FCF3DA100FF34A1 /* FootballCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0569AF21FCF3DA100FF34A1 /* FootballCell.xib */; };
+		B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF51FCF3DB200FF34A1 /* FootballAssembly.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -213,6 +220,13 @@
 		B0569ADB1FCDF6EC00FF34A1 /* BGUpdateUserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGUpdateUserEvent.swift; sourceTree = "<group>"; };
 		B0569AE01FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShowLoginScreenEvent.swift; sourceTree = "<group>"; };
 		B0569AE21FCDF78800FF34A1 /* UIShowMainScreenEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShowMainScreenEvent.swift; sourceTree = "<group>"; };
+		B0569AE91FCF3D6200FF34A1 /* FootballModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballModel.swift; sourceTree = "<group>"; };
+		B0569AEB1FCF3D7600FF34A1 /* FootballServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballServices.swift; sourceTree = "<group>"; };
+		B0569AED1FCF3D8100FF34A1 /* FootballVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballVC.swift; sourceTree = "<group>"; };
+		B0569AEF1FCF3D8C00FF34A1 /* FootballVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballVM.swift; sourceTree = "<group>"; };
+		B0569AF11FCF3DA100FF34A1 /* FootballCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballCell.swift; sourceTree = "<group>"; };
+		B0569AF21FCF3DA100FF34A1 /* FootballCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootballCell.xib; sourceTree = "<group>"; };
+		B0569AF51FCF3DB200FF34A1 /* FootballAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAssembly.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -643,6 +657,47 @@
 			path = ScreenEvents;
 			sourceTree = "<group>";
 		};
+		B0569AE41FCF3C8700FF34A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AF11FCF3DA100FF34A1 /* FootballCell.swift */,
+				B0569AF21FCF3DA100FF34A1 /* FootballCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0569AE51FCF3C9000FF34A1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AEF1FCF3D8C00FF34A1 /* FootballVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B0569AE61FCF3C9700FF34A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AED1FCF3D8100FF34A1 /* FootballVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B0569AE71FCF3CA400FF34A1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AEB1FCF3D7600FF34A1 /* FootballServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B0569AE81FCF3CAB00FF34A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0569AE91FCF3D6200FF34A1 /* FootballModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B08A456D1F9DD5430082BDD3 = {
 			isa = PBXGroup;
 			children = (
@@ -863,7 +918,13 @@
 		B0FE4A411FBAD44D008F2EE6 /* Football */ = {
 			isa = PBXGroup;
 			children = (
+				B0569AE81FCF3CAB00FF34A1 /* Models */,
+				B0569AE71FCF3CA400FF34A1 /* Services */,
+				B0569AE61FCF3C9700FF34A1 /* ViewControllers */,
+				B0569AE51FCF3C9000FF34A1 /* ViewModels */,
+				B0569AE41FCF3C8700FF34A1 /* Views */,
 				B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */,
+				B0569AF51FCF3DB200FF34A1 /* FootballAssembly.swift */,
 			);
 			path = Football;
 			sourceTree = "<group>";
@@ -989,6 +1050,7 @@
 				B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */,
 				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
 				B0569A651FC37A9200FF34A1 /* BasketballCell.xib in Resources */,
+				B0569AF41FCF3DA100FF34A1 /* FootballCell.xib in Resources */,
 				B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */,
 				B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */,
 				B0A7AA2B1FCC23D300DC4F62 /* Localizable.strings in Resources */,
@@ -1168,6 +1230,7 @@
 				B0569A8C1FC37D3500FF34A1 /* AdminServices.swift in Sources */,
 				B0A7AA361FCC58C900DC4F62 /* Images.swift in Sources */,
 				B0569A8E1FC37D3F00FF34A1 /* AdminVC.swift in Sources */,
+				B0569AEA1FCF3D6200FF34A1 /* FootballModel.swift in Sources */,
 				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */,
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
@@ -1177,6 +1240,7 @@
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
 				B0569A641FC37A9200FF34A1 /* BasketballCell.swift in Sources */,
 				B0569A811FC37CC600FF34A1 /* CouponAssembly.swift in Sources */,
+				B0569AF31FCF3DA100FF34A1 /* FootballCell.swift in Sources */,
 				B0569A6D1FC37B2600FF34A1 /* BasketballAssembly.swift in Sources */,
 				B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */,
 				B0A7AA261FC8627800DC4F62 /* FirebaseError.swift in Sources */,
@@ -1190,10 +1254,13 @@
 				B0569A131FC0B9F800FF34A1 /* UITableView+Ext.swift in Sources */,
 				B0569A171FC0BF2800FF34A1 /* NibView.swift in Sources */,
 				B0A7AA371FCC58C900DC4F62 /* Storyboards.swift in Sources */,
+				B0569AEE1FCF3D8100FF34A1 /* FootballVC.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
 				B0569ACD1FCDED7C00FF34A1 /* SplashVM.swift in Sources */,
+				B0569AF01FCF3D8C00FF34A1 /* FootballVM.swift in Sources */,
 				B0569A771FC37C8100FF34A1 /* CouponServices.swift in Sources */,
+				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
 				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
@@ -1229,6 +1296,7 @@
 				B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */,
 				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
 				B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */,
+				B0569AEC1FCF3D7600FF34A1 /* FootballServices.swift in Sources */,
 				B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */,
 				B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */,
 				B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */,
