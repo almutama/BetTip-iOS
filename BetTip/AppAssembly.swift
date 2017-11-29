@@ -20,7 +20,7 @@ class AppAssembly: NSObject {
     }
     
     fileprivate let assembler = Assembler([
-        LoginAssembly(), UserAssembly(), SplashAssembly()
+        LoginAssembly(), UserAssembly(), SplashAssembly(), BasketballAssembly()
         ], container: SwinjectStoryboard.defaultContainer)
     
 }

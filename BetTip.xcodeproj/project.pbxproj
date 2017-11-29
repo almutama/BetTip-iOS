@@ -601,8 +601,8 @@
 			children = (
 				B0569AC81FCDEA9B00FF34A1 /* ViewControllers */,
 				B0569ACB1FCDED6900FF34A1 /* ViewModels */,
-				B0569ACE1FCDEDAD00FF34A1 /* SplashAssembly.swift */,
 				B0569AD01FCDEDC000FF34A1 /* Splash.storyboard */,
+				B0569ACE1FCDEDAD00FF34A1 /* SplashAssembly.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -871,10 +871,10 @@
 		B0FE4A421FBAD467008F2EE6 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				B0A7AA3D1FCE8D2400DC4F62 /* ViewControllers */,
-				B0A7AA3E1FCE8D2F00DC4F62 /* ViewModels */,
 				B0569AAF1FC7662E00FF34A1 /* Models */,
 				B0A7AA221FC85A6B00DC4F62 /* Services */,
+				B0A7AA3D1FCE8D2400DC4F62 /* ViewControllers */,
+				B0A7AA3E1FCE8D2F00DC4F62 /* ViewModels */,
 				B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */,
 				B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */,
 			);

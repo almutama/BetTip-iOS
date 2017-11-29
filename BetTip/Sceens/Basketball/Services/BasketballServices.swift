@@ -6,4 +6,23 @@
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+import Firebase
+import FirebaseDatabase
+import Reactant
+import Result
+
+protocol BasketballServiceType {
+    func basketballMatches() -> Observable<[BasketballModel]>
+}
+
+class BasketballService: BasketballServiceType {
+
+    func basketballMatches() -> Observable<[BasketballModel]> {
+        let matches: Observable<[BasketballModel]> = Database.database().reference()
+            .child("matches")
+            .fetchArray()
+            .recover([])
+        return matches
+    }
+}

@@ -6,4 +6,16 @@
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
+import RxSwift
+
+class BasketballVM: BaseViewModel {
+    
+    private let authManager: AuthManagerType!
+    private let disposeBag = DisposeBag()
+    
+    init(authManager: AuthManagerType) {
+        self.authManager = authManager
+        super.init()
+    }
+}
