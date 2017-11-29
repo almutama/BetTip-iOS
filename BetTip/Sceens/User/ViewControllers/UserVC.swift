@@ -1,22 +1,21 @@
 //
-//  SplashVC.swift
+//  UserVC.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 28.11.2017.
+//  Created by Haydar Karkin on 29.11.2017.
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 
-class SplashVC: BaseViewController {
+class UserVC: BaseViewController {
     
-    var viewModel: SplashVM!
+    var viewModel: UserVM!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bindViewModel()
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,9 +23,23 @@ class SplashVC: BaseViewController {
     }
     
     func bindViewModel() {
-        self.viewModel.checkAuth()
+        self.viewModel.getUser()
         self.viewModel.userModel.asObservable().subscribe(onNext: {[weak self] (_) in
-            print("")
+            self?.prepareUI()
         }).disposed(by: self.disposeBag)
+    }
+    
+    func prepareUI() {
+        
+    }
+}
+
+extension UserVC: Theming {
+    var theme: ThemeType {
+        return ThemeManager.shared.currentTheme
+    }
+    
+    func apply() {
+        
     }
 }

@@ -106,6 +106,8 @@
 		B0A7AA371FCC58C900DC4F62 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA341FCC58C900DC4F62 /* Storyboards.swift */; };
 		B0A7AA391FCD7BE000DC4F62 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA381FCD7BE000DC4F62 /* AppAssembly.swift */; };
 		B0A7AA3B1FCD7C6800DC4F62 /* UserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */; };
+		B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */; };
+		B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */; };
 		B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0FE4A441FBAD4EB008F2EE6 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */; };
@@ -233,6 +235,8 @@
 		B0A7AA341FCC58C900DC4F62 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		B0A7AA381FCD7BE000DC4F62 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAssembly.swift; sourceTree = "<group>"; };
+		B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
+		B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -698,6 +702,22 @@
 			path = GeneratedCodes;
 			sourceTree = "<group>";
 		};
+		B0A7AA3D1FCE8D2400DC4F62 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B0A7AA3E1FCE8D2F00DC4F62 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		B0A8E6701FA7AE27001A8BBA /* SupportedFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -851,6 +871,8 @@
 		B0FE4A421FBAD467008F2EE6 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				B0A7AA3D1FCE8D2400DC4F62 /* ViewControllers */,
+				B0A7AA3E1FCE8D2F00DC4F62 /* ViewModels */,
 				B0569AAF1FC7662E00FF34A1 /* Models */,
 				B0A7AA221FC85A6B00DC4F62 /* Services */,
 				B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */,
@@ -1126,6 +1148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */,
 				B0569A6B1FC37AFD00FF34A1 /* BasketballModel.swift in Sources */,
 				B0569A991FC6216400FF34A1 /* LoginModel.swift in Sources */,
 				B0569AC21FCB64B100FF34A1 /* ProgressHUD.swift in Sources */,
@@ -1175,6 +1198,7 @@
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
 				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
+				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CouponVC.swift in Sources */,
 				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
 				B0569AA51FC621D400FF34A1 /* RegisterVC.swift in Sources */,

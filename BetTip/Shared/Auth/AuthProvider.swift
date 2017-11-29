@@ -85,8 +85,8 @@ class AuthProvider: AuthProviderType {
     
     func restoreState(profile: UserModel?)
         -> Observable<Result<UserModel, AuthenticationError>> {
-            if let
-                email = KeychainWrapper.standard.string(forKey: Constants.emailKey),
+            if
+                let email = KeychainWrapper.standard.string(forKey: Constants.emailKey),
                 let password = KeychainWrapper.standard.string(forKey: Constants.passwordKey) {
                 return login(email: email, password: password).mapError(AuthenticationError.firebaseError)
             } else {

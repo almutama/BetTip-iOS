@@ -18,6 +18,10 @@ class UserAssembly: Assembly {
         assembler = Assembler([UserViewModelAssembly(), UserServiceAssembly()])
         Container.loggingFunction = nil
         
+        container.storyboardInitCompleted(UserVC.self) {_, c in
+            let resolver = self.assembler.resolver
+            c.viewModel = resolver.resolve(UserVM.self)
+        }
     }
     
 }
@@ -25,8 +29,10 @@ class UserAssembly: Assembly {
 class UserViewModelAssembly: Assembly {
     
     func assemble(container: Container) {
+        container.register( UserVM.self) { r in
+            UserVM(authStore: r.resolve(AuthStoreType.self)!)
+            }.inObjectScope(.container)
     }
-    
 }
 
 class UserServiceAssembly: Assembly {
