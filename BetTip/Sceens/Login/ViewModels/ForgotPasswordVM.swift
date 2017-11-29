@@ -11,9 +11,12 @@ import RxSwift
 
 class ForgotPasswordVM: BaseViewModel {
     
+    let authProvider: AuthProviderType!
     let disposeBag = DisposeBag()
+    var isMailSendSuccess = Variable<Bool>(false)
     
-    func sendMail(email: String) {
-        
+    init(authProvider: AuthProviderType) {
+        self.authProvider = authProvider
+        super.init()
     }
 }

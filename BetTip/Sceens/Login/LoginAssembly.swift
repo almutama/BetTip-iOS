@@ -37,7 +37,15 @@ class LoginViewModelAssembly: Assembly {
     
     func assemble(container: Container) {
         container.register(LoginVM.self) { r in
-            LoginVM(authProvider: r.resolve(AuthProvider.self)!)
+            LoginVM(authProvider: r.resolve(AuthProviderType.self)!)
+            }.inObjectScope(.container)
+        
+        container.register(RegisterVM.self) { r in
+            RegisterVM(authProvider: r.resolve(AuthProviderType.self)!)
+            }.inObjectScope(.container)
+        
+        container.register(ForgotPasswordVM.self) { r in
+            ForgotPasswordVM(authProvider: r.resolve(AuthProviderType.self)!)
             }.inObjectScope(.container)
     }
     
