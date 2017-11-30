@@ -18,9 +18,8 @@ class CouponAssembly: Assembly {
         assembler = Assembler([CouponViewModelAssembly(), CouponServiceAssembly()])
         Container.loggingFunction = nil
         
-        container.storyboardInitCompleted(CouponsVC.self) {_, c in
-            let resolver = self.assembler.resolver
-            c.viewModel = resolver.resolve(CouponsVM.self)
+        container.storyboardInitCompleted(CouponsVC.self) {r, c in
+            c.viewModel = r.resolve(CouponsVM.self)
         }
     }
 }

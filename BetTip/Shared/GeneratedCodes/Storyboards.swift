@@ -96,7 +96,7 @@ enum StoryboardScene {
   enum Splash: StoryboardType {
     static let storyboardName = "Splash"
 
-    static let initialScene = InitialSceneType<UIViewController>(storyboard: Splash.self)
+    static let initialScene = InitialSceneType<BetTip.SplashVC>(storyboard: Splash.self)
   }
   enum User: StoryboardType {
     static let storyboardName = "User"

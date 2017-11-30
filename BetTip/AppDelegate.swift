@@ -12,14 +12,18 @@ import FirebaseMessaging
 import IQKeyboardManagerSwift
 import UserNotifications
 import Keys
+import Swinject
+import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    fileprivate let appAssembler = AppAssembly()
+    //fileprivate let appAssembler = AppAssembly()
+    fileprivate let logger = Log.createLogger()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        SwinjectStoryboard.performSetup()
         self.setupNotification(application: application)
         self.registerServices()
         return true
@@ -68,7 +72,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         HockeyApp().setupAuth()
         HeyzapAds.start(withPublisherID: BetTipKeys().heyzapID)
-        _ = Log.createLogger()
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B925683303992C61BA36F38 /* Pods_BetTipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */; };
+		B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */; };
 		B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyApp.swift */; };
 		B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */; };
 		B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */; };
@@ -141,6 +142,7 @@
 		368ECDF0EA2EEC9691508FDF /* Pods_BetTip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		656147D774EE3FD2EC2C1712 /* Pods-BetTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.debug.xcconfig"; sourceTree = "<group>"; };
 		689B272117A621A948C4580D /* Pods-BetTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.release.xcconfig"; sourceTree = "<group>"; };
+		B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Ext.swift"; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B0569A091FC0A73300FF34A1 /* HockeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyApp.swift; sourceTree = "<group>"; };
 		B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				B0569A211FC0CD4300FF34A1 /* UIScreen+Ext.swift */,
 				B0569A121FC0B9F800FF34A1 /* UITableView+Ext.swift */,
 				B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */,
+				B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1013,6 +1016,9 @@
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -1283,6 +1289,7 @@
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
 				B0569ACA1FCDEAB600FF34A1 /* SplashVC.swift in Sources */,
 				B0A7AA351FCC58C900DC4F62 /* Localizables.swift in Sources */,
+				B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */,
 				B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */,
 				B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */,
 				B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */,

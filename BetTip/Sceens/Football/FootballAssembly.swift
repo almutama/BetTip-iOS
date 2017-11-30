@@ -18,9 +18,8 @@ class FootballAssembly: Assembly {
         assembler = Assembler([FootballViewModelAssembly(), FootballServiceAssembly()])
         Container.loggingFunction = nil
         
-        container.storyboardInitCompleted(FootballVC.self) {_, c in
-            let resolver = self.assembler.resolver
-            c.viewModel = resolver.resolve(FootballVM.self)
+        container.storyboardInitCompleted(FootballVC.self) {r, c in
+            c.viewModel = r.resolve(FootballVM.self)
         }
     }
 }

@@ -18,9 +18,8 @@ class BasketballAssembly: Assembly {
         assembler = Assembler([BasketballViewModelAssembly(), BasketballServiceAssembly()])
         Container.loggingFunction = nil
         
-        container.storyboardInitCompleted(BasketballVC.self) {_, c in
-            let resolver = self.assembler.resolver
-            c.viewModel = resolver.resolve(BasketballVM.self)
+        container.storyboardInitCompleted(BasketballVC.self) {r, c in
+            c.viewModel = r.resolve(BasketballVM.self)
         }
     }
 }

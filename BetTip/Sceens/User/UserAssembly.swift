@@ -18,9 +18,8 @@ class UserAssembly: Assembly {
         assembler = Assembler([UserViewModelAssembly(), UserServiceAssembly()])
         Container.loggingFunction = nil
         
-        container.storyboardInitCompleted(UserVC.self) {_, c in
-            let resolver = self.assembler.resolver
-            c.viewModel = resolver.resolve(UserVM.self)
+        container.storyboardInitCompleted(UserVC.self) {r, c in
+            c.viewModel = r.resolve(UserVM.self)
         }
     }
     

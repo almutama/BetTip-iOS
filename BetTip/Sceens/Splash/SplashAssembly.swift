@@ -15,12 +15,11 @@ class SplashAssembly: Assembly {
     
     func assemble(container: Container) {
         
-        assembler = Assembler([SplashViewModelAssembly()])
+        assembler = Assembler([LoginAssembly(), UserAssembly(), SplashViewModelAssembly()])
         Container.loggingFunction = nil
         
-        container.storyboardInitCompleted(SplashVC.self) {_, c in
-            let resolver = self.assembler.resolver
-            c.viewModel = resolver.resolve(SplashVM.self)
+        container.storyboardInitCompleted(SplashVC.self) {r, c in
+            c.viewModel = r.resolve(SplashVM.self)
         }
     }
 }
