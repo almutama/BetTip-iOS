@@ -30,7 +30,6 @@ protocol ThemeType {
     var main: UIColor { get }
     var secondary: UIColor { get }
     var complementary: UIColor { get }
-    var profile: UIColor { get }
     var generalText: UIColor { get }
     var secondaryText: UIColor { get }
     var complementaryText: UIColor { get }

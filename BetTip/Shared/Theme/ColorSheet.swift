@@ -13,59 +13,43 @@ import UIKit
 extension UIColor {
     
     class var main: UIColor {
-        return mainViolet
-    }
-    
-    class var secondary: UIColor {
-        return secondaryViolet
-    }
-    
-    class var navbarBackground: UIColor {
-        return mainViolet
-    }
-    
-    class var navigationTint: UIColor {
-        return .white
-    }
-    
-    class var navigationTitle: UIColor {
-        return .white
-    }
-    
-    class var mainViolet: UIColor {
         return withHex(hex: 0x2C3940)
     }
     
-    class var secondaryViolet: UIColor {
+    class var secondary: UIColor {
         return withHex(hex: 0x43DBA8)
     }
     
-    class var fieldLabelTextInactive: UIColor {
-        return withHex(hex: 0xFFFFFF)
-    }
-    
-    class var fieldLabelTextActive: UIColor {
+    class var complementary: UIColor {
         return .white
     }
     
-    class var fieldLabelBackgroundInactive: UIColor {
+    class var generalTextActive: UIColor {
         return .white
     }
     
-    class var fieldLabelBackgroundActive: UIColor {
-        return mainViolet
+    class var secondaryTextActive: UIColor {
+        return .gray
     }
     
-    class var separator: UIColor {
-        return withHex(hex: 0xDEE6F2)
+    class var complementaryTextActive: UIColor {
+        return .lightGray
     }
     
-    class var popupText: UIColor {
-        return withHex(hex: 0x474747)
+    class var highlight: UIColor {
+        return withHex(hex: 0xFFFD6225)
     }
     
-    class var navbarShadow: UIColor {
-        return .mainViolet
+    class var defaultAction: UIColor {
+        return withHex(hex: 0xFF4CB935)
+    }
+    
+    class var secondaryAction: UIColor {
+        return withHex(hex: 0xFF82CE71)
+    }
+    
+    class var complementaryAction: UIColor {
+        return withHex(hex: 0xFF165416)
     }
     
     class func withHex(hex: UInt) -> UIColor {

@@ -56,28 +56,29 @@ class DefaultTheme: ThemeType {
         return Style(font: UIFont.systemFont(ofSize: 57), lineHeight: 75, kerning: 0, alignment: .center, lineBreak: .byWordWrapping, color: generalText)
     }
     
-    // colors
-    // white color
-    var main: UIColor { return UIColor(0xFFFFFFFF) }
-    var secondary: UIColor { return UIColor(0xFFF9F9F9) }
-    var complementary: UIColor { return UIColor(0xFFEFEFEF) }
-    var profile: UIColor { return UIColor(0xFFF3F1EE) }
+    // MARK: Colors
+    // Almost dark color
+    var main: UIColor { return UIColor.main }
+    // Cyan color
+    var secondary: UIColor { return UIColor.secondary }
+    // White color
+    var complementary: UIColor { return UIColor.complementary }
     
-    // Black color
-    var generalText: UIColor { return UIColor(0xFF000000) }
+    // White color
+    var generalText: UIColor { return UIColor.generalTextActive }
     // Gray color
-    var secondaryText: UIColor { return UIColor(0xFF7C7C7C) }
+    var secondaryText: UIColor { return UIColor.secondaryTextActive }
     // Very light gray color
-    var complementaryText: UIColor { return UIColor(0xFFC8C8C8) }
+    var complementaryText: UIColor { return UIColor.complementaryTextActive }
     // Orange color
-    var highlight: UIColor { return UIColor(0xFFFD6225) }
+    var highlight: UIColor { return UIColor.highlight }
     
     // Action Green color
-    var defaultAction: UIColor { return UIColor(0xFF4CB935) }
+    var defaultAction: UIColor { return UIColor.defaultAction }
     // Light Green Color
-    var secondaryAction: UIColor { return UIColor(0xFF82CE71) }
+    var secondaryAction: UIColor { return UIColor.secondaryAction }
     // Dark Green Color
-    var complementaryAction: UIColor { return UIColor(0xFF165416) }
+    var complementaryAction: UIColor { return UIColor.complementaryAction }
     
     // Shadow color
     var shadow: UIColor { return UIColor.black.withAlphaComponent(0.5) }

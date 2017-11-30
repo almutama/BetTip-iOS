@@ -44,7 +44,7 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
-        self.view.backgroundColor = UIColor.mainBackground
+        self.view.backgroundColor = UIColor.main
     }
     
     func isUIViewControllerPresentedAsModal() -> Bool {
