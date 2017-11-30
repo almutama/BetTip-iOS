@@ -96,6 +96,9 @@
 		B0569AF31FCF3DA100FF34A1 /* FootballCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF11FCF3DA100FF34A1 /* FootballCell.swift */; };
 		B0569AF41FCF3DA100FF34A1 /* FootballCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0569AF21FCF3DA100FF34A1 /* FootballCell.xib */; };
 		B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF51FCF3DB200FF34A1 /* FootballAssembly.swift */; };
+		B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF71FD07FF200FF34A1 /* StyledLabel.swift */; };
+		B0569AFA1FD0801100FF34A1 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF91FD0801100FF34A1 /* StyledButton.swift */; };
+		B0569AFC1FD0803200FF34A1 /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AFB1FD0803200FF34A1 /* StyledTextField.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -227,6 +230,9 @@
 		B0569AF11FCF3DA100FF34A1 /* FootballCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballCell.swift; sourceTree = "<group>"; };
 		B0569AF21FCF3DA100FF34A1 /* FootballCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootballCell.xib; sourceTree = "<group>"; };
 		B0569AF51FCF3DB200FF34A1 /* FootballAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAssembly.swift; sourceTree = "<group>"; };
+		B0569AF71FD07FF200FF34A1 /* StyledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLabel.swift; sourceTree = "<group>"; };
+		B0569AF91FD0801100FF34A1 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
+		B0569AFB1FD0803200FF34A1 /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -888,8 +894,11 @@
 		B0FE4A3C1FBAD3C6008F2EE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A101FC0B9B400FF34A1 /* Reusable.swift */,
 				B0569A161FC0BF2800FF34A1 /* NibView.swift */,
+				B0569A101FC0B9B400FF34A1 /* Reusable.swift */,
+				B0569AF91FD0801100FF34A1 /* StyledButton.swift */,
+				B0569AF71FD07FF200FF34A1 /* StyledLabel.swift */,
+				B0569AFB1FD0803200FF34A1 /* StyledTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1211,6 +1220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */,
+				B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */,
 				B0569A6B1FC37AFD00FF34A1 /* BasketballModel.swift in Sources */,
 				B0569A991FC6216400FF34A1 /* LoginModel.swift in Sources */,
 				B0569AC21FCB64B100FF34A1 /* ProgressHUD.swift in Sources */,
@@ -1229,6 +1239,7 @@
 				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
 				B0569A8C1FC37D3500FF34A1 /* AdminServices.swift in Sources */,
 				B0A7AA361FCC58C900DC4F62 /* Images.swift in Sources */,
+				B0569AFA1FD0801100FF34A1 /* StyledButton.swift in Sources */,
 				B0569A8E1FC37D3F00FF34A1 /* AdminVC.swift in Sources */,
 				B0569AEA1FCF3D6200FF34A1 /* FootballModel.swift in Sources */,
 				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
@@ -1288,6 +1299,7 @@
 				B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */,
 				B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */,
 				B0A7AA391FCD7BE000DC4F62 /* AppAssembly.swift in Sources */,
+				B0569AFC1FD0803200FF34A1 /* StyledTextField.swift in Sources */,
 				B0569A9B1FC6216E00FF34A1 /* RegisterModel.swift in Sources */,
 				B0569AD31FCDF65300FF34A1 /* UIService.swift in Sources */,
 				B0569A751FC37C7200FF34A1 /* CouponModel.swift in Sources */,
