@@ -40,7 +40,7 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20),
              NSAttributedStringKey.foregroundColor: UIColor.white]
-        self.navigationController?.navigationBar.barTintColor = UIColor.navbarBackground
+        self.navigationController?.navigationBar.barTintColor = UIColor.main
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)

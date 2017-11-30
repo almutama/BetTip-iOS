@@ -28,7 +28,7 @@ class ActivityIndicatorView {
     func showProgress(_ status: String? = nil, center: CGPoint) -> ProgressHUD {
         
         let frame = CGRect(x: 0, y: 0, width: UIScreen().screenWidth, height: UIScreen().screenHeight)
-        let color = UIColor.navbarBackground
+        let color = UIColor.secondary
         let type = NVActivityIndicatorType.ballGridPulse
         
         let hud = ProgressHUD(frame: frame, type: type, color: color)
