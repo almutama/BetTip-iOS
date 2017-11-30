@@ -20,6 +20,10 @@ extension SwinjectStoryboard {
             UserService()
             }.inObjectScope(.container)
         
+        defaultContainer.register(LoginServiceType.self) { r in
+            LoginService(userService: r.resolve(UserServiceType.self)!)
+            }.inObjectScope(.container)
+        
         defaultContainer.register(AuthStoreType.self) { _ in
             AuthStore()
             }.inObjectScope(.container)
@@ -38,21 +42,49 @@ extension SwinjectStoryboard {
             BasketballService()
             }.inObjectScope(.container)
         
-        defaultContainer.register( BasketballVM.self) { r in
-            BasketballVM(basketballService: r.resolve(BasketballServiceType.self)!)
-            }.inObjectScope(.container)
-        
-        defaultContainer.storyboardInitCompleted(BasketballVC.self) {r, c in
-            c.viewModel = r.resolve(BasketballVM.self)
-        }
-        
         defaultContainer.register(CouponServiceType.self) { _ in
             CouponService()
             }.inObjectScope(.container)
         
-        defaultContainer.register( CouponsVM.self) { r in
-            CouponsVM(couponService: r.resolve(CouponServiceType.self)!)
+        defaultContainer.register(FootballServiceType.self) { _ in
+            FootballService()
             }.inObjectScope(.container)
+        
+        defaultContainer.register(BasketballVM.self) { r in
+            BasketballVM(basketballService: r.resolve(BasketballServiceType.self)!)
+            }//.inObjectScope(.container)
+        
+        defaultContainer.register(CouponsVM.self) { r in
+            CouponsVM(couponService: r.resolve(CouponServiceType.self)!)
+            }//.inObjectScope(.container)
+        
+        defaultContainer.register(FootballVM.self) { r in
+            FootballVM(footballService: r.resolve(FootballServiceType.self)!)
+            }//.inObjectScope(.container)
+        
+        defaultContainer.register(LoginVM.self) { r in
+            LoginVM(authProvider: r.resolve(AuthProviderType.self)!)
+            }//.inObjectScope(.container)
+        
+        defaultContainer.register(RegisterVM.self) { r in
+            RegisterVM(authProvider: r.resolve(AuthProviderType.self)!)
+            }//.inObjectScope(.container)
+        
+        defaultContainer.register(ForgotPasswordVM.self) { r in
+            ForgotPasswordVM(authProvider: r.resolve(AuthProviderType.self)!)
+            }//.inObjectScope(.container)
+        
+        defaultContainer.register(SplashVM.self) { r in
+            SplashVM(authManager: r.resolve(AuthManagerType.self)!)
+            }//.inObjectScope(.container)
+        
+        defaultContainer.register(UserVM.self) { r in
+            UserVM(authStore: r.resolve(AuthStoreType.self)!)
+            }//.inObjectScope(.container)
+        
+        defaultContainer.storyboardInitCompleted(BasketballVC.self) {r, c in
+            c.viewModel = r.resolve(BasketballVM.self)
+        }
         
         defaultContainer.storyboardInitCompleted(CouponsVC.self) {r, c in
             c.viewModel = r.resolve(CouponsVM.self)
@@ -62,30 +94,6 @@ extension SwinjectStoryboard {
             c.viewModel = r.resolve(FootballVM.self)
         }
         
-        defaultContainer.register( FootballVM.self) { r in
-            FootballVM(footballService: r.resolve(FootballServiceType.self)!)
-            }.inObjectScope(.container)
-        
-        defaultContainer.register(FootballServiceType.self) { _ in
-            FootballService()
-            }.inObjectScope(.container)
-        
-        defaultContainer.register(LoginServiceType.self) { r in
-            LoginService(userService: r.resolve(UserServiceType.self)!)
-            }.inObjectScope(.container)
-        
-        defaultContainer.register(LoginVM.self) { r in
-            LoginVM(authProvider: r.resolve(AuthProviderType.self)!)
-            }.inObjectScope(.container)
-        
-        defaultContainer.register(RegisterVM.self) { r in
-            RegisterVM(authProvider: r.resolve(AuthProviderType.self)!)
-            }.inObjectScope(.container)
-        
-        defaultContainer.register(ForgotPasswordVM.self) { r in
-            ForgotPasswordVM(authProvider: r.resolve(AuthProviderType.self)!)
-            }.inObjectScope(.container)
-        
         defaultContainer.storyboardInitCompleted(LoginVC.self) { r, c in
             c.viewModel = r.resolve(LoginVM.self)
         }
@@ -94,21 +102,13 @@ extension SwinjectStoryboard {
             c.viewModel = r.resolve(RegisterVM.self)
         }
         
-        defaultContainer.storyboardInitCompleted(ForgotPasswordVC.self) { r, c in
-            c.viewModel = r.resolve(ForgotPasswordVM.self)
-        }
-        
-        defaultContainer.register( SplashVM.self) { r in
-            SplashVM(authManager: r.resolve(AuthManagerType.self)!)
-            }.inObjectScope(.container)
-        
         defaultContainer.storyboardInitCompleted(SplashVC.self) {r, c in
             c.viewModel = r.resolve(SplashVM.self)
         }
         
-        defaultContainer.register( UserVM.self) { r in
-            UserVM(authStore: r.resolve(AuthStoreType.self)!)
-            }.inObjectScope(.container)
+        defaultContainer.storyboardInitCompleted(ForgotPasswordVC.self) { r, c in
+            c.viewModel = r.resolve(ForgotPasswordVM.self)
+        }
         
         defaultContainer.storyboardInitCompleted(UserVC.self) {r, c in
             c.viewModel = r.resolve(UserVM.self)

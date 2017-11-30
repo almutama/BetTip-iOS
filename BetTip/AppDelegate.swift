@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate let logger = Log.createLogger()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        SwinjectStoryboard.performSetup()
+        SwinjectStoryboard.setup()
         self.setupNotification(application: application)
         self.registerServices()
         return true
