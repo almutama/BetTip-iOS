@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehj-bU-rtw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehj-bU-rtw" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="547" width="375" height="60"/>
                                 <color key="backgroundColor" name="Secondary"/>
                                 <accessibility key="accessibilityConfiguration" label="Login using demo account"/>
@@ -43,11 +43,11 @@
                                     <constraint firstAttribute="height" constant="60" id="57A-fp-SSR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="GİRİŞ YAP">
+                                <state key="normal" title="SIGN IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-g2-1DM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-g2-1DM" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" label="login">
@@ -57,7 +57,7 @@
                                     <constraint firstAttribute="height" constant="60" id="wNU-qJ-iu5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="KAYIT OL">
+                                <state key="normal" title="SIGN UP">
                                     <color key="titleColor" name="Secondary"/>
                                 </state>
                             </button>
@@ -111,10 +111,10 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cb-cf-cv5">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-posta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-Hn-uGc" customClass="StyledLabel" customModule="Innit" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-Hn-uGc" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="GeneralText"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -125,9 +125,9 @@
                                                             <constraint firstAttribute="width" constant="100" id="x2K-8G-myB"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h1H-6F-JbR">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h1H-6F-JbR" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
-                                                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="Complimentary"/>
                                                         <accessibility key="accessibilityConfiguration" label="email"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="B1b-W6-rMB"/>
@@ -147,10 +147,10 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlz-0l-Iqo">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-xZ-yzc" customClass="StyledLabel" customModule="Innit" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-xZ-yzc" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="GeneralText"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -161,9 +161,9 @@
                                                             <constraint firstAttribute="trailing" secondItem="vTT-xZ-yzc" secondAttribute="trailing" id="sb9-OA-Ish"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WKL-ND-wMR">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WKL-ND-wMR" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
-                                                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="Complimentary"/>
                                                         <accessibility key="accessibilityConfiguration" label="password"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="KF3-ad-XrQ"/>
@@ -180,7 +180,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="OC5-g9-ssp" firstAttribute="top" secondItem="Mlb-S5-1H0" secondAttribute="top" constant="0.5" id="LQy-Aq-e7Q"/>
                                     <constraint firstAttribute="trailing" secondItem="OC5-g9-ssp" secondAttribute="trailing" id="V5L-ka-I0k"/>
@@ -188,13 +188,13 @@
                                     <constraint firstAttribute="bottom" secondItem="OC5-g9-ssp" secondAttribute="bottom" id="z5a-8j-AYX"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-Xj-yXl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-Xj-yXl" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="109" y="232.5" width="157" height="30"/>
                                 <state key="normal" title="Forgot your password?">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="GeneralText"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Son-39-5ke">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Son-39-5ke" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="591" width="375" height="76"/>
                                 <color key="backgroundColor" name="Secondary"/>
                                 <accessibility key="accessibilityConfiguration" label="login">
@@ -204,12 +204,12 @@
                                     <constraint firstAttribute="height" constant="76" id="nDR-71-dBm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="GİRİŞ YAP">
+                                <state key="normal" title="SIGN IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="ziH-Xj-yXl" firstAttribute="centerX" secondItem="zgY-t2-Gp0" secondAttribute="centerX" id="17w-MR-tdv"/>
                             <constraint firstItem="Mlb-S5-1H0" firstAttribute="top" secondItem="zgY-t2-Gp0" secondAttribute="top" constant="23.5" id="HsH-2o-FyD"/>
@@ -253,7 +253,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgF-Ch-Xtg">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-posta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsD-c2-Emf">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsD-c2-Emf" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -267,7 +267,7 @@
                                                             <constraint firstItem="BsD-c2-Emf" firstAttribute="leading" secondItem="ZgF-Ch-Xtg" secondAttribute="leading" constant="20" id="il8-Yg-1VI"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lxW-5p-YLu">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lxW-5p-YLu" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
                                                         <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="password"/>
@@ -286,7 +286,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-ZL-8gF">
                                                 <rect key="frame" x="0.0" y="61" width="375" height="60"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qK-UB-SEt">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email address below to receive your password reset instructions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qK-UB-SEt" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -313,7 +313,7 @@
                                     <constraint firstItem="g8U-rZ-YbC" firstAttribute="leading" secondItem="1oU-fD-tBU" secondAttribute="leading" id="dEZ-gw-6Il"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZr-so-0Re">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZr-so-0Re" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="591" width="375" height="76"/>
                                 <color key="backgroundColor" name="Secondary"/>
                                 <accessibility key="accessibilityConfiguration" label="login">
@@ -323,7 +323,7 @@
                                     <constraint firstAttribute="height" constant="76" id="SnR-n1-QYn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="GÖNDER">
+                                <state key="normal" title="SEND">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -367,7 +367,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcb-KZ-WhI">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-posta *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-ht-9oY" customClass="StyledLabel" customModule="Innit" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-ht-9oY" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -381,7 +381,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="hxU-ht-9oY" secondAttribute="trailing" id="jRv-1A-jl8"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vQI-U9-fvp">
+                                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vQI-U9-fvp" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
                                                         <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="Email"/>
@@ -403,7 +403,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoP-Tu-8wK">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oi-6y-iJb" customClass="StyledLabel" customModule="Innit" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oi-6y-iJb" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -417,7 +417,7 @@
                                                             <constraint firstAttribute="width" constant="100" id="xAC-dj-m7r"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l09-bf-s11">
+                                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l09-bf-s11" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
                                                         <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="Password"/>
@@ -439,7 +439,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PB2-SR-xHp">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekrar *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNW-Nf-6gm" customClass="StyledLabel" customModule="Innit" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNW-Nf-6gm" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -453,7 +453,7 @@
                                                             <constraint firstItem="LNW-Nf-6gm" firstAttribute="leading" secondItem="PB2-SR-xHp" secondAttribute="leading" constant="20" id="haB-qI-1cg"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fUr-ik-W8m">
+                                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fUr-ik-W8m" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
                                                         <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="Confirm Password"/>
@@ -472,13 +472,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3Y-AF-laj">
                                                 <rect key="frame" x="0.0" y="183" width="375" height="96"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Gerekli alanlar" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7E-v1-NK9">
-                                                        <rect key="frame" x="16" y="8" width="120" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Reqired fields" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7E-v1-NK9" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="8" width="116.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byx-In-eeh">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byx-In-eeh" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="36.5" width="343" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -506,7 +506,7 @@
                                     <constraint firstAttribute="bottom" secondItem="fcA-Dh-da3" secondAttribute="bottom" id="xQd-GM-uEX"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE7-oN-QVu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE7-oN-QVu" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="591" width="375" height="76"/>
                                 <color key="backgroundColor" name="Secondary"/>
                                 <accessibility key="accessibilityConfiguration" label="login">
@@ -516,7 +516,7 @@
                                     <constraint firstAttribute="height" constant="76" id="yrc-00-iqJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="KAYIT OL">
+                                <state key="normal" title="SIGN UP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -545,6 +545,15 @@
     </scenes>
     <resources>
         <image name="logo_tr" width="400" height="400"/>
+        <namedColor name="Background">
+            <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Complimentary">
+            <color red="0.25099998712539673" green="0.31400001049041748" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GeneralText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="Secondary">
             <color red="0.2630000114440918" green="0.85900002717971802" blue="0.6600000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

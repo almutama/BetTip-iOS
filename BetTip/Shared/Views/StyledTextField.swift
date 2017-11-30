@@ -22,7 +22,7 @@ class StyledTextField: UITextField {
         }
     }
     
-    let padding = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 20);
+    let padding = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 20)
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, padding)
@@ -37,14 +37,14 @@ class StyledTextField: UITextField {
     }
     
     fileprivate func tintClearImage() {
-        for view in subviews {
-            if view is UIButton {
-                let button = view as! UIButton
-                button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .normal)
-                button.setImage(button.image(for: .highlighted)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
-                button.tintColor = tintColor
-                break
+        for view in subviews where view is UIButton {
+            guard let button = view as? UIButton else {
+                return
             }
+            button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.setImage(button.image(for: .highlighted)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
+            button.tintColor = tintColor
+            break
         }
     }
     
