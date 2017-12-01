@@ -10,6 +10,8 @@
 		8B925683303992C61BA36F38 /* Pods_BetTipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */; };
 		B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */; };
 		B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD61FD1F787007D9503 /* BaseModel.swift */; };
+		B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */; };
+		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
 		B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyApp.swift */; };
 		B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */; };
 		B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */; };
@@ -145,6 +147,8 @@
 		689B272117A621A948C4580D /* Pods-BetTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.release.xcconfig"; sourceTree = "<group>"; };
 		B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Ext.swift"; sourceTree = "<group>"; };
 		B00F3BD61FD1F787007D9503 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVC.swift; sourceTree = "<group>"; };
+		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B0569A091FC0A73300FF34A1 /* HockeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyApp.swift; sourceTree = "<group>"; };
 		B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
@@ -510,6 +514,7 @@
 		B0569A6E1FC37B4C00FF34A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */,
 				B0569A7E1FC37CA600FF34A1 /* CouponsVC.swift */,
 			);
 			path = ViewControllers;
@@ -518,6 +523,7 @@
 		B0569A701FC37B5F00FF34A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */,
 				B0569A7C1FC37C9C00FF34A1 /* CouponsVM.swift */,
 			);
 			path = ViewModels;
@@ -1294,6 +1300,7 @@
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
 				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
+				B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */,
 				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CouponsVC.swift in Sources */,
 				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
@@ -1327,6 +1334,7 @@
 				B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */,
 				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
 				B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */,
+				B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */,
 				B0569AEC1FCF3D7600FF34A1 /* FootballServices.swift in Sources */,
 				B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */,
 				B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */,

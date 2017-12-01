@@ -106,6 +106,9 @@ enum StoryboardScene {
 }
 
 enum StoryboardSegue {
+  enum Coupon: String, SegueType {
+    case buyCreditSegue
+  }
   enum Login: String, SegueType {
     case forgorPasswordSegue
     case loginSegue

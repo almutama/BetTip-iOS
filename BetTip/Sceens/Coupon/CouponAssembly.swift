@@ -22,10 +22,16 @@ class CouponAssembly: Assembly {
         container.register(CouponsVMType.self) { r in
             CouponsVM(couponService: r.resolve(CouponServiceType.self)!)
         }
+        container.register(BuyCreditVMType.self) { r in
+            BuyCreditVM(couponService: r.resolve(CouponServiceType.self)!)
+        }
         
         // ViewControllers
         container.storyboardInitCompleted(CouponsVC.self) {r, c in
             c.viewModel = r.resolve(CouponsVMType.self)
+        }
+        container.storyboardInitCompleted(BuyCreditVC.self) {r, c in
+            c.viewModel = r.resolve(BuyCreditVMType.self)
         }
     }
 }
