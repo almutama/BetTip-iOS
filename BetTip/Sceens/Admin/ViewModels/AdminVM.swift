@@ -6,4 +6,20 @@
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
+import RxSwift
+
+protocol AdminVMType {
+    
+}
+
+class AdminVM: BaseViewModel, FootballVMType {
+    
+    private let adminService: AdminServiceType!
+    private let disposeBag = DisposeBag()
+    
+    init(adminService: AdminServiceType) {
+        self.adminService = adminService
+        super.init()
+    }
+}
