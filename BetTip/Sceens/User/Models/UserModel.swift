@@ -10,22 +10,24 @@ import Foundation
 import ObjectMapper
 import Firebase
 
-struct UserModel: Mappable {
+struct UserModel {
     var id: String = ""
     var email: String?
     var role: Role = .user
     var disabled: Bool = false
     
+    // Firebase User
+    init(user: User) {
+        self.email = user.email
+        self.id = user.uid
+    }
+}
+
+extension UserModel: Mappable {
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
         id <- map["id"]
         email <- map["email"]
-    }
-    
-    // Firebase User
-    init(user: User) {
-        self.email = user.email
-        self.id = user.uid
     }
 }

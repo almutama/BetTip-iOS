@@ -9,9 +9,11 @@
 import Foundation
 import ObjectMapper
 
-struct CouponModel: Mappable {
-    var id: String = ""
-    
+struct CouponModel: BaseModel {
+    var id: String?
+}
+
+extension CouponModel: Mappable {
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
