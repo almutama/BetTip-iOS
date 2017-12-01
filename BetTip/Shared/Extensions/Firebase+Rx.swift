@@ -12,10 +12,6 @@ import Result
 import Reactant
 import ObjectMapper
 
-protocol FirebaseEntity {
-    var id: String? { get set }
-}
-
 enum FirebaseFetchError: Error {
     case deserializeError(DataSnapshot)
     case readDenied(Error)
@@ -90,13 +86,13 @@ extension DatabaseQuery {
 }
 
 extension DatabaseReference {
-    func store<T: Mappable>(_ objects: [T]) -> Observable<[Result<T, FirebaseStoreError>]> where T: FirebaseEntity {
+    func store<T: Mappable>(_ objects: [T]) -> Observable<[Result<T, FirebaseStoreError>]> where T: BaseModel {
         return Observable.from(objects.map(store)).concat().reduce([]) { accumulator, result in
             accumulator + [result]
         }
     }
     
-    func store<T: Mappable>(_ object: T) -> Observable<Result<T, FirebaseStoreError>> where T: FirebaseEntity {
+    func store<T: Mappable>(_ object: T) -> Observable<Result<T, FirebaseStoreError>> where T: BaseModel {
         return Observable.create { observer in
             var mutableObject = object
             let key: String
@@ -141,7 +137,7 @@ extension DatabaseReference {
     }
     
     //TODO: .success condition
-    func delete<T: Mappable>(_ object: T) -> Observable<Result<Void, FirebaseStoreError>> where T: FirebaseEntity {
+    func delete<T: Mappable>(_ object: T) -> Observable<Result<Void, FirebaseStoreError>> where T: BaseModel {
         return Observable.create { observer in
             guard let key = object.id else {
                 observer.onLast(.success(()))
