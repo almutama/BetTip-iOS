@@ -11,7 +11,7 @@ import RxSwift
 
 class SplashVC: BaseViewController {
     
-    var viewModel: SplashVM!
+    var viewModel: SplashVMType!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {

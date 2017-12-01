@@ -11,7 +11,7 @@ import RxSwift
 
 class FootballVC: BaseViewController {
     
-    var viewModel: FootballVM!
+    var viewModel: FootballVMType!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {

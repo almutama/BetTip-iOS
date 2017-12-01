@@ -9,7 +9,11 @@
 import ObjectMapper
 import RxSwift
 
-class FootballVM: BaseViewModel {
+protocol FootballVMType {
+    
+}
+
+class FootballVM: BaseViewModel, FootballVMType {
     
     private let footballService: FootballServiceType!
     private let disposeBag = DisposeBag()

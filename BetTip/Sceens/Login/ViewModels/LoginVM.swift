@@ -9,7 +9,12 @@
 import ObjectMapper
 import RxSwift
 
-class LoginVM: BaseViewModel {
+protocol LoginVMType {
+    func login(email: String, password: String)
+    func loginSuccessful (user: UserModel)
+}
+
+class LoginVM: BaseViewModel, LoginVMType {
     
     let authProvider: AuthProviderType!
     let disposeBag = DisposeBag()

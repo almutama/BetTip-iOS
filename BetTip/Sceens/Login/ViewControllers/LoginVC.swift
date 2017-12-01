@@ -14,7 +14,7 @@ class LoginVC: BaseViewController {
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var viewModel: LoginVM!
+    var viewModel: LoginVMType!
     
     override func viewDidLoad() {
         super.viewDidLoad()

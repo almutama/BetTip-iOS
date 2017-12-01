@@ -9,7 +9,11 @@
 import ObjectMapper
 import RxSwift
 
-class RegisterVM: BaseViewModel {
+protocol RegisterVMType {
+    func register(email: String, password: String, confirm: String)
+}
+
+class RegisterVM: BaseViewModel, RegisterVMType {
     
     let authProvider: AuthProviderType!
     let disposeBag = DisposeBag()
@@ -22,7 +26,7 @@ class RegisterVM: BaseViewModel {
     
     // TODO: cyclomatic_complexity must be fixed!
     // swiftlint:disable:next cyclomatic_complexity
-    func login(email: String, password: String, confirm: String) {
+    func register(email: String, password: String, confirm: String) {
         let validatedCredentials = registrationCredentialsRule.run((email: email, password: password, confirm: confirm))
         
         switch validatedCredentials {

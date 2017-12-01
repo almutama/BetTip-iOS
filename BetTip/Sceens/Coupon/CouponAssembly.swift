@@ -11,33 +11,21 @@ import Swinject
 import SwinjectStoryboard
 
 class CouponAssembly: Assembly {
-    var assembler: Assembler!
-    
-    func assemble(container: Container) {
-        
-        assembler = Assembler([CouponViewModelAssembly(), CouponServiceAssembly()])
-        Container.loggingFunction = nil
-        
-        container.storyboardInitCompleted(CouponsVC.self) {r, c in
-            c.viewModel = r.resolve(CouponsVM.self)
-        }
-    }
-}
 
-class CouponViewModelAssembly: Assembly {
-    
     func assemble(container: Container) {
-        container.register( CouponsVM.self) { r in
-            CouponsVM(couponService: r.resolve(CouponServiceType.self)!)
-            }.inObjectScope(.container)
-    }
-}
-
-class CouponServiceAssembly: Assembly {
-    
-    func assemble(container: Container) {
+        // Services
         container.register(CouponServiceType.self) { _ in
             CouponService()
-            }.inObjectScope(.container)
+        }
+        
+        // ViewModels
+        container.register(CouponsVMType.self) { r in
+            CouponsVM(couponService: r.resolve(CouponServiceType.self)!)
+        }
+        
+        // ViewControllers
+        container.storyboardInitCompleted(CouponsVC.self) {r, c in
+            c.viewModel = r.resolve(CouponsVMType.self)
+        }
     }
 }

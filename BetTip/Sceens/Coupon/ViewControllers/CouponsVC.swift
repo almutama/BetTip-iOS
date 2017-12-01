@@ -11,7 +11,7 @@ import RxSwift
 
 class CouponsVC: BaseViewController {
     
-    var viewModel: CouponsVM!
+    var viewModel: CouponsVMType!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {

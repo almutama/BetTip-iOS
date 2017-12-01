@@ -9,7 +9,11 @@
 import ObjectMapper
 import RxSwift
 
-class ForgotPasswordVM: BaseViewModel {
+protocol ForgotPasswordVMType {
+    
+}
+
+class ForgotPasswordVM: BaseViewModel, ForgotPasswordVMType {
     
     let authProvider: AuthProviderType!
     let disposeBag = DisposeBag()

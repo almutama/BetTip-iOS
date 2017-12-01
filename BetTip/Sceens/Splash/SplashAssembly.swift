@@ -15,20 +15,14 @@ class SplashAssembly: Assembly {
     
     func assemble(container: Container) {
         
-        assembler = Assembler([LoginAssembly(), UserAssembly(), SplashViewModelAssembly()])
-        Container.loggingFunction = nil
-        
-        container.storyboardInitCompleted(SplashVC.self) {r, c in
-            c.viewModel = r.resolve(SplashVM.self)
-        }
-    }
-}
-
-class SplashViewModelAssembly: Assembly {
-    
-    func assemble(container: Container) {
-        container.register( SplashVM.self) { r in
+        // ViewModels
+        container.register(SplashVMType.self) { r in
             SplashVM(authManager: r.resolve(AuthManagerType.self)!)
-            }.inObjectScope(.container)
+        }
+        
+        // ViewControllers
+        container.storyboardInitCompleted(SplashVC.self) {r, c in
+            c.viewModel = r.resolve(SplashVMType.self)
+        }
     }
 }

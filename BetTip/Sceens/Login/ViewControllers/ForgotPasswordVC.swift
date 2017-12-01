@@ -13,7 +13,7 @@ class ForgotPasswordVC: BaseViewController {
     
     @IBOutlet weak var mailTextField: UITextField!
     
-    var viewModel: ForgotPasswordVM!
+    var viewModel: ForgotPasswordVMType!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,6 +11,8 @@ import SwiftKeychainWrapper
 import Reactant
 import Result
 
+fileprivate let logger = Log.createLogger()
+
 protocol AuthProviderType {
     static var key: String { get }
     var active: Bool { get }
@@ -91,11 +93,14 @@ class AuthProvider: AuthProviderType {
                 return login(email: email, password: password).mapError(AuthenticationError.firebaseError)
             } else {
                 deactivate()
-                #if DEBUG
-                    fatalError("Credentials are not stored before restore is called!!!")
-                #else
-                    return Observable.just(.Failure(.Unknown))
-                #endif
+                logger.log(.error, "Credentials are not stored before restore is called!!!")
+                return Observable.just(.failure(.unknown))
+//                #if DEBUG
+//                    logger.log(.error, "Credentials are not stored before restore is called!!!")
+//                    fatalError("Credentials are not stored before restore is called!!!")
+//                #else
+//                    return Observable.just(.failure(.unknown))
+//                #endif
             }
     }
     

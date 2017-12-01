@@ -15,7 +15,7 @@ class RegisterVC: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmTextField: UITextField!
     
-    var viewModel: RegisterVM!
+    var viewModel: RegisterVMType!
     
     override func viewDidLoad() {
         super.viewDidLoad()

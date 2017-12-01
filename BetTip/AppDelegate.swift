@@ -19,11 +19,10 @@ import SwinjectStoryboard
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    //fileprivate let appAssembler = AppAssembly()
+    fileprivate let appAssembler = AppAssembly.sharedInstance
     fileprivate let logger = Log.createLogger()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        SwinjectStoryboard.setup()
         self.setupNotification(application: application)
         self.registerServices()
         return true

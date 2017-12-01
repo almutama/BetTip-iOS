@@ -11,51 +11,33 @@ import Swinject
 import SwinjectStoryboard
 
 class LoginAssembly: Assembly {
-    var assembler: Assembler!
-    
+
     func assemble(container: Container) {
+        // Services
+        container.register(LoginServiceType.self) { r in
+            LoginService(userService: r.resolve(UserServiceType.self)!)
+        }
         
-        assembler = Assembler([LoginViewModelAssembly(), LoginServiceAssembly()])
-        Container.loggingFunction = nil
+        // ViewModels
+        container.register(LoginVMType.self) { r in
+            LoginVM(authProvider: r.resolve(AuthProviderType.self)!)
+        }
+        container.register(RegisterVMType.self) { r in
+            RegisterVM(authProvider: r.resolve(AuthProviderType.self)!)
+        }
+        container.register(ForgotPasswordVMType.self) { r in
+            ForgotPasswordVM(authProvider: r.resolve(AuthProviderType.self)!)
+        }
         
+        // ViewControllers
         container.storyboardInitCompleted(LoginVC.self) { r, c in
             c.viewModel = r.resolve(LoginVM.self)
         }
-        
         container.storyboardInitCompleted(RegisterVC.self) { r, c in
             c.viewModel = r.resolve(RegisterVM.self)
         }
-        
         container.storyboardInitCompleted(ForgotPasswordVC.self) { r, c in
             c.viewModel = r.resolve(ForgotPasswordVM.self)
         }
-    }
-    
-}
-
-class LoginViewModelAssembly: Assembly {
-    
-    func assemble(container: Container) {
-        container.register(LoginVM.self) { r in
-            LoginVM(authProvider: r.resolve(AuthProviderType.self)!)
-            }.inObjectScope(.container)
-        
-        container.register(RegisterVM.self) { r in
-            RegisterVM(authProvider: r.resolve(AuthProviderType.self)!)
-            }.inObjectScope(.container)
-        
-        container.register(ForgotPasswordVM.self) { r in
-            ForgotPasswordVM(authProvider: r.resolve(AuthProviderType.self)!)
-            }.inObjectScope(.container)
-    }
-    
-}
-
-class LoginServiceAssembly: Assembly {
-    
-    func assemble(container: Container) {
-        container.register(LoginServiceType.self) { r in
-            LoginService(userService: r.resolve(UserServiceType.self)!)
-            }.inObjectScope(.container)
     }
 }

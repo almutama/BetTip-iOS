@@ -9,7 +9,11 @@
 import ObjectMapper
 import RxSwift
 
-class CouponsVM: BaseViewModel {
+protocol CouponsVMType {
+    
+}
+
+class CouponsVM: BaseViewModel, CouponsVMType {
     
     private let couponService: CouponServiceType!
     private let disposeBag = DisposeBag()

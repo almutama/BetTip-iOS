@@ -9,7 +9,11 @@
 import ObjectMapper
 import RxSwift
 
-class SplashVM: BaseViewModel {
+protocol SplashVMType {
+    func checkAuth(initComplete: @escaping (UserModel?) -> Void)
+}
+
+class SplashVM: BaseViewModel, SplashVMType {
     
     private let authManager: AuthManagerType!
     private let disposeBag = DisposeBag()

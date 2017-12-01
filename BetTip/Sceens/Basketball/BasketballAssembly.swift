@@ -11,33 +11,21 @@ import Swinject
 import SwinjectStoryboard
 
 class BasketballAssembly: Assembly {
-    var assembler: Assembler!
-    
+
     func assemble(container: Container) {
+        // Services
+        container.register(BasketballServiceType.self) { _ in
+            BasketballService()
+        }
         
-        assembler = Assembler([BasketballViewModelAssembly(), BasketballServiceAssembly()])
-        Container.loggingFunction = nil
+        // ViewModels
+        container.register( BasketballVM.self) { r in
+            BasketballVM(basketballService: r.resolve(BasketballServiceType.self)!)
+        }
         
+        // ViewControllers
         container.storyboardInitCompleted(BasketballVC.self) {r, c in
             c.viewModel = r.resolve(BasketballVM.self)
         }
-    }
-}
-
-class BasketballViewModelAssembly: Assembly {
-    
-    func assemble(container: Container) {
-        container.register( BasketballVM.self) { r in
-            BasketballVM(basketballService: r.resolve(BasketballServiceType.self)!)
-            }.inObjectScope(.container)
-    }
-}
-
-class BasketballServiceAssembly: Assembly {
-    
-    func assemble(container: Container) {
-        container.register(BasketballServiceType.self) { _ in
-            BasketballService()
-            }.inObjectScope(.container)
     }
 }
