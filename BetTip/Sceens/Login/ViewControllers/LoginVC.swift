@@ -31,6 +31,5 @@ extension LoginVC: Theming {
     }
     
     func apply() {
-        
     }
 }

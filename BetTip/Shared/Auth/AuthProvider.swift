@@ -11,7 +11,7 @@ import SwiftKeychainWrapper
 import Reactant
 import Result
 
-fileprivate let logger = Log.createLogger()
+private let logger = Log.createLogger()
 
 protocol AuthProviderType {
     static var key: String { get }

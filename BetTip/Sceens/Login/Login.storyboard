@@ -21,9 +21,10 @@
         <!--Navigation Controller-->
         <scene sceneID="oit-0b-3EU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="h2C-VJ-hqa" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2C-VJ-hqa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ARP-zC-SPq" customClass="MessageTitleNavBar" customModule="BetTip" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -44,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_tr" translatesAutoresizingMaskIntoConstraints="NO" id="bam-Cd-yEr">
-                                <rect key="frame" x="76" y="121" width="222" height="222"/>
+                                <rect key="frame" x="76" y="121.5" width="222" height="222"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bam-Cd-yEr" secondAttribute="height" multiplier="1:1" id="pJG-a5-rlq"/>
                                 </constraints>
@@ -82,7 +83,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRSAT BAHİS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPi-mO-D3S">
-                                <rect key="frame" x="79.5" y="83" width="216.5" height="30"/>
+                                <rect key="frame" x="79.5" y="83.5" width="216.5" height="30"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="30"/>
                                 <color key="textColor" red="0.25490196078431371" green="0.29382526874542236" blue="0.31891736388206482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -106,6 +107,7 @@
                         <viewLayoutGuide key="safeArea" id="WJC-tw-cDH"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qcg-PE-nkz"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GST-OM-hJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -551,11 +553,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fcw-1t-mLA"/>
                     </view>
-                    <connections>
-                        <outlet property="confirmTextField" destination="fUr-ik-W8m" id="iyA-xD-oCR"/>
-                        <outlet property="mailTextField" destination="vQI-U9-fvp" id="TPF-mg-Dfk"/>
-                        <outlet property="passwordTextField" destination="l09-bf-s11" id="fpH-Mp-twQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avm-lU-BSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
