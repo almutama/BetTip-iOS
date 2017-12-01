@@ -11,8 +11,6 @@ import RxSwift
 
 class LoginWelcomeVC: BaseViewController {
     
-    var viewModel: LoginVM!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

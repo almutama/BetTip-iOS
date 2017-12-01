@@ -92,15 +92,9 @@ class AuthProvider: AuthProviderType {
                 let password = KeychainWrapper.standard.string(forKey: Constants.passwordKey) {
                 return login(email: email, password: password).mapError(AuthenticationError.firebaseError)
             } else {
-                deactivate()
                 logger.log(.error, "Credentials are not stored before restore is called!!!")
+                self.deactivate()                
                 return Observable.just(.failure(.unknown))
-//                #if DEBUG
-//                    logger.log(.error, "Credentials are not stored before restore is called!!!")
-//                    fatalError("Credentials are not stored before restore is called!!!")
-//                #else
-//                    return Observable.just(.failure(.unknown))
-//                #endif
             }
     }
     
