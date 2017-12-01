@@ -52,7 +52,7 @@ class UIService: PubSubSubscriberProtocol, EventBusObservable {
             rootWindow.rootViewController = vc
             UIView.transition(with: rootWindow, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
         } else {
-            FirebaseCrashMessage("showMainScreen can't be called")
+            logger.log(.error, "Main screen can't be initialized")
         }
     }
     
@@ -61,6 +61,8 @@ class UIService: PubSubSubscriberProtocol, EventBusObservable {
             let vc = StoryboardScene.Login.initialScene.instantiate()
             rootWindow.rootViewController = vc
             UIView.transition(with: rootWindow, duration: 0.5, options: transition, animations: nil, completion: nil)
+        } else {
+            logger.log(.error, "Login screen can't be initialized")
         }
     }
 }
