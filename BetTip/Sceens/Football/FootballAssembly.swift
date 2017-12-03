@@ -19,7 +19,7 @@ class FootballAssembly: Assembly {
         }
         
         // ViewModels
-        container.register( FootballVM.self) { r in
+        container.register(FootballVMType.self) { r in
             FootballVM(footballService: r.resolve(FootballServiceType.self)!)
         }
         

@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class FootballCell: UICollectionViewCell {
+class FootballCell: UICollectionViewCell, Reusable {
 
+    var disposeBag = DisposeBag()
+    var viewModel: Variable<FootballModel> = Variable<FootballModel>.init(FootballModel.init()) {
+        didSet {
+            _ = viewModel.asObservable().observeOn(MainScheduler.instance)
+                .subscribe({ [unowned self] (event) in
+                    if let entity = event.element {
+                        
+                    }
+                })
+                .disposed(by: disposeBag)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

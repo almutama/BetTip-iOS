@@ -14,6 +14,8 @@ class FootballVC: BaseViewController {
     var viewModel: FootballVMType!
     private let disposeBag = DisposeBag()
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bindViewModel()
@@ -24,5 +26,12 @@ class FootballVC: BaseViewController {
     }
     
     func bindViewModel() {
+        self.viewModel
+            .getFootballMatches()
+            .asObservable()
+            .bind(to: self.collectionView.rx.items(cellIdentifier: FootballCell.reuseIdentifier,
+                                                   cellType: FootballCell.self)) { _, data, cell in
+                cell.viewModel = Variable<FootballModel>(data)
+            }.disposed(by: disposeBag)
     }
 }
