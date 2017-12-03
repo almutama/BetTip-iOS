@@ -27,6 +27,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="exc-nt-pcG" id="DH9-Bb-x0g"/>
+                                    <outlet property="delegate" destination="exc-nt-pcG" id="YrR-G8-pNa"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dK-l3-Vc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="131"/>
+            <point key="canvasLocation" x="396" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zpt-sg-KDX">
