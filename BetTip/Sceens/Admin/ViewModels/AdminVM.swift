@@ -13,7 +13,7 @@ protocol AdminVMType {
     
 }
 
-class AdminVM: BaseViewModel, FootballVMType {
+class AdminVM: BaseViewModel, AdminVMType {
     
     private let adminService: AdminServiceType!
     private let disposeBag = DisposeBag()

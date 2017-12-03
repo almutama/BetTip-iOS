@@ -35,7 +35,6 @@ def general_pods
   pod 'SwiftGen'
   pod 'Swinject'
   pod 'SwinjectStoryboard'
-  pod 'KeychainAccess'
   pod 'SwiftKeychainWrapper'
   pod 'IQKeyboardManagerSwift'
   pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'TableView', 'CollectionView', 'Validation', 'StaticMap', 'ActivityIndicator', 'Configuration']

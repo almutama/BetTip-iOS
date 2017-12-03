@@ -83,7 +83,6 @@ PODS:
     - HockeySDK/DefaultLib (= 5.0.0)
   - HockeySDK/DefaultLib (5.0.0)
   - IQKeyboardManagerSwift (5.0.4)
-  - KeychainAccess (3.1.0)
   - Keys (1.0.0)
   - Kingfisher (4.2.0)
   - leveldb-library (1.18.3)
@@ -170,7 +169,6 @@ DEPENDENCIES:
   - HGPlaceholders
   - HockeySDK
   - IQKeyboardManagerSwift
-  - KeychainAccess
   - Keys (from `Pods/CocoaPodsKeys`)
   - Nimble
   - NVActivityIndicatorView
@@ -224,7 +222,6 @@ SPEC CHECKSUMS:
   HGPlaceholders: b05be87025781e6fe9f7739d3529f2209b92ed80
   HockeySDK: 82bf8dcbe1af3c87c24dc98924fcf2e2ba5be8c4
   IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
-  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
@@ -251,6 +248,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: 97315c1635b0b7e1846184a0d29d39b8cda0cd8e
+PODFILE CHECKSUM: '0387a3535755e6c36facc342052720b6902d698e'
 
 COCOAPODS: 1.2.1
