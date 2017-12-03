@@ -83,7 +83,7 @@ extension SwinjectStoryboard {
             }
         
         defaultContainer.storyboardInitCompleted(BasketballVC.self) {r, c in
-            c.viewModel = r.resolve(BasketballVM.self)
+            c.viewModel = r.resolve(BasketballVMType.self)
         }
         
         defaultContainer.storyboardInitCompleted(CouponsVC.self) {r, c in
