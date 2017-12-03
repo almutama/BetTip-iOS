@@ -21,7 +21,7 @@ def ui_pods
   pod 'NVActivityIndicatorView'
   pod 'SwiftMessages'
   pod 'Hero'
-  pod 'HGPlaceholders'
+  pod 'DZNEmptyDataSet'
   pod 'VegaScrollFlowLayout'
 end
 

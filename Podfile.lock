@@ -11,6 +11,7 @@ PODS:
   - Crashlytics (3.9.0):
     - Fabric (~> 1.7.0)
   - Differentiator (3.0.1)
+  - DZNEmptyDataSet (1.8.1)
   - Fabric (1.7.0)
   - Firebase/Auth (4.4.0):
     - Firebase/Core
@@ -78,7 +79,6 @@ PODS:
   - GTMSessionFetcher/Core (1.1.12)
   - Hero (1.0.0)
   - Heyzap (9.14.1)
-  - HGPlaceholders (0.2.6)
   - HockeySDK (5.0.0):
     - HockeySDK/DefaultLib (= 5.0.0)
   - HockeySDK/DefaultLib (5.0.0)
@@ -157,6 +157,7 @@ PODS:
 
 DEPENDENCIES:
   - Crashlytics
+  - DZNEmptyDataSet
   - Fabric
   - Firebase/Auth
   - Firebase/Core
@@ -166,7 +167,6 @@ DEPENDENCIES:
   - Firebase/Storage
   - Hero
   - Heyzap
-  - HGPlaceholders
   - HockeySDK
   - IQKeyboardManagerSwift
   - Keys (from `Pods/CocoaPodsKeys`)
@@ -205,6 +205,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
   Differentiator: ffe513ce1ea4e7198b89fac94d6e281c673055a9
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Fabric: e6be012366472553807dada21243c5ab8d904151
   Firebase: 3e92884a63e8f76d107c43a67d2ab9071e1eda10
   FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
@@ -219,7 +220,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   Hero: 18e7cf8af41c04c8532d1430ac174004a9365c87
   Heyzap: 3acd64a26fee466728fb7d977f70e33b4de68254
-  HGPlaceholders: b05be87025781e6fe9f7739d3529f2209b92ed80
   HockeySDK: 82bf8dcbe1af3c87c24dc98924fcf2e2ba5be8c4
   IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
@@ -248,6 +248,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: '0387a3535755e6c36facc342052720b6902d698e'
+PODFILE CHECKSUM: 8957574fc30c36b78b60733a3296f5adbb295a66
 
 COCOAPODS: 1.2.1
