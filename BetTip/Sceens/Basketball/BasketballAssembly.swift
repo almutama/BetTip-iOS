@@ -19,13 +19,13 @@ class BasketballAssembly: Assembly {
         }
         
         // ViewModels
-        container.register( BasketballVM.self) { r in
+        container.register(BasketballVMType.self) { r in
             BasketballVM(basketballService: r.resolve(BasketballServiceType.self)!)
         }
         
         // ViewControllers
         container.storyboardInitCompleted(BasketballVC.self) {r, c in
-            c.viewModel = r.resolve(BasketballVM.self)
+            c.viewModel = r.resolve(BasketballVMType.self)
         }
     }
 }

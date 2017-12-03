@@ -9,7 +9,11 @@
 import ObjectMapper
 import RxSwift
 
-class BasketballVM: BaseViewModel {
+protocol BasketballVMType {
+    func getBasketballMatches() -> Observable<[BasketballModel]>
+}
+
+class BasketballVM: BaseViewModel, BasketballVMType {
     
     private let basketballService: BasketballServiceType!
     private let disposeBag = DisposeBag()
@@ -17,5 +21,9 @@ class BasketballVM: BaseViewModel {
     init(basketballService: BasketballServiceType) {
         self.basketballService = basketballService
         super.init()
+    }
+    
+    func getBasketballMatches() -> Observable<[BasketballModel]> {
+        return self.basketballService.basketballMatches()
     }
 }

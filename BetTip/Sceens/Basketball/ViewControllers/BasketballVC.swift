@@ -8,11 +8,14 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class BasketballVC: BaseViewController {
     
-    var viewModel: BasketballVM!
+    var viewModel: BasketballVMType!
     private let disposeBag = DisposeBag()
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,5 +27,12 @@ class BasketballVC: BaseViewController {
     }
     
     func bindViewModel() {
+        self.viewModel
+            .getBasketballMatches()
+            .asObservable()
+            .bind(to: self.collectionView.rx.items(cellIdentifier: BasketballCell.reuseIdentifier,
+                                                   cellType: BasketballCell.self)) { _, data, cell in
+                cell.viewModel = Variable<BasketballModel>(data)
+            }.disposed(by: disposeBag)
     }
 }

@@ -27,6 +27,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wit-a8-Qx3" id="Wum-Qj-YjE"/>
+                                    <outlet property="delegate" destination="Wit-a8-Qx3" id="pt0-bT-yeB"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,6 +43,9 @@
                         <viewLayoutGuide key="safeArea" id="MVH-GR-ehW"/>
                     </view>
                     <navigationItem key="navigationItem" id="jJR-t9-u8X"/>
+                    <connections>
+                        <outlet property="collectionView" destination="5Pe-xw-uNG" id="Bnz-5X-kVk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgm-jS-ppZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +67,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mc-dS-aJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383" y="72"/>
+            <point key="canvasLocation" x="-724" y="72"/>
         </scene>
     </scenes>
 </document>
