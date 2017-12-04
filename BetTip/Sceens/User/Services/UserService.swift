@@ -16,6 +16,8 @@ protocol UserServiceType {
     func users() -> Observable<[UserModel]>
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>>
     func userDisabled(userId: String) -> Observable<Bool>
+    func setAccountDisabled(user: UserModel, disabled: Bool) -> Observable<Bool>
+    func setAccountRole(user: UserModel, role: Role) -> Observable<Bool>
 }
 
 class UserService: UserServiceType {
@@ -28,7 +30,7 @@ class UserService: UserServiceType {
     
     func users() -> Observable<[UserModel]> {
         let userList: Observable<[UserModel]> = Database.database().reference()
-            .child("users")
+            .child(Constants.users)
             .fetchArray()
             .recover([])
         
@@ -46,22 +48,22 @@ class UserService: UserServiceType {
         let ref = Database.database().reference()
         
         return Observable.combineLatest(
-            ref.child("moderators").child(userId).exists(),
-            ref.child("admins").child(userId).exists()) { isModerator, isAdmin in
+            ref.child(Constants.moderators).child(userId).exists(),
+            ref.child(Constants.admins).child(userId).exists()) { isModerator, isAdmin in
                 isAdmin ? .admin : isModerator ? .moderator : .user
         }
     }
     
     func userDisabled(userId: String) -> Observable<Bool> {
         return Database.database().reference()
-            .child("disabledUsers")
+            .child(Constants.disabledUsers)
             .child(userId)
             .exists()
     }
     
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>> {
         let user = Database.database().reference()
-            .child("users")
+            .child(Constants.users)
             .child(userId)
             .fetch(UserModel.self)
         
@@ -76,7 +78,7 @@ class UserService: UserServiceType {
     }
     
     func setAccountDisabled(user: UserModel, disabled: Bool) -> Observable<Bool> {
-        let path = Database.database().reference().child("disabledUsers").child(user.id)
+        let path = Database.database().reference().child(Constants.disabledUsers).child(user.id)
         
         return Observable.create { observer in
             if disabled {
@@ -109,9 +111,9 @@ class UserService: UserServiceType {
                 
                 switch user.role {
                 case .admin:
-                    ref.child("admins").child(user.id).removeValue(completionBlock: removalCompletion)
+                    ref.child(Constants.admins).child(user.id).removeValue(completionBlock: removalCompletion)
                 case .moderator:
-                    ref.child("moderators").child(user.id).removeValue(completionBlock: removalCompletion)
+                    ref.child(Constants.moderators).child(user.id).removeValue(completionBlock: removalCompletion)
                 case .user:
                     removalCompletion(nil, ref)
                 }
@@ -119,9 +121,9 @@ class UserService: UserServiceType {
             
             switch role {
             case .admin:
-                ref.child("admins").child(user.id).setValue(true, withCompletionBlock: addCompletion)
+                ref.child(Constants.admins).child(user.id).setValue(true, withCompletionBlock: addCompletion)
             case .moderator:
-                ref.child("moderators").child(user.id).setValue(true, withCompletionBlock: addCompletion)
+                ref.child(Constants.moderators).child(user.id).setValue(true, withCompletionBlock: addCompletion)
             case .user:
                 addCompletion(nil, ref)
             }

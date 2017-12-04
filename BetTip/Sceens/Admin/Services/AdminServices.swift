@@ -15,19 +15,19 @@ import Result
 private let logger = Log.createLogger()
 
 protocol AdminServiceType {
-    func saveCoupon(coupon: CouponModel, user: UserModel) -> Observable<Result<CouponModel, FirebaseStoreError>>
-    func deleteCoupon(coupon: CouponModel, user: UserModel) -> Observable<Void>
+    func saveCredit(coupon: CreditModel, user: UserModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
+    func deleteCredit(coupon: CreditModel, user: UserModel) -> Observable<Void>
 }
 
 class AdminService: AdminServiceType {
     
-    func saveCoupon(coupon: CouponModel, user: UserModel) -> Observable<Result<CouponModel, FirebaseStoreError>> {
-        return Database.database().reference().child("coupons").child(user.id)
+    func saveCredit(coupon: CreditModel, user: UserModel) -> Observable<Result<CreditModel, FirebaseStoreError>> {
+        return Database.database().reference().child(Constants.credits).child(user.id)
             .store(coupon)
     }
     
-    func deleteCoupon(coupon: CouponModel, user: UserModel) -> Observable<Void> {
-        return Database.database().reference().child("coupons").child(user.id)
+    func deleteCredit(coupon: CreditModel, user: UserModel) -> Observable<Void> {
+        return Database.database().reference().child(Constants.credits).child(user.id)
             .delete(coupon)
             .rewrite(with: ())
     }

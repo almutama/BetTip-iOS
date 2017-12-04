@@ -42,8 +42,8 @@ extension SwinjectStoryboard {
             BasketballService()
             }.inObjectScope(.container)
         
-        defaultContainer.register(CouponServiceType.self) { _ in
-            CouponService()
+        defaultContainer.register(CreditServiceType.self) { _ in
+            CreditService()
             }.inObjectScope(.container)
         
         defaultContainer.register(FootballServiceType.self) { _ in
@@ -54,8 +54,8 @@ extension SwinjectStoryboard {
             BasketballVM(basketballService: r.resolve(BasketballServiceType.self)!)
             }
         
-        defaultContainer.register(CouponsVM.self) { r in
-            CouponsVM(couponService: r.resolve(CouponServiceType.self)!)
+        defaultContainer.register(CreditsVM.self) { r in
+            CreditsVM(couponService: r.resolve(CreditServiceType.self)!)
             }
         
         defaultContainer.register(FootballVM.self) { r in
@@ -86,8 +86,8 @@ extension SwinjectStoryboard {
             c.viewModel = r.resolve(BasketballVMType.self)
         }
         
-        defaultContainer.storyboardInitCompleted(CouponsVC.self) {r, c in
-            c.viewModel = r.resolve(CouponsVM.self)
+        defaultContainer.storyboardInitCompleted(CreditsVC.self) {r, c in
+            c.viewModel = r.resolve(CreditsVM.self)
         }
         
         defaultContainer.storyboardInitCompleted(FootballVC.self) {r, c in

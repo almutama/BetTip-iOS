@@ -87,7 +87,7 @@ class LoginService: LoginServiceType {
                 switch registration {
                 case .success(let profile):
                     return Database.database().reference()
-                        .child("users")
+                        .child(Constants.users)
                         .store(profile, forKey: profile.id)
                         .mapValue { $0.object }
                         .mapError { _ in .common(.internalError) }

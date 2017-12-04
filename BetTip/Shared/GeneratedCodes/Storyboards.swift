@@ -63,10 +63,10 @@ enum StoryboardScene {
 
     static let initialScene = InitialSceneType<UINavigationController>(storyboard: Basketball.self)
   }
-  enum Coupon: StoryboardType {
-    static let storyboardName = "Coupon"
+  enum Credit: StoryboardType {
+    static let storyboardName = "Credit"
 
-    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Coupon.self)
+    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Credit.self)
   }
   enum Football: StoryboardType {
     static let storyboardName = "Football"
@@ -106,7 +106,7 @@ enum StoryboardScene {
 }
 
 enum StoryboardSegue {
-  enum Coupon: String, SegueType {
+  enum Credit: String, SegueType {
     case buyCreditSegue
   }
   enum Login: String, SegueType {
