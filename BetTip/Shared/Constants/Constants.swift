@@ -9,6 +9,7 @@
 import UIKit
 
 struct Constants {
+    //Auth
     static let emailKey = "email"
     static let passwordKey = "password"
     static let profileKey = "profile"
@@ -23,6 +24,19 @@ struct Constants {
     static let phoneNumberString = "phoneNumber"
     static let emailString = "email"
     static let profileIdString = "profileID"
+    
+    //Firebase
+    static let matches = "Matches"
+    static let users = "Users"
+    static let moderators = "Moderators"
+    static let admins = "Admins"
+    static let disabledUsers = "DisabledUsers"
+    static let credits = "Credits"
+    static let userCredits = "UserCredits"
+    static let stats = "Stats"
+    static let basketball = "\(stats)/Basketball"
+    static let football = "\(stats)/Football"
+    static let status = "status"
     
     //UI
     static let baseDesignScreenWidth: CGFloat = 375.0

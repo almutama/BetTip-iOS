@@ -26,7 +26,7 @@ class AppAssembly: NSObject {
         SplashAssembly(),
         BasketballAssembly(),
         FootballAssembly(),
-        CouponAssembly()
+        CreditAssembly()
         ], container: SwinjectStoryboard.defaultContainer)
     
 }

@@ -44,7 +44,7 @@
 		B0569A501FC22BB300FF34A1 /* UIEventBusEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A4F1FC22BB300FF34A1 /* UIEventBusEvent.swift */; };
 		B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A521FC3490C00FF34A1 /* Admin.storyboard */; };
 		B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A561FC35F7100FF34A1 /* Basketball.storyboard */; };
-		B0569A5A1FC3745D00FF34A1 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A591FC3745D00FF34A1 /* Coupon.storyboard */; };
+		B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A591FC3745D00FF34A1 /* Credit.storyboard */; };
 		B0569A611FC37A6700FF34A1 /* BasketballServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A601FC37A6700FF34A1 /* BasketballServices.swift */; };
 		B0569A641FC37A9200FF34A1 /* BasketballCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A621FC37A9200FF34A1 /* BasketballCell.swift */; };
 		B0569A651FC37A9200FF34A1 /* BasketballCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0569A631FC37A9200FF34A1 /* BasketballCell.xib */; };
@@ -52,13 +52,13 @@
 		B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A681FC37AC300FF34A1 /* BasketballVM.swift */; };
 		B0569A6B1FC37AFD00FF34A1 /* BasketballModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A6A1FC37AFD00FF34A1 /* BasketballModel.swift */; };
 		B0569A6D1FC37B2600FF34A1 /* BasketballAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A6C1FC37B2600FF34A1 /* BasketballAssembly.swift */; };
-		B0569A751FC37C7200FF34A1 /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A741FC37C7200FF34A1 /* CouponModel.swift */; };
-		B0569A771FC37C8100FF34A1 /* CouponServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A761FC37C8100FF34A1 /* CouponServices.swift */; };
-		B0569A7A1FC37C8E00FF34A1 /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A781FC37C8E00FF34A1 /* CouponCell.swift */; };
-		B0569A7B1FC37C8E00FF34A1 /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0569A791FC37C8E00FF34A1 /* CouponCell.xib */; };
-		B0569A7D1FC37C9C00FF34A1 /* CouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A7C1FC37C9C00FF34A1 /* CouponsVM.swift */; };
-		B0569A7F1FC37CA600FF34A1 /* CouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A7E1FC37CA600FF34A1 /* CouponsVC.swift */; };
-		B0569A811FC37CC600FF34A1 /* CouponAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A801FC37CC600FF34A1 /* CouponAssembly.swift */; };
+		B0569A751FC37C7200FF34A1 /* CreditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A741FC37C7200FF34A1 /* CreditModel.swift */; };
+		B0569A771FC37C8100FF34A1 /* CreditServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A761FC37C8100FF34A1 /* CreditServices.swift */; };
+		B0569A7A1FC37C8E00FF34A1 /* CreditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A781FC37C8E00FF34A1 /* CreditCell.swift */; };
+		B0569A7B1FC37C8E00FF34A1 /* CreditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0569A791FC37C8E00FF34A1 /* CreditCell.xib */; };
+		B0569A7D1FC37C9C00FF34A1 /* CreditsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A7C1FC37C9C00FF34A1 /* CreditsVM.swift */; };
+		B0569A7F1FC37CA600FF34A1 /* CreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A7E1FC37CA600FF34A1 /* CreditsVC.swift */; };
+		B0569A811FC37CC600FF34A1 /* CreditAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A801FC37CC600FF34A1 /* CreditAssembly.swift */; };
 		B0569A881FC37D1F00FF34A1 /* AdminAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A871FC37D1F00FF34A1 /* AdminAssembly.swift */; };
 		B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A891FC37D2A00FF34A1 /* AdminVM.swift */; };
 		B0569A8C1FC37D3500FF34A1 /* AdminServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A8B1FC37D3500FF34A1 /* AdminServices.swift */; };
@@ -182,7 +182,7 @@
 		B0569A4F1FC22BB300FF34A1 /* UIEventBusEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEventBusEvent.swift; sourceTree = "<group>"; };
 		B0569A521FC3490C00FF34A1 /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		B0569A561FC35F7100FF34A1 /* Basketball.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Basketball.storyboard; sourceTree = "<group>"; };
-		B0569A591FC3745D00FF34A1 /* Coupon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
+		B0569A591FC3745D00FF34A1 /* Credit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Credit.storyboard; sourceTree = "<group>"; };
 		B0569A601FC37A6700FF34A1 /* BasketballServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballServices.swift; sourceTree = "<group>"; };
 		B0569A621FC37A9200FF34A1 /* BasketballCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballCell.swift; sourceTree = "<group>"; };
 		B0569A631FC37A9200FF34A1 /* BasketballCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketballCell.xib; sourceTree = "<group>"; };
@@ -190,13 +190,13 @@
 		B0569A681FC37AC300FF34A1 /* BasketballVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballVM.swift; sourceTree = "<group>"; };
 		B0569A6A1FC37AFD00FF34A1 /* BasketballModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballModel.swift; sourceTree = "<group>"; };
 		B0569A6C1FC37B2600FF34A1 /* BasketballAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballAssembly.swift; sourceTree = "<group>"; };
-		B0569A741FC37C7200FF34A1 /* CouponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
-		B0569A761FC37C8100FF34A1 /* CouponServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponServices.swift; sourceTree = "<group>"; };
-		B0569A781FC37C8E00FF34A1 /* CouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
-		B0569A791FC37C8E00FF34A1 /* CouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
-		B0569A7C1FC37C9C00FF34A1 /* CouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsVM.swift; sourceTree = "<group>"; };
-		B0569A7E1FC37CA600FF34A1 /* CouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsVC.swift; sourceTree = "<group>"; };
-		B0569A801FC37CC600FF34A1 /* CouponAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAssembly.swift; sourceTree = "<group>"; };
+		B0569A741FC37C7200FF34A1 /* CreditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditModel.swift; sourceTree = "<group>"; };
+		B0569A761FC37C8100FF34A1 /* CreditServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditServices.swift; sourceTree = "<group>"; };
+		B0569A781FC37C8E00FF34A1 /* CreditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCell.swift; sourceTree = "<group>"; };
+		B0569A791FC37C8E00FF34A1 /* CreditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCell.xib; sourceTree = "<group>"; };
+		B0569A7C1FC37C9C00FF34A1 /* CreditsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsVM.swift; sourceTree = "<group>"; };
+		B0569A7E1FC37CA600FF34A1 /* CreditsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsVC.swift; sourceTree = "<group>"; };
+		B0569A801FC37CC600FF34A1 /* CreditAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditAssembly.swift; sourceTree = "<group>"; };
 		B0569A871FC37D1F00FF34A1 /* AdminAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAssembly.swift; sourceTree = "<group>"; };
 		B0569A891FC37D2A00FF34A1 /* AdminVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminVM.swift; sourceTree = "<group>"; };
 		B0569A8B1FC37D3500FF34A1 /* AdminServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminServices.swift; sourceTree = "<group>"; };
@@ -456,7 +456,7 @@
 			path = Basketball;
 			sourceTree = "<group>";
 		};
-		B0569A581FC3744E00FF34A1 /* Coupon */ = {
+		B0569A581FC3744E00FF34A1 /* Credit */ = {
 			isa = PBXGroup;
 			children = (
 				B0569A731FC37B7D00FF34A1 /* Models */,
@@ -464,10 +464,10 @@
 				B0569A6E1FC37B4C00FF34A1 /* ViewControllers */,
 				B0569A701FC37B5F00FF34A1 /* ViewModels */,
 				B0569A711FC37B6C00FF34A1 /* Views */,
-				B0569A591FC3745D00FF34A1 /* Coupon.storyboard */,
-				B0569A801FC37CC600FF34A1 /* CouponAssembly.swift */,
+				B0569A591FC3745D00FF34A1 /* Credit.storyboard */,
+				B0569A801FC37CC600FF34A1 /* CreditAssembly.swift */,
 			);
-			path = Coupon;
+			path = Credit;
 			sourceTree = "<group>";
 		};
 		B0569A5B1FC3748200FF34A1 /* ViewControllers */ = {
@@ -515,7 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */,
-				B0569A7E1FC37CA600FF34A1 /* CouponsVC.swift */,
+				B0569A7E1FC37CA600FF34A1 /* CreditsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -524,7 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */,
-				B0569A7C1FC37C9C00FF34A1 /* CouponsVM.swift */,
+				B0569A7C1FC37C9C00FF34A1 /* CreditsVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -532,8 +532,8 @@
 		B0569A711FC37B6C00FF34A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A781FC37C8E00FF34A1 /* CouponCell.swift */,
-				B0569A791FC37C8E00FF34A1 /* CouponCell.xib */,
+				B0569A781FC37C8E00FF34A1 /* CreditCell.swift */,
+				B0569A791FC37C8E00FF34A1 /* CreditCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -541,7 +541,7 @@
 		B0569A721FC37B7300FF34A1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A761FC37C8100FF34A1 /* CouponServices.swift */,
+				B0569A761FC37C8100FF34A1 /* CreditServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -549,7 +549,7 @@
 		B0569A731FC37B7D00FF34A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A741FC37C7200FF34A1 /* CouponModel.swift */,
+				B0569A741FC37C7200FF34A1 /* CreditModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -819,7 +819,7 @@
 			children = (
 				B0569A511FC348F400FF34A1 /* Admin */,
 				B0569A551FC35F5A00FF34A1 /* Basketball */,
-				B0569A581FC3744E00FF34A1 /* Coupon */,
+				B0569A581FC3744E00FF34A1 /* Credit */,
 				B0FE4A411FBAD44D008F2EE6 /* Football */,
 				B0FE4A3E1FBAD401008F2EE6 /* Login */,
 				B0A8E6741FA7B0BF001A8BBA /* Main */,
@@ -1078,7 +1078,7 @@
 				B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */,
 				B0569AD11FCDEDC000FF34A1 /* Splash.storyboard in Resources */,
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
-				B0569A5A1FC3745D00FF34A1 /* Coupon.storyboard in Resources */,
+				B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */,
 				B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */,
 				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
 				B0569A651FC37A9200FF34A1 /* BasketballCell.xib in Resources */,
@@ -1087,7 +1087,7 @@
 				B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */,
 				B0A7AA2B1FCC23D300DC4F62 /* Localizable.strings in Resources */,
 				B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */,
-				B0569A7B1FC37C8E00FF34A1 /* CouponCell.xib in Resources */,
+				B0569A7B1FC37C8E00FF34A1 /* CreditCell.xib in Resources */,
 				B0FE4A481FBAD504008F2EE6 /* Onboarding.storyboard in Resources */,
 				B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */,
 			);
@@ -1268,12 +1268,12 @@
 				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */,
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
-				B0569A7D1FC37C9C00FF34A1 /* CouponsVM.swift in Sources */,
+				B0569A7D1FC37C9C00FF34A1 /* CreditsVM.swift in Sources */,
 				B0569A9E1FC6219000FF34A1 /* LoginService.swift in Sources */,
 				B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */,
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
 				B0569A641FC37A9200FF34A1 /* BasketballCell.swift in Sources */,
-				B0569A811FC37CC600FF34A1 /* CouponAssembly.swift in Sources */,
+				B0569A811FC37CC600FF34A1 /* CreditAssembly.swift in Sources */,
 				B0569AF31FCF3DA100FF34A1 /* FootballCell.swift in Sources */,
 				B0569A6D1FC37B2600FF34A1 /* BasketballAssembly.swift in Sources */,
 				B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */,
@@ -1294,7 +1294,7 @@
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
 				B0569ACD1FCDED7C00FF34A1 /* SplashVM.swift in Sources */,
 				B0569AF01FCF3D8C00FF34A1 /* FootballVM.swift in Sources */,
-				B0569A771FC37C8100FF34A1 /* CouponServices.swift in Sources */,
+				B0569A771FC37C8100FF34A1 /* CreditServices.swift in Sources */,
 				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
@@ -1302,7 +1302,7 @@
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
 				B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */,
 				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
-				B0569A7F1FC37CA600FF34A1 /* CouponsVC.swift in Sources */,
+				B0569A7F1FC37CA600FF34A1 /* CreditsVC.swift in Sources */,
 				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
 				B0569AA51FC621D400FF34A1 /* RegisterVC.swift in Sources */,
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
@@ -1328,7 +1328,7 @@
 				B0569AFC1FD0803200FF34A1 /* StyledTextField.swift in Sources */,
 				B0569A9B1FC6216E00FF34A1 /* RegisterModel.swift in Sources */,
 				B0569AD31FCDF65300FF34A1 /* UIService.swift in Sources */,
-				B0569A751FC37C7200FF34A1 /* CouponModel.swift in Sources */,
+				B0569A751FC37C7200FF34A1 /* CreditModel.swift in Sources */,
 				B0569A501FC22BB300FF34A1 /* UIEventBusEvent.swift in Sources */,
 				B0569A481FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift in Sources */,
 				B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */,
@@ -1342,7 +1342,7 @@
 				B0569A611FC37A6700FF34A1 /* BasketballServices.swift in Sources */,
 				B0569A671FC37AA900FF34A1 /* BasketballVC.swift in Sources */,
 				B0569A2D1FC0E49800FF34A1 /* DebugDetector.swift in Sources */,
-				B0569A7A1FC37C8E00FF34A1 /* CouponCell.swift in Sources */,
+				B0569A7A1FC37C8E00FF34A1 /* CreditCell.swift in Sources */,
 				B0569A961FC6214400FF34A1 /* LoginAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
