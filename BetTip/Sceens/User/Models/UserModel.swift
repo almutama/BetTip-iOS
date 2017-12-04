@@ -15,6 +15,7 @@ struct UserModel {
     var email: String?
     var role: Role = .user
     var disabled: Bool = false
+    var userCredit: UserCreditModel?
     
     // Firebase User
     init(user: User) {
@@ -29,7 +30,5 @@ extension UserModel: Mappable {
     mutating func mapping(map: Map) {
         id <- map["id"]
         email <- map["email"]
-        role <- map["role"]
-        disabled <- map["disabled"]
     }
 }

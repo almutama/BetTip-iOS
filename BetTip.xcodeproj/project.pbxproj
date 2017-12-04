@@ -109,6 +109,7 @@
 		B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B08A45801F9DD5430082BDD3 /* Assets.xcassets */; };
 		B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */; };
 		B08A458F1F9DD5430082BDD3 /* BetTipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */; };
+		B0A281A41FD59ADF00B7E892 /* UserCreditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A281A31FD59ADF00B7E892 /* UserCreditModel.swift */; };
 		B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */; };
 		B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */; };
 		B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA231FC85A7B00DC4F62 /* UserService.swift */; };
@@ -251,6 +252,7 @@
 		B08A458A1F9DD5430082BDD3 /* BetTipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetTipTests.swift; sourceTree = "<group>"; };
 		B08A45901F9DD5430082BDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0A281A31FD59ADF00B7E892 /* UserCreditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreditModel.swift; sourceTree = "<group>"; };
 		B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Rx.swift"; sourceTree = "<group>"; };
 		B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleType.swift; sourceTree = "<group>"; };
 		B0A7AA231FC85A7B00DC4F62 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -619,6 +621,7 @@
 		B0569AAF1FC7662E00FF34A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B0A281A31FD59ADF00B7E892 /* UserCreditModel.swift */,
 				B0569AB01FC7663D00FF34A1 /* UserModel.swift */,
 				B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */,
 			);
@@ -1300,6 +1303,7 @@
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
 				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
+				B0A281A41FD59ADF00B7E892 /* UserCreditModel.swift in Sources */,
 				B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */,
 				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CreditsVC.swift in Sources */,
