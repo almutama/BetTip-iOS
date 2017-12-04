@@ -35,3 +35,12 @@ class FootballVC: BaseViewController {
             }.disposed(by: disposeBag)
     }
 }
+
+extension FootballVC: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: 90)
+    }
+}
