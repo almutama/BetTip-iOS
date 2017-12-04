@@ -12,13 +12,31 @@ import RxCocoa
 
 class BasketballCell: UICollectionViewCell, Reusable {
     
+    @IBOutlet weak var iddaaIdLbl: StyledLabel!
+    @IBOutlet weak var homeLbl: StyledLabel!
+    @IBOutlet weak var awayLbl: StyledLabel!
+    @IBOutlet weak var dateLbl: StyledLabel!
+    @IBOutlet weak var timeLbl: StyledLabel!
+    @IBOutlet weak var leagueLbl: StyledLabel!
+    @IBOutlet weak var betLbl: StyledLabel!
+    @IBOutlet weak var oddLbl: StyledLabel!
+    @IBOutlet weak var statusImg: UIImageView!
+    @IBOutlet weak var siteLbl: StyledLabel!
+    
     var disposeBag = DisposeBag()
     var viewModel: Variable<BasketballModel> = Variable<BasketballModel>.init(BasketballModel.init()) {
         didSet {
             _ = viewModel.asObservable().observeOn(MainScheduler.instance)
                 .subscribe({ [unowned self] (event) in
                     if let entity = event.element {
-                        
+                        self.homeLbl.text = entity.homeTeam
+                        self.awayLbl.text = entity.awayTeam
+                        self.dateLbl.text = entity.date
+                        self.timeLbl.text = entity.time
+                        self.betLbl.text = entity.bet
+                        self.oddLbl.text = "\(String(describing: entity.odd))"
+                        self.leagueLbl.text = entity.league
+                        self.siteLbl.text = entity.site
                     }
                 })
                 .disposed(by: disposeBag)
