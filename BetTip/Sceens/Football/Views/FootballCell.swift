@@ -37,6 +37,17 @@ class FootballCell: UICollectionViewCell, Reusable {
                         self.oddLbl.text = "\(String(describing: entity.odd))"
                         self.leagueLbl.text = entity.league
                         self.siteLbl.text = entity.site
+                        self.iddaaIdLbl.text = "\(String(describing: entity.iddaaId))"
+                        
+                        if entity.status == 1 {
+                            self.statusImg.image = Asset.active.image
+                        } else {
+                            if entity.won == 0 {
+                                self.statusImg.image = Asset.lost.image
+                            } else {
+                                self.statusImg.image = Asset.won.image
+                            }
+                        }
                     }
                 })
                 .disposed(by: disposeBag)

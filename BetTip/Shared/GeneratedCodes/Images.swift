@@ -59,18 +59,18 @@ enum Asset {
   static let bahisInterface = ImageAsset(name: "bahis_interface")
   static let basketball = ImageAsset(name: "basketball")
   static let basketballEx = ImageAsset(name: "basketball_ex")
-  static let checkGreen = ImageAsset(name: "check_green")
-  static let crossBlue = ImageAsset(name: "cross_blue")
   static let deal = ImageAsset(name: "deal")
   static let football = ImageAsset(name: "football")
   static let footballEx = ImageAsset(name: "football_ex")
   static let logo = ImageAsset(name: "logo")
   static let logoTr = ImageAsset(name: "logo_tr")
+  static let lost = ImageAsset(name: "lost")
   static let matchResult = ImageAsset(name: "match_result")
   static let noAds = ImageAsset(name: "no_ads")
   static let statsEx = ImageAsset(name: "stats_ex")
   static let twitter = ImageAsset(name: "twitter")
   static let versus = ImageAsset(name: "versus")
+  static let won = ImageAsset(name: "won")
 
   // swiftlint:disable trailing_comma
   static let allColors: [ColorAsset] = [
@@ -89,18 +89,18 @@ enum Asset {
     bahisInterface,
     basketball,
     basketballEx,
-    checkGreen,
-    crossBlue,
     deal,
     football,
     footballEx,
     logo,
     logoTr,
+    lost,
     matchResult,
     noAds,
     statsEx,
     twitter,
     versus,
+    won,
   ]
   // swiftlint:enable trailing_comma
   @available(*, deprecated, renamed: "allImages")
