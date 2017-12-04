@@ -23,7 +23,7 @@ class AdminService: AdminServiceType {
     
     func saveCredit(coupon: CreditModel, user: UserModel) -> Observable<Result<CreditModel, FirebaseStoreError>> {
         return Database.database().reference().child(Constants.credits).child(user.id)
-            .store(coupon)
+            .storeObject(coupon)
     }
     
     func deleteCredit(coupon: CreditModel, user: UserModel) -> Observable<Void> {

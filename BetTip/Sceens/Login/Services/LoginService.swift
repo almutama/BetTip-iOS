@@ -88,7 +88,7 @@ class LoginService: LoginServiceType {
                 case .success(let profile):
                     return Database.database().reference()
                         .child(Constants.users)
-                        .store(profile, forKey: profile.id)
+                        .storeWithKey(profile, forKey: profile.id)
                         .mapValue { $0.object }
                         .mapError { _ in .common(.internalError) }
                 case .failure(let error):

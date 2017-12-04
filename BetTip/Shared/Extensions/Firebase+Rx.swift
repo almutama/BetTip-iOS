@@ -86,13 +86,13 @@ extension DatabaseQuery {
 }
 
 extension DatabaseReference {
-    func store<T: Mappable>(_ objects: [T]) -> Observable<[Result<T, FirebaseStoreError>]> where T: BaseModel {
-        return Observable.from(objects.map(store)).concat().reduce([]) { accumulator, result in
+    func storeWithObjects<T: Mappable>(_ objects: [T]) -> Observable<[Result<T, FirebaseStoreError>]> where T: BaseModel {
+        return Observable.from(objects.map(storeObject)).concat().reduce([]) { accumulator, result in
             accumulator + [result]
         }
     }
     
-    func store<T: Mappable>(_ object: T) -> Observable<Result<T, FirebaseStoreError>> where T: BaseModel {
+    func storeObject<T: Mappable>(_ object: T) -> Observable<Result<T, FirebaseStoreError>> where T: BaseModel {
         return Observable.create { observer in
             var mutableObject = object
             let key: String
@@ -116,7 +116,7 @@ extension DatabaseReference {
         }
     }
     
-    func store<T: Mappable>(_ object: T, forKey key: String? = nil) ->
+    func storeWithKey<T: Mappable>(_ object: T, forKey key: String? = nil) ->
         Observable<Result<(key: String, object: T), FirebaseStoreError>> {
             return Observable.create { observer in
                 var dictionary = Mapper<T>().toJSON(object)
