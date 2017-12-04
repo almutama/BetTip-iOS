@@ -9,11 +9,11 @@
 import Foundation
 import ObjectMapper
 
-struct CouponModel: BaseModel {
+struct CreditModel: BaseModel {
     var id: String?
 }
 
-extension CouponModel: Mappable {
+extension CreditModel: Mappable {
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {

@@ -10,25 +10,25 @@ import Foundation
 import Swinject
 import SwinjectStoryboard
 
-class CouponAssembly: Assembly {
+class CreditAssembly: Assembly {
 
     func assemble(container: Container) {
         // Services
-        container.register(CouponServiceType.self) { _ in
-            CouponService()
+        container.register(CreditServiceType.self) { _ in
+            CreditService()
         }
         
         // ViewModels
-        container.register(CouponsVMType.self) { r in
-            CouponsVM(couponService: r.resolve(CouponServiceType.self)!)
+        container.register(CreditsVMType.self) { r in
+            CreditsVM(couponService: r.resolve(CreditServiceType.self)!)
         }
         container.register(BuyCreditVMType.self) { r in
-            BuyCreditVM(couponService: r.resolve(CouponServiceType.self)!)
+            BuyCreditVM(couponService: r.resolve(CreditServiceType.self)!)
         }
         
         // ViewControllers
-        container.storyboardInitCompleted(CouponsVC.self) {r, c in
-            c.viewModel = r.resolve(CouponsVMType.self)
+        container.storyboardInitCompleted(CreditsVC.self) {r, c in
+            c.viewModel = r.resolve(CreditsVMType.self)
         }
         container.storyboardInitCompleted(BuyCreditVC.self) {r, c in
             c.viewModel = r.resolve(BuyCreditVMType.self)

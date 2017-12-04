@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CouponCell: UICollectionViewCell {
+class CreditCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

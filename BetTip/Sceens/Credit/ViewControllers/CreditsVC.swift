@@ -9,9 +9,9 @@
 import UIKit
 import RxSwift
 
-class CouponsVC: BaseViewController {
+class CreditsVC: BaseViewController {
     
-    var viewModel: CouponsVMType!
+    var viewModel: CreditsVMType!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {

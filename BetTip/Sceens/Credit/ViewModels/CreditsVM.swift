@@ -9,16 +9,16 @@
 import ObjectMapper
 import RxSwift
 
-protocol CouponsVMType {
+protocol CreditsVMType {
     
 }
 
-class CouponsVM: BaseViewModel, CouponsVMType {
+class CreditsVM: BaseViewModel, CreditsVMType {
     
-    private let couponService: CouponServiceType!
+    private let couponService: CreditServiceType!
     private let disposeBag = DisposeBag()
     
-    init(couponService: CouponServiceType) {
+    init(couponService: CreditServiceType) {
         self.couponService = couponService
         super.init()
     }

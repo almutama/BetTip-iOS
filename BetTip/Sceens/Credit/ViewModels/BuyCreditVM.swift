@@ -15,10 +15,10 @@ protocol BuyCreditVMType {
 
 class BuyCreditVM: BaseViewModel, BuyCreditVMType {
     
-    private let couponService: CouponServiceType!
+    private let couponService: CreditServiceType!
     private let disposeBag = DisposeBag()
     
-    init(couponService: CouponServiceType) {
+    init(couponService: CreditServiceType) {
         self.couponService = couponService
         super.init()
     }
