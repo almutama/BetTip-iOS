@@ -14,8 +14,8 @@ class CreditAssembly: Assembly {
 
     func assemble(container: Container) {
         // Services
-        container.register(CreditServiceType.self) { _ in
-            CreditService()
+        container.register(CreditServiceType.self) { r in
+            CreditService(userService: r.resolve(UserServiceType.self)!)
         }
         
         // ViewModels

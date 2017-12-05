@@ -11,6 +11,8 @@ import ObjectMapper
 
 struct CreditModel: BaseModel {
     var id: String?
+    var price: Double?
+    var numberOfCredits: Int?
 }
 
 extension CreditModel: Mappable {
@@ -18,5 +20,7 @@ extension CreditModel: Mappable {
     
     mutating func mapping(map: Map) {
         id <- map["id"]
+        price <- map["price"]
+        numberOfCredits <- map["numberOfCredits"]
     }
 }
