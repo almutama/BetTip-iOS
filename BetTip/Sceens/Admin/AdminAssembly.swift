@@ -14,8 +14,9 @@ class AdminAssembly: Assembly {
     
     func assemble(container: Container) {
         // Services
-        container.register(AdminServiceType.self) { _ in
-            AdminService()
+        container.register(AdminServiceType.self) { r in
+            AdminService(userService: r.resolve(UserServiceType.self)!,
+                         creditService: r.resolve(CreditServiceType.self)!)
         }
         
         // ViewModels

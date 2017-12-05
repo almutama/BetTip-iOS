@@ -15,20 +15,30 @@ import Result
 private let logger = Log.createLogger()
 
 protocol AdminServiceType {
-    func saveCredit(coupon: CreditModel, user: UserModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
-    func deleteCredit(coupon: CreditModel, user: UserModel) -> Observable<Void>
+    func addCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
+    func updateCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
+    func deleteCredit(credit: CreditModel) -> Observable<Void>
 }
 
 class AdminService: AdminServiceType {
     
-    func saveCredit(coupon: CreditModel, user: UserModel) -> Observable<Result<CreditModel, FirebaseStoreError>> {
-        return Database.database().reference().child(Constants.credits).child(user.id)
-            .storeObject(coupon)
+    private let userService: UserServiceType
+    private let creditService: CreditServiceType
+    
+    init(userService: UserServiceType, creditService: CreditServiceType) {
+        self.userService = userService
+        self.creditService = creditService
     }
     
-    func deleteCredit(coupon: CreditModel, user: UserModel) -> Observable<Void> {
-        return Database.database().reference().child(Constants.credits).child(user.id)
-            .delete(coupon)
-            .rewrite(with: ())
+    func addCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>> {
+        return creditService.addCredit(credit: credit)
+    }
+    
+    func updateCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>> {
+        return creditService.updateCredit(credit: credit)
+    }
+    
+    func deleteCredit(credit: CreditModel) -> Observable<Void> {
+        return creditService.deleteCredit(credit: credit)
     }
 }

@@ -42,8 +42,8 @@ extension SwinjectStoryboard {
             BasketballService()
             }.inObjectScope(.container)
         
-        defaultContainer.register(CreditServiceType.self) { _ in
-            CreditService()
+        defaultContainer.register(CreditServiceType.self) { r in
+            CreditService(userService: r.resolve(UserServiceType.self)!)
             }.inObjectScope(.container)
         
         defaultContainer.register(FootballServiceType.self) { _ in
