@@ -15,9 +15,11 @@ import Result
 private let logger = Log.createLogger()
 
 protocol AdminServiceType {
+    func getCredits() -> Observable<[CreditModel]>
     func addCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
     func updateCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
     func deleteCredit(credit: CreditModel) -> Observable<Void>
+    func getUsers() -> Observable<[UserModel]>
     func changeUserRole(user: UserModel, role: Role) -> Observable<Bool>
     func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool>
 }
@@ -32,6 +34,10 @@ class AdminService: AdminServiceType {
         self.creditService = creditService
     }
     
+    func getCredits() -> Observable<[CreditModel]> {
+        return creditService.getCredits()
+    }
+    
     func addCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>> {
         return creditService.addCredit(credit: credit)
     }
@@ -42,6 +48,10 @@ class AdminService: AdminServiceType {
     
     func deleteCredit(credit: CreditModel) -> Observable<Void> {
         return creditService.deleteCredit(credit: credit)
+    }
+    
+    func getUsers() -> Observable<[UserModel]> {
+        return self.userService.users()
     }
     
     func changeUserRole(user: UserModel, role: Role) -> Observable<Bool> {

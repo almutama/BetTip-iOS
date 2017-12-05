@@ -103,6 +103,10 @@
 		B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF71FD07FF200FF34A1 /* StyledLabel.swift */; };
 		B0569AFA1FD0801100FF34A1 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF91FD0801100FF34A1 /* StyledButton.swift */; };
 		B0569AFC1FD0803200FF34A1 /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AFB1FD0803200FF34A1 /* StyledTextField.swift */; };
+		B06BE0331FD73CCD00BA8EC8 /* ControlUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0321FD73CCD00BA8EC8 /* ControlUsersVC.swift */; };
+		B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */; };
+		B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */; };
+		B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -242,6 +246,10 @@
 		B0569AF71FD07FF200FF34A1 /* StyledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLabel.swift; sourceTree = "<group>"; };
 		B0569AF91FD0801100FF34A1 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 		B0569AFB1FD0803200FF34A1 /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
+		B06BE0321FD73CCD00BA8EC8 /* ControlUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlUsersVC.swift; sourceTree = "<group>"; };
+		B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVC.swift; sourceTree = "<group>"; };
+		B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlUsersVM.swift; sourceTree = "<group>"; };
+		B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVM.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -560,6 +568,8 @@
 			isa = PBXGroup;
 			children = (
 				B0569A891FC37D2A00FF34A1 /* AdminVM.swift */,
+				B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */,
+				B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -568,6 +578,8 @@
 			isa = PBXGroup;
 			children = (
 				B0569A8D1FC37D3F00FF34A1 /* AdminVC.swift */,
+				B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */,
+				B06BE0321FD73CCD00BA8EC8 /* ControlUsersVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1285,6 +1297,7 @@
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
+				B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */,
 				B0569AB41FC988EB00FF34A1 /* AuthManager.swift in Sources */,
 				B0569A261FC0CDF300FF34A1 /* UIColor+Ext.swift in Sources */,
 				B0569A881FC37D1F00FF34A1 /* AdminAssembly.swift in Sources */,
@@ -1321,6 +1334,7 @@
 				B0A7AA281FCC057900DC4F62 /* Validator.swift in Sources */,
 				B0569AB81FC9890D00FF34A1 /* AuthStore.swift in Sources */,
 				B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */,
+				B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */,
 				B0569ACF1FCDEDAD00FF34A1 /* SplashAssembly.swift in Sources */,
 				B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */,
 				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
@@ -1346,8 +1360,10 @@
 				B0569A611FC37A6700FF34A1 /* BasketballServices.swift in Sources */,
 				B0569A671FC37AA900FF34A1 /* BasketballVC.swift in Sources */,
 				B0569A2D1FC0E49800FF34A1 /* DebugDetector.swift in Sources */,
+				B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */,
 				B0569A7A1FC37C8E00FF34A1 /* CreditCell.swift in Sources */,
 				B0569A961FC6214400FF34A1 /* LoginAssembly.swift in Sources */,
+				B06BE0331FD73CCD00BA8EC8 /* ControlUsersVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

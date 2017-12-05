@@ -1,20 +1,19 @@
 //
-//  AdminVM.swift
+//  ControlCreditsVM.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 21.11.2017.
+//  Created by Haydar Karkin on 5.12.2017.
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
 import ObjectMapper
 import RxSwift
 
-protocol AdminVMType {
+protocol ControlCreditsVMType {
     func getCredits() -> Observable<[CreditModel]>
-    func getUsers() -> Observable<[UserModel]>
 }
 
-class AdminVM: BaseViewModel, AdminVMType {
+class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
     
     private let adminService: AdminServiceType!
     private let disposeBag = DisposeBag()
@@ -26,9 +25,5 @@ class AdminVM: BaseViewModel, AdminVMType {
     
     func getCredits() -> Observable<[CreditModel]> {
         return self.adminService.getCredits()
-    }
-    
-    func getUsers() -> Observable<[UserModel]> {
-        return self.adminService.getUsers()
     }
 }

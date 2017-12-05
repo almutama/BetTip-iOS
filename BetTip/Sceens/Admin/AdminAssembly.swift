@@ -20,13 +20,25 @@ class AdminAssembly: Assembly {
         }
         
         // ViewModels
-        container.register(AdminVM.self) { r in
+        container.register(AdminVMType.self) { r in
             AdminVM(adminService: r.resolve(AdminServiceType.self)!)
+        }
+        container.register(ControlCreditsVMType.self) { r in
+            ControlCreditsVM(adminService: r.resolve(AdminServiceType.self)!)
+        }
+        container.register(ControlUsersVMType.self) { r in
+            ControlUsersVM(adminService: r.resolve(AdminServiceType.self)!)
         }
         
         // ViewControllers
         container.storyboardInitCompleted(AdminVC.self) {r, c in
             c.viewModel = r.resolve(AdminVMType.self)
+        }
+        container.storyboardInitCompleted(ControlCreditsVC.self) {r, c in
+            c.viewModel = r.resolve(ControlCreditsVMType.self)
+        }
+        container.storyboardInitCompleted(ControlUsersVC.self) {r, c in
+            c.viewModel = r.resolve(ControlUsersVMType.self)
         }
     }
 }
