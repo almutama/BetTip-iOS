@@ -56,7 +56,7 @@ enum StoryboardScene {
   enum Admin: StoryboardType {
     static let storyboardName = "Admin"
 
-    static let initialScene = InitialSceneType<UIViewController>(storyboard: Admin.self)
+    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Admin.self)
   }
   enum Basketball: StoryboardType {
     static let storyboardName = "Basketball"

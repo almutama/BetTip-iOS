@@ -18,6 +18,8 @@ protocol AdminServiceType {
     func addCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
     func updateCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
     func deleteCredit(credit: CreditModel) -> Observable<Void>
+    func changeUserRole(user: UserModel, role: Role) -> Observable<Bool>
+    func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool>
 }
 
 class AdminService: AdminServiceType {
@@ -40,5 +42,13 @@ class AdminService: AdminServiceType {
     
     func deleteCredit(credit: CreditModel) -> Observable<Void> {
         return creditService.deleteCredit(credit: credit)
+    }
+    
+    func changeUserRole(user: UserModel, role: Role) -> Observable<Bool> {
+        return userService.setAccountRole(user: user, role: role)
+    }
+    
+    func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool> {
+        return userService.setAccountDisabled(user: user, disabled: disabled)
     }
 }
