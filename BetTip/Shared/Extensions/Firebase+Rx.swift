@@ -153,6 +153,25 @@ extension DatabaseReference {
             }
             return Disposables.create()
         }
-        
+    }
+    
+    func update<T: Mappable>(_ object: T) -> Observable<Result<T, FirebaseStoreError>> where T: BaseModel {
+        return Observable.create { observer in
+            guard let key = object.id else {
+                observer.onLast(.success((object)))
+                return Disposables.create()
+            }
+            
+            let dictionary = Mapper<T>().toJSON(object)
+            
+            self.child(key).updateChildValues(dictionary) { error, _ in
+                if let error = error {
+                    observer.onLast(.failure(.writeDenied(error)))
+                } else {
+                    observer.onLast(.success((object)))
+                }
+            }
+            return Disposables.create()
+        }
     }
 }
