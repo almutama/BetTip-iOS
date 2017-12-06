@@ -55,7 +55,7 @@ extension SwinjectStoryboard {
             }
         
         defaultContainer.register(CreditsVM.self) { r in
-            CreditsVM(couponService: r.resolve(CreditServiceType.self)!)
+            CreditsVM(creditService: r.resolve(CreditServiceType.self)!)
             }
         
         defaultContainer.register(FootballVM.self) { r in

@@ -20,7 +20,7 @@ class CreditAssembly: Assembly {
         
         // ViewModels
         container.register(CreditsVMType.self) { r in
-            CreditsVM(couponService: r.resolve(CreditServiceType.self)!)
+            CreditsVM(creditService: r.resolve(CreditServiceType.self)!)
         }
         container.register(BuyCreditVMType.self) { r in
             BuyCreditVM(couponService: r.resolve(CreditServiceType.self)!)
