@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2C-VJ-hqa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2C-VJ-hqa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -247,6 +247,7 @@
                     <connections>
                         <outlet property="mailTextField" destination="h1H-6F-JbR" id="a8j-qn-8pV"/>
                         <outlet property="passwordTextField" destination="WKL-ND-wMR" id="86V-o7-d4N"/>
+                        <outlet property="signInBtn" destination="Son-39-5ke" id="lVa-ud-GeS"/>
                         <segue destination="Av0-bH-kBb" kind="show" identifier="forgorPasswordSegue" id="1xN-R8-azN"/>
                     </connections>
                 </viewController>
@@ -553,6 +554,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fcw-1t-mLA"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmTextField" destination="fUr-ik-W8m" id="IfO-05-46r"/>
+                        <outlet property="mailTextField" destination="vQI-U9-fvp" id="RD1-IZ-Yea"/>
+                        <outlet property="passwordTextField" destination="l09-bf-s11" id="gUM-D6-ZXc"/>
+                        <outlet property="signUpBtn" destination="YE7-oN-QVu" id="wzn-Gf-gk2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avm-lU-BSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -565,7 +572,7 @@
             <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Complimentary">
-            <color red="0.25099998712539673" green="0.31400001049041748" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.25098039215686274" green="0.31372549019607843" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GeneralText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

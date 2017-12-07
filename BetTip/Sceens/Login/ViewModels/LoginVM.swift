@@ -30,7 +30,6 @@ class LoginVM: BaseViewModel, LoginVMType {
         
         switch validatedCredentials {
         case .success(let email, let password):
-            print("")
             let login = self.authProvider.login(email: email, password: password)
                 .trackActivity(in: loadingIndicator)
                 .share(replay: 1)

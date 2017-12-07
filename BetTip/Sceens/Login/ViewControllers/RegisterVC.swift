@@ -11,20 +11,28 @@ import RxSwift
 
 class RegisterVC: BaseViewController {
     
-    @IBOutlet weak var mailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmTextField: UITextField!
+    @IBOutlet weak var mailTextField: StyledTextField!
+    @IBOutlet weak var passwordTextField: StyledTextField!
+    @IBOutlet weak var confirmTextField: StyledTextField!
+    @IBOutlet var signUpBtn: StyledButton!
     
     var viewModel: RegisterVMType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bindViewModel()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func bindViewModel() {
+    }
+    
+    func signUp() {
+        
+    }
 }
 
 extension RegisterVC: Theming {

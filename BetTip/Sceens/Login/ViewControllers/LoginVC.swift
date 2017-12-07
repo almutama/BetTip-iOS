@@ -8,20 +8,61 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import RxOptional
 
 class LoginVC: BaseViewController {
     
-    @IBOutlet weak var mailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var mailTextField: StyledTextField!
+    @IBOutlet weak var passwordTextField: StyledTextField!
+    @IBOutlet var signInBtn: StyledButton!
     
     var viewModel: LoginVMType!
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bindViewModel()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func bindViewModel() {
+        let username = mailTextField.rx.text
+            .orEmpty
+            .map({!$0.isEmpty})
+            .share(replay: 1)
+        
+        let password = passwordTextField.rx.text
+            .orEmpty
+            .map({!$0.isEmpty})
+            .share(replay: 1)
+        
+        let combinedSignupValues = Observable.combineLatest(username, password) { $0 && $1 }
+            .share(replay: 1)
+        
+        combinedSignupValues
+            .bind(to: signInBtn.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        signInBtn.rx.tap
+            .subscribe(onNext: {
+                self.signUp()
+        }).disposed(by: disposeBag)
+    }
+    
+    func signUp() {
+        guard let email = self.mailTextField.text, email.isEmpty == false else {
+            ShakeViewAnimation.shake(to: self.mailTextField)
+            return
+        }
+        guard let password = self.passwordTextField.text, password.isEmpty == false else {
+            ShakeViewAnimation.shake(to: self.passwordTextField)
+            return
+        }
+        viewModel.login(email: email, password: password)
     }
 }
 

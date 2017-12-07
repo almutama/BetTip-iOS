@@ -8,7 +8,9 @@
 
 import Reactant
 
-let loginCredentialsRule: Rule<(email: String, password: String), CredentialsValidationError> = Rule { email, password in
+let loginCredentialsRule: Rule<(email: String, password: String),
+    CredentialsValidationError> = Rule { email, password in
+        
     if let emailError = Rules.String.email.validate(email) {
         return .emailInvalid(emailError)
     }
@@ -24,7 +26,9 @@ let loginCredentialsRule: Rule<(email: String, password: String), CredentialsVal
     return nil
 }
 
-let registrationCredentialsRule: Rule<(email: String, password: String, confirm: String), CredentialsValidationError> = Rule { email, password, confirm in
+let registrationCredentialsRule: Rule<(email: String, password: String, confirm: String),
+    CredentialsValidationError> = Rule { email, password, confirm in
+        
     if let emailError = Rules.String.email.validate(email) {
         return .emailInvalid(emailError)
     }
