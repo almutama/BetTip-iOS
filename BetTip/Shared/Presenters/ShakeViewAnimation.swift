@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class ShakeViewAnimation {
-    static func shakeView(view: UIView) {
+    static func shake(to view: UIView) {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.06
         animation.repeatCount = 4
         animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint(x:view.center.x - 10, y:view.center.y))
-        animation.toValue = NSValue(cgPoint: CGPoint(x:view.center.x + 10, y:view.center.y))
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x - 10, y: view.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + 10, y: view.center.y))
         view.layer.add(animation, forKey: "position")
     }
 }

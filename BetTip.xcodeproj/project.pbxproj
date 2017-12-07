@@ -127,8 +127,9 @@
 		B0A7AA3B1FCD7C6800DC4F62 /* UserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */; };
 		B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */; };
 		B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */; };
-		B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
+		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
+		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
 		B0FE4A441FBAD4EB008F2EE6 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */; };
 		B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */; };
 		B0FE4A481FBAD504008F2EE6 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A471FBAD504008F2EE6 /* Onboarding.storyboard */; };
@@ -275,9 +276,10 @@
 		B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAssembly.swift; sourceTree = "<group>"; };
 		B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
-		B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
 		B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Football.storyboard; sourceTree = "<group>"; };
 		B0FE4A471FBAD504008F2EE6 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -817,8 +819,8 @@
 		B0A8E6701FA7AE27001A8BBA /* SupportedFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */,
 				B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */,
-				B0A8E66E1FA66F94001A8BBA /* GoogleService-Info.plist */,
 				B08A45851F9DD5430082BDD3 /* Info.plist */,
 				B08A45801F9DD5430082BDD3 /* Assets.xcassets */,
 				B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */,
@@ -906,6 +908,7 @@
 				B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */,
 				B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */,
 				B0569AC51FCCB12200FF34A1 /* LocalNotificationView.swift */,
+				B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -1094,13 +1097,13 @@
 				B0569AD11FCDEDC000FF34A1 /* Splash.storyboard in Resources */,
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
 				B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */,
-				B0A8E66F1FA66F94001A8BBA /* GoogleService-Info.plist in Resources */,
 				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
 				B0569A651FC37A9200FF34A1 /* BasketballCell.xib in Resources */,
 				B0569AF41FCF3DA100FF34A1 /* FootballCell.xib in Resources */,
 				B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */,
 				B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */,
 				B0A7AA2B1FCC23D300DC4F62 /* Localizable.strings in Resources */,
+				B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */,
 				B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */,
 				B0569A7B1FC37C8E00FF34A1 /* CreditCell.xib in Resources */,
 				B0FE4A481FBAD504008F2EE6 /* Onboarding.storyboard in Resources */,
@@ -1266,6 +1269,7 @@
 				B0569A241FC0CD9C00FF34A1 /* UIImage+Ext.swift in Sources */,
 				B0569AD61FCDF6BD00FF34A1 /* BGDidLoginEvent.swift in Sources */,
 				B0569AD81FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift in Sources */,
+				B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */,
 				B0569A4C1FC22B3E00FF34A1 /* BGEventBusEvent.swift in Sources */,
 				B0569A441FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift in Sources */,
 				B0569A3B1FC22A4800FF34A1 /* EventBus.swift in Sources */,
