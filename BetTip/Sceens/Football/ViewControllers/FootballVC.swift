@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import VegaScrollFlowLayout
 
 class FootballVC: BaseViewController {
     
@@ -18,11 +19,21 @@ class FootballVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareUI()
         self.bindViewModel()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func prepareUI() {
+        let layout = VegaScrollFlowLayout()
+        collectionView.collectionViewLayout = layout
+        layout.itemSize = CGSize(width: collectionView.frame.width, height: 100)
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        self.collectionView.collectionViewLayout =  layout
+        self.collectionView.registerCellNib(FootballCell.self)
     }
     
     func bindViewModel() {
