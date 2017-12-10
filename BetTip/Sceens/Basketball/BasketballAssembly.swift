@@ -13,6 +13,9 @@ import SwinjectStoryboard
 class BasketballAssembly: Assembly {
 
     func assemble(container: Container) {
+        
+        Container.loggingFunction = nil
+        
         // Services
         container.register(BasketballServiceType.self) { _ in
             BasketballService()

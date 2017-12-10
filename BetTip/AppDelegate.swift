@@ -70,8 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         IQKeyboardManager.sharedManager().enable = true
         UIService.shared.registerForEvents()
-        HockeyApp().setupAuth()
-        HeyzapAds.start(withPublisherID: BetTipKeys().heyzapID)
+        //HockeyApp().setupAuth()
+        //HeyzapAds.start(withPublisherID: BetTipKeys().heyzapID)
     }
 }
 

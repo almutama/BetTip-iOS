@@ -13,6 +13,9 @@ import SwinjectStoryboard
 class UserAssembly: Assembly {
     
     func assemble(container: Container) {
+        
+        Container.loggingFunction = nil
+        
         // Services
         container.register(UserServiceType.self) { _ in
             UserService()

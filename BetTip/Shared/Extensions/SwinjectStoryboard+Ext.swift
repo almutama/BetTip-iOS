@@ -16,6 +16,7 @@ extension SwinjectStoryboard {
     }
     
     class func performSetup() {
+        Container.loggingFunction = nil
         defaultContainer.register(UserServiceType.self) { _ in
             UserService()
             }.inObjectScope(.container)

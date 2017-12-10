@@ -13,6 +13,9 @@ import SwinjectStoryboard
 class CreditAssembly: Assembly {
 
     func assemble(container: Container) {
+        
+        Container.loggingFunction = nil
+        
         // Services
         container.register(CreditServiceType.self) { r in
             CreditService(userService: r.resolve(UserServiceType.self)!)

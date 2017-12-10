@@ -13,6 +13,9 @@ import SwinjectStoryboard
 class LoginAssembly: Assembly {
 
     func assemble(container: Container) {
+        
+        Container.loggingFunction = nil
+        
         // Services
         container.register(LoginServiceType.self) { r in
             LoginService(userService: r.resolve(UserServiceType.self)!)
@@ -31,13 +34,13 @@ class LoginAssembly: Assembly {
         
         // ViewControllers
         container.storyboardInitCompleted(LoginVC.self) { r, c in
-            c.viewModel = r.resolve(LoginVM.self)
+            c.viewModel = r.resolve(LoginVMType.self)
         }
         container.storyboardInitCompleted(RegisterVC.self) { r, c in
-            c.viewModel = r.resolve(RegisterVM.self)
+            c.viewModel = r.resolve(RegisterVMType.self)
         }
         container.storyboardInitCompleted(ForgotPasswordVC.self) { r, c in
-            c.viewModel = r.resolve(ForgotPasswordVM.self)
+            c.viewModel = r.resolve(ForgotPasswordVMType.self)
         }
     }
 }

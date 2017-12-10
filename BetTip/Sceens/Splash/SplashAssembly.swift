@@ -15,6 +15,8 @@ class SplashAssembly: Assembly {
     
     func assemble(container: Container) {
         
+        Container.loggingFunction = nil
+        
         // ViewModels
         container.register(SplashVMType.self) { r in
             SplashVM(authManager: r.resolve(AuthManagerType.self)!)

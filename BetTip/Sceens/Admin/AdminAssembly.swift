@@ -13,6 +13,9 @@ import SwinjectStoryboard
 class AdminAssembly: Assembly {
     
     func assemble(container: Container) {
+        
+        Container.loggingFunction = nil
+        
         // Services
         container.register(AdminServiceType.self) { r in
             AdminService(userService: r.resolve(UserServiceType.self)!,
