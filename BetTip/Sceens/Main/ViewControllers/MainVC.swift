@@ -12,6 +12,7 @@ class MainVC: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBar.tintColor = UIColor.secondary
     }
     
     override func didReceiveMemoryWarning() {

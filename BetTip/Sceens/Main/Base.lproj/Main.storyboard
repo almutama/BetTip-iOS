@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xcj-UQ-VWG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xcj-UQ-VWG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,9 +13,11 @@
         <scene sceneID="T6f-Iu-jyO">
             <objects>
                 <tabBarController id="Xcj-UQ-VWG" customClass="MainVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="AlP-xl-RJr">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="AlP-xl-RJr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="Background"/>
                     </tabBar>
                     <connections>
                         <segue destination="mdy-hr-pdj" kind="relationship" relationship="viewControllers" id="pmH-eX-75g"/>
@@ -47,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="325" y="6"/>
         </scene>
-        <!--Coupon-->
+        <!--Credit-->
         <scene sceneID="yAh-0a-dcm">
             <objects>
-                <viewControllerPlaceholder storyboardName="Coupon" id="XU3-iH-fw3" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Credit" id="XU3-iH-fw3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Premium" image="tab_premium" selectedImage="tabSel_premium" id="Yez-Qd-QCI"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxI-aQ-NCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -77,5 +80,8 @@
         <image name="tab_football" width="22" height="22"/>
         <image name="tab_more" width="22" height="22"/>
         <image name="tab_premium" width="22" height="22"/>
+        <namedColor name="Background">
+            <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
