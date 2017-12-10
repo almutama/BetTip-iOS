@@ -29,9 +29,8 @@ class CreditsVC: BaseViewController {
     
     func prepareUI() {
         let layout = VegaScrollFlowLayout()
-        collectionView.collectionViewLayout = layout
         layout.itemSize = CGSize(width: collectionView.frame.width, height: 100)
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
         self.collectionView.collectionViewLayout =  layout
         self.collectionView.registerCellNib(CreditCell.self)
     }
