@@ -372,7 +372,7 @@
         <!--RegisterVC-->
         <scene sceneID="6dV-f7-Vjw">
             <objects>
-                <viewController id="OYf-WY-X7v" customClass="RegisterVC" sceneMemberID="viewController">
+                <viewController id="OYf-WY-X7v" customClass="RegisterVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRq-Od-YO5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,26 +495,17 @@
                                                 <rect key="frame" x="0.0" y="183" width="375" height="96"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Reqired fields" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7E-v1-NK9" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
-                                                        <rect key="frame" x="16" y="8" width="116.5" height="20.5"/>
+                                                        <rect key="frame" x="16" y="16" width="116.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                        <color key="textColor" name="GeneralText"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byx-In-eeh" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
-                                                        <rect key="frame" x="16" y="36.5" width="343" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" name="GeneralText"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="byx-In-eeh" firstAttribute="leading" secondItem="P3Y-AF-laj" secondAttribute="leading" constant="16" id="8qG-fT-6A1"/>
                                                     <constraint firstAttribute="height" constant="96" id="C2w-fe-VQr"/>
-                                                    <constraint firstItem="b7E-v1-NK9" firstAttribute="top" secondItem="P3Y-AF-laj" secondAttribute="top" constant="8" id="dZ2-fS-y2U"/>
-                                                    <constraint firstItem="byx-In-eeh" firstAttribute="top" secondItem="b7E-v1-NK9" secondAttribute="bottom" constant="8" id="iA1-55-g6g"/>
-                                                    <constraint firstAttribute="trailing" secondItem="byx-In-eeh" secondAttribute="trailing" constant="16" id="vJa-qW-OCY"/>
-                                                    <constraint firstItem="byx-In-eeh" firstAttribute="leading" secondItem="b7E-v1-NK9" secondAttribute="leading" id="xhf-6f-875"/>
+                                                    <constraint firstItem="b7E-v1-NK9" firstAttribute="leading" secondItem="P3Y-AF-laj" secondAttribute="leading" constant="16" id="adq-Av-nql"/>
+                                                    <constraint firstItem="b7E-v1-NK9" firstAttribute="top" secondItem="P3Y-AF-laj" secondAttribute="top" constant="16" id="dZ2-fS-y2U"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -555,10 +546,10 @@
                         <viewLayoutGuide key="safeArea" id="fcw-1t-mLA"/>
                     </view>
                     <connections>
-                        <outlet property="confirmTextField" destination="fUr-ik-W8m" id="IfO-05-46r"/>
-                        <outlet property="mailTextField" destination="vQI-U9-fvp" id="RD1-IZ-Yea"/>
-                        <outlet property="passwordTextField" destination="l09-bf-s11" id="gUM-D6-ZXc"/>
-                        <outlet property="signUpBtn" destination="YE7-oN-QVu" id="wzn-Gf-gk2"/>
+                        <outlet property="confirmTextField" destination="fUr-ik-W8m" id="ayC-as-Vvb"/>
+                        <outlet property="mailTextField" destination="vQI-U9-fvp" id="tL7-56-ZPw"/>
+                        <outlet property="passwordTextField" destination="l09-bf-s11" id="dhT-dF-7CL"/>
+                        <outlet property="signUpBtn" destination="YE7-oN-QVu" id="8va-La-jVK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avm-lU-BSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

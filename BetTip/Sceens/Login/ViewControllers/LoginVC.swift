@@ -40,20 +40,20 @@ class LoginVC: BaseViewController {
             .map({!$0.isEmpty})
             .share(replay: 1)
         
-        let combinedSignupValues = Observable.combineLatest(username, password) { $0 && $1 }
+        let combinedSigninValues = Observable.combineLatest(username, password) { $0 && $1 }
             .share(replay: 1)
         
-        combinedSignupValues
+        combinedSigninValues
             .bind(to: signInBtn.rx.isEnabled)
             .disposed(by: disposeBag)
         
         signInBtn.rx.tap
             .subscribe(onNext: {
-                self.signUp()
+                self.signIn()
         }).disposed(by: disposeBag)
     }
     
-    func signUp() {
+    func signIn() {
         guard let email = self.mailTextField.text, email.isEmpty == false else {
             ShakeViewAnimation.shake(to: self.mailTextField)
             return

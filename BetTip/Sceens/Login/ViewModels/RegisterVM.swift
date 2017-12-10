@@ -17,7 +17,6 @@ class RegisterVM: BaseViewModel, RegisterVMType {
     
     let authProvider: AuthProviderType!
     let disposeBag = DisposeBag()
-    var isLoginSuccess = Variable<Bool>(false)
     
     init(authProvider: AuthProviderType) {
         self.authProvider = authProvider
@@ -78,6 +77,6 @@ class RegisterVM: BaseViewModel, RegisterVMType {
     }
     
     func signupSuccessful (user: UserModel) {
-        self.isLoginSuccess.value = true
+        BGDidLoginEvent(user: user).send()
     }
 }

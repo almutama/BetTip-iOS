@@ -9,6 +9,8 @@
 import ObjectMapper
 import RxSwift
 
+private let logger = Log.createLogger()
+
 protocol SplashVMType {
     func checkAuth(initComplete: @escaping (UserModel?) -> Void)
 }
@@ -27,7 +29,16 @@ class SplashVM: BaseViewModel, SplashVMType {
         self.authManager.restoreState()
             .delaySubscription(0, scheduler: MainScheduler.instance)
             .map { $0.value }
-            .subscribe(onNext: initComplete)
+            .subscribe { event in
+                switch event {
+                case .next(let value):
+                    initComplete(value)
+                case .error(let error):
+                    logger.log(.error, "Error occured when cheking auth: \(error)")
+                case .completed:
+                    logger.log(.debug, "Checking auth completed!")
+                }
+            }
             .disposed(by: disposeBag)
     }
 }

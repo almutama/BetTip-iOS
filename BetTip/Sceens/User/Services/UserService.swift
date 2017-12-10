@@ -61,11 +61,12 @@ class UserService: UserServiceType {
             .exists()
     }
     
-    func userCredit(userId: String) -> Observable<Result<UserCreditModel, FirebaseFetchError>> {
+    func userCredit(userId: String) -> Observable<UserCreditModel> {
         return Database.database().reference()
             .child(Constants.userCredits)
             .child(userId)
             .fetch()
+            .filterError()
     }
     
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>> {
@@ -142,18 +143,14 @@ class UserService: UserServiceType {
     private func setProfileProperties(user: UserModel) -> Observable<UserModel> {
         let role = self.userRole(userId: user.id)
         let disabled = self.userDisabled(userId: user.id)
+        let userCredit = self.userCredit(userId: user.id)
         
-        return self.userCredit(userId: user.id)
-            .filterError()
-            .skip(1)
-            .flatMapLatest { userCredit -> Observable<UserModel> in
-                return Observable.combineLatest(role, disabled) { role, disabled in
-                    var mutableUser = user
-                    mutableUser.role = role
-                    mutableUser.disabled = disabled
-                    mutableUser.userCredit = userCredit
-                    return mutableUser
-                }
+        return Observable.combineLatest(role, disabled) { role, disabled in
+            var mutableUser = user
+            mutableUser.role = role
+            mutableUser.disabled = disabled
+            //mutableUser.userCredit = userCredit
+            return mutableUser
         }
     }
 }

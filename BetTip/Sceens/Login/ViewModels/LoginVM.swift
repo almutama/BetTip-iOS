@@ -73,6 +73,6 @@ class LoginVM: BaseViewModel, LoginVMType {
     }
     
     func loginSuccessful (user: UserModel) {
-        self.isLoginSuccess.value = true
+        BGDidLoginEvent(user: user).send()
     }
 }
