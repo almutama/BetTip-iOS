@@ -18,6 +18,8 @@ protocol UserServiceType {
     func userDisabled(userId: String) -> Observable<Bool>
     func setAccountDisabled(user: UserModel, disabled: Bool) -> Observable<Bool>
     func setAccountRole(user: UserModel, role: Role) -> Observable<Bool>
+    func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>>
+    func setUserCredit(userId: String, numberOfCredits: Int) -> Observable<Result<UserCreditModel, FirebaseStoreError>>
 }
 
 class UserService: UserServiceType {
@@ -61,12 +63,38 @@ class UserService: UserServiceType {
             .exists()
     }
     
-    func userCredit(userId: String) -> Observable<UserCreditModel> {
+    func userCredit(userId: String) -> Observable<Result<UserCreditModel, FirebaseFetchError>> {
         return Database.database().reference()
             .child(Constants.userCredits)
             .child(userId)
-            .fetch()
-            .filterError()
+            .fetch(UserCreditModel.self)
+    }
+    
+    func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>> {
+        return Database.database().reference()
+            .child(Constants.userCredits)
+            .child(userId)
+            .storeObject(UserCreditModel(currentCredit: 0, usedCredit: 0))
+    }
+    
+    func setUserCredit(userId: String, numberOfCredits: Int) -> Observable<Result<UserCreditModel, FirebaseStoreError>> {
+        return self.userCredit(userId: userId)
+            .flatMapLatest { credit -> Observable<Result<UserCreditModel, FirebaseStoreError>> in
+                switch credit {
+                case .success(let userCredit):
+                    guard let numOfCredit = userCredit.currentCredit,
+                        let usedCredit = userCredit.usedCredit else {
+                        return .just(.failure(FirebaseStoreError.serializeError))
+                    }
+                    return Database.database().reference()
+                        .child(Constants.userCredits)
+                        .child(userId)
+                        .storeObject(UserCreditModel(currentCredit: numOfCredit+numberOfCredits,
+                                                     usedCredit: usedCredit))
+                case .failure(let error):
+                    return .just(.failure(FirebaseStoreError.writeDenied(error)))
+                }
+        }
     }
     
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>> {
@@ -143,13 +171,11 @@ class UserService: UserServiceType {
     private func setProfileProperties(user: UserModel) -> Observable<UserModel> {
         let role = self.userRole(userId: user.id)
         let disabled = self.userDisabled(userId: user.id)
-        let userCredit = self.userCredit(userId: user.id)
         
         return Observable.combineLatest(role, disabled) { role, disabled in
             var mutableUser = user
             mutableUser.role = role
             mutableUser.disabled = disabled
-            //mutableUser.userCredit = userCredit
             return mutableUser
         }
     }

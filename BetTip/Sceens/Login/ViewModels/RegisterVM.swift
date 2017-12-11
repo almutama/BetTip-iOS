@@ -16,9 +16,11 @@ protocol RegisterVMType {
 class RegisterVM: BaseViewModel, RegisterVMType {
     
     let authProvider: AuthProviderType!
+    let userService: UserServiceType!
     let disposeBag = DisposeBag()
     
-    init(authProvider: AuthProviderType) {
+    init(authProvider: AuthProviderType, userService: UserServiceType) {
+        self.userService = userService
         self.authProvider = authProvider
         super.init()
     }
@@ -77,6 +79,13 @@ class RegisterVM: BaseViewModel, RegisterVMType {
     }
     
     func signupSuccessful (user: UserModel) {
-        BGDidLoginEvent(user: user).send()
+        self.userService.setUserCreditFirstTime(userId: user.id)
+            .asObservable()
+            .trackActivity(in: loadingIndicator)
+            .observeOn(MainScheduler.instance)
+            .subscribe({_ in
+                BGDidLoginEvent(user: user).send()
+        }).disposed(by: disposeBag)
+        
     }
 }

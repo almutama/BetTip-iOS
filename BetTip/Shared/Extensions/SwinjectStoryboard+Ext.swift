@@ -68,7 +68,8 @@ extension SwinjectStoryboard {
             }
         
         defaultContainer.register(RegisterVM.self) { r in
-            RegisterVM(authProvider: r.resolve(AuthProviderType.self)!)
+            RegisterVM(authProvider: r.resolve(AuthProviderType.self)!,
+                       userService: r.resolve(UserServiceType.self)!)
             }
         
         defaultContainer.register(ForgotPasswordVM.self) { r in

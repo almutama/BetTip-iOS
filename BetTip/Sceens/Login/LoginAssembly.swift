@@ -26,7 +26,8 @@ class LoginAssembly: Assembly {
             LoginVM(authProvider: r.resolve(AuthProviderType.self)!)
         }
         container.register(RegisterVMType.self) { r in
-            RegisterVM(authProvider: r.resolve(AuthProviderType.self)!)
+            RegisterVM(authProvider: r.resolve(AuthProviderType.self)!,
+                       userService: r.resolve(UserServiceType.self)!)
         }
         container.register(ForgotPasswordVMType.self) { r in
             ForgotPasswordVM(authProvider: r.resolve(AuthProviderType.self)!)
