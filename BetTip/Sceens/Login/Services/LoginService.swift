@@ -11,6 +11,8 @@ import Firebase
 import Reactant
 import Result
 
+private let logger = Log.createLogger()
+
 protocol LoginServiceType {
     func login(email: String, password: String) -> Observable<Result<UserModel, FirebaseLoginError>>
     func logout() -> Observable<Result<Void, FirebaseCommonError>>
@@ -94,7 +96,7 @@ class LoginService: LoginServiceType {
                 case .failure(let error):
                     return .just(.failure(error))
                 }
-        }
+            }
     }
     
     func resetPassword(email: String) -> Observable<Result<Void, FirebaseLoginError>> {

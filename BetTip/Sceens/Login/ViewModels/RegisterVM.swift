@@ -83,7 +83,7 @@ class RegisterVM: BaseViewModel, RegisterVMType {
             .asObservable()
             .trackActivity(in: loadingIndicator)
             .observeOn(MainScheduler.instance)
-            .subscribe({_ in
+            .subscribe(onNext: {_ in
                 BGDidLoginEvent(user: user).send()
         }).disposed(by: disposeBag)
         
