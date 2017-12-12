@@ -184,6 +184,7 @@ class UserService: UserServiceType {
                     mutableUser.role = role
                     mutableUser.disabled = disabled
                     mutableUser.userCredit = credit
+                    logger.log(.debug, "user info: \(mutableUser.toJSON())")
                     return mutableUser
                 }
             case .failure(let error):
@@ -192,6 +193,7 @@ class UserService: UserServiceType {
                     var mutableUser = user
                     mutableUser.role = role
                     mutableUser.disabled = disabled
+                    logger.log(.debug, "user info: \(mutableUser.toJSON())")
                     return mutableUser
                 }
             }
