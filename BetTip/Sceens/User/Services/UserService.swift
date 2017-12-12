@@ -12,6 +12,8 @@ import FirebaseDatabase
 import Reactant
 import Result
 
+private let logger = Log.createLogger()
+
 protocol UserServiceType {
     func users() -> Observable<[UserModel]>
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>>
@@ -73,8 +75,9 @@ class UserService: UserServiceType {
     func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>> {
         return Database.database().reference()
             .child(Constants.userCredits)
-            .child(userId)
-            .storeObject(UserCreditModel(currentCredit: 0, usedCredit: 0))
+            .storeWithKey(UserCreditModel(currentCredit: 0, usedCredit: 0), forKey: userId)
+            .mapValue { $0.object }
+            .mapError { error in .writeDenied(error) }
     }
     
     func setUserCredit(userId: String, numberOfCredits: Int) -> Observable<Result<UserCreditModel, FirebaseStoreError>> {
@@ -171,12 +174,27 @@ class UserService: UserServiceType {
     private func setProfileProperties(user: UserModel) -> Observable<UserModel> {
         let role = self.userRole(userId: user.id)
         let disabled = self.userDisabled(userId: user.id)
+        let userCredit = self.userCredit(userId: user.id)
         
-        return Observable.combineLatest(role, disabled) { role, disabled in
-            var mutableUser = user
-            mutableUser.role = role
-            mutableUser.disabled = disabled
-            return mutableUser
+        return userCredit.flatMapLatest { userCredit -> Observable<UserModel> in
+            switch userCredit {
+            case .success(let credit):
+                return Observable.combineLatest(role, disabled) { role, disabled in
+                    var mutableUser = user
+                    mutableUser.role = role
+                    mutableUser.disabled = disabled
+                    mutableUser.userCredit = credit
+                    return mutableUser
+                }
+            case .failure(let error):
+                logger.log(.warning, "Error ocurred while getting user credit: \(error)")
+                return Observable.combineLatest(role, disabled) { role, disabled in
+                    var mutableUser = user
+                    mutableUser.role = role
+                    mutableUser.disabled = disabled
+                    return mutableUser
+                }
+            }
         }
     }
 }
