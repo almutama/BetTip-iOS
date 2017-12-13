@@ -34,10 +34,16 @@ class BasketballCell: UICollectionViewCell, Reusable {
                         self.dateLbl.text = entity.date
                         self.timeLbl.text = entity.time
                         self.betLbl.text = entity.bet
-                        self.oddLbl.text = "\(String(describing: entity.odd))"
                         self.leagueLbl.text = entity.league
                         self.siteLbl.text = entity.site
-                        self.iddaaIdLbl.text = "\(String(describing: entity.iddaaId))"
+                        
+                        if let odd = entity.odd, let iddiaId = entity.iddaaId {
+                            self.oddLbl.text = "\(odd)"
+                            self.iddaaIdLbl.text = "\(iddiaId)"
+                        } else {
+                            self.oddLbl.text = "-"
+                            self.iddaaIdLbl.text = "-"
+                        }
                         
                         if entity.status == 1 {
                             self.statusImg.image = Asset.active.image
@@ -56,6 +62,10 @@ class BasketballCell: UICollectionViewCell, Reusable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        layer.cornerRadius = 10
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.3
+        layer.shadowOffset = CGSize(width: 0, height: 5)
+        layer.masksToBounds = false
     }
 }
