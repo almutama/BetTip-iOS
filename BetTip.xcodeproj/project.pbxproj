@@ -12,6 +12,8 @@
 		B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD61FD1F787007D9503 /* BaseModel.swift */; };
 		B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */; };
 		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
+		B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050639A1FE53E8E004CECEC /* UserCell.swift */; };
+		B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B050639B1FE53E8E004CECEC /* UserCell.xib */; };
 		B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyApp.swift */; };
 		B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */; };
 		B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */; };
@@ -156,6 +158,8 @@
 		B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVC.swift; sourceTree = "<group>"; };
 		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
+		B050639A1FE53E8E004CECEC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		B050639B1FE53E8E004CECEC /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		B0569A091FC0A73300FF34A1 /* HockeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyApp.swift; sourceTree = "<group>"; };
 		B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
@@ -337,6 +341,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B05063991FE53E5F004CECEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B050639A1FE53E8E004CECEC /* UserCell.swift */,
+				B050639B1FE53E8E004CECEC /* UserCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B0569A061FC061FA00FF34A1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +461,7 @@
 				B0569A851FC37D0900FF34A1 /* Services */,
 				B0569A841FC37CFF00FF34A1 /* ViewControllers */,
 				B0569A831FC37CF700FF34A1 /* ViewModels */,
+				B05063991FE53E5F004CECEC /* Views */,
 				B0569A521FC3490C00FF34A1 /* Admin.storyboard */,
 				B0569A871FC37D1F00FF34A1 /* AdminAssembly.swift */,
 			);
@@ -1105,6 +1119,7 @@
 				B0A7AA2B1FCC23D300DC4F62 /* Localizable.strings in Resources */,
 				B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */,
 				B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */,
+				B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */,
 				B0569A7B1FC37C8E00FF34A1 /* CreditCell.xib in Resources */,
 				B0FE4A481FBAD504008F2EE6 /* Onboarding.storyboard in Resources */,
 				B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */,
@@ -1328,6 +1343,7 @@
 				B0569AA51FC621D400FF34A1 /* RegisterVC.swift in Sources */,
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
 				B0569ACA1FCDEAB600FF34A1 /* SplashVC.swift in Sources */,
+				B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */,
 				B0A7AA351FCC58C900DC4F62 /* Localizables.swift in Sources */,
 				B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */,
 				B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */,
