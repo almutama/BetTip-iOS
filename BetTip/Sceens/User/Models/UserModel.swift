@@ -18,7 +18,7 @@ struct UserModel {
     var userCredit: UserCreditModel?
     
     // Firebase User
-    init(user: User) {
+    init(user: User? = nil) {
         self.email = user.email
         self.id = user.uid
     }

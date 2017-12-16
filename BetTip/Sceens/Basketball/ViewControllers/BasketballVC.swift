@@ -51,6 +51,6 @@ extension BasketballVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 90)
+        return CGSize(width: collectionView.frame.size.width, height: 100)
     }
 }

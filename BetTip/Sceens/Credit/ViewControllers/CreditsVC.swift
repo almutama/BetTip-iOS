@@ -29,8 +29,7 @@ class CreditsVC: BaseViewController {
     
     func prepareUI() {
         let layout = VegaScrollFlowLayout()
-        layout.itemSize = CGSize(width: collectionView.frame.width, height: 100)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
+        layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
         self.collectionView.registerCellNib(CreditCell.self)
     }
@@ -51,6 +50,6 @@ extension CreditsVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 90)
+        return CGSize(width: collectionView.frame.size.width, height: 100)
     }
 }
