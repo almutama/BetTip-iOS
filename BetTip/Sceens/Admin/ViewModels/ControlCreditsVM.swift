@@ -8,6 +8,9 @@
 
 import ObjectMapper
 import RxSwift
+import Result
+
+private let logger = Log.createLogger()
 
 protocol ControlCreditsVMType {
     func getCredits() -> Observable<[CreditModel]>
@@ -24,6 +27,60 @@ class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
     }
     
     func getCredits() -> Observable<[CreditModel]> {
-        return self.adminService.getCredits()
+        return adminService.getCredits()
+    }
+    
+    func addCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void) {
+        self.adminService
+            .addCredit(credit: credit)
+            .trackActivity(in: loadingIndicator)
+            .asObservable()
+            .subscribe { event in
+                switch event {
+                case .next(_):
+                    initComplete(true)
+                case .error(let error):
+                    logger.log(.error, "Error occured when adding credit: \(error)")
+                case .completed:
+                    logger.log(.debug, "Checking auth completed!")
+                }
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    func updateCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void) {
+        self.adminService
+            .updateCredit(credit: credit)
+            .trackActivity(in: loadingIndicator)
+            .asObservable()
+            .subscribe { event in
+                switch event {
+                case .next(_):
+                    initComplete(true)
+                case .error(let error):
+                    logger.log(.error, "Error occured when adding credit: \(error)")
+                case .completed:
+                    logger.log(.debug, "Checking auth completed!")
+                }
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    func deleteCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void) {
+        self.adminService
+            .deleteCredit(credit: credit)
+            .trackActivity(in: loadingIndicator)
+            .asObservable()
+            .subscribe { event in
+                switch event {
+                case .next(_):
+                    initComplete(true)
+                case .error(let error):
+                    logger.log(.error, "Error occured when adding credit: \(error)")
+                case .completed:
+                    logger.log(.debug, "Checking auth completed!")
+                }
+            }
+            .disposed(by: disposeBag)
     }
 }

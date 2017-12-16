@@ -42,7 +42,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="Whd-oy-9vU" firstAttribute="trailing" secondItem="eOV-yJ-V86" secondAttribute="trailing" id="3yf-41-i1l"/>
                             <constraint firstItem="jI8-cZ-kZj" firstAttribute="leading" secondItem="eOV-yJ-V86" secondAttribute="leading" constant="50" id="CEn-ub-Buk"/>
@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="300.80000000000001" y="203.29835082458771"/>
         </scene>
-        <!--View Controller-->
+        <!--Control CreditsVC-->
         <scene sceneID="xPb-xI-7mC">
             <objects>
-                <viewController id="IGp-nE-3LZ" sceneMemberID="viewController">
+                <viewController id="IGp-nE-3LZ" customClass="ControlCreditsVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nAV-fM-Cla">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,48 +102,70 @@
                                     <color key="titleColor" name="GeneralText"/>
                                 </state>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KV1-jk-nl2">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VTZ-zt-EnH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7oP-S1-mkE">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KV1-jk-nl2" firstAttribute="leading" secondItem="nAV-fM-Cla" secondAttribute="leading" id="6zB-l7-C27"/>
+                            <constraint firstItem="NU3-a3-e05" firstAttribute="top" secondItem="VTZ-zt-EnH" secondAttribute="bottom" id="5wA-bm-grn"/>
                             <constraint firstAttribute="trailing" secondItem="NU3-a3-e05" secondAttribute="trailing" id="7TJ-a5-vqr"/>
                             <constraint firstAttribute="bottom" secondItem="NU3-a3-e05" secondAttribute="bottom" id="E7E-WW-B99"/>
-                            <constraint firstAttribute="trailing" secondItem="KV1-jk-nl2" secondAttribute="trailing" id="K8L-X8-cXB"/>
                             <constraint firstItem="NU3-a3-e05" firstAttribute="leading" secondItem="nAV-fM-Cla" secondAttribute="leading" id="SDu-02-L38"/>
-                            <constraint firstItem="KV1-jk-nl2" firstAttribute="top" secondItem="nAV-fM-Cla" secondAttribute="top" id="cYW-bt-rbY"/>
-                            <constraint firstItem="NU3-a3-e05" firstAttribute="top" secondItem="KV1-jk-nl2" secondAttribute="bottom" id="vSD-Tu-ixh"/>
+                            <constraint firstItem="VTZ-zt-EnH" firstAttribute="trailing" secondItem="wYt-kK-Kaf" secondAttribute="trailing" id="bu5-1I-kKy"/>
+                            <constraint firstItem="VTZ-zt-EnH" firstAttribute="leading" secondItem="wYt-kK-Kaf" secondAttribute="leading" id="epe-N4-UbT"/>
+                            <constraint firstItem="VTZ-zt-EnH" firstAttribute="top" secondItem="nAV-fM-Cla" secondAttribute="top" id="smx-M7-fCY"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="wYt-kK-Kaf"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="VTZ-zt-EnH" id="gHQ-ok-Emt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ajg-YC-BVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1976.8" y="-212.29385307346328"/>
         </scene>
-        <!--View Controller-->
+        <!--Control UsersVC-->
         <scene sceneID="ASa-MF-0Li">
             <objects>
-                <viewController id="yDx-J5-z8X" sceneMemberID="viewController">
+                <viewController id="yDx-J5-z8X" customClass="ControlUsersVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f55-br-LNj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0ND-Sj-bqi">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P6a-Ne-jaf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sWN-9B-K19">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0ND-Sj-bqi" firstAttribute="leading" secondItem="f55-br-LNj" secondAttribute="leading" id="YTr-JE-lPF"/>
-                            <constraint firstAttribute="trailing" secondItem="0ND-Sj-bqi" secondAttribute="trailing" id="f3U-dS-AG1"/>
-                            <constraint firstAttribute="bottom" secondItem="0ND-Sj-bqi" secondAttribute="bottom" id="fbY-xf-2nK"/>
-                            <constraint firstItem="0ND-Sj-bqi" firstAttribute="top" secondItem="f55-br-LNj" secondAttribute="top" id="fkb-Lh-hMZ"/>
+                            <constraint firstItem="P6a-Ne-jaf" firstAttribute="bottom" secondItem="1aP-y3-Zkb" secondAttribute="bottom" id="53w-q0-46K"/>
+                            <constraint firstItem="P6a-Ne-jaf" firstAttribute="top" secondItem="f55-br-LNj" secondAttribute="top" id="5wD-qO-5wL"/>
+                            <constraint firstItem="P6a-Ne-jaf" firstAttribute="trailing" secondItem="1aP-y3-Zkb" secondAttribute="trailing" id="srJ-UX-XRB"/>
+                            <constraint firstItem="P6a-Ne-jaf" firstAttribute="leading" secondItem="1aP-y3-Zkb" secondAttribute="leading" id="v1w-ZF-A0d"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="1aP-y3-Zkb"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="P6a-Ne-jaf" id="bMB-Qj-XMi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XX-kr-Gss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,6 +173,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="Background">
+            <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GeneralText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
