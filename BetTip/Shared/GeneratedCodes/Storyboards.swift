@@ -63,6 +63,11 @@ enum StoryboardScene {
 
     static let initialScene = InitialSceneType<UINavigationController>(storyboard: Basketball.self)
   }
+  enum Coupon: StoryboardType {
+    static let storyboardName = "Coupon"
+
+    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Coupon.self)
+  }
   enum Credit: StoryboardType {
     static let storyboardName = "Credit"
 
@@ -88,11 +93,6 @@ enum StoryboardScene {
 
     static let initialScene = InitialSceneType<BetTip.MainVC>(storyboard: Main.self)
   }
-  enum Onboarding: StoryboardType {
-    static let storyboardName = "Onboarding"
-
-    static let initialScene = InitialSceneType<UIViewController>(storyboard: Onboarding.self)
-  }
   enum Splash: StoryboardType {
     static let storyboardName = "Splash"
 
@@ -115,7 +115,9 @@ enum StoryboardSegue {
     case registerSegue
   }
   enum User: String, SegueType {
-    case adminSegue = "AdminSegue"
+    case adminSegue
+    case myCouponDetailSegue
+    case myCouponSegue
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

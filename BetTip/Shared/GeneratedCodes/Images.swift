@@ -46,10 +46,12 @@ struct ColorAsset {
 enum Asset {
   enum TabBar {
     static let tabSelBasketball = ImageAsset(name: "tabSel_basketball")
+    static let tabSelCoupon = ImageAsset(name: "tabSel_coupon")
     static let tabSelFootball = ImageAsset(name: "tabSel_football")
     static let tabSelMore = ImageAsset(name: "tabSel_more")
     static let tabSelPremium = ImageAsset(name: "tabSel_premium")
     static let tabBasketball = ImageAsset(name: "tab_basketball")
+    static let tabCoupon = ImageAsset(name: "tab_coupon")
     static let tabFootball = ImageAsset(name: "tab_football")
     static let tabMore = ImageAsset(name: "tab_more")
     static let tabPremium = ImageAsset(name: "tab_premium")
@@ -67,6 +69,7 @@ enum Asset {
   static let lost = ImageAsset(name: "lost")
   static let matchResult = ImageAsset(name: "match_result")
   static let noAds = ImageAsset(name: "no_ads")
+  static let push = ImageAsset(name: "push")
   static let statsEx = ImageAsset(name: "stats_ex")
   static let twitter = ImageAsset(name: "twitter")
   static let versus = ImageAsset(name: "versus")
@@ -77,10 +80,12 @@ enum Asset {
   ]
   static let allImages: [ImageAsset] = [
     TabBar.tabSelBasketball,
+    TabBar.tabSelCoupon,
     TabBar.tabSelFootball,
     TabBar.tabSelMore,
     TabBar.tabSelPremium,
     TabBar.tabBasketball,
+    TabBar.tabCoupon,
     TabBar.tabFootball,
     TabBar.tabMore,
     TabBar.tabPremium,
@@ -97,6 +102,7 @@ enum Asset {
     lost,
     matchResult,
     noAds,
+    push,
     statsEx,
     twitter,
     versus,
