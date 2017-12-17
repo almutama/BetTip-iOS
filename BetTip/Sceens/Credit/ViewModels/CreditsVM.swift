@@ -8,6 +8,9 @@
 
 import ObjectMapper
 import RxSwift
+import Result
+
+private let logger = Log.createLogger()
 
 protocol CreditsVMType {
     func getCredits() -> Observable<[CreditModel]>

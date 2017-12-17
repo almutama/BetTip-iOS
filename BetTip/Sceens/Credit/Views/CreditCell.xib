@@ -21,36 +21,45 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctP-n1-DvX" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
-                        <rect key="frame" x="20" y="15" width="139.5" height="21"/>
+                        <rect key="frame" x="38" y="15" width="140" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="Secondary"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lg5-Xr-3Rk" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
-                        <rect key="frame" x="238" y="15" width="42" height="21"/>
+                        <rect key="frame" x="248" y="15" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="Secondary"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVO-lh-bZH">
-                        <rect key="frame" x="20" y="49" width="260" height="1"/>
+                        <rect key="frame" x="10" y="49" width="280" height="1"/>
                         <color key="backgroundColor" name="Secondary"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="tJq-Ai-oF8"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabSel_coupon" translatesAutoresizingMaskIntoConstraints="NO" id="GRD-qD-abc">
+                        <rect key="frame" x="10" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="1Bx-EA-c6d"/>
+                            <constraint firstAttribute="height" constant="20" id="PKy-OK-Ypb"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="lg5-Xr-3Rk" secondAttribute="trailing" constant="20" id="0gg-gZ-JCc"/>
+                <constraint firstAttribute="trailing" secondItem="lg5-Xr-3Rk" secondAttribute="trailing" constant="10" id="0gg-gZ-JCc"/>
                 <constraint firstItem="lg5-Xr-3Rk" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="3cI-gc-m9F"/>
-                <constraint firstItem="ctP-n1-DvX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="3uw-Xe-Ypf"/>
-                <constraint firstItem="IVO-lh-bZH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="DNF-NV-XLG"/>
+                <constraint firstItem="GRD-qD-abc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="DFY-NZ-O3O"/>
+                <constraint firstItem="IVO-lh-bZH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="DNF-NV-XLG"/>
                 <constraint firstAttribute="bottom" secondItem="IVO-lh-bZH" secondAttribute="bottom" id="GPZ-3K-8zh"/>
-                <constraint firstAttribute="trailing" secondItem="IVO-lh-bZH" secondAttribute="trailing" constant="20" id="Lat-ng-9Vt"/>
+                <constraint firstAttribute="trailing" secondItem="IVO-lh-bZH" secondAttribute="trailing" constant="10" id="Lat-ng-9Vt"/>
+                <constraint firstItem="GRD-qD-abc" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="QeV-gT-kzK"/>
                 <constraint firstItem="lg5-Xr-3Rk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ctP-n1-DvX" secondAttribute="trailing" constant="20" id="T2q-pc-kkb"/>
                 <constraint firstItem="ctP-n1-DvX" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="gtS-Ge-her"/>
                 <constraint firstItem="lg5-Xr-3Rk" firstAttribute="width" secondItem="ctP-n1-DvX" secondAttribute="width" multiplier="0.3" id="wwH-0y-EKK"/>
+                <constraint firstItem="ctP-n1-DvX" firstAttribute="leading" secondItem="GRD-qD-abc" secondAttribute="trailing" constant="8" id="y3j-PA-pZL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="300" height="50"/>
@@ -62,6 +71,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="tabSel_coupon" width="22" height="22"/>
         <namedColor name="Secondary">
             <color red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

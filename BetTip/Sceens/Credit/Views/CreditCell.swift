@@ -23,6 +23,14 @@ class CreditCell: UICollectionViewCell, Reusable {
                     if let entity = event.element {
                         self.numberOfCreditLbl.text = "\(String(describing: entity.numberOfCredits))"
                         self.priceLbl.text = "\(String(describing: entity.price))"
+                        
+                        if let numberOfCredits = entity.numberOfCredits, let price = entity.price {
+                            self.numberOfCreditLbl.text = "\(numberOfCredits)"
+                            self.priceLbl.text = "\(price) TL"
+                        } else {
+                            self.numberOfCreditLbl.text = "-"
+                            self.priceLbl.text = "-"
+                        }
                     }
                 })
                 .disposed(by: disposeBag)
