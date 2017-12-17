@@ -8,8 +8,11 @@
 
 "Common.TryAgainLater" = "Please try again later.";
 "Common.Loading" = "Loading ..";
+"Common.OK" = "OK";
 "Common.Cancel" = "Cancel";
 "Common.Done" = "Done";
+"Common.Great" = "Great";
+"Common.Error" = "Error Occured";
 
 "Role.User" = "User";
 "Role.Moderator" = "Moderator";
@@ -32,3 +35,10 @@
 "Auth.Error.EmailAlreadyInUse" = "Email already registered.";
 "Auth.Error.SignupTitle" = "Can't register";
 "Auth.Error.LoginTitle" = "Can't log in";
+
+"Credit.Price" = "Price";
+"Credit.NumberOfCredit" = "Number of Credits";
+"Credit.AddCredit" = "Set requiremnt fields.";
+"Credit.Title" = "Credit";
+"Credit.AddSuccess" = "Added a new credit!";
+"Credit.AddError" = "Can't add a new credit!";

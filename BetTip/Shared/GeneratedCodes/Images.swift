@@ -61,6 +61,7 @@ enum Asset {
   static let bahisInterface = ImageAsset(name: "bahis_interface")
   static let basketball = ImageAsset(name: "basketball")
   static let basketballEx = ImageAsset(name: "basketball_ex")
+  static let cross = ImageAsset(name: "cross")
   static let deal = ImageAsset(name: "deal")
   static let football = ImageAsset(name: "football")
   static let footballEx = ImageAsset(name: "football_ex")
@@ -94,6 +95,7 @@ enum Asset {
     bahisInterface,
     basketball,
     basketballEx,
+    cross,
     deal,
     football,
     footballEx,

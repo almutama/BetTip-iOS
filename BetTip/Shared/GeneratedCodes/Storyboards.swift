@@ -115,9 +115,7 @@ enum StoryboardSegue {
     case registerSegue
   }
   enum User: String, SegueType {
-    case adminSegue
     case myCouponDetailSegue
-    case myCouponSegue
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

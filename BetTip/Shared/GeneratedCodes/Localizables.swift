@@ -53,10 +53,31 @@ enum L10n {
     static let cancel = L10n.tr("Localizable", "Common.Cancel")
     /// Done
     static let done = L10n.tr("Localizable", "Common.Done")
+    /// Error Occured
+    static let error = L10n.tr("Localizable", "Common.Error")
+    /// Great
+    static let great = L10n.tr("Localizable", "Common.Great")
     /// Loading ..
     static let loading = L10n.tr("Localizable", "Common.Loading")
+    /// OK
+    static let ok = L10n.tr("Localizable", "Common.OK")
     /// Please try again later.
     static let tryAgainLater = L10n.tr("Localizable", "Common.TryAgainLater")
+  }
+
+  enum Credit {
+    /// Set requiremnt fields.
+    static let addCredit = L10n.tr("Localizable", "Credit.AddCredit")
+    /// Can't add a new credit!
+    static let addError = L10n.tr("Localizable", "Credit.AddError")
+    /// Added a new credit!
+    static let addSuccess = L10n.tr("Localizable", "Credit.AddSuccess")
+    /// Number of Credits
+    static let numberOfCredit = L10n.tr("Localizable", "Credit.NumberOfCredit")
+    /// Price
+    static let price = L10n.tr("Localizable", "Credit.Price")
+    /// Credit
+    static let title = L10n.tr("Localizable", "Credit.Title")
   }
 
   enum Role {
