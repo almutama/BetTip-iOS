@@ -142,6 +142,8 @@
 		B0A7AA3B1FCD7C6800DC4F62 /* UserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */; };
 		B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */; };
 		B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */; };
+		B0BDD7FA1FE69F6D00F3851A /* UIAlertController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */; };
+		B0BDD7FC1FE6CD7700F3851A /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -306,6 +308,8 @@
 		B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
+		B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Rx.swift"; sourceTree = "<group>"; };
+		B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -480,14 +484,15 @@
 		B0569A0B1FC0AFED00FF34A1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */,
 				B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */,
+				B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */,
+				B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */,
 				B0569A141FC0BA1100FF34A1 /* UICollectionView+Ext.swift */,
 				B0569A251FC0CDF300FF34A1 /* UIColor+Ext.swift */,
 				B0569A231FC0CD9C00FF34A1 /* UIImage+Ext.swift */,
 				B0569A211FC0CD4300FF34A1 /* UIScreen+Ext.swift */,
 				B0569A121FC0B9F800FF34A1 /* UITableView+Ext.swift */,
-				B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */,
-				B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -984,6 +989,7 @@
 		B0FE4A371FBAD37B008F2EE6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */,
 				B0569A2C1FC0E49800FF34A1 /* DebugDetector.swift */,
 				B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */,
 				B0569A361FC226A600FF34A1 /* Logger.swift */,
@@ -1384,6 +1390,7 @@
 				B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */,
 				B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */,
 				B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */,
+				B0BDD7FC1FE6CD7700F3851A /* AlertAction.swift in Sources */,
 				B0A7AA261FC8627800DC4F62 /* FirebaseError.swift in Sources */,
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B05063A81FE5A1B3004CECEC /* CouponServices.swift in Sources */,
@@ -1407,6 +1414,7 @@
 				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
+				B0BDD7FA1FE69F6D00F3851A /* UIAlertController+Rx.swift in Sources */,
 				B05063B81FE5CD34004CECEC /* MyCouponDetailVC.swift in Sources */,
 				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
