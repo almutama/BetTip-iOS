@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--UserVC-->
+        <!--FIRSAT BAHİS-->
         <scene sceneID="HvK-br-WAi">
             <objects>
                 <viewController id="a87-DW-yzi" customClass="UserVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,6 +110,9 @@
                                                 <state key="normal" title="My Coupons">
                                                     <color key="titleColor" name="Secondary"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="elF-5L-qba" kind="show" id="KaL-6l-2JR"/>
+                                                </connections>
                                             </button>
                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="push" translatesAutoresizingMaskIntoConstraints="NO" id="gT8-rX-n8N">
                                                 <rect key="frame" x="311.5" y="12" width="15" height="29.5"/>
@@ -132,13 +135,16 @@
                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="push" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-Hm-JTX">
                                                 <rect key="frame" x="311.5" y="12" width="15" height="29.5"/>
                                             </imageView>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeP-4E-zgF">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeP-4E-zgF">
                                                 <rect key="frame" x="8" y="4" width="301.5" height="45.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="Admin">
                                                     <color key="titleColor" red="0.23529411764705882" green="0.83921568627450982" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="PW2-qu-elW" kind="show" id="Wa5-kP-SIA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -166,7 +172,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fc0-WT-LHZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gtY-9g-3qY">
+                    <navigationItem key="navigationItem" title="FIRSAT BAHİS" id="gtY-9g-3qY">
                         <barButtonItem key="rightBarButtonItem" id="m9N-dg-icC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jyQ-yN-8k9">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -178,10 +184,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="PW2-qu-elW" kind="show" identifier="adminSegue" id="fnV-sn-8qY"/>
-                        <segue destination="elF-5L-qba" kind="show" identifier="myCouponSegue" id="y28-T7-WWa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzA-Cx-JlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzH-nF-x2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365.5999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1369" y="139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aOD-nK-pcn">

@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpK-ND-Tjt">
-                        <rect key="frame" x="20" y="49" width="260" height="1"/>
+                        <rect key="frame" x="0.0" y="49" width="300" height="1"/>
                         <color key="backgroundColor" name="Secondary"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="n0J-fP-MGg"/>
@@ -37,8 +37,8 @@
             <constraints>
                 <constraint firstItem="xKm-eJ-Lta" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="3Xr-Kf-skQ"/>
                 <constraint firstItem="xKm-eJ-Lta" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="az5-9c-9PA"/>
-                <constraint firstAttribute="trailing" secondItem="jpK-ND-Tjt" secondAttribute="trailing" constant="20" id="drc-JB-ydK"/>
-                <constraint firstItem="jpK-ND-Tjt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="obp-0o-83x"/>
+                <constraint firstAttribute="trailing" secondItem="jpK-ND-Tjt" secondAttribute="trailing" id="drc-JB-ydK"/>
+                <constraint firstItem="jpK-ND-Tjt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="obp-0o-83x"/>
                 <constraint firstAttribute="bottom" secondItem="jpK-ND-Tjt" secondAttribute="bottom" id="vbD-7F-ufi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

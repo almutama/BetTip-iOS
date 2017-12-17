@@ -30,7 +30,7 @@ class UserVC: BaseViewController {
     }
     
     func prepareUI() {
-        self.title = "FIRSAT BAHİS"
+        self.navigationItem.title = "FIRSAT BAHİS"
     }
 }
 

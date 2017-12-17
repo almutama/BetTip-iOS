@@ -6,4 +6,24 @@
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
+import RxSwift
+
+protocol MyCouponsVMType {
+    func getCredits() -> Observable<[CreditModel]>
+}
+
+class MyCouponsVM: BaseViewModel, MyCouponsVMType {
+    
+    private let creditService: CreditServiceType!
+    private let disposeBag = DisposeBag()
+    
+    init(creditService: CreditServiceType) {
+        self.creditService = creditService
+        super.init()
+    }
+    
+    func getCredits() -> Observable<[CreditModel]> {
+        return creditService.getCredits()
+    }
+}
