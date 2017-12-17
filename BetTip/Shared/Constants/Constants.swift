@@ -32,6 +32,7 @@ struct Constants {
     static let admins = "Admins"
     static let disabledUsers = "DisabledUsers"
     static let credits = "Credits"
+    static let coupons = "Coupons"
     static let userCredits = "UserCredits"
     static let stats = "Stats"
     static let basketball = "\(stats)/Basketball"

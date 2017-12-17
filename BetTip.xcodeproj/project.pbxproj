@@ -14,6 +14,20 @@
 		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
 		B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050639A1FE53E8E004CECEC /* UserCell.swift */; };
 		B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B050639B1FE53E8E004CECEC /* UserCell.xib */; };
+		B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063A51FE5A1A6004CECEC /* CouponModel.swift */; };
+		B05063A81FE5A1B3004CECEC /* CouponServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063A71FE5A1B3004CECEC /* CouponServices.swift */; };
+		B05063AA1FE5A1C5004CECEC /* CouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063A91FE5A1C5004CECEC /* CouponsVC.swift */; };
+		B05063AC1FE5A1DB004CECEC /* CouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063AB1FE5A1DB004CECEC /* CouponsVM.swift */; };
+		B05063AF1FE5A1F5004CECEC /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063AD1FE5A1F5004CECEC /* CouponCell.swift */; };
+		B05063B01FE5A1F5004CECEC /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05063AE1FE5A1F5004CECEC /* CouponCell.xib */; };
+		B05063B21FE5A211004CECEC /* CouponAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063B11FE5A211004CECEC /* CouponAssembly.swift */; };
+		B05063B41FE5A221004CECEC /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05063B31FE5A221004CECEC /* Coupon.storyboard */; };
+		B05063B61FE5CD24004CECEC /* MyCouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063B51FE5CD24004CECEC /* MyCouponsVC.swift */; };
+		B05063B81FE5CD34004CECEC /* MyCouponDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063B71FE5CD34004CECEC /* MyCouponDetailVC.swift */; };
+		B05063BA1FE5CD45004CECEC /* MyCouponDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063B91FE5CD45004CECEC /* MyCouponDetailVM.swift */; };
+		B05063BC1FE5CD54004CECEC /* MyCouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063BB1FE5CD54004CECEC /* MyCouponsVM.swift */; };
+		B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063BE1FE5CDDD004CECEC /* MyCouponCell.swift */; };
+		B05063C11FE5CDDD004CECEC /* MyCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05063BF1FE5CDDD004CECEC /* MyCouponCell.xib */; };
 		B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyApp.swift */; };
 		B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */; };
 		B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */; };
@@ -134,7 +148,6 @@
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
 		B0FE4A441FBAD4EB008F2EE6 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */; };
 		B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */; };
-		B0FE4A481FBAD504008F2EE6 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A471FBAD504008F2EE6 /* Onboarding.storyboard */; };
 		B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A491FBAD518008F2EE6 /* Login.storyboard */; };
 		ECB2F28AAA96B790E1286F06 /* Pods_BetTip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368ECDF0EA2EEC9691508FDF /* Pods_BetTip.framework */; };
 /* End PBXBuildFile section */
@@ -160,6 +173,20 @@
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B050639A1FE53E8E004CECEC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B050639B1FE53E8E004CECEC /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		B05063A51FE5A1A6004CECEC /* CouponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
+		B05063A71FE5A1B3004CECEC /* CouponServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponServices.swift; sourceTree = "<group>"; };
+		B05063A91FE5A1C5004CECEC /* CouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsVC.swift; sourceTree = "<group>"; };
+		B05063AB1FE5A1DB004CECEC /* CouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsVM.swift; sourceTree = "<group>"; };
+		B05063AD1FE5A1F5004CECEC /* CouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
+		B05063AE1FE5A1F5004CECEC /* CouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
+		B05063B11FE5A211004CECEC /* CouponAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAssembly.swift; sourceTree = "<group>"; };
+		B05063B31FE5A221004CECEC /* Coupon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
+		B05063B51FE5CD24004CECEC /* MyCouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponsVC.swift; sourceTree = "<group>"; };
+		B05063B71FE5CD34004CECEC /* MyCouponDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponDetailVC.swift; sourceTree = "<group>"; };
+		B05063B91FE5CD45004CECEC /* MyCouponDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponDetailVM.swift; sourceTree = "<group>"; };
+		B05063BB1FE5CD54004CECEC /* MyCouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponsVM.swift; sourceTree = "<group>"; };
+		B05063BE1FE5CDDD004CECEC /* MyCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponCell.swift; sourceTree = "<group>"; };
+		B05063BF1FE5CDDD004CECEC /* MyCouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCouponCell.xib; sourceTree = "<group>"; };
 		B0569A091FC0A73300FF34A1 /* HockeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyApp.swift; sourceTree = "<group>"; };
 		B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
@@ -286,7 +313,6 @@
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
 		B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Football.storyboard; sourceTree = "<group>"; };
-		B0FE4A471FBAD504008F2EE6 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		B0FE4A491FBAD518008F2EE6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetTipTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4973F39DC4820D359D81752 /* Pods-BetTipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTipTests/Pods-BetTipTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -346,6 +372,70 @@
 			children = (
 				B050639A1FE53E8E004CECEC /* UserCell.swift */,
 				B050639B1FE53E8E004CECEC /* UserCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B050639E1FE5A13F004CECEC /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				B050639F1FE5A147004CECEC /* Models */,
+				B05063A01FE5A153004CECEC /* Services */,
+				B05063A11FE5A15E004CECEC /* ViewControllers */,
+				B05063A21FE5A16C004CECEC /* ViewModels */,
+				B05063A31FE5A174004CECEC /* Views */,
+				B05063B31FE5A221004CECEC /* Coupon.storyboard */,
+				B05063B11FE5A211004CECEC /* CouponAssembly.swift */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		B050639F1FE5A147004CECEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B05063A51FE5A1A6004CECEC /* CouponModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B05063A01FE5A153004CECEC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B05063A71FE5A1B3004CECEC /* CouponServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B05063A11FE5A15E004CECEC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B05063A91FE5A1C5004CECEC /* CouponsVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B05063A21FE5A16C004CECEC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B05063AB1FE5A1DB004CECEC /* CouponsVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B05063A31FE5A174004CECEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B05063AD1FE5A1F5004CECEC /* CouponCell.swift */,
+				B05063AE1FE5A1F5004CECEC /* CouponCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B05063BD1FE5CDB4004CECEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B05063BE1FE5CDDD004CECEC /* MyCouponCell.swift */,
+				B05063BF1FE5CDDD004CECEC /* MyCouponCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -817,6 +907,8 @@
 		B0A7AA3D1FCE8D2400DC4F62 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B05063B71FE5CD34004CECEC /* MyCouponDetailVC.swift */,
+				B05063B51FE5CD24004CECEC /* MyCouponsVC.swift */,
 				B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */,
 			);
 			path = ViewControllers;
@@ -825,6 +917,8 @@
 		B0A7AA3E1FCE8D2F00DC4F62 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B05063B91FE5CD45004CECEC /* MyCouponDetailVM.swift */,
+				B05063BB1FE5CD54004CECEC /* MyCouponsVM.swift */,
 				B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */,
 			);
 			path = ViewModels;
@@ -850,11 +944,11 @@
 			children = (
 				B0569A511FC348F400FF34A1 /* Admin */,
 				B0569A551FC35F5A00FF34A1 /* Basketball */,
+				B050639E1FE5A13F004CECEC /* Coupon */,
 				B0569A581FC3744E00FF34A1 /* Credit */,
 				B0FE4A411FBAD44D008F2EE6 /* Football */,
 				B0FE4A3E1FBAD401008F2EE6 /* Login */,
 				B0A8E6741FA7B0BF001A8BBA /* Main */,
-				B0FE4A3F1FBAD406008F2EE6 /* Onboarding */,
 				B0569AC71FCDEA8900FF34A1 /* Splash */,
 				B0FE4A421FBAD467008F2EE6 /* User */,
 			);
@@ -968,14 +1062,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		B0FE4A3F1FBAD406008F2EE6 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				B0FE4A471FBAD504008F2EE6 /* Onboarding.storyboard */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		B0FE4A411FBAD44D008F2EE6 /* Football */ = {
 			isa = PBXGroup;
 			children = (
@@ -997,6 +1083,7 @@
 				B0A7AA221FC85A6B00DC4F62 /* Services */,
 				B0A7AA3D1FCE8D2400DC4F62 /* ViewControllers */,
 				B0A7AA3E1FCE8D2F00DC4F62 /* ViewModels */,
+				B05063BD1FE5CDB4004CECEC /* Views */,
 				B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */,
 				B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */,
 			);
@@ -1113,15 +1200,17 @@
 				B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */,
 				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
 				B0569A651FC37A9200FF34A1 /* BasketballCell.xib in Resources */,
+				B05063B41FE5A221004CECEC /* Coupon.storyboard in Resources */,
 				B0569AF41FCF3DA100FF34A1 /* FootballCell.xib in Resources */,
 				B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */,
 				B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */,
+				B05063B01FE5A1F5004CECEC /* CouponCell.xib in Resources */,
 				B0A7AA2B1FCC23D300DC4F62 /* Localizable.strings in Resources */,
 				B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */,
 				B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */,
 				B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */,
 				B0569A7B1FC37C8E00FF34A1 /* CreditCell.xib in Resources */,
-				B0FE4A481FBAD504008F2EE6 /* Onboarding.storyboard in Resources */,
+				B05063C11FE5CDDD004CECEC /* MyCouponCell.xib in Resources */,
 				B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1277,10 +1366,12 @@
 			files = (
 				B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */,
 				B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */,
+				B05063B61FE5CD24004CECEC /* MyCouponsVC.swift in Sources */,
 				B0569A6B1FC37AFD00FF34A1 /* BasketballModel.swift in Sources */,
 				B0569A991FC6216400FF34A1 /* LoginModel.swift in Sources */,
 				B0569AC21FCB64B100FF34A1 /* ProgressHUD.swift in Sources */,
 				B0569AA11FC621BC00FF34A1 /* LoginVC.swift in Sources */,
+				B05063AA1FE5A1C5004CECEC /* CouponsVC.swift in Sources */,
 				B0569A241FC0CD9C00FF34A1 /* UIImage+Ext.swift in Sources */,
 				B0569AD61FCDF6BD00FF34A1 /* BGDidLoginEvent.swift in Sources */,
 				B0569AD81FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift in Sources */,
@@ -1312,8 +1403,10 @@
 				B0569A6D1FC37B2600FF34A1 /* BasketballAssembly.swift in Sources */,
 				B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */,
 				B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */,
+				B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */,
 				B0A7AA261FC8627800DC4F62 /* FirebaseError.swift in Sources */,
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
+				B05063A81FE5A1B3004CECEC /* CouponServices.swift in Sources */,
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
 				B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */,
@@ -1329,13 +1422,16 @@
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
 				B0569ACD1FCDED7C00FF34A1 /* SplashVM.swift in Sources */,
 				B0569AF01FCF3D8C00FF34A1 /* FootballVM.swift in Sources */,
+				B05063BA1FE5CD45004CECEC /* MyCouponDetailVM.swift in Sources */,
 				B0569A771FC37C8100FF34A1 /* CreditServices.swift in Sources */,
 				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
+				B05063B81FE5CD34004CECEC /* MyCouponDetailVC.swift in Sources */,
 				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
 				B0A281A41FD59ADF00B7E892 /* UserCreditModel.swift in Sources */,
+				B05063AF1FE5A1F5004CECEC /* CouponCell.swift in Sources */,
 				B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */,
 				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CreditsVC.swift in Sources */,
@@ -1348,6 +1444,7 @@
 				B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */,
 				B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */,
 				B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */,
+				B05063B21FE5A211004CECEC /* CouponAssembly.swift in Sources */,
 				B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */,
 				B0569A151FC0BA1100FF34A1 /* UICollectionView+Ext.swift in Sources */,
 				B0569AAA1FC6221200FF34A1 /* LoginVM.swift in Sources */,
@@ -1356,6 +1453,7 @@
 				B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */,
 				B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */,
 				B0569ACF1FCDEDAD00FF34A1 /* SplashAssembly.swift in Sources */,
+				B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */,
 				B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */,
 				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
 				B0569A311FC0E5E000FF34A1 /* ColorSheet.swift in Sources */,
@@ -1379,11 +1477,13 @@
 				B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */,
 				B0569A611FC37A6700FF34A1 /* BasketballServices.swift in Sources */,
 				B0569A671FC37AA900FF34A1 /* BasketballVC.swift in Sources */,
+				B05063AC1FE5A1DB004CECEC /* CouponsVM.swift in Sources */,
 				B0569A2D1FC0E49800FF34A1 /* DebugDetector.swift in Sources */,
 				B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */,
 				B0569A7A1FC37C8E00FF34A1 /* CreditCell.swift in Sources */,
 				B0569A961FC6214400FF34A1 /* LoginAssembly.swift in Sources */,
 				B06BE0331FD73CCD00BA8EC8 /* ControlUsersVC.swift in Sources */,
+				B05063BC1FE5CD54004CECEC /* MyCouponsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
