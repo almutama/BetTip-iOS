@@ -8,6 +8,11 @@ import Foundation
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 enum L10n {
 
+  enum Applepay {
+    /// Please set up Apple-Pay!
+    static let setAccount = L10n.tr("Localizable", "ApplePay.SetAccount")
+  }
+
   enum Auth {
     /// Do you want to log out?
     static let confirmLogout = L10n.tr("Localizable", "Auth.ConfirmLogout")
@@ -63,6 +68,8 @@ enum L10n {
     static let ok = L10n.tr("Localizable", "Common.OK")
     /// Please try again later.
     static let tryAgainLater = L10n.tr("Localizable", "Common.TryAgainLater")
+    /// Warning
+    static let warning = L10n.tr("Localizable", "Common.Warning")
   }
 
   enum Credit {

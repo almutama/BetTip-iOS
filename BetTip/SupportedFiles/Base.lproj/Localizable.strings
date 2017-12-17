@@ -12,6 +12,7 @@
 "Common.Cancel" = "Cancel";
 "Common.Done" = "Done";
 "Common.Great" = "Great";
+"Common.Warning" = "Warning";
 "Common.Error" = "Error Occured";
 
 "Role.User" = "User";
@@ -42,3 +43,5 @@
 "Credit.Title" = "Credit";
 "Credit.AddSuccess" = "Added a new credit!";
 "Credit.AddError" = "Can't add a new credit!";
+
+"ApplePay.SetAccount" = "Please set up Apple-Pay!";

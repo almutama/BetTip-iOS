@@ -46,4 +46,9 @@ struct Constants {
     //UI
     static let baseDesignScreenWidth: CGFloat = 375.0
     static let baseDesignScreenHeight: CGFloat = 667.0
+    
+    //Apple Pay
+    static let merchantId = "merchant.salieri.BetTipAppFree"
+    static let currencyCode = "TRY"
+    static let countryCode = "TR"
 }
