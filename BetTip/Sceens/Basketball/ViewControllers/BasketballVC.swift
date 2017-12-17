@@ -42,7 +42,7 @@ class BasketballVC: BaseViewController {
             .asObservable()
             .bind(to: self.collectionView.rx.items(cellIdentifier: BasketballCell.reuseIdentifier,
                                                    cellType: BasketballCell.self)) { _, data, cell in
-                cell.viewModel = Variable<BasketballModel>(data)
+                cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
     }
 }

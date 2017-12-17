@@ -1,15 +1,15 @@
 //
-//  FootballModel.swift
+//  BasketballModel.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 29.11.2017.
+//  Created by Haydar Karkin on 21.11.2017.
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
 import Foundation
 import ObjectMapper
 
-struct FootballModel: BaseModel {
+struct MatchModel: BaseModel {
     var id: String?
     var type: Int?
     var country: String?
@@ -26,7 +26,7 @@ struct FootballModel: BaseModel {
     var site: String?
 }
 
-extension FootballModel: Mappable {
+extension MatchModel: Mappable {
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {

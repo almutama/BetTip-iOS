@@ -41,7 +41,7 @@ class FootballVC: BaseViewController {
             .asObservable()
             .bind(to: self.collectionView.rx.items(cellIdentifier: FootballCell.reuseIdentifier,
                                                    cellType: FootballCell.self)) { _, data, cell in
-                cell.viewModel = Variable<FootballModel>(data)
+                cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
     }
 }

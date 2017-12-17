@@ -13,13 +13,13 @@ import Reactant
 import Result
 
 protocol BasketballServiceType {
-    func basketballMatches() -> Observable<[BasketballModel]>
+    func basketballMatches() -> Observable<[MatchModel]>
 }
 
 class BasketballService: BasketballServiceType {
 
-    func basketballMatches() -> Observable<[BasketballModel]> {
-        let matches: Observable<[BasketballModel]> = Database.database().reference()
+    func basketballMatches() -> Observable<[MatchModel]> {
+        let matches: Observable<[MatchModel]> = Database.database().reference()
             .child(Constants.matches).queryOrdered(byChild: Constants.status).queryLimited(toLast: 50)
             .fetchArray()
             .recover([])

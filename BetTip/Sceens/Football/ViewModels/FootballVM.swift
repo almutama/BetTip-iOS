@@ -10,7 +10,7 @@ import ObjectMapper
 import RxSwift
 
 protocol FootballVMType {
-    func getFootballMatches() -> Observable<[FootballModel]>
+    func getFootballMatches() -> Observable<[MatchModel]>
 }
 
 class FootballVM: BaseViewModel, FootballVMType {
@@ -23,7 +23,7 @@ class FootballVM: BaseViewModel, FootballVMType {
         super.init()
     }
     
-    func getFootballMatches() -> Observable<[FootballModel]> {
+    func getFootballMatches() -> Observable<[MatchModel]> {
         return self.footballService.footballMatches()
     }
 }

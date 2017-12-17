@@ -24,7 +24,7 @@ class BasketballCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var siteLbl: StyledLabel!
     
     var disposeBag = DisposeBag()
-    var viewModel: Variable<BasketballModel> = Variable<BasketballModel>.init(BasketballModel.init()) {
+    var viewModel: Variable<MatchModel> = Variable<MatchModel>.init(MatchModel.init()) {
         didSet {
             _ = viewModel.asObservable().observeOn(MainScheduler.instance)
                 .subscribe({ [unowned self] (event) in
