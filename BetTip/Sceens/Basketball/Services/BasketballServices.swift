@@ -20,7 +20,10 @@ class BasketballService: BasketballServiceType {
 
     func basketballMatches() -> Observable<[MatchModel]> {
         let matches: Observable<[MatchModel]> = Database.database().reference()
-            .child(Constants.matches).queryOrdered(byChild: Constants.status).queryLimited(toLast: 50)
+            .child(Constants.matches)
+            .queryOrdered(byChild: Constants.type)
+            .queryEqual(toValue: Constants.basketballType)
+            .queryLimited(toLast: Constants.queryLimit)
             .fetchArray()
             .recover([])
         return matches

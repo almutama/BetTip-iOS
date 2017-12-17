@@ -38,6 +38,10 @@ struct Constants {
     static let basketball = "\(stats)/Basketball"
     static let football = "\(stats)/Football"
     static let status = "status"
+    static let type = "type"
+    static let footballType = 1
+    static let basketballType = 2
+    static let queryLimit: UInt = 50
     
     //UI
     static let baseDesignScreenWidth: CGFloat = 375.0
