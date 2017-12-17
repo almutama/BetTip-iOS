@@ -38,8 +38,8 @@ class BaseViewController: UIViewController {
     func makeTheme() {
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20),
-             NSAttributedStringKey.foregroundColor: UIColor.white]
+            [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 16),
+             NSAttributedStringKey.foregroundColor: UIColor.secondary]
         self.navigationController?.navigationBar.barTintColor = UIColor.main
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.isTranslucent = false
