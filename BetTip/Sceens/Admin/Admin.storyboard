@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--AdminVC-->
+        <!--ADMIN-->
         <scene sceneID="Ttn-55-XCm">
             <objects>
                 <viewController id="gbv-Ht-Ylu" customClass="AdminVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,11 +59,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eOV-yJ-V86"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7wj-MY-mMC"/>
+                    <navigationItem key="navigationItem" title="ADMIN" id="uQg-tI-dlA">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Yj4-Rx-nbv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="G9O-wP-Uqr">
+                                <rect key="frame" x="16" y="11" width="16" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cross"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeButton" destination="G9O-wP-Uqr" id="Uiv-zh-jd6"/>
+                        <outlet property="controlCreditsView" destination="wL0-4x-TdY" id="ywS-Ya-uCi"/>
+                        <outlet property="controlUsersView" destination="Whd-oy-9vU" id="vOf-vD-F2i"/>
+                        <outlet property="segmentedControl" destination="jI8-cZ-kZj" id="90x-tI-8t5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXx-md-nMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088.8" y="202.84857571214394"/>
+            <point key="canvasLocation" x="818.39999999999998" y="202.84857571214394"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4fu-6n-FtA">
@@ -81,7 +95,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izB-Nm-NFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300.80000000000001" y="203.29835082458771"/>
+            <point key="canvasLocation" x="-25" y="203"/>
         </scene>
         <!--Control CreditsVC-->
         <scene sceneID="xPb-xI-7mC">
@@ -104,7 +118,7 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VTZ-zt-EnH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="490"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7oP-S1-mkE">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -114,7 +128,7 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="NU3-a3-e05" firstAttribute="top" secondItem="VTZ-zt-EnH" secondAttribute="bottom" id="5wA-bm-grn"/>
                             <constraint firstAttribute="trailing" secondItem="NU3-a3-e05" secondAttribute="trailing" id="7TJ-a5-vqr"/>
@@ -127,12 +141,13 @@
                         <viewLayoutGuide key="safeArea" id="wYt-kK-Kaf"/>
                     </view>
                     <connections>
+                        <outlet property="addCreditButton" destination="NU3-a3-e05" id="SC3-Tt-UHH"/>
                         <outlet property="collectionView" destination="VTZ-zt-EnH" id="gHQ-ok-Emt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ajg-YC-BVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976.8" y="-212.29385307346328"/>
+            <point key="canvasLocation" x="1617" y="-210"/>
         </scene>
         <!--Control UsersVC-->
         <scene sceneID="ASa-MF-0Li">
@@ -144,7 +159,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P6a-Ne-jaf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sWN-9B-K19">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -154,7 +169,7 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="P6a-Ne-jaf" firstAttribute="bottom" secondItem="1aP-y3-Zkb" secondAttribute="bottom" id="53w-q0-46K"/>
                             <constraint firstItem="P6a-Ne-jaf" firstAttribute="top" secondItem="f55-br-LNj" secondAttribute="top" id="5wD-qO-5wL"/>
@@ -169,10 +184,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XX-kr-Gss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976.8" y="471.36431784107947"/>
+            <point key="canvasLocation" x="1617" y="486"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cross" width="16" height="16"/>
+        <namedColor name="Background">
+            <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Background">
             <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

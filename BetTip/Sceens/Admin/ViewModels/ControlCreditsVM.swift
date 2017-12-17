@@ -14,6 +14,9 @@ private let logger = Log.createLogger()
 
 protocol ControlCreditsVMType {
     func getCredits() -> Observable<[CreditModel]>
+    func addCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void)
+    func updateCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void)
+    func deleteCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void)
 }
 
 class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
@@ -37,7 +40,8 @@ class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
             .asObservable()
             .subscribe { event in
                 switch event {
-                case .next(_):
+                case .next(let result):
+                    logger.log(.debug, "addCredit result: \(result)")
                     initComplete(true)
                 case .error(let error):
                     logger.log(.error, "Error occured when adding credit: \(error)")
@@ -55,7 +59,8 @@ class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
             .asObservable()
             .subscribe { event in
                 switch event {
-                case .next(_):
+                case .next(let result):
+                    logger.log(.debug, "addCredit result: \(result)")
                     initComplete(true)
                 case .error(let error):
                     logger.log(.error, "Error occured when adding credit: \(error)")
@@ -73,7 +78,8 @@ class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
             .asObservable()
             .subscribe { event in
                 switch event {
-                case .next(_):
+                case .next(let result):
+                    logger.log(.debug, "addCredit result: \(result)")
                     initComplete(true)
                 case .error(let error):
                     logger.log(.error, "Error occured when adding credit: \(error)")
