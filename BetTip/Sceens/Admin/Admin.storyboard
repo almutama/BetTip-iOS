@@ -93,7 +93,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NU3-a3-e05">
                                 <rect key="frame" x="0.0" y="490" width="375" height="60"/>
-                                <color key="backgroundColor" name="Secondary"/>
+                                <color key="backgroundColor" red="0.23529411764705882" green="0.83921568627450982" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8rX-0y-rWF"/>
                                 </constraints>

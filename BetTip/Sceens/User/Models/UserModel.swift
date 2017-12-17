@@ -19,8 +19,10 @@ struct UserModel {
     
     // Firebase User
     init(user: User? = nil) {
-        self.email = user.email
-        self.id = user.uid
+        if let user = user {
+            self.email = user.email
+            self.id = user.uid
+        }
     }
 }
 

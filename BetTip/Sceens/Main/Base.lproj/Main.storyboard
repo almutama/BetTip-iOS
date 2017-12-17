@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="mdy-hr-pdj" kind="relationship" relationship="viewControllers" id="pmH-eX-75g"/>
                         <segue destination="0TX-dr-aGh" kind="relationship" relationship="viewControllers" id="fGZ-vj-xJB"/>
+                        <segue destination="9yY-m0-rvO" kind="relationship" relationship="viewControllers" id="il7-ga-ZfH"/>
                         <segue destination="XU3-iH-fw3" kind="relationship" relationship="viewControllers" id="HxX-OX-lFA"/>
                         <segue destination="h77-XN-RQG" kind="relationship" relationship="viewControllers" id="D5T-2E-Jt5"/>
                     </connections>
@@ -38,7 +39,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DJ-5n-m48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293" y="-128"/>
+            <point key="canvasLocation" x="295" y="-94"/>
         </scene>
         <!--Basketball-->
         <scene sceneID="zVK-Sx-cc9">
@@ -48,7 +49,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ef5-n1-FLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="6"/>
+            <point key="canvasLocation" x="307" y="-16"/>
         </scene>
         <!--Credit-->
         <scene sceneID="yAh-0a-dcm">
@@ -58,7 +59,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxI-aQ-NCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="112"/>
+            <point key="canvasLocation" x="286" y="58"/>
         </scene>
         <!--User-->
         <scene sceneID="enx-Ok-6py">
@@ -68,7 +69,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEC-lq-qrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="291" y="249"/>
+            <point key="canvasLocation" x="279" y="121"/>
+        </scene>
+        <!--Coupon-->
+        <scene sceneID="oJc-iv-2GR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Coupon" id="9yY-m0-rvO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Coupon" image="tab_coupon" id="f4v-GE-jrg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p4a-d4-QsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="194"/>
         </scene>
     </scenes>
     <resources>
@@ -77,6 +88,7 @@
         <image name="tabSel_more" width="22" height="22"/>
         <image name="tabSel_premium" width="22" height="22"/>
         <image name="tab_basketball" width="22" height="22"/>
+        <image name="tab_coupon" width="22" height="22"/>
         <image name="tab_football" width="22" height="22"/>
         <image name="tab_more" width="22" height="22"/>
         <image name="tab_premium" width="22" height="22"/>

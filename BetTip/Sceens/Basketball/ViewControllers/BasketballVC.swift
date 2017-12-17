@@ -29,6 +29,7 @@ class BasketballVC: BaseViewController {
     }
     
     func prepareUI() {
+        self.navigationItem.title = "FIRSAT BAHİS"
         let layout = VegaScrollFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout

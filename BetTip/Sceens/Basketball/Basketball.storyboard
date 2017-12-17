@@ -38,14 +38,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MVH-GR-ehW"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jJR-t9-u8X"/>
+                    <navigationItem key="navigationItem" id="jJR-t9-u8X">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="5Pe-xw-uNG" id="Bnz-5X-kVk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgm-jS-ppZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165" y="72"/>
+            <point key="canvasLocation" x="164" y="71.514242878560722"/>
         </scene>
         <!--Baskeball-->
         <scene sceneID="gpN-Mo-sw9">
