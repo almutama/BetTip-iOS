@@ -13,6 +13,7 @@
 "Common.Done" = "Done";
 "Common.Great" = "Great";
 "Common.Warning" = "Warning";
+"Common.Success" = "Success";
 "Common.Error" = "Error Occured";
 
 "Role.User" = "User";

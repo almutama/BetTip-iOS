@@ -34,7 +34,8 @@ class UserAssembly: Assembly {
         
         // ViewModels
         container.register( UserVM.self) { r in
-            UserVM(authStore: r.resolve(AuthStoreType.self)!)
+            UserVM(authStore: r.resolve(AuthStoreType.self)!,
+                   authManager: r.resolve(AuthManagerType.self)!)
         }
         
         // ViewControllers

@@ -174,16 +174,20 @@
                     </view>
                     <navigationItem key="navigationItem" title="FIRSAT BAHİS" id="gtY-9g-3qY">
                         <barButtonItem key="rightBarButtonItem" id="m9N-dg-icC">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jyQ-yN-8k9">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jyQ-yN-8k9" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="299" y="7" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="backgroundColor" name="Secondary"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" name="GeneralText"/>
                                 </state>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="logoutButton" destination="jyQ-yN-8k9" id="3c7-EJ-LWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzA-Cx-JlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,6 +301,12 @@
         </namedColor>
         <namedColor name="GeneralText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="GeneralText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Secondary">
             <color red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -81,7 +81,8 @@ extension SwinjectStoryboard {
             }
         
         defaultContainer.register(UserVM.self) { r in
-            UserVM(authStore: r.resolve(AuthStoreType.self)!)
+            UserVM(authStore: r.resolve(AuthStoreType.self)!,
+                   authManager: r.resolve(AuthManagerType.self)!)
             }
         
         defaultContainer.storyboardInitCompleted(BasketballVC.self) {r, c in

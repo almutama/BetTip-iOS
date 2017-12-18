@@ -66,6 +66,8 @@ enum L10n {
     static let loading = L10n.tr("Localizable", "Common.Loading")
     /// OK
     static let ok = L10n.tr("Localizable", "Common.OK")
+    /// Success
+    static let success = L10n.tr("Localizable", "Common.Success")
     /// Please try again later.
     static let tryAgainLater = L10n.tr("Localizable", "Common.TryAgainLater")
     /// Warning
