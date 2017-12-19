@@ -18,14 +18,19 @@ class UserVM: BaseViewModel {
     var userModel = Variable<UserModel?>(nil)
     let disposeBag = DisposeBag()
     
-    init(authStore: AuthStoreType, authManager: AuthManagerType) {
+    init(authStore: AuthStoreType,
+         authManager: AuthManagerType) {
         self.authStore = authStore
         self.authManager = authManager
     }
     
-    func getUser() {
-        self.userModel.value = self.authStore.storedProfile()
+    func getUser() -> Observable<UserModel?> {
+        return Observable.create { observer in
+            observer.onNext(self.authStore.storedProfile())
+            return Disposables.create()
+        }
     }
+    
     func logout(initComplete: @escaping (Bool) -> Void) {
         self.authManager.logout()
             .delaySubscription(0, scheduler: MainScheduler.instance)

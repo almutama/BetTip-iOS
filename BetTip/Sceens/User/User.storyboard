@@ -34,7 +34,7 @@
                                                 <color key="textColor" name="GeneralText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="example@mail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="rI1-lX-suI" userLabel="current label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="example@mail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="rI1-lX-suI" userLabel="current label" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                 <rect key="frame" x="118" y="16" width="216.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" name="GeneralText"/>
@@ -61,7 +61,7 @@
                                                 <color key="textColor" name="GeneralText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRn-ax-peE" userLabel="current label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRn-ax-peE" userLabel="current label" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                 <rect key="frame" x="153" y="16.5" width="12" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" name="GeneralText"/>
@@ -87,7 +87,7 @@
                                                 <color key="textColor" name="GeneralText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkX-uX-hfE" userLabel="current label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkX-uX-hfE" userLabel="current label" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                 <rect key="frame" x="133" y="16" width="12" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" name="GeneralText"/>
@@ -186,7 +186,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="currentCreditLbl" destination="HRn-ax-peE" id="KQI-ai-AWb"/>
                         <outlet property="logoutButton" destination="jyQ-yN-8k9" id="3c7-EJ-LWb"/>
+                        <outlet property="mailLbl" destination="rI1-lX-suI" id="gtn-o9-jZ4"/>
+                        <outlet property="usedCreditLbl" destination="QkX-uX-hfE" id="e4w-c5-18Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzA-Cx-JlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

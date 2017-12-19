@@ -18,6 +18,7 @@ protocol UserServiceType {
     func users() -> Observable<[UserModel]>
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>>
     func userDisabled(userId: String) -> Observable<Bool>
+    func userCredit(userId: String) -> Observable<Result<UserCreditModel, FirebaseFetchError>>
     func setAccountDisabled(user: UserModel, disabled: Bool) -> Observable<Bool>
     func setAccountRole(user: UserModel, role: Role) -> Observable<Bool>
     func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>>

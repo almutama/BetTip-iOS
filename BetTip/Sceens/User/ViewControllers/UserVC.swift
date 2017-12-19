@@ -15,9 +15,13 @@ class UserVC: BaseViewController {
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var logoutButton: StyledButton!
+    @IBOutlet weak var mailLbl: StyledLabel!
+    @IBOutlet weak var currentCreditLbl: StyledLabel!
+    @IBOutlet weak var usedCreditLbl: StyledLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareUI()
         self.bindViewModel()
     }
     
@@ -27,9 +31,13 @@ class UserVC: BaseViewController {
     
     func bindViewModel() {
         self.viewModel.getUser()
-        self.viewModel.userModel.asObservable().subscribe(onNext: {[weak self] (_) in
-            self?.prepareUI()
-        }).disposed(by: self.disposeBag)
+            .trackActivity(in: loadingIndicator)
+            .asObservable()
+            .subscribe(onNext: {[weak self] user in
+                if let profile = user, let mail = profile.email {
+                    self?.mailLbl.text = mail
+                }
+            }).disposed(by: self.disposeBag)
         
         self.logoutButton.rx.tap
             .flatMap { [unowned self] in
