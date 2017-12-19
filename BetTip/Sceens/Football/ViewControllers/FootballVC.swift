@@ -36,12 +36,11 @@ class FootballVC: BaseViewController {
     }
     
     func bindViewModel() {
-        self.viewModel
-            .getFootballMatches()
+        self.viewModel.getFootballMatches()
             .asObservable()
             .bind(to: self.collectionView.rx.items(cellIdentifier: FootballCell.reuseIdentifier,
-                                                   cellType: FootballCell.self)) { _, data, cell in
-                cell.viewModel = Variable<MatchModel>(data)
+                                                              cellType: FootballCell.self)) { _, data, cell in
+                                                                cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
     }
 }
