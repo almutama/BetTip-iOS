@@ -76,13 +76,13 @@ extension ActivityIndicatorView: ProgressHUDDelegate {
 
 let loadingIndicator: ActivityIndicator<String> = {
     let activityIndicator = ActivityIndicator<String>()
-    let hud = ActivityIndicatorView.sharedInstance
+    let activityData = ActivityData(size: nil, message: nil, type: .ballSpinFadeLoader, color: UIColor.secondary, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil)
     
     activityIndicator.asDriver().drive(onNext: { loading, _ in
         if loading {
-             _ = hud.show()
-        } else if !loading {
-             hud.hide()
+             NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+        } else {
+             NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
         }
     }).disposed(by: activityIndicator.disposeBag)
     
