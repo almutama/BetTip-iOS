@@ -31,12 +31,25 @@ class UserVC: BaseViewController {
     
     func bindViewModel() {
         self.viewModel.getUser()
-            .trackActivity(in: loadingIndicator)
             .asObservable()
             .subscribe(onNext: {[weak self] user in
-                if let profile = user, let mail = profile.email {
-                    self?.mailLbl.text = mail
+                guard let profile = user,
+                    let mail = profile.email else {
+                        self?.mailLbl.text = "-"
+                        self?.usedCreditLbl.text = "-"
+                        self?.currentCreditLbl.text = "-"
+                        return
                 }
+                self?.mailLbl.text = mail
+                guard let credit = profile.userCredit,
+                    let usedCredit = credit.usedCredit,
+                    let currentCredit = credit.currentCredit else {
+                        self?.usedCreditLbl.text = "-"
+                        self?.currentCreditLbl.text = "-"
+                        return
+                }
+                self?.usedCreditLbl.text = "\(usedCredit)"
+                self?.currentCreditLbl.text = "\(currentCredit)"
             }).disposed(by: self.disposeBag)
         
         self.logoutButton.rx.tap

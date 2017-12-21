@@ -24,11 +24,8 @@ class UserVM: BaseViewModel {
         self.authManager = authManager
     }
     
-    func getUser() -> Observable<UserModel?> {
-        return Observable.create { observer in
-            observer.onNext(self.authStore.storedProfile())
-            return Disposables.create()
-        }
+    func getUser() -> Variable<UserModel?> {
+        return UserEventService.shared.user
     }
     
     func logout(initComplete: @escaping (Bool) -> Void) {
@@ -38,7 +35,7 @@ class UserVM: BaseViewModel {
             .subscribe { event in
                 switch event {
                 case .next(let value):
-                    logger.log(.debug, "Success when logout: \(String(describing: value))")
+                    logger.log(.info, "Success when logout: \(String(describing: value))")
                     initComplete(true)
                 case .error(let error):
                     logger.log(.error, "Error occured when logout: \(error)")

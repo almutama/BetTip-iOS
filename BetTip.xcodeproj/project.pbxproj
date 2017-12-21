@@ -144,6 +144,7 @@
 		B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */; };
 		B0BDD7FA1FE69F6D00F3851A /* UIAlertController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */; };
 		B0BDD7FC1FE6CD7700F3851A /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */; };
+		B0BDD7FF1FEC4CD800F3851A /* UserEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -310,6 +311,7 @@
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
 		B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Rx.swift"; sourceTree = "<group>"; };
 		B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventService.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -959,6 +961,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		B0BDD7FD1FEC4CBA00F3851A /* UserEvents */ = {
+			isa = PBXGroup;
+			children = (
+				B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */,
+			);
+			path = UserEvents;
+			sourceTree = "<group>";
+		};
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -970,8 +980,9 @@
 		B0FE4A331FBAD34A008F2EE6 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A391FC22A3600FF34A1 /* UIEvents */,
 				B0569A381FC22A2C00FF34A1 /* BGEvents */,
+				B0569A391FC22A3600FF34A1 /* UIEvents */,
+				B0BDD7FD1FEC4CBA00F3851A /* UserEvents */,
 				B0569A3A1FC22A4800FF34A1 /* EventBus.swift */,
 			);
 			path = Events;
@@ -1473,6 +1484,7 @@
 				B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */,
 				B0569A7A1FC37C8E00FF34A1 /* CreditCell.swift in Sources */,
 				B0569A961FC6214400FF34A1 /* LoginAssembly.swift in Sources */,
+				B0BDD7FF1FEC4CD800F3851A /* UserEventService.swift in Sources */,
 				B06BE0331FD73CCD00BA8EC8 /* ControlUsersVC.swift in Sources */,
 				B05063BC1FE5CD54004CECEC /* MyCouponsVM.swift in Sources */,
 			);
