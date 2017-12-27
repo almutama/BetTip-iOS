@@ -95,7 +95,6 @@
 		B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABB1FC9894800FF34A1 /* AuthProvider.swift */; };
 		B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABD1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift */; };
 		B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ABF1FCB3FFB00FF34A1 /* ForgotPasswordVM.swift */; };
-		B0569AC21FCB64B100FF34A1 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */; };
 		B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */; };
 		B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC51FCCB12200FF34A1 /* LocalNotificationView.swift */; };
 		B0569ACA1FCDEAB600FF34A1 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AC91FCDEAB600FF34A1 /* SplashVC.swift */; };
@@ -145,6 +144,7 @@
 		B0BDD7FA1FE69F6D00F3851A /* UIAlertController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */; };
 		B0BDD7FC1FE6CD7700F3851A /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */; };
 		B0BDD7FF1FEC4CD800F3851A /* UserEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */; };
+		B0BDD8011FF42A8400F3851A /* ActivityIndicator+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -256,7 +256,6 @@
 		B0569ABB1FC9894800FF34A1 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		B0569ABD1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		B0569ABF1FCB3FFB00FF34A1 /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
-		B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		B0569AC51FCCB12200FF34A1 /* LocalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationView.swift; sourceTree = "<group>"; };
 		B0569AC91FCDEAB600FF34A1 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -312,6 +311,7 @@
 		B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Rx.swift"; sourceTree = "<group>"; };
 		B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventService.swift; sourceTree = "<group>"; };
+		B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+Rx.swift"; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -495,6 +495,7 @@
 				B0569A231FC0CD9C00FF34A1 /* UIImage+Ext.swift */,
 				B0569A211FC0CD4300FF34A1 /* UIScreen+Ext.swift */,
 				B0569A121FC0B9F800FF34A1 /* UITableView+Ext.swift */,
+				B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1013,7 +1014,6 @@
 			isa = PBXGroup;
 			children = (
 				B0569AC31FCB65E400FF34A1 /* ActivityIndicatorView.swift */,
-				B0569AC11FCB64B100FF34A1 /* ProgressHUD.swift */,
 				B0569AC51FCCB12200FF34A1 /* LocalNotificationView.swift */,
 				B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */,
 			);
@@ -1370,7 +1370,6 @@
 				B05063B61FE5CD24004CECEC /* MyCouponsVC.swift in Sources */,
 				B0569A6B1FC37AFD00FF34A1 /* MatchModel.swift in Sources */,
 				B0569A991FC6216400FF34A1 /* LoginModel.swift in Sources */,
-				B0569AC21FCB64B100FF34A1 /* ProgressHUD.swift in Sources */,
 				B0569AA11FC621BC00FF34A1 /* LoginVC.swift in Sources */,
 				B05063AA1FE5A1C5004CECEC /* CouponsVC.swift in Sources */,
 				B0569A241FC0CD9C00FF34A1 /* UIImage+Ext.swift in Sources */,
@@ -1427,6 +1426,7 @@
 				B0569A771FC37C8100FF34A1 /* CreditServices.swift in Sources */,
 				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
+				B0BDD8011FF42A8400F3851A /* ActivityIndicator+Rx.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
 				B0BDD7FA1FE69F6D00F3851A /* UIAlertController+Rx.swift in Sources */,
 				B05063B81FE5CD34004CECEC /* MyCouponDetailVC.swift in Sources */,

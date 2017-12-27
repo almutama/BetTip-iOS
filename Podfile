@@ -37,7 +37,7 @@ def general_pods
   pod 'SwinjectStoryboard'
   pod 'SwiftKeychainWrapper'
   pod 'IQKeyboardManagerSwift'
-  pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'TableView', 'CollectionView', 'Validation', 'StaticMap', 'ActivityIndicator', 'Configuration']
+  pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'Validation', 'StaticMap', 'Configuration']
   
   plugin 'cocoapods-keys', {
       :project => "BetTip",
