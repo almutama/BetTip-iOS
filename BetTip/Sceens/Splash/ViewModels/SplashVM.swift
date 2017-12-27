@@ -28,7 +28,7 @@ class SplashVM: BaseViewModel, SplashVMType {
     func checkAuth(initComplete: @escaping (UserModel?) -> Void) {
         self.authManager.restoreState()
             .delaySubscription(0, scheduler: MainScheduler.instance)
-            .trackActivity(in: loadingIndicator)
+            .trackActivity(loadingIndicator)
             .share(replay: 1)
             .map { $0.value }
             .subscribe { event in

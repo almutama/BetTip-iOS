@@ -14,6 +14,7 @@ class FootballVC: BaseViewController {
     
     var viewModel: FootballVMType!
     private let disposeBag = DisposeBag()
+    private let isLoading = Variable<Bool>(false)
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -36,11 +37,23 @@ class FootballVC: BaseViewController {
     }
     
     func bindViewModel() {
-        self.viewModel.getFootballMatches()
+        self.bindAnimateWith(variable: self.isLoading)
+            .disposed(by: disposeBag)
+        
+        let matches = self.viewModel.getFootballMatches()
             .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: FootballCell.reuseIdentifier,
-                                                              cellType: FootballCell.self)) { _, data, cell in
-                                                                cell.viewModel = Variable<MatchModel>(data)
+            .delaySubscription(0, scheduler: MainScheduler.instance)
+            .trackActivity(loadingIndicator)
+            .share(replay: 1)
+        
+        matches.map { _ in false }.startWith(true)
+            .catchErrorJustReturn(false)
+            .bind(to: self.isLoading)
+            .disposed(by: disposeBag)
+        
+        matches.bind(to: self.collectionView.rx.items(cellIdentifier: FootballCell.reuseIdentifier,
+                                                      cellType: FootballCell.self)) { _, data, cell in
+                                                        cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
     }
 }

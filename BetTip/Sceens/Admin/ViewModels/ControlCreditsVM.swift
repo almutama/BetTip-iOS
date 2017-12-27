@@ -36,7 +36,7 @@ class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
     func addCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void) {
         self.adminService
             .addCredit(credit: credit)
-            .trackActivity(in: loadingIndicator)
+            .trackActivity(loadingIndicator)
             .asObservable()
             .subscribe { event in
                 switch event {
@@ -55,7 +55,7 @@ class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
     func updateCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void) {
         self.adminService
             .updateCredit(credit: credit)
-            .trackActivity(in: loadingIndicator)
+            .trackActivity(loadingIndicator)
             .asObservable()
             .subscribe { event in
                 switch event {
@@ -74,7 +74,7 @@ class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
     func deleteCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void) {
         self.adminService
             .deleteCredit(credit: credit)
-            .trackActivity(in: loadingIndicator)
+            .trackActivity(loadingIndicator)
             .asObservable()
             .subscribe { event in
                 switch event {

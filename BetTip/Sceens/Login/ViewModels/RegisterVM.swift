@@ -34,7 +34,7 @@ class RegisterVM: BaseViewModel, RegisterVMType {
         case .success(let email, let password, _):
             
             let register = authProvider.register(email: email, password: password)
-                .trackActivity(in: loadingIndicator)
+                .trackActivity(loadingIndicator)
                 .share(replay: 1)
             
             register.filterError()
@@ -81,7 +81,7 @@ class RegisterVM: BaseViewModel, RegisterVMType {
     func signupSuccessful (user: UserModel) {
         self.userService.setUserCreditFirstTime(userId: user.id)
             .asObservable()
-            .trackActivity(in: loadingIndicator)
+            .trackActivity(loadingIndicator)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {_ in
                 BGDidLoginEvent(user: user).send()

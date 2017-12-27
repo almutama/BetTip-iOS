@@ -31,7 +31,7 @@ class LoginVM: BaseViewModel, LoginVMType {
         switch validatedCredentials {
         case .success(let email, let password):
             let login = self.authProvider.login(email: email, password: password)
-                .trackActivity(in: loadingIndicator)
+                .trackActivity(loadingIndicator)
                 .share(replay: 1)
             
             login.filterError()

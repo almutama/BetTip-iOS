@@ -17,6 +17,7 @@ class CreditsVC: BaseViewController {
     
     var viewModel: CreditsVMType!
     private let disposeBag = DisposeBag()
+    private let isLoading = Variable<Bool>(false)
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -39,10 +40,21 @@ class CreditsVC: BaseViewController {
     }
     
     func bindViewModel() {
-        self.viewModel
-            .getCredits()
+        self.bindAnimateWith(variable: self.isLoading)
+            .disposed(by: disposeBag)
+        
+        let matches = self.viewModel.getCredits()
             .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: CreditCell.reuseIdentifier,
+            .delaySubscription(0, scheduler: MainScheduler.instance)
+            .trackActivity(loadingIndicator)
+            .share(replay: 1)
+        
+        matches.map { _ in false }.startWith(true)
+            .catchErrorJustReturn(false)
+            .bind(to: self.isLoading)
+            .disposed(by: disposeBag)
+        
+        matches.bind(to: self.collectionView.rx.items(cellIdentifier: CreditCell.reuseIdentifier,
                                                    cellType: CreditCell.self)) { _, data, cell in
                                                     cell.viewModel = Variable<CreditModel>(data)
             }.disposed(by: disposeBag)
