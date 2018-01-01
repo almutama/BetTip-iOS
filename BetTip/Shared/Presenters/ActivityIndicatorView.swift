@@ -11,21 +11,6 @@ import NVActivityIndicatorView
 import RxSwift
 import RxCocoa
 
-let loadingIndicator: ActivityTracker = {
-    let activityIndicator = ActivityTracker()
-    let disposeBag = DisposeBag()
-    
-    activityIndicator.asDriver().drive(onNext: { loading in
-        if !loading {
-            LoadingIndicator.shared.show()
-        } else {
-            LoadingIndicator.shared.hide()
-        }
-    }).disposed(by: disposeBag)
-    
-    return activityIndicator
-}()
-
 class LoadingIndicator {
     
     static let shared = LoadingIndicator()
@@ -63,3 +48,18 @@ extension UIViewController {
             })
     }
 }
+
+let loadingIndicator: ActivityTracker = {
+    let activityIndicator = ActivityTracker()
+    let disposeBag = DisposeBag()
+    
+    activityIndicator.asDriver().drive(onNext: { loading in
+        if !loading {
+            LoadingIndicator.shared.show()
+        } else {
+            LoadingIndicator.shared.hide()
+        }
+    }).disposed(by: disposeBag)
+    
+    return activityIndicator
+}()

@@ -145,6 +145,7 @@
 		B0BDD7FC1FE6CD7700F3851A /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */; };
 		B0BDD7FF1FEC4CD800F3851A /* UserEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */; };
 		B0BDD8011FF42A8400F3851A /* ActivityIndicator+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */; };
+		B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8021FF6D4FE00F3851A /* SheetAction.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -312,6 +313,7 @@
 		B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventService.swift; sourceTree = "<group>"; };
 		B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+Rx.swift"; sourceTree = "<group>"; };
+		B0BDD8021FF6D4FE00F3851A /* SheetAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAction.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -486,6 +488,7 @@
 		B0569A0B1FC0AFED00FF34A1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */,
 				B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */,
 				B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */,
 				B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */,
@@ -495,7 +498,6 @@
 				B0569A231FC0CD9C00FF34A1 /* UIImage+Ext.swift */,
 				B0569A211FC0CD4300FF34A1 /* UIScreen+Ext.swift */,
 				B0569A121FC0B9F800FF34A1 /* UITableView+Ext.swift */,
-				B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1005,6 +1007,7 @@
 				B0569A2C1FC0E49800FF34A1 /* DebugDetector.swift */,
 				B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */,
 				B0569A361FC226A600FF34A1 /* Logger.swift */,
+				B0BDD8021FF6D4FE00F3851A /* SheetAction.swift */,
 				B0A7AA271FCC057900DC4F62 /* Validator.swift */,
 			);
 			path = Utilities;
@@ -1408,6 +1411,7 @@
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B05063A81FE5A1B3004CECEC /* CouponServices.swift in Sources */,
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
+				B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
 				B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */,
 				B0569AB41FC988EB00FF34A1 /* AuthManager.swift in Sources */,
