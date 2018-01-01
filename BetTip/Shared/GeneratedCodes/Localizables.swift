@@ -56,22 +56,35 @@ enum L10n {
   enum Common {
     /// Cancel
     static let cancel = L10n.tr("Localizable", "Common.Cancel")
+    /// Delete
+    static let delete = L10n.tr("Localizable", "Common.Delete")
     /// Done
     static let done = L10n.tr("Localizable", "Common.Done")
     /// Error Occured
     static let error = L10n.tr("Localizable", "Common.Error")
-    /// Great
+    /// Great ☺️
     static let great = L10n.tr("Localizable", "Common.Great")
     /// Loading ..
     static let loading = L10n.tr("Localizable", "Common.Loading")
     /// OK
     static let ok = L10n.tr("Localizable", "Common.OK")
+    /// Sorry 😢
+    static let sorry = L10n.tr("Localizable", "Common.Sorry")
     /// Success
     static let success = L10n.tr("Localizable", "Common.Success")
     /// Please try again later.
     static let tryAgainLater = L10n.tr("Localizable", "Common.TryAgainLater")
+    /// Update
+    static let update = L10n.tr("Localizable", "Common.Update")
     /// Warning
     static let warning = L10n.tr("Localizable", "Common.Warning")
+
+    enum Process {
+      /// Process couldn't be finished.
+      static let error = L10n.tr("Localizable", "Common.Process.Error")
+      /// Process has been finished successfully.
+      static let success = L10n.tr("Localizable", "Common.Process.Success")
+    }
   }
 
   enum Credit {

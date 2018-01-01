@@ -11,10 +11,15 @@
 "Common.OK" = "OK";
 "Common.Cancel" = "Cancel";
 "Common.Done" = "Done";
-"Common.Great" = "Great";
+"Common.Great" = "Great ☺️";
+"Common.Delete" = "Delete";
+"Common.Update" = "Update";
 "Common.Warning" = "Warning";
 "Common.Success" = "Success";
 "Common.Error" = "Error Occured";
+"Common.Sorry" = "Sorry 😢";
+"Common.Process.Success" = "Process has been finished successfully.";
+"Common.Process.Error" = "Process couldn't be finished.";
 
 "Role.User" = "User";
 "Role.Moderator" = "Moderator";

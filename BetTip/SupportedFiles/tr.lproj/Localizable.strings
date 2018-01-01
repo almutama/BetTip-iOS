@@ -8,8 +8,18 @@
 
 "Common.TryAgainLater" = "Lütfen tekrar deneyiniz.";
 "Common.Loading" = "Yükleniyor ..";
+"Common.OK" = "Tamam";
 "Common.Cancel" = "İptal";
 "Common.Done" = "Tamam";
+"Common.Great" = "Harika ☺️";
+"Common.Delete" = "Sil";
+"Common.Update" = "Güncelle";
+"Common.Warning" = "Uyarı";
+"Common.Success" = "Başarılı";
+"Common.Error" = "Hata Oluştu";
+"Common.Sorry" = "Üzgünüm 😢";
+"Common.Process.Success" = "İşlem başarıyla sonuçlandı.";
+"Common.Process.Error" = "İşlem tamamlanamadı.";
 
 "Role.User" = "Kullanıcı";
 "Role.Moderator" = "Moderatör";
@@ -32,3 +42,12 @@
 "Auth.Error.EmailAlreadyInUse" = "E-posta adresi halihazırda kullanılmaktadır.";
 "Auth.Error.SignupTitle" = "Üye yapılamıyor.";
 "Auth.Error.LoginTitle" = "Giriş yapılamıyor.";
+
+"Credit.Price" = "Fiyat";
+"Credit.NumberOfCredit" = "Kredi Sayısı";
+"Credit.AddCredit" = "Gerekli alanları doldurun.";
+"Credit.Title" = "Kredi";
+"Credit.AddSuccess" = "Yeni kredi eklendi!";
+"Credit.AddError" = "Yeni kredi eklenemedi!";
+
+"ApplePay.SetAccount" = "Lütfen Apple-Pay hesabınızı tanımlayın!";
