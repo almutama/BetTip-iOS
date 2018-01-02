@@ -46,6 +46,7 @@
 "Credit.Price" = "Fiyat";
 "Credit.NumberOfCredit" = "Kredi Sayısı";
 "Credit.AddCredit" = "Gerekli alanları doldurun.";
+"Credit.UpdateCredit" = "Gerekli alanları güncelleyin.";
 "Credit.Title" = "Kredi";
 "Credit.AddSuccess" = "Yeni kredi eklendi!";
 "Credit.AddError" = "Yeni kredi eklenemedi!";

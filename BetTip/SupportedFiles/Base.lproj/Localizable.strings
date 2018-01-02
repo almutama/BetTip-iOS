@@ -46,6 +46,7 @@
 "Credit.Price" = "Price";
 "Credit.NumberOfCredit" = "Number of Credits";
 "Credit.AddCredit" = "Set requiremnt fields.";
+"Credit.UpdateCredit" = "Update requiremnt fields.";
 "Credit.Title" = "Credit";
 "Credit.AddSuccess" = "Added a new credit!";
 "Credit.AddError" = "Can't add a new credit!";

@@ -100,6 +100,8 @@ enum L10n {
     static let price = L10n.tr("Localizable", "Credit.Price")
     /// Credit
     static let title = L10n.tr("Localizable", "Credit.Title")
+    /// Update requiremnt fields.
+    static let updateCredit = L10n.tr("Localizable", "Credit.UpdateCredit")
   }
 
   enum Role {
