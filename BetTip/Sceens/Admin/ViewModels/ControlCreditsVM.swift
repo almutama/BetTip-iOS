@@ -15,8 +15,8 @@ private let logger = Log.createLogger()
 protocol ControlCreditsVMType {
     func getCredits() -> Observable<[CreditModel]>
     func addCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void)
-    func updateCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void)
-    func deleteCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void)
+    func updateCredit(credit: CreditModel) -> Observable<Bool>
+    func deleteCredit(credit: CreditModel) -> Observable<Bool>
 }
 
 class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
@@ -52,41 +52,19 @@ class ControlCreditsVM: BaseViewModel, ControlCreditsVMType {
             .disposed(by: disposeBag)
     }
     
-    func updateCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void) {
-        self.adminService
+    func updateCredit(credit: CreditModel) -> Observable<Bool> {
+        return self.adminService
             .updateCredit(credit: credit)
             .trackActivity(loadingIndicator)
             .asObservable()
-            .subscribe { event in
-                switch event {
-                case .next(let result):
-                    logger.log(.debug, "addCredit result: \(result)")
-                    initComplete(true)
-                case .error(let error):
-                    logger.log(.error, "Error occured when adding credit: \(error)")
-                case .completed:
-                    logger.log(.debug, "Checking auth completed!")
-                }
-            }
-            .disposed(by: disposeBag)
+            .map { credit in return (credit.value != nil) ? true : false }
+            .catchErrorJustReturn(false)
     }
     
-    func deleteCredit(credit: CreditModel, initComplete: @escaping (Bool?) -> Void) {
-        self.adminService
+    func deleteCredit(credit: CreditModel) -> Observable<Bool> {
+        return self.adminService
             .deleteCredit(credit: credit)
             .trackActivity(loadingIndicator)
             .asObservable()
-            .subscribe { event in
-                switch event {
-                case .next(let result):
-                    logger.log(.debug, "addCredit result: \(result)")
-                    initComplete(true)
-                case .error(let error):
-                    logger.log(.error, "Error occured when adding credit: \(error)")
-                case .completed:
-                    logger.log(.debug, "Checking auth completed!")
-                }
-            }
-            .disposed(by: disposeBag)
     }
 }

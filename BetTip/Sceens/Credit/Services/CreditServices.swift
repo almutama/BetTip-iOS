@@ -16,7 +16,7 @@ protocol CreditServiceType {
     func getCredits() -> Observable<[CreditModel]>
     func addCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
     func updateCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
-    func deleteCredit(credit: CreditModel) -> Observable<Void>
+    func deleteCredit(credit: CreditModel) -> Observable<Bool>
 }
 
 class CreditService: CreditServiceType {
@@ -47,10 +47,9 @@ class CreditService: CreditServiceType {
             .update(credit)
     }
     
-    func deleteCredit(credit: CreditModel) -> Observable<Void> {
+    func deleteCredit(credit: CreditModel) -> Observable<Bool> {
         return Database.database().reference()
             .child(Constants.credits)
-            .delete(credit)
-            .rewrite(with: ())
+            .deleteWithoutFailure(credit)
     }
 }
