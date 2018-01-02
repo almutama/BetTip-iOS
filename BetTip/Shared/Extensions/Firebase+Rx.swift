@@ -137,10 +137,10 @@ extension DatabaseReference {
     }
     
     //TODO: .success condition
-    func delete<T: Mappable>(_ object: T) -> Observable<Result<Void, FirebaseStoreError>> where T: BaseModel {
+    func delete<T: Mappable>(_ object: T) -> Observable<Result<Bool, FirebaseStoreError>> where T: BaseModel {
         return Observable.create { observer in
             guard let key = object.id else {
-                observer.onLast(.success(()))
+                observer.onLast(.success(false))
                 return Disposables.create()
             }
             
@@ -148,7 +148,25 @@ extension DatabaseReference {
                 if let error = error {
                     observer.onLast(.failure(.writeDenied(error)))
                 } else {
-                    observer.onLast(.success(()))
+                    observer.onLast(.success(true))
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func deleteWithoutFailure<T: Mappable>(_ object: T) -> Observable<Bool> where T: BaseModel {
+        return Observable.create { observer in
+            guard let key = object.id else {
+                observer.onLast(false)
+                return Disposables.create()
+            }
+            
+            self.child(key).removeValue { error, _ in
+                if error != nil {
+                    observer.onLast(false)
+                } else {
+                    observer.onLast(true)
                 }
             }
             return Disposables.create()
