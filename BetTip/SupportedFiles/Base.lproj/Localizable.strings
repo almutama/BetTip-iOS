@@ -52,3 +52,7 @@
 "Credit.AddError" = "Can't add a new credit!";
 
 "ApplePay.SetAccount" = "Please set up Apple-Pay!";
+
+"User.Role.Admin" = "Admin";
+"User.Role.Moderator" = "Moderator";
+"User.Role.User" = "User";

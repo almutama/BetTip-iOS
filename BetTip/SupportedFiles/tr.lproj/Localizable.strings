@@ -52,3 +52,7 @@
 "Credit.AddError" = "Yeni kredi eklenemedi!";
 
 "ApplePay.SetAccount" = "Lütfen Apple-Pay hesabınızı tanımlayın!";
+
+"User.Role.Admin" = "Yönetici";
+"User.Role.Moderator" = "Moderatör";
+"User.Role.User" = "Kullanıcı";

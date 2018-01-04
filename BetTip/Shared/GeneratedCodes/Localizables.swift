@@ -112,6 +112,18 @@ enum L10n {
     /// User
     static let user = L10n.tr("Localizable", "Role.User")
   }
+
+  enum User {
+
+    enum Role {
+      /// Admin
+      static let admin = L10n.tr("Localizable", "User.Role.Admin")
+      /// Moderator
+      static let moderator = L10n.tr("Localizable", "User.Role.Moderator")
+      /// User
+      static let user = L10n.tr("Localizable", "User.Role.User")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 
