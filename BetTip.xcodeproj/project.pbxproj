@@ -146,6 +146,8 @@
 		B0BDD7FF1FEC4CD800F3851A /* UserEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */; };
 		B0BDD8011FF42A8400F3851A /* ActivityIndicator+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */; };
 		B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8021FF6D4FE00F3851A /* SheetAction.swift */; };
+		B0BDD8061FFECAF600F3851A /* UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8051FFECAF600F3851A /* UserAction.swift */; };
+		B0BDD8081FFED0A800F3851A /* UserRoleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8071FFED0A800F3851A /* UserRoleAction.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -314,6 +316,8 @@
 		B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventService.swift; sourceTree = "<group>"; };
 		B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+Rx.swift"; sourceTree = "<group>"; };
 		B0BDD8021FF6D4FE00F3851A /* SheetAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAction.swift; sourceTree = "<group>"; };
+		B0BDD8051FFECAF600F3851A /* UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAction.swift; sourceTree = "<group>"; };
+		B0BDD8071FFED0A800F3851A /* UserRoleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleAction.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -557,6 +561,7 @@
 		B0569A511FC348F400FF34A1 /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				B0BDD8091FFED0B600F3851A /* Models */,
 				B0569A851FC37D0900FF34A1 /* Services */,
 				B0569A841FC37CFF00FF34A1 /* ViewControllers */,
 				B0569A831FC37CF700FF34A1 /* ViewModels */,
@@ -972,6 +977,24 @@
 			path = UserEvents;
 			sourceTree = "<group>";
 		};
+		B0BDD8041FFECAD900F3851A /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */,
+				B0BDD8021FF6D4FE00F3851A /* SheetAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		B0BDD8091FFED0B600F3851A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0BDD8051FFECAF600F3851A /* UserAction.swift */,
+				B0BDD8071FFED0A800F3851A /* UserRoleAction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1003,11 +1026,10 @@
 		B0FE4A371FBAD37B008F2EE6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */,
+				B0BDD8041FFECAD900F3851A /* Actions */,
 				B0569A2C1FC0E49800FF34A1 /* DebugDetector.swift */,
 				B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */,
 				B0569A361FC226A600FF34A1 /* Logger.swift */,
-				B0BDD8021FF6D4FE00F3851A /* SheetAction.swift */,
 				B0A7AA271FCC057900DC4F62 /* Validator.swift */,
 			);
 			path = Utilities;
@@ -1394,6 +1416,7 @@
 				B0569A8E1FC37D3F00FF34A1 /* AdminVC.swift in Sources */,
 				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */,
+				B0BDD8081FFED0A800F3851A /* UserRoleAction.swift in Sources */,
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
 				B0569A7D1FC37C9C00FF34A1 /* CreditsVM.swift in Sources */,
 				B0569A9E1FC6219000FF34A1 /* LoginService.swift in Sources */,
@@ -1476,6 +1499,7 @@
 				B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */,
 				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
 				B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */,
+				B0BDD8061FFECAF600F3851A /* UserAction.swift in Sources */,
 				B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */,
 				B0569AEC1FCF3D7600FF34A1 /* FootballServices.swift in Sources */,
 				B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */,
