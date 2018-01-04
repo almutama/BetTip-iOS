@@ -11,6 +11,8 @@ import RxSwift
 
 protocol ControlUsersVMType {
     func getUsers() -> Observable<[UserModel]>
+    func changeUserRole(user: UserModel, role: Role) -> Observable<Bool>
+    func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool>
 }
 
 class ControlUsersVM: BaseViewModel, ControlUsersVMType {
@@ -25,5 +27,21 @@ class ControlUsersVM: BaseViewModel, ControlUsersVMType {
     
     func getUsers() -> Observable<[UserModel]> {
         return self.adminService.getUsers()
+    }
+    
+    func changeUserRole(user: UserModel, role: Role) -> Observable<Bool> {
+        return self.adminService
+            .changeUserRole(user: user, role: role)
+            .trackActivity(loadingIndicator)
+            .map { value in return value }
+            .catchErrorJustReturn(false)
+    }
+    
+    func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool> {
+        return self.adminService
+            .disableUser(user: user, disabled: disabled)
+            .trackActivity(loadingIndicator)
+            .map { value in return value }
+            .catchErrorJustReturn(false)
     }
 }

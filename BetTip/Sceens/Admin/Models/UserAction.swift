@@ -10,8 +10,8 @@ import Foundation
 
 enum UserAction {
     case cancel
-    case update
-    case delete
+    case userDisabled
+    case userRole
 }
 
 extension UserAction: AlertActionType {
@@ -20,9 +20,9 @@ extension UserAction: AlertActionType {
         switch self {
         case .cancel:
             return L10n.Common.cancel
-        case .update:
+        case .userDisabled:
             return L10n.Common.update
-        case .delete:
+        case .userRole:
             return L10n.Common.delete
         }
     }
@@ -31,9 +31,7 @@ extension UserAction: AlertActionType {
         switch self {
         case .cancel:
             return .cancel
-        case .update:
-            return .default
-        case .delete:
+        case .userDisabled, .userRole:
             return .default
         }
     }
