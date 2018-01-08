@@ -13,6 +13,8 @@ import RxSwift
 class UserCell: UICollectionViewCell, Reusable {
     
     @IBOutlet weak var userMailLbl: StyledLabel!
+    @IBOutlet weak var userRoleLbl: StyledLabel!
+    @IBOutlet weak var disableView: UIView!
     
     var disposeBag = DisposeBag()
     var viewModel: Variable<UserModel> = Variable<UserModel>.init(UserModel.init()) {
@@ -21,6 +23,8 @@ class UserCell: UICollectionViewCell, Reusable {
                 .subscribe({ [unowned self] (event) in
                     if let entity = event.element {
                         self.userMailLbl.text = entity.email
+                        self.userRoleLbl.text = entity.role.localizedName
+                        self.disableView.isHidden = entity.disabled ? false : true
                     }
                 })
                 .disposed(by: disposeBag)
