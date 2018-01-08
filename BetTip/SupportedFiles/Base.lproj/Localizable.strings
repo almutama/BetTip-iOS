@@ -18,6 +18,7 @@
 "Common.Success" = "Success";
 "Common.Error" = "Error Occured";
 "Common.Sorry" = "Sorry 😢";
+"Common.Sure" = "Are you sure?";
 "Common.Process.Success" = "Process has been finished successfully.";
 "Common.Process.Error" = "Process couldn't be finished.";
 
@@ -53,6 +54,12 @@
 
 "ApplePay.SetAccount" = "Please set up Apple-Pay!";
 
+"User.Action.Title" = "User Actions";
+"User.Action.Desc" = "Please select an action.";
 "User.Role.Admin" = "Admin";
 "User.Role.Moderator" = "Moderator";
 "User.Role.User" = "User";
+"User.Role.Enable" = "Enable User";
+"User.Role.Disable" = "Disable User";
+"User.Role.ChangeRole" = "Change User's Role";
+"User.Role.Title" = "User Role";

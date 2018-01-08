@@ -72,6 +72,8 @@ enum L10n {
     static let sorry = L10n.tr("Localizable", "Common.Sorry")
     /// Success
     static let success = L10n.tr("Localizable", "Common.Success")
+    /// Are you sure?
+    static let sure = L10n.tr("Localizable", "Common.Sure")
     /// Please try again later.
     static let tryAgainLater = L10n.tr("Localizable", "Common.TryAgainLater")
     /// Update
@@ -115,11 +117,26 @@ enum L10n {
 
   enum User {
 
+    enum Action {
+      /// Please select an action.
+      static let desc = L10n.tr("Localizable", "User.Action.Desc")
+      /// User Actions
+      static let title = L10n.tr("Localizable", "User.Action.Title")
+    }
+
     enum Role {
       /// Admin
       static let admin = L10n.tr("Localizable", "User.Role.Admin")
+      /// Change User's Role
+      static let changeRole = L10n.tr("Localizable", "User.Role.ChangeRole")
+      /// Disable User
+      static let disable = L10n.tr("Localizable", "User.Role.Disable")
+      /// Enable User
+      static let enable = L10n.tr("Localizable", "User.Role.Enable")
       /// Moderator
       static let moderator = L10n.tr("Localizable", "User.Role.Moderator")
+      /// User Role
+      static let title = L10n.tr("Localizable", "User.Role.Title")
       /// User
       static let user = L10n.tr("Localizable", "User.Role.User")
     }

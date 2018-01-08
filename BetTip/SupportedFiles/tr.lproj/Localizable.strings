@@ -18,6 +18,7 @@
 "Common.Success" = "Başarılı";
 "Common.Error" = "Hata Oluştu";
 "Common.Sorry" = "Üzgünüm 😢";
+"Common.Sure" = "Emin misiniz?";
 "Common.Process.Success" = "İşlem başarıyla sonuçlandı.";
 "Common.Process.Error" = "İşlem tamamlanamadı.";
 
@@ -53,6 +54,12 @@
 
 "ApplePay.SetAccount" = "Lütfen Apple-Pay hesabınızı tanımlayın!";
 
+"User.Action.Title" = "Kullanıcı Aksiyonları";
+"User.Action.Desc" = "Lütfen bir aksiyon seçiniz.";
 "User.Role.Admin" = "Yönetici";
 "User.Role.Moderator" = "Moderatör";
 "User.Role.User" = "Kullanıcı";
+"User.Role.Enable" = "Kullanıcıyı Etkinleştir";
+"User.Role.Disable" = "Kullanıcıyı Engelle";
+"User.Role.ChangeRole" = "Kullanicının Rolünü Değiştir";
+"User.Role.Title" = "Kullanıcı Rolü";
