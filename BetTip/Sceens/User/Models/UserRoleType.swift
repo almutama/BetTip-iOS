@@ -23,11 +23,11 @@ extension Role {
     var localizedName: String {
         switch self {
         case .user:
-            return "user"
+            return L10n.User.Role.user
         case .moderator:
-            return "moderator"
+            return L10n.User.Role.moderator
         case .admin:
-            return "admin"
+            return L10n.User.Role.admin
         }
     }
 }
