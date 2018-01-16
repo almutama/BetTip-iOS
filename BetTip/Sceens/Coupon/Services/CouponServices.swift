@@ -14,9 +14,9 @@ import Result
 
 protocol CouponServiceType {
     func getCoupons() -> Observable<[CouponModel]>
-    func addCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
-    func updateCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
-    func deleteCredit(credit: CreditModel) -> Observable<Void>
+    func addCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>>
+    func updateCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>>
+    func deleteCoupon(coupon: CouponModel) -> Observable<Bool>
 }
 
 class CouponService: CouponServiceType {
@@ -35,22 +35,21 @@ class CouponService: CouponServiceType {
         return credits
     }
     
-    func addCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>> {
+    func addCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>> {
         return Database.database().reference()
-            .child(Constants.credits)
-            .storeObject(credit)
+            .child(Constants.coupons)
+            .storeObject(coupon)
     }
     
-    func updateCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>> {
+    func updateCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>> {
         return Database.database().reference()
-            .child(Constants.credits)
-            .update(credit)
+            .child(Constants.coupons)
+            .update(coupon)
     }
     
-    func deleteCredit(credit: CreditModel) -> Observable<Void> {
+    func deleteCoupon(coupon: CouponModel) -> Observable<Bool> {
         return Database.database().reference()
-            .child(Constants.credits)
-            .delete(credit)
-            .rewrite(with: ())
+            .child(Constants.coupons)
+            .deleteWithoutFailure(coupon)
     }
 }

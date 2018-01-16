@@ -19,6 +19,10 @@ protocol AdminServiceType {
     func addCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
     func updateCredit(credit: CreditModel) -> Observable<Result<CreditModel, FirebaseStoreError>>
     func deleteCredit(credit: CreditModel) -> Observable<Bool>
+    func getCoupons() -> Observable<[CouponModel]>
+    func addCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>>
+    func updateCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>>
+    func deleteCoupon(coupon: CouponModel) -> Observable<Bool>
     func getUsers() -> Observable<[UserModel]>
     func changeUserRole(user: UserModel, role: Role) -> Observable<Bool>
     func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool>
@@ -28,10 +32,14 @@ class AdminService: AdminServiceType {
     
     private let userService: UserServiceType
     private let creditService: CreditServiceType
+    private let couponService: CouponServiceType
     
-    init(userService: UserServiceType, creditService: CreditServiceType) {
+    init(userService: UserServiceType,
+         creditService: CreditServiceType,
+         couponService: CouponServiceType) {
         self.userService = userService
         self.creditService = creditService
+        self.couponService = couponService
     }
     
     func getCredits() -> Observable<[CreditModel]> {
@@ -48,6 +56,22 @@ class AdminService: AdminServiceType {
     
     func deleteCredit(credit: CreditModel) -> Observable<Bool> {
         return creditService.deleteCredit(credit: credit)
+    }
+    
+    func getCoupons() -> Observable<[CouponModel]> {
+        return couponService.getCoupons()
+    }
+    
+    func addCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>> {
+        return couponService.addCoupon(coupon: coupon)
+    }
+    
+    func updateCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>> {
+        return couponService.updateCoupon(coupon: coupon)
+    }
+    
+    func deleteCoupon(coupon: CouponModel) -> Observable<Bool> {
+        return couponService.deleteCoupon(coupon: coupon)
     }
     
     func getUsers() -> Observable<[UserModel]> {

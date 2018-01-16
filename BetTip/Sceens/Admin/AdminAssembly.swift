@@ -19,7 +19,8 @@ class AdminAssembly: Assembly {
         // Services
         container.register(AdminServiceType.self) { r in
             AdminService(userService: r.resolve(UserServiceType.self)!,
-                         creditService: r.resolve(CreditServiceType.self)!)
+                         creditService: r.resolve(CreditServiceType.self)!,
+                         couponService: r.resolve(CouponServiceType.self)!)
         }
         
         // ViewModels

@@ -5,7 +5,7 @@
 //  Created by Haydar Karkin on 1.12.2017.
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
-
+/*
 import Foundation
 import Swinject
 import SwinjectStoryboard
@@ -128,4 +128,4 @@ private func getBundleFile(_ filename: String, fileType: String) -> Data? {
         return nil
     }
     return (try! Data(contentsOf: URL(fileURLWithPath: path)))
-}
+}*/
