@@ -148,6 +148,8 @@
 		B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8021FF6D4FE00F3851A /* SheetAction.swift */; };
 		B0BDD8061FFECAF600F3851A /* UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8051FFECAF600F3851A /* UserAction.swift */; };
 		B0BDD8081FFED0A800F3851A /* UserRoleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8071FFED0A800F3851A /* UserRoleAction.swift */; };
+		B0BDD80B200A2DBA00F3851A /* ControlCouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80A200A2DBA00F3851A /* ControlCouponsVC.swift */; };
+		B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -318,6 +320,8 @@
 		B0BDD8021FF6D4FE00F3851A /* SheetAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAction.swift; sourceTree = "<group>"; };
 		B0BDD8051FFECAF600F3851A /* UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAction.swift; sourceTree = "<group>"; };
 		B0BDD8071FFED0A800F3851A /* UserRoleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleAction.swift; sourceTree = "<group>"; };
+		B0BDD80A200A2DBA00F3851A /* ControlCouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCouponsVC.swift; sourceTree = "<group>"; };
+		B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCouponsVM.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -679,6 +683,7 @@
 			isa = PBXGroup;
 			children = (
 				B0569A891FC37D2A00FF34A1 /* AdminVM.swift */,
+				B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */,
 				B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */,
 				B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */,
 			);
@@ -689,6 +694,7 @@
 			isa = PBXGroup;
 			children = (
 				B0569A8D1FC37D3F00FF34A1 /* AdminVC.swift */,
+				B0BDD80A200A2DBA00F3851A /* ControlCouponsVC.swift */,
 				B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */,
 				B06BE0321FD73CCD00BA8EC8 /* ControlUsersVC.swift */,
 			);
@@ -1422,9 +1428,11 @@
 				B0569A9E1FC6219000FF34A1 /* LoginService.swift in Sources */,
 				B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */,
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
+				B0BDD80B200A2DBA00F3851A /* ControlCouponsVC.swift in Sources */,
 				B0569A641FC37A9200FF34A1 /* BasketballCell.swift in Sources */,
 				B0569A811FC37CC600FF34A1 /* CreditAssembly.swift in Sources */,
 				B0569AF31FCF3DA100FF34A1 /* FootballCell.swift in Sources */,
+				B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */,
 				B0569A6D1FC37B2600FF34A1 /* BasketballAssembly.swift in Sources */,
 				B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */,
 				B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */,
