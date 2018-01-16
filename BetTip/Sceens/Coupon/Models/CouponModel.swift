@@ -11,10 +11,11 @@ import ObjectMapper
 
 struct CouponModel: BaseModel {
     var id: String?
-    var price: Double?
+    var numOfCredit: Int?
     var date: String?
     var time: String?
     var rate: Float?
+    var matches: [MatchModel]?
 }
 
 extension CouponModel: Mappable {
@@ -22,9 +23,10 @@ extension CouponModel: Mappable {
     
     mutating func mapping(map: Map) {
         id <- map["id"]
-        price <- map["price"]
+        numOfCredit <- map["numOfCredit"]
         date <- map["date"]
         time <- map["time"]
         rate <- map["rate"]
+        matches <- map["matches"]
     }
 }
