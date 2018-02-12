@@ -106,6 +106,13 @@ enum L10n {
     static let updateCredit = L10n.tr("Localizable", "Credit.UpdateCredit")
   }
 
+  enum Match {
+    /// Basketball
+    static let basketball = L10n.tr("Localizable", "Match.Basketball")
+    /// Football
+    static let football = L10n.tr("Localizable", "Match.Football")
+  }
+
   enum Role {
     /// Administrator
     static let admin = L10n.tr("Localizable", "Role.Admin")

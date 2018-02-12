@@ -63,3 +63,6 @@
 "User.Role.Disable" = "Disable User";
 "User.Role.ChangeRole" = "Change User's Role";
 "User.Role.Title" = "User Role";
+
+"Match.Basketball" = "Basketball";
+"Match.Football" = "Football";

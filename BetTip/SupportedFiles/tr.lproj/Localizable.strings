@@ -63,3 +63,6 @@
 "User.Role.Disable" = "Kullanıcıyı Engelle";
 "User.Role.ChangeRole" = "Kullanicının Rolünü Değiştir";
 "User.Role.Title" = "Kullanıcı Rolü";
+
+"Match.Basketball" = "Basketbol";
+"Match.Football" = "Futbol";
