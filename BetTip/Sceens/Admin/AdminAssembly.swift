@@ -38,6 +38,9 @@ class AdminAssembly: Assembly {
         container.register(ControlUsersVMType.self) { r in
             ControlUsersVM(adminService: r.resolve(AdminServiceType.self)!)
         }
+        container.register(AddCouponVMType.self) { r in
+            AddCouponVM(adminService: r.resolve(AdminServiceType.self)!)
+        }
         
         // ViewControllers
         container.storyboardInitCompleted(AdminVC.self) {r, c in
@@ -51,6 +54,9 @@ class AdminAssembly: Assembly {
         }
         container.storyboardInitCompleted(ControlUsersVC.self) {r, c in
             c.viewModel = r.resolve(ControlUsersVMType.self)
+        }
+        container.storyboardInitCompleted(AddCouponVC.self) {r, c in
+            c.viewModel = r.resolve(AddCouponVMType.self)
         }
     }
 }

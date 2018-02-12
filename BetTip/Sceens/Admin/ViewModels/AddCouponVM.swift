@@ -13,7 +13,7 @@ import Result
 private let logger = Log.createLogger()
 
 protocol AddCouponVMType {
-    func getMatches() -> Observable<[MatchModel]>
+    func getMatches(type: MatchAction) -> Observable<[MatchModel]>
     func addCoupon(coupon: CouponModel, initComplete: @escaping (Bool?) -> Void)
 }
 
@@ -27,7 +27,10 @@ class AddCouponVM: BaseViewModel, AddCouponVMType {
         super.init()
     }
     
-    func getMatches() -> Observable<[MatchModel]> {
+    func getMatches(type: MatchAction) -> Observable<[MatchModel]> {
+        if type == .football {
+            return adminService.footballMatches()
+        }
         return adminService.basketballMatches()
     }
     

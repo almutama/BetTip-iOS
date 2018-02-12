@@ -314,7 +314,7 @@
         <!--ADD COUPON-->
         <scene sceneID="eap-QJ-0Nb">
             <objects>
-                <viewController id="dC0-5i-Tgj" sceneMemberID="viewController">
+                <viewController id="dC0-5i-Tgj" customClass="AddCouponVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awu-0O-kf8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,6 +363,11 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Pyq-Ol-R7l" id="DcF-Gg-Ht5"/>
+                        <outlet property="saveCouponButton" destination="S0O-EZ-53Z" id="8uK-eG-eCs"/>
+                        <outlet property="selectMatchTypeButton" destination="d31-Tw-DCF" id="RZi-te-WZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1x-AA-8Ni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
