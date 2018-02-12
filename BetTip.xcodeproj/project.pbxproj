@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8B925683303992C61BA36F38 /* Pods_BetTipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */; };
+		B00E3C5920112F4500802708 /* AddCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5820112F4500802708 /* AddCouponVC.swift */; };
+		B00E3C5B20112F5500802708 /* UpdateCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5A20112F5500802708 /* UpdateCouponVC.swift */; };
+		B00E3C5D20112F6400802708 /* AddCouponVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5C20112F6400802708 /* AddCouponVM.swift */; };
+		B00E3C5F20112F7100802708 /* UpdateCouponVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5E20112F7100802708 /* UpdateCouponVM.swift */; };
 		B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */; };
 		B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD61FD1F787007D9503 /* BaseModel.swift */; };
 		B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */; };
 		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
+		B025768020323680005FA7B8 /* MatchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025767F20323680005FA7B8 /* MatchAction.swift */; };
 		B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050639A1FE53E8E004CECEC /* UserCell.swift */; };
 		B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B050639B1FE53E8E004CECEC /* UserCell.xib */; };
 		B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063A51FE5A1A6004CECEC /* CouponModel.swift */; };
@@ -150,6 +155,8 @@
 		B0BDD8081FFED0A800F3851A /* UserRoleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD8071FFED0A800F3851A /* UserRoleAction.swift */; };
 		B0BDD80B200A2DBA00F3851A /* ControlCouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80A200A2DBA00F3851A /* ControlCouponsVC.swift */; };
 		B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */; };
+		B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */; };
+		B0BDD811200FEAEC00F3851A /* ControlMatchesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -173,10 +180,15 @@
 		368ECDF0EA2EEC9691508FDF /* Pods_BetTip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		656147D774EE3FD2EC2C1712 /* Pods-BetTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.debug.xcconfig"; sourceTree = "<group>"; };
 		689B272117A621A948C4580D /* Pods-BetTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTip.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTip/Pods-BetTip.release.xcconfig"; sourceTree = "<group>"; };
+		B00E3C5820112F4500802708 /* AddCouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponVC.swift; sourceTree = "<group>"; };
+		B00E3C5A20112F5500802708 /* UpdateCouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCouponVC.swift; sourceTree = "<group>"; };
+		B00E3C5C20112F6400802708 /* AddCouponVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponVM.swift; sourceTree = "<group>"; };
+		B00E3C5E20112F7100802708 /* UpdateCouponVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCouponVM.swift; sourceTree = "<group>"; };
 		B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Ext.swift"; sourceTree = "<group>"; };
 		B00F3BD61FD1F787007D9503 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVC.swift; sourceTree = "<group>"; };
 		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
+		B025767F20323680005FA7B8 /* MatchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAction.swift; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B050639A1FE53E8E004CECEC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B050639B1FE53E8E004CECEC /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -322,6 +334,8 @@
 		B0BDD8071FFED0A800F3851A /* UserRoleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleAction.swift; sourceTree = "<group>"; };
 		B0BDD80A200A2DBA00F3851A /* ControlCouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCouponsVC.swift; sourceTree = "<group>"; };
 		B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCouponsVM.swift; sourceTree = "<group>"; };
+		B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVC.swift; sourceTree = "<group>"; };
+		B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVM.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -682,10 +696,13 @@
 		B0569A831FC37CF700FF34A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B00E3C5C20112F6400802708 /* AddCouponVM.swift */,
 				B0569A891FC37D2A00FF34A1 /* AdminVM.swift */,
 				B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */,
 				B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */,
+				B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */,
 				B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */,
+				B00E3C5E20112F7100802708 /* UpdateCouponVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -693,10 +710,13 @@
 		B0569A841FC37CFF00FF34A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B00E3C5820112F4500802708 /* AddCouponVC.swift */,
 				B0569A8D1FC37D3F00FF34A1 /* AdminVC.swift */,
 				B0BDD80A200A2DBA00F3851A /* ControlCouponsVC.swift */,
 				B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */,
+				B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */,
 				B06BE0321FD73CCD00BA8EC8 /* ControlUsersVC.swift */,
+				B00E3C5A20112F5500802708 /* UpdateCouponVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -995,6 +1015,7 @@
 		B0BDD8091FFED0B600F3851A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B025767F20323680005FA7B8 /* MatchAction.swift */,
 				B0BDD8051FFECAF600F3851A /* UserAction.swift */,
 				B0BDD8071FFED0A800F3851A /* UserRoleAction.swift */,
 			);
@@ -1434,6 +1455,7 @@
 				B0569AF31FCF3DA100FF34A1 /* FootballCell.swift in Sources */,
 				B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */,
 				B0569A6D1FC37B2600FF34A1 /* BasketballAssembly.swift in Sources */,
+				B00E3C5920112F4500802708 /* AddCouponVC.swift in Sources */,
 				B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */,
 				B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */,
 				B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */,
@@ -1444,6 +1466,7 @@
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
 				B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
+				B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */,
 				B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */,
 				B0569AB41FC988EB00FF34A1 /* AuthManager.swift in Sources */,
 				B0569A261FC0CDF300FF34A1 /* UIColor+Ext.swift in Sources */,
@@ -1457,6 +1480,7 @@
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
 				B0569ACD1FCDED7C00FF34A1 /* SplashVM.swift in Sources */,
 				B0569AF01FCF3D8C00FF34A1 /* FootballVM.swift in Sources */,
+				B00E3C5B20112F5500802708 /* UpdateCouponVC.swift in Sources */,
 				B05063BA1FE5CD45004CECEC /* MyCouponDetailVM.swift in Sources */,
 				B0569A771FC37C8100FF34A1 /* CreditServices.swift in Sources */,
 				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
@@ -1481,6 +1505,7 @@
 				B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */,
 				B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */,
 				B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */,
+				B00E3C5F20112F7100802708 /* UpdateCouponVM.swift in Sources */,
 				B05063B21FE5A211004CECEC /* CouponAssembly.swift in Sources */,
 				B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */,
 				B0569A151FC0BA1100FF34A1 /* UICollectionView+Ext.swift in Sources */,
@@ -1489,12 +1514,15 @@
 				B0569AB81FC9890D00FF34A1 /* AuthStore.swift in Sources */,
 				B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */,
 				B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */,
+				B00E3C5D20112F6400802708 /* AddCouponVM.swift in Sources */,
 				B0569ACF1FCDEDAD00FF34A1 /* SplashAssembly.swift in Sources */,
 				B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */,
 				B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */,
 				B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */,
 				B0569A311FC0E5E000FF34A1 /* ColorSheet.swift in Sources */,
+				B0BDD811200FEAEC00F3851A /* ControlMatchesVM.swift in Sources */,
 				B0A7AA3B1FCD7C6800DC4F62 /* UserAssembly.swift in Sources */,
+				B025768020323680005FA7B8 /* MatchAction.swift in Sources */,
 				B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */,
 				B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */,
 				B0A7AA391FCD7BE000DC4F62 /* AppAssembly.swift in Sources */,

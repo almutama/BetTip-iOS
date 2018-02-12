@@ -1,17 +1,17 @@
 //
-//  ControlCouponsVC.swift
+//  ControlMatchesVC.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 13.01.2018.
+//  Created by Haydar Karkin on 17.01.2018.
 //  Copyright © 2018 Haydar Karkin. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 
-class ControlCouponsVC: BaseViewController {
+class ControlMatchesVC: BaseViewController {
     
-    var viewModel: ControlCouponsVMType!
+    var viewModel: ControlCouponsVM!
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var collectionView: UICollectionView!

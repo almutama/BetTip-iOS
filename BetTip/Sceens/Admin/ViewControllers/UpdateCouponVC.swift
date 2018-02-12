@@ -1,15 +1,15 @@
 //
-//  ControlCouponsVC.swift
+//  UpdateCouponVC.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 13.01.2018.
+//  Created by Haydar Karkin on 18.01.2018.
 //  Copyright © 2018 Haydar Karkin. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 
-class ControlCouponsVC: BaseViewController {
+class UpdateCouponVC: BaseViewController {
     
     var viewModel: ControlCouponsVMType!
     private let disposeBag = DisposeBag()

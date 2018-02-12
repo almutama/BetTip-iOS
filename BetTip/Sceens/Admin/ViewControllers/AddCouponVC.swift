@@ -1,17 +1,17 @@
 //
-//  ControlCouponsVC.swift
+//  AddCouponVC.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 13.01.2018.
+//  Created by Haydar Karkin on 18.01.2018.
 //  Copyright © 2018 Haydar Karkin. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 
-class ControlCouponsVC: BaseViewController {
+class AddCouponVC: BaseViewController {
     
-    var viewModel: ControlCouponsVMType!
+    var viewModel: AddCouponVMType!
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -31,11 +31,11 @@ class ControlCouponsVC: BaseViewController {
     
     func bindViewModel() {
         self.viewModel
-            .getCoupons()
+            .getMatches()
             .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: CouponCell.reuseIdentifier,
-                                                   cellType: CouponCell.self)) { _, data, cell in
-                                                    cell.viewModel = Variable<CouponModel>(data)
+            .bind(to: self.collectionView.rx.items(cellIdentifier: BasketballCell.reuseIdentifier,
+                                                   cellType: BasketballCell.self)) { _, data, cell in
+                                                   cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
     }
 }

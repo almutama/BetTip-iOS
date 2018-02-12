@@ -26,6 +26,8 @@ protocol AdminServiceType {
     func getUsers() -> Observable<[UserModel]>
     func changeUserRole(user: UserModel, role: Role) -> Observable<Bool>
     func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool>
+    func basketballMatches() -> Observable<[MatchModel]>
+    func footballMatches() -> Observable<[MatchModel]>
 }
 
 class AdminService: AdminServiceType {
@@ -33,15 +35,22 @@ class AdminService: AdminServiceType {
     private let userService: UserServiceType
     private let creditService: CreditServiceType
     private let couponService: CouponServiceType
+    private let basketballService: BasketballServiceType
+    private let footballService: FootballServiceType
     
     init(userService: UserServiceType,
          creditService: CreditServiceType,
-         couponService: CouponServiceType) {
+         couponService: CouponServiceType,
+         basketballService: BasketballServiceType,
+         footballService: FootballServiceType) {
         self.userService = userService
         self.creditService = creditService
         self.couponService = couponService
+        self.basketballService = basketballService
+        self.footballService = footballService
     }
     
+    // MARK: Credit Services
     func getCredits() -> Observable<[CreditModel]> {
         return creditService.getCredits()
     }
@@ -58,6 +67,7 @@ class AdminService: AdminServiceType {
         return creditService.deleteCredit(credit: credit)
     }
     
+    // MARK: Coupon Services
     func getCoupons() -> Observable<[CouponModel]> {
         return couponService.getCoupons()
     }
@@ -74,6 +84,7 @@ class AdminService: AdminServiceType {
         return couponService.deleteCoupon(coupon: coupon)
     }
     
+    // MARK: User Services
     func getUsers() -> Observable<[UserModel]> {
         return self.userService.users()
     }
@@ -84,5 +95,14 @@ class AdminService: AdminServiceType {
     
     func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool> {
         return userService.setAccountDisabled(user: user, disabled: disabled)
+    }
+    
+    // MARK: Match Services
+    func basketballMatches() -> Observable<[MatchModel]> {
+        return basketballService.basketballMatches()
+    }
+    
+    func footballMatches() -> Observable<[MatchModel]> {
+        return footballService.footballMatches()
     }
 }
