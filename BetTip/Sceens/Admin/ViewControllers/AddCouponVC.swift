@@ -14,6 +14,7 @@ class AddCouponVC: BaseViewController {
     
     var viewModel: AddCouponVMType!
     private let disposeBag = DisposeBag()
+    private let isLoading = Variable<Bool>(false)
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var selectMatchTypeButton: UIButton!
@@ -30,11 +31,11 @@ class AddCouponVC: BaseViewController {
     }
     
     func prepareUI() {
-        let layout = VegaScrollFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
         self.collectionView.registerCellNib(BasketballCell.self)
-        self.getMatchesWithType(type: .football)
+        self.getMatchesWithType(type: .basketball)
     }
     
     func getMatchesWithType(type: MatchAction) {
@@ -43,16 +44,28 @@ class AddCouponVC: BaseViewController {
         } else if type == .basketball {
             self.selectMatchTypeButton.setImage(Asset.TabBar.tabSelBasketball.image, for: .normal)
         }
-        self.viewModel
-            .getMatches(type: type)
-            .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: BasketballCell.reuseIdentifier,
-                                                   cellType: BasketballCell.self)) { _, data, cell in
-                                                   cell.viewModel = Variable<MatchModel>(data)
-            }.disposed(by: disposeBag)
+        self.viewModel.getMatchesWithType(type: type)
     }
     
     func bindViewModel() {
+        self.bindAnimateWith(variable: self.isLoading)
+            .disposed(by: disposeBag)
+        
+        self.viewModel
+            .matches.asObservable()
+            .map { _ in false }.startWith(true)
+            .catchErrorJustReturn(false)
+            .bind(to: self.isLoading)
+            .disposed(by: disposeBag)
+        
+        self.viewModel
+            .matches
+            .asObservable()
+            .bind(to: self.collectionView.rx.items(cellIdentifier: BasketballCell.reuseIdentifier,
+                                                   cellType: BasketballCell.self)) { _, data, cell in
+                                                    cell.viewModel = Variable<MatchModel>(data)
+            }.disposed(by: disposeBag)
+        
         self.selectMatchTypeButton.rx.tap
             .flatMap { [unowned self] in
                 UIAlertController.rx
