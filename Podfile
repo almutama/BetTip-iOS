@@ -25,19 +25,23 @@ def ui_pods
   pod 'VegaScrollFlowLayout'
 end
 
+def reactive_pods
+    pod 'RxSwift', '~> 4.0'
+    pod 'RxCocoa'
+    pod 'RxOptional'
+    pod 'RxDataSources'
+    pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'Validation', 'StaticMap', 'Configuration']
+end
+
 def general_pods
   pod 'ObjectMapper'
   pod 'ReachabilitySwift'
   pod 'Result', '~> 3.0.0'
-  pod 'RxSwift', '~> 4.0'
-  pod 'RxCocoa'
-  pod 'RxOptional'
   pod 'SwiftGen'
   pod 'Swinject'
   pod 'SwinjectStoryboard'
   pod 'SwiftKeychainWrapper'
   pod 'IQKeyboardManagerSwift'
-  pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'Validation', 'StaticMap', 'Configuration']
   
   plugin 'cocoapods-keys', {
       :project => "BetTip",
@@ -64,6 +68,7 @@ end
 target 'BetTip' do
   firebase_pods
   general_pods
+  reactive_pods
   tracking_pods
   ui_pods
   ad_pods
@@ -73,6 +78,7 @@ target 'BetTipTests' do
   testing_pods
   firebase_pods
   general_pods
+  reactive_pods
 end
 
 post_install do |installer_representation|
