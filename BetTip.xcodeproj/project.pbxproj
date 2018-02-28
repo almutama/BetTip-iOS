@@ -17,8 +17,6 @@
 		B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */; };
 		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
 		B025768020323680005FA7B8 /* MatchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025767F20323680005FA7B8 /* MatchAction.swift */; };
-		B03047B1203B5D21008EE719 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03047AF203B5D21008EE719 /* MatchCell.swift */; };
-		B03047B2203B5D21008EE719 /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B03047B0203B5D21008EE719 /* MatchCell.xib */; };
 		B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050639A1FE53E8E004CECEC /* UserCell.swift */; };
 		B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B050639B1FE53E8E004CECEC /* UserCell.xib */; };
 		B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063A51FE5A1A6004CECEC /* CouponModel.swift */; };
@@ -134,6 +132,8 @@
 		B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B08A45801F9DD5430082BDD3 /* Assets.xcassets */; };
 		B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */; };
 		B08A458F1F9DD5430082BDD3 /* BetTipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */; };
+		B08D42152047498900426276 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08D42132047498900426276 /* MatchCell.swift */; };
+		B08D42162047498900426276 /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08D42142047498900426276 /* MatchCell.xib */; };
 		B0A281A41FD59ADF00B7E892 /* UserCreditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A281A31FD59ADF00B7E892 /* UserCreditModel.swift */; };
 		B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */; };
 		B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */; };
@@ -191,8 +191,6 @@
 		B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVC.swift; sourceTree = "<group>"; };
 		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
 		B025767F20323680005FA7B8 /* MatchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAction.swift; sourceTree = "<group>"; };
-		B03047AF203B5D21008EE719 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
-		B03047B0203B5D21008EE719 /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B050639A1FE53E8E004CECEC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B050639B1FE53E8E004CECEC /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -313,6 +311,8 @@
 		B08A458A1F9DD5430082BDD3 /* BetTipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetTipTests.swift; sourceTree = "<group>"; };
 		B08A45901F9DD5430082BDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B08D42132047498900426276 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		B08D42142047498900426276 /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
 		B0A281A31FD59ADF00B7E892 /* UserCreditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreditModel.swift; sourceTree = "<group>"; };
 		B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Rx.swift"; sourceTree = "<group>"; };
 		B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleType.swift; sourceTree = "<group>"; };
@@ -402,10 +402,10 @@
 		B05063991FE53E5F004CECEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B08D42132047498900426276 /* MatchCell.swift */,
+				B08D42142047498900426276 /* MatchCell.xib */,
 				B050639A1FE53E8E004CECEC /* UserCell.swift */,
 				B050639B1FE53E8E004CECEC /* UserCell.xib */,
-				B03047AF203B5D21008EE719 /* MatchCell.swift */,
-				B03047B0203B5D21008EE719 /* MatchCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1257,7 +1257,7 @@
 				B0569AD11FCDEDC000FF34A1 /* Splash.storyboard in Resources */,
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
 				B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */,
-				B03047B2203B5D21008EE719 /* MatchCell.xib in Resources */,
+				B08D42162047498900426276 /* MatchCell.xib in Resources */,
 				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
 				B0569A651FC37A9200FF34A1 /* BasketballCell.xib in Resources */,
 				B05063B41FE5A221004CECEC /* Coupon.storyboard in Resources */,
@@ -1424,7 +1424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03047B1203B5D21008EE719 /* MatchCell.swift in Sources */,
+				B08D42152047498900426276 /* MatchCell.swift in Sources */,
 				B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */,
 				B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */,
 				B05063B61FE5CD24004CECEC /* MyCouponsVC.swift in Sources */,

@@ -18,12 +18,7 @@ class AddCouponVC: BaseViewController {
     private let isLoading = Variable<Bool>(false)
     private var selectedMatches: Variable<[MatchModel]> = Variable<[MatchModel]>([])
     
-    @IBOutlet weak var collectionView: UICollectionView! {
-        didSet {
-            collectionView.allowsSelection = true
-            collectionView.allowsMultipleSelection = true
-        }
-    }
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectMatchTypeButton: UIButton!
     @IBOutlet weak var saveCouponButton: UIButton!
     
@@ -38,10 +33,7 @@ class AddCouponVC: BaseViewController {
     }
     
     func prepareUI() {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
-        self.collectionView.collectionViewLayout =  layout
-        self.collectionView.registerCellNib(MatchCell.self)
+        self.tableView.registerCellNib(MatchCell.self)
         self.getMatchesWithType(type: .football)
     }
     
@@ -55,20 +47,6 @@ class AddCouponVC: BaseViewController {
     }
     
     func bindViewModel() {
-        _ = RxCollectionViewSectionedReloadDataSource<SectionModel<String, MatchModel>>(
-            configureCell: { (_, collectionView, indexPath, data) in
-                if let cell : MatchCell = (collectionView.dequeueReusableCell(withReuseIdentifier: MatchCell.reuseIdentifier, for: indexPath) as? MatchCell) {
-                    cell.viewModel = Variable<MatchModel>(data)
-                    return cell
-                }
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MatchCell.reuseIdentifier, for: indexPath) as? MatchCell else { return UICollectionViewCell()}
-                return cell
-            },
-                configureSupplementaryView: { (_, _, _, _) in
-                    return UICollectionReusableView()
-            }
-        )
-        
         self.bindAnimateWith(variable: self.isLoading)
             .disposed(by: disposeBag)
         
@@ -82,7 +60,7 @@ class AddCouponVC: BaseViewController {
         self.viewModel
             .matches
             .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: MatchCell.reuseIdentifier,
+            .bind(to: self.tableView.rx.items(cellIdentifier: MatchCell.reuseIdentifier,
                                                    cellType: MatchCell.self)) { _, data, cell in
                                                     cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
@@ -108,17 +86,10 @@ class AddCouponVC: BaseViewController {
             })
             .disposed(by: disposeBag)
         
-        self.collectionView.rx.modelSelected(MatchModel.self)
+        self.tableView.rx.modelSelected(MatchModel.self)
             .subscribe(onNext: { [weak self] match in
                 print("bastiiii")
                 self?.selectedMatches.value.append(match)
-            })
-            .disposed(by: disposeBag)
-        
-        self.collectionView.rx.itemSelected.asObservable()
-            .subscribe(onNext: { [unowned self] indexPath in
-                guard let cell = self.collectionView.cellForItem(at: indexPath) as? MatchCell else {return}
-                cell.isSelected = false
             })
             .disposed(by: disposeBag)
     }

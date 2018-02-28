@@ -2,7 +2,7 @@
 //  MatchCell.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 19.02.2018.
+//  Created by Haydar Karkin on 28.02.2018.
 //  Copyright © 2018 Haydar Karkin. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MatchCell: UICollectionViewCell, Reusable {
+class MatchCell: UITableViewCell, Reusable {
     
     @IBOutlet weak var iddaaIdLbl: StyledLabel!
     @IBOutlet weak var homeLbl: StyledLabel!
@@ -62,24 +62,26 @@ class MatchCell: UICollectionViewCell, Reusable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = 10
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.3
-        layer.shadowOffset = CGSize(width: 0, height: 5)
-        layer.masksToBounds = false
-        contentView.alpha = 0.5
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        contentView.alpha = 0.5
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let insetForCell = UIEdgeInsetsMake(0, 10, 5, 5)
+        contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, insetForCell)
+        contentView.layer.cornerRadius = 10
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOpacity = 0.3
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        contentView.layer.masksToBounds = false
+        contentView.layer.borderColor = UIColor.cellColor.cgColor
+        contentView.layer.borderWidth = 2.0
     }
 }
 
 extension Reactive where Base: MatchCell {
     var isSelected: Binder<Bool> {
         return Binder<Bool>(self.base) { cell, isSelected in
-            cell.contentView.alpha = isSelected ? 0.5 : 1
+            cell.contentView.layer.borderColor = isSelected ? UIColor.red.cgColor : UIColor.green.cgColor
         }
     }
 }

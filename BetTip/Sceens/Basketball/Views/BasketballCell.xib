@@ -452,7 +452,7 @@
                 <outlet property="statusImg" destination="6G0-pc-czp" id="gC6-Zr-guq"/>
                 <outlet property="timeLbl" destination="4ck-yz-6Br" id="gJo-1r-Wrv"/>
             </connections>
-            <point key="canvasLocation" x="24" y="23"/>
+            <point key="canvasLocation" x="431" y="18"/>
         </collectionViewCell>
     </objects>
     <resources>

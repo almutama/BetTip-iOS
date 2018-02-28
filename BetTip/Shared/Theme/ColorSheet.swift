@@ -20,6 +20,10 @@ extension UIColor {
         return withHex(hex: 0x43DBA8)
     }
     
+    class var cellColor: UIColor {
+        return withHex(hex: 0x14181C)
+    }
+    
     class var complementary: UIColor {
         return .white
     }

@@ -319,17 +319,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pyq-Ol-R7l">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WRr-bU-zx6">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0O-EZ-53Z">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.83921568629999999" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,16 +330,22 @@
                                     <color key="titleColor" name="GeneralText"/>
                                 </state>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="90" estimatedRowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cqE-2h-PZU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.17081955075263977" green="0.22317889332771301" blue="0.25246182084083557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Pyq-Ol-R7l" firstAttribute="top" secondItem="awu-0O-kf8" secondAttribute="top" id="8fM-ot-Lvy"/>
-                            <constraint firstItem="Pyq-Ol-R7l" firstAttribute="trailing" secondItem="AJL-aZ-KEE" secondAttribute="trailing" id="BnA-uS-Xr5"/>
-                            <constraint firstItem="S0O-EZ-53Z" firstAttribute="top" secondItem="Pyq-Ol-R7l" secondAttribute="bottom" id="KpR-JQ-084"/>
                             <constraint firstItem="S0O-EZ-53Z" firstAttribute="bottom" secondItem="AJL-aZ-KEE" secondAttribute="bottom" id="Oce-pl-QLu"/>
-                            <constraint firstItem="Pyq-Ol-R7l" firstAttribute="leading" secondItem="AJL-aZ-KEE" secondAttribute="leading" id="Xkf-DE-Dxt"/>
+                            <constraint firstItem="cqE-2h-PZU" firstAttribute="trailing" secondItem="AJL-aZ-KEE" secondAttribute="trailing" id="Xam-xs-HHa"/>
                             <constraint firstItem="S0O-EZ-53Z" firstAttribute="trailing" secondItem="AJL-aZ-KEE" secondAttribute="trailing" id="Ywh-11-Zso"/>
+                            <constraint firstItem="cqE-2h-PZU" firstAttribute="leading" secondItem="AJL-aZ-KEE" secondAttribute="leading" id="Zci-1r-LEK"/>
                             <constraint firstItem="S0O-EZ-53Z" firstAttribute="leading" secondItem="AJL-aZ-KEE" secondAttribute="leading" id="eP7-cB-d4f"/>
+                            <constraint firstItem="cqE-2h-PZU" firstAttribute="top" secondItem="awu-0O-kf8" secondAttribute="top" id="juD-KR-0k2"/>
+                            <constraint firstItem="S0O-EZ-53Z" firstAttribute="top" secondItem="cqE-2h-PZU" secondAttribute="bottom" id="xvC-oq-7KY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AJL-aZ-KEE"/>
                     </view>
@@ -364,14 +359,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="Pyq-Ol-R7l" id="DcF-Gg-Ht5"/>
                         <outlet property="saveCouponButton" destination="S0O-EZ-53Z" id="8uK-eG-eCs"/>
                         <outlet property="selectMatchTypeButton" destination="d31-Tw-DCF" id="RZi-te-WZR"/>
+                        <outlet property="tableView" destination="cqE-2h-PZU" id="g24-7m-I75"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1x-AA-8Ni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2250" y="1726"/>
+            <point key="canvasLocation" x="2248.8000000000002" y="1725.7871064467768"/>
         </scene>
     </scenes>
     <resources>
