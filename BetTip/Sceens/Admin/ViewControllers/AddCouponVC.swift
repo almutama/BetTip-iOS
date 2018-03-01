@@ -88,13 +88,31 @@ class AddCouponVC: BaseViewController {
         
         self.tableView.rx.modelSelected(MatchModel.self)
             .subscribe(onNext: { [weak self] match in
-                print("bastiiii")
                 self?.selectedMatches.value.append(match)
             })
             .disposed(by: disposeBag)
-    }
-    
-    func mapToCollectionSection (_ matches: [MatchModel]) -> SectionModel<String, MatchModel> {
-        return SectionModel(model: "matches", items: matches)
+        
+        self.tableView.rx.modelDeselected(MatchModel.self)
+            .subscribe(onNext: { [weak self] match in
+                guard let strongSelf = self else { return }
+                print("deleted match: ", match)
+                strongSelf.selectedMatches.value = strongSelf.selectedMatches.value.filter { $0 != match }
+            })
+            .disposed(by: disposeBag)
+        
+        self.selectedMatches.asObservable()
+            .subscribe(onNext: {[weak self] (_) in
+                guard let strongSelf = self else { return }
+                let selectedCount = strongSelf.selectedMatches.value.count
+                print(selectedCount)
+                strongSelf.saveCouponButton.isEnabled = strongSelf.selectedMatches.value.isEmpty ? false : true
+                strongSelf.saveCouponButton.alpha = selectedCount > 0 ? 1.0 : 0.5
+            }).disposed(by: disposeBag)
+        
+        self.saveCouponButton.rx.tap
+            .subscribe(onNext: {[weak self] (_) in
+                guard let strongSelf = self else { return }
+                print(strongSelf.selectedMatches.value)
+            }).disposed(by: disposeBag)
     }
 }

@@ -46,3 +46,23 @@ extension MatchModel: Mappable {
         site <- map["site"]
     }
 }
+
+func == (lhs: MatchModel, rhs: MatchModel) -> Bool {
+    if let iddaaIdL = lhs.iddaaId,
+        let iddaaIdR = lhs.iddaaId,
+        let oddL = lhs.odd,
+        let oddR = rhs.odd {
+        return iddaaIdL == iddaaIdR && oddL == oddR
+    }
+    return false
+}
+
+func != (lhs: MatchModel, rhs: MatchModel) -> Bool {
+    if let iddaaIdL = lhs.iddaaId,
+        let iddaaIdR = lhs.iddaaId,
+        let oddL = lhs.odd,
+        let oddR = rhs.odd {
+        return iddaaIdL != iddaaIdR && oddL != oddR
+    }
+    return false
+}

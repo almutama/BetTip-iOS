@@ -66,7 +66,7 @@ class MatchCell: UITableViewCell, Reusable {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let insetForCell = UIEdgeInsetsMake(0, 10, 5, 5)
+        let insetForCell = UIEdgeInsets(horizontal: 5, top: 0, bottom: 10)
         contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, insetForCell)
         contentView.layer.cornerRadius = 10
         contentView.layer.shadowColor = UIColor.black.cgColor
@@ -75,6 +75,11 @@ class MatchCell: UITableViewCell, Reusable {
         contentView.layer.masksToBounds = false
         contentView.layer.borderColor = UIColor.cellColor.cgColor
         contentView.layer.borderWidth = 2.0
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        contentView.layer.borderColor = selected ? UIColor.secondary.cgColor : UIColor.cellColor.cgColor
     }
 }
 
