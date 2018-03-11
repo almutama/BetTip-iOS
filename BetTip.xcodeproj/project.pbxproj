@@ -134,6 +134,8 @@
 		B08A458F1F9DD5430082BDD3 /* BetTipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */; };
 		B08D42152047498900426276 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08D42132047498900426276 /* MatchCell.swift */; };
 		B08D42162047498900426276 /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08D42142047498900426276 /* MatchCell.xib */; };
+		B08D4218204DDE4600426276 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08D4217204DDE4600426276 /* Array+Ext.swift */; };
+		B08D421A20508F7600426276 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08D421920508F7600426276 /* Date+Ext.swift */; };
 		B0A281A41FD59ADF00B7E892 /* UserCreditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A281A31FD59ADF00B7E892 /* UserCreditModel.swift */; };
 		B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */; };
 		B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */; };
@@ -313,6 +315,8 @@
 		B08A45901F9DD5430082BDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B08D42132047498900426276 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		B08D42142047498900426276 /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
+		B08D4217204DDE4600426276 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		B08D421920508F7600426276 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		B0A281A31FD59ADF00B7E892 /* UserCreditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreditModel.swift; sourceTree = "<group>"; };
 		B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Rx.swift"; sourceTree = "<group>"; };
 		B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleType.swift; sourceTree = "<group>"; };
@@ -517,6 +521,8 @@
 			isa = PBXGroup;
 			children = (
 				B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */,
+				B08D4217204DDE4600426276 /* Array+Ext.swift */,
+				B08D421920508F7600426276 /* Date+Ext.swift */,
 				B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */,
 				B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */,
 				B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */,
@@ -1469,6 +1475,7 @@
 				B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */,
 				B0BDD7FC1FE6CD7700F3851A /* AlertAction.swift in Sources */,
 				B0A7AA261FC8627800DC4F62 /* FirebaseError.swift in Sources */,
+				B08D4218204DDE4600426276 /* Array+Ext.swift in Sources */,
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B05063A81FE5A1B3004CECEC /* CouponServices.swift in Sources */,
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
@@ -1491,6 +1498,7 @@
 				B00E3C5B20112F5500802708 /* UpdateCouponVC.swift in Sources */,
 				B05063BA1FE5CD45004CECEC /* MyCouponDetailVM.swift in Sources */,
 				B0569A771FC37C8100FF34A1 /* CreditServices.swift in Sources */,
+				B08D421A20508F7600426276 /* Date+Ext.swift in Sources */,
 				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0BDD8011FF42A8400F3851A /* ActivityIndicator+Rx.swift in Sources */,
