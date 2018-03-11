@@ -47,7 +47,7 @@ extension MatchModel: Mappable {
     }
 }
 
-func == (lhs: MatchModel, rhs: MatchModel) -> Bool {
+func === (lhs: MatchModel, rhs: MatchModel) -> Bool {
     if let iddaaIdL = lhs.iddaaId,
         let iddaaIdR = lhs.iddaaId,
         let oddL = lhs.odd,
@@ -57,7 +57,7 @@ func == (lhs: MatchModel, rhs: MatchModel) -> Bool {
     return false
 }
 
-func != (lhs: MatchModel, rhs: MatchModel) -> Bool {
+func !== (lhs: MatchModel, rhs: MatchModel) -> Bool {
     if let iddaaIdL = lhs.iddaaId,
         let iddaaIdR = lhs.iddaaId,
         let oddL = lhs.odd,
