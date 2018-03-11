@@ -68,6 +68,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func registerServices() {
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+        Database.database().reference().keepSynced(true)
         IQKeyboardManager.sharedManager().enable = true
         UIService.shared.registerForEvents()
         UserEventService.shared.registerForEvents()
