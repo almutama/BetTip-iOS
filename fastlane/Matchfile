@@ -1,0 +1,6 @@
+git_url "https://haydarkarkin@bitbucket.org/haydarkarkin/bettip-ceritficates.git"
+
+type "development"
+
+app_identifier ["salieri.BetTipAppFree"]
+username "msisman8054@gmail.com" # Your Apple Developer Portal username

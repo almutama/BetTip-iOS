@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xcj-UQ-VWG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="T6f-Iu-jyO">
+            <objects>
+                <tabBarController id="Xcj-UQ-VWG" customClass="MainVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="AlP-xl-RJr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="Background"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mdy-hr-pdj" kind="relationship" relationship="viewControllers" id="pmH-eX-75g"/>
+                        <segue destination="0TX-dr-aGh" kind="relationship" relationship="viewControllers" id="fGZ-vj-xJB"/>
+                        <segue destination="9yY-m0-rvO" kind="relationship" relationship="viewControllers" id="il7-ga-ZfH"/>
+                        <segue destination="XU3-iH-fw3" kind="relationship" relationship="viewControllers" id="HxX-OX-lFA"/>
+                        <segue destination="h77-XN-RQG" kind="relationship" relationship="viewControllers" id="D5T-2E-Jt5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGP-xr-WXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-580" y="26"/>
+        </scene>
+        <!--Football-->
+        <scene sceneID="rAg-o0-atO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Football" id="mdy-hr-pdj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Futbol" image="tab_football" selectedImage="tabSel_football" id="2zx-c5-KFU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9DJ-5n-m48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="-94"/>
+        </scene>
+        <!--Basketball-->
+        <scene sceneID="zVK-Sx-cc9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Basketball" id="0TX-dr-aGh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Basketbol" image="tab_basketball" selectedImage="tabSel_basketball" id="R5u-Y8-1ye"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ef5-n1-FLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="307" y="-16"/>
+        </scene>
+        <!--Credit-->
+        <scene sceneID="yAh-0a-dcm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Credit" id="XU3-iH-fw3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Premium" image="tab_premium" selectedImage="tabSel_premium" id="Yez-Qd-QCI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XxI-aQ-NCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="58"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="enx-Ok-6py">
+            <objects>
+                <viewControllerPlaceholder storyboardName="User" id="h77-XN-RQG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Daha" image="tab_more" selectedImage="tabSel_more" id="PR5-Ba-pm1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEC-lq-qrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="121"/>
+        </scene>
+        <!--Coupon-->
+        <scene sceneID="oJc-iv-2GR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Coupon" id="9yY-m0-rvO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Coupon" image="tab_coupon" id="f4v-GE-jrg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p4a-d4-QsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="194"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabSel_basketball" width="22" height="22"/>
+        <image name="tabSel_football" width="22" height="22"/>
+        <image name="tabSel_more" width="22" height="22"/>
+        <image name="tabSel_premium" width="22" height="22"/>
+        <image name="tab_basketball" width="22" height="22"/>
+        <image name="tab_coupon" width="22" height="22"/>
+        <image name="tab_football" width="22" height="22"/>
+        <image name="tab_more" width="22" height="22"/>
+        <image name="tab_premium" width="22" height="22"/>
+        <namedColor name="Background">
+            <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

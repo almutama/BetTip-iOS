@@ -1,0 +1,68 @@
+/* 
+  Localizable.strings
+  BetTip
+
+  Created by Haydar Karkin on 27.11.2017.
+  Copyright © 2017 Haydar Karkin. All rights reserved.
+*/
+
+"Common.TryAgainLater" = "Lütfen tekrar deneyiniz.";
+"Common.Loading" = "Yükleniyor ..";
+"Common.OK" = "Tamam";
+"Common.Cancel" = "İptal";
+"Common.Done" = "Tamam";
+"Common.Great" = "Harika ☺️";
+"Common.Delete" = "Sil";
+"Common.Update" = "Güncelle";
+"Common.Warning" = "Uyarı";
+"Common.Success" = "Başarılı";
+"Common.Error" = "Hata Oluştu";
+"Common.Sorry" = "Üzgünüm 😢";
+"Common.Sure" = "Emin misiniz?";
+"Common.Process.Success" = "İşlem başarıyla sonuçlandı.";
+"Common.Process.Error" = "İşlem tamamlanamadı.";
+
+"Role.User" = "Kullanıcı";
+"Role.Moderator" = "Moderatör";
+"Role.Admin" = "Yönetici";
+
+"Auth.Login" = "Giriş Yap";
+"Auth.SignUp" = "Kayıt Ol";
+"Auth.Email" = "E-posta";
+"Auth.Password" = "Şifre";
+"Auth.Logout" = "Çıkış Yap";
+"Auth.ConfirmLogout" = "Çıkış yapmak istediğinize emin misiniz?";
+
+"Auth.Error.EmptyEmail" = "E-posta boş olamaz.";
+"Auth.Error.InvalidEmail" = "E-posta geçersiz.";
+"Auth.Error.EmptyPassword" = "Şifre boş olamaz.";
+"Auth.Error.ShortPassword" = "Şifreniz en az %d karakter uzunluğunda olmalıdır.";
+"Auth.Error.WrongPassword" = "Yanlış e-posya yada şifre girdiniz.";
+"Auth.Error.UserDisabled" = "Hesabınız engellendi. Bir yanlışlık olduğunu düşünüyorsanız eğer lütfen bizimle iletişime geçin.";
+"Auth.Error.Unknown" = "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.";
+"Auth.Error.EmailAlreadyInUse" = "E-posta adresi halihazırda kullanılmaktadır.";
+"Auth.Error.SignupTitle" = "Üye yapılamıyor.";
+"Auth.Error.LoginTitle" = "Giriş yapılamıyor.";
+
+"Credit.Price" = "Fiyat";
+"Credit.NumberOfCredit" = "Kredi Sayısı";
+"Credit.AddCredit" = "Gerekli alanları doldurun.";
+"Credit.UpdateCredit" = "Gerekli alanları güncelleyin.";
+"Credit.Title" = "Kredi";
+"Credit.AddSuccess" = "Yeni kredi eklendi!";
+"Credit.AddError" = "Yeni kredi eklenemedi!";
+
+"ApplePay.SetAccount" = "Lütfen Apple-Pay hesabınızı tanımlayın!";
+
+"User.Action.Title" = "Kullanıcı Aksiyonları";
+"User.Action.Desc" = "Lütfen bir aksiyon seçiniz.";
+"User.Role.Admin" = "Yönetici";
+"User.Role.Moderator" = "Moderatör";
+"User.Role.User" = "Kullanıcı";
+"User.Role.Enable" = "Kullanıcıyı Etkinleştir";
+"User.Role.Disable" = "Kullanıcıyı Engelle";
+"User.Role.ChangeRole" = "Kullanicının Rolünü Değiştir";
+"User.Role.Title" = "Kullanıcı Rolü";
+
+"Match.Basketball" = "Basketbol";
+"Match.Football" = "Futbol";

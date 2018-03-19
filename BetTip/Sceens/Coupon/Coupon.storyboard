@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="36S-wY-dyZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CouponsVC-->
+        <scene sceneID="mux-SJ-BwN">
+            <objects>
+                <viewController id="mYh-So-aQB" customClass="CouponsVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZiO-Tf-cXp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lDM-nk-SZb">
+                                <rect key="frame" x="0.0" y="104" width="375" height="514"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1ep-5s-O4s">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Credit: 0 TL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSY-fg-Dpj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ioY-lO-HHv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="GeneralText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="lDM-nk-SZb" firstAttribute="leading" secondItem="24P-xY-ccx" secondAttribute="leading" id="3Uq-ac-vQb"/>
+                            <constraint firstItem="FSY-fg-Dpj" firstAttribute="top" secondItem="24P-xY-ccx" secondAttribute="top" id="Cib-mC-ewo"/>
+                            <constraint firstItem="lDM-nk-SZb" firstAttribute="trailing" secondItem="24P-xY-ccx" secondAttribute="trailing" id="NLN-KN-di1"/>
+                            <constraint firstItem="lDM-nk-SZb" firstAttribute="top" secondItem="FSY-fg-Dpj" secondAttribute="bottom" id="kLD-Lp-lHd"/>
+                            <constraint firstItem="lDM-nk-SZb" firstAttribute="bottom" secondItem="24P-xY-ccx" secondAttribute="bottom" id="uSl-ZT-y2o"/>
+                            <constraint firstItem="FSY-fg-Dpj" firstAttribute="leading" secondItem="24P-xY-ccx" secondAttribute="leading" id="wcp-NK-fCo"/>
+                            <constraint firstItem="24P-xY-ccx" firstAttribute="trailing" secondItem="FSY-fg-Dpj" secondAttribute="trailing" id="wk4-WS-8jq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="24P-xY-ccx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XpO-El-Jj2"/>
+                    <connections>
+                        <outlet property="collectionView" destination="lDM-nk-SZb" id="gxs-Hd-KtZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Etd-f7-Uof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="-74"/>
+        </scene>
+        <!--Coupon-->
+        <scene sceneID="H8Z-bo-6je">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="36S-wY-dyZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Coupon" image="tab_coupon" selectedImage="tabSel_coupon" id="N3x-UO-6N1"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qyh-Zj-2iG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mYh-So-aQB" kind="relationship" relationship="rootViewController" id="Scs-Cv-uwG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U63-ay-afB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="-74"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabSel_coupon" width="22" height="22"/>
+        <image name="tab_coupon" width="22" height="22"/>
+        <namedColor name="Background">
+            <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GeneralText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

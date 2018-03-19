@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZEF-FT-0A0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FootballVC-->
+        <scene sceneID="apj-F7-tq5">
+            <objects>
+                <viewController id="exc-nt-pcG" customClass="FootballVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="12b-pw-qZq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gBB-ES-kvF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z5m-0j-K7v">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gBB-ES-kvF" firstAttribute="trailing" secondItem="A9X-Lm-JdA" secondAttribute="trailing" id="D5x-TP-O39"/>
+                            <constraint firstItem="gBB-ES-kvF" firstAttribute="top" secondItem="A9X-Lm-JdA" secondAttribute="top" id="dby-Be-sRj"/>
+                            <constraint firstItem="gBB-ES-kvF" firstAttribute="bottom" secondItem="A9X-Lm-JdA" secondAttribute="bottom" id="elW-mB-kSi"/>
+                            <constraint firstItem="gBB-ES-kvF" firstAttribute="leading" secondItem="A9X-Lm-JdA" secondAttribute="leading" id="lzM-MM-KuR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A9X-Lm-JdA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UGq-De-ddI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="gBB-ES-kvF" id="hdP-To-8b4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dK-l3-Vc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="131"/>
+        </scene>
+        <!--Football-->
+        <scene sceneID="Zpt-sg-KDX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZEF-FT-0A0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Football" image="tabSel_football" id="uOe-n3-5Qh"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QQ5-0I-OaK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="exc-nt-pcG" kind="relationship" relationship="rootViewController" id="7lP-6Q-XMJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAk-gz-mGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-660" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabSel_football" width="22" height="22"/>
+    </resources>
+</document>

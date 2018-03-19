@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CouponCell" customModule="BetTip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabSel_coupon" translatesAutoresizingMaskIntoConstraints="NO" id="dQD-tq-b4F">
+                        <rect key="frame" x="10" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="fDl-0f-9iL"/>
+                            <constraint firstAttribute="height" constant="20" id="u0L-Jq-jjh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5e9-5z-H39" userLabel="CreditLbl" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                        <rect key="frame" x="38" y="15" width="47.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="Secondary"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18.09.2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBJ-uQ-O3E" userLabel="DateLbl" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                        <rect key="frame" x="93.5" y="15" width="105" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="Secondary"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="far-4H-ARb" userLabel="TimeLbl" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                        <rect key="frame" x="236.5" y="15" width="48" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="Secondary"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-5b-UTN" userLabel="RateLbl" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                        <rect key="frame" x="292.5" y="15" width="47.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="Secondary"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYe-KB-Sv5">
+                        <rect key="frame" x="10" y="49" width="330" height="1"/>
+                        <color key="backgroundColor" name="Secondary"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="9lg-ev-7VE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="FBJ-uQ-O3E" firstAttribute="width" secondItem="5e9-5z-H39" secondAttribute="width" multiplier="2.2" id="1ow-qP-40d"/>
+                <constraint firstItem="5e9-5z-H39" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="3eU-Gy-lej"/>
+                <constraint firstItem="k9W-5b-UTN" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="5zF-cL-MtC"/>
+                <constraint firstAttribute="trailing" secondItem="jYe-KB-Sv5" secondAttribute="trailing" constant="10" id="98p-Wf-T2I"/>
+                <constraint firstItem="dQD-tq-b4F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Fb4-Tv-UD3"/>
+                <constraint firstItem="k9W-5b-UTN" firstAttribute="leading" secondItem="far-4H-ARb" secondAttribute="trailing" constant="8" id="FsX-cV-wvK"/>
+                <constraint firstAttribute="bottom" secondItem="jYe-KB-Sv5" secondAttribute="bottom" id="OY1-8m-qW7"/>
+                <constraint firstItem="k9W-5b-UTN" firstAttribute="width" secondItem="far-4H-ARb" secondAttribute="width" id="Sv6-Ag-Vqq"/>
+                <constraint firstAttribute="trailing" secondItem="k9W-5b-UTN" secondAttribute="trailing" constant="10" id="XSe-s6-3fn"/>
+                <constraint firstItem="FBJ-uQ-O3E" firstAttribute="leading" secondItem="5e9-5z-H39" secondAttribute="trailing" constant="8" id="cf2-sf-MeP"/>
+                <constraint firstItem="FBJ-uQ-O3E" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.3" id="eXL-Ss-Vik"/>
+                <constraint firstItem="dQD-tq-b4F" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="efV-YO-uEC"/>
+                <constraint firstItem="jYe-KB-Sv5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="fAK-Ov-KnZ"/>
+                <constraint firstItem="far-4H-ARb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FBJ-uQ-O3E" secondAttribute="trailing" constant="8" id="gnz-75-JfF"/>
+                <constraint firstItem="far-4H-ARb" firstAttribute="width" secondItem="5e9-5z-H39" secondAttribute="width" id="h4H-y3-Sda"/>
+                <constraint firstItem="FBJ-uQ-O3E" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="kSd-TR-Hkm"/>
+                <constraint firstItem="far-4H-ARb" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="tWS-cm-zni"/>
+                <constraint firstItem="5e9-5z-H39" firstAttribute="leading" secondItem="dQD-tq-b4F" secondAttribute="trailing" constant="8" id="vH3-Ah-fvr"/>
+                <constraint firstItem="5e9-5z-H39" firstAttribute="leading" secondItem="dQD-tq-b4F" secondAttribute="trailing" constant="8" id="zm8-B3-ZAk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="393" height="60"/>
+            <connections>
+                <outlet property="dateLbl" destination="FBJ-uQ-O3E" id="RBa-EX-7eg"/>
+                <outlet property="numberOfCreditLbl" destination="5e9-5z-H39" id="OLW-4p-Z3L"/>
+                <outlet property="rateLbl" destination="k9W-5b-UTN" id="87K-7p-xak"/>
+                <outlet property="timeLbl" destination="far-4H-ARb" id="hil-k2-3WQ"/>
+            </connections>
+            <point key="canvasLocation" x="-19" y="41"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="tabSel_coupon" width="22" height="22"/>
+        <namedColor name="Secondary">
+            <color red="0.26274509800000001" green="0.85882352939999995" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.26274509800000001" green="0.85882352939999995" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.26274509800000001" green="0.85882352939999995" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

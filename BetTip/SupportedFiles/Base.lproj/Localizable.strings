@@ -1,0 +1,68 @@
+/* 
+  Localizable.strings
+  BetTip
+
+  Created by Haydar Karkin on 27.11.2017.
+  Copyright © 2017 Haydar Karkin. All rights reserved.
+*/
+
+"Common.TryAgainLater" = "Please try again later.";
+"Common.Loading" = "Loading ..";
+"Common.OK" = "OK";
+"Common.Cancel" = "Cancel";
+"Common.Done" = "Done";
+"Common.Great" = "Great ☺️";
+"Common.Delete" = "Delete";
+"Common.Update" = "Update";
+"Common.Warning" = "Warning";
+"Common.Success" = "Success";
+"Common.Error" = "Error Occured";
+"Common.Sorry" = "Sorry 😢";
+"Common.Sure" = "Are you sure?";
+"Common.Process.Success" = "Process has been finished successfully.";
+"Common.Process.Error" = "Process couldn't be finished.";
+
+"Role.User" = "User";
+"Role.Moderator" = "Moderator";
+"Role.Admin" = "Administrator";
+
+"Auth.Login" = "Log in";
+"Auth.SignUp" = "Sign up";
+"Auth.Email" = "Email";
+"Auth.Password" = "Password";
+"Auth.Logout" = "Log out";
+"Auth.ConfirmLogout" = "Do you want to log out?";
+
+"Auth.Error.EmptyEmail" = "Email can't be empty.";
+"Auth.Error.InvalidEmail" = "Email is not valid.";
+"Auth.Error.EmptyPassword" = "Password can't be empty.";
+"Auth.Error.ShortPassword" = "Password has to be at least %d characters long.";
+"Auth.Error.WrongPassword" = "You've entered a wrong email or password.";
+"Auth.Error.UserDisabled" = "Your account has been disabled. Please contact us if you think this is a mistake.";
+"Auth.Error.Unknown" = "An internal error occured. Please try again later.";
+"Auth.Error.EmailAlreadyInUse" = "Email already registered.";
+"Auth.Error.SignupTitle" = "Can't register";
+"Auth.Error.LoginTitle" = "Can't log in";
+
+"Credit.Price" = "Price";
+"Credit.NumberOfCredit" = "Number of Credits";
+"Credit.AddCredit" = "Set requiremnt fields.";
+"Credit.UpdateCredit" = "Update requiremnt fields.";
+"Credit.Title" = "Credit";
+"Credit.AddSuccess" = "Added a new credit!";
+"Credit.AddError" = "Can't add a new credit!";
+
+"ApplePay.SetAccount" = "Please set up Apple-Pay!";
+
+"User.Action.Title" = "User Actions";
+"User.Action.Desc" = "Please select an action.";
+"User.Role.Admin" = "Admin";
+"User.Role.Moderator" = "Moderator";
+"User.Role.User" = "User";
+"User.Role.Enable" = "Enable User";
+"User.Role.Disable" = "Disable User";
+"User.Role.ChangeRole" = "Change User's Role";
+"User.Role.Title" = "User Role";
+
+"Match.Basketball" = "Basketball";
+"Match.Football" = "Football";

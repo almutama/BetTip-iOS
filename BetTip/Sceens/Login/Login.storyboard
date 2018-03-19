@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2C-VJ-hqa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courier.ttc">
+            <string>Courier-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="oit-0b-3EU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2C-VJ-hqa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ARP-zC-SPq" customClass="MessageTitleNavBar" customModule="BetTip" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zOZ-kL-yqX" kind="relationship" relationship="rootViewController" id="Qst-iD-vPq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIB-6L-36a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1740" y="36"/>
+        </scene>
+        <!--Login WelcomeVC-->
+        <scene sceneID="cTc-hb-XEQ">
+            <objects>
+                <viewController id="zOZ-kL-yqX" customClass="LoginWelcomeVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nn8-hX-CqC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_tr" translatesAutoresizingMaskIntoConstraints="NO" id="bam-Cd-yEr">
+                                <rect key="frame" x="76" y="121.5" width="222" height="222"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bam-Cd-yEr" secondAttribute="height" multiplier="1:1" id="pJG-a5-rlq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehj-bU-rtw" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="547" width="375" height="60"/>
+                                <color key="backgroundColor" name="Secondary"/>
+                                <accessibility key="accessibilityConfiguration" label="Login using demo account"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="57A-fp-SSR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NRl-pn-vru" kind="show" identifier="loginSegue" id="bYo-ep-mDw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-g2-1DM" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="login">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="wNU-qJ-iu5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" name="Secondary"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OYf-WY-X7v" kind="show" identifier="registerSegue" id="aOV-7J-OkM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRSAT BAHİS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPi-mO-D3S">
+                                <rect key="frame" x="79.5" y="83.5" width="216.5" height="30"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="30"/>
+                                <color key="textColor" red="0.25490196078431371" green="0.29382526874542236" blue="0.31891736388206482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bam-Cd-yEr" firstAttribute="centerXWithinMargins" secondItem="WJC-tw-cDH" secondAttribute="centerX" id="ALo-s2-Yr5"/>
+                            <constraint firstItem="bam-Cd-yEr" firstAttribute="width" secondItem="Nn8-hX-CqC" secondAttribute="height" multiplier="1:3" id="F3S-bM-t6p"/>
+                            <constraint firstItem="WJC-tw-cDH" firstAttribute="bottom" secondItem="Gt2-g2-1DM" secondAttribute="bottom" id="FTQ-Fr-9wa"/>
+                            <constraint firstItem="bam-Cd-yEr" firstAttribute="bottom" secondItem="WJC-tw-cDH" secondAttribute="centerY" id="MIk-UT-dWc"/>
+                            <constraint firstItem="Ehj-bU-rtw" firstAttribute="leading" secondItem="WJC-tw-cDH" secondAttribute="leading" id="NT4-7F-LGT"/>
+                            <constraint firstItem="Gt2-g2-1DM" firstAttribute="leading" secondItem="WJC-tw-cDH" secondAttribute="leading" id="XAK-Df-pj8"/>
+                            <constraint firstItem="bam-Cd-yEr" firstAttribute="top" secondItem="VPi-mO-D3S" secondAttribute="bottom" constant="8" id="Zev-i4-FDz"/>
+                            <constraint firstItem="WJC-tw-cDH" firstAttribute="trailing" secondItem="Ehj-bU-rtw" secondAttribute="trailing" id="e3U-Jw-TQ6"/>
+                            <constraint firstItem="Gt2-g2-1DM" firstAttribute="top" secondItem="Ehj-bU-rtw" secondAttribute="bottom" id="geT-mM-Yo5"/>
+                            <constraint firstItem="WJC-tw-cDH" firstAttribute="trailing" secondItem="Gt2-g2-1DM" secondAttribute="trailing" id="jeJ-8d-zak"/>
+                            <constraint firstItem="VPi-mO-D3S" firstAttribute="centerX" secondItem="WJC-tw-cDH" secondAttribute="centerX" id="kdp-5Z-bqn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WJC-tw-cDH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qcg-PE-nkz"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GST-OM-hJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-869.60000000000002" y="35.532233883058474"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="S0b-F8-WWT">
+            <objects>
+                <viewController id="NRl-pn-vru" customClass="LoginVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wlj-hQ-wZN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-S5-1H0">
+                                <rect key="frame" x="0.0" y="43.5" width="375" height="121"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="OC5-g9-ssp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lco-50-JAF">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cb-cf-cv5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-Hn-uGc" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                                <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="GeneralText"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="NNG-Hn-uGc" firstAttribute="leading" secondItem="3Cb-cf-cv5" secondAttribute="leading" constant="20" id="4xm-OI-9Is"/>
+                                                            <constraint firstAttribute="trailing" secondItem="NNG-Hn-uGc" secondAttribute="trailing" id="Vjq-8J-FnP"/>
+                                                            <constraint firstAttribute="width" constant="100" id="x2K-8G-myB"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h1H-6F-JbR" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
+                                                        <rect key="frame" x="100" y="0.0" width="275" height="60"/>
+                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <accessibility key="accessibilityConfiguration" label="email"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="B1b-W6-rMB"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="GeneralText"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="h1H-6F-JbR" firstAttribute="baseline" secondItem="NNG-Hn-uGc" secondAttribute="baseline" id="FYU-fM-ITX"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFI-Bj-97C">
+                                                <rect key="frame" x="0.0" y="61" width="375" height="60"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlz-0l-Iqo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-xZ-yzc" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                                <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="GeneralText"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="7OU-Of-D2d"/>
+                                                            <constraint firstItem="vTT-xZ-yzc" firstAttribute="leading" secondItem="Tlz-0l-Iqo" secondAttribute="leading" constant="20" id="Wwa-zk-S5Z"/>
+                                                            <constraint firstAttribute="trailing" secondItem="vTT-xZ-yzc" secondAttribute="trailing" id="sb9-OA-Ish"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WKL-ND-wMR" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
+                                                        <rect key="frame" x="100" y="0.0" width="275" height="60"/>
+                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <accessibility key="accessibilityConfiguration" label="password"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="KF3-ad-XrQ"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="GeneralText"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="join" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="WKL-ND-wMR" firstAttribute="baseline" secondItem="vTT-xZ-yzc" secondAttribute="baseline" id="5Lj-cL-fJC"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="OC5-g9-ssp" firstAttribute="top" secondItem="Mlb-S5-1H0" secondAttribute="top" constant="0.5" id="LQy-Aq-e7Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="OC5-g9-ssp" secondAttribute="trailing" id="V5L-ka-I0k"/>
+                                    <constraint firstItem="OC5-g9-ssp" firstAttribute="leading" secondItem="Mlb-S5-1H0" secondAttribute="leading" id="Xrd-tR-cSP"/>
+                                    <constraint firstAttribute="bottom" secondItem="OC5-g9-ssp" secondAttribute="bottom" id="z5a-8j-AYX"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-Xj-yXl" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="109" y="188.5" width="157" height="30"/>
+                                <state key="normal" title="Forgot your password?">
+                                    <color key="titleColor" name="GeneralText"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Son-39-5ke" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" name="Secondary"/>
+                                <accessibility key="accessibilityConfiguration" label="login">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nDR-71-dBm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="ziH-Xj-yXl" firstAttribute="centerX" secondItem="zgY-t2-Gp0" secondAttribute="centerX" id="17w-MR-tdv"/>
+                            <constraint firstItem="Mlb-S5-1H0" firstAttribute="top" secondItem="zgY-t2-Gp0" secondAttribute="top" constant="23.5" id="HsH-2o-FyD"/>
+                            <constraint firstItem="zgY-t2-Gp0" firstAttribute="trailing" secondItem="Mlb-S5-1H0" secondAttribute="trailing" id="Ix6-4R-dG4"/>
+                            <constraint firstItem="Son-39-5ke" firstAttribute="leading" secondItem="zgY-t2-Gp0" secondAttribute="leading" id="Jac-xh-O7I"/>
+                            <constraint firstItem="ziH-Xj-yXl" firstAttribute="top" secondItem="Mlb-S5-1H0" secondAttribute="bottom" constant="24" id="KmN-1u-MgB"/>
+                            <constraint firstItem="Mlb-S5-1H0" firstAttribute="leading" secondItem="zgY-t2-Gp0" secondAttribute="leading" id="Ml0-yh-Az3"/>
+                            <constraint firstItem="zgY-t2-Gp0" firstAttribute="bottom" secondItem="Son-39-5ke" secondAttribute="bottom" id="plP-XI-hvY"/>
+                            <constraint firstItem="zgY-t2-Gp0" firstAttribute="trailing" secondItem="Son-39-5ke" secondAttribute="trailing" id="yjw-Sh-CKt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zgY-t2-Gp0"/>
+                    </view>
+                    <connections>
+                        <outlet property="mailTextField" destination="h1H-6F-JbR" id="a8j-qn-8pV"/>
+                        <outlet property="passwordTextField" destination="WKL-ND-wMR" id="86V-o7-d4N"/>
+                        <outlet property="signInBtn" destination="Son-39-5ke" id="lVa-ud-GeS"/>
+                        <segue destination="Av0-bH-kBb" kind="show" identifier="forgorPasswordSegue" id="1xN-R8-azN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQi-hb-onh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="-432"/>
+        </scene>
+        <!--Forgot PasswordVC-->
+        <scene sceneID="wG4-Ul-K3p">
+            <objects>
+                <viewController id="Av0-bH-kBb" customClass="ForgotPasswordVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jXk-gU-KNF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-fD-tBU">
+                                <rect key="frame" x="0.0" y="43.5" width="375" height="121"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="g8U-rZ-YbC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXp-RS-3ia">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgF-Ch-Xtg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsD-c2-Emf" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                                <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="GeneralText"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="7cY-4o-gcb"/>
+                                                            <constraint firstAttribute="trailing" secondItem="BsD-c2-Emf" secondAttribute="trailing" id="XDV-Jr-TAo"/>
+                                                            <constraint firstItem="BsD-c2-Emf" firstAttribute="leading" secondItem="ZgF-Ch-Xtg" secondAttribute="leading" constant="20" id="il8-Yg-1VI"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lxW-5p-YLu" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
+                                                        <rect key="frame" x="100" y="0.0" width="275" height="60"/>
+                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <accessibility key="accessibilityConfiguration" label="password"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="TFO-Qy-WU6"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="GeneralText"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="send"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="lxW-5p-YLu" firstAttribute="baseline" secondItem="BsD-c2-Emf" secondAttribute="baseline" id="BMn-y7-Kju"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-ZL-8gF">
+                                                <rect key="frame" x="0.0" y="61" width="375" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email address below to receive your password reset instructions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qK-UB-SEt" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="0.0" width="335" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="GeneralText"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="2qK-UB-SEt" secondAttribute="bottom" id="7ar-xf-JV6"/>
+                                                    <constraint firstItem="2qK-UB-SEt" firstAttribute="top" secondItem="gtZ-ZL-8gF" secondAttribute="top" id="7ha-af-7gd"/>
+                                                    <constraint firstItem="2qK-UB-SEt" firstAttribute="leading" secondItem="gtZ-ZL-8gF" secondAttribute="leading" constant="20" id="L9F-At-h8E"/>
+                                                    <constraint firstAttribute="height" constant="60" id="hdW-tS-RO9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2qK-UB-SEt" secondAttribute="trailing" constant="20" id="lwl-2y-f4E"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="g8U-rZ-YbC" secondAttribute="bottom" id="LwU-Wg-1hc"/>
+                                    <constraint firstAttribute="trailing" secondItem="g8U-rZ-YbC" secondAttribute="trailing" id="V08-V6-o65"/>
+                                    <constraint firstItem="g8U-rZ-YbC" firstAttribute="top" secondItem="1oU-fD-tBU" secondAttribute="top" constant="0.5" id="b1d-yc-X6z"/>
+                                    <constraint firstItem="g8U-rZ-YbC" firstAttribute="leading" secondItem="1oU-fD-tBU" secondAttribute="leading" id="dEZ-gw-6Il"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZr-so-0Re" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" name="Secondary"/>
+                                <accessibility key="accessibilityConfiguration" label="login">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SnR-n1-QYn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SEND">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="aQd-du-MsG" firstAttribute="trailing" secondItem="nZr-so-0Re" secondAttribute="trailing" id="20N-1k-HNI"/>
+                            <constraint firstItem="aQd-du-MsG" firstAttribute="trailing" secondItem="1oU-fD-tBU" secondAttribute="trailing" id="Dvh-T8-JS5"/>
+                            <constraint firstItem="1oU-fD-tBU" firstAttribute="leading" secondItem="aQd-du-MsG" secondAttribute="leading" id="HhJ-wM-QA6"/>
+                            <constraint firstItem="aQd-du-MsG" firstAttribute="bottom" secondItem="nZr-so-0Re" secondAttribute="bottom" id="dvv-7h-N9O"/>
+                            <constraint firstItem="1oU-fD-tBU" firstAttribute="top" secondItem="aQd-du-MsG" secondAttribute="top" constant="23.5" id="hoY-6Q-ibW"/>
+                            <constraint firstItem="nZr-so-0Re" firstAttribute="leading" secondItem="aQd-du-MsG" secondAttribute="leading" id="jCB-re-OXv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aQd-du-MsG"/>
+                    </view>
+                    <connections>
+                        <outlet property="mailTextField" destination="lxW-5p-YLu" id="wS9-8n-Xf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hO7-Vr-s29" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="-432"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="6dV-f7-Vjw">
+            <objects>
+                <viewController id="OYf-WY-X7v" customClass="RegisterVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LRq-Od-YO5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwe-mR-W5v">
+                                <rect key="frame" x="0.0" y="43.5" width="375" height="280"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fcA-Dh-da3">
+                                        <rect key="frame" x="0.0" y="1" width="375" height="279"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jx2-bM-pcW">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcb-KZ-WhI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-ht-9oY" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                                <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="GeneralText"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="IZ7-IY-5Ap"/>
+                                                            <constraint firstItem="hxU-ht-9oY" firstAttribute="leading" secondItem="lcb-KZ-WhI" secondAttribute="leading" constant="20" id="Viu-RZ-dyk"/>
+                                                            <constraint firstAttribute="trailing" secondItem="hxU-ht-9oY" secondAttribute="trailing" id="jRv-1A-jl8"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vQI-U9-fvp" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
+                                                        <rect key="frame" x="100" y="0.0" width="275" height="60"/>
+                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Email"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="eJK-Gb-vZe"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="GeneralText"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="vQI-U9-fvp" firstAttribute="baseline" secondItem="hxU-ht-9oY" secondAttribute="baseline" id="zGt-wf-eRJ"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3q-If-e2n">
+                                                <rect key="frame" x="0.0" y="61" width="375" height="60"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoP-Tu-8wK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oi-6y-iJb" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                                <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="GeneralText"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="6oi-6y-iJb" firstAttribute="leading" secondItem="uoP-Tu-8wK" secondAttribute="leading" constant="20" id="Lp4-FH-gUb"/>
+                                                            <constraint firstAttribute="trailing" secondItem="6oi-6y-iJb" secondAttribute="trailing" id="Vg5-NC-Nwi"/>
+                                                            <constraint firstAttribute="width" constant="100" id="xAC-dj-m7r"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l09-bf-s11" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
+                                                        <rect key="frame" x="100" y="0.0" width="275" height="60"/>
+                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Password"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="oHd-IF-BxB"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="GeneralText"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="l09-bf-s11" firstAttribute="baseline" secondItem="6oi-6y-iJb" secondAttribute="baseline" id="HFV-Ej-bEz"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgV-uL-az0">
+                                                <rect key="frame" x="0.0" y="122" width="375" height="60"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PB2-SR-xHp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNW-Nf-6gm" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                                <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="GeneralText"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="LNW-Nf-6gm" secondAttribute="trailing" id="9m3-Pt-QPu"/>
+                                                            <constraint firstAttribute="width" constant="100" id="YMQ-Oc-ZUT"/>
+                                                            <constraint firstItem="LNW-Nf-6gm" firstAttribute="leading" secondItem="PB2-SR-xHp" secondAttribute="leading" constant="20" id="haB-qI-1cg"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fUr-ik-W8m" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
+                                                        <rect key="frame" x="100" y="0.0" width="275" height="60"/>
+                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Confirm Password"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="BFZ-eh-rlC"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="GeneralText"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="fUr-ik-W8m" firstAttribute="baseline" secondItem="LNW-Nf-6gm" secondAttribute="baseline" id="weU-3p-TZd"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3Y-AF-laj">
+                                                <rect key="frame" x="0.0" y="183" width="375" height="96"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Reqired fields" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7E-v1-NK9" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="16" width="116.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                        <color key="textColor" name="GeneralText"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="96" id="C2w-fe-VQr"/>
+                                                    <constraint firstItem="b7E-v1-NK9" firstAttribute="leading" secondItem="P3Y-AF-laj" secondAttribute="leading" constant="16" id="adq-Av-nql"/>
+                                                    <constraint firstItem="b7E-v1-NK9" firstAttribute="top" secondItem="P3Y-AF-laj" secondAttribute="top" constant="16" id="dZ2-fS-y2U"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fcA-Dh-da3" secondAttribute="trailing" id="7ha-cB-heo"/>
+                                    <constraint firstItem="fcA-Dh-da3" firstAttribute="top" secondItem="Mwe-mR-W5v" secondAttribute="top" constant="0.5" id="A8p-PI-vKX"/>
+                                    <constraint firstItem="fcA-Dh-da3" firstAttribute="leading" secondItem="Mwe-mR-W5v" secondAttribute="leading" id="aqJ-2B-79a"/>
+                                    <constraint firstAttribute="bottom" secondItem="fcA-Dh-da3" secondAttribute="bottom" id="xQd-GM-uEX"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE7-oN-QVu" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" name="Secondary"/>
+                                <accessibility key="accessibilityConfiguration" label="login">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="yrc-00-iqJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="fcw-1t-mLA" firstAttribute="trailing" secondItem="Mwe-mR-W5v" secondAttribute="trailing" id="YWV-0z-pAk"/>
+                            <constraint firstItem="Mwe-mR-W5v" firstAttribute="top" secondItem="fcw-1t-mLA" secondAttribute="top" constant="23.5" id="oix-kr-ag2"/>
+                            <constraint firstItem="fcw-1t-mLA" firstAttribute="bottom" secondItem="YE7-oN-QVu" secondAttribute="bottom" id="qm2-sZ-eyK"/>
+                            <constraint firstItem="fcw-1t-mLA" firstAttribute="trailing" secondItem="YE7-oN-QVu" secondAttribute="trailing" id="tnI-TD-734"/>
+                            <constraint firstItem="YE7-oN-QVu" firstAttribute="leading" secondItem="fcw-1t-mLA" secondAttribute="leading" id="v2l-We-Taf"/>
+                            <constraint firstItem="Mwe-mR-W5v" firstAttribute="leading" secondItem="fcw-1t-mLA" secondAttribute="leading" id="vC4-1O-p1w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fcw-1t-mLA"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmTextField" destination="fUr-ik-W8m" id="ayC-as-Vvb"/>
+                        <outlet property="mailTextField" destination="vQI-U9-fvp" id="tL7-56-ZPw"/>
+                        <outlet property="passwordTextField" destination="l09-bf-s11" id="dhT-dF-7CL"/>
+                        <outlet property="signUpBtn" destination="YE7-oN-QVu" id="8va-La-jVK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avm-lU-BSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="319"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_tr" width="400" height="400"/>
+        <namedColor name="Background">
+            <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Complimentary">
+            <color red="0.25098039215686274" green="0.31372549019607843" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GeneralText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

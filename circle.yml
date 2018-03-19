@@ -1,0 +1,24 @@
+machine:
+ xcode:
+   version: "9.0"
+
+dependencies:
+  cache_directories:
+    - 'vendor/bundle'
+  override:
+    - bundle install --path vendor/bundle
+deployment:
+  staging:
+    branch: develop
+    commands:
+     - bundle exec fastlane test
+
+  testflight:
+   tag: /beta-.*/
+   commands:
+    - bundle exec fastlane test
+
+  release:
+    tag: /release-.*/
+    commands:
+    - bundle exec fastlane test

@@ -1,20 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.2'
 use_frameworks!
-
-# ignore all warnings from all pods
 inhibit_all_warnings!
 
 def testing_pods
   pod 'Quick'
   pod 'Nimble'
-end
-
-def network_pods
-  pod 'Moya/RxSwift', '~> 10.0'
-  pod 'ObjectMapper', '~> 2.2'
-  #pod 'Moya-ObjectMapper/RxSwift', '~> 2.4.2'
-  pod 'ReachabilitySwift'
 end
 
 def firebase_pods
@@ -28,40 +19,56 @@ end
 
 def ui_pods
   pod 'NVActivityIndicatorView'
-  #pod 'SCLAlertView'
   pod 'SwiftMessages'
-  #pod 'Kingfisher'
-  pod 'SideMenu'
-  pod 'IGListKit'
-  pod "Hero"
-  pod 'HGPlaceholders'
-  pod "VegaScrollFlowLayout"
+  pod 'Hero'
+  pod 'DZNEmptyDataSet'
+  pod 'VegaScrollFlowLayout'
+end
+
+def reactive_pods
+    pod 'RxSwift', '~> 4.0'
+    pod 'RxCocoa'
+    pod 'RxOptional'
+    pod 'RxDataSources'
+    pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'Validation', 'StaticMap', 'Configuration']
 end
 
 def general_pods
-  pod 'CocoaLumberjack/Swift'
-  pod 'RxSwift', '~> 4.0'
-  pod 'RxCocoa'
-  pod 'RxOptional'
+  pod 'ObjectMapper'
+  pod 'ReachabilitySwift'
+  pod 'Result', '~> 3.0.0'
   pod 'SwiftGen'
   pod 'Swinject'
   pod 'SwinjectStoryboard'
+  pod 'SwiftKeychainWrapper'
+  pod 'IQKeyboardManagerSwift'
+  
+  plugin 'cocoapods-keys', {
+      :project => "BetTip",
+      :target => "BetTip",
+      :keys => [
+      "HeyzapID",
+      "HockeyID"
+      ]
+  }
 end
 
 def tracking_pods
+  pod 'PaperTrailLumberjack/Swift'
   pod 'HockeySDK'
+  pod 'Fabric'
   pod 'Crashlytics'
+  pod 'SwiftLint'
 end
 
 def ad_pods
   pod 'Heyzap'
-  pod 'FyberSDK'
 end
 
 target 'BetTip' do
-  network_pods
   firebase_pods
   general_pods
+  reactive_pods
   tracking_pods
   ui_pods
   ad_pods
@@ -69,9 +76,9 @@ end
 
 target 'BetTipTests' do
   testing_pods
-  network_pods
   firebase_pods
   general_pods
+  reactive_pods
 end
 
 post_install do |installer_representation|
