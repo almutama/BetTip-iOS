@@ -37,15 +37,6 @@ class AddCouponVC: BaseViewController {
         self.getMatchesWithType(type: .football)
     }
     
-    func getMatchesWithType(type: MatchAction) {
-        if type == .football {
-            self.selectMatchTypeButton.setImage(Asset.TabBar.tabSelFootball.image, for: .normal)
-        } else if type == .basketball {
-            self.selectMatchTypeButton.setImage(Asset.TabBar.tabSelBasketball.image, for: .normal)
-        }
-        self.viewModel.getMatchesWithType(type: type)
-    }
-    
     func bindViewModel() {
         self.bindAnimateWith(variable: self.isLoading)
             .disposed(by: disposeBag)
@@ -80,7 +71,8 @@ class AddCouponVC: BaseViewController {
             .subscribe(onNext: { action in
                 switch action {
                 case .basketball, .football:
-                   self.getMatchesWithType(type: action)
+                    self.getMatchesWithType(type: action)
+                    self.selectedMatches.value = []
                 case .cancel: break
                 }
             })
@@ -95,8 +87,9 @@ class AddCouponVC: BaseViewController {
         self.tableView.rx.modelDeselected(MatchModel.self)
             .subscribe(onNext: { [weak self] match in
                 guard let strongSelf = self else { return }
-                print("deleted match: ", match)
-                strongSelf.selectedMatches.value = strongSelf.selectedMatches.value.filter { $0 != match }
+                print("deleted match: ", match.iddaaId!)
+                print(strongSelf.selectedMatches.value.filter { $0 !== match })
+                
             })
             .disposed(by: disposeBag)
         
@@ -114,5 +107,32 @@ class AddCouponVC: BaseViewController {
                 guard let strongSelf = self else { return }
                 print(strongSelf.selectedMatches.value)
             }).disposed(by: disposeBag)
+    }
+    
+    func getMatchesWithType(type: MatchAction) {
+        if type == .football {
+            self.selectMatchTypeButton.setImage(Asset.TabBar.tabSelFootball.image, for: .normal)
+        } else if type == .basketball {
+            self.selectMatchTypeButton.setImage(Asset.TabBar.tabSelBasketball.image, for: .normal)
+        }
+        self.viewModel.getMatchesWithType(type: type)
+    }
+    
+    func makeCoupon(numOfCredit: Int) -> CouponModel {
+        var odd: Double = 1.0
+        for match in self.selectedMatches.value {
+            if let matchOdd = match.odd {
+                odd = matchOdd * odd
+            }
+        }
+        let startDate = Date().dateWithFormat()
+        guard let email = UserEventService.shared.user.value?.email else {
+            return CouponModel(numOfCredit: numOfCredit, startDate: startDate, odd: odd, won: -1, tipster: "", matches: selectedMatches.value)
+        }
+        return CouponModel(numOfCredit: numOfCredit, startDate: startDate, odd: odd, won: -1, tipster: email, matches: selectedMatches.value)
+    }
+    
+    func saveCoupon() {
+        
     }
 }
