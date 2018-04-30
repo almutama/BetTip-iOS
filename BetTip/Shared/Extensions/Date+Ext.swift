@@ -24,14 +24,14 @@ extension Date {
         return Int(monthString)!
     }
     
-    static func fromUTC(format:String) -> Date?{
+    static func fromUTC(format: String) -> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         formatter.timeZone = TimeZone(abbreviation: "UTC")
         return formatter.date(from: format)
     }
     
-    static func toUTC(from:Date) -> String?{
+    static func toUTC(from: Date) -> String? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         formatter.timeZone = TimeZone(abbreviation: "UTC")
@@ -42,7 +42,7 @@ extension Date {
         return Date().timeIntervalSince1970 * 1000
     }
     
-    var day:Int {return Calendar.current.component(.day, from:self)}
-    var month:Int {return Calendar.current.component(.month, from:self)}
-    var year:Int {return Calendar.current.component(.year, from:self)}
+    var day: Int { return Calendar.current.component(.day, from: self) }
+    var month: Int { return Calendar.current.component(.month, from: self) }
+    var year: Int { return Calendar.current.component(.year, from: self) }
 }
