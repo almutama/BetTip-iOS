@@ -150,6 +150,8 @@
 		B0A7AA3B1FCD7C6800DC4F62 /* UserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA3A1FCD7C6800DC4F62 /* UserAssembly.swift */; };
 		B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */; };
 		B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */; };
+		B0BB91AE206EF3A40082828E /* AddMatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB91AD206EF3A40082828E /* AddMatchVC.swift */; };
+		B0BB91B0206EF3BE0082828E /* AddMatchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB91AF206EF3BE0082828E /* AddMatchVM.swift */; };
 		B0BDD7FA1FE69F6D00F3851A /* UIAlertController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */; };
 		B0BDD7FC1FE6CD7700F3851A /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */; };
 		B0BDD7FF1FEC4CD800F3851A /* UserEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */; };
@@ -333,6 +335,8 @@
 		B0A7AA3F1FCE8D3F00DC4F62 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		B0A7AA411FCE8D4A00DC4F62 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetTip.entitlements; sourceTree = "<group>"; };
+		B0BB91AD206EF3A40082828E /* AddMatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchVC.swift; sourceTree = "<group>"; };
+		B0BB91AF206EF3BE0082828E /* AddMatchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchVM.swift; sourceTree = "<group>"; };
 		B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Rx.swift"; sourceTree = "<group>"; };
 		B0BDD7FB1FE6CD7700F3851A /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		B0BDD7FE1FEC4CD800F3851A /* UserEventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventService.swift; sourceTree = "<group>"; };
@@ -709,6 +713,7 @@
 			isa = PBXGroup;
 			children = (
 				B00E3C5C20112F6400802708 /* AddCouponVM.swift */,
+				B0BB91AF206EF3BE0082828E /* AddMatchVM.swift */,
 				B0569A891FC37D2A00FF34A1 /* AdminVM.swift */,
 				B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */,
 				B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */,
@@ -723,6 +728,7 @@
 			isa = PBXGroup;
 			children = (
 				B00E3C5820112F4500802708 /* AddCouponVC.swift */,
+				B0BB91AD206EF3A40082828E /* AddMatchVC.swift */,
 				B0569A8D1FC37D3F00FF34A1 /* AdminVC.swift */,
 				B0BDD80A200A2DBA00F3851A /* ControlCouponsVC.swift */,
 				B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */,
@@ -1206,7 +1212,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Haydar Karkin";
 				TargetAttributes = {
 					B08A45751F9DD5430082BDD3 = {
@@ -1456,6 +1462,7 @@
 				B0569AFA1FD0801100FF34A1 /* StyledButton.swift in Sources */,
 				B0569A8E1FC37D3F00FF34A1 /* AdminVC.swift in Sources */,
 				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
+				B0BB91AE206EF3A40082828E /* AddMatchVC.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */,
 				B0BDD8081FFED0A800F3851A /* UserRoleAction.swift in Sources */,
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
@@ -1509,6 +1516,7 @@
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
 				B0A281A41FD59ADF00B7E892 /* UserCreditModel.swift in Sources */,
 				B05063AF1FE5A1F5004CECEC /* CouponCell.swift in Sources */,
+				B0BB91B0206EF3BE0082828E /* AddMatchVM.swift in Sources */,
 				B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */,
 				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CreditsVC.swift in Sources */,
@@ -1633,6 +1641,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1640,6 +1649,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1692,6 +1702,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1699,6 +1710,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
