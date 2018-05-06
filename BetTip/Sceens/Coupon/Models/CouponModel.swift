@@ -18,19 +18,19 @@ struct CouponModel: BaseModel {
     var tipster: String?
     var matches: [MatchModel]?
     
-    init(numOfCredit: Int,
-         startDate: String,
-         odd: Double,
-         won: Int,
-         tipster: String,
-         matches: [MatchModel]) {
-        self.numOfCredit = numOfCredit
-        self.startDate = startDate
-        self.odd = odd
-        self.won = won
-        self.tipster = tipster
-        self.matches = matches
-    }
+//    init(numOfCredit: Int,
+//         startDate: String,
+//         odd: Double,
+//         won: Int,
+//         tipster: String,
+//         matches: [MatchModel]) {
+//        self.numOfCredit = numOfCredit
+//        self.startDate = startDate
+//        self.odd = odd
+//        self.won = won
+//        self.tipster = tipster
+//        self.matches = matches
+//    }
 }
 
 extension CouponModel: Mappable {

@@ -52,18 +52,18 @@ class HockeyApp {
     }
     
     func setupAuth() {
-        #if (arch(i386) || arch(x86_64)) && os(iOS)
+        #if targetEnvironment(simulator)
             setupNoAuth()
         #else
             setupEmailAuth()
         #endif
     }
     
-    func validateAuth() -> (((Bool, Error?) -> Swift.Void)!) -> Void {
+    func validateAuth() -> (((Bool, Error?) -> Swift.Void)?) -> Void {
         return BITHockeyManager.shared().authenticator.validate
     }
     
-    func identify() -> (((Bool, Error?) -> Swift.Void)!) -> Void {
+    func identify() -> (((Bool, Error?) -> Swift.Void)?) -> Void {
         return BITHockeyManager.shared().authenticator.identify
     }
 }

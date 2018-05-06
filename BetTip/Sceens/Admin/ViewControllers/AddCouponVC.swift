@@ -125,11 +125,14 @@ class AddCouponVC: BaseViewController {
                 odd = matchOdd * odd
             }
         }
-        let startDate = Date().dateWithFormat()
-        guard let email = UserEventService.shared.user.value?.email else {
-            return CouponModel(numOfCredit: numOfCredit, startDate: startDate, odd: odd, won: -1, tipster: "", matches: selectedMatches.value)
-        }
-        return CouponModel(numOfCredit: numOfCredit, startDate: startDate, odd: odd, won: -1, tipster: email, matches: selectedMatches.value)
+        var coupon = CouponModel()
+        coupon.numOfCredit = numOfCredit
+        coupon.startDate = Date().dateWithFormat()
+        coupon.odd = odd
+        coupon.won = -1
+        coupon.tipster = UserEventService.shared.user.value?.email ?? ""
+        coupon.matches = selectedMatches.value
+        return coupon
     }
     
     func saveCoupon() {

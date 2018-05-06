@@ -15,6 +15,7 @@ def firebase_pods
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/AdMob'
 end
 
 def ui_pods

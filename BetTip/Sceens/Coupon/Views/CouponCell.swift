@@ -24,9 +24,9 @@ class CouponCell: UICollectionViewCell, Reusable {
                 .subscribe({ [unowned self] (event) in
                     if let entity = event.element {
                         self.numberOfCreditLbl.text = "\(String(describing: entity.numOfCredit))"
-                        self.dateLbl.text = "\(String(describing: entity.date))"
-                        self.timeLbl.text = "\(String(describing: entity.time))"
-                        self.rateLbl.text = "\(String(describing: entity.rate))"
+                        self.dateLbl.text = "\(String(describing: entity.startDate))"
+                        //self.timeLbl.text = "\(String(describing: entity.time))"
+                        self.rateLbl.text = "\(String(describing: entity.odd))"
                     }
                 })
                 .disposed(by: disposeBag)
