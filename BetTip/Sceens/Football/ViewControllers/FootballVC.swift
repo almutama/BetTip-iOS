@@ -62,7 +62,7 @@ class FootballVC: BaseViewController {
     }
     
     func configureBanner() {
-        let bannerView = GADBannerView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        let bannerView = GADBannerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
         bannerView.adUnitID = Constants.bannerAdUnitID
         bannerView.rootViewController = self
         
