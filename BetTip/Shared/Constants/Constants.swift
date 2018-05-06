@@ -43,6 +43,10 @@ struct Constants {
     static let basketballType = 2
     static let queryLimit: UInt = 50
     
+    //AdMob
+    static let adMobID = "ca-app-pub-7194873011234130~4009179113"
+    static let bannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+    
     //UI
     static let baseDesignScreenWidth: CGFloat = 375.0
     static let baseDesignScreenHeight: CGFloat = 667.0

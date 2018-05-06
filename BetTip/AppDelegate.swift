@@ -14,6 +14,7 @@ import UserNotifications
 import Keys
 import Swinject
 import SwinjectStoryboard
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -70,6 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
         Database.database().reference().keepSynced(true)
+        GADMobileAds.configure(withApplicationID: Constants.adMobID)
         IQKeyboardManager.sharedManager().enable = true
         UIService.shared.registerForEvents()
         UserEventService.shared.registerForEvents()
