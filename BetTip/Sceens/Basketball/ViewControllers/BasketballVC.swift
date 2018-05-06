@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import VegaScrollFlowLayout
+import GoogleMobileAds
 
 class BasketballVC: BaseViewController {
     
@@ -18,11 +19,14 @@ class BasketballVC: BaseViewController {
     private let isLoading = Variable<Bool>(false)
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var bannerContainer: UIView!
+    @IBOutlet weak var bannerContainerTop: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.prepareUI()
         self.bindViewModel()
+        self.configureBanner()
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,6 +60,31 @@ class BasketballVC: BaseViewController {
                                                    cellType: BasketballCell.self)) { _, data, cell in
                 cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
+    }
+    
+    func configureBanner() {
+        let bannerView = GADBannerView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        bannerView.adUnitID = Constants.bannerAdUnitID
+        bannerView.rootViewController = self
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        bannerView.load(request)
+        
+        self.bannerContainer.addSubview(bannerView)
+        
+        self.bannerContainerTop.constant = -50
+        self.view.layoutIfNeeded()
+        
+        bannerView.rx.didReceiveAd.subscribe(
+            onNext: { [weak self] _ in
+                UIView.animate(withDuration: 0.5) {
+                    guard self != nil else { return }
+                    
+                    self?.bannerContainerTop.constant = 0
+                    self?.view.layoutIfNeeded()
+                }
+        }).disposed(by: self.disposeBag)
     }
 }
 

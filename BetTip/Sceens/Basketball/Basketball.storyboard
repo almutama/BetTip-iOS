@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X9C-CG-rR0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X9C-CG-rR0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Pe-xw-uNG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="504"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qKq-k3-urB">
                                     <size key="itemSize" width="50" height="50"/>
@@ -28,13 +28,23 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyD-hI-Lf3" userLabel="AdView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EgB-lc-cdu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5Pe-xw-uNG" firstAttribute="bottom" secondItem="MVH-GR-ehW" secondAttribute="bottom" id="550-FD-cGs"/>
+                            <constraint firstItem="AyD-hI-Lf3" firstAttribute="top" secondItem="MVH-GR-ehW" secondAttribute="top" id="9hc-jF-IuB"/>
                             <constraint firstItem="5Pe-xw-uNG" firstAttribute="trailing" secondItem="MVH-GR-ehW" secondAttribute="trailing" id="DbN-Ys-uby"/>
                             <constraint firstItem="5Pe-xw-uNG" firstAttribute="leading" secondItem="MVH-GR-ehW" secondAttribute="leading" id="Lbk-kA-I8Z"/>
-                            <constraint firstItem="5Pe-xw-uNG" firstAttribute="top" secondItem="MVH-GR-ehW" secondAttribute="top" id="zdM-Gx-Z7z"/>
+                            <constraint firstItem="AyD-hI-Lf3" firstAttribute="trailing" secondItem="MVH-GR-ehW" secondAttribute="trailing" id="iGX-aI-fHA"/>
+                            <constraint firstItem="AyD-hI-Lf3" firstAttribute="leading" secondItem="MVH-GR-ehW" secondAttribute="leading" id="jhJ-vI-hja"/>
+                            <constraint firstItem="5Pe-xw-uNG" firstAttribute="top" secondItem="AyD-hI-Lf3" secondAttribute="bottom" id="xWO-vM-6fj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MVH-GR-ehW"/>
                     </view>
@@ -42,6 +52,8 @@
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bannerContainer" destination="AyD-hI-Lf3" id="juL-xL-fgz"/>
+                        <outlet property="bannerContainerTop" destination="9hc-jF-IuB" id="AIU-dh-yUW"/>
                         <outlet property="collectionView" destination="5Pe-xw-uNG" id="Bnz-5X-kVk"/>
                     </connections>
                 </viewController>
