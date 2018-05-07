@@ -27,7 +27,8 @@ class AppAssembly: NSObject {
         BasketballAssembly(),
         FootballAssembly(),
         CreditAssembly(),
-        CouponAssembly()
+        CouponAssembly(),
+        MatchAssembly()
         ], container: SwinjectStoryboard.defaultContainer)
     
 }

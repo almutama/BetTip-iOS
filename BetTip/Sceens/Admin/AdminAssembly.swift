@@ -21,8 +21,7 @@ class AdminAssembly: Assembly {
             AdminService(userService: r.resolve(UserServiceType.self)!,
                          creditService: r.resolve(CreditServiceType.self)!,
                          couponService: r.resolve(CouponServiceType.self)!,
-                         basketballService: r.resolve(BasketballServiceType.self)!,
-                         footballService: r.resolve(FootballServiceType.self)!)
+                         matchService: r.resolve(MatchServiceType.self)!)
         }
         
         // ViewModels

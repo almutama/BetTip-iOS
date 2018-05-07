@@ -25,6 +25,7 @@ protocol AdminServiceType {
     func getUsers() -> Observable<[UserModel]>
     func changeUserRole(user: UserModel, role: Role) -> Observable<Bool>
     func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool>
+    func addMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>>
     func basketballMatches() -> Observable<[MatchModel]>
     func footballMatches() -> Observable<[MatchModel]>
 }
@@ -34,19 +35,16 @@ class AdminService: AdminServiceType {
     private let userService: UserServiceType
     private let creditService: CreditServiceType
     private let couponService: CouponServiceType
-    private let basketballService: BasketballServiceType
-    private let footballService: FootballServiceType
+    private let matchService: MatchServiceType
     
     init(userService: UserServiceType,
          creditService: CreditServiceType,
          couponService: CouponServiceType,
-         basketballService: BasketballServiceType,
-         footballService: FootballServiceType) {
+         matchService: MatchServiceType) {
         self.userService = userService
         self.creditService = creditService
         self.couponService = couponService
-        self.basketballService = basketballService
-        self.footballService = footballService
+        self.matchService = matchService
     }
     
     // MARK: Credit Services
@@ -97,11 +95,15 @@ class AdminService: AdminServiceType {
     }
     
     // MARK: Match Services
+    func addMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>> {
+        return matchService.addMatch(match: match)
+    }
+    
     func basketballMatches() -> Observable<[MatchModel]> {
-        return basketballService.basketballMatches()
+        return matchService.getMatches(matchType: Constants.basketballType)
     }
     
     func footballMatches() -> Observable<[MatchModel]> {
-        return footballService.footballMatches()
+        return matchService.getMatches(matchType: Constants.footballType)
     }
 }
