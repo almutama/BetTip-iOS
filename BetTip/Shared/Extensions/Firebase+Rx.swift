@@ -9,7 +9,6 @@
 import FirebaseDatabase
 import RxSwift
 import Result
-import Reactant
 import ObjectMapper
 
 enum FirebaseFetchError: Error {
@@ -69,7 +68,7 @@ extension DatabaseQuery {
     func fetchArray<T: Mappable>(_: T.Type = T.self) -> Observable<Result<[T], FirebaseFetchError>> {
         return Observable.create { observer in
             let handle = self.observe(.value, with: { snapshot in
-                let array = snapshot.children.flatMap { child -> T? in
+                let array = snapshot.children.compactMap { child -> T? in
                     guard let childSnapshot = child as? DataSnapshot,
                         let childDictionary = childSnapshot.value as? [String: AnyObject] else { return nil }
                     return  Mapper<T>().map(JSON: childDictionary)

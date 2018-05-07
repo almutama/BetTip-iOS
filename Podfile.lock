@@ -88,7 +88,7 @@ PODS:
   - HockeySDK/DefaultLib (5.0.0)
   - IQKeyboardManagerSwift (5.0.4)
   - Keys (1.0.0)
-  - Kingfisher (4.2.0)
+  - Kingfisher (4.6.2)
   - leveldb-library (1.18.3)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -109,25 +109,23 @@ PODS:
   - Protobuf (3.4.0)
   - Quick (1.2.0)
   - ReachabilitySwift (4.1.0)
-  - Reactant/Configuration (1.0.5):
+  - Reactant/Configuration (1.1.0):
     - RxSwift (~> 4.0)
     - SnapKit (~> 4.0)
-  - Reactant/Core (1.0.5):
+  - Reactant/Core (1.1.0):
     - Reactant/Configuration
     - RxCocoa (~> 4.0)
     - RxOptional (~> 3.0)
     - RxSwift (~> 4.0)
     - SnapKit (~> 4.0)
-  - Reactant/Result (1.0.5):
+  - Reactant/Result (1.1.0):
     - Result (~> 3.0)
     - RxOptional (~> 3.0)
     - RxSwift (~> 4.0)
-  - Reactant/StaticMap (1.0.5):
+  - Reactant/StaticMap (1.1.0):
     - Kingfisher (~> 4.0)
     - Reactant/Core
     - RxCocoa (~> 4.0)
-  - Reactant/Validation (1.0.5):
-    - Result (~> 3.0)
   - Result (3.0.0)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
@@ -175,7 +173,6 @@ DEPENDENCIES:
   - Reactant/Core (~> 1.0)
   - Reactant/Result (~> 1.0)
   - Reactant/StaticMap (~> 1.0)
-  - Reactant/Validation (~> 1.0)
   - Result (~> 3.0.0)
   - RxCocoa
   - RxDataSources
@@ -217,7 +214,7 @@ SPEC CHECKSUMS:
   HockeySDK: 82bf8dcbe1af3c87c24dc98924fcf2e2ba5be8c4
   IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
-  Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
+  Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
@@ -227,7 +224,7 @@ SPEC CHECKSUMS:
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
-  Reactant: 9b1a738817e74bb95526245325b49c0bdcbd2b1d
+  Reactant: 1910427bc0b05afeeb4e959e24bdd768dedb5258
   Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxDataSources: '098b7e62b6316313b14d6bf594e3f4f4f62a238a'
@@ -242,6 +239,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: a891cb7ed79e3237116a0861ce89bf451df1f222
+PODFILE CHECKSUM: 3e6f7f118b401e5d8a452ae2e93de38b1c27d62b
 
 COCOAPODS: 1.2.1
