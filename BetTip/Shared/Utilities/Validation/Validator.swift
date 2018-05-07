@@ -6,8 +6,6 @@
 //  Copyright © 2017 Haydar Karkin. All rights reserved.
 //
 
-import Reactant
-
 let loginCredentialsRule: Rule<(email: String, password: String),
     CredentialsValidationError> = Rule { email, password in
         
