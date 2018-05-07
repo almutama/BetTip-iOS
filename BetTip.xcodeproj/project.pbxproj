@@ -163,7 +163,10 @@
 		B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */; };
 		B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */; };
 		B0BDD811200FEAEC00F3851A /* ControlMatchesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */; };
-		B0DACBEE209F90A400C59CCD /* AdMob+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBED209F90A400C59CCD /* AdMob+Rx.swift */; };
+		B0DACBEE209F90A400C59CCD /* AdMobBanner+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */; };
+		B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */; };
+		B0DACBF220A0D33500C59CCD /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBF120A0D33500C59CCD /* Rule.swift */; };
+		B0DACBF520A0D37E00C59CCD /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBF420A0D37E00C59CCD /* Rules.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -349,7 +352,10 @@
 		B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCouponsVM.swift; sourceTree = "<group>"; };
 		B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVC.swift; sourceTree = "<group>"; };
 		B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVM.swift; sourceTree = "<group>"; };
-		B0DACBED209F90A400C59CCD /* AdMob+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMob+Rx.swift"; sourceTree = "<group>"; };
+		B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMobBanner+Rx.swift"; sourceTree = "<group>"; };
+		B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMobInterstitial+Rx.swift"; sourceTree = "<group>"; };
+		B0DACBF120A0D33500C59CCD /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		B0DACBF420A0D37E00C59CCD /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -527,7 +533,8 @@
 			isa = PBXGroup;
 			children = (
 				B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */,
-				B0DACBED209F90A400C59CCD /* AdMob+Rx.swift */,
+				B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */,
+				B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */,
 				B08D4217204DDE4600426276 /* Array+Ext.swift */,
 				B08D421920508F7600426276 /* Date+Ext.swift */,
 				B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */,
@@ -1043,6 +1050,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B0DACBF320A0D36100C59CCD /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				B0DACBF120A0D33500C59CCD /* Rule.swift */,
+				B0DACBF420A0D37E00C59CCD /* Rules.swift */,
+				B0A7AA271FCC057900DC4F62 /* Validator.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1075,10 +1092,10 @@
 			isa = PBXGroup;
 			children = (
 				B0BDD8041FFECAD900F3851A /* Actions */,
+				B0DACBF320A0D36100C59CCD /* Validation */,
 				B0569A2C1FC0E49800FF34A1 /* DebugDetector.swift */,
 				B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */,
 				B0569A361FC226A600FF34A1 /* Logger.swift */,
-				B0A7AA271FCC057900DC4F62 /* Validator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1480,6 +1497,7 @@
 				B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */,
 				B0569A6D1FC37B2600FF34A1 /* BasketballAssembly.swift in Sources */,
 				B00E3C5920112F4500802708 /* AddCouponVC.swift in Sources */,
+				B0DACBF520A0D37E00C59CCD /* Rules.swift in Sources */,
 				B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */,
 				B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */,
 				B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */,
@@ -1492,6 +1510,7 @@
 				B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
 				B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */,
+				B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */,
 				B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */,
 				B0569AB41FC988EB00FF34A1 /* AuthManager.swift in Sources */,
 				B0569A261FC0CDF300FF34A1 /* UIColor+Ext.swift in Sources */,
@@ -1524,7 +1543,7 @@
 				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CreditsVC.swift in Sources */,
 				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
-				B0DACBEE209F90A400C59CCD /* AdMob+Rx.swift in Sources */,
+				B0DACBEE209F90A400C59CCD /* AdMobBanner+Rx.swift in Sources */,
 				B0569AA51FC621D400FF34A1 /* RegisterVC.swift in Sources */,
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
 				B0569ACA1FCDEAB600FF34A1 /* SplashVC.swift in Sources */,
@@ -1543,6 +1562,7 @@
 				B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */,
 				B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */,
 				B00E3C5D20112F6400802708 /* AddCouponVM.swift in Sources */,
+				B0DACBF220A0D33500C59CCD /* Rule.swift in Sources */,
 				B0569ACF1FCDEDAD00FF34A1 /* SplashAssembly.swift in Sources */,
 				B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */,
 				B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */,

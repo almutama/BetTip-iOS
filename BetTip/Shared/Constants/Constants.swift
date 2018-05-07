@@ -46,6 +46,7 @@ struct Constants {
     //AdMob
     static let adMobID = "ca-app-pub-7194873011234130~4009179113"
     static let bannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+    static let interstitialAdUnitID = "ca-app-pub-3940256099942544/4411468910"
     
     //UI
     static let baseDesignScreenWidth: CGFloat = 375.0

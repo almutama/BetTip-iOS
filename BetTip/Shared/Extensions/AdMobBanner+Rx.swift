@@ -1,5 +1,5 @@
 //
-//  AdMob+Rx.swift
+//  AdMobBanner+Rx.swift
 //  BetTip
 //
 //  Created by Haydar Karkin on 6.05.2018.
