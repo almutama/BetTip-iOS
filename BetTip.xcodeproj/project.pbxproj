@@ -167,6 +167,8 @@
 		B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */; };
 		B0DACBF220A0D33500C59CCD /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBF120A0D33500C59CCD /* Rule.swift */; };
 		B0DACBF520A0D37E00C59CCD /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBF420A0D37E00C59CCD /* Rules.swift */; };
+		B0DACBFD20A0F75500C59CCD /* MatchServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBFC20A0F75500C59CCD /* MatchServices.swift */; };
+		B0DACC0120A0FBD100C59CCD /* MatchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -356,6 +358,8 @@
 		B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMobInterstitial+Rx.swift"; sourceTree = "<group>"; };
 		B0DACBF120A0D33500C59CCD /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		B0DACBF420A0D37E00C59CCD /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		B0DACBFC20A0F75500C59CCD /* MatchServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchServices.swift; sourceTree = "<group>"; };
+		B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAssembly.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -1000,6 +1004,7 @@
 				B0FE4A411FBAD44D008F2EE6 /* Football */,
 				B0FE4A3E1FBAD401008F2EE6 /* Login */,
 				B0A8E6741FA7B0BF001A8BBA /* Main */,
+				B0DACBFE20A0FB8F00C59CCD /* Match */,
 				B0569AC71FCDEA8900FF34A1 /* Splash */,
 				B0FE4A421FBAD467008F2EE6 /* User */,
 			);
@@ -1058,6 +1063,23 @@
 				B0A7AA271FCC057900DC4F62 /* Validator.swift */,
 			);
 			path = Validation;
+			sourceTree = "<group>";
+		};
+		B0DACBFE20A0FB8F00C59CCD /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				B0DACBFF20A0FBAD00C59CCD /* Services */,
+				B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		B0DACBFF20A0FBAD00C59CCD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0DACBFC20A0F75500C59CCD /* MatchServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
@@ -1456,6 +1478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0DACC0120A0FBD100C59CCD /* MatchAssembly.swift in Sources */,
 				B08D42152047498900426276 /* MatchCell.swift in Sources */,
 				B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */,
 				B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */,
@@ -1483,6 +1506,7 @@
 				B0569A8E1FC37D3F00FF34A1 /* AdminVC.swift in Sources */,
 				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
 				B0BB91AE206EF3A40082828E /* AddMatchVC.swift in Sources */,
+				B0DACBFD20A0F75500C59CCD /* MatchServices.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */,
 				B0BDD8081FFED0A800F3851A /* UserRoleAction.swift in Sources */,
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
