@@ -62,7 +62,7 @@ class BasketballVC: BaseViewController {
             }.disposed(by: disposeBag)
     }
     
-    func configureBanner() {
+    private func configureBanner() {
         let bannerView = GADBannerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
         bannerView.adUnitID = Constants.bannerAdUnitID
         bannerView.rootViewController = self

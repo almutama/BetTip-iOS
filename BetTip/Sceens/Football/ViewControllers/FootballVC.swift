@@ -55,13 +55,20 @@ class FootballVC: BaseViewController {
             .bind(to: self.isLoading)
             .disposed(by: disposeBag)
         
+        matches.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return }
+            _ = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+                strongSelf.showInterstitial()
+            }
+        }).disposed(by: disposeBag)
+        
         matches.bind(to: self.collectionView.rx.items(cellIdentifier: FootballCell.reuseIdentifier,
                                                       cellType: FootballCell.self)) { _, data, cell in
                                                         cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
     }
     
-    func configureBanner() {
+    private func configureBanner() {
         let bannerView = GADBannerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
         bannerView.adUnitID = Constants.bannerAdUnitID
         bannerView.rootViewController = self
@@ -83,6 +90,19 @@ class FootballVC: BaseViewController {
                     self?.bannerContainerTop.constant = 0
                     self?.view.layoutIfNeeded()
                 }
+        }).disposed(by: self.disposeBag)
+    }
+    
+    private func showInterstitial() {
+        let interstitial = GADInterstitial(adUnitID: Constants.interstitialAdUnitID)
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        interstitial.load(request)
+        
+        interstitial.rx.didReceiveAd.subscribe(
+            onNext: { [weak self] _ in
+                guard let strongSelf = self else { return }
+                interstitial.present(fromRootViewController: strongSelf)
         }).disposed(by: self.disposeBag)
     }
 }
