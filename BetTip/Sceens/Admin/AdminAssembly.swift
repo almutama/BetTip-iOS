@@ -40,6 +40,9 @@ class AdminAssembly: Assembly {
         container.register(AddCouponVMType.self) { r in
             AddCouponVM(adminService: r.resolve(AdminServiceType.self)!)
         }
+        container.register(AddMatchVMType.self) { r in
+            AddMatchVM(adminService: r.resolve(AdminServiceType.self)!)
+        }
         
         // ViewControllers
         container.storyboardInitCompleted(AdminVC.self) {r, c in
@@ -56,6 +59,9 @@ class AdminAssembly: Assembly {
         }
         container.storyboardInitCompleted(AddCouponVC.self) {r, c in
             c.viewModel = r.resolve(AddCouponVMType.self)
+        }
+        container.storyboardInitCompleted(AddMatchVC.self) {r, c in
+            c.viewModel = r.resolve(AddMatchVMType.self)
         }
     }
 }

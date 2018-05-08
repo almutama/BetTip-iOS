@@ -26,6 +26,7 @@ protocol AdminServiceType {
     func changeUserRole(user: UserModel, role: Role) -> Observable<Bool>
     func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool>
     func addMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>>
+    func getMatches(type: Int) -> Observable<[MatchModel]>
     func basketballMatches() -> Observable<[MatchModel]>
     func footballMatches() -> Observable<[MatchModel]>
 }
@@ -97,6 +98,10 @@ class AdminService: AdminServiceType {
     // MARK: Match Services
     func addMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>> {
         return matchService.addMatch(match: match)
+    }
+    
+    func getMatches(type: Int) -> Observable<[MatchModel]> {
+        return matchService.getMatches(matchType: type)
     }
     
     func basketballMatches() -> Observable<[MatchModel]> {

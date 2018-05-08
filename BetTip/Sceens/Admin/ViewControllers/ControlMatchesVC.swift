@@ -9,12 +9,12 @@
 import UIKit
 import RxSwift
 
-class ControlMatchesVC: BaseViewController {
+class ControlMatchesVC: BaseViewController {    
     
-    var viewModel: ControlCouponsVM!
+    var viewModel: ControlMatchesVMType!
     private let disposeBag = DisposeBag()
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,5 @@ class ControlMatchesVC: BaseViewController {
     }
     
     func bindViewModel() {
-        self.viewModel
-            .getCoupons()
-            .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: CouponCell.reuseIdentifier,
-                                                   cellType: CouponCell.self)) { _, data, cell in
-                                                    cell.viewModel = Variable<CouponModel>(data)
-            }.disposed(by: disposeBag)
     }
 }
