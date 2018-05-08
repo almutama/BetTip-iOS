@@ -422,8 +422,6 @@
 		B05063991FE53E5F004CECEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B08D42132047498900426276 /* MatchCell.swift */,
-				B08D42142047498900426276 /* MatchCell.xib */,
 				B050639A1FE53E8E004CECEC /* UserCell.swift */,
 				B050639B1FE53E8E004CECEC /* UserCell.xib */,
 			);
@@ -1069,6 +1067,7 @@
 			isa = PBXGroup;
 			children = (
 				B0DACBFF20A0FBAD00C59CCD /* Services */,
+				B0DACC0220A2458E00C59CCD /* Views */,
 				B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */,
 			);
 			path = Match;
@@ -1080,6 +1079,15 @@
 				B0DACBFC20A0F75500C59CCD /* MatchServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B0DACC0220A2458E00C59CCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B08D42132047498900426276 /* MatchCell.swift */,
+				B08D42142047498900426276 /* MatchCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
