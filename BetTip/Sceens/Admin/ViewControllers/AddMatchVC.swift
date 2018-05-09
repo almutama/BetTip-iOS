@@ -9,15 +9,13 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import RxDataSources
+import Eureka
 
-class AddMatchVC: BaseViewController {
+class AddMatchVC: BaseFormViewController {
     
     var viewModel: AddMatchVMType!
     private let disposeBag = DisposeBag()
     private let isLoading = Variable<Bool>(false)
-    
-    @IBOutlet weak var saveMatchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,20 +28,59 @@ class AddMatchVC: BaseViewController {
     }
     
     func prepareUI() {
+        self.tableView?.backgroundColor = .main
+        form +++ self.matchSection()
     }
     
     func bindViewModel() {
         self.bindAnimateWith(variable: self.isLoading)
             .disposed(by: disposeBag)
-        
-        self.saveMatchButton.rx.tap
-            .subscribe(onNext: {[weak self] (_) in
-                guard let strongSelf = self else { return }
-                print(strongSelf.nibName ?? "")
-            }).disposed(by: disposeBag)
     }
     
-    func saveMatch() {
-        
+    private func matchSection() -> Section {
+        return Section()
+            <<< TextRow { row in
+                row.title = "Text Row"
+                row.placeholder = "Enter text here"
+            }
+            <<< TextRow { row in
+                row.title = "Text Row"
+                row.placeholder = "Enter text here"
+            }
+            <<< TextRow { row in
+                row.title = "Text Row"
+                row.placeholder = "Enter text here"
+            }
+            <<< TextRow { row in
+                row.title = "Text Row"
+                row.placeholder = "Enter text here"
+            }
+            <<< TextRow { row in
+                row.title = "Text Row"
+                row.placeholder = "Enter text here"
+            }
+            <<< TextRow { row in
+                row.title = "Text Row"
+                row.placeholder = "Enter text here"
+            }
+            <<< TextRow { row in
+                row.title = "Text Row"
+                row.placeholder = "Enter text here"
+            }
+            <<< ButtonRow {
+                    $0.title = "SAVE MATCH"
+                }
+                .cellUpdate { cell, _ in
+                    cell.backgroundColor = .secondary
+                    cell.textLabel?.textColor = .white
+                    cell.textLabel?.textAlignment = .center
+                }
+                .onCellSelection { _, _ in
+                    self.saveMatch()
+        }
+    }
+    
+    private func saveMatch() {
+        print("save match")
     }
 }

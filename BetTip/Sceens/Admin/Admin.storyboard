@@ -315,7 +315,7 @@
                                     <constraint firstAttribute="height" constant="60" id="Ihq-Wh-WGd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="ADD COUPON">
+                                <state key="normal" title="ADD MATCH">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -447,38 +447,16 @@
             <objects>
                 <viewController id="5qe-N4-izC" customClass="AddMatchVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0xC-6G-Hgb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkY-Ep-PED">
-                                <rect key="frame" x="0.0" y="840" width="375" height="60"/>
-                                <color key="backgroundColor" red="0.23529411759999999" green="0.83921568629999999" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="aQA-pZ-TiH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="SAVE MATCH">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="CkY-Ep-PED" firstAttribute="bottom" secondItem="hxN-C3-PcG" secondAttribute="bottom" id="XWL-UW-ztL"/>
-                            <constraint firstItem="CkY-Ep-PED" firstAttribute="trailing" secondItem="hxN-C3-PcG" secondAttribute="trailing" id="wOS-Kp-3Qk"/>
-                            <constraint firstItem="CkY-Ep-PED" firstAttribute="leading" secondItem="hxN-C3-PcG" secondAttribute="leading" id="xeq-hr-WHl"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hxN-C3-PcG"/>
                     </view>
                     <navigationItem key="navigationItem" title="MATCH DETAIL" id="ORq-Kd-6PL"/>
-                    <size key="freeformSize" width="375" height="900"/>
-                    <connections>
-                        <outlet property="saveMatchButton" destination="CkY-Ep-PED" id="Lai-dU-qg7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3b-9u-PjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2678" y="1886"/>
+            <point key="canvasLocation" x="2678" y="1782"/>
         </scene>
     </scenes>
     <resources>
