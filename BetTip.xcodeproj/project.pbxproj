@@ -169,6 +169,7 @@
 		B0DACBF520A0D37E00C59CCD /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBF420A0D37E00C59CCD /* Rules.swift */; };
 		B0DACBFD20A0F75500C59CCD /* MatchServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBFC20A0F75500C59CCD /* MatchServices.swift */; };
 		B0DACC0120A0FBD100C59CCD /* MatchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */; };
+		B0DACC0520A3765600C59CCD /* BaseFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACC0420A3765600C59CCD /* BaseFormViewController.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -360,6 +361,7 @@
 		B0DACBF420A0D37E00C59CCD /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		B0DACBFC20A0F75500C59CCD /* MatchServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchServices.swift; sourceTree = "<group>"; };
 		B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAssembly.swift; sourceTree = "<group>"; };
+		B0DACC0420A3765600C59CCD /* BaseFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormViewController.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -446,7 +448,6 @@
 			isa = PBXGroup;
 			children = (
 				B05063A51FE5A1A6004CECEC /* CouponModel.swift */,
-				B0569A6A1FC37AFD00FF34A1 /* MatchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1066,6 +1067,7 @@
 		B0DACBFE20A0FB8F00C59CCD /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				B0DACC0320A24A9200C59CCD /* Model */,
 				B0DACBFF20A0FBAD00C59CCD /* Services */,
 				B0DACC0220A2458E00C59CCD /* Views */,
 				B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */,
@@ -1088,6 +1090,14 @@
 				B08D42142047498900426276 /* MatchCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B0DACC0320A24A9200C59CCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A6A1FC37AFD00FF34A1 /* MatchModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
@@ -1144,6 +1154,7 @@
 			isa = PBXGroup;
 			children = (
 				B0569A2E1FC0E55400FF34A1 /* BaseViewController.swift */,
+				B0DACC0420A3765600C59CCD /* BaseFormViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1539,6 +1550,7 @@
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B05063A81FE5A1B3004CECEC /* CouponServices.swift in Sources */,
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
+				B0DACC0520A3765600C59CCD /* BaseFormViewController.swift in Sources */,
 				B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
 				B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */,
@@ -1807,6 +1819,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7UWG4ECEH7;
 				INFOPLIST_FILE = "$(SRCROOT)/BetTip/SupportedFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = salieri.BetTipAppFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1830,6 +1843,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7UWG4ECEH7;
 				INFOPLIST_FILE = "$(SRCROOT)/BetTip/SupportedFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = salieri.BetTipAppFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";

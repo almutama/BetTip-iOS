@@ -24,6 +24,7 @@ def ui_pods
   pod 'Hero'
   pod 'DZNEmptyDataSet'
   pod 'VegaScrollFlowLayout'
+  pod 'Eureka'
 end
 
 def reactive_pods
