@@ -66,3 +66,19 @@
 
 "Match.Basketball" = "Basketbol";
 "Match.Football" = "Futbol";
+
+"MatchForm.HomeTeam" = "Ev Sahibi";
+"MatchForm.AwayTeam" = "Rakip";
+"MatchForm.Country" = "Ülke";
+"MatchForm.Bet" = "İddia";
+"MatchForm.Date" = "Tarih";
+"MatchForm.BetID" = "İddia ID";
+"MatchForm.League" = "Lig";
+"MatchForm.Odd" = "Oran";
+"MatchForm.WebSite" = "Web Site";
+"MatchForm.Status" = "Durum";
+"MatchForm.Time" = "Saat";
+"MatchForm.Tipster" = "Tüyocu";
+"MatchForm.Type" = "Maç Türü";
+"MatchForm.Won" = "Sonuç";
+"MatchForm.SaveMatch" = "KAYDET";

@@ -113,6 +113,39 @@ enum L10n {
     static let football = L10n.tr("Localizable", "Match.Football")
   }
 
+  enum Matchform {
+    /// Away Team
+    static let awayTeam = L10n.tr("Localizable", "MatchForm.AwayTeam")
+    /// Bet
+    static let bet = L10n.tr("Localizable", "MatchForm.Bet")
+    /// Bet ID
+    static let betID = L10n.tr("Localizable", "MatchForm.BetID")
+    /// Country
+    static let country = L10n.tr("Localizable", "MatchForm.Country")
+    /// Date
+    static let date = L10n.tr("Localizable", "MatchForm.Date")
+    /// Home Team
+    static let homeTeam = L10n.tr("Localizable", "MatchForm.HomeTeam")
+    /// League
+    static let league = L10n.tr("Localizable", "MatchForm.League")
+    /// Odd
+    static let odd = L10n.tr("Localizable", "MatchForm.Odd")
+    /// SAVE MATCH
+    static let saveMatch = L10n.tr("Localizable", "MatchForm.SaveMatch")
+    /// Status
+    static let status = L10n.tr("Localizable", "MatchForm.Status")
+    /// Time
+    static let time = L10n.tr("Localizable", "MatchForm.Time")
+    /// Tipster
+    static let tipster = L10n.tr("Localizable", "MatchForm.Tipster")
+    /// Type
+    static let type = L10n.tr("Localizable", "MatchForm.Type")
+    /// Web Site
+    static let webSite = L10n.tr("Localizable", "MatchForm.WebSite")
+    /// Won
+    static let won = L10n.tr("Localizable", "MatchForm.Won")
+  }
+
   enum Role {
     /// Administrator
     static let admin = L10n.tr("Localizable", "Role.Admin")

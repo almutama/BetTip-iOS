@@ -66,3 +66,19 @@
 
 "Match.Basketball" = "Basketball";
 "Match.Football" = "Football";
+
+"MatchForm.HomeTeam" = "Home Team";
+"MatchForm.AwayTeam" = "Away Team";
+"MatchForm.Country" = "Country";
+"MatchForm.Bet" = "Bet";
+"MatchForm.Date" = "Date";
+"MatchForm.BetID" = "Bet ID";
+"MatchForm.League" = "League";
+"MatchForm.Odd" = "Odd";
+"MatchForm.WebSite" = "Web Site";
+"MatchForm.Status" = "Status";
+"MatchForm.Time" = "Time";
+"MatchForm.Tipster" = "Tipster";
+"MatchForm.Type" = "Type";
+"MatchForm.Won" = "Won";
+"MatchForm.SaveMatch" = "SAVE MATCH";
