@@ -21,6 +21,19 @@ public final class MatchTextCell: _TextRow, RowType {
     }
 }
 
+public final class MatchMailCell: _EmailRow, RowType {
+    required public init(tag: String?) {
+        super.init(tag: tag)
+        add(rule: RuleRequired())
+        validationOptions = .validatesOnChange
+        cellSetup({ (cell, row) in
+            row.placeholderColor = .lightGray
+            cell.backgroundColor = .main
+            cell.height = { 60 }
+        })
+    }
+}
+
 public final class MatchDecimalCell: _DecimalRow, RowType {
     required public init(tag: String?) {
         super.init(tag: tag)

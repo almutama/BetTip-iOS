@@ -73,7 +73,7 @@ class ControlCreditsVC: BaseViewController {
                 }
             }
             .subscribe(onNext: {result in
-                self.show(result: result)
+                self.showNotification(result: result)
             })
             .disposed(by: disposeBag)
     }
@@ -110,7 +110,7 @@ class ControlCreditsVC: BaseViewController {
     func addCredit(credit: CreditModel) {
         self.viewModel.addCredit(credit: credit) { result in
             if let result = result {
-                self.show(result: result)
+                self.showNotification(result: result)
             }
         }
     }
@@ -157,14 +157,6 @@ class ControlCreditsVC: BaseViewController {
             return Observable.empty()
         }
         return self.viewModel.deleteCredit(credit: credit)
-    }
-    
-    func show(result: Bool) {
-        if result {
-            LocalNotificationView.shared.showSuccess(L10n.Common.great, body: L10n.Common.Process.success)
-        } else {
-            LocalNotificationView.shared.showError(L10n.Common.sorry, body: L10n.Common.Process.error)
-        }
     }
     
     func convertTextsAsCredit(texts: [String?]?, withId id: String? = nil) -> CreditModel {

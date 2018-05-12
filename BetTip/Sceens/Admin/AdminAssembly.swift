@@ -43,6 +43,9 @@ class AdminAssembly: Assembly {
         container.register(AddMatchVMType.self) { r in
             AddMatchVM(adminService: r.resolve(AdminServiceType.self)!)
         }
+        container.register(ControlMatchesVMType.self) { r in
+            ControlMatchesVM(adminService: r.resolve(AdminServiceType.self)!)
+        }
         
         // ViewControllers
         container.storyboardInitCompleted(AdminVC.self) {r, c in
@@ -62,6 +65,9 @@ class AdminAssembly: Assembly {
         }
         container.storyboardInitCompleted(AddMatchVC.self) {r, c in
             c.viewModel = r.resolve(AddMatchVMType.self)
+        }
+        container.storyboardInitCompleted(ControlMatchesVC.self) {r, c in
+            c.viewModel = r.resolve(ControlMatchesVMType.self)
         }
     }
 }

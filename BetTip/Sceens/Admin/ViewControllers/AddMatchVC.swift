@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Eureka
+import ObjectMapper
 
 class AddMatchVC: BaseFormViewController {
     
@@ -39,7 +40,13 @@ class AddMatchVC: BaseFormViewController {
     
     // swiftlint:disable cyclomatic_complexity
     private func matchSection() -> Section {
-        return Section(header: "", footer: "")
+        let headerTitle = L10n.Matchform.headerTitle
+        let footerTitle = L10n.Matchform.footerTitle
+        
+        return Section(header: headerTitle, footer: footerTitle) {
+            $0.header?.height = { 50 }
+            $0.footer?.height = { 30 }
+            }
             <<< MatchTextCell("homeTeam") { row in
                 row.title = L10n.Matchform.homeTeam
                 row.placeholder = L10n.Matchform.Hometeam.placeholder
@@ -165,7 +172,7 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchTextCell("tipster") { row in
+            <<< MatchMailCell("tipster") { row in
                 row.title = L10n.Matchform.tipster
                 row.placeholder = L10n.Matchform.Tipster.placeholder
                 }.cellUpdate { cell, row in
@@ -214,7 +221,6 @@ class AddMatchVC: BaseFormViewController {
                 }
                 .onCellSelection { _, row in
                     guard let isValid = row.section?.form?.validate() else { return }
-                    self.saveMatch(values: self.form.values())
                     if  isValid.isEmpty {
                         self.saveMatch(values: self.form.values())
                     }
@@ -222,7 +228,15 @@ class AddMatchVC: BaseFormViewController {
     } // swiftlint:enable cyclomatic_complexity
     
     private func saveMatch(values: [String: Any?]) {
-        let model = MatchModel(form: values)
-        print(model ?? "model")
+        guard let match = MatchModel(form: values) else { return }
+        print("match: \(match)")
+        let dictionary = Mapper<MatchModel>().toJSON(match)
+        print("dic: \(dictionary)")
+        self.viewModel.addMatch(match: match) { result in
+            if let result = result {
+                self.showNotification(result: result)
+                self.matchSection().reload()
+            }
+        }
     }
 }

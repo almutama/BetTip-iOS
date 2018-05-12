@@ -38,6 +38,7 @@ class AddMatchVM: BaseViewModel, AddMatchVMType {
                     initComplete(true)
                 case .error(let error):
                     logger.log(.error, "Error occured when adding match: \(error)")
+                    initComplete(false)
                 case .completed:
                     logger.log(.debug, "Adding match completed!")
                 }

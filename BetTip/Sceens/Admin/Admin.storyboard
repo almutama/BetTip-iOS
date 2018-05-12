@@ -341,8 +341,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AaB-5D-oXf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MATCHES" id="xHb-9Q-cAx"/>
+                    <navigationItem key="navigationItem" title="MATCHES" id="xHb-9Q-cAx">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="8LF-Rp-xEV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gR3-0p-jb3">
+                                <rect key="frame" x="319" y="2" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="tabSel_football"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="selectMatchTypeButton" destination="gR3-0p-jb3" id="ToJ-nB-ibV"/>
                         <outlet property="tableView" destination="pLZ-ui-c3n" id="jQX-DB-ukL"/>
                     </connections>
                 </viewController>
