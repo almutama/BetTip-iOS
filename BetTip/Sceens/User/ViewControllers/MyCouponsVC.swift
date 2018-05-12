@@ -8,7 +8,6 @@
 
 import UIKit
 import RxSwift
-import VegaScrollFlowLayout
 
 class MyCouponsVC: BaseViewController {
     
@@ -29,7 +28,7 @@ class MyCouponsVC: BaseViewController {
     
     func prepareUI() {
         self.navigationItem.title = "FIRSAT BAHİS"
-        let layout = VegaScrollFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
         self.collectionView.registerCellNib(CreditCell.self)
@@ -43,14 +42,5 @@ class MyCouponsVC: BaseViewController {
                                                    cellType: CreditCell.self)) { _, data, cell in
                                                     cell.viewModel = Variable<CreditModel>(data)
             }.disposed(by: disposeBag)
-    }
-}
-
-extension MyCouponsVC: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 100)
     }
 }

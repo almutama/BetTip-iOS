@@ -8,7 +8,6 @@
 
 import UIKit
 import RxSwift
-import VegaScrollFlowLayout
 
 private let logger = Log.createLogger()
 
@@ -32,7 +31,7 @@ class CreditsVC: BaseViewController {
     
     func prepareUI() {
         self.navigationItem.title = "FIRSAT BAHİS"
-        let layout = VegaScrollFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 60)
         self.collectionView.collectionViewLayout =  layout
         self.collectionView.registerCellNib(CreditCell.self)
@@ -66,14 +65,5 @@ class CreditsVC: BaseViewController {
                 }
             })
             .disposed(by: disposeBag)
-    }
-}
-
-extension CreditsVC: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 60)
     }
 }

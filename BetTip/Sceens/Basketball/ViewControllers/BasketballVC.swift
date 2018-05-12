@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import VegaScrollFlowLayout
 import GoogleMobileAds
 
 class BasketballVC: BaseViewController {
@@ -35,7 +34,7 @@ class BasketballVC: BaseViewController {
     
     func prepareUI() {
         self.navigationItem.title = "FIRSAT BAHİS"
-        let layout = VegaScrollFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
         self.collectionView.registerCellNib(BasketballCell.self)
@@ -85,14 +84,5 @@ class BasketballVC: BaseViewController {
                     self?.view.layoutIfNeeded()
                 }
         }).disposed(by: self.disposeBag)
-    }
-}
-
-extension BasketballVC: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 100)
     }
 }
