@@ -37,11 +37,12 @@ class AddMatchVC: BaseFormViewController {
             .disposed(by: disposeBag)
     }
     
+    // swiftlint:disable cyclomatic_complexity
     private func matchSection() -> Section {
-        return Section()
-            <<< MatchTextCell { row in
+        return Section(header: "", footer: "")
+            <<< MatchTextCell("homeTeam") { row in
                 row.title = L10n.Matchform.homeTeam
-                row.placeholder = ""
+                row.placeholder = L10n.Matchform.Hometeam.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -49,9 +50,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchTextCell { row in
+            <<< MatchTextCell("bet") { row in
                 row.title = L10n.Matchform.bet
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Bet.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -59,9 +60,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchTextCell { row in
+            <<< MatchTextCell("awayTeam") { row in
                 row.title = L10n.Matchform.awayTeam
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Awayteam.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -69,9 +70,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchTextCell { row in
+            <<< MatchTextCell("league") { row in
                 row.title = L10n.Matchform.league
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.League.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -79,9 +80,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchTextCell { row in
+            <<< MatchTextCell("country") { row in
                 row.title = L10n.Matchform.country
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Country.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -89,9 +90,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchIntCell { row in
+            <<< MatchIntCell("iddaaId") { row in
                 row.title = L10n.Matchform.betID
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Betid.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -99,9 +100,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchDecimalCell { row in
+            <<< MatchDecimalCell("odd") { row in
                 row.title = L10n.Matchform.odd
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Odd.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -110,7 +111,7 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
 
-            <<< MatchDateCell {
+            <<< MatchDateCell("date") {
                 $0.title = L10n.Matchform.date
                 $0.add(rule: RuleRequired())
                 $0.validationOptions = .validatesOnChange
@@ -123,14 +124,15 @@ class AddMatchVC: BaseFormViewController {
                     }
                 }
                 .onChange { [weak self] row in
+                    guard self != nil else { return }
                     print(row.value?.description ?? "")
                     row.updateCell()
                 }
-            <<< MatchTimeCell {
+            <<< MatchTimeCell("time") {
                 $0.title = L10n.Matchform.time
                 $0.add(rule: RuleRequired())
                 $0.validationOptions = .validatesOnChange
-                $0.value = Date()
+                $0.value = NSDate.oneHourFromNow() as Date
                 print($0.value?.description ?? "")
                 }.cellUpdate { cell, row in
                     cell.textLabel?.textColor = .secondary
@@ -139,12 +141,13 @@ class AddMatchVC: BaseFormViewController {
                     }
                 }
                 .onChange { [weak self] row in
+                    guard self != nil else { return }
                     print(row.value?.description ?? "")
                     row.updateCell()
             }
-            <<< MatchIntCell { row in
+            <<< MatchIntCell("type") { row in
                 row.title = L10n.Matchform.type
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Matchtype.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -152,9 +155,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchIntCell { row in
+            <<< MatchIntCell("won") { row in
                 row.title = L10n.Matchform.won
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Won.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -162,9 +165,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchTextCell { row in
+            <<< MatchTextCell("tipster") { row in
                 row.title = L10n.Matchform.tipster
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Tipster.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -172,9 +175,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchTextCell { row in
+            <<< MatchIntCell("status") { row in
                 row.title = L10n.Matchform.status
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Status.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -182,14 +185,22 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchTextCell { row in
+            <<< MatchTextCell("site") { row in
                 row.title = L10n.Matchform.webSite
-                row.placeholder = "Enter text here"
+                row.placeholder = L10n.Matchform.Website.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
                     if !row.isValid {
                         cell.titleLabel?.textColor = .red
+                    }
+            }
+            <<< MatchSwitchCell("isSpecial") { row in
+                row.title = L10n.Matchform.isCoupon
+                }.cellUpdate { cell, row in
+                    cell.textLabel?.textColor = .secondary
+                    if !row.isValid {
+                        cell.textLabel?.textColor = .red
                     }
             }
             <<< ButtonRow {
@@ -199,14 +210,19 @@ class AddMatchVC: BaseFormViewController {
                     cell.backgroundColor = .secondary
                     cell.textLabel?.textColor = .white
                     cell.textLabel?.textAlignment = .center
-                    cell.height = { 50 }
+                    cell.height = { 60 }
                 }
-                .onCellSelection { _, _ in
-                    self.saveMatch()
+                .onCellSelection { _, row in
+                    guard let isValid = row.section?.form?.validate() else { return }
+                    self.saveMatch(values: self.form.values())
+                    if  isValid.isEmpty {
+                        self.saveMatch(values: self.form.values())
+                    }
             }
-    }
+    } // swiftlint:enable cyclomatic_complexity
     
-    private func saveMatch() {
-        print("save match")
+    private func saveMatch(values: [String: Any?]) {
+        let model = MatchModel(form: values)
+        print(model ?? "model")
     }
 }

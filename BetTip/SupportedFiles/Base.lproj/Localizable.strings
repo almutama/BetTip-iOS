@@ -81,4 +81,18 @@
 "MatchForm.Tipster" = "Tipster";
 "MatchForm.Type" = "Type";
 "MatchForm.Won" = "Won";
+"MatchForm.isCoupon" = "Is it special?";
 "MatchForm.SaveMatch" = "SAVE MATCH";
+
+"MatchForm.HomeTeam.Placeholder" = "Barcelona";
+"MatchForm.AwayTeam.Placeholder" = "Real Madrid";
+"MatchForm.Country.Placeholder" = "spain";
+"MatchForm.Bet.Placeholder" = "MS-2";
+"MatchForm.BetID.Placeholder" = "740";
+"MatchForm.League.Placeholder" = "ESP";
+"MatchForm.Odd.Placeholder" = "1.77";
+"MatchForm.WebSite.Placeholder" = "BetMe";
+"MatchForm.Status.Placeholder" = "0";
+"MatchForm.Tipster.Placeholder" = "mustafa@gmail.com";
+"MatchForm.MatchType.Placeholder" = "1 or 2";
+"MatchForm.Won.Placeholder" = "0 or 1";

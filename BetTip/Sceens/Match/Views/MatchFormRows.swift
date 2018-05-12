@@ -13,7 +13,8 @@ public final class MatchTextCell: _TextRow, RowType {
         super.init(tag: tag)
         add(rule: RuleRequired())
         validationOptions = .validatesOnChange
-        cellSetup({ (cell, _) in
+        cellSetup({ (cell, row) in
+            row.placeholderColor = .lightGray
             cell.backgroundColor = .main
             cell.height = { 60 }
         })
@@ -25,7 +26,8 @@ public final class MatchDecimalCell: _DecimalRow, RowType {
         super.init(tag: tag)
         add(rule: RuleRequired())
         validationOptions = .validatesOnChange
-        cellSetup({ (cell, _) in
+        cellSetup({ (cell, row) in
+            row.placeholderColor = .lightGray
             cell.backgroundColor = .main
             cell.height = { 60 }
         })
@@ -37,7 +39,8 @@ public final class MatchIntCell: _IntRow, RowType {
         super.init(tag: tag)
         add(rule: RuleRequired())
         validationOptions = .validatesOnChange
-        cellSetup({ (cell, _) in
+        cellSetup({ (cell, row) in
+            row.placeholderColor = .lightGray
             cell.backgroundColor = .main
             cell.height = { 60 }
         })
@@ -50,6 +53,7 @@ public final class MatchDateCell: _DateRow, RowType {
         title = tag
         add(rule: RuleRequired())
         validationOptions = .validatesOnChange
+        minimumDate = Date()
         cellSetup({ (cell, _) in
             cell.backgroundColor = .main
             cell.height = { 60 }
@@ -63,9 +67,13 @@ public final class MatchTimeCell: _TimeRow, RowType {
         title = tag
         add(rule: RuleRequired())
         validationOptions = .validatesOnChange
-        cellSetup({ (cell, _) in
+        minimumDate = Date()
+        cellSetup({ (cell, row) in
             cell.backgroundColor = .main
             cell.height = { 60 }
+            cell.datePicker.datePickerMode = UIDatePickerMode.time
+            row.dateFormatter?.dateStyle = .none
+            row.dateFormatter?.timeStyle = .short
         })
     }
 }
@@ -74,11 +82,10 @@ public final class MatchSwitchCell: _SwitchRow, RowType {
     required public init(tag: String?) {
         super.init(tag: tag)
         title = tag
-        add(rule: RuleRequired())
-        validationOptions = .validatesOnChange
-        cellSetup({ (cell, _) in
+        cellSetup({ (cell, row) in
             cell.backgroundColor = .main
             cell.height = { 60 }
+            row.value = false
         })
     }
 }

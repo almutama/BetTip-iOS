@@ -24,6 +24,29 @@ struct MatchModel: BaseModel {
     var status: Int?
     var iddaaId: Int?
     var site: String?
+    var tipster: String?
+    var isSpecial: Bool?
+    
+    init() {}
+    
+    init?(form: [String: Any?]? = nil) {
+        guard let dic = form else { return }
+        self.type = dic["type"] as? Int ?? 0
+        self.country = dic["country"] as? String ?? ""
+        self.league = dic["league"] as? String ?? ""
+        self.homeTeam = dic["homeTeam"] as? String ?? ""
+        self.awayTeam = dic["awayTeam"] as? String ?? ""
+        self.date = dic["date"] as? String ?? ""
+        self.time = dic["time"] as? String ?? ""
+        self.bet = dic["bet"] as? String ?? ""
+        self.odd = dic["odd"] as? Double ?? 0.0
+        self.won = dic["won"] as? Int ?? 0
+        self.status = dic["status"] as? Int ?? 0
+        self.iddaaId = dic["iddaaId"] as? Int ?? 0
+        self.site = dic["site"] as? String ?? ""
+        self.tipster = dic["tipster"] as? String ?? ""
+        self.isSpecial = dic["isSpecial"] as? Bool ?? false
+    }
 }
 
 extension MatchModel: Mappable {
@@ -44,6 +67,8 @@ extension MatchModel: Mappable {
         status <- map["status"]
         iddaaId <- map["iddaaId"]
         site <- map["site"]
+        tipster <- map["tipster"]
+        isSpecial <- map["isSpecial"]
     }
 }
 

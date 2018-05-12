@@ -126,6 +126,8 @@ enum L10n {
     static let date = L10n.tr("Localizable", "MatchForm.Date")
     /// Home Team
     static let homeTeam = L10n.tr("Localizable", "MatchForm.HomeTeam")
+    /// Is it special?
+    static let isCoupon = L10n.tr("Localizable", "MatchForm.isCoupon")
     /// League
     static let league = L10n.tr("Localizable", "MatchForm.League")
     /// Odd
@@ -144,6 +146,66 @@ enum L10n {
     static let webSite = L10n.tr("Localizable", "MatchForm.WebSite")
     /// Won
     static let won = L10n.tr("Localizable", "MatchForm.Won")
+
+    enum Awayteam {
+      /// Real Madrid
+      static let placeholder = L10n.tr("Localizable", "MatchForm.AwayTeam.Placeholder")
+    }
+
+    enum Bet {
+      /// MS-2
+      static let placeholder = L10n.tr("Localizable", "MatchForm.Bet.Placeholder")
+    }
+
+    enum Betid {
+      /// 740
+      static let placeholder = L10n.tr("Localizable", "MatchForm.BetID.Placeholder")
+    }
+
+    enum Country {
+      /// spain
+      static let placeholder = L10n.tr("Localizable", "MatchForm.Country.Placeholder")
+    }
+
+    enum Hometeam {
+      /// Barcelona
+      static let placeholder = L10n.tr("Localizable", "MatchForm.HomeTeam.Placeholder")
+    }
+
+    enum League {
+      /// ESP
+      static let placeholder = L10n.tr("Localizable", "MatchForm.League.Placeholder")
+    }
+
+    enum Matchtype {
+      /// 1 or 2
+      static let placeholder = L10n.tr("Localizable", "MatchForm.MatchType.Placeholder")
+    }
+
+    enum Odd {
+      /// 1.77
+      static let placeholder = L10n.tr("Localizable", "MatchForm.Odd.Placeholder")
+    }
+
+    enum Status {
+      /// 0
+      static let placeholder = L10n.tr("Localizable", "MatchForm.Status.Placeholder")
+    }
+
+    enum Tipster {
+      /// mustafa@gmail.com
+      static let placeholder = L10n.tr("Localizable", "MatchForm.Tipster.Placeholder")
+    }
+
+    enum Website {
+      /// BetMe
+      static let placeholder = L10n.tr("Localizable", "MatchForm.WebSite.Placeholder")
+    }
+
+    enum Won {
+      /// 0 or 1
+      static let placeholder = L10n.tr("Localizable", "MatchForm.Won.Placeholder")
+    }
   }
 
   enum Role {

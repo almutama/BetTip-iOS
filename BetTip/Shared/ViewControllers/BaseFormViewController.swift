@@ -46,6 +46,7 @@ class BaseFormViewController: FormViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         self.view.backgroundColor = UIColor.main
+        self.automaticallyAdjustsScrollViewInsets = false
         self.tableView?.separatorStyle = UITableViewCellSeparatorStyle.none
     }
     

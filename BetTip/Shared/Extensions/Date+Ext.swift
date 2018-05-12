@@ -46,3 +46,14 @@ extension Date {
     var month: Int { return Calendar.current.component(.month, from: self) }
     var year: Int { return Calendar.current.component(.year, from: self) }
 }
+
+extension NSDate {
+    static func oneHourFromNow() -> NSDate {
+        return NSDate.hoursFormNow(numberOfHours: 1)
+    }
+    
+    static func hoursFormNow(numberOfHours: Int) -> NSDate {
+        let interval = Double(numberOfHours) * 60
+        return NSDate().addingTimeInterval(interval)
+    }
+}

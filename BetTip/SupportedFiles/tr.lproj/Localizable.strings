@@ -81,4 +81,18 @@
 "MatchForm.Tipster" = "Tüyocu";
 "MatchForm.Type" = "Maç Türü";
 "MatchForm.Won" = "Sonuç";
+"MatchForm.isCoupon" = "Özel mi?";
 "MatchForm.SaveMatch" = "KAYDET";
+
+"MatchForm.HomeTeam.Placeholder" = "Galatasaray";
+"MatchForm.AwayTeam.Placeholder" = "Buca Spor";
+"MatchForm.Country.Placeholder" = "turkey";
+"MatchForm.Bet.Placeholder" = "MS-2";
+"MatchForm.BetID.Placeholder" = "664";
+"MatchForm.League.Placeholder" = "TR";
+"MatchForm.Odd.Placeholder" = "1.77";
+"MatchForm.WebSite.Placeholder" = "Bahsegel";
+"MatchForm.Status.Placeholder" = "0";
+"MatchForm.Tipster.Placeholder" = "mustafa@gmail.com";
+"MatchForm.MatchType.Placeholder" = "1 yada 2";
+"MatchForm.Won.Placeholder" = "0 yada 1";
