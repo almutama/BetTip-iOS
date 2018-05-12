@@ -31,13 +31,16 @@ struct MatchModel: BaseModel {
     
     init?(form: [String: Any?]? = nil) {
         guard let dic = form else { return }
+        let date = dic["date"] as? Date ?? Date()
+        let time = dic["time"] as? Date ?? Date()
+        
         self.type = dic["type"] as? Int ?? 0
         self.country = dic["country"] as? String ?? ""
         self.league = dic["league"] as? String ?? ""
         self.homeTeam = dic["homeTeam"] as? String ?? ""
         self.awayTeam = dic["awayTeam"] as? String ?? ""
-        self.date = dic["date"] as? String ?? ""
-        self.time = dic["time"] as? String ?? ""
+        self.date = date.dateWithFormat(dateFormat: "dd.MM.yyyy")
+        self.time = time.dateWithFormat(dateFormat: "HH:mm")
         self.bet = dic["bet"] as? String ?? ""
         self.odd = dic["odd"] as? Double ?? 0.0
         self.won = dic["won"] as? Int ?? 0
