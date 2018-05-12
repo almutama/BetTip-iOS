@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.2'
+platform :ios, '10.0'
 use_frameworks!
 inhibit_all_warnings!
 
@@ -10,7 +10,6 @@ end
 
 def firebase_pods
   pod 'Firebase/Core'
-  pod 'Firebase/Crash'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
@@ -23,7 +22,6 @@ def ui_pods
   pod 'SwiftMessages'
   pod 'Hero'
   pod 'DZNEmptyDataSet'
-  pod 'VegaScrollFlowLayout'
   pod 'Eureka'
 end
 
@@ -44,7 +42,7 @@ def general_pods
   pod 'SwinjectStoryboard'
   pod 'SwiftKeychainWrapper'
   pod 'IQKeyboardManagerSwift'
-  
+
   plugin 'cocoapods-keys', {
       :project => "BetTip",
       :target => "BetTip",
