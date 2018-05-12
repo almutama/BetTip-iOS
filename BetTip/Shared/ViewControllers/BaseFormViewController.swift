@@ -65,4 +65,12 @@ class BaseFormViewController: FormViewController {
         
         return false
     }
+    
+    func showNotification(result: Bool) {
+        if result {
+            LocalNotificationView.shared.showSuccess(L10n.Common.great, body: L10n.Common.Process.success)
+        } else {
+            LocalNotificationView.shared.showError(L10n.Common.sorry, body: L10n.Common.Process.error)
+        }
+    }
 }

@@ -124,6 +124,10 @@ enum L10n {
     static let country = L10n.tr("Localizable", "MatchForm.Country")
     /// Date
     static let date = L10n.tr("Localizable", "MatchForm.Date")
+    /// For coupons, you should set special field.
+    static let footerTitle = L10n.tr("Localizable", "MatchForm.FooterTitle")
+    /// Please set all fields.
+    static let headerTitle = L10n.tr("Localizable", "MatchForm.HeaderTitle")
     /// Home Team
     static let homeTeam = L10n.tr("Localizable", "MatchForm.HomeTeam")
     /// Is it special?

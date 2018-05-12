@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate let logger = Log.createLogger()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UIApplication.shared.statusBarStyle = .lightContent
         self.setupNotification(application: application)
         self.registerServices()
         return true
@@ -68,15 +69,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func registerServices() {
+        // MARK: DB setup
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
         Database.database().reference().keepSynced(true)
+        
+        // MARK: Adverts
         GADMobileAds.configure(withApplicationID: Constants.adMobID)
-        IQKeyboardManager.sharedManager().enable = true
+        //HeyzapAds.start(withPublisherID: BetTipKeys().heyzapID)
+
+        // MARK: Services
         UIService.shared.registerForEvents()
         UserEventService.shared.registerForEvents()
+        IQKeyboardManager.shared.enable = true
+        
+        // MARK: Reports
         //HockeyApp().setupAuth()
-        //HeyzapAds.start(withPublisherID: BetTipKeys().heyzapID)
     }
 }
 
@@ -117,7 +125,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
 extension AppDelegate: MessagingDelegate {
     
-    public func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+    public func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         connectToMessaging()
     }
     

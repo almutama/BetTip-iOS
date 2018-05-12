@@ -67,6 +67,8 @@
 "Match.Basketball" = "Basketbol";
 "Match.Football" = "Futbol";
 
+"MatchForm.HeaderTitle" = "Lütfen bütün alanları doldurun.";
+"MatchForm.FooterTitle" = "Kuponlar için özel seçeneğini seçin.";
 "MatchForm.HomeTeam" = "Ev Sahibi";
 "MatchForm.AwayTeam" = "Rakip";
 "MatchForm.Country" = "Ülke";

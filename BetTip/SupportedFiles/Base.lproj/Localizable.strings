@@ -67,6 +67,8 @@
 "Match.Basketball" = "Basketball";
 "Match.Football" = "Football";
 
+"MatchForm.HeaderTitle" = "Please set all fields.";
+"MatchForm.FooterTitle" = "For coupons, you should set special field.";
 "MatchForm.HomeTeam" = "Home Team";
 "MatchForm.AwayTeam" = "Away Team";
 "MatchForm.Country" = "Country";

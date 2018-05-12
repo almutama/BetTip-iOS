@@ -24,6 +24,7 @@ let loginCredentialsRule: Rule<(email: String, password: String),
     return nil
 }
 
+// swiftlint:disable large_tuple
 let registrationCredentialsRule: Rule<(email: String, password: String, confirm: String),
     CredentialsValidationError> = Rule { email, password, confirm in
         
@@ -44,7 +45,7 @@ let registrationCredentialsRule: Rule<(email: String, password: String, confirm:
     }
     
     return nil
-}
+}// swiftlint:enable large_tuple
 
 enum CredentialsValidationError: Error {
     case emailInvalid(Rules.String.EmailValidationError)
