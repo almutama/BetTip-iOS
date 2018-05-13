@@ -126,6 +126,8 @@
 		B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */; };
 		B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */; };
 		B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */; };
+		B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */; };
+		B08340CF20A7C6CF00A41F36 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -313,6 +315,8 @@
 		B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVC.swift; sourceTree = "<group>"; };
 		B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlUsersVM.swift; sourceTree = "<group>"; };
 		B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVM.swift; sourceTree = "<group>"; };
+		B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optionals+Ext.swift"; sourceTree = "<group>"; };
+		B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -542,7 +546,9 @@
 				B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */,
 				B08D4217204DDE4600426276 /* Array+Ext.swift */,
 				B08D421920508F7600426276 /* Date+Ext.swift */,
+				B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */,
 				B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */,
+				B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */,
 				B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */,
 				B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */,
 				B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */,
@@ -1612,6 +1618,7 @@
 				B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */,
 				B0569A4C1FC22B3E00FF34A1 /* BGEventBusEvent.swift in Sources */,
 				B0569A441FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift in Sources */,
+				B08340CF20A7C6CF00A41F36 /* Double+Ext.swift in Sources */,
 				B0569A3B1FC22A4800FF34A1 /* EventBus.swift in Sources */,
 				B0569A331FC220FB00FF34A1 /* BaseViewModel.swift in Sources */,
 				B0569A281FC0CF6700FF34A1 /* Constants.swift in Sources */,
@@ -1664,6 +1671,7 @@
 				B0569A171FC0BF2800FF34A1 /* NibView.swift in Sources */,
 				B0A7AA371FCC58C900DC4F62 /* Storyboards.swift in Sources */,
 				B0569AEE1FCF3D8100FF34A1 /* FootballVC.swift in Sources */,
+				B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
 				B0569ACD1FCDED7C00FF34A1 /* SplashVM.swift in Sources */,
