@@ -39,9 +39,11 @@ struct Constants {
     static let football = "\(stats)/Football"
     static let status = "status"
     static let type = "type"
+    static let isSpecial = "isSpecial"
     static let footballType = 1
     static let basketballType = 2
     static let queryLimit: UInt = 50
+    static let queryLimitII: UInt = 100
     
     //AdMob
     static let adMobID = "ca-app-pub-7194873011234130~4009179113"

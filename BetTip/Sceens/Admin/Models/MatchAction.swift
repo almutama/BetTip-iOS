@@ -8,10 +8,10 @@
 
 import Foundation
 
-enum MatchAction {
-    case cancel
-    case basketball
-    case football
+enum MatchAction: Int {
+    case cancel = 0
+    case basketball = 2
+    case football = 1
 }
 
 extension MatchAction: AlertActionType {

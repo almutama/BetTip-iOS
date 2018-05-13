@@ -36,7 +36,7 @@ class ControlMatchesVM: BaseViewModel, ControlMatchesVMType {
                 switch event {
                 case .next(let result):
                     logger.log(.debug, "get matches for \(type)'s result: \(result)")
-                    self.matches.value = result
+                    self.matches.value = result.filter { $0.isSpecial == true }
                 case .error(let error):
                     logger.log(.error, "Error occured when getting \(type): \(error)")
                 case .completed:
@@ -47,9 +47,6 @@ class ControlMatchesVM: BaseViewModel, ControlMatchesVMType {
     }
     
     func getMatches(type: MatchAction) -> Observable<[MatchModel]> {
-        if type == .football {
-            return adminService.footballMatches()
-        }
-        return adminService.basketballMatches()
+        return adminService.getMatches(type: type.rawValue, isSpecial: true)
     }
 }
