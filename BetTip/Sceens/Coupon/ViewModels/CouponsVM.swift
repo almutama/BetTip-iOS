@@ -8,9 +8,13 @@
 
 import ObjectMapper
 import RxSwift
+import Result
+
+private let logger = Log.createLogger()
 
 protocol CouponsVMType {
     func getCoupons() -> Observable<[CouponModel]>
+    func buyCoupon(coupon: CouponModel) -> Observable<Bool>
 }
 
 class CouponsVM: BaseViewModel, CouponsVMType {
@@ -25,5 +29,19 @@ class CouponsVM: BaseViewModel, CouponsVMType {
     
     func getCoupons() -> Observable<[CouponModel]> {
         return couponService.getCoupons()
+    }
+    
+    func buyCoupon(coupon: CouponModel) -> Observable<Bool> {
+        return couponService.buyCoupon(coupon: coupon)
+            .flatMapLatest { coupon -> Observable<Bool> in
+            switch coupon {
+            case .success(let coupon):
+                logger.log(.debug, "saved coupon is: \(coupon)")
+                return Observable.just(true)
+            case .failure(let error):
+                logger.log(.debug, "error occured when coupon bought: \(error) for \(coupon)")
+                return Observable.just(false)
+            }
+        }
     }
 }
