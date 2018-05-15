@@ -128,6 +128,17 @@
 		B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */; };
 		B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */; };
 		B08340CF20A7C6CF00A41F36 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */; };
+		B08340D720A87D1500A41F36 /* CouponActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340D620A87D1500A41F36 /* CouponActions.swift */; };
+		B08340D920A8DC6F00A41F36 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340D820A8DC6F00A41F36 /* UILabel+Ext.swift */; };
+		B08340DB20AA138600A41F36 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08340DA20AA138600A41F36 /* StoreKit.framework */; };
+		B08340DD20AB730600A41F36 /* PurchaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340DC20AB730600A41F36 /* PurchaseServices.swift */; };
+		B08340E120AB743000A41F36 /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E020AB743000A41F36 /* DataPoint.swift */; };
+		B08340E320AB744B00A41F36 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E220AB744B00A41F36 /* Event.swift */; };
+		B08340E520AB747B00A41F36 /* ErrorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E420AB747B00A41F36 /* ErrorEvent.swift */; };
+		B08340E720AB749100A41F36 /* Event+Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E620AB749100A41F36 /* Event+Categories.swift */; };
+		B08340E920AB7DFD00A41F36 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E820AB7DFD00A41F36 /* AnalyticsManager.swift */; };
+		B08340EB20AB7E1B00A41F36 /* FirebaseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340EA20AB7E1B00A41F36 /* FirebaseAnalytics.swift */; };
+		B08340ED20AB7E2A00A41F36 /* AnalyticsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340EC20AB7E2A00A41F36 /* AnalyticsLogger.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
@@ -317,6 +328,17 @@
 		B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVM.swift; sourceTree = "<group>"; };
 		B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optionals+Ext.swift"; sourceTree = "<group>"; };
 		B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		B08340D620A87D1500A41F36 /* CouponActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponActions.swift; sourceTree = "<group>"; };
+		B08340D820A8DC6F00A41F36 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		B08340DA20AA138600A41F36 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B08340DC20AB730600A41F36 /* PurchaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseServices.swift; sourceTree = "<group>"; };
+		B08340E020AB743000A41F36 /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
+		B08340E220AB744B00A41F36 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B08340E420AB747B00A41F36 /* ErrorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEvent.swift; sourceTree = "<group>"; };
+		B08340E620AB749100A41F36 /* Event+Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+Categories.swift"; sourceTree = "<group>"; };
+		B08340E820AB7DFD00A41F36 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		B08340EA20AB7E1B00A41F36 /* FirebaseAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalytics.swift; sourceTree = "<group>"; };
+		B08340EC20AB7E2A00A41F36 /* AnalyticsLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsLogger.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -385,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB2F28AAA96B790E1286F06 /* Pods_BetTip.framework in Frameworks */,
+				B08340DB20AA138600A41F36 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +425,7 @@
 		462BBB1460F31C27D4A0C4CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B08340DA20AA138600A41F36 /* StoreKit.framework */,
 				368ECDF0EA2EEC9691508FDF /* Pods_BetTip.framework */,
 				BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */,
 			);
@@ -453,6 +477,7 @@
 		B050639F1FE5A147004CECEC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B08340D620A87D1500A41F36 /* CouponActions.swift */,
 				B05063A51FE5A1A6004CECEC /* CouponModel.swift */,
 			);
 			path = Models;
@@ -503,6 +528,7 @@
 		B0569A061FC061FA00FF34A1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B08340DE20AB73E200A41F36 /* Analytics */,
 				B0569AB21FC988D200FF34A1 /* Auth */,
 				B0569A081FC0A70F00FF34A1 /* Configuration */,
 				B0FE4A321FBAD33C008F2EE6 /* Constants */,
@@ -555,6 +581,7 @@
 				B0569A141FC0BA1100FF34A1 /* UICollectionView+Ext.swift */,
 				B0569A251FC0CDF300FF34A1 /* UIColor+Ext.swift */,
 				B0569A231FC0CD9C00FF34A1 /* UIImage+Ext.swift */,
+				B08340D820A8DC6F00A41F36 /* UILabel+Ext.swift */,
 				B0569A211FC0CD4300FF34A1 /* UIScreen+Ext.swift */,
 				B0569A121FC0B9F800FF34A1 /* UITableView+Ext.swift */,
 			);
@@ -718,6 +745,7 @@
 			isa = PBXGroup;
 			children = (
 				B0569A761FC37C8100FF34A1 /* CreditServices.swift */,
+				B08340DC20AB730600A41F36 /* PurchaseServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -905,6 +933,28 @@
 				B0569AEB1FCF3D7600FF34A1 /* FootballServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B08340DE20AB73E200A41F36 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				B08340DF20AB741E00A41F36 /* Events */,
+				B08340EC20AB7E2A00A41F36 /* AnalyticsLogger.swift */,
+				B08340E820AB7DFD00A41F36 /* AnalyticsManager.swift */,
+				B08340EA20AB7E1B00A41F36 /* FirebaseAnalytics.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		B08340DF20AB741E00A41F36 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				B08340E020AB743000A41F36 /* DataPoint.swift */,
+				B08340E220AB744B00A41F36 /* Event.swift */,
+				B08340E420AB747B00A41F36 /* ErrorEvent.swift */,
+				B08340E620AB749100A41F36 /* Event+Categories.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		B08A456D1F9DD5430082BDD3 = {
@@ -1290,9 +1340,12 @@
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplePay = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
 							com.apple.Push = {
@@ -1554,6 +1607,7 @@
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -1586,6 +1640,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -1605,7 +1660,9 @@
 			files = (
 				B0DACC0120A0FBD100C59CCD /* MatchAssembly.swift in Sources */,
 				B08D42152047498900426276 /* MatchCell.swift in Sources */,
+				B08340D920A8DC6F00A41F36 /* UILabel+Ext.swift in Sources */,
 				B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */,
+				B08340E520AB747B00A41F36 /* ErrorEvent.swift in Sources */,
 				B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */,
 				B05063B61FE5CD24004CECEC /* MyCouponsVC.swift in Sources */,
 				B0569A6B1FC37AFD00FF34A1 /* MatchModel.swift in Sources */,
@@ -1614,6 +1671,7 @@
 				B05063AA1FE5A1C5004CECEC /* CouponsVC.swift in Sources */,
 				B0569A241FC0CD9C00FF34A1 /* UIImage+Ext.swift in Sources */,
 				B0569AD61FCDF6BD00FF34A1 /* BGDidLoginEvent.swift in Sources */,
+				B08340E320AB744B00A41F36 /* Event.swift in Sources */,
 				B0569AD81FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift in Sources */,
 				B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */,
 				B0569A4C1FC22B3E00FF34A1 /* BGEventBusEvent.swift in Sources */,
@@ -1672,12 +1730,15 @@
 				B0A7AA371FCC58C900DC4F62 /* Storyboards.swift in Sources */,
 				B0569AEE1FCF3D8100FF34A1 /* FootballVC.swift in Sources */,
 				B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */,
+				B08340ED20AB7E2A00A41F36 /* AnalyticsLogger.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
 				B0569ACD1FCDED7C00FF34A1 /* SplashVM.swift in Sources */,
+				B08340EB20AB7E1B00A41F36 /* FirebaseAnalytics.swift in Sources */,
 				B0569AF01FCF3D8C00FF34A1 /* FootballVM.swift in Sources */,
 				B00E3C5B20112F5500802708 /* UpdateCouponVC.swift in Sources */,
 				B05063BA1FE5CD45004CECEC /* MyCouponDetailVM.swift in Sources */,
+				B08340D720A87D1500A41F36 /* CouponActions.swift in Sources */,
 				B0569A771FC37C8100FF34A1 /* CreditServices.swift in Sources */,
 				B08D421A20508F7600426276 /* Date+Ext.swift in Sources */,
 				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
@@ -1705,6 +1766,7 @@
 				B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */,
 				B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */,
 				B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */,
+				B08340DD20AB730600A41F36 /* PurchaseServices.swift in Sources */,
 				B00E3C5F20112F7100802708 /* UpdateCouponVM.swift in Sources */,
 				B05063B21FE5A211004CECEC /* CouponAssembly.swift in Sources */,
 				B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */,
@@ -1735,7 +1797,9 @@
 				B0569A481FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift in Sources */,
 				B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */,
 				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
+				B08340E120AB743000A41F36 /* DataPoint.swift in Sources */,
 				B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */,
+				B08340E920AB7DFD00A41F36 /* AnalyticsManager.swift in Sources */,
 				B0BDD8061FFECAF600F3851A /* UserAction.swift in Sources */,
 				B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */,
 				B0569AEC1FCF3D7600FF34A1 /* FootballServices.swift in Sources */,
@@ -1749,6 +1813,7 @@
 				B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */,
 				B0569A7A1FC37C8E00FF34A1 /* CreditCell.swift in Sources */,
 				B0569A961FC6214400FF34A1 /* LoginAssembly.swift in Sources */,
+				B08340E720AB749100A41F36 /* Event+Categories.swift in Sources */,
 				B0BDD7FF1FEC4CD800F3851A /* UserEventService.swift in Sources */,
 				B06BE0331FD73CCD00BA8EC8 /* ControlUsersVC.swift in Sources */,
 				B05063BC1FE5CD54004CECEC /* MyCouponsVM.swift in Sources */,
