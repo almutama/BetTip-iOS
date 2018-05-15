@@ -10,6 +10,7 @@ import ObjectMapper
 import RxSwift
 
 protocol MyCouponDetailVMType {
+    var couponDetail: Variable<[CouponModel]> { get set }
     func getCredits() -> Observable<[CreditModel]>
 }
 
@@ -17,6 +18,7 @@ class MyCouponDetailVM: BaseViewModel, MyCouponDetailVMType {
     
     private let creditService: CreditServiceType!
     private let disposeBag = DisposeBag()
+    var couponDetail: Variable<[CouponModel]> = Variable<[CouponModel]>([])
     
     init(creditService: CreditServiceType) {
         self.creditService = creditService

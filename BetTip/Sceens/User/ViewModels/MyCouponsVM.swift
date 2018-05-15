@@ -10,20 +10,20 @@ import ObjectMapper
 import RxSwift
 
 protocol MyCouponsVMType {
-    func getCredits() -> Observable<[CreditModel]>
+    func getCoupons() -> Observable<[CouponModel]>
 }
 
 class MyCouponsVM: BaseViewModel, MyCouponsVMType {
     
-    private let creditService: CreditServiceType!
+    private let couponService: CouponServiceType!
     private let disposeBag = DisposeBag()
     
-    init(creditService: CreditServiceType) {
-        self.creditService = creditService
+    init(couponService: CouponServiceType) {
+        self.couponService = couponService
         super.init()
     }
     
-    func getCredits() -> Observable<[CreditModel]> {
-        return creditService.getCredits()
+    func getCoupons() -> Observable<[CouponModel]> {
+        return couponService.getCoupons()
     }
 }

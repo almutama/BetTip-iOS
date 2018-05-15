@@ -31,16 +31,16 @@ class MyCouponsVC: BaseViewController {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
-        self.collectionView.registerCellNib(CreditCell.self)
+        self.collectionView.registerCellNib(CouponCell.self)
     }
     
     func bindViewModel() {
         self.viewModel
-            .getCredits()
+            .getCoupons()
             .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: CreditCell.reuseIdentifier,
-                                                   cellType: CreditCell.self)) { _, data, cell in
-                                                    cell.viewModel = Variable<CreditModel>(data)
+            .bind(to: self.collectionView.rx.items(cellIdentifier: CouponCell.reuseIdentifier,
+                                                   cellType: CouponCell.self)) { _, data, cell in
+                                                    cell.viewModel = Variable<CouponModel>(data)
             }.disposed(by: disposeBag)
     }
 }
