@@ -21,6 +21,7 @@
 "Common.Sure" = "Emin misiniz?";
 "Common.Process.Success" = "İşlem başarıyla sonuçlandı.";
 "Common.Process.Error" = "İşlem tamamlanamadı.";
+"Common.Buy" = "Satın Al";
 
 "Role.User" = "Kullanıcı";
 "Role.Moderator" = "Moderatör";
@@ -63,6 +64,7 @@
 "User.Role.Disable" = "Kullanıcıyı Engelle";
 "User.Role.ChangeRole" = "Kullanicının Rolünü Değiştir";
 "User.Role.Title" = "Kullanıcı Rolü";
+"User.Credit.Rest" = "Kalan krediniz: ";
 
 "Match.Basketball" = "Basketbol";
 "Match.Football" = "Futbol";
@@ -98,3 +100,9 @@
 "MatchForm.Tipster.Placeholder" = "mustafa@gmail.com";
 "MatchForm.MatchType.Placeholder" = "1 yada 2";
 "MatchForm.Won.Placeholder" = "0 yada 1";
+
+"Coupon.Title" = "Kupon";
+"Coupon.BuyCoupon" = " kredi hesabınızdan kesilecektir.";
+"Coupon.NotEnoughTitle" = "Yetersiz Kredi";
+"Coupon.NotEnough" = "Krediniz bu kuponu satın almak için yeterli değil.";
+

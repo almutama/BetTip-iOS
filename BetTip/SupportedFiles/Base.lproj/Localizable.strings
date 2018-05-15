@@ -21,6 +21,7 @@
 "Common.Sure" = "Are you sure?";
 "Common.Process.Success" = "Process has been finished successfully.";
 "Common.Process.Error" = "Process couldn't be finished.";
+"Common.Buy" = "Buy";
 
 "Role.User" = "User";
 "Role.Moderator" = "Moderator";
@@ -63,6 +64,7 @@
 "User.Role.Disable" = "Disable User";
 "User.Role.ChangeRole" = "Change User's Role";
 "User.Role.Title" = "User Role";
+"User.Credit.Rest" = "Your rest of credit: ";
 
 "Match.Basketball" = "Basketball";
 "Match.Football" = "Football";
@@ -98,3 +100,8 @@
 "MatchForm.Tipster.Placeholder" = "mustafa@gmail.com";
 "MatchForm.MatchType.Placeholder" = "1 or 2";
 "MatchForm.Won.Placeholder" = "0 or 1";
+
+"Coupon.Title" = "Coupon";
+"Coupon.BuyCoupon" = " credits will be transfered from your wallet.";
+"Coupon.NotEnoughTitle" = "Credit Not Enough";
+"Coupon.NotEnough" = "Your credit is not enough to buy this coupon.";

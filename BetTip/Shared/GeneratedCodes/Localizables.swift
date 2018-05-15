@@ -54,6 +54,8 @@ enum L10n {
   }
 
   enum Common {
+    /// Buy
+    static let buy = L10n.tr("Localizable", "Common.Buy")
     /// Cancel
     static let cancel = L10n.tr("Localizable", "Common.Cancel")
     /// Delete
@@ -87,6 +89,17 @@ enum L10n {
       /// Process has been finished successfully.
       static let success = L10n.tr("Localizable", "Common.Process.Success")
     }
+  }
+
+  enum Coupon {
+    ///  credits will be transfered from your wallet.
+    static let buyCoupon = L10n.tr("Localizable", "Coupon.BuyCoupon")
+    /// Your credit is not enough to buy this coupon.
+    static let notEnough = L10n.tr("Localizable", "Coupon.NotEnough")
+    /// Credit Not Enough
+    static let notEnoughTitle = L10n.tr("Localizable", "Coupon.NotEnoughTitle")
+    /// Coupon
+    static let title = L10n.tr("Localizable", "Coupon.Title")
   }
 
   enum Credit {
@@ -228,6 +241,11 @@ enum L10n {
       static let desc = L10n.tr("Localizable", "User.Action.Desc")
       /// User Actions
       static let title = L10n.tr("Localizable", "User.Action.Title")
+    }
+
+    enum Credit {
+      /// Your rest of credit: 
+      static let rest = L10n.tr("Localizable", "User.Credit.Rest")
     }
 
     enum Role {
