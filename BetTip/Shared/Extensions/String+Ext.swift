@@ -62,6 +62,24 @@ extension String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: withComment)
     }
     
+    /// Truncates String to given langth
+    ///
+    /// - Parameter length: Result string will be limited to the given number of characters.
+    /// If length is 0 or less - empty string will be returned
+    /// - Returns: truncated string.
+    func truncateToLength(_ length: Int) -> String {
+        if length <= 0 {
+            // returns empty string
+            return ""
+        } else if length < self.count {
+            let endIndex = self.index(self.startIndex, offsetBy: length)
+            let truncatedString = self[...endIndex]
+            return String(truncatedString)
+        } else {
+            return self
+        }
+    }
+    
 }
 
 extension String {

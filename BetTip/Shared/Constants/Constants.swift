@@ -33,6 +33,7 @@ struct Constants {
     static let disabledUsers = "DisabledUsers"
     static let credits = "Credits"
     static let coupons = "Coupons"
+    static let userCoupons = "UserCoupons"
     static let userCredits = "UserCredits"
     static let stats = "Stats"
     static let basketball = "\(stats)/Basketball"
@@ -58,4 +59,11 @@ struct Constants {
     static let merchantId = "merchant.salieri.BetTipAppFree"
     static let currencyCode = "TRY"
     static let countryCode = "TR"
+    
+    //ErrorEvent class
+    static let errorEventName = "Error"                     // error name
+    static let errorEventDebugInfoDatapoint = "DebugInfo"   // datapoint key for error's debug info
+    static let exceptionEventName = "Exception"             // exception name
+    static let exceptionTraceDatapointName = "trace"        // datapoint key
+    static let exceptionDescriptionDatapointName = "description" // datapoint key
 }
