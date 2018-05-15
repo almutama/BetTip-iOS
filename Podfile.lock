@@ -17,6 +17,8 @@ PODS:
   - Firebase/AdMob (5.0.0):
     - Firebase/Core
     - Google-Mobile-Ads-SDK (= 7.30.0)
+  - Firebase/Analytics (5.0.0):
+    - Firebase/Core
   - Firebase/Auth (5.0.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.0)
@@ -125,6 +127,7 @@ PODS:
   - SwiftKeychainWrapper (3.0.1)
   - SwiftLint (0.23.1)
   - SwiftMessages (4.0.0)
+  - SwiftyStoreKit (0.13.2)
   - Swinject (2.1.1)
   - SwinjectStoryboard (1.1.2):
     - Swinject (~> 2.1)
@@ -135,6 +138,7 @@ DEPENDENCIES:
   - Eureka
   - Fabric
   - Firebase/AdMob
+  - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -164,6 +168,7 @@ DEPENDENCIES:
   - SwiftKeychainWrapper
   - SwiftLint
   - SwiftMessages
+  - SwiftyStoreKit
   - Swinject
   - SwinjectStoryboard
 
@@ -212,6 +217,7 @@ SPEC REPOS:
     - SwiftKeychainWrapper
     - SwiftLint
     - SwiftMessages
+    - SwiftyStoreKit
     - Swinject
     - SwinjectStoryboard
 
@@ -264,9 +270,10 @@ SPEC CHECKSUMS:
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
   SwiftMessages: cd565e0e7d095584be1770c012c6b5be4183b5ee
+  SwiftyStoreKit: b7563505440a68c9d9fa70bc43d8a97015519409
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: 395c843f16b06f396e02b4dcc515c07151a23428
+PODFILE CHECKSUM: edbdf62a6a3bd23910d2e7e496c291e0bfc5218a
 
 COCOAPODS: 1.5.2

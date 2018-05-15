@@ -9,6 +9,7 @@ def testing_pods
 end
 
 def firebase_pods
+  pod 'Firebase/Analytics'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
@@ -63,6 +64,7 @@ end
 
 def ad_pods
   pod 'Heyzap'
+  pod 'SwiftyStoreKit'
 end
 
 target 'BetTip' do
