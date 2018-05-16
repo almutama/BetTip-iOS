@@ -16,6 +16,7 @@
 		B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD61FD1F787007D9503 /* BaseModel.swift */; };
 		B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */; };
 		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
+		B01161BA20ACC4480034F56D /* NotificationCenter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */; };
 		B025768020323680005FA7B8 /* MatchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025767F20323680005FA7B8 /* MatchAction.swift */; };
 		B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050639A1FE53E8E004CECEC /* UserCell.swift */; };
 		B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B050639B1FE53E8E004CECEC /* UserCell.xib */; };
@@ -215,6 +216,7 @@
 		B00F3BD61FD1F787007D9503 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVC.swift; sourceTree = "<group>"; };
 		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
+		B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Ext.swift"; sourceTree = "<group>"; };
 		B025767F20323680005FA7B8 /* MatchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAction.swift; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B050639A1FE53E8E004CECEC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -1163,6 +1165,7 @@
 			isa = PBXGroup;
 			children = (
 				B0569A271FC0CF6700FF34A1 /* Constants.swift */,
+				B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1717,6 +1720,7 @@
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
 				B0DACC0520A3765600C59CCD /* BaseFormViewController.swift in Sources */,
 				B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */,
+				B01161BA20ACC4480034F56D /* NotificationCenter+Ext.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
 				B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */,
 				B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */,
