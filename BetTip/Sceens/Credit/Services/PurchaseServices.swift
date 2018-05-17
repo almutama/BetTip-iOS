@@ -12,12 +12,27 @@ import SwiftyStoreKit
 
 private let logger = Log.createLogger()
 
-let PRODUCT_OCR_10 = "ios_ocr_purchase_10"
-let PRODUCT_OCR_50 = "ios_ocr_purchase_50"
-let PRODUCT_PLUS = "ios_plus_sku_2"
+let PRODUCT_OCR_30 = "com.salieri.bettipsapp_30"
+let PRODUCT_OCR_60 = "com.salieri.bettipsapp_60"
+let PRODUCT_OCR_90 = "com.salieri.bettipsapp_90"
+let PRODUCT_PLUS = "test_subscription"
 
 protocol PurchaseServiceType {
+    // Purchase
+    func getCachedProducts() ->  Observable<[SKProduct]>
+    func purchase(prodcutID: String) -> Observable<PurchaseDetails>
+    func purchaseSubscription() -> Observable<PurchaseDetails>
+    func restorePurchases() -> Observable<[Purchase]>
+    func completeTransactions()
     
+    // Subscription
+    func hasValidSubscriptionValue() -> Bool
+    func validateSubscription() -> Observable<SubscriptionValidation>
+    func cacheSubscriptionValidation()
+    
+    // Receipt
+    func sendReceipt()
+    func logPurchases()    
 }
 
 // Global Cached Validation
@@ -28,8 +43,21 @@ class PurchaseService: PurchaseServiceType {
     static fileprivate var cachedProducts = [SKProduct]()
     let bag = DisposeBag()
     
+    func cacheProducts() {
+        requestProducts().toArray()
+            .do(onNext: { products in
+                logger.log(.debug, "Available purchases: \(products)")
+            }).subscribe(onNext: { products in
+                PurchaseService.cachedProducts = products
+            }).disposed(by: bag)
+    }
+    
+    func getCachedProducts() ->  Observable<[SKProduct]> {
+        return requestProducts().toArray()
+    }
+    
     func requestProducts() -> Observable<SKProduct> {
-        let ids: Set = [PRODUCT_PLUS, PRODUCT_OCR_10, PRODUCT_OCR_50]
+        let ids: Set = [PRODUCT_PLUS, PRODUCT_OCR_30, PRODUCT_OCR_60, PRODUCT_OCR_90]
         return Observable<SKProduct>.create({ observer -> Disposable in
             SwiftyStoreKit.retrieveProductsInfo(ids) { result in
                 for product in result.retrievedProducts {
@@ -61,6 +89,8 @@ class PurchaseService: PurchaseServiceType {
         })
     }
     
+    // TODO: cyclomatic_complexity must be fixed!
+    // swiftlint:disable:next cyclomatic_complexity
     func purchase(prodcutID: String) -> Observable<PurchaseDetails> {
         return Observable<PurchaseDetails>.create({ observer -> Disposable in
             SwiftyStoreKit.purchaseProduct(prodcutID, atomically: true) { result in
@@ -93,6 +123,7 @@ class PurchaseService: PurchaseServiceType {
                 PurchaseService.analyticsPurchaseFailed(productID: prodcutID)
         })
     }
+    // swiftlint: superfluous_disable_command
     
     func restoreSubscription() -> Observable<Bool> {
         return restorePurchases()
