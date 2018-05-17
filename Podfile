@@ -6,6 +6,9 @@ inhibit_all_warnings!
 def testing_pods
   pod 'Quick'
   pod 'Nimble'
+  pod 'RxBlocking'
+  pod 'RxTest'
+  pod 'Cuckoo'
 end
 
 def firebase_pods

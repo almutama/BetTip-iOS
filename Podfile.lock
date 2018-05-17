@@ -10,6 +10,7 @@ PODS:
     - CocoaLumberjack/Default
   - Crashlytics (3.9.0):
     - Fabric (~> 1.7.0)
+  - Cuckoo (0.11.3)
   - Differentiator (3.0.1)
   - DZNEmptyDataSet (1.8.1)
   - Eureka (4.1.1)
@@ -112,6 +113,8 @@ PODS:
     - Reactant/Core
     - RxCocoa (~> 4.0)
   - Result (3.0.0)
+  - RxBlocking (4.1.2):
+    - RxSwift (~> 4.0)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
   - RxDataSources (3.0.1):
@@ -122,6 +125,8 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
+  - RxTest (4.1.2):
+    - RxSwift (~> 4.0)
   - SnapKit (4.0.0)
   - SwiftGen (5.2.1)
   - SwiftKeychainWrapper (3.0.1)
@@ -134,6 +139,7 @@ PODS:
 
 DEPENDENCIES:
   - Crashlytics
+  - Cuckoo
   - DZNEmptyDataSet
   - Eureka
   - Fabric
@@ -160,10 +166,12 @@ DEPENDENCIES:
   - Reactant/Result (~> 1.0)
   - Reactant/StaticMap (~> 1.0)
   - Result (~> 3.0.0)
+  - RxBlocking
   - RxCocoa
   - RxDataSources
   - RxOptional
   - RxSwift (~> 4.0)
+  - RxTest
   - SwiftGen
   - SwiftKeychainWrapper
   - SwiftLint
@@ -177,6 +185,7 @@ SPEC REPOS:
     - CocoaAsyncSocket
     - CocoaLumberjack
     - Crashlytics
+    - Cuckoo
     - Differentiator
     - DZNEmptyDataSet
     - Eureka
@@ -208,10 +217,12 @@ SPEC REPOS:
     - ReachabilitySwift
     - Reactant
     - Result
+    - RxBlocking
     - RxCocoa
     - RxDataSources
     - RxOptional
     - RxSwift
+    - RxTest
     - SnapKit
     - SwiftGen
     - SwiftKeychainWrapper
@@ -229,6 +240,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
   CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
+  Cuckoo: 97522dd7ac6f18adba6022bdc74aa69e82ca691a
   Differentiator: ffe513ce1ea4e7198b89fac94d6e281c673055a9
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Eureka: b88fb930e42c79f8c03c373d0fcdc28c1d6c50ed
@@ -261,10 +273,12 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   Reactant: 1910427bc0b05afeeb4e959e24bdd768dedb5258
   Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
+  RxBlocking: f6054985901412fc8c02daa84e92d4ba68c61389
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxDataSources: 098b7e62b6316313b14d6bf594e3f4f4f62a238a
   RxOptional: e5448d3e21024489e07c31f6a262f2b50c975367
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  RxTest: e634f15fd2c2cd0e0120132ef7a4f7be69ad0393
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
@@ -274,6 +288,6 @@ SPEC CHECKSUMS:
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: edbdf62a6a3bd23910d2e7e496c291e0bfc5218a
+PODFILE CHECKSUM: 3396e9029a9b5320bddbd099f29187f62a1e203b
 
 COCOAPODS: 1.5.2
