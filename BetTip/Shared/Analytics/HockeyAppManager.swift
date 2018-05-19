@@ -10,7 +10,7 @@ import Foundation
 import HockeySDK
 import Keys
 
-class HockeyApp {
+class HockeyAppManager {
     
     fileprivate let hockeyAppIdentificationKey = "HockeyAppIdentificationKey"
     

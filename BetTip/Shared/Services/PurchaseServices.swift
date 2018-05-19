@@ -60,13 +60,16 @@ class PurchaseService: PurchaseServiceType {
         let ids: Set = [PRODUCT_PLUS, PRODUCT_OCR_30, PRODUCT_OCR_60, PRODUCT_OCR_90]
         return Observable<SKProduct>.create({ observer -> Disposable in
             SwiftyStoreKit.retrieveProductsInfo(ids) { result in
+                print("products result: \(result)")
                 for product in result.retrievedProducts {
+                    print("product: \(product)")
                     observer.onNext(product)
                 }
             }
             return Disposables.create()
         }).do(onError: { error in
             let errorEvent = ErrorEvent(error: error)
+            logger.log(.error, "fuck: \(error.localizedDescription)")
             AnalyticsManager.sharedManager.record(event: errorEvent)
         })
     }
