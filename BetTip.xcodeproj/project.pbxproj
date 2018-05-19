@@ -18,6 +18,7 @@
 		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
 		B01161BA20ACC4480034F56D /* NotificationCenter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */; };
 		B025768020323680005FA7B8 /* MatchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025767F20323680005FA7B8 /* MatchAction.swift */; };
+		B02EEA0120B051090079A930 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0020B051090079A930 /* NotificationService.swift */; };
 		B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050639A1FE53E8E004CECEC /* UserCell.swift */; };
 		B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B050639B1FE53E8E004CECEC /* UserCell.xib */; };
 		B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063A51FE5A1A6004CECEC /* CouponModel.swift */; };
@@ -34,7 +35,7 @@
 		B05063BC1FE5CD54004CECEC /* MyCouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063BB1FE5CD54004CECEC /* MyCouponsVM.swift */; };
 		B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063BE1FE5CDDD004CECEC /* MyCouponCell.swift */; };
 		B05063C11FE5CDDD004CECEC /* MyCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05063BF1FE5CDDD004CECEC /* MyCouponCell.xib */; };
-		B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyApp.swift */; };
+		B0569A0A1FC0A73300FF34A1 /* HockeyAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyAppManager.swift */; };
 		B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */; };
 		B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */; };
 		B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A101FC0B9B400FF34A1 /* Reusable.swift */; };
@@ -218,6 +219,7 @@
 		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
 		B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Ext.swift"; sourceTree = "<group>"; };
 		B025767F20323680005FA7B8 /* MatchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAction.swift; sourceTree = "<group>"; };
+		B02EEA0020B051090079A930 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B050639A1FE53E8E004CECEC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B050639B1FE53E8E004CECEC /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -235,7 +237,7 @@
 		B05063BB1FE5CD54004CECEC /* MyCouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponsVM.swift; sourceTree = "<group>"; };
 		B05063BE1FE5CDDD004CECEC /* MyCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponCell.swift; sourceTree = "<group>"; };
 		B05063BF1FE5CDDD004CECEC /* MyCouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCouponCell.xib; sourceTree = "<group>"; };
-		B0569A091FC0A73300FF34A1 /* HockeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyApp.swift; sourceTree = "<group>"; };
+		B0569A091FC0A73300FF34A1 /* HockeyAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyAppManager.swift; sourceTree = "<group>"; };
 		B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		B0569A101FC0B9B400FF34A1 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -453,6 +455,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B02EE9FF20B045D30079A930 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B02EEA0020B051090079A930 /* NotificationService.swift */,
+				B08340DC20AB730600A41F36 /* PurchaseServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B05063991FE53E5F004CECEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,7 +543,6 @@
 			children = (
 				B08340DE20AB73E200A41F36 /* Analytics */,
 				B0569AB21FC988D200FF34A1 /* Auth */,
-				B0569A081FC0A70F00FF34A1 /* Configuration */,
 				B0FE4A321FBAD33C008F2EE6 /* Constants */,
 				B0FE4A331FBAD34A008F2EE6 /* Events */,
 				B0569A0B1FC0AFED00FF34A1 /* Extensions */,
@@ -540,6 +550,7 @@
 				B00F3BD51FD1F774007D9503 /* Model */,
 				B0569A071FC0A61200FF34A1 /* Network */,
 				B0FE4A391FBAD3AC008F2EE6 /* Presenters */,
+				B02EE9FF20B045D30079A930 /* Services */,
 				B0FE4A361FBAD371008F2EE6 /* Storage */,
 				B0569A181FC0C3D200FF34A1 /* Theme */,
 				B0FE4A371FBAD37B008F2EE6 /* Utilities */,
@@ -556,14 +567,6 @@
 				B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		B0569A081FC0A70F00FF34A1 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				B0569A091FC0A73300FF34A1 /* HockeyApp.swift */,
-			);
-			path = Configuration;
 			sourceTree = "<group>";
 		};
 		B0569A0B1FC0AFED00FF34A1 /* Extensions */ = {
@@ -747,7 +750,6 @@
 			isa = PBXGroup;
 			children = (
 				B0569A761FC37C8100FF34A1 /* CreditServices.swift */,
-				B08340DC20AB730600A41F36 /* PurchaseServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -944,6 +946,7 @@
 				B08340EC20AB7E2A00A41F36 /* AnalyticsLogger.swift */,
 				B08340E820AB7DFD00A41F36 /* AnalyticsManager.swift */,
 				B08340EA20AB7E1B00A41F36 /* FirebaseAnalytics.swift */,
+				B0569A091FC0A73300FF34A1 /* HockeyAppManager.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -1692,7 +1695,7 @@
 				B0569AE11FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift in Sources */,
 				B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */,
 				B0569ADA1FCDF6DE00FF34A1 /* BGDidRefreshEvent.swift in Sources */,
-				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
+				B0569A0A1FC0A73300FF34A1 /* HockeyAppManager.swift in Sources */,
 				B0569A8C1FC37D3500FF34A1 /* AdminServices.swift in Sources */,
 				B0A7AA361FCC58C900DC4F62 /* Images.swift in Sources */,
 				B0569AFA1FD0801100FF34A1 /* StyledButton.swift in Sources */,
@@ -1732,6 +1735,7 @@
 				B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */,
 				B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */,
 				B0569AB41FC988EB00FF34A1 /* AuthManager.swift in Sources */,
+				B02EEA0120B051090079A930 /* NotificationService.swift in Sources */,
 				B0569A261FC0CDF300FF34A1 /* UIColor+Ext.swift in Sources */,
 				B0569A881FC37D1F00FF34A1 /* AdminAssembly.swift in Sources */,
 				B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */,
