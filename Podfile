@@ -18,7 +18,6 @@ def firebase_pods
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  pod 'Firebase/AdMob'
 end
 
 def ui_pods
@@ -45,6 +44,7 @@ def general_pods
   pod 'Swinject'
   pod 'SwinjectStoryboard'
   pod 'SwiftKeychainWrapper'
+  pod 'SwiftyStoreKit'
   pod 'IQKeyboardManagerSwift'
 
   plugin 'cocoapods-keys', {
@@ -67,7 +67,9 @@ end
 
 def ad_pods
   pod 'Heyzap'
-  pod 'SwiftyStoreKit'
+  pod 'AdColony'
+  pod 'ChartboostSDK', :inhibit_warnings => true
+  pod 'Google-Mobile-Ads-SDK'
 end
 
 target 'BetTip' do

@@ -1,4 +1,6 @@
 PODS:
+  - AdColony (3.3.0)
+  - ChartboostSDK (7.2.0)
   - CocoaAsyncSocket (7.6.1)
   - CocoaLumberjack (3.3.0):
     - CocoaLumberjack/Default (= 3.3.0)
@@ -15,9 +17,6 @@ PODS:
   - DZNEmptyDataSet (1.8.1)
   - Eureka (4.1.1)
   - Fabric (1.7.0)
-  - Firebase/AdMob (5.0.0):
-    - Firebase/Core
-    - Google-Mobile-Ads-SDK (= 7.30.0)
   - Firebase/Analytics (5.0.0):
     - Firebase/Core
   - Firebase/Auth (5.0.0):
@@ -138,18 +137,20 @@ PODS:
     - Swinject (~> 2.1)
 
 DEPENDENCIES:
+  - AdColony
+  - ChartboostSDK
   - Crashlytics
   - Cuckoo
   - DZNEmptyDataSet
   - Eureka
   - Fabric
-  - Firebase/AdMob
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - Google-Mobile-Ads-SDK
   - Hero
   - Heyzap
   - HockeySDK
@@ -182,6 +183,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AdColony
+    - ChartboostSDK
     - CocoaAsyncSocket
     - CocoaLumberjack
     - Crashlytics
@@ -237,6 +240,8 @@ EXTERNAL SOURCES:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
+  AdColony: c738aa4305856bf324cc48339ea319f3afdb913c
+  ChartboostSDK: 15386cd16c8a5d07bb75432d0fafafd6134eedb1
   CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
   CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
@@ -288,6 +293,6 @@ SPEC CHECKSUMS:
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: 3396e9029a9b5320bddbd099f29187f62a1e203b
+PODFILE CHECKSUM: 1d67917c55d738eea53c0f162b9337ce93ad5681
 
 COCOAPODS: 1.5.2
