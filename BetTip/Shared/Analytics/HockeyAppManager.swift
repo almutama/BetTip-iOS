@@ -52,11 +52,7 @@ class HockeyAppManager {
     }
     
     func setupAuth() {
-        #if targetEnvironment(simulator)
-            setupNoAuth()
-        #else
-            setupEmailAuth()
-        #endif
+        setupNoAuth()
     }
     
     func validateAuth() -> (((Bool, Error?) -> Swift.Void)?) -> Void {
