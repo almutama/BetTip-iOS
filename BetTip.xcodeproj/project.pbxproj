@@ -12,13 +12,18 @@
 		B00E3C5B20112F5500802708 /* UpdateCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5A20112F5500802708 /* UpdateCouponVC.swift */; };
 		B00E3C5D20112F6400802708 /* AddCouponVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5C20112F6400802708 /* AddCouponVM.swift */; };
 		B00E3C5F20112F7100802708 /* UpdateCouponVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5E20112F7100802708 /* UpdateCouponVM.swift */; };
-		B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */; };
 		B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD61FD1F787007D9503 /* BaseModel.swift */; };
 		B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */; };
 		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
 		B01161BA20ACC4480034F56D /* NotificationCenter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */; };
 		B025768020323680005FA7B8 /* MatchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025767F20323680005FA7B8 /* MatchAction.swift */; };
 		B02EEA0120B051090079A930 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0020B051090079A930 /* NotificationService.swift */; };
+		B02EEA0320B0A1E30079A930 /* HeyzapBanner+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */; };
+		B02EEA0C20B1CD6F0079A930 /* AdBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02EEA0B20B1CD6F0079A930 /* AdBannerView.xib */; };
+		B02EEA0E20B1CD8D0079A930 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0D20B1CD8D0079A930 /* AdBannerView.swift */; };
+		B02EEA1020B1CD9B0079A930 /* AdBannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0F20B1CD9B0079A930 /* AdBannerViewModel.swift */; };
+		B02EEA1220B1EFE10079A930 /* AdServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA1120B1EFE10079A930 /* AdServices.swift */; };
+		B02EEA1420B1F02D0079A930 /* AdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA1320B1F02D0079A930 /* AdModel.swift */; };
 		B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050639A1FE53E8E004CECEC /* UserCell.swift */; };
 		B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B050639B1FE53E8E004CECEC /* UserCell.xib */; };
 		B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063A51FE5A1A6004CECEC /* CouponModel.swift */; };
@@ -213,13 +218,18 @@
 		B00E3C5A20112F5500802708 /* UpdateCouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCouponVC.swift; sourceTree = "<group>"; };
 		B00E3C5C20112F6400802708 /* AddCouponVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponVM.swift; sourceTree = "<group>"; };
 		B00E3C5E20112F7100802708 /* UpdateCouponVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCouponVM.swift; sourceTree = "<group>"; };
-		B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Ext.swift"; sourceTree = "<group>"; };
 		B00F3BD61FD1F787007D9503 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVC.swift; sourceTree = "<group>"; };
 		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
 		B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Ext.swift"; sourceTree = "<group>"; };
 		B025767F20323680005FA7B8 /* MatchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAction.swift; sourceTree = "<group>"; };
 		B02EEA0020B051090079A930 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeyzapBanner+Rx.swift"; sourceTree = "<group>"; };
+		B02EEA0B20B1CD6F0079A930 /* AdBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdBannerView.xib; sourceTree = "<group>"; };
+		B02EEA0D20B1CD8D0079A930 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
+		B02EEA0F20B1CD9B0079A930 /* AdBannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerViewModel.swift; sourceTree = "<group>"; };
+		B02EEA1120B1EFE10079A930 /* AdServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdServices.swift; sourceTree = "<group>"; };
+		B02EEA1320B1F02D0079A930 /* AdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdModel.swift; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B050639A1FE53E8E004CECEC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B050639B1FE53E8E004CECEC /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -450,6 +460,7 @@
 		B00F3BD51FD1F774007D9503 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B02EEA1320B1F02D0079A930 /* AdModel.swift */,
 				B00F3BD61FD1F787007D9503 /* BaseModel.swift */,
 			);
 			path = Model;
@@ -458,10 +469,21 @@
 		B02EE9FF20B045D30079A930 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B02EEA1120B1EFE10079A930 /* AdServices.swift */,
 				B02EEA0020B051090079A930 /* NotificationService.swift */,
 				B08340DC20AB730600A41F36 /* PurchaseServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B02EEA0A20B1CD320079A930 /* Advertisement */ = {
+			isa = PBXGroup;
+			children = (
+				B02EEA0D20B1CD8D0079A930 /* AdBannerView.swift */,
+				B02EEA0B20B1CD6F0079A930 /* AdBannerView.xib */,
+				B02EEA0F20B1CD9B0079A930 /* AdBannerViewModel.swift */,
+			);
+			path = Advertisement;
 			sourceTree = "<group>";
 		};
 		B05063991FE53E5F004CECEC /* Views */ = {
@@ -579,9 +601,9 @@
 				B08D421920508F7600426276 /* Date+Ext.swift */,
 				B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */,
 				B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */,
+				B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */,
 				B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */,
 				B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */,
-				B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */,
 				B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */,
 				B0569A141FC0BA1100FF34A1 /* UICollectionView+Ext.swift */,
 				B0569A251FC0CDF300FF34A1 /* UIColor+Ext.swift */,
@@ -1235,6 +1257,7 @@
 		B0FE4A3C1FBAD3C6008F2EE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B02EEA0A20B1CD320079A930 /* Advertisement */,
 				B0569A161FC0BF2800FF34A1 /* NibView.swift */,
 				B0569A101FC0B9B400FF34A1 /* Reusable.swift */,
 				B0569AF91FD0801100FF34A1 /* StyledButton.swift */,
@@ -1398,6 +1421,7 @@
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
 				B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */,
 				B08D42162047498900426276 /* MatchCell.xib in Resources */,
+				B02EEA0C20B1CD6F0079A930 /* AdBannerView.xib in Resources */,
 				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
 				B0569A651FC37A9200FF34A1 /* BasketballCell.xib in Resources */,
 				B05063B41FE5A221004CECEC /* Coupon.storyboard in Resources */,
@@ -1466,6 +1490,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -1494,6 +1519,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -1692,6 +1718,7 @@
 				B0569A3B1FC22A4800FF34A1 /* EventBus.swift in Sources */,
 				B0569A331FC220FB00FF34A1 /* BaseViewModel.swift in Sources */,
 				B0569A281FC0CF6700FF34A1 /* Constants.swift in Sources */,
+				B02EEA1420B1F02D0079A930 /* AdModel.swift in Sources */,
 				B0569AE11FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift in Sources */,
 				B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */,
 				B0569ADA1FCDF6DE00FF34A1 /* BGDidRefreshEvent.swift in Sources */,
@@ -1712,6 +1739,7 @@
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
 				B0BDD80B200A2DBA00F3851A /* ControlCouponsVC.swift in Sources */,
 				B0569A641FC37A9200FF34A1 /* BasketballCell.swift in Sources */,
+				B02EEA1220B1EFE10079A930 /* AdServices.swift in Sources */,
 				B0569A811FC37CC600FF34A1 /* CreditAssembly.swift in Sources */,
 				B0569AF31FCF3DA100FF34A1 /* FootballCell.swift in Sources */,
 				B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */,
@@ -1722,6 +1750,7 @@
 				B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */,
 				B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */,
 				B0BDD7FC1FE6CD7700F3851A /* AlertAction.swift in Sources */,
+				B02EEA0320B0A1E30079A930 /* HeyzapBanner+Rx.swift in Sources */,
 				B0A7AA261FC8627800DC4F62 /* FirebaseError.swift in Sources */,
 				B08D4218204DDE4600426276 /* Array+Ext.swift in Sources */,
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
@@ -1754,6 +1783,7 @@
 				B05063BA1FE5CD45004CECEC /* MyCouponDetailVM.swift in Sources */,
 				B08340D720A87D1500A41F36 /* CouponActions.swift in Sources */,
 				B0569A771FC37C8100FF34A1 /* CreditServices.swift in Sources */,
+				B02EEA1020B1CD9B0079A930 /* AdBannerViewModel.swift in Sources */,
 				B08D421A20508F7600426276 /* Date+Ext.swift in Sources */,
 				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
@@ -1777,7 +1807,6 @@
 				B0569ACA1FCDEAB600FF34A1 /* SplashVC.swift in Sources */,
 				B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */,
 				B0A7AA351FCC58C900DC4F62 /* Localizables.swift in Sources */,
-				B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */,
 				B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */,
 				B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */,
 				B08340DD20AB730600A41F36 /* PurchaseServices.swift in Sources */,
@@ -1821,6 +1850,7 @@
 				B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */,
 				B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */,
 				B0569A611FC37A6700FF34A1 /* BasketballServices.swift in Sources */,
+				B02EEA0E20B1CD8D0079A930 /* AdBannerView.swift in Sources */,
 				B0569A671FC37AA900FF34A1 /* BasketballVC.swift in Sources */,
 				B05063AC1FE5A1DB004CECEC /* CouponsVM.swift in Sources */,
 				B0569A2D1FC0E49800FF34A1 /* DebugDetector.swift in Sources */,

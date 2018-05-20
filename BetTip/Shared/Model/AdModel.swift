@@ -10,15 +10,15 @@ import ObjectMapper
 
 struct AdModel: BaseModel {
     var id: String?
-    var imgURL: Int?
-    var adURL: String?
+    var imgURL: URL?
+    var adURL: URL?
     
     init() {}
     
     init?(form: [String: Any?]? = nil) {
         guard let dic = form else { return }
-        self.imgURL = dic["imgURL"] as? Int ?? 0
-        self.adURL = dic["adURL"] as? String ?? ""
+        self.imgURL = dic["imgURL"] as? URL ?? URL.init(string: "")
+        self.adURL = dic["adURL"] as? URL ?? URL.init(string: "")
     }
 }
 
@@ -27,7 +27,7 @@ extension AdModel: Mappable {
     
     mutating func mapping(map: Map) {
         id <- map["id"]
-        imgURL <- map["imgURL"]
-        adURL <- map["adURL"]
+        imgURL <- (map["imgURL"], URLTransform())
+        adURL <- (map["adURL"], URLTransform())
     }
 }

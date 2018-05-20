@@ -23,7 +23,6 @@ end
 def ui_pods
   pod 'NVActivityIndicatorView'
   pod 'SwiftMessages'
-  pod 'Hero'
   pod 'DZNEmptyDataSet'
   pod 'Eureka'
 end

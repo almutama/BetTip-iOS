@@ -25,7 +25,7 @@ class MatchService: MatchServiceType {
             .child(Constants.matches)
             .queryOrdered(byChild: Constants.type)
             .queryEqual(toValue: matchType)
-            .queryLimited(toLast: Constants.queryLimitII)
+            .queryLimited(toLast: Constants.queryLimit)
             .fetchArray()
             .recover([])
         return matches
