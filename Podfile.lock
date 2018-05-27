@@ -66,7 +66,6 @@ PODS:
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - GTMSessionFetcher/Core (1.1.15)
-  - Hero (1.0.0)
   - Heyzap (9.17.1)
   - HockeySDK (5.0.0):
     - HockeySDK/DefaultLib (= 5.0.0)
@@ -151,11 +150,11 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - Google-Mobile-Ads-SDK
-  - Hero
   - Heyzap
   - HockeySDK
   - IQKeyboardManagerSwift
   - Keys (from `Pods/CocoaPodsKeys`)
+  - Kingfisher
   - Nimble
   - NVActivityIndicatorView
   - ObjectMapper
@@ -204,7 +203,6 @@ SPEC REPOS:
     - Google-Mobile-Ads-SDK
     - GoogleToolboxForMac
     - GTMSessionFetcher
-    - Hero
     - Heyzap
     - HockeySDK
     - IQKeyboardManagerSwift
@@ -261,7 +259,6 @@ SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 7404f68120ae8682afeb5af001fbf4aad731c78e
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
-  Hero: 18e7cf8af41c04c8532d1430ac174004a9365c87
   Heyzap: 1a9659e2ad563da584afad121208f9afb1fbe0cb
   HockeySDK: 82bf8dcbe1af3c87c24dc98924fcf2e2ba5be8c4
   IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
@@ -293,6 +290,6 @@ SPEC CHECKSUMS:
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: 1d67917c55d738eea53c0f162b9337ce93ad5681
+PODFILE CHECKSUM: 5c516d5eb399aa40bbe7406ce78c1d69930c777b
 
 COCOAPODS: 1.5.2

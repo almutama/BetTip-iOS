@@ -59,6 +59,7 @@ enum Asset {
   static let active = ImageAsset(name: "active")
   static let background = ImageAsset(name: "background")
   static let bahisInterface = ImageAsset(name: "bahis_interface")
+  static let bannerBackground = ImageAsset(name: "banner_background")
   static let basketball = ImageAsset(name: "basketball")
   static let basketballEx = ImageAsset(name: "basketball_ex")
   static let cross = ImageAsset(name: "cross")
@@ -93,6 +94,7 @@ enum Asset {
     active,
     background,
     bahisInterface,
+    bannerBackground,
     basketball,
     basketballEx,
     cross,

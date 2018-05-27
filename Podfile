@@ -25,6 +25,7 @@ def ui_pods
   pod 'SwiftMessages'
   pod 'DZNEmptyDataSet'
   pod 'Eureka'
+  pod 'Kingfisher'
 end
 
 def reactive_pods

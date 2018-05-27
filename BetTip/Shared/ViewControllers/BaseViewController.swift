@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class BaseViewController: UIViewController {
     
@@ -69,5 +70,10 @@ class BaseViewController: UIViewController {
         } else {
             LocalNotificationView.shared.showError(L10n.Common.sorry, body: L10n.Common.Process.error)
         }
+    }
+    
+    func openUrl(url: URL, entersReaderIfAvailable: Bool = true) {
+        let vc = SFSafariViewController(url: url, entersReaderIfAvailable: entersReaderIfAvailable)
+        self.present(vc, animated: true)
     }
 }
