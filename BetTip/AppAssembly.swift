@@ -20,6 +20,7 @@ class AppAssembly: NSObject {
     }
     
     fileprivate let assembler = Assembler([
+        MainAssembly(),
         AdminAssembly(),
         LoginAssembly(),
         UserAssembly(),

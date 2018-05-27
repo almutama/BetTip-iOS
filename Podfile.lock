@@ -33,9 +33,15 @@ PODS:
   - Firebase/Messaging (5.0.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (= 3.0.0)
+  - Firebase/RemoteConfig (5.0.0):
+    - Firebase/Core
+    - FirebaseRemoteConfig (= 3.0.0)
   - Firebase/Storage (5.0.0):
     - Firebase/CoreOnly
     - FirebaseStorage (= 3.0.0)
+  - FirebaseABTesting (2.0.0):
+    - FirebaseCore (~> 5.0)
+    - Protobuf (~> 3.5)
   - FirebaseAnalytics (5.0.0):
     - FirebaseCore (~> 5.0)
     - FirebaseInstanceID (~> 3.0)
@@ -56,6 +62,13 @@ PODS:
     - FirebaseInstanceID (~> 3.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
     - Protobuf (~> 3.1)
+  - FirebaseRemoteConfig (3.0.0):
+    - FirebaseABTesting (~> 2.0)
+    - FirebaseAnalytics (~> 5.0)
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - Protobuf (~> 3.5)
   - FirebaseStorage (3.0.0):
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
@@ -148,6 +161,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
+  - Firebase/RemoteConfig
   - Firebase/Storage
   - Google-Mobile-Ads-SDK
   - Heyzap
@@ -193,12 +207,14 @@ SPEC REPOS:
     - Eureka
     - Fabric
     - Firebase
+    - FirebaseABTesting
     - FirebaseAnalytics
     - FirebaseAuth
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
     - FirebaseMessaging
+    - FirebaseRemoteConfig
     - FirebaseStorage
     - Google-Mobile-Ads-SDK
     - GoogleToolboxForMac
@@ -249,12 +265,14 @@ SPEC CHECKSUMS:
   Eureka: b88fb930e42c79f8c03c373d0fcdc28c1d6c50ed
   Fabric: e6be012366472553807dada21243c5ab8d904151
   Firebase: 4bd804448ab2596794698773d41520a0af101e65
+  FirebaseABTesting: 1f50b8d50f5e3469eea54e7463a7b7fe221d1f5e
   FirebaseAnalytics: 19812b49fa5f283dd6b23edf8a14b5d477029ab8
   FirebaseAuth: acbeef02fe7c3a26624e309849f3fe30c84115af
   FirebaseCore: e46e4babb9de298fb2f736958edcc6da1dc60d73
   FirebaseDatabase: 697eb53e5b4fe7cd4fa8756c1f82a9fca011345f
   FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
   FirebaseMessaging: f2360a966ecfb0d14facf0fbdf306efc2df0ddbe
+  FirebaseRemoteConfig: 3c57e4644bd6976b671ae0b725cd709f198bd1f5
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
   Google-Mobile-Ads-SDK: 7404f68120ae8682afeb5af001fbf4aad731c78e
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
@@ -290,6 +308,6 @@ SPEC CHECKSUMS:
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: 5c516d5eb399aa40bbe7406ce78c1d69930c777b
+PODFILE CHECKSUM: 98d49ca35935dee74815a4fbb15b1f85f83687c8
 
 COCOAPODS: 1.5.2
