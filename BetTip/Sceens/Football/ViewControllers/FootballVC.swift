@@ -79,7 +79,6 @@ class FootballVC: BaseViewController {
             }.disposed(by: disposeBag)
     }
 
-    
     private func showInterstitial() {
         let interstitial = GADInterstitial(adUnitID: Constants.interstitialAdUnitID)
         let request = GADRequest()

@@ -67,6 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AnalyticsManager.sharedManager.register(newService: AnalyticsLogger())
         
         // MARK: Payment Transaction
+        PurchaseService().cacheSubscriptionValidation()
+        PurchaseService().logPurchases()
         PurchaseService().completeTransactions()
     }
 }
