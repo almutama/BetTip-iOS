@@ -24,7 +24,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_background" translatesAutoresizingMaskIntoConstraints="NO" id="7yK-wL-T8L" userLabel="Banner Background View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQs-K7-ogB">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQs-K7-ogB">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMY-nu-FCF">
@@ -54,6 +54,6 @@
         </view>
     </objects>
     <resources>
-        <image name="banner_background" width="240" height="50"/>
+        <image name="banner_background" width="372" height="50"/>
     </resources>
 </document>

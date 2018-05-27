@@ -46,6 +46,7 @@ struct Constants {
     static let basketballType = 2
     static let queryLimit: UInt = 50
     static let queryLimitForAll: UInt = 100
+    static let bannerImg = "Banners/banner.png"
     
     //AdMob
     static let adMobID = "ca-app-pub-7194873011234130~4009179113"

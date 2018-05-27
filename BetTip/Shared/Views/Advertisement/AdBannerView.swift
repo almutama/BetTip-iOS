@@ -86,20 +86,43 @@ class AdBannerView: NibView, AdBannerViewType {
             .disposed(by: disposeBag)
     }
     
+    func getBannerImgURL(imgPath: String, initComplete: @escaping (URL?) -> Void) {
+        self.viewModel.getBannerImgURL(filePath: imgPath)
+            .asObservable()
+            .map { $0.value }
+            .subscribe { event in
+                switch event {
+                case .next(let result):
+                    logger.log(.debug, "Getting img URL: \(result?.absoluteString ?? "empty URL")")
+                    initComplete(result)
+                case .error(let error):
+                    logger.log(.error, "Error occured when getting img URL: \(error)")
+                case .completed:
+                    logger.log(.debug, "Getting img URL completed!")
+                }
+            }
+            .disposed(by: disposeBag)
+    }
+    
     func showBanner(initComplete: @escaping (Bool) -> Void) {
         self.showSpecificAd { result in
             guard let adModel = result else { return }
             print("adModel: \(adModel)")
-            guard let imgURL = adModel.imgURL, let adURL = adModel.adURL else { return }
+            guard let imgPath = adModel.imgPath, let adURL = adModel.adURL else { return }
             self.adURL = adURL
             
-            self.bannerImageView.kf.setImage(with: imgURL) { (img, error, url, data) in
-                print(error?.localizedDescription ?? "")
-                print(img?.accessibilityIdentifier ?? "test")
-                if img != nil {
-                    initComplete(true)
-                } else {
-                    initComplete(false)
+            self.getBannerImgURL(imgPath: imgPath) { result in
+                guard let imgURL = result else { return }
+                print("imgURL: \(imgURL)")
+                
+                self.bannerImageView.kf.setImage(with: imgURL) { (img, error, _, _) in
+                    print(error?.localizedDescription ?? "")
+                    print(img?.accessibilityIdentifier ?? "test")
+                    if img != nil {
+                        initComplete(true)
+                    } else {
+                        initComplete(false)
+                    }
                 }
             }
         }

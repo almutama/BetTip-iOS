@@ -14,7 +14,8 @@ private let logger = Log.createLogger()
 
 protocol AdBannerVMType {
     func getSpecificAd() -> Observable<Result<AdModel, FirebaseFetchError>>
-    func saveSpecificAd() -> Observable<Result<AdModel, FirebaseStoreError>> 
+    func saveSpecificAd() -> Observable<Result<AdModel, FirebaseStoreError>>
+    func getBannerImgURL(filePath: String) -> Observable<URL?>
 }
 
 class AdBannerVM: BaseViewModel, AdBannerVMType {
@@ -31,6 +32,11 @@ class AdBannerVM: BaseViewModel, AdBannerVMType {
             .getSpecificAd()
             .trackActivity(loadingIndicator)
             .share(replay: 1)
+    }
+    
+    func getBannerImgURL(filePath: String) -> Observable<URL?> {
+        return self.adService
+            .getBannerImgURL(filePath: filePath)
     }
     
     func saveSpecificAd() -> Observable<Result<AdModel, FirebaseStoreError>> {
