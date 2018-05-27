@@ -11,19 +11,27 @@ import RxSwift
 
 protocol FootballVMType {
     func getFootballMatches() -> Observable<[MatchModel]>
+    func getProducts() -> Observable<[SKProduct]> 
 }
 
 class FootballVM: BaseViewModel, FootballVMType {
     
-    private let footballService: FootballServiceType!
+    private let matchService: MatchServiceType!
     private let disposeBag = DisposeBag()
+    private let purchaseService: PurchaseServiceType!
     
-    init(footballService: FootballServiceType) {
-        self.footballService = footballService
+    init(matchService: MatchServiceType, purchaseService: PurchaseServiceType) {
+        self.matchService = matchService
+        self.purchaseService = purchaseService
         super.init()
     }
     
     func getFootballMatches() -> Observable<[MatchModel]> {
-        return self.footballService.footballMatches()
+        return self.matchService.getMatches(matchType: Constants.footballType, isSpecial: false)
+    }
+    
+    func getProducts() -> Observable<[SKProduct]> {
+        print("called")
+        return self.purchaseService.getCachedProducts()
     }
 }

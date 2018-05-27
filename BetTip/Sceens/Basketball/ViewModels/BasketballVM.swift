@@ -15,15 +15,15 @@ protocol BasketballVMType {
 
 class BasketballVM: BaseViewModel, BasketballVMType {
     
-    private let basketballService: BasketballServiceType!
+    private let matchService: MatchServiceType!
     private let disposeBag = DisposeBag()
     
-    init(basketballService: BasketballServiceType) {
-        self.basketballService = basketballService
+    init(matchService: MatchServiceType) {
+        self.matchService = matchService
         super.init()
     }
     
     func getBasketballMatches() -> Observable<[MatchModel]> {
-        return self.basketballService.basketballMatches()
+        return self.matchService.getMatches(matchType: Constants.basketballType, isSpecial: false)
     }
 }

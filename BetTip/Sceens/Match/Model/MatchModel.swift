@@ -94,3 +94,11 @@ func !== (lhs: MatchModel, rhs: MatchModel) -> Bool {
     }
     return false
 }
+
+func << (lhs: MatchModel, rhs: MatchModel) -> Bool {
+    guard let lStatus = lhs.status,
+        let rStatus = rhs.status else {
+        return false
+    }
+    return lStatus < rStatus
+}

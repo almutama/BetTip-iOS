@@ -16,19 +16,16 @@ class FootballAssembly: Assembly {
         
         Container.loggingFunction = nil
         
-        // Services
-        container.register(FootballServiceType.self) { _ in
-            FootballService()
-        }
-        
         // ViewModels
         container.register(FootballVMType.self) { r in
-            FootballVM(footballService: r.resolve(FootballServiceType.self)!)
+            FootballVM(matchService: r.resolve(MatchServiceType.self)!,
+                       purchaseService: r.resolve(PurchaseServiceType.self)!)
         }
         
         // ViewControllers
         container.storyboardInitCompleted(FootballVC.self) {r, c in
             c.viewModel = r.resolve(FootballVMType.self)
+            c.bannerView = r.resolve(AdBannerViewType.self)
         }
     }
 }
