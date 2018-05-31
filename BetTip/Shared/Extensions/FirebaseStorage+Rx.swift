@@ -9,6 +9,8 @@
 import FirebaseStorage
 import RxSwift
 
+private let logger = Log.createLogger()
+
 public extension StorageReference {
     // MARK: UPLOAD
     
@@ -22,7 +24,12 @@ public extension StorageReference {
      */
     func putData(data: NSData, metaData: StorageMetadata? = nil) -> Observable<StorageUploadTask> {
         return Observable.create { observer in
-            observer.onNext(self.putData(data as Data, metadata: metaData, completion: { (metadata, error) in }))
+            observer.onNext(self.putData(data as Data, metadata: metaData, completion: { (metadata, error) in
+                if error != nil {
+                    logger.log(.error, "error when putting data for firebase: \(error?.localizedDescription ?? "")")
+                }
+                logger.log(.debug, "metadata when putting data for firebase: \(String(describing: metadata))")
+            }))
             return Disposables.create()
         }
     }
@@ -47,7 +54,12 @@ public extension StorageReference {
      */
     func putFile(path: NSURL, metadata: StorageMetadata? = nil) -> Observable<StorageUploadTask> {
         return Observable.create { observer in
-            let uploadTask = self.putFile(from: path as URL, metadata: metadata, completion: { (metadata, error) in })
+            let uploadTask = self.putFile(from: path as URL, metadata: metadata, completion: { (metadata, error) in
+                if error != nil {
+                    logger.log(.error, "error when putting file for firebase: \(error?.localizedDescription ?? "")")
+                }
+                logger.log(.debug, "metadata when putting file for firebase: \(String(describing: metadata))")
+            })
             observer.onNext(uploadTask)
             return Disposables.create {
                 uploadTask.cancel()
