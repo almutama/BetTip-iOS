@@ -6,263 +6,263 @@ import Foundation
 // swiftlint:disable file_length
 
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
-enum L10n {
+internal enum L10n {
 
-  enum Applepay {
+  internal enum Applepay {
     /// Please set up Apple-Pay!
-    static let setAccount = L10n.tr("Localizable", "ApplePay.SetAccount")
+    internal static let setAccount = L10n.tr("Localizable", "ApplePay.SetAccount")
   }
 
-  enum Auth {
+  internal enum Auth {
     /// Do you want to log out?
-    static let confirmLogout = L10n.tr("Localizable", "Auth.ConfirmLogout")
+    internal static let confirmLogout = L10n.tr("Localizable", "Auth.ConfirmLogout")
     /// Email
-    static let email = L10n.tr("Localizable", "Auth.Email")
+    internal static let email = L10n.tr("Localizable", "Auth.Email")
     /// Log in
-    static let login = L10n.tr("Localizable", "Auth.Login")
+    internal static let login = L10n.tr("Localizable", "Auth.Login")
     /// Log out
-    static let logout = L10n.tr("Localizable", "Auth.Logout")
+    internal static let logout = L10n.tr("Localizable", "Auth.Logout")
     /// Password
-    static let password = L10n.tr("Localizable", "Auth.Password")
+    internal static let password = L10n.tr("Localizable", "Auth.Password")
     /// Sign up
-    static let signUp = L10n.tr("Localizable", "Auth.SignUp")
+    internal static let signUp = L10n.tr("Localizable", "Auth.SignUp")
 
-    enum Error {
+    internal enum Error {
       /// Email already registered.
-      static let emailAlreadyInUse = L10n.tr("Localizable", "Auth.Error.EmailAlreadyInUse")
+      internal static let emailAlreadyInUse = L10n.tr("Localizable", "Auth.Error.EmailAlreadyInUse")
       /// Email can't be empty.
-      static let emptyEmail = L10n.tr("Localizable", "Auth.Error.EmptyEmail")
+      internal static let emptyEmail = L10n.tr("Localizable", "Auth.Error.EmptyEmail")
       /// Password can't be empty.
-      static let emptyPassword = L10n.tr("Localizable", "Auth.Error.EmptyPassword")
+      internal static let emptyPassword = L10n.tr("Localizable", "Auth.Error.EmptyPassword")
       /// Email is not valid.
-      static let invalidEmail = L10n.tr("Localizable", "Auth.Error.InvalidEmail")
+      internal static let invalidEmail = L10n.tr("Localizable", "Auth.Error.InvalidEmail")
       /// Can't log in
-      static let loginTitle = L10n.tr("Localizable", "Auth.Error.LoginTitle")
+      internal static let loginTitle = L10n.tr("Localizable", "Auth.Error.LoginTitle")
       /// Password has to be at least %d characters long.
-      static func shortPassword(_ p1: Int) -> String {
+      internal static func shortPassword(_ p1: Int) -> String {
         return L10n.tr("Localizable", "Auth.Error.ShortPassword", p1)
       }
       /// Can't register
-      static let signupTitle = L10n.tr("Localizable", "Auth.Error.SignupTitle")
+      internal static let signupTitle = L10n.tr("Localizable", "Auth.Error.SignupTitle")
       /// An internal error occured. Please try again later.
-      static let unknown = L10n.tr("Localizable", "Auth.Error.Unknown")
+      internal static let unknown = L10n.tr("Localizable", "Auth.Error.Unknown")
       /// Your account has been disabled. Please contact us if you think this is a mistake.
-      static let userDisabled = L10n.tr("Localizable", "Auth.Error.UserDisabled")
+      internal static let userDisabled = L10n.tr("Localizable", "Auth.Error.UserDisabled")
       /// You've entered a wrong email or password.
-      static let wrongPassword = L10n.tr("Localizable", "Auth.Error.WrongPassword")
+      internal static let wrongPassword = L10n.tr("Localizable", "Auth.Error.WrongPassword")
     }
   }
 
-  enum Common {
+  internal enum Common {
     /// Buy
-    static let buy = L10n.tr("Localizable", "Common.Buy")
+    internal static let buy = L10n.tr("Localizable", "Common.Buy")
     /// Cancel
-    static let cancel = L10n.tr("Localizable", "Common.Cancel")
+    internal static let cancel = L10n.tr("Localizable", "Common.Cancel")
     /// Delete
-    static let delete = L10n.tr("Localizable", "Common.Delete")
+    internal static let delete = L10n.tr("Localizable", "Common.Delete")
     /// Done
-    static let done = L10n.tr("Localizable", "Common.Done")
+    internal static let done = L10n.tr("Localizable", "Common.Done")
     /// Error Occured
-    static let error = L10n.tr("Localizable", "Common.Error")
+    internal static let error = L10n.tr("Localizable", "Common.Error")
     /// Great ☺️
-    static let great = L10n.tr("Localizable", "Common.Great")
+    internal static let great = L10n.tr("Localizable", "Common.Great")
     /// Loading ..
-    static let loading = L10n.tr("Localizable", "Common.Loading")
+    internal static let loading = L10n.tr("Localizable", "Common.Loading")
     /// OK
-    static let ok = L10n.tr("Localizable", "Common.OK")
+    internal static let ok = L10n.tr("Localizable", "Common.OK")
     /// Sorry 😢
-    static let sorry = L10n.tr("Localizable", "Common.Sorry")
+    internal static let sorry = L10n.tr("Localizable", "Common.Sorry")
     /// Success
-    static let success = L10n.tr("Localizable", "Common.Success")
+    internal static let success = L10n.tr("Localizable", "Common.Success")
     /// Are you sure?
-    static let sure = L10n.tr("Localizable", "Common.Sure")
+    internal static let sure = L10n.tr("Localizable", "Common.Sure")
     /// Please try again later.
-    static let tryAgainLater = L10n.tr("Localizable", "Common.TryAgainLater")
+    internal static let tryAgainLater = L10n.tr("Localizable", "Common.TryAgainLater")
     /// Update
-    static let update = L10n.tr("Localizable", "Common.Update")
+    internal static let update = L10n.tr("Localizable", "Common.Update")
     /// Warning
-    static let warning = L10n.tr("Localizable", "Common.Warning")
+    internal static let warning = L10n.tr("Localizable", "Common.Warning")
 
-    enum Process {
+    internal enum Process {
       /// Process couldn't be finished.
-      static let error = L10n.tr("Localizable", "Common.Process.Error")
+      internal static let error = L10n.tr("Localizable", "Common.Process.Error")
       /// Process has been finished successfully.
-      static let success = L10n.tr("Localizable", "Common.Process.Success")
+      internal static let success = L10n.tr("Localizable", "Common.Process.Success")
     }
   }
 
-  enum Coupon {
+  internal enum Coupon {
     ///  credits will be transfered from your wallet.
-    static let buyCoupon = L10n.tr("Localizable", "Coupon.BuyCoupon")
+    internal static let buyCoupon = L10n.tr("Localizable", "Coupon.BuyCoupon")
     /// Your credit is not enough to buy this coupon.
-    static let notEnough = L10n.tr("Localizable", "Coupon.NotEnough")
+    internal static let notEnough = L10n.tr("Localizable", "Coupon.NotEnough")
     /// Credit Not Enough
-    static let notEnoughTitle = L10n.tr("Localizable", "Coupon.NotEnoughTitle")
+    internal static let notEnoughTitle = L10n.tr("Localizable", "Coupon.NotEnoughTitle")
     /// Coupon
-    static let title = L10n.tr("Localizable", "Coupon.Title")
+    internal static let title = L10n.tr("Localizable", "Coupon.Title")
   }
 
-  enum Credit {
+  internal enum Credit {
     /// Set requiremnt fields.
-    static let addCredit = L10n.tr("Localizable", "Credit.AddCredit")
+    internal static let addCredit = L10n.tr("Localizable", "Credit.AddCredit")
     /// Can't add a new credit!
-    static let addError = L10n.tr("Localizable", "Credit.AddError")
+    internal static let addError = L10n.tr("Localizable", "Credit.AddError")
     /// Added a new credit!
-    static let addSuccess = L10n.tr("Localizable", "Credit.AddSuccess")
+    internal static let addSuccess = L10n.tr("Localizable", "Credit.AddSuccess")
     /// Number of Credits
-    static let numberOfCredit = L10n.tr("Localizable", "Credit.NumberOfCredit")
+    internal static let numberOfCredit = L10n.tr("Localizable", "Credit.NumberOfCredit")
     /// Price
-    static let price = L10n.tr("Localizable", "Credit.Price")
+    internal static let price = L10n.tr("Localizable", "Credit.Price")
     /// Credit
-    static let title = L10n.tr("Localizable", "Credit.Title")
+    internal static let title = L10n.tr("Localizable", "Credit.Title")
     /// Update requiremnt fields.
-    static let updateCredit = L10n.tr("Localizable", "Credit.UpdateCredit")
+    internal static let updateCredit = L10n.tr("Localizable", "Credit.UpdateCredit")
   }
 
-  enum Match {
+  internal enum Match {
     /// Basketball
-    static let basketball = L10n.tr("Localizable", "Match.Basketball")
+    internal static let basketball = L10n.tr("Localizable", "Match.Basketball")
     /// Football
-    static let football = L10n.tr("Localizable", "Match.Football")
+    internal static let football = L10n.tr("Localizable", "Match.Football")
   }
 
-  enum Matchform {
+  internal enum Matchform {
     /// Away Team
-    static let awayTeam = L10n.tr("Localizable", "MatchForm.AwayTeam")
+    internal static let awayTeam = L10n.tr("Localizable", "MatchForm.AwayTeam")
     /// Bet
-    static let bet = L10n.tr("Localizable", "MatchForm.Bet")
+    internal static let bet = L10n.tr("Localizable", "MatchForm.Bet")
     /// Bet ID
-    static let betID = L10n.tr("Localizable", "MatchForm.BetID")
+    internal static let betID = L10n.tr("Localizable", "MatchForm.BetID")
     /// Country
-    static let country = L10n.tr("Localizable", "MatchForm.Country")
+    internal static let country = L10n.tr("Localizable", "MatchForm.Country")
     /// Date
-    static let date = L10n.tr("Localizable", "MatchForm.Date")
+    internal static let date = L10n.tr("Localizable", "MatchForm.Date")
     /// For coupons, you should set special field.
-    static let footerTitle = L10n.tr("Localizable", "MatchForm.FooterTitle")
+    internal static let footerTitle = L10n.tr("Localizable", "MatchForm.FooterTitle")
     /// Please set all fields.
-    static let headerTitle = L10n.tr("Localizable", "MatchForm.HeaderTitle")
+    internal static let headerTitle = L10n.tr("Localizable", "MatchForm.HeaderTitle")
     /// Home Team
-    static let homeTeam = L10n.tr("Localizable", "MatchForm.HomeTeam")
+    internal static let homeTeam = L10n.tr("Localizable", "MatchForm.HomeTeam")
     /// Is it special?
-    static let isCoupon = L10n.tr("Localizable", "MatchForm.isCoupon")
+    internal static let isCoupon = L10n.tr("Localizable", "MatchForm.isCoupon")
     /// League
-    static let league = L10n.tr("Localizable", "MatchForm.League")
+    internal static let league = L10n.tr("Localizable", "MatchForm.League")
     /// Odd
-    static let odd = L10n.tr("Localizable", "MatchForm.Odd")
+    internal static let odd = L10n.tr("Localizable", "MatchForm.Odd")
     /// SAVE MATCH
-    static let saveMatch = L10n.tr("Localizable", "MatchForm.SaveMatch")
+    internal static let saveMatch = L10n.tr("Localizable", "MatchForm.SaveMatch")
     /// Status
-    static let status = L10n.tr("Localizable", "MatchForm.Status")
+    internal static let status = L10n.tr("Localizable", "MatchForm.Status")
     /// Time
-    static let time = L10n.tr("Localizable", "MatchForm.Time")
+    internal static let time = L10n.tr("Localizable", "MatchForm.Time")
     /// Tipster
-    static let tipster = L10n.tr("Localizable", "MatchForm.Tipster")
+    internal static let tipster = L10n.tr("Localizable", "MatchForm.Tipster")
     /// Type
-    static let type = L10n.tr("Localizable", "MatchForm.Type")
+    internal static let type = L10n.tr("Localizable", "MatchForm.Type")
     /// Web Site
-    static let webSite = L10n.tr("Localizable", "MatchForm.WebSite")
+    internal static let webSite = L10n.tr("Localizable", "MatchForm.WebSite")
     /// Won
-    static let won = L10n.tr("Localizable", "MatchForm.Won")
+    internal static let won = L10n.tr("Localizable", "MatchForm.Won")
 
-    enum Awayteam {
+    internal enum Awayteam {
       /// Real Madrid
-      static let placeholder = L10n.tr("Localizable", "MatchForm.AwayTeam.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.AwayTeam.Placeholder")
     }
 
-    enum Bet {
+    internal enum Bet {
       /// MS-2
-      static let placeholder = L10n.tr("Localizable", "MatchForm.Bet.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.Bet.Placeholder")
     }
 
-    enum Betid {
+    internal enum Betid {
       /// 740
-      static let placeholder = L10n.tr("Localizable", "MatchForm.BetID.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.BetID.Placeholder")
     }
 
-    enum Country {
+    internal enum Country {
       /// spain
-      static let placeholder = L10n.tr("Localizable", "MatchForm.Country.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.Country.Placeholder")
     }
 
-    enum Hometeam {
+    internal enum Hometeam {
       /// Barcelona
-      static let placeholder = L10n.tr("Localizable", "MatchForm.HomeTeam.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.HomeTeam.Placeholder")
     }
 
-    enum League {
+    internal enum League {
       /// ESP
-      static let placeholder = L10n.tr("Localizable", "MatchForm.League.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.League.Placeholder")
     }
 
-    enum Matchtype {
+    internal enum Matchtype {
       /// 1 or 2
-      static let placeholder = L10n.tr("Localizable", "MatchForm.MatchType.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.MatchType.Placeholder")
     }
 
-    enum Odd {
+    internal enum Odd {
       /// 1.77
-      static let placeholder = L10n.tr("Localizable", "MatchForm.Odd.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.Odd.Placeholder")
     }
 
-    enum Status {
+    internal enum Status {
       /// 0
-      static let placeholder = L10n.tr("Localizable", "MatchForm.Status.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.Status.Placeholder")
     }
 
-    enum Tipster {
+    internal enum Tipster {
       /// mustafa@gmail.com
-      static let placeholder = L10n.tr("Localizable", "MatchForm.Tipster.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.Tipster.Placeholder")
     }
 
-    enum Website {
+    internal enum Website {
       /// BetMe
-      static let placeholder = L10n.tr("Localizable", "MatchForm.WebSite.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.WebSite.Placeholder")
     }
 
-    enum Won {
+    internal enum Won {
       /// 0 or 1
-      static let placeholder = L10n.tr("Localizable", "MatchForm.Won.Placeholder")
+      internal static let placeholder = L10n.tr("Localizable", "MatchForm.Won.Placeholder")
     }
   }
 
-  enum Role {
+  internal enum Role {
     /// Administrator
-    static let admin = L10n.tr("Localizable", "Role.Admin")
+    internal static let admin = L10n.tr("Localizable", "Role.Admin")
     /// Moderator
-    static let moderator = L10n.tr("Localizable", "Role.Moderator")
+    internal static let moderator = L10n.tr("Localizable", "Role.Moderator")
     /// User
-    static let user = L10n.tr("Localizable", "Role.User")
+    internal static let user = L10n.tr("Localizable", "Role.User")
   }
 
-  enum User {
+  internal enum User {
 
-    enum Action {
+    internal enum Action {
       /// Please select an action.
-      static let desc = L10n.tr("Localizable", "User.Action.Desc")
+      internal static let desc = L10n.tr("Localizable", "User.Action.Desc")
       /// User Actions
-      static let title = L10n.tr("Localizable", "User.Action.Title")
+      internal static let title = L10n.tr("Localizable", "User.Action.Title")
     }
 
-    enum Credit {
+    internal enum Credit {
       /// Your rest of credit: 
-      static let rest = L10n.tr("Localizable", "User.Credit.Rest")
+      internal static let rest = L10n.tr("Localizable", "User.Credit.Rest")
     }
 
-    enum Role {
+    internal enum Role {
       /// Admin
-      static let admin = L10n.tr("Localizable", "User.Role.Admin")
+      internal static let admin = L10n.tr("Localizable", "User.Role.Admin")
       /// Change User's Role
-      static let changeRole = L10n.tr("Localizable", "User.Role.ChangeRole")
+      internal static let changeRole = L10n.tr("Localizable", "User.Role.ChangeRole")
       /// Disable User
-      static let disable = L10n.tr("Localizable", "User.Role.Disable")
+      internal static let disable = L10n.tr("Localizable", "User.Role.Disable")
       /// Enable User
-      static let enable = L10n.tr("Localizable", "User.Role.Enable")
+      internal static let enable = L10n.tr("Localizable", "User.Role.Enable")
       /// Moderator
-      static let moderator = L10n.tr("Localizable", "User.Role.Moderator")
+      internal static let moderator = L10n.tr("Localizable", "User.Role.Moderator")
       /// User Role
-      static let title = L10n.tr("Localizable", "User.Role.Title")
+      internal static let title = L10n.tr("Localizable", "User.Role.Title")
       /// User
-      static let user = L10n.tr("Localizable", "User.Role.User")
+      internal static let user = L10n.tr("Localizable", "User.Role.User")
     }
   }
 }

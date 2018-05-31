@@ -2,24 +2,24 @@
 
 #if os(OSX)
   import AppKit.NSImage
-  typealias AssetColorTypeAlias = NSColor
-  typealias Image = NSImage
+  internal typealias AssetColorTypeAlias = NSColor
+  internal typealias Image = NSImage
 #elseif os(iOS) || os(tvOS) || os(watchOS)
   import UIKit.UIImage
-  typealias AssetColorTypeAlias = UIColor
-  typealias Image = UIImage
+  internal typealias AssetColorTypeAlias = UIColor
+  internal typealias Image = UIImage
 #endif
 
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
 
 @available(*, deprecated, renamed: "ImageAsset")
-typealias AssetType = ImageAsset
+internal typealias AssetType = ImageAsset
 
-struct ImageAsset {
-  fileprivate var name: String
+internal struct ImageAsset {
+  internal fileprivate(set) var name: String
 
-  var image: Image {
+  internal var image: Image {
     let bundle = Bundle(for: BundleToken.self)
     #if os(iOS) || os(tvOS)
     let image = Image(named: name, in: bundle, compatibleWith: nil)
@@ -33,54 +33,54 @@ struct ImageAsset {
   }
 }
 
-struct ColorAsset {
-  fileprivate var name: String
+internal struct ColorAsset {
+  internal fileprivate(set) var name: String
 
   @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
-  var color: AssetColorTypeAlias {
+  internal var color: AssetColorTypeAlias {
     return AssetColorTypeAlias(asset: self)
   }
 }
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
-enum Asset {
-  enum TabBar {
-    static let tabSelBasketball = ImageAsset(name: "tabSel_basketball")
-    static let tabSelCoupon = ImageAsset(name: "tabSel_coupon")
-    static let tabSelFootball = ImageAsset(name: "tabSel_football")
-    static let tabSelMore = ImageAsset(name: "tabSel_more")
-    static let tabSelPremium = ImageAsset(name: "tabSel_premium")
-    static let tabBasketball = ImageAsset(name: "tab_basketball")
-    static let tabCoupon = ImageAsset(name: "tab_coupon")
-    static let tabFootball = ImageAsset(name: "tab_football")
-    static let tabMore = ImageAsset(name: "tab_more")
-    static let tabPremium = ImageAsset(name: "tab_premium")
+internal enum Asset {
+  internal enum TabBar {
+    internal static let tabSelBasketball = ImageAsset(name: "tabSel_basketball")
+    internal static let tabSelCoupon = ImageAsset(name: "tabSel_coupon")
+    internal static let tabSelFootball = ImageAsset(name: "tabSel_football")
+    internal static let tabSelMore = ImageAsset(name: "tabSel_more")
+    internal static let tabSelPremium = ImageAsset(name: "tabSel_premium")
+    internal static let tabBasketball = ImageAsset(name: "tab_basketball")
+    internal static let tabCoupon = ImageAsset(name: "tab_coupon")
+    internal static let tabFootball = ImageAsset(name: "tab_football")
+    internal static let tabMore = ImageAsset(name: "tab_more")
+    internal static let tabPremium = ImageAsset(name: "tab_premium")
   }
-  static let active = ImageAsset(name: "active")
-  static let background = ImageAsset(name: "background")
-  static let bahisInterface = ImageAsset(name: "bahis_interface")
-  static let bannerBackground = ImageAsset(name: "banner_background")
-  static let basketball = ImageAsset(name: "basketball")
-  static let basketballEx = ImageAsset(name: "basketball_ex")
-  static let cross = ImageAsset(name: "cross")
-  static let deal = ImageAsset(name: "deal")
-  static let football = ImageAsset(name: "football")
-  static let footballEx = ImageAsset(name: "football_ex")
-  static let logo = ImageAsset(name: "logo")
-  static let logoTr = ImageAsset(name: "logo_tr")
-  static let lost = ImageAsset(name: "lost")
-  static let matchResult = ImageAsset(name: "match_result")
-  static let noAds = ImageAsset(name: "no_ads")
-  static let push = ImageAsset(name: "push")
-  static let statsEx = ImageAsset(name: "stats_ex")
-  static let twitter = ImageAsset(name: "twitter")
-  static let versus = ImageAsset(name: "versus")
-  static let won = ImageAsset(name: "won")
+  internal static let active = ImageAsset(name: "active")
+  internal static let background = ImageAsset(name: "background")
+  internal static let bahisInterface = ImageAsset(name: "bahis_interface")
+  internal static let bannerBackground = ImageAsset(name: "banner_background")
+  internal static let basketball = ImageAsset(name: "basketball")
+  internal static let basketballEx = ImageAsset(name: "basketball_ex")
+  internal static let cross = ImageAsset(name: "cross")
+  internal static let deal = ImageAsset(name: "deal")
+  internal static let football = ImageAsset(name: "football")
+  internal static let footballEx = ImageAsset(name: "football_ex")
+  internal static let logo = ImageAsset(name: "logo")
+  internal static let logoTr = ImageAsset(name: "logo_tr")
+  internal static let lost = ImageAsset(name: "lost")
+  internal static let matchResult = ImageAsset(name: "match_result")
+  internal static let noAds = ImageAsset(name: "no_ads")
+  internal static let push = ImageAsset(name: "push")
+  internal static let statsEx = ImageAsset(name: "stats_ex")
+  internal static let twitter = ImageAsset(name: "twitter")
+  internal static let versus = ImageAsset(name: "versus")
+  internal static let won = ImageAsset(name: "won")
 
   // swiftlint:disable trailing_comma
-  static let allColors: [ColorAsset] = [
+  internal static let allColors: [ColorAsset] = [
   ]
-  static let allImages: [ImageAsset] = [
+  internal static let allImages: [ImageAsset] = [
     TabBar.tabSelBasketball,
     TabBar.tabSelCoupon,
     TabBar.tabSelFootball,
@@ -114,11 +114,11 @@ enum Asset {
   ]
   // swiftlint:enable trailing_comma
   @available(*, deprecated, renamed: "allImages")
-  static let allValues: [AssetType] = allImages
+  internal static let allValues: [AssetType] = allImages
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
-extension Image {
+internal extension Image {
   @available(iOS 1.0, tvOS 1.0, watchOS 1.0, *)
   @available(OSX, deprecated,
     message: "This initializer is unsafe on macOS, please use the ImageAsset.image property")
@@ -134,7 +134,7 @@ extension Image {
   }
 }
 
-extension AssetColorTypeAlias {
+internal extension AssetColorTypeAlias {
   @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
   convenience init!(asset: ColorAsset) {
     let bundle = Bundle(for: BundleToken.self)

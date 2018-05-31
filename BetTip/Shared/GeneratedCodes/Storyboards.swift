@@ -7,22 +7,22 @@ import UIKit
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
 
-protocol StoryboardType {
+internal protocol StoryboardType {
   static var storyboardName: String { get }
 }
 
-extension StoryboardType {
+internal extension StoryboardType {
   static var storyboard: UIStoryboard {
     let name = self.storyboardName
     return UIStoryboard(name: name, bundle: Bundle(for: BundleToken.self))
   }
 }
 
-struct SceneType<T: Any> {
-  let storyboard: StoryboardType.Type
-  let identifier: String
+internal struct SceneType<T: Any> {
+  internal let storyboard: StoryboardType.Type
+  internal let identifier: String
 
-  func instantiate() -> T {
+  internal func instantiate() -> T {
     let identifier = self.identifier
     guard let controller = storyboard.storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
       fatalError("ViewController '\(identifier)' is not of the expected class \(T.self).")
@@ -31,10 +31,10 @@ struct SceneType<T: Any> {
   }
 }
 
-struct InitialSceneType<T: Any> {
-  let storyboard: StoryboardType.Type
+internal struct InitialSceneType<T: Any> {
+  internal let storyboard: StoryboardType.Type
 
-  func instantiate() -> T {
+  internal func instantiate() -> T {
     guard let controller = storyboard.storyboard.instantiateInitialViewController() as? T else {
       fatalError("ViewController is not of the expected class \(T.self).")
     }
@@ -42,9 +42,9 @@ struct InitialSceneType<T: Any> {
   }
 }
 
-protocol SegueType: RawRepresentable { }
+internal protocol SegueType: RawRepresentable { }
 
-extension UIViewController {
+internal extension UIViewController {
   func perform<S: SegueType>(segue: S, sender: Any? = nil) where S.RawValue == String {
     let identifier = segue.rawValue
     performSegue(withIdentifier: identifier, sender: sender)
@@ -52,72 +52,72 @@ extension UIViewController {
 }
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
-enum StoryboardScene {
-  enum Admin: StoryboardType {
-    static let storyboardName = "Admin"
+internal enum StoryboardScene {
+  internal enum Admin: StoryboardType {
+    internal static let storyboardName = "Admin"
 
-    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Admin.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Admin.self)
   }
-  enum Basketball: StoryboardType {
-    static let storyboardName = "Basketball"
+  internal enum Basketball: StoryboardType {
+    internal static let storyboardName = "Basketball"
 
-    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Basketball.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Basketball.self)
   }
-  enum Coupon: StoryboardType {
-    static let storyboardName = "Coupon"
+  internal enum Coupon: StoryboardType {
+    internal static let storyboardName = "Coupon"
 
-    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Coupon.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Coupon.self)
   }
-  enum Credit: StoryboardType {
-    static let storyboardName = "Credit"
+  internal enum Credit: StoryboardType {
+    internal static let storyboardName = "Credit"
 
-    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Credit.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Credit.self)
   }
-  enum Football: StoryboardType {
-    static let storyboardName = "Football"
+  internal enum Football: StoryboardType {
+    internal static let storyboardName = "Football"
 
-    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Football.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Football.self)
   }
-  enum LaunchScreen: StoryboardType {
-    static let storyboardName = "LaunchScreen"
+  internal enum LaunchScreen: StoryboardType {
+    internal static let storyboardName = "LaunchScreen"
 
-    static let initialScene = InitialSceneType<UIViewController>(storyboard: LaunchScreen.self)
+    internal static let initialScene = InitialSceneType<UIViewController>(storyboard: LaunchScreen.self)
   }
-  enum Login: StoryboardType {
-    static let storyboardName = "Login"
+  internal enum Login: StoryboardType {
+    internal static let storyboardName = "Login"
 
-    static let initialScene = InitialSceneType<UINavigationController>(storyboard: Login.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Login.self)
   }
-  enum Main: StoryboardType {
-    static let storyboardName = "Main"
+  internal enum Main: StoryboardType {
+    internal static let storyboardName = "Main"
 
-    static let initialScene = InitialSceneType<BetTip.MainVC>(storyboard: Main.self)
+    internal static let initialScene = InitialSceneType<BetTip.MainVC>(storyboard: Main.self)
   }
-  enum Splash: StoryboardType {
-    static let storyboardName = "Splash"
+  internal enum Splash: StoryboardType {
+    internal static let storyboardName = "Splash"
 
-    static let initialScene = InitialSceneType<BetTip.SplashVC>(storyboard: Splash.self)
+    internal static let initialScene = InitialSceneType<BetTip.SplashVC>(storyboard: Splash.self)
   }
-  enum User: StoryboardType {
-    static let storyboardName = "User"
+  internal enum User: StoryboardType {
+    internal static let storyboardName = "User"
 
-    static let initialScene = InitialSceneType<UINavigationController>(storyboard: User.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: User.self)
   }
 }
 
-enum StoryboardSegue {
-  enum Admin: String, SegueType {
+internal enum StoryboardSegue {
+  internal enum Admin: String, SegueType {
     case adminCouponDetailSegue
   }
-  enum Credit: String, SegueType {
+  internal enum Credit: String, SegueType {
     case buyCreditSegue
   }
-  enum Login: String, SegueType {
+  internal enum Login: String, SegueType {
     case forgorPasswordSegue
     case loginSegue
     case registerSegue
   }
-  enum User: String, SegueType {
+  internal enum User: String, SegueType {
     case myCouponDetailSegue
   }
 }
