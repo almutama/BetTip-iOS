@@ -8,7 +8,8 @@
 
 import UIKit
 import RxSwift
-import GoogleMobileAds
+
+private let logger = Log.createLogger()
 
 class FootballVC: BaseViewController {
     
@@ -38,6 +39,7 @@ class FootballVC: BaseViewController {
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
         self.collectionView.registerCellNib(FootballCell.self)
+        HZInterstitialAd.setDelegate(self)
     }
     
     func bindViewModel() {
@@ -62,15 +64,8 @@ class FootballVC: BaseViewController {
         matches.subscribe(onNext: { [weak self] _ in
             guard let strongSelf = self else { return }
             _ = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
-                strongSelf.showInterstitial()
+                strongSelf.showHZInterstitial()
             }
-        }).disposed(by: disposeBag)
-        
-        self.viewModel.getProducts()
-            .asObservable()
-            .subscribe(onNext: { [weak self] products in
-                guard self != nil else { return }
-                print(products)
         }).disposed(by: disposeBag)
         
         matches.bind(to: self.collectionView.rx.items(cellIdentifier: FootballCell.reuseIdentifier,
@@ -78,18 +73,14 @@ class FootballVC: BaseViewController {
                                                         cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
     }
-
-    private func showInterstitial() {
-        let interstitial = GADInterstitial(adUnitID: Constants.interstitialAdUnitID)
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
-        interstitial.load(request)
-        
-        interstitial.rx.didReceiveAd.subscribe(
-            onNext: { [weak self] _ in
-                guard let strongSelf = self else { return }
-                interstitial.present(fromRootViewController: strongSelf)
-        }).disposed(by: self.disposeBag)
+    
+    private func showHZInterstitial() {
+        if HZInterstitialAd.isAvailable() {
+            logger.log(.debug, "HZInterstitialAd.isAvailable")
+            HZInterstitialAd.show(forTag: "default", completion: { (_, _) -> Void in
+                logger.log(.debug, "HZInterstitialAd.completion")
+            })
+        }
     }
     
     private func showBanner() {

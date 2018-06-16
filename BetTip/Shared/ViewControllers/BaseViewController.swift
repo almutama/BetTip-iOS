@@ -64,7 +64,7 @@ class BaseViewController: UIViewController {
         return false
     }
     
-    func showNotification(result: Bool) {
+    func showNotification(result: Bool, title: String? = nil, body: String? = nil) {
         if result {
             LocalNotificationView.shared.showSuccess(L10n.Common.great, body: L10n.Common.Process.success)
         } else {

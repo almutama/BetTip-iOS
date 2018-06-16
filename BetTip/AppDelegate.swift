@@ -14,7 +14,6 @@ import UserNotifications
 import Keys
 import Swinject
 import SwinjectStoryboard
-import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -51,8 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Database.database().reference().keepSynced(true)
         
         // MARK: Adverts
-        GADMobileAds.configure(withApplicationID: Constants.adMobID)
-        //HeyzapAds.start(withPublisherID: BetTipKeys().heyzapID)
+        HeyzapAds.start(withPublisherID: BetTipKeys().heyzapID)
 
         // MARK: Services
         UIService.shared.registerForEvents()
