@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dT5-UP-i0n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dT5-UP-i0n">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="1028" y="-295"/>
         </scene>
-        <!--View Controller-->
+        <!--My CouponsVC-->
         <scene sceneID="vvw-M2-2l1">
             <objects>
-                <viewController id="elF-5L-qba" sceneMemberID="viewController">
+                <viewController id="elF-5L-qba" customClass="MyCouponsVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmg-8i-5zE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,6 +234,7 @@
                         <viewLayoutGuide key="safeArea" id="zAv-HJ-eYo"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="sNa-HT-hCN" id="7OE-Vr-6Ad"/>
                         <segue destination="AMd-Pp-DLI" kind="show" identifier="myCouponDetailSegue" id="574-VX-Xg1"/>
                     </connections>
                 </viewController>
@@ -241,10 +242,10 @@
             </objects>
             <point key="canvasLocation" x="1369" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--My Coupon DetailVC-->
         <scene sceneID="aOD-nK-pcn">
             <objects>
-                <viewController id="AMd-Pp-DLI" sceneMemberID="viewController">
+                <viewController id="AMd-Pp-DLI" customClass="MyCouponDetailVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cd3-Gm-xKg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

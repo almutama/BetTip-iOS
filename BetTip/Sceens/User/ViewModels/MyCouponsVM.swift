@@ -15,15 +15,18 @@ protocol MyCouponsVMType {
 
 class MyCouponsVM: BaseViewModel, MyCouponsVMType {
     
-    private let couponService: CouponServiceType!
+    private let userService: UserServiceType!
     private let disposeBag = DisposeBag()
     
-    init(couponService: CouponServiceType) {
-        self.couponService = couponService
+    init(userService: UserServiceType) {
+        self.userService = userService
         super.init()
     }
     
     func getCoupons() -> Observable<[CouponModel]> {
-        return couponService.getCoupons()
+        guard let user =  UserEventService.shared.user.value else {
+            return .just([])
+        }
+        return userService.userCoupons(userId: user.id)
     }
 }
