@@ -18,7 +18,8 @@ class CreditAssembly: Assembly {
         
         // Services
         container.register(CreditServiceType.self) { r in
-            CreditService(userService: r.resolve(UserServiceType.self)!)
+            CreditService(userService: r.resolve(UserServiceType.self)!,
+                          purchaseService: r.resolve(PurchaseServiceType.self)!)
         }
         
         // ViewModels
