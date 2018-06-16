@@ -35,12 +35,6 @@ class MyCouponDetailVC: BaseViewController {
     }
     
     func bindViewModel() {
-        self.viewModel
-            .getCredits()
-            .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: CreditCell.reuseIdentifier,
-                                                   cellType: CreditCell.self)) { _, data, cell in
-                                                    cell.viewModel = Variable<CreditModel>(data)
-            }.disposed(by: disposeBag)
+        // TODO: Get user coupon details
     }
 }

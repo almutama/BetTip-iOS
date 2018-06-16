@@ -11,21 +11,21 @@ import RxSwift
 
 protocol MyCouponDetailVMType {
     var couponDetail: Variable<[CouponModel]> { get set }
-    func getCredits() -> Observable<[CreditModel]>
+    func getUserCoupons(userId: String) -> Observable<[CouponModel]>
 }
 
 class MyCouponDetailVM: BaseViewModel, MyCouponDetailVMType {
     
-    private let creditService: CreditServiceType!
+    private let userService: UserServiceType!
     private let disposeBag = DisposeBag()
     var couponDetail: Variable<[CouponModel]> = Variable<[CouponModel]>([])
     
-    init(creditService: CreditServiceType) {
-        self.creditService = creditService
+    init(userService: UserServiceType) {
+        self.userService = userService
         super.init()
     }
     
-    func getCredits() -> Observable<[CreditModel]> {
-        return creditService.getCredits()
+    func getUserCoupons(userId: String) -> Observable<[CouponModel]> {
+        return userService.userCoupons(userId: userId)
     }
 }

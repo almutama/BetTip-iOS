@@ -19,7 +19,7 @@ protocol UserServiceType {
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>>
     func userDisabled(userId: String) -> Observable<Bool>
     func userCredit(userId: String) -> Observable<Result<UserCreditModel, FirebaseFetchError>>
-    func userCoupons(userId: String) -> Observable<Result<CouponModel, FirebaseFetchError>>
+    func userCoupons(userId: String) -> Observable<[CouponModel]>
     func setAccountDisabled(user: UserModel, disabled: Bool) -> Observable<Bool>
     func setAccountRole(user: UserModel, role: Role) -> Observable<Bool>
     func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>>
@@ -74,11 +74,12 @@ class UserService: UserServiceType {
             .fetch(UserCreditModel.self)
     }
     
-    func userCoupons(userId: String) -> Observable<Result<CouponModel, FirebaseFetchError>> {
+    func userCoupons(userId: String) -> Observable<[CouponModel]> {
         return Database.database().reference()
             .child(Constants.userCoupons)
             .child(userId)
-            .fetch(CouponModel.self)
+            .fetchArray()
+            .recover([])
     }
     
     func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>> {
