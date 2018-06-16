@@ -38,7 +38,7 @@ class FootballVC: BaseViewController {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
-        self.collectionView.registerCellNib(FootballCell.self)
+        self.collectionView.registerCellNib(MainMatchCell.self)
         HZInterstitialAd.setDelegate(self)
     }
     
@@ -68,8 +68,8 @@ class FootballVC: BaseViewController {
             }
         }).disposed(by: disposeBag)
         
-        matches.bind(to: self.collectionView.rx.items(cellIdentifier: FootballCell.reuseIdentifier,
-                                                      cellType: FootballCell.self)) { _, data, cell in
+        matches.bind(to: self.collectionView.rx.items(cellIdentifier: MainMatchCell.reuseIdentifier,
+                                                      cellType: MainMatchCell.self)) { _, data, cell in
                                                         cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
     }

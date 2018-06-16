@@ -1,16 +1,16 @@
 //
-//  BasketballCell.swift
+//  MainMatchCell.swift
 //  BetTip
 //
-//  Created by Haydar Karkin on 21.11.2017.
-//  Copyright © 2017 Haydar Karkin. All rights reserved.
+//  Created by Haydar Karkin on 17.06.2018.
+//  Copyright © 2018 Haydar Karkin. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 import RxCocoa
 
-class BasketballCell: UICollectionViewCell, Reusable {
+class MainMatchCell: UICollectionViewCell, Reusable {
     
     @IBOutlet weak var iddaaIdLbl: StyledLabel!
     @IBOutlet weak var homeLbl: StyledLabel!
