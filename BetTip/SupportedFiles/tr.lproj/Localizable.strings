@@ -22,6 +22,7 @@
 "Common.Process.Success" = "İşlem başarıyla sonuçlandı.";
 "Common.Process.Error" = "İşlem tamamlanamadı.";
 "Common.Buy" = "Satın Al";
+"Common.ID" = "Ürün ID, '.' '#' '$' '[' yada ']'' girmeyin!";
 
 "Role.User" = "Kullanıcı";
 "Role.Moderator" = "Moderatör";

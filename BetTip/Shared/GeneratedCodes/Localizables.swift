@@ -66,6 +66,8 @@ internal enum L10n {
     internal static let error = L10n.tr("Localizable", "Common.Error")
     /// Great ☺️
     internal static let great = L10n.tr("Localizable", "Common.Great")
+    /// Product ID, '.' '#' '$' '[' or ']'' don't use!
+    internal static let id = L10n.tr("Localizable", "Common.ID")
     /// Loading ..
     internal static let loading = L10n.tr("Localizable", "Common.Loading")
     /// OK

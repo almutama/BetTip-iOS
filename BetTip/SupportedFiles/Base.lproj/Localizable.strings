@@ -22,6 +22,7 @@
 "Common.Process.Success" = "Process has been finished successfully.";
 "Common.Process.Error" = "Process couldn't be finished.";
 "Common.Buy" = "Buy";
+"Common.ID" = "Product ID, '.' '#' '$' '[' or ']'' don't use!";
 
 "Role.User" = "User";
 "Role.Moderator" = "Moderator";
