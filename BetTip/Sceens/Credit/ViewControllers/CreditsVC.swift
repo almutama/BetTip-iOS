@@ -8,6 +8,9 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import Result
+import SwiftyStoreKit
 
 private let logger = Log.createLogger()
 
@@ -34,35 +37,60 @@ class CreditsVC: BaseViewController {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 60)
         self.collectionView.collectionViewLayout =  layout
-        self.collectionView.registerCellNib(CreditCell.self)
+        self.collectionView.registerCellNib(ProductCell.self)
     }
     
     func bindViewModel() {
         self.bindAnimateWith(variable: self.isLoading)
             .disposed(by: disposeBag)
-        
-        let matches = self.viewModel.getCredits()
+
+        let credits = self.viewModel.getProducts()
             .asObservable()
             .delaySubscription(0, scheduler: MainScheduler.instance)
-            .trackActivity(loadingIndicator)
-            .share(replay: 1)
         
-        matches.map { _ in false }.startWith(true)
+        credits.map { _ in false }.startWith(true)
             .catchErrorJustReturn(false)
             .bind(to: self.isLoading)
             .disposed(by: disposeBag)
         
-        matches.bind(to: self.collectionView.rx.items(cellIdentifier: CreditCell.reuseIdentifier,
-                                                   cellType: CreditCell.self)) { _, data, cell in
-                                                    cell.viewModel = Variable<CreditModel>(data)
+        credits.bind(to:
+            self.collectionView.rx.items(cellIdentifier: ProductCell.reuseIdentifier,
+                                         cellType: ProductCell.self)) { _, data, cell in
+                                            cell.viewModel = Variable<SKProduct>(data)
             }.disposed(by: disposeBag)
         
-        self.collectionView.rx.modelSelected(CreditModel.self)
-            .subscribe(onNext: { [weak self] credit in
-                if let price = credit.price, let numberOfCredit = credit.numberOfCredits {
-                    guard self != nil else { return }
-                    logger.log(.debug, "\(numberOfCredit) consts \(price)")
+        self.collectionView.rx.modelSelected(SKProduct.self)
+            .flatMap { (product) -> ControlEvent<CreditAction> in
+                return UIAlertController.rx
+                    .presented(
+                        by: self,
+                        title: L10n.Credit.title,
+                        message: "\(product.localizedDescription)",
+                        preferredStyle: UIAlertControllerStyle.actionSheet,
+                        actions: [CreditAction.buy(selectedProduct: product), CreditAction.cancel],
+                        animated: true
+                )
+            }
+            .flatMap { [weak self] (action) -> Observable<Result<PurchaseDetails, SKError>> in
+                guard let `self` = self else { return Observable.empty() }
+                switch action {
+                case .buy(let selectedProduct):
+                    return self.viewModel.buyProduct(product: selectedProduct)
+                case .cancel:
+                    return Observable.empty()
                 }
+            }
+            .flatMap { [weak self] (result) -> Observable<Bool> in
+                guard let `self` = self else { return Observable.empty() }
+                switch result {
+                case .success(let purchasedResult):
+                    return self.viewModel.setUserCredit(purchasedProduct: purchasedResult)
+                case .failure:
+                    return Observable.just(false)
+                }
+            }
+            .subscribe(onNext: {result in
+                self.showNotification(result: result)
             })
             .disposed(by: disposeBag)
     }

@@ -15,7 +15,6 @@
 		B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD61FD1F787007D9503 /* BaseModel.swift */; };
 		B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */; };
 		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
-		B01161BA20ACC4480034F56D /* NotificationCenter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */; };
 		B025768020323680005FA7B8 /* MatchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025767F20323680005FA7B8 /* MatchAction.swift */; };
 		B02EEA0120B051090079A930 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0020B051090079A930 /* NotificationService.swift */; };
 		B02EEA0320B0A1E30079A930 /* HeyzapBanner+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */; };
@@ -134,6 +133,10 @@
 		B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */; };
 		B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */; };
 		B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */; };
+		B07D834220D2E22A00028BBF /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834120D2E22A00028BBF /* ProductModel.swift */; };
+		B07D834520D2F26200028BBF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834320D2F26200028BBF /* ProductCell.swift */; };
+		B07D834620D2F26200028BBF /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B07D834420D2F26200028BBF /* ProductCell.xib */; };
+		B07D834820D5930100028BBF /* BaseViewController+Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834720D5930100028BBF /* BaseViewController+Ad.swift */; };
 		B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */; };
 		B08340CF20A7C6CF00A41F36 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */; };
 		B08340D720A87D1500A41F36 /* CouponActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340D620A87D1500A41F36 /* CouponActions.swift */; };
@@ -185,6 +188,7 @@
 		B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */; };
 		B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */; };
 		B0BDD811200FEAEC00F3851A /* ControlMatchesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */; };
+		B0C38D0720D2D1AA00331207 /* CreditActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C38D0620D2D1AA00331207 /* CreditActions.swift */; };
 		B0DACBEE209F90A400C59CCD /* AdMobBanner+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */; };
 		B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */; };
 		B0DACBF220A0D33500C59CCD /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBF120A0D33500C59CCD /* Rule.swift */; };
@@ -222,7 +226,6 @@
 		B00F3BD61FD1F787007D9503 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVC.swift; sourceTree = "<group>"; };
 		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
-		B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Ext.swift"; sourceTree = "<group>"; };
 		B025767F20323680005FA7B8 /* MatchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAction.swift; sourceTree = "<group>"; };
 		B02EEA0020B051090079A930 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeyzapBanner+Rx.swift"; sourceTree = "<group>"; };
@@ -342,6 +345,10 @@
 		B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVC.swift; sourceTree = "<group>"; };
 		B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlUsersVM.swift; sourceTree = "<group>"; };
 		B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVM.swift; sourceTree = "<group>"; };
+		B07D834120D2E22A00028BBF /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		B07D834320D2F26200028BBF /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B07D834420D2F26200028BBF /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		B07D834720D5930100028BBF /* BaseViewController+Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Ad.swift"; sourceTree = "<group>"; };
 		B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optionals+Ext.swift"; sourceTree = "<group>"; };
 		B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		B08340D620A87D1500A41F36 /* CouponActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponActions.swift; sourceTree = "<group>"; };
@@ -399,6 +406,7 @@
 		B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCouponsVM.swift; sourceTree = "<group>"; };
 		B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVC.swift; sourceTree = "<group>"; };
 		B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVM.swift; sourceTree = "<group>"; };
+		B0C38D0620D2D1AA00331207 /* CreditActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditActions.swift; sourceTree = "<group>"; };
 		B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMobBanner+Rx.swift"; sourceTree = "<group>"; };
 		B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMobInterstitial+Rx.swift"; sourceTree = "<group>"; };
 		B0DACBF120A0D33500C59CCD /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
@@ -464,6 +472,7 @@
 			children = (
 				B02EEA1320B1F02D0079A930 /* AdModel.swift */,
 				B00F3BD61FD1F787007D9503 /* BaseModel.swift */,
+				B07D834120D2E22A00028BBF /* ProductModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -759,6 +768,8 @@
 			children = (
 				B0569A781FC37C8E00FF34A1 /* CreditCell.swift */,
 				B0569A791FC37C8E00FF34A1 /* CreditCell.xib */,
+				B07D834320D2F26200028BBF /* ProductCell.swift */,
+				B07D834420D2F26200028BBF /* ProductCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -774,6 +785,7 @@
 		B0569A731FC37B7D00FF34A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B0C38D0620D2D1AA00331207 /* CreditActions.swift */,
 				B0569A741FC37C7200FF34A1 /* CreditModel.swift */,
 			);
 			path = Models;
@@ -1178,7 +1190,6 @@
 			isa = PBXGroup;
 			children = (
 				B0569A271FC0CF6700FF34A1 /* Constants.swift */,
-				B01161B920ACC4480034F56D /* NotificationCenter+Ext.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1228,8 +1239,9 @@
 		B0FE4A3A1FBAD3B1008F2EE6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A2E1FC0E55400FF34A1 /* BaseViewController.swift */,
 				B0DACC0420A3765600C59CCD /* BaseFormViewController.swift */,
+				B0569A2E1FC0E55400FF34A1 /* BaseViewController.swift */,
+				B07D834720D5930100028BBF /* BaseViewController+Ad.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1361,6 +1373,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
 							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
@@ -1417,6 +1432,7 @@
 				B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */,
 				B05063B01FE5A1F5004CECEC /* CouponCell.xib in Resources */,
 				B0A7AA2B1FCC23D300DC4F62 /* Localizable.strings in Resources */,
+				B07D834620D2F26200028BBF /* ProductCell.xib in Resources */,
 				B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */,
 				B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */,
 				B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */,
@@ -1683,6 +1699,7 @@
 			files = (
 				B0DACC0120A0FBD100C59CCD /* MatchAssembly.swift in Sources */,
 				B08D42152047498900426276 /* MatchCell.swift in Sources */,
+				B07D834820D5930100028BBF /* BaseViewController+Ad.swift in Sources */,
 				B08340D920A8DC6F00A41F36 /* UILabel+Ext.swift in Sources */,
 				B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */,
 				B08340E520AB747B00A41F36 /* ErrorEvent.swift in Sources */,
@@ -1699,6 +1716,7 @@
 				B0569AD81FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift in Sources */,
 				B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */,
 				B0569A4C1FC22B3E00FF34A1 /* BGEventBusEvent.swift in Sources */,
+				B0C38D0720D2D1AA00331207 /* CreditActions.swift in Sources */,
 				B0569A441FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift in Sources */,
 				B08340CF20A7C6CF00A41F36 /* Double+Ext.swift in Sources */,
 				B0569A3B1FC22A4800FF34A1 /* EventBus.swift in Sources */,
@@ -1745,7 +1763,6 @@
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
 				B0DACC0520A3765600C59CCD /* BaseFormViewController.swift in Sources */,
 				B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */,
-				B01161BA20ACC4480034F56D /* NotificationCenter+Ext.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
 				B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */,
 				B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */,
@@ -1777,6 +1794,7 @@
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0BDD8011FF42A8400F3851A /* ActivityIndicator+Rx.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
+				B07D834520D2F26200028BBF /* ProductCell.swift in Sources */,
 				B0BDD7FA1FE69F6D00F3851A /* UIAlertController+Rx.swift in Sources */,
 				B05063B81FE5CD34004CECEC /* MyCouponDetailVC.swift in Sources */,
 				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
@@ -1819,6 +1837,7 @@
 				B025768020323680005FA7B8 /* MatchAction.swift in Sources */,
 				B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */,
 				B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */,
+				B07D834220D2E22A00028BBF /* ProductModel.swift in Sources */,
 				B0A7AA391FCD7BE000DC4F62 /* AppAssembly.swift in Sources */,
 				B0569AFC1FD0803200FF34A1 /* StyledTextField.swift in Sources */,
 				B0569A9B1FC6216E00FF34A1 /* RegisterModel.swift in Sources */,

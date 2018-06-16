@@ -6,22 +6,23 @@
 //  Copyright © 2018 Haydar Karkin. All rights reserved.
 //
 
+import Result
 import RxSwift
 import StoreKit
 import SwiftyStoreKit
 
 private let logger = Log.createLogger()
 
-let PRODUCT_OCR_30 = "com.salieri.bettipsapp_30"
-let PRODUCT_OCR_60 = "com.salieri.bettipsapp_60"
-let PRODUCT_OCR_90 = "com.salieri.bettipsapp_90"
-let PRODUCT_PLUS = "test_subscription"
+let CREDIT_30 = "bettipsapp_credit_30"
+let CREDIT_60 = "bettipsapp_credit_60"
+let CREDIT_90 = "bettipsapp_credit_90"
+let PRODUCT_PLUS = "salieri.betTipAppFree.noAd"
 
 protocol PurchaseServiceType {
     // Purchase
-    func getCachedProducts() ->  Observable<[SKProduct]>
-    func purchase(prodcutID: String) -> Observable<PurchaseDetails>
-    func purchaseSubscription() -> Observable<PurchaseDetails>
+    func requestProducts(ids: Set<String>) -> Observable<[SKProduct]>
+    func purchase(prodcutID: String) -> Observable<Result<PurchaseDetails, SKError>>
+    func purchaseSubscription() -> Observable<Result<PurchaseDetails, SKError>> 
     func restorePurchases() -> Observable<[Purchase]>
     func completeTransactions()
     
@@ -43,33 +44,18 @@ class PurchaseService: PurchaseServiceType {
     static fileprivate var cachedProducts = [SKProduct]()
     let bag = DisposeBag()
     
-    func cacheProducts() {
-        requestProducts().toArray()
-            .do(onNext: { products in
-                logger.log(.debug, "Available purchases: \(products)")
-            }).subscribe(onNext: { products in
-                PurchaseService.cachedProducts = products
-            }).disposed(by: bag)
-    }
-    
-    func getCachedProducts() ->  Observable<[SKProduct]> {
-        return requestProducts().toArray()
-    }
-    
-    func requestProducts() -> Observable<SKProduct> {
-        let ids: Set = [PRODUCT_PLUS, PRODUCT_OCR_30, PRODUCT_OCR_60, PRODUCT_OCR_90]
-        return Observable<SKProduct>.create({ observer -> Disposable in
+    func requestProducts(ids: Set<String>) -> Observable<[SKProduct]> {
+        return Observable<[SKProduct]>.create({ observer -> Disposable in
             SwiftyStoreKit.retrieveProductsInfo(ids) { result in
-                print("products result: \(result)")
+                observer.onNext(Array(result.retrievedProducts))
                 for product in result.retrievedProducts {
-                    print("product: \(product)")
-                    observer.onNext(product)
+                    logger.log(.debug, "product: \(product.localizedTitle)")
                 }
             }
             return Disposables.create()
         }).do(onError: { error in
             let errorEvent = ErrorEvent(error: error)
-            logger.log(.error, "fuck: \(error.localizedDescription)")
+            logger.log(.error, "error occured when getting products: \(error.localizedDescription)")
             AnalyticsManager.sharedManager.record(event: errorEvent)
         })
     }
@@ -94,13 +80,13 @@ class PurchaseService: PurchaseServiceType {
     
     // TODO: cyclomatic_complexity must be fixed!
     // swiftlint:disable:next cyclomatic_complexity
-    func purchase(prodcutID: String) -> Observable<PurchaseDetails> {
-        return Observable<PurchaseDetails>.create({ observer -> Disposable in
+    func purchase(prodcutID: String) -> Observable<Result<PurchaseDetails, SKError>> {
+        return Observable<Result<PurchaseDetails, SKError>>.create({ observer -> Disposable in
             SwiftyStoreKit.purchaseProduct(prodcutID, atomically: true) { result in
                 switch result {
                 case .success(let purchase):
-                    logger.log(.debug, "Purchase Success: \(purchase.productId)")
-                    observer.onNext(purchase)
+                    logger.log(.info, "Purchase Success: \(purchase.productId)")
+                    observer.onNext(.success(purchase))
                 case .error(let error):
                     switch error.code {
                     case .unknown: logger.log(.error, "Unknown error. Please contact support")
@@ -113,7 +99,7 @@ class PurchaseService: PurchaseServiceType {
                     case .cloudServiceNetworkConnectionFailed: logger.log(.error, "Could not connect to the network")
                     case .cloudServiceRevoked: logger.log(.error, "User has revoked permission to use this cloud service")
                     }
-                    observer.onError(error)
+                    observer.onNext(.failure(error))
                 }
             }
             return Disposables.create()
@@ -135,25 +121,26 @@ class PurchaseService: PurchaseServiceType {
             }).do(onNext: { restored in
                 if restored {
                     logger.log(.debug, "Successfuly restored Subscription")
-                    NotificationCenter.default.post(name: NSNotification.Name.betTipAdsRemoved, object: nil)
+                    NotificationCenter.default.post(name: Constants.betTipAdsRemoved, object: nil)
                 }
             })
     }
     
-    func purchaseSubscription() -> Observable<PurchaseDetails> {
+    func purchaseSubscription() -> Observable<Result<PurchaseDetails, SKError>> {
         return purchase(prodcutID: PRODUCT_PLUS)
             .do(onNext: { [weak self] _ in
                 self?.resetCache()
                 logger.log(.debug, "Successful restore PLUS Subscription")
-                NotificationCenter.default.post(name: NSNotification.Name.betTipAdsRemoved, object: nil)
+                NotificationCenter.default.post(name: Constants.betTipAdsRemoved, object: nil)
                 }, onError: handleError(_:))
     }
     
-    func price(productID: String) -> Observable<String> {
-        return requestProducts()
-            .filter({ $0.productIdentifier == productID })
-            .map({ $0.localizedPrice })
-    }
+    // TODO: fix price function
+//    func price(productID: String) -> Observable<String> {
+//        return requestProducts()
+//            .filter({ $0.productIdentifier == productID })
+//            .map({ $0.localizedPrice })
+//    }
     
     private func handleError(_ error: Error) {
         let responseError = error as NSError
@@ -180,7 +167,7 @@ class PurchaseService: PurchaseServiceType {
                 switch purchase.transaction.transactionState {
                 case .purchased, .restored:
                     if purchase.productId == PRODUCT_PLUS {
-                        NotificationCenter.default.post(name: NSNotification.Name.betTipAdsRemoved, object: nil)
+                        NotificationCenter.default.post(name: Constants.betTipAdsRemoved, object: nil)
                     }
                 case .failed, .purchasing, .deferred:
                     break // do nothing
