@@ -62,6 +62,7 @@ internal enum Asset {
   internal static let bannerBackground = ImageAsset(name: "banner_background")
   internal static let basketball = ImageAsset(name: "basketball")
   internal static let basketballEx = ImageAsset(name: "basketball_ex")
+  internal static let credit = ImageAsset(name: "credit")
   internal static let cross = ImageAsset(name: "cross")
   internal static let deal = ImageAsset(name: "deal")
   internal static let football = ImageAsset(name: "football")
@@ -97,6 +98,7 @@ internal enum Asset {
     bannerBackground,
     basketball,
     basketballEx,
+    credit,
     cross,
     deal,
     football,

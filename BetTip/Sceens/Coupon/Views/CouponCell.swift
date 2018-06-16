@@ -48,11 +48,11 @@ class CouponCell: UICollectionViewCell, Reusable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        self.layer.borderColor = UIColor.secondary.cgColor
-        self.layer.borderWidth = 1.0
-        self.layer.cornerRadius = 5.0
-        self.layer.masksToBounds = true
+        contentView.layer.cornerRadius = 5.0
+        contentView.layer.borderWidth = 2.0
+        contentView.layer.borderColor = UIColor.white.cgColor
+        contentView.layer.masksToBounds = true
+        layer.cornerRadius = 5.0
+        layer.masksToBounds = true
     }
-
 }

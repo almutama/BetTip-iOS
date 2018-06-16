@@ -21,7 +21,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGY-mx-JhV" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
-                        <rect key="frame" x="10" y="15" width="145" height="21"/>
+                        <rect key="frame" x="38" y="15" width="145" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -39,10 +39,10 @@
                             <constraint firstAttribute="height" constant="1" id="I5F-lF-c0D"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabSel_coupon" translatesAutoresizingMaskIntoConstraints="NO" id="Hua-rR-ZdQ">
-                        <rect key="frame" x="10" y="15" width="0.0" height="20"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit" translatesAutoresizingMaskIntoConstraints="NO" id="Hua-rR-ZdQ">
+                        <rect key="frame" x="10" y="15" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" id="UaO-Vt-703"/>
+                            <constraint firstAttribute="width" constant="20" id="UaO-Vt-703"/>
                             <constraint firstAttribute="height" constant="20" id="nZe-89-OJw"/>
                         </constraints>
                     </imageView>
@@ -60,7 +60,7 @@
                 <constraint firstItem="CRX-xb-UXJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lGY-mx-JhV" secondAttribute="trailing" constant="20" id="TlY-P8-1SY"/>
                 <constraint firstItem="zdX-Oy-Fy0" firstAttribute="leading" secondItem="anz-qG-DAq" secondAttribute="leading" constant="10" id="hwh-UW-ZhO"/>
                 <constraint firstItem="CRX-xb-UXJ" firstAttribute="width" secondItem="lGY-mx-JhV" secondAttribute="width" multiplier="0.3" id="rNa-FH-jjR"/>
-                <constraint firstItem="lGY-mx-JhV" firstAttribute="leading" secondItem="Hua-rR-ZdQ" secondAttribute="trailing" id="uZh-2Y-pHQ"/>
+                <constraint firstItem="lGY-mx-JhV" firstAttribute="leading" secondItem="Hua-rR-ZdQ" secondAttribute="trailing" constant="8" id="uZh-2Y-pHQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="zRP-hm-Q07"/>
             <size key="customSize" width="300" height="50"/>
@@ -72,6 +72,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="tabSel_coupon" width="22" height="22"/>
+        <image name="credit" width="64" height="64"/>
     </resources>
 </document>
