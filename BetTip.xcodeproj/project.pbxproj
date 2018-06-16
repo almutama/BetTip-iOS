@@ -133,7 +133,6 @@
 		B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */; };
 		B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */; };
 		B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */; };
-		B07D834220D2E22A00028BBF /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834120D2E22A00028BBF /* ProductModel.swift */; };
 		B07D834520D2F26200028BBF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834320D2F26200028BBF /* ProductCell.swift */; };
 		B07D834620D2F26200028BBF /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B07D834420D2F26200028BBF /* ProductCell.xib */; };
 		B07D834820D5930100028BBF /* BaseViewController+Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834720D5930100028BBF /* BaseViewController+Ad.swift */; };
@@ -345,7 +344,6 @@
 		B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVC.swift; sourceTree = "<group>"; };
 		B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlUsersVM.swift; sourceTree = "<group>"; };
 		B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVM.swift; sourceTree = "<group>"; };
-		B07D834120D2E22A00028BBF /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		B07D834320D2F26200028BBF /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		B07D834420D2F26200028BBF /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		B07D834720D5930100028BBF /* BaseViewController+Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Ad.swift"; sourceTree = "<group>"; };
@@ -472,7 +470,6 @@
 			children = (
 				B02EEA1320B1F02D0079A930 /* AdModel.swift */,
 				B00F3BD61FD1F787007D9503 /* BaseModel.swift */,
-				B07D834120D2E22A00028BBF /* ProductModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1837,7 +1834,6 @@
 				B025768020323680005FA7B8 /* MatchAction.swift in Sources */,
 				B0569A1A1FC0C40B00FF34A1 /* Style.swift in Sources */,
 				B0569AC41FCB65E400FF34A1 /* ActivityIndicatorView.swift in Sources */,
-				B07D834220D2E22A00028BBF /* ProductModel.swift in Sources */,
 				B0A7AA391FCD7BE000DC4F62 /* AppAssembly.swift in Sources */,
 				B0569AFC1FD0803200FF34A1 /* StyledTextField.swift in Sources */,
 				B0569A9B1FC6216E00FF34A1 /* RegisterModel.swift in Sources */,

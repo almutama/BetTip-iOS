@@ -18,8 +18,7 @@ class FootballAssembly: Assembly {
         
         // ViewModels
         container.register(FootballVMType.self) { r in
-            FootballVM(matchService: r.resolve(MatchServiceType.self)!,
-                       purchaseService: r.resolve(PurchaseServiceType.self)!)
+            FootballVM(matchService: r.resolve(MatchServiceType.self)!)
         }
         
         // ViewControllers
