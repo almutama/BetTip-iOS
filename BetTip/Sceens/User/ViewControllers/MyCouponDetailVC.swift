@@ -8,10 +8,11 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class MyCouponDetailVC: BaseViewController {
     
-    var viewModel: MyCouponDetailVMType!
+    var viewModel: MyCouponDetailVM!
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -31,10 +32,15 @@ class MyCouponDetailVC: BaseViewController {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
-        self.collectionView.registerCellNib(CreditCell.self)
+        self.collectionView.registerCellNib(MainMatchCell.self)
     }
     
-    func bindViewModel() {
-        // TODO: Get user coupon details
+    func bindViewModel() {        
+        self.viewModel.getMatches()
+            .asObservable()
+            .bind(to: self.collectionView.rx.items(cellIdentifier: MainMatchCell.reuseIdentifier,
+                                                      cellType: MainMatchCell.self)) { _, data, cell in
+                                                        cell.viewModel = Variable<MatchModel>(data)
+            }.disposed(by: disposeBag)
     }
 }

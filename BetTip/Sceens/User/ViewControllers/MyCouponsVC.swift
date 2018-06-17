@@ -42,5 +42,24 @@ class MyCouponsVC: BaseViewController {
                                                    cellType: CouponCell.self)) { _, data, cell in
                                                     cell.viewModel = Variable<CouponModel>(data)
             }.disposed(by: disposeBag)
+        
+        self.collectionView.rx.modelSelected(CouponModel.self)
+            .subscribe(onNext: {coupon in
+                self.performSegue(withIdentifier: StoryboardSegue.User.myCouponDetailSegue.rawValue,
+                                  sender: coupon)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == StoryboardSegue.User.myCouponDetailSegue.rawValue {
+            guard let coupon = sender as? CouponModel else {
+                return
+            }
+            guard let vc = segue.destination as? MyCouponDetailVC else {
+                return
+            }
+            vc.viewModel = MyCouponDetailVM(coupon: Variable(coupon))
+        }
     }
 }

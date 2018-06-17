@@ -50,5 +50,9 @@ class UserAssembly: Assembly {
         container.storyboardInitCompleted(MyCouponsVC.self) {r, c in
             c.viewModel = r.resolve(MyCouponsVMType.self)
         }
+        
+        container.storyboardInitCompleted(MyCouponDetailVC.self) {r, c in
+            c.viewModel = r.resolve(MyCouponDetailVM.self)
+        }
     }
 }

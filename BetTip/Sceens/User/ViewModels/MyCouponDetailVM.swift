@@ -10,22 +10,24 @@ import ObjectMapper
 import RxSwift
 
 protocol MyCouponDetailVMType {
-    var couponDetail: Variable<[CouponModel]> { get set }
-    func getUserCoupons(userId: String) -> Observable<[CouponModel]>
+    var coupon: Variable<CouponModel>? { get set }
+    func getMatches() -> Observable<[MatchModel]>
+    init(coupon: Variable<CouponModel>)
 }
 
 class MyCouponDetailVM: BaseViewModel, MyCouponDetailVMType {
     
-    private let userService: UserServiceType!
-    private let disposeBag = DisposeBag()
-    var couponDetail: Variable<[CouponModel]> = Variable<[CouponModel]>([])
+    var coupon: Variable<CouponModel>?
     
-    init(userService: UserServiceType) {
-        self.userService = userService
+    required init(coupon: Variable<CouponModel>) {
+        self.coupon = coupon
         super.init()
     }
     
-    func getUserCoupons(userId: String) -> Observable<[CouponModel]> {
-        return userService.userCoupons(userId: userId)
+    func getMatches() -> Observable<[MatchModel]> {
+        guard let matches = self.coupon?.value.matches else {
+            return Observable.just([])
+        }
+        return Observable.just(matches)
     }
 }
