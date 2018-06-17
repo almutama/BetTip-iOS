@@ -61,4 +61,7 @@ struct Constants {
     
     //NotificationCenter
     static let betTipAdsRemoved = Notification.Name("BetTipAdsRemovedNotification")
+    
+    //Ads
+    static let showAdsPerOpen = 15
 }

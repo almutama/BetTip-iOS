@@ -23,6 +23,9 @@ class MainAssembly: Assembly {
         container.register(AdServiceType.self) { _ in
             AdService()
         }
+        container.register(UserVariableProviderType.self) { _ in
+            UserVariableProvider()
+        }
         
         // ViewModels
         container.register(AdBannerVMType.self) { r in

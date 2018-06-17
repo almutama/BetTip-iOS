@@ -75,11 +75,14 @@ class FootballVC: BaseViewController {
     }
     
     private func showHZInterstitial() {
-        if HZInterstitialAd.isAvailable() {
-            logger.log(.debug, "HZInterstitialAd.isAvailable")
-            HZInterstitialAd.show(forTag: "default", completion: { (_, _) -> Void in
-                logger.log(.debug, "HZInterstitialAd.completion")
-            })
+        if self.viewModel.shouldAdsShow() {
+            if HZInterstitialAd.isAvailable() {
+                logger.log(.debug, "HZInterstitialAd.isAvailable")
+                HZInterstitialAd.show(forTag: "default", completion: { (_, _) -> Void in
+                    self.viewModel.adsWasShown()
+                    logger.log(.debug, "HZInterstitialAd.completion")
+                })
+            }
         }
     }
     
