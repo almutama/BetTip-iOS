@@ -156,12 +156,13 @@ class AddCouponVC: BaseViewController {
             }
         }
         
-        let startDate: Date = self.selectedMatches.value.map { $0.date! + " " + $0.time! }.getFirstDateFromArray(with: "dd.MM.yyyy HH:mm")
+        let startDate: Date = self.selectedMatches.value
+            .map { $0.date! + " " + $0.time! }
+            .getFirstDateFromArray(with: "dd.MM.yyyy HH:mm")
         let roundedOdd: Double = odd.roundTo(places: 2)
         let tipster: String = UserEventService.shared.user.value?.email ?? ""
         let matches: Array = selectedMatches.value
         
-        // TODO: Fix dateWithFormat return values
         return CouponModel(numOfCredit: numberOfCredit,
                            startDate: startDate.dateWithFormat(dateFormat: "dd.MM.yyyy"),
                            startTime: startDate.dateWithFormat(dateFormat: "HH:mm"),

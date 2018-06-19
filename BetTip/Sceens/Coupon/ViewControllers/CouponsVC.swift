@@ -9,12 +9,12 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Result
 
 class CouponsVC: BaseViewController {
     
     var viewModel: CouponsVMType!
     private let disposeBag = DisposeBag()
-    private let selectedCoupon = Variable<CouponModel?>(nil)
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var userCreditLbl: StyledLabel!
@@ -41,7 +41,7 @@ class CouponsVC: BaseViewController {
         // CreditLabel
         let userCredit = UserEventService.shared.user.value?.userCredit?.currentCredit ?? 0
         let fullCreditText = "\(L10n.User.Credit.rest)\(userCredit)"
-        self.userCreditLbl.coloredText(fullText: fullCreditText, changeText: "\(userCredit)", color: .orange)
+        self.userCreditLbl.coloredText(fullText: fullCreditText, changeText: "\(userCredit)", color: .secondary)
     }
     
     func bindViewModel() {
@@ -55,36 +55,37 @@ class CouponsVC: BaseViewController {
         
         self.collectionView.rx.modelSelected(CouponModel.self)
             .flatMap { (coupon) -> ControlEvent<CouponAction> in
-                self.selectedCoupon.value = coupon
                 return UIAlertController.rx
                     .presented(
                         by: self,
                         title: L10n.Coupon.title,
                         message: "\(coupon.numOfCredit ?? 0)\(L10n.Coupon.buyCoupon)",
                         preferredStyle: UIAlertControllerStyle.actionSheet,
-                        actions: [CouponAction.buy, CouponAction.cancel],
+                        actions: [CouponAction.buy(coupon: coupon), CouponAction.cancel],
                         animated: true
                 )
             }
-            .flatMap { [weak self] (action) -> Observable<Bool> in
+            .flatMap { [weak self] (action) -> Observable<Result<CouponModel, FirebaseStoreError>> in
                 guard let `self` = self else { return Observable.empty() }
                 switch action {
-                case .buy:
-                    return self.buyCoupon()
+                case .buy(let selectedCoupon):
+                    return self.viewModel.buyCoupon(coupon: selectedCoupon)
                 case .cancel:
                     return Observable.empty()
+                }
+            }
+            .flatMap { [weak self] (result) -> Observable<Bool> in
+                guard let `self` = self else { return Observable.empty() }
+                switch result {
+                case .success(let coupon):
+                    return self.viewModel.setUserCredit(coupon: coupon)
+                case .failure:
+                    return Observable.just(false)
                 }
             }
             .subscribe(onNext: {result in
                 self.showNotification(result: result)
             })
             .disposed(by: disposeBag)
-    }
-    
-    func buyCoupon() -> Observable<Bool> {
-        guard let coupon = self.selectedCoupon.value else {
-            return Observable.empty()
-        }
-        return self.viewModel.buyCoupon(coupon: coupon)
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 enum CouponAction {
     case cancel
-    case buy
+    case buy(coupon: CouponModel)
 }
 
 extension CouponAction: AlertActionType {

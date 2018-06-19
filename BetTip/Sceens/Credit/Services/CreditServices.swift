@@ -53,7 +53,7 @@ class CreditService: CreditServiceType {
             .flatMap { (result) -> Observable<Result<UserCreditModel, FirebaseStoreError>> in
                 switch result {
                 case .success(let credit):
-                    return self.userService.setUserCredit(userId: user.id, numberOfCredits: credit.numberOfCredits!)
+                    return self.userService.setUserCredit(userId: user.id, numberOfCredits: credit.numberOfCredits!, creditAction: .append)
                 case .failure(let error):
                     logger.log(.error, "error occured when getting credit with id: \(error.localizedDescription)")
                     return .just(.failure(FirebaseStoreError.serializeError))
