@@ -73,6 +73,7 @@ internal enum Asset {
   internal static let matchResult = ImageAsset(name: "match_result")
   internal static let noAds = ImageAsset(name: "no_ads")
   internal static let push = ImageAsset(name: "push")
+  internal static let star = ImageAsset(name: "star")
   internal static let statsEx = ImageAsset(name: "stats_ex")
   internal static let twitter = ImageAsset(name: "twitter")
   internal static let versus = ImageAsset(name: "versus")
@@ -109,6 +110,7 @@ internal enum Asset {
     matchResult,
     noAds,
     push,
+    star,
     statsEx,
     twitter,
     versus,
