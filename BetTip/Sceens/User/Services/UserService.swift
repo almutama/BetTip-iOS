@@ -100,11 +100,12 @@ class UserService: UserServiceType {
                         return .just(.failure(FirebaseStoreError.serializeError))
                     }
                     let updatedCredit = creditAction == .append ? numOfCredit+numberOfCredits : numOfCredit-numberOfCredits
+                    let updatedUsedCredit = creditAction == .append ? usedCredit : usedCredit+numberOfCredits
                     return Database.database().reference()
                         .child(Constants.userCredits)
                         .update(UserCreditModel(id: userId,
                                                 currentCredit: updatedCredit,
-                                                usedCredit: usedCredit))
+                                                usedCredit: updatedUsedCredit))
                 case .failure(let error):
                     return .just(.failure(FirebaseStoreError.writeDenied(error)))
                 }

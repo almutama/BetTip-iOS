@@ -16,6 +16,7 @@ protocol CouponsVMType {
     func getCoupons() -> Observable<[CouponModel]>
     func buyCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>>
     func setUserCredit(coupon: CouponModel) -> Observable<Bool>
+    func userCredit() -> Observable<Int> 
 }
 
 class CouponsVM: BaseViewModel, CouponsVMType {
@@ -64,5 +65,12 @@ class CouponsVM: BaseViewModel, CouponsVMType {
                                                     return Observable.just(false)
                                                 }
         }
+    }
+    
+    func userCredit() -> Observable<Int> {
+        guard let user = UserEventService.shared.user.value else {
+            return Observable.just(0)
+        }
+        return self.userService.userCredit(userId: user.id).map { $0.value?.currentCredit ?? 0 }
     }
 }

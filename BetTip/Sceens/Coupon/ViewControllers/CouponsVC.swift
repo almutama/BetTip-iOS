@@ -37,11 +37,14 @@ class CouponsVC: BaseViewController {
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 70)
         self.collectionView.collectionViewLayout =  layout
         self.collectionView.registerCellNib(CouponCell.self)
-        
-        // CreditLabel
-        let userCredit = UserEventService.shared.user.value?.userCredit?.currentCredit ?? 0
-        let fullCreditText = "\(L10n.User.Credit.rest)\(userCredit)"
-        self.userCreditLbl.coloredText(fullText: fullCreditText, changeText: "\(userCredit)", color: .secondary)
+    }
+    
+    func coloredText(fullText: String, changeText: String, color: UIColor) -> NSMutableAttributedString {
+        let strNumber: NSString = fullText as NSString
+        let range = (strNumber).range(of: changeText)
+        let attribute = NSMutableAttributedString.init(string: fullText)
+        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: color, range: range)
+        return attribute
     }
     
     func bindViewModel() {
@@ -52,6 +55,15 @@ class CouponsVC: BaseViewController {
                                                    cellType: CouponCell.self)) { _, data, cell in
                                                     cell.viewModel = Variable<CouponModel>(data)
             }.disposed(by: disposeBag)
+        
+        self.viewModel.userCredit()
+            .asObservable()
+            .map {
+                let fullCreditText = "\(L10n.User.Credit.rest)\($0)"
+                return self.coloredText(fullText: fullCreditText, changeText: "\($0)", color: .secondary)
+            }
+            .bind(to: self.userCreditLbl.rx.attributedText)
+            .disposed(by: disposeBag)
         
         self.collectionView.rx.modelSelected(CouponModel.self)
             .flatMap { (coupon) -> ControlEvent<CouponAction> in
