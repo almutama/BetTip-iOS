@@ -10,11 +10,11 @@ import Foundation
 
 extension Date {
     func dateWithFormat(dateFormat format: String? = nil) -> String {
-        let todaysDate = NSDate()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format ?? "dd:MM:yyyy HH:mm"//29:01:2015 16:31
-        let dateInFormat = dateFormatter.string(from: todaysDate as Date)
-        return dateInFormat
+        dateFormatter.dateFormat = format ?? "dd:MM:yyyy HH:mm"
+        dateFormatter.locale = Locale.current
+        dateFormatter.timeZone = TimeZone.current
+        return dateFormatter.string(from: self)
     }
     
     func monthInt() -> Int {
