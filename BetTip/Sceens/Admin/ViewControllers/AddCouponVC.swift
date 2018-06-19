@@ -155,18 +155,23 @@ class AddCouponVC: BaseViewController {
                 odd = matchOdd * odd
             }
         }
-        var coupon = CouponModel()
-        coupon.numOfCredit = numberOfCredit
-        coupon.startDate = Date().dateWithFormat()
-        coupon.odd = odd.roundTo(places: 2)
-        coupon.won = -1
-        coupon.tipster = UserEventService.shared.user.value?.email ?? ""
-        coupon.matches = selectedMatches.value
-        return coupon
+        
+        let startDate: Date = self.selectedMatches.value.map { $0.date! + " " + $0.time! }.getFirstDateFromArray(with: "dd.MM.yyyy HH:mm")
+        let roundedOdd: Double = odd.roundTo(places: 2)
+        let tipster: String = UserEventService.shared.user.value?.email ?? ""
+        let matches: Array = selectedMatches.value
+        
+        // TODO: Fix dateWithFormat return values
+        return CouponModel(numOfCredit: numberOfCredit,
+                           startDate: startDate.dateWithFormat(dateFormat: "dd.MM.yyyy"),
+                           startTime: startDate.dateWithFormat(dateFormat: "HH:mm"),
+                           odd: roundedOdd,
+                           won: -1,
+                           tipster: tipster,
+                           matches: matches)!
     }
     
     func addCoupon(coupon: CouponModel) {
-        print(Mapper<CouponModel>().toJSON(coupon))
         self.viewModel.addCoupon(coupon: coupon) { result in
             if let result = result {
                 self.showNotification(result: result)

@@ -46,7 +46,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-5b-UTN" userLabel="RateLbl" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
-                        <rect key="frame" x="301" y="10" width="49" height="21"/>
+                        <rect key="frame" x="301" y="10" width="49" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -59,24 +59,32 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipster:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrm-a7-0oq" userLabel="DateLbl" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
-                        <rect key="frame" x="10" y="41" width="340" height="21"/>
+                        <rect key="frame" x="10" y="41" width="310" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Sbk-W5-FKb">
+                        <rect key="frame" x="330" y="40" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ikD-EZ-3ke"/>
+                            <constraint firstAttribute="width" constant="20" id="pfW-5j-q2M"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.26274509800000001" green="0.85882352939999995" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Vrm-a7-0oq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="0gL-Vy-glZ"/>
+                <constraint firstItem="Sbk-W5-FKb" firstAttribute="leading" secondItem="Vrm-a7-0oq" secondAttribute="trailing" constant="10" id="1E0-Fy-W2z"/>
                 <constraint firstItem="FBJ-uQ-O3E" firstAttribute="width" secondItem="5e9-5z-H39" secondAttribute="width" multiplier="2.2" id="1ow-qP-40d"/>
-                <constraint firstAttribute="trailing" secondItem="Vrm-a7-0oq" secondAttribute="trailing" constant="10" id="4hT-P9-eti"/>
                 <constraint firstAttribute="trailing" secondItem="jYe-KB-Sv5" secondAttribute="trailing" constant="10" id="98p-Wf-T2I"/>
                 <constraint firstItem="FBJ-uQ-O3E" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="AOQ-ny-zCr"/>
                 <constraint firstItem="dQD-tq-b4F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Fb4-Tv-UD3"/>
                 <constraint firstItem="k9W-5b-UTN" firstAttribute="leading" secondItem="far-4H-ARb" secondAttribute="trailing" constant="8" id="FsX-cV-wvK"/>
                 <constraint firstAttribute="bottom" secondItem="jYe-KB-Sv5" secondAttribute="bottom" id="OY1-8m-qW7"/>
                 <constraint firstItem="far-4H-ARb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="OZ1-Kb-2bO"/>
+                <constraint firstItem="Sbk-W5-FKb" firstAttribute="top" secondItem="k9W-5b-UTN" secondAttribute="bottom" constant="10" id="Q6B-8o-rbl"/>
                 <constraint firstItem="k9W-5b-UTN" firstAttribute="width" secondItem="far-4H-ARb" secondAttribute="width" id="Sv6-Ag-Vqq"/>
                 <constraint firstItem="Vrm-a7-0oq" firstAttribute="top" secondItem="FBJ-uQ-O3E" secondAttribute="bottom" constant="10" id="TY8-Pu-61J"/>
                 <constraint firstAttribute="trailing" secondItem="k9W-5b-UTN" secondAttribute="trailing" constant="10" id="XSe-s6-3fn"/>
@@ -87,6 +95,8 @@
                 <constraint firstItem="jYe-KB-Sv5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="fAK-Ov-KnZ"/>
                 <constraint firstItem="far-4H-ARb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FBJ-uQ-O3E" secondAttribute="trailing" constant="8" id="gnz-75-JfF"/>
                 <constraint firstItem="far-4H-ARb" firstAttribute="width" secondItem="5e9-5z-H39" secondAttribute="width" id="h4H-y3-Sda"/>
+                <constraint firstAttribute="trailing" secondItem="Sbk-W5-FKb" secondAttribute="trailing" constant="10" id="jqh-cM-dna"/>
+                <constraint firstAttribute="bottom" secondItem="Sbk-W5-FKb" secondAttribute="bottom" constant="10" id="kZA-RB-s5N"/>
                 <constraint firstItem="k9W-5b-UTN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="tg0-aa-8Uj"/>
                 <constraint firstItem="5e9-5z-H39" firstAttribute="leading" secondItem="dQD-tq-b4F" secondAttribute="trailing" constant="8" id="vH3-Ah-fvr"/>
                 <constraint firstItem="5e9-5z-H39" firstAttribute="leading" secondItem="dQD-tq-b4F" secondAttribute="trailing" constant="8" id="zm8-B3-ZAk"/>
@@ -95,6 +105,7 @@
             <size key="customSize" width="403" height="151"/>
             <connections>
                 <outlet property="dateLbl" destination="FBJ-uQ-O3E" id="RBa-EX-7eg"/>
+                <outlet property="favImg" destination="Sbk-W5-FKb" id="VyL-NG-6dJ"/>
                 <outlet property="numberOfCreditLbl" destination="5e9-5z-H39" id="OLW-4p-Z3L"/>
                 <outlet property="rateLbl" destination="k9W-5b-UTN" id="87K-7p-xak"/>
                 <outlet property="timeLbl" destination="far-4H-ARb" id="hil-k2-3WQ"/>
@@ -105,5 +116,6 @@
     </objects>
     <resources>
         <image name="credit" width="64" height="64"/>
+        <image name="star" width="64" height="64"/>
     </resources>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M5z-pK-FZ4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M5z-pK-FZ4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -266,7 +266,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2b7-fP-HWp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="8" width="375" height="591"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YXj-6Z-wuN">
                                     <size key="itemSize" width="50" height="50"/>
@@ -279,13 +279,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.17081955075263977" green="0.22317889332771301" blue="0.25246182084083557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2b7-fP-HWp" firstAttribute="top" secondItem="ZMr-eB-lGs" secondAttribute="top" id="1om-EH-Fx8"/>
+                            <constraint firstItem="2b7-fP-HWp" firstAttribute="top" secondItem="ZMr-eB-lGs" secondAttribute="top" constant="8" id="1om-EH-Fx8"/>
                             <constraint firstItem="yOw-07-t0l" firstAttribute="leading" secondItem="ZMr-eB-lGs" secondAttribute="leading" id="3zN-aJ-udL"/>
                             <constraint firstAttribute="trailing" secondItem="yOw-07-t0l" secondAttribute="trailing" id="NhT-oX-Vhd"/>
                             <constraint firstItem="YMT-fp-WMK" firstAttribute="bottom" secondItem="yOw-07-t0l" secondAttribute="bottom" id="bzH-x0-hUb"/>
                             <constraint firstAttribute="trailing" secondItem="2b7-fP-HWp" secondAttribute="trailing" id="clF-ZP-mrg"/>
-                            <constraint firstItem="yOw-07-t0l" firstAttribute="top" secondItem="2b7-fP-HWp" secondAttribute="bottom" id="ttq-lj-uMK"/>
-                            <constraint firstItem="yOw-07-t0l" firstAttribute="top" secondItem="2b7-fP-HWp" secondAttribute="bottom" id="vhz-ON-W6B"/>
+                            <constraint firstItem="yOw-07-t0l" firstAttribute="top" secondItem="2b7-fP-HWp" secondAttribute="bottom" constant="8" id="ttq-lj-uMK"/>
+                            <constraint firstItem="yOw-07-t0l" firstAttribute="top" secondItem="2b7-fP-HWp" secondAttribute="bottom" constant="8" id="vhz-ON-W6B"/>
                             <constraint firstItem="2b7-fP-HWp" firstAttribute="leading" secondItem="ZMr-eB-lGs" secondAttribute="leading" id="yHC-oF-1Xd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YMT-fp-WMK"/>
