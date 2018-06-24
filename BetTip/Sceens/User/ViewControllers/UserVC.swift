@@ -8,10 +8,11 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class UserVC: BaseViewController {
     
-    var viewModel: UserVM!
+    var viewModel: UserVMType!
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var logoutButton: StyledButton!
@@ -74,6 +75,18 @@ class UserVC: BaseViewController {
                 case .cancel: break
                 }
             })
+            .disposed(by: disposeBag)
+        
+        self.viewModel.userCredit()
+            .asObservable()
+            .map { String($0.0) }
+            .bind(to: self.currentCreditLbl.rx.text)
+            .disposed(by: disposeBag)
+        
+        self.viewModel.userCredit()
+            .asObservable()
+            .map { String($0.1) }
+            .bind(to: self.usedCreditLbl.rx.text)
             .disposed(by: disposeBag)
     }
     

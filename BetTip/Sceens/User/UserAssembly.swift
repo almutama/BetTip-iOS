@@ -33,9 +33,10 @@ class UserAssembly: Assembly {
         }
         
         // ViewModels
-        container.register(UserVM.self) { r in
+        container.register(UserVMType.self) { r in
             UserVM(authStore: r.resolve(AuthStoreType.self)!,
-                   authManager: r.resolve(AuthManagerType.self)!)
+                   authManager: r.resolve(AuthManagerType.self)!,
+                   userService: r.resolve(UserServiceType.self)!)
         }
         
         container.register(MyCouponsVMType.self) { r in
@@ -44,7 +45,7 @@ class UserAssembly: Assembly {
         
         // ViewControllers
         container.storyboardInitCompleted(UserVC.self) {r, c in
-            c.viewModel = r.resolve(UserVM.self)
+            c.viewModel = r.resolve(UserVMType.self)
         }
         
         container.storyboardInitCompleted(MyCouponsVC.self) {r, c in

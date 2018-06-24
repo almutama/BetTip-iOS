@@ -134,6 +134,7 @@
 		B07D834820D5930100028BBF /* BaseViewController+Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834720D5930100028BBF /* BaseViewController+Ad.swift */; };
 		B07D834B20D5CA7F00028BBF /* MainMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834920D5CA7F00028BBF /* MainMatchCell.swift */; };
 		B07D834C20D5CA7F00028BBF /* MainMatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B07D834A20D5CA7F00028BBF /* MainMatchCell.xib */; };
+		B07D835220DC50BC00028BBF /* CouponCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D835120DC50BC00028BBF /* CouponCellVM.swift */; };
 		B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */; };
 		B08340CF20A7C6CF00A41F36 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */; };
 		B08340D720A87D1500A41F36 /* CouponActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340D620A87D1500A41F36 /* CouponActions.swift */; };
@@ -343,6 +344,7 @@
 		B07D834720D5930100028BBF /* BaseViewController+Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Ad.swift"; sourceTree = "<group>"; };
 		B07D834920D5CA7F00028BBF /* MainMatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMatchCell.swift; sourceTree = "<group>"; };
 		B07D834A20D5CA7F00028BBF /* MainMatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMatchCell.xib; sourceTree = "<group>"; };
+		B07D835120DC50BC00028BBF /* CouponCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCellVM.swift; sourceTree = "<group>"; };
 		B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optionals+Ext.swift"; sourceTree = "<group>"; };
 		B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		B08340D620A87D1500A41F36 /* CouponActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponActions.swift; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 			children = (
 				B05063AD1FE5A1F5004CECEC /* CouponCell.swift */,
 				B05063AE1FE5A1F5004CECEC /* CouponCell.xib */,
+				B07D835120DC50BC00028BBF /* CouponCellVM.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1747,6 +1750,7 @@
 				B0569A131FC0B9F800FF34A1 /* UITableView+Ext.swift in Sources */,
 				B0569A171FC0BF2800FF34A1 /* NibView.swift in Sources */,
 				B0A7AA371FCC58C900DC4F62 /* Storyboards.swift in Sources */,
+				B07D835220DC50BC00028BBF /* CouponCellVM.swift in Sources */,
 				B0569AEE1FCF3D8100FF34A1 /* FootballVC.swift in Sources */,
 				B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */,
 				B08340ED20AB7E2A00A41F36 /* AnalyticsLogger.swift in Sources */,

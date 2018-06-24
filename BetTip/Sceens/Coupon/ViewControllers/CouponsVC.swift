@@ -53,7 +53,7 @@ class CouponsVC: BaseViewController {
             .asObservable()
             .bind(to: self.collectionView.rx.items(cellIdentifier: CouponCell.reuseIdentifier,
                                                    cellType: CouponCell.self)) { _, data, cell in
-                                                    cell.viewModel = Variable<CouponModel>(data)
+                                                    cell.viewModel = Variable(data)
             }.disposed(by: disposeBag)
         
         self.viewModel.userCredit()
@@ -66,18 +66,25 @@ class CouponsVC: BaseViewController {
             .disposed(by: disposeBag)
         
         self.collectionView.rx.modelSelected(CouponModel.self)
-            .flatMap { (coupon) -> ControlEvent<CouponAction> in
-                return UIAlertController.rx
-                    .presented(
-                        by: self,
-                        title: L10n.Coupon.title,
-                        message: "\(coupon.numOfCredit ?? 0)\(L10n.Coupon.buyCoupon)",
-                        preferredStyle: UIAlertControllerStyle.actionSheet,
-                        actions: [CouponAction.buy(coupon: coupon), CouponAction.cancel],
-                        animated: true
-                )
+            .flatMap { (coupon) -> Observable<Bool> in
+                return self.startBuyCoupon(coupon: coupon)
             }
-            .flatMap { [weak self] (action) -> Observable<Result<CouponModel, FirebaseStoreError>> in
+            .subscribe(onNext: {result in
+                self.showNotification(result: result)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func startBuyCoupon(coupon: CouponModel) -> Observable<Bool> {
+        return UIAlertController.rx
+            .presented(
+                by: self,
+                title: L10n.Coupon.title,
+                message: "\(coupon.numOfCredit ?? 0)\(L10n.Coupon.buyCoupon)",
+                preferredStyle: UIAlertControllerStyle.actionSheet,
+                actions: [CouponAction.buy(coupon: coupon), CouponAction.cancel],
+                animated: true
+            ).flatMap { [weak self] (action) -> Observable<Result<CouponModel, FirebaseStoreError>> in
                 guard let `self` = self else { return Observable.empty() }
                 switch action {
                 case .buy(let selectedCoupon):
@@ -94,10 +101,10 @@ class CouponsVC: BaseViewController {
                 case .failure:
                     return Observable.just(false)
                 }
-            }
-            .subscribe(onNext: {result in
-                self.showNotification(result: result)
-            })
-            .disposed(by: disposeBag)
+        }
+    }
+    
+    func openUserCoupon(coupon: CouponModel) {
+        
     }
 }

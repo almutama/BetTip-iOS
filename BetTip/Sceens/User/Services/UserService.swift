@@ -15,11 +15,13 @@ import Result
 private let logger = Log.createLogger()
 
 protocol UserServiceType {
+    func `init`()
     func users() -> Observable<[UserModel]>
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>>
     func userDisabled(userId: String) -> Observable<Bool>
     func userCredit(userId: String) -> Observable<Result<UserCreditModel, FirebaseFetchError>>
     func userCoupons(userId: String) -> Observable<[CouponModel]>
+    func isCouponExist(userId: String, couponId: String) -> Observable<Bool> 
     func setAccountDisabled(user: UserModel, disabled: Bool) -> Observable<Bool>
     func setAccountRole(user: UserModel, role: Role) -> Observable<Bool>
     func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>>
@@ -27,6 +29,8 @@ protocol UserServiceType {
 }
 
 class UserService: UserServiceType {
+    
+    func `init`() {}
     
     func addOrReplaceUser(accumulator: [UserModel], user: UserModel) -> [UserModel] {
         var resultantArray = accumulator.filter { $0.id != user.id }
@@ -75,11 +79,22 @@ class UserService: UserServiceType {
     }
     
     func userCoupons(userId: String) -> Observable<[CouponModel]> {
+        let coupons: Observable<[CouponModel]> = Database.database().reference()
+            .child(Constants.coupons)
+            .fetchArray()
+            .recover([])
+        
+        return coupons.asObservable().map({ coupons in
+            coupons.filter { $0.users.contains(userId) }
+        })
+    }
+    
+    func isCouponExist(userId: String, couponId: String) -> Observable<Bool> {
         return Database.database().reference()
             .child(Constants.userCoupons)
             .child(userId)
-            .fetchArray()
-            .recover([])
+            .child(couponId)
+            .exists()
     }
     
     func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>> {

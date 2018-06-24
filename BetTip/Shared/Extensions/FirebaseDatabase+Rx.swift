@@ -46,6 +46,21 @@ extension DatabaseQuery {
         }
     }
     
+    func hasChild(path: String) -> Observable<Bool> {
+        return Observable.create { observer in
+            let handle = self.observe(.value,
+                                      with: { snapshot in
+                                        observer.onNext(snapshot.hasChild(path))
+            },
+                                      withCancel: { _ in
+                                        observer.onLast(false)
+            })
+            return Disposables.create {
+                self.removeObserver(withHandle: handle)
+            }
+        }
+    }
+    
     func fetch<T: Mappable>(_: T.Type = T.self, event: DataEventType = .value)
         -> Observable<Result<T, FirebaseFetchError>> {
             return Observable.create { observer in

@@ -18,6 +18,7 @@ struct CouponModel: BaseModel {
     var won: Int?
     var tipster: String?
     var matches: [MatchModel]?
+    var users: [String] = []
     
     init() {}
     
@@ -27,7 +28,8 @@ struct CouponModel: BaseModel {
          odd: Double,
          won: Int,
          tipster: String,
-         matches: [MatchModel]) {
+         matches: [MatchModel],
+         users: [String] = []) {
         self.numOfCredit = numOfCredit
         self.startDate = startDate
         self.startTime = startTime
@@ -35,6 +37,7 @@ struct CouponModel: BaseModel {
         self.won = won
         self.tipster = tipster
         self.matches = matches
+        self.users = users
     }
 }
 
@@ -50,5 +53,6 @@ extension CouponModel: Mappable {
         won <- map["won"]
         tipster <- map["tipster"]
         matches <- map["matches"]
+        users <- map["users"]
     }
 }
