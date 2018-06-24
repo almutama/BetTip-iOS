@@ -70,11 +70,7 @@ class CouponCell: UICollectionViewCell, Reusable {
     
     func isCouponExistForUser(coupon: CouponModel) -> Observable<Bool> {
         return Observable.create { observer in
-            if let user = UserEventService.shared.user.value {
-                observer.onLast(coupon.users.contains(user.id))
-            } else {
-                observer.onLast(false)
-            }
+            observer.onLast(coupon.isCouponExistForUser())
             return Disposables.create()
         }
     }

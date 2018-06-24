@@ -109,6 +109,9 @@ internal enum StoryboardSegue {
   internal enum Admin: String, SegueType {
     case adminCouponDetailSegue
   }
+  internal enum Coupon: String, SegueType {
+    case couponDetailSegue
+  }
   internal enum Credit: String, SegueType {
     case buyCreditSegue
   }

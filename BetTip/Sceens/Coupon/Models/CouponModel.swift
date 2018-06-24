@@ -56,3 +56,13 @@ extension CouponModel: Mappable {
         users <- map["users"]
     }
 }
+
+extension CouponModel {
+    func isCouponExistForUser() -> Bool {
+        if let user = UserEventService.shared.user.value {
+            return self.users.contains(user.id)
+        } else {
+            return false
+        }
+    }
+}

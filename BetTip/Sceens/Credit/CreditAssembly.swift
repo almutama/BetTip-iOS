@@ -26,16 +26,10 @@ class CreditAssembly: Assembly {
         container.register(CreditsVMType.self) { r in
             CreditsVM(creditService: r.resolve(CreditServiceType.self)!)
         }
-        container.register(BuyCreditVMType.self) { r in
-            BuyCreditVM(couponService: r.resolve(CreditServiceType.self)!)
-        }
         
         // ViewControllers
         container.storyboardInitCompleted(CreditsVC.self) {r, c in
             c.viewModel = r.resolve(CreditsVMType.self)
-        }
-        container.storyboardInitCompleted(BuyCreditVC.self) {r, c in
-            c.viewModel = r.resolve(BuyCreditVMType.self)
         }
     }
 }

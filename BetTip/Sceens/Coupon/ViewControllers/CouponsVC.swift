@@ -66,16 +66,22 @@ class CouponsVC: BaseViewController {
             .disposed(by: disposeBag)
         
         self.collectionView.rx.modelSelected(CouponModel.self)
-            .flatMap { (coupon) -> Observable<Bool> in
-                return self.startBuyCoupon(coupon: coupon)
+            .flatMap { (coupon) -> Observable<CouponResult> in
+                if !coupon.isCouponExistForUser() {
+                    return self.startBuyCoupon(coupon: coupon)
+                }
+                return Observable.just(CouponResult(result: true, resultAction: .openCoupon(coupon: coupon)))
             }
             .subscribe(onNext: {result in
-                self.showNotification(result: result)
+                switch result.resultAction {
+                case .buyCoupon: self.showNotification(result: result.result)
+                case .openCoupon(let coupon): self.openUserCoupon(coupon: coupon)
+                }
             })
             .disposed(by: disposeBag)
     }
     
-    func startBuyCoupon(coupon: CouponModel) -> Observable<Bool> {
+    func startBuyCoupon(coupon: CouponModel) -> Observable<CouponResult> {
         return UIAlertController.rx
             .presented(
                 by: self,
@@ -93,18 +99,31 @@ class CouponsVC: BaseViewController {
                     return Observable.empty()
                 }
             }
-            .flatMap { [weak self] (result) -> Observable<Bool> in
+            .flatMap { [weak self] (result) -> Observable<CouponResult> in
                 guard let `self` = self else { return Observable.empty() }
                 switch result {
                 case .success(let coupon):
                     return self.viewModel.setUserCredit(coupon: coupon)
                 case .failure:
-                    return Observable.just(false)
+                    return Observable.just(CouponResult(result: false, resultAction: .buyCoupon))
                 }
         }
     }
     
     func openUserCoupon(coupon: CouponModel) {
-        
+        self.performSegue(withIdentifier: StoryboardSegue.Coupon.couponDetailSegue.rawValue,
+                          sender: coupon)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == StoryboardSegue.Coupon.couponDetailSegue.rawValue {
+            guard let coupon = sender as? CouponModel else {
+                return
+            }
+            guard let vc = segue.destination as? CouponDetailVC else {
+                return
+            }
+            vc.viewModel = CouponDetailVM(coupon: Variable(coupon))
+        }
     }
 }
