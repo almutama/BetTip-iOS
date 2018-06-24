@@ -8,11 +8,11 @@
 
 import UIKit
 import RxSwift
-import VegaScrollFlowLayout
+import RxCocoa
 
 class MyCouponDetailVC: BaseViewController {
     
-    var viewModel: MyCouponDetailVMType!
+    var viewModel: MyCouponDetailVM!
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -29,28 +29,18 @@ class MyCouponDetailVC: BaseViewController {
     
     func prepareUI() {
         self.navigationItem.title = "FIRSAT BAHİS"
-        let layout = VegaScrollFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
-        self.collectionView.registerCellNib(CreditCell.self)
+        self.collectionView.registerCellNib(MainMatchCell.self)
     }
     
-    func bindViewModel() {
-        self.viewModel
-            .getCredits()
+    func bindViewModel() {        
+        self.viewModel.getMatches()
             .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: CreditCell.reuseIdentifier,
-                                                   cellType: CreditCell.self)) { _, data, cell in
-                                                    cell.viewModel = Variable<CreditModel>(data)
+            .bind(to: self.collectionView.rx.items(cellIdentifier: MainMatchCell.reuseIdentifier,
+                                                      cellType: MainMatchCell.self)) { _, data, cell in
+                                                        cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
-    }
-}
-
-extension MyCouponDetailVC: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 100)
     }
 }

@@ -73,7 +73,7 @@ class ControlCreditsVC: BaseViewController {
                 }
             }
             .subscribe(onNext: {result in
-                self.show(result: result)
+                self.showNotification(result: result)
             })
             .disposed(by: disposeBag)
     }
@@ -81,7 +81,7 @@ class ControlCreditsVC: BaseViewController {
     func bindAlertView() {
         let setPlaceholder: (String?) -> (UITextField) -> Void = { placeholder in {
             $0.placeholder = placeholder
-            $0.keyboardType = .decimalPad
+            $0.keyboardType = .default
             }
         }
         
@@ -93,7 +93,8 @@ class ControlCreditsVC: BaseViewController {
                         title: L10n.Credit.title,
                         message: L10n.Credit.addCredit,
                         actions: [AlertAction.ok, AlertAction.cancel],
-                        textFields: [setPlaceholder(L10n.Credit.numberOfCredit),
+                        textFields: [setPlaceholder(L10n.Common.id),
+                                     setPlaceholder(L10n.Credit.numberOfCredit),
                                      setPlaceholder(L10n.Credit.price)]
                 )
             }
@@ -110,27 +111,34 @@ class ControlCreditsVC: BaseViewController {
     func addCredit(credit: CreditModel) {
         self.viewModel.addCredit(credit: credit) { result in
             if let result = result {
-                self.show(result: result)
+                self.showNotification(result: result)
             }
         }
     }
     
     func updateCredit() -> Observable<Bool> {
         guard let credit = self.selectedCredit.value,
+            let id = credit.id,
             let price = credit.price,
             let numberOfCredit = credit.numberOfCredits else {
             return Observable.empty()
         }
+        let setID: (String, String) -> (UITextField) -> Void = { placeholder, text in {
+            $0.placeholder = placeholder
+            $0.text = String(describing: text)
+            $0.keyboardType = .default
+            }
+        }
         let setNumOfCredits: (String, Int) -> (UITextField) -> Void = { placeholder, text in {
             $0.placeholder = placeholder
             $0.text = String(describing: text)
-            $0.keyboardType = .decimalPad
+            $0.keyboardType = .default
             }
         }
         let setPrice: (String, Double) -> (UITextField) -> Void = { placeholder, text in {
             $0.placeholder = placeholder
             $0.text = String(describing: text)
-            $0.keyboardType = .decimalPad
+            $0.keyboardType = .default
             }
         }
         return UIAlertController.rx
@@ -139,7 +147,8 @@ class ControlCreditsVC: BaseViewController {
                 title: L10n.Credit.title,
                 message: L10n.Credit.updateCredit,
                 actions: [AlertAction.ok, AlertAction.cancel],
-                textFields: [setNumOfCredits(L10n.Credit.numberOfCredit, numberOfCredit),
+                textFields: [setID(L10n.Common.id, id),
+                             setNumOfCredits(L10n.Credit.numberOfCredit, numberOfCredit),
                              setPrice(L10n.Credit.price, price)]
             ).flatMap { [weak self] (action, texts) -> Observable<Bool> in
                 guard let `self` = self else { return Observable.empty() }
@@ -159,36 +168,29 @@ class ControlCreditsVC: BaseViewController {
         return self.viewModel.deleteCredit(credit: credit)
     }
     
-    func show(result: Bool) {
-        if result {
-            LocalNotificationView.shared.showSuccess(L10n.Common.great, body: L10n.Common.Process.success)
-        } else {
-            LocalNotificationView.shared.showError(L10n.Common.sorry, body: L10n.Common.Process.error)
-        }
-    }
-    
     func convertTextsAsCredit(texts: [String?]?, withId id: String? = nil) -> CreditModel {
+        var creditID = ""
         var numberOfCredit = 0
         var price = 0.0
         texts?.enumerated().forEach {
             print("\($0.offset): \($0.element ?? "nil")")
             if $0.offset == 0 {
+                creditID = $0.element.map { value -> String in
+                    return String(value)
+                    }!
+            } else if $0.offset == 1 {
                 numberOfCredit = $0.element.map { value -> Int in
                     return Int(value) ?? 0
                 }!
             } else {
                 price = $0.element.map { value -> Double in
-                    print(value)
                     return Double(value) ?? 0.0
                 }!
             }
         }
-        var credit = CreditModel()
-        credit.numberOfCredits = numberOfCredit
-        credit.price = price
-        if let id = id {
-            credit.id = id
+        guard let id = id else {
+            return CreditModel(id: creditID, price: price, numberOfCredits: numberOfCredit)!
         }
-        return credit
+        return CreditModel(id: id, price: price, numberOfCredits: numberOfCredit)!
     }
 }

@@ -8,7 +8,6 @@
 
 import RxSwift
 import SwiftKeychainWrapper
-import Reactant
 import Result
 
 private let logger = Log.createLogger()

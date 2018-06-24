@@ -19,10 +19,11 @@ protocol UserServiceType {
     func userProfile(userId: String) -> Observable<Result<UserModel, FirebaseFetchError>>
     func userDisabled(userId: String) -> Observable<Bool>
     func userCredit(userId: String) -> Observable<Result<UserCreditModel, FirebaseFetchError>>
+    func userCoupons(userId: String) -> Observable<[CouponModel]>
     func setAccountDisabled(user: UserModel, disabled: Bool) -> Observable<Bool>
     func setAccountRole(user: UserModel, role: Role) -> Observable<Bool>
     func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>>
-    func setUserCredit(userId: String, numberOfCredits: Int) -> Observable<Result<UserCreditModel, FirebaseStoreError>>
+    func setUserCredit(userId: String, numberOfCredits: Int, creditAction: UserCreditAction) -> Observable<Result<UserCreditModel, FirebaseStoreError>>
 }
 
 class UserService: UserServiceType {
@@ -73,28 +74,38 @@ class UserService: UserServiceType {
             .fetch(UserCreditModel.self)
     }
     
+    func userCoupons(userId: String) -> Observable<[CouponModel]> {
+        return Database.database().reference()
+            .child(Constants.userCoupons)
+            .child(userId)
+            .fetchArray()
+            .recover([])
+    }
+    
     func setUserCreditFirstTime(userId: String) -> Observable<Result<UserCreditModel, FirebaseStoreError>> {
         return Database.database().reference()
             .child(Constants.userCredits)
-            .storeWithKey(UserCreditModel(currentCredit: 0, usedCredit: 0), forKey: userId)
+            .storeWithKey(UserCreditModel(id: userId, currentCredit: 0, usedCredit: 0), forKey: userId)
             .mapValue { $0.object }
             .mapError { error in .writeDenied(error) }
     }
     
-    func setUserCredit(userId: String, numberOfCredits: Int) -> Observable<Result<UserCreditModel, FirebaseStoreError>> {
+    func setUserCredit(userId: String, numberOfCredits: Int, creditAction: UserCreditAction) -> Observable<Result<UserCreditModel, FirebaseStoreError>> {
         return self.userCredit(userId: userId)
-            .flatMapLatest { credit -> Observable<Result<UserCreditModel, FirebaseStoreError>> in
+            .flatMapFirst { credit -> Observable<Result<UserCreditModel, FirebaseStoreError>> in
                 switch credit {
                 case .success(let userCredit):
                     guard let numOfCredit = userCredit.currentCredit,
                         let usedCredit = userCredit.usedCredit else {
                         return .just(.failure(FirebaseStoreError.serializeError))
                     }
+                    let updatedCredit = creditAction == .append ? numOfCredit+numberOfCredits : numOfCredit-numberOfCredits
+                    let updatedUsedCredit = creditAction == .append ? usedCredit : usedCredit+numberOfCredits
                     return Database.database().reference()
                         .child(Constants.userCredits)
-                        .child(userId)
-                        .storeObject(UserCreditModel(currentCredit: numOfCredit+numberOfCredits,
-                                                     usedCredit: usedCredit))
+                        .update(UserCreditModel(id: userId,
+                                                currentCredit: updatedCredit,
+                                                usedCredit: updatedUsedCredit))
                 case .failure(let error):
                     return .just(.failure(FirebaseStoreError.writeDenied(error)))
                 }

@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "cocoapods", '1.2.1'
+gem "cocoapods", '1.5.2'
 gem "cocoapods-keys"
 gem "fastlane"
 gem "slather"

@@ -23,7 +23,8 @@ class CouponAssembly: Assembly {
         
         // ViewModels
         container.register(CouponsVMType.self) { r in
-            CouponsVM(couponService: r.resolve(CouponServiceType.self)!)
+            CouponsVM(couponService: r.resolve(CouponServiceType.self)!,
+                      userService: r.resolve(UserServiceType.self)!)
         }
         
         // ViewControllers

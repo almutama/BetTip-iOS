@@ -8,7 +8,6 @@
 
 import UIKit
 import RxSwift
-import VegaScrollFlowLayout
 
 class MyCouponsVC: BaseViewController {
     
@@ -29,28 +28,38 @@ class MyCouponsVC: BaseViewController {
     
     func prepareUI() {
         self.navigationItem.title = "FIRSAT BAHİS"
-        let layout = VegaScrollFlowLayout()
-        layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 70)
         self.collectionView.collectionViewLayout =  layout
-        self.collectionView.registerCellNib(CreditCell.self)
+        self.collectionView.registerCellNib(CouponCell.self)
     }
     
     func bindViewModel() {
         self.viewModel
-            .getCredits()
+            .getCoupons()
             .asObservable()
-            .bind(to: self.collectionView.rx.items(cellIdentifier: CreditCell.reuseIdentifier,
-                                                   cellType: CreditCell.self)) { _, data, cell in
-                                                    cell.viewModel = Variable<CreditModel>(data)
+            .bind(to: self.collectionView.rx.items(cellIdentifier: CouponCell.reuseIdentifier,
+                                                   cellType: CouponCell.self)) { _, data, cell in
+                                                    cell.viewModel = Variable<CouponModel>(data)
             }.disposed(by: disposeBag)
+        
+        self.collectionView.rx.modelSelected(CouponModel.self)
+            .subscribe(onNext: {coupon in
+                self.performSegue(withIdentifier: StoryboardSegue.User.myCouponDetailSegue.rawValue,
+                                  sender: coupon)
+            })
+            .disposed(by: disposeBag)
     }
-}
-
-extension MyCouponsVC: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 100)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == StoryboardSegue.User.myCouponDetailSegue.rawValue {
+            guard let coupon = sender as? CouponModel else {
+                return
+            }
+            guard let vc = segue.destination as? MyCouponDetailVC else {
+                return
+            }
+            vc.viewModel = MyCouponDetailVM(coupon: Variable(coupon))
+        }
     }
 }

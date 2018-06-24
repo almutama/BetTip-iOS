@@ -27,6 +27,10 @@ class ControlCouponsVC: BaseViewController {
     }
     
     func prepareUI() {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 70)
+        self.collectionView.collectionViewLayout =  layout
+        self.collectionView.registerCellNib(CouponCell.self)
     }
     
     func bindViewModel() {

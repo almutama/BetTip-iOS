@@ -9,7 +9,6 @@
 import RxSwift
 import Firebase
 import FirebaseDatabase
-import Reactant
 import Result
 
 protocol CouponServiceType {
@@ -17,6 +16,7 @@ protocol CouponServiceType {
     func addCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>>
     func updateCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>>
     func deleteCoupon(coupon: CouponModel) -> Observable<Bool>
+    func buyCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>> 
 }
 
 class CouponService: CouponServiceType {
@@ -51,5 +51,28 @@ class CouponService: CouponServiceType {
         return Database.database().reference()
             .child(Constants.coupons)
             .deleteWithoutFailure(coupon)
+    }
+    
+    func buyCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>> {
+        guard let user = UserEventService.shared.user.value else {
+            return .just(.failure(FirebaseStoreError.serializeError))
+        }
+        guard let userCredit = user.userCredit?.currentCredit else {
+            return .just(.failure(FirebaseStoreError.serializeError))
+        }
+        guard let couponCredit = coupon.numOfCredit else {
+            return .just(.failure(FirebaseStoreError.serializeError))
+        }
+        if userCredit < couponCredit {
+            let title = L10n.Coupon.notEnoughTitle
+            let body = L10n.Coupon.notEnough
+            LocalNotificationView.shared.showError(title, body: body)
+            return .just(.failure(FirebaseStoreError.serializeError))
+        }
+        
+        return Database.database().reference()
+            .child(Constants.userCoupons)
+            .child(user.id)
+            .storeObject(coupon)
     }
 }

@@ -21,6 +21,8 @@
 "Common.Sure" = "Are you sure?";
 "Common.Process.Success" = "Process has been finished successfully.";
 "Common.Process.Error" = "Process couldn't be finished.";
+"Common.Buy" = "Buy";
+"Common.ID" = "Product ID, '.' '#' '$' '[' or ']'' don't use!";
 
 "Role.User" = "User";
 "Role.Moderator" = "Moderator";
@@ -63,6 +65,44 @@
 "User.Role.Disable" = "Disable User";
 "User.Role.ChangeRole" = "Change User's Role";
 "User.Role.Title" = "User Role";
+"User.Credit.Rest" = "Your rest of credit: ";
 
 "Match.Basketball" = "Basketball";
 "Match.Football" = "Football";
+
+"MatchForm.HeaderTitle" = "Please set all fields.";
+"MatchForm.FooterTitle" = "For coupons, you should set special field.";
+"MatchForm.HomeTeam" = "Home Team";
+"MatchForm.AwayTeam" = "Away Team";
+"MatchForm.Country" = "Country";
+"MatchForm.Bet" = "Bet";
+"MatchForm.Date" = "Date";
+"MatchForm.BetID" = "Bet ID";
+"MatchForm.League" = "League";
+"MatchForm.Odd" = "Odd";
+"MatchForm.WebSite" = "Web Site";
+"MatchForm.Status" = "Status";
+"MatchForm.Time" = "Time";
+"MatchForm.Tipster" = "Tipster";
+"MatchForm.Type" = "Type";
+"MatchForm.Won" = "Won";
+"MatchForm.isCoupon" = "Is it special?";
+"MatchForm.SaveMatch" = "SAVE MATCH";
+
+"MatchForm.HomeTeam.Placeholder" = "Barcelona";
+"MatchForm.AwayTeam.Placeholder" = "Real Madrid";
+"MatchForm.Country.Placeholder" = "spain";
+"MatchForm.Bet.Placeholder" = "MS-2";
+"MatchForm.BetID.Placeholder" = "740";
+"MatchForm.League.Placeholder" = "ESP";
+"MatchForm.Odd.Placeholder" = "1.77";
+"MatchForm.WebSite.Placeholder" = "BetMe";
+"MatchForm.Status.Placeholder" = "0";
+"MatchForm.Tipster.Placeholder" = "mustafa@gmail.com";
+"MatchForm.MatchType.Placeholder" = "1 or 2";
+"MatchForm.Won.Placeholder" = "0 or 1";
+
+"Coupon.Title" = "Coupon";
+"Coupon.BuyCoupon" = " credits will be transfered from your wallet.";
+"Coupon.NotEnoughTitle" = "Credit Not Enough";
+"Coupon.NotEnough" = "Your credit is not enough to buy this coupon.";

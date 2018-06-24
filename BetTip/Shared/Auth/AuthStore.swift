@@ -9,7 +9,6 @@
 import RxSwift
 import SwiftKeychainWrapper
 import ObjectMapper
-import Reactant
 
 enum Authorization {
     case authenticated(UserModel)

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="MatchCell" customModule="BetTip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eI-XM-WV3">
+                        <rect key="frame" x="0.0" y="17" width="375" height="70"/>
+                        <color key="backgroundColor" red="0.4431372549" green="0.47843137250000001" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgd-FP-nep" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                        <rect key="frame" x="5" y="2" width="19" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="3LC-xR-cxq"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="7j7-Tr-dDq"/>
+                            <constraint firstAttribute="height" constant="21" id="8JI-te-N0m"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="35" id="B8L-sC-DLe"/>
+                            <constraint firstAttribute="height" constant="21" id="clv-SZ-dXR"/>
+                            <constraint firstAttribute="height" constant="15" id="gNi-J9-Tcb"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="hH8-WF-Cjx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3LC-xR-cxq"/>
+                                <exclude reference="7j7-Tr-dDq"/>
+                                <exclude reference="8JI-te-N0m"/>
+                                <exclude reference="B8L-sC-DLe"/>
+                                <exclude reference="clv-SZ-dXR"/>
+                                <exclude reference="hH8-WF-Cjx"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="B8L-sC-DLe"/>
+                                <exclude reference="clv-SZ-dXR"/>
+                                <include reference="hH8-WF-Cjx"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="433" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eav-1i-sGn" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                        <rect key="frame" x="27" y="2" width="18.5" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="odB-aZ-gyv"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="oe0-HV-YBW"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="rM9-gH-dNf"/>
+                            <constraint firstAttribute="height" constant="15" id="x9S-XS-p0Z"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="odB-aZ-gyv"/>
+                                <exclude reference="oe0-HV-YBW"/>
+                                <exclude reference="rM9-gH-dNf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="oe0-HV-YBW"/>
+                                <include reference="rM9-gH-dNf"/>
+                                <exclude reference="x9S-XS-p0Z"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u51-wQ-6Hx">
+                        <rect key="frame" x="0.0" y="17" width="60" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23.09.2016" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyw-fj-NGH" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="5" y="3" width="55" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="4SI-xY-qOe"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="KBa-IP-ptc"/>
+                                    <constraint firstAttribute="height" constant="21" id="NxB-x0-p97"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="arH-rT-fbr"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="eXT-yV-KdP"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="35" id="nQX-mv-zPv"/>
+                                    <constraint firstAttribute="height" constant="15" id="yxX-m3-6kO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4SI-xY-qOe"/>
+                                        <exclude reference="KBa-IP-ptc"/>
+                                        <exclude reference="NxB-x0-p97"/>
+                                        <exclude reference="arH-rT-fbr"/>
+                                        <exclude reference="eXT-yV-KdP"/>
+                                        <exclude reference="nQX-mv-zPv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="4SI-xY-qOe"/>
+                                        <include reference="KBa-IP-ptc"/>
+                                        <exclude reference="arH-rT-fbr"/>
+                                        <exclude reference="eXT-yV-KdP"/>
+                                        <include reference="nQX-mv-zPv"/>
+                                        <exclude reference="yxX-m3-6kO"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2U-Aj-G73" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="5" y="18" width="55" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="CnI-mN-Xls"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="Eke-Nc-BkP"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Fjp-bu-6Jm"/>
+                                    <constraint firstAttribute="height" constant="21" id="YtR-Mh-4fb"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Zvt-s1-uhJ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="35" id="fhD-TI-hwD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="iaL-ZP-vVw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Eke-Nc-BkP"/>
+                                        <exclude reference="Fjp-bu-6Jm"/>
+                                        <exclude reference="YtR-Mh-4fb"/>
+                                        <exclude reference="Zvt-s1-uhJ"/>
+                                        <exclude reference="fhD-TI-hwD"/>
+                                        <exclude reference="iaL-ZP-vVw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="CnI-mN-Xls"/>
+                                        <exclude reference="Eke-Nc-BkP"/>
+                                        <include reference="Fjp-bu-6Jm"/>
+                                        <include reference="Zvt-s1-uhJ"/>
+                                        <include reference="fhD-TI-hwD"/>
+                                        <exclude reference="iaL-ZP-vVw"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="881-Oq-TYy" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="5" y="46" width="53" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4Yg-Gg-4KI"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="35" id="JtG-a1-pob"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="MdS-Hu-bpC"/>
+                                    <constraint firstAttribute="height" constant="21" id="R4q-Jq-Sdk"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="ZqR-WY-N5L"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="mJc-U2-IS4"/>
+                                    <constraint firstAttribute="height" constant="21" id="nTe-rI-Hm8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4Yg-Gg-4KI"/>
+                                        <exclude reference="JtG-a1-pob"/>
+                                        <exclude reference="MdS-Hu-bpC"/>
+                                        <exclude reference="ZqR-WY-N5L"/>
+                                        <exclude reference="mJc-U2-IS4"/>
+                                        <exclude reference="nTe-rI-Hm8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="4Yg-Gg-4KI"/>
+                                        <include reference="JtG-a1-pob"/>
+                                        <include reference="MdS-Hu-bpC"/>
+                                        <exclude reference="R4q-Jq-Sdk"/>
+                                        <exclude reference="ZqR-WY-N5L"/>
+                                        <include reference="mJc-U2-IS4"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215690000001" green="0.12549019610000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J2U-Aj-G73" secondAttribute="trailing" id="BJ7-a2-3tI"/>
+                            <constraint firstAttribute="trailing" secondItem="881-Oq-TYy" secondAttribute="trailing" constant="2" id="Jwa-ur-FaY"/>
+                            <constraint firstItem="881-Oq-TYy" firstAttribute="leading" secondItem="u51-wQ-6Hx" secondAttribute="leading" constant="3" id="Lof-mU-V4P"/>
+                            <constraint firstItem="qyw-fj-NGH" firstAttribute="top" secondItem="u51-wQ-6Hx" secondAttribute="top" constant="3" id="MgM-6H-bG8"/>
+                            <constraint firstAttribute="trailing" secondItem="qyw-fj-NGH" secondAttribute="trailing" id="QE3-5E-ih9"/>
+                            <constraint firstAttribute="width" constant="60" id="cZS-6Z-HDt"/>
+                            <constraint firstItem="881-Oq-TYy" firstAttribute="leading" secondItem="u51-wQ-6Hx" secondAttribute="leading" constant="5" id="e5q-UP-ZZr"/>
+                            <constraint firstItem="J2U-Aj-G73" firstAttribute="top" secondItem="qyw-fj-NGH" secondAttribute="bottom" id="llS-c5-pDX"/>
+                            <constraint firstItem="J2U-Aj-G73" firstAttribute="leading" secondItem="u51-wQ-6Hx" secondAttribute="leading" constant="5" id="odt-d2-2J8"/>
+                            <constraint firstAttribute="bottom" secondItem="881-Oq-TYy" secondAttribute="bottom" constant="3" id="qw0-me-6FB"/>
+                            <constraint firstItem="881-Oq-TYy" firstAttribute="top" secondItem="J2U-Aj-G73" secondAttribute="bottom" constant="8" id="uDR-8h-Rmo"/>
+                            <constraint firstItem="qyw-fj-NGH" firstAttribute="leading" secondItem="u51-wQ-6Hx" secondAttribute="leading" constant="5" id="weM-li-t9C"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Lof-mU-V4P"/>
+                                <exclude reference="uDR-8h-Rmo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjD-3o-P5K">
+                        <rect key="frame" x="62" y="17" width="313" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galatasaray" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="YTL-OH-HtL" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="8" y="25" width="86" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="MZJ-zc-XLP"/>
+                                    <constraint firstAttribute="height" constant="21" id="WQ8-N5-ksX"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="dWF-fj-Llk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="o8z-5l-VL6"/>
+                                    <constraint firstAttribute="height" constant="21" id="wVP-oH-zAr">
+                                        <variation key="widthClass=regular" constant="35"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MZJ-zc-XLP"/>
+                                        <exclude reference="WQ8-N5-ksX"/>
+                                        <exclude reference="dWF-fj-Llk"/>
+                                        <exclude reference="o8z-5l-VL6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                    <mask key="constraints">
+                                        <include reference="MZJ-zc-XLP"/>
+                                        <include reference="dWF-fj-Llk"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fenerbahçe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="RsU-3m-rbu" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="195" y="25" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="9w0-Hn-C5m"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="GvJ-HA-b31"/>
+                                    <constraint firstAttribute="height" constant="21" id="fRl-GM-y5V"/>
+                                    <constraint firstAttribute="height" constant="21" id="vUA-LF-cBC">
+                                        <variation key="widthClass=regular" constant="35"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9w0-Hn-C5m"/>
+                                        <exclude reference="GvJ-HA-b31"/>
+                                        <exclude reference="fRl-GM-y5V"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                    <mask key="constraints">
+                                        <include reference="9w0-Hn-C5m"/>
+                                        <include reference="GvJ-HA-b31"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pf3-6p-qvv">
+                                <rect key="frame" x="283" y="23" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="M5o-gO-PsX"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Pkl-wa-SJS"/>
+                                    <constraint firstAttribute="height" constant="25" id="V7n-Qk-1VS">
+                                        <variation key="widthClass=regular" constant="40"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="25" id="Yf4-Je-17M">
+                                        <variation key="widthClass=regular" constant="40"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M5o-gO-PsX"/>
+                                        <exclude reference="Pkl-wa-SJS"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="versus" translatesAutoresizingMaskIntoConstraints="NO" id="bf1-kV-WY6">
+                                <rect key="frame" x="102" y="5.5" width="85" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="Z52-hZ-uOp"/>
+                                    <constraint firstAttribute="height" constant="60" id="be7-7Q-6DU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MS-1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="ggL-l1-dGJ" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="127" y="5.5" width="35.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9w3-68-NTg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="GvD-Xk-Egw"/>
+                                    <constraint firstAttribute="height" constant="21" id="SKJ-Lw-gr5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="fMq-8W-bR6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="mjA-jm-BJN"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="w3P-li-pkG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GvD-Xk-Egw"/>
+                                        <exclude reference="SKJ-Lw-gr5"/>
+                                        <exclude reference="fMq-8W-bR6"/>
+                                        <exclude reference="mjA-jm-BJN"/>
+                                        <exclude reference="w3P-li-pkG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="9w3-68-NTg"/>
+                                        <include reference="mjA-jm-BJN"/>
+                                        <include reference="w3P-li-pkG"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW5-gz-iO5" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                <rect key="frame" x="133" y="39.5" width="23.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="HZi-Pi-Gts"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Hky-2T-CDf"/>
+                                    <constraint firstAttribute="height" constant="21" id="fO0-x0-22k"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="heC-0o-ie1"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="l7F-Ug-r2D"/>
+                                    <constraint firstAttribute="height" constant="21" id="zrt-QQ-wCx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HZi-Pi-Gts"/>
+                                        <exclude reference="Hky-2T-CDf"/>
+                                        <exclude reference="fO0-x0-22k"/>
+                                        <exclude reference="heC-0o-ie1"/>
+                                        <exclude reference="l7F-Ug-r2D"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="HZi-Pi-Gts"/>
+                                        <include reference="l7F-Ug-r2D"/>
+                                        <exclude reference="zrt-QQ-wCx"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215690000001" green="0.12549019610000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pf3-6p-qvv" firstAttribute="leading" secondItem="RsU-3m-rbu" secondAttribute="trailing" constant="3" id="17x-Rz-1ln"/>
+                            <constraint firstItem="YTL-OH-HtL" firstAttribute="top" secondItem="DjD-3o-P5K" secondAttribute="top" constant="42" id="1Fr-Rs-6Z0"/>
+                            <constraint firstAttribute="bottom" secondItem="dW5-gz-iO5" secondAttribute="bottom" constant="18" id="8dF-ZL-gKU"/>
+                            <constraint firstItem="bf1-kV-WY6" firstAttribute="centerX" secondItem="DjD-3o-P5K" secondAttribute="centerX" constant="-12" id="8nK-nc-Jl6"/>
+                            <constraint firstItem="pf3-6p-qvv" firstAttribute="centerY" secondItem="DjD-3o-P5K" secondAttribute="centerY" id="Fx5-L4-9Df"/>
+                            <constraint firstAttribute="trailing" secondItem="RsU-3m-rbu" secondAttribute="trailing" constant="8" id="HRe-OF-AWF"/>
+                            <constraint firstItem="RsU-3m-rbu" firstAttribute="leading" secondItem="bf1-kV-WY6" secondAttribute="trailing" constant="8" id="IZt-a3-hqI"/>
+                            <constraint firstAttribute="trailing" secondItem="pf3-6p-qvv" secondAttribute="trailing" constant="5" id="KSt-uU-8fx"/>
+                            <constraint firstItem="dW5-gz-iO5" firstAttribute="bottom" secondItem="bf1-kV-WY6" secondAttribute="bottom" constant="-5" id="MQ0-FB-XHU"/>
+                            <constraint firstItem="YTL-OH-HtL" firstAttribute="centerY" secondItem="DjD-3o-P5K" secondAttribute="centerY" id="QbV-0B-p6O"/>
+                            <constraint firstItem="YTL-OH-HtL" firstAttribute="leading" secondItem="DjD-3o-P5K" secondAttribute="leading" constant="8" id="RaF-pD-MYh"/>
+                            <constraint firstAttribute="bottom" secondItem="pf3-6p-qvv" secondAttribute="bottom" constant="40" id="RcD-H5-8CU"/>
+                            <constraint firstItem="bf1-kV-WY6" firstAttribute="centerX" secondItem="DjD-3o-P5K" secondAttribute="centerX" id="TbK-di-bJb"/>
+                            <constraint firstItem="dW5-gz-iO5" firstAttribute="bottom" secondItem="bf1-kV-WY6" secondAttribute="bottom" id="XOh-sc-a3L"/>
+                            <constraint firstItem="ggL-l1-dGJ" firstAttribute="centerX" secondItem="bf1-kV-WY6" secondAttribute="centerX" id="XaM-9a-W1L"/>
+                            <constraint firstAttribute="bottom" secondItem="RsU-3m-rbu" secondAttribute="bottom" constant="42" id="dPM-DY-PYf"/>
+                            <constraint firstItem="dW5-gz-iO5" firstAttribute="centerX" secondItem="bf1-kV-WY6" secondAttribute="centerX" id="dbd-yf-4b3"/>
+                            <constraint firstItem="bf1-kV-WY6" firstAttribute="leading" secondItem="YTL-OH-HtL" secondAttribute="trailing" constant="8" id="fCJ-TM-6YU"/>
+                            <constraint firstItem="ggL-l1-dGJ" firstAttribute="centerX" secondItem="DjD-3o-P5K" secondAttribute="centerX" id="g5r-yv-up2"/>
+                            <constraint firstItem="pf3-6p-qvv" firstAttribute="top" secondItem="DjD-3o-P5K" secondAttribute="top" constant="40" id="gVh-VI-Shx"/>
+                            <constraint firstItem="dW5-gz-iO5" firstAttribute="centerX" secondItem="DjD-3o-P5K" secondAttribute="centerX" id="iTR-VG-E9p"/>
+                            <constraint firstItem="RsU-3m-rbu" firstAttribute="top" secondItem="DjD-3o-P5K" secondAttribute="top" constant="42" id="iUy-vX-J9D"/>
+                            <constraint firstItem="pf3-6p-qvv" firstAttribute="centerX" secondItem="DjD-3o-P5K" secondAttribute="centerX" id="kY7-Fd-iTc"/>
+                            <constraint firstItem="bf1-kV-WY6" firstAttribute="centerY" secondItem="DjD-3o-P5K" secondAttribute="centerY" id="kgB-HM-EYU"/>
+                            <constraint firstItem="ggL-l1-dGJ" firstAttribute="top" secondItem="DjD-3o-P5K" secondAttribute="top" constant="8" id="r7D-nB-yTj"/>
+                            <constraint firstItem="RsU-3m-rbu" firstAttribute="centerY" secondItem="DjD-3o-P5K" secondAttribute="centerY" id="uDV-TY-YW9"/>
+                            <constraint firstItem="RsU-3m-rbu" firstAttribute="centerX" secondItem="DjD-3o-P5K" secondAttribute="centerX" id="uv4-aV-m7t"/>
+                            <constraint firstItem="ggL-l1-dGJ" firstAttribute="top" secondItem="bf1-kV-WY6" secondAttribute="top" id="y3F-26-YUv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1Fr-Rs-6Z0"/>
+                                <exclude reference="TbK-di-bJb"/>
+                                <exclude reference="g5r-yv-up2"/>
+                                <exclude reference="r7D-nB-yTj"/>
+                                <exclude reference="8dF-ZL-gKU"/>
+                                <exclude reference="XOh-sc-a3L"/>
+                                <exclude reference="iTR-VG-E9p"/>
+                                <exclude reference="HRe-OF-AWF"/>
+                                <exclude reference="dPM-DY-PYf"/>
+                                <exclude reference="iUy-vX-J9D"/>
+                                <exclude reference="uv4-aV-m7t"/>
+                                <exclude reference="RcD-H5-8CU"/>
+                                <exclude reference="gVh-VI-Shx"/>
+                                <exclude reference="kY7-Fd-iTc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.078431372549019607" green="0.094117647058823528" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="DjD-3o-P5K" secondAttribute="trailing" id="0Zd-gl-WSh"/>
+                    <constraint firstItem="Eav-1i-sGn" firstAttribute="leading" secondItem="sgd-FP-nep" secondAttribute="trailing" constant="3" id="97s-PV-Th0"/>
+                    <constraint firstItem="u51-wQ-6Hx" firstAttribute="top" secondItem="Eav-1i-sGn" secondAttribute="bottom" id="Bma-P6-UP0"/>
+                    <constraint firstItem="DjD-3o-P5K" firstAttribute="bottom" secondItem="u51-wQ-6Hx" secondAttribute="bottom" id="Dw1-v2-DfU"/>
+                    <constraint firstItem="7eI-XM-WV3" firstAttribute="top" secondItem="sgd-FP-nep" secondAttribute="bottom" id="FXX-3F-PRP"/>
+                    <constraint firstItem="sgd-FP-nep" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Gb8-Vh-e98"/>
+                    <constraint firstItem="Eav-1i-sGn" firstAttribute="leading" secondItem="sgd-FP-nep" secondAttribute="trailing" constant="3" id="KOR-Bl-3j2"/>
+                    <constraint firstItem="DjD-3o-P5K" firstAttribute="trailing" secondItem="7eI-XM-WV3" secondAttribute="trailing" id="L8z-WT-zNt"/>
+                    <constraint firstItem="sgd-FP-nep" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="MSf-U8-mk6"/>
+                    <constraint firstAttribute="bottom" secondItem="7eI-XM-WV3" secondAttribute="bottom" constant="2.5" id="U1A-PG-s6W"/>
+                    <constraint firstItem="7eI-XM-WV3" firstAttribute="bottom" secondItem="u51-wQ-6Hx" secondAttribute="bottom" id="VyL-aC-q2C"/>
+                    <constraint firstAttribute="bottom" secondItem="u51-wQ-6Hx" secondAttribute="bottom" constant="2.5" id="bCL-tw-JgI"/>
+                    <constraint firstItem="7eI-XM-WV3" firstAttribute="top" secondItem="sgd-FP-nep" secondAttribute="bottom" id="gM8-ui-T3L"/>
+                    <constraint firstItem="DjD-3o-P5K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="jMR-wF-DK8"/>
+                    <constraint firstItem="u51-wQ-6Hx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="myN-iD-Uuv"/>
+                    <constraint firstItem="DjD-3o-P5K" firstAttribute="leading" secondItem="u51-wQ-6Hx" secondAttribute="trailing" constant="2" id="oC6-Ts-cKj"/>
+                    <constraint firstItem="7eI-XM-WV3" firstAttribute="leading" secondItem="u51-wQ-6Hx" secondAttribute="leading" id="od6-WK-zNe"/>
+                    <constraint firstItem="7eI-XM-WV3" firstAttribute="top" secondItem="sgd-FP-nep" secondAttribute="bottom" id="p9K-MQ-dJf"/>
+                    <constraint firstItem="7eI-XM-WV3" firstAttribute="top" secondItem="sgd-FP-nep" secondAttribute="bottom" id="rEL-1e-fgn"/>
+                    <constraint firstItem="u51-wQ-6Hx" firstAttribute="top" secondItem="sgd-FP-nep" secondAttribute="bottom" id="sUU-sM-VDa"/>
+                    <constraint firstItem="u51-wQ-6Hx" firstAttribute="top" secondItem="sgd-FP-nep" secondAttribute="bottom" id="tMP-yt-V68"/>
+                    <constraint firstAttribute="bottom" secondItem="DjD-3o-P5K" secondAttribute="bottom" constant="2.5" id="w8R-N1-XVl"/>
+                    <constraint firstItem="DjD-3o-P5K" firstAttribute="leading" secondItem="u51-wQ-6Hx" secondAttribute="trailing" constant="2" id="wdl-CI-a3K"/>
+                    <constraint firstItem="7eI-XM-WV3" firstAttribute="top" secondItem="u51-wQ-6Hx" secondAttribute="top" id="xay-ZS-hwg"/>
+                    <constraint firstItem="DjD-3o-P5K" firstAttribute="top" secondItem="u51-wQ-6Hx" secondAttribute="top" id="ypQ-AM-ykI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="awayLbl" destination="RsU-3m-rbu" id="1bh-Ba-pbU"/>
+                <outlet property="betLbl" destination="ggL-l1-dGJ" id="mWM-d0-yXG"/>
+                <outlet property="dateLbl" destination="qyw-fj-NGH" id="GpN-Kl-NyD"/>
+                <outlet property="homeLbl" destination="YTL-OH-HtL" id="7QS-E0-znv"/>
+                <outlet property="iddaaIdLbl" destination="Eav-1i-sGn" id="MX3-Aa-a5O"/>
+                <outlet property="leagueLbl" destination="sgd-FP-nep" id="C9G-qx-NfR"/>
+                <outlet property="oddLbl" destination="dW5-gz-iO5" id="HCj-1R-z6j"/>
+                <outlet property="siteLbl" destination="881-Oq-TYy" id="yTh-4y-A3a"/>
+                <outlet property="statusImg" destination="pf3-6p-qvv" id="e3A-Vk-sCV"/>
+                <outlet property="timeLbl" destination="J2U-Aj-G73" id="yI3-RA-xU3"/>
+            </connections>
+            <point key="canvasLocation" x="6.5" y="58"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="versus" width="64" height="64"/>
+    </resources>
+</document>

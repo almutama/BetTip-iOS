@@ -22,3 +22,23 @@ struct DebugDetector {
         #endif
     }
 }
+
+@objc class DebugStates: NSObject {
+    private static var _subscription = false
+    
+    static func setSubscription(_ enabled: Bool) {
+        _subscription = enabled
+    }
+    
+    static func subscription() -> Bool {
+        return isDebug && _subscription
+    }
+    
+    static var isDebug: Bool {
+        #if DEBUG
+        return true
+        #else
+        return false
+        #endif
+    }
+}

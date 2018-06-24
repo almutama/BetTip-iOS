@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import ObjectMapper
 
 class AddCouponVC: BaseViewController {
     
@@ -38,6 +39,12 @@ class AddCouponVC: BaseViewController {
     }
     
     func bindViewModel() {
+        let setPlaceholder: (String?) -> (UITextField) -> Void = { placeholder in {
+            $0.placeholder = placeholder
+            $0.keyboardType = .decimalPad
+            }
+        }
+        
         self.bindAnimateWith(variable: self.isLoading)
             .disposed(by: disposeBag)
         
@@ -87,8 +94,12 @@ class AddCouponVC: BaseViewController {
         self.tableView.rx.modelDeselected(MatchModel.self)
             .subscribe(onNext: { [weak self] match in
                 guard let strongSelf = self else { return }
-                print("deleted match: ", match.iddaaId!)
-                print(strongSelf.selectedMatches.value.filter { $0 !== match })
+                let newList = strongSelf.selectedMatches.value.filter { value in
+                    return !(value.iddaaId ==? match.iddaaId &&
+                        value.bet ==? match.bet &&
+                        value.odd ==? match.odd)
+                }
+                strongSelf.selectedMatches.value = newList
                 
             })
             .disposed(by: disposeBag)
@@ -97,16 +108,29 @@ class AddCouponVC: BaseViewController {
             .subscribe(onNext: {[weak self] (_) in
                 guard let strongSelf = self else { return }
                 let selectedCount = strongSelf.selectedMatches.value.count
-                print(selectedCount)
                 strongSelf.saveCouponButton.isEnabled = strongSelf.selectedMatches.value.isEmpty ? false : true
                 strongSelf.saveCouponButton.alpha = selectedCount > 0 ? 1.0 : 0.5
             }).disposed(by: disposeBag)
         
         self.saveCouponButton.rx.tap
-            .subscribe(onNext: {[weak self] (_) in
-                guard let strongSelf = self else { return }
-                print(strongSelf.selectedMatches.value)
-            }).disposed(by: disposeBag)
+            .flatMap { [unowned self] in
+                UIAlertController.rx
+                    .presented(
+                        by: self,
+                        title: L10n.Credit.title,
+                        message: L10n.Credit.addCredit,
+                        actions: [AlertAction.ok, AlertAction.cancel],
+                        textFields: [setPlaceholder(L10n.Credit.numberOfCredit)]
+                )
+            }
+            .subscribe(onNext: { action, texts in
+                switch action {
+                case .ok:
+                    self.addCoupon(coupon: self.makeCoupon(texts: texts))
+                case .cancel: break
+                }
+            })
+            .disposed(by: disposeBag)
     }
     
     func getMatchesWithType(type: MatchAction) {
@@ -118,24 +142,42 @@ class AddCouponVC: BaseViewController {
         self.viewModel.getMatchesWithType(type: type)
     }
     
-    func makeCoupon(numOfCredit: Int) -> CouponModel {
+    func makeCoupon(texts: [String?]?) -> CouponModel {
+        var numberOfCredit = 0
+        texts?.enumerated().forEach {
+            numberOfCredit = $0.element.map { value -> Int in
+                return Int(value) ?? 0
+                }!
+        }
         var odd: Double = 1.0
         for match in self.selectedMatches.value {
             if let matchOdd = match.odd {
                 odd = matchOdd * odd
             }
         }
-        var coupon = CouponModel()
-        coupon.numOfCredit = numOfCredit
-        coupon.startDate = Date().dateWithFormat()
-        coupon.odd = odd
-        coupon.won = -1
-        coupon.tipster = UserEventService.shared.user.value?.email ?? ""
-        coupon.matches = selectedMatches.value
-        return coupon
+        
+        let startDate: Date = self.selectedMatches.value
+            .map { $0.date! + " " + $0.time! }
+            .getFirstDateFromArray(with: "dd.MM.yyyy HH:mm")
+        let roundedOdd: Double = odd.roundTo(places: 2)
+        let tipster: String = UserEventService.shared.user.value?.email ?? ""
+        let matches: Array = selectedMatches.value
+        
+        return CouponModel(numOfCredit: numberOfCredit,
+                           startDate: startDate.dateWithFormat(dateFormat: "dd.MM.yyyy"),
+                           startTime: startDate.dateWithFormat(dateFormat: "HH:mm"),
+                           odd: roundedOdd,
+                           won: -1,
+                           tipster: tipster,
+                           matches: matches)!
     }
     
-    func saveCoupon() {
-        
+    func addCoupon(coupon: CouponModel) {
+        self.viewModel.addCoupon(coupon: coupon) { result in
+            if let result = result {
+                self.showNotification(result: result)
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }

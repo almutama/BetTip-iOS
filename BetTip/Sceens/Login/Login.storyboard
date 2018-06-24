@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2C-VJ-hqa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2C-VJ-hqa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Courier.ttc">
-            <string>Courier-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="oit-0b-3EU">
@@ -52,7 +47,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehj-bU-rtw" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="547" width="375" height="60"/>
-                                <color key="backgroundColor" name="Secondary"/>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="Login using demo account"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="57A-fp-SSR"/>
@@ -76,7 +71,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="SIGN UP">
-                                    <color key="titleColor" name="Secondary"/>
+                                    <color key="titleColor" red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="OYf-WY-X7v" kind="show" identifier="registerSegue" id="aOV-7J-OkM"/>
@@ -89,7 +84,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="Background"/>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bam-Cd-yEr" firstAttribute="centerXWithinMargins" secondItem="WJC-tw-cDH" secondAttribute="centerX" id="ALo-s2-Yr5"/>
@@ -136,7 +131,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-Hn-uGc" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" name="GeneralText"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -149,12 +144,12 @@
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h1H-6F-JbR" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
-                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <color key="backgroundColor" red="0.25098039215686274" green="0.31372549019607843" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="email"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="B1b-W6-rMB"/>
                                                         </constraints>
-                                                        <color key="textColor" name="GeneralText"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
                                                     </textField>
@@ -172,7 +167,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-xZ-yzc" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" name="GeneralText"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -185,12 +180,12 @@
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WKL-ND-wMR" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
-                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <color key="backgroundColor" red="0.25098039215686274" green="0.31372549019607843" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="password"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="KF3-ad-XrQ"/>
                                                         </constraints>
-                                                        <color key="textColor" name="GeneralText"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="join" secureTextEntry="YES"/>
                                                     </textField>
@@ -213,12 +208,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-Xj-yXl" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="109" y="188.5" width="157" height="30"/>
                                 <state key="normal" title="Forgot your password?">
-                                    <color key="titleColor" name="GeneralText"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Son-39-5ke" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
-                                <color key="backgroundColor" name="Secondary"/>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="login">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -231,7 +226,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" name="Background"/>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ziH-Xj-yXl" firstAttribute="centerX" secondItem="zgY-t2-Gp0" secondAttribute="centerX" id="17w-MR-tdv"/>
                             <constraint firstItem="Mlb-S5-1H0" firstAttribute="top" secondItem="zgY-t2-Gp0" secondAttribute="top" constant="23.5" id="HsH-2o-FyD"/>
@@ -278,7 +273,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsD-c2-Emf" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" name="GeneralText"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -291,12 +286,12 @@
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lxW-5p-YLu" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
-                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <color key="backgroundColor" red="0.25098039215686274" green="0.31372549019607843" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="password"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="TFO-Qy-WU6"/>
                                                         </constraints>
-                                                        <color key="textColor" name="GeneralText"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="send"/>
                                                     </textField>
@@ -311,7 +306,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email address below to receive your password reset instructions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qK-UB-SEt" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" name="GeneralText"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -337,7 +332,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZr-so-0Re" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
-                                <color key="backgroundColor" name="Secondary"/>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="login">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -350,7 +345,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" name="Background"/>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aQd-du-MsG" firstAttribute="trailing" secondItem="nZr-so-0Re" secondAttribute="trailing" id="20N-1k-HNI"/>
                             <constraint firstItem="aQd-du-MsG" firstAttribute="trailing" secondItem="1oU-fD-tBU" secondAttribute="trailing" id="Dvh-T8-JS5"/>
@@ -392,7 +387,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-ht-9oY" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" name="GeneralText"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -405,12 +400,12 @@
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vQI-U9-fvp" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
-                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <color key="backgroundColor" red="0.25098039215686274" green="0.31372549019607843" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="Email"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="eJK-Gb-vZe"/>
                                                         </constraints>
-                                                        <color key="textColor" name="GeneralText"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
                                                     </textField>
@@ -428,7 +423,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oi-6y-iJb" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" name="GeneralText"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -441,12 +436,12 @@
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l09-bf-s11" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
-                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <color key="backgroundColor" red="0.25098039215686274" green="0.31372549019607843" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="Password"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="oHd-IF-BxB"/>
                                                         </constraints>
-                                                        <color key="textColor" name="GeneralText"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
                                                     </textField>
@@ -464,7 +459,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNW-Nf-6gm" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="18.5" width="80" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" name="GeneralText"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -477,12 +472,12 @@
                                                     </view>
                                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fUr-ik-W8m" customClass="StyledTextField" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="100" y="0.0" width="275" height="60"/>
-                                                        <color key="backgroundColor" name="Complimentary"/>
+                                                        <color key="backgroundColor" red="0.25098039215686274" green="0.31372549019607843" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="Confirm Password"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="BFZ-eh-rlC"/>
                                                         </constraints>
-                                                        <color key="textColor" name="GeneralText"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
                                                     </textField>
@@ -497,7 +492,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Reqired fields" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7E-v1-NK9" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="16" width="116.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                        <color key="textColor" name="GeneralText"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -521,7 +516,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE7-oN-QVu" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
-                                <color key="backgroundColor" name="Secondary"/>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="login">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -534,7 +529,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" name="Background"/>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fcw-1t-mLA" firstAttribute="trailing" secondItem="Mwe-mR-W5v" secondAttribute="trailing" id="YWV-0z-pAk"/>
                             <constraint firstItem="Mwe-mR-W5v" firstAttribute="top" secondItem="fcw-1t-mLA" secondAttribute="top" constant="23.5" id="oix-kr-ag2"/>
@@ -559,17 +554,5 @@
     </scenes>
     <resources>
         <image name="logo_tr" width="400" height="400"/>
-        <namedColor name="Background">
-            <color red="0.17254901960784313" green="0.22352941176470589" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Complimentary">
-            <color red="0.25098039215686274" green="0.31372549019607843" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GeneralText">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Secondary">
-            <color red="0.2627450980392157" green="0.85882352941176465" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

@@ -9,12 +9,12 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import VegaScrollFlowLayout
 import GoogleMobileAds
 
 class BasketballVC: BaseViewController {
     
     var viewModel: BasketballVMType!
+    var bannerView: AdBannerViewType!
     private let disposeBag = DisposeBag()
     private let isLoading = Variable<Bool>(false)
     
@@ -26,7 +26,7 @@ class BasketballVC: BaseViewController {
         super.viewDidLoad()
         self.prepareUI()
         self.bindViewModel()
-        self.configureBanner()
+        self.showBanner()
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,10 +35,10 @@ class BasketballVC: BaseViewController {
     
     func prepareUI() {
         self.navigationItem.title = "FIRSAT BAHİS"
-        let layout = VegaScrollFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout
-        self.collectionView.registerCellNib(BasketballCell.self)
+        self.collectionView.registerCellNib(MainMatchCell.self)
     }
     
     func bindViewModel() {
@@ -50,49 +50,36 @@ class BasketballVC: BaseViewController {
             .delaySubscription(0, scheduler: MainScheduler.instance)
             .trackActivity(loadingIndicator)
             .share(replay: 1)
+            .flatMap { value -> Observable<[MatchModel]> in
+                let sortedList =  value.sorted(by: {(match1, match2) -> Bool in match1 << match2})
+                return Observable.just(sortedList)
+            }
         
         matches.map { _ in false }.startWith(true)
             .catchErrorJustReturn(false)
             .bind(to: self.isLoading)
             .disposed(by: disposeBag)
         
-        matches.bind(to: self.collectionView.rx.items(cellIdentifier: BasketballCell.reuseIdentifier,
-                                                   cellType: BasketballCell.self)) { _, data, cell in
+        matches.bind(to: self.collectionView.rx.items(cellIdentifier: MainMatchCell.reuseIdentifier,
+                                                   cellType: MainMatchCell.self)) { _, data, cell in
                 cell.viewModel = Variable<MatchModel>(data)
             }.disposed(by: disposeBag)
     }
     
-    func configureBanner() {
-        let bannerView = GADBannerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
-        bannerView.adUnitID = Constants.bannerAdUnitID
-        bannerView.rootViewController = self
-        
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
-        bannerView.load(request)
-        
-        self.bannerContainer.addSubview(bannerView)
+    private func showBanner() {
+        self.bannerView.initWithFrame(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
+        self.bannerContainer.addSubview(self.bannerView.getView())
         
         self.bannerContainerTop.constant = -50
         self.view.layoutIfNeeded()
         
-        bannerView.rx.didReceiveAd.subscribe(
-            onNext: { [weak self] _ in
+        self.bannerView.showBanner { result in
+            if result == true {
                 UIView.animate(withDuration: 0.5) {
-                    guard self != nil else { return }
-                    
-                    self?.bannerContainerTop.constant = 0
-                    self?.view.layoutIfNeeded()
+                    self.bannerContainerTop.constant = 0
+                    self.view.layoutIfNeeded()
                 }
-        }).disposed(by: self.disposeBag)
-    }
-}
-
-extension BasketballVC: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 100)
+            }
+        }
     }
 }

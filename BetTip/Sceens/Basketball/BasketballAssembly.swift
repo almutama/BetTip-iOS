@@ -16,19 +16,15 @@ class BasketballAssembly: Assembly {
         
         Container.loggingFunction = nil
         
-        // Services
-        container.register(BasketballServiceType.self) { _ in
-            BasketballService()
-        }
-        
         // ViewModels
         container.register(BasketballVMType.self) { r in
-            BasketballVM(basketballService: r.resolve(BasketballServiceType.self)!)
+            BasketballVM(matchService: r.resolve(MatchServiceType.self)!)
         }
         
         // ViewControllers
         container.storyboardInitCompleted(BasketballVC.self) {r, c in
             c.viewModel = r.resolve(BasketballVMType.self)
+            c.bannerView = r.resolve(AdBannerViewType.self)
         }
     }
 }

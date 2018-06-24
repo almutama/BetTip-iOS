@@ -33,26 +33,35 @@ struct Constants {
     static let disabledUsers = "DisabledUsers"
     static let credits = "Credits"
     static let coupons = "Coupons"
+    static let userCoupons = "UserCoupons"
     static let userCredits = "UserCredits"
     static let stats = "Stats"
     static let basketball = "\(stats)/Basketball"
     static let football = "\(stats)/Football"
     static let status = "status"
     static let type = "type"
+    static let isSpecial = "isSpecial"
+    static let advertisement = "Advertisement"
     static let footballType = 1
     static let basketballType = 2
     static let queryLimit: UInt = 50
-    
-    //AdMob
-    static let adMobID = "ca-app-pub-7194873011234130~4009179113"
-    static let bannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+    static let queryLimitForAll: UInt = 100
+    static let bannerImg = "Banners/banner.png"
     
     //UI
     static let baseDesignScreenWidth: CGFloat = 375.0
     static let baseDesignScreenHeight: CGFloat = 667.0
     
-    //Apple Pay
-    static let merchantId = "merchant.salieri.BetTipAppFree"
-    static let currencyCode = "TRY"
-    static let countryCode = "TR"
+    //ErrorEvent class
+    static let errorEventName = "Error"                     // error name
+    static let errorEventDebugInfoDatapoint = "DebugInfo"   // datapoint key for error's debug info
+    static let exceptionEventName = "Exception"             // exception name
+    static let exceptionTraceDatapointName = "trace"        // datapoint key
+    static let exceptionDescriptionDatapointName = "description" // datapoint key
+    
+    //NotificationCenter
+    static let betTipAdsRemoved = Notification.Name("BetTipAdsRemovedNotification")
+    
+    //Ads
+    static let showAdsPerOpen = 15
 }

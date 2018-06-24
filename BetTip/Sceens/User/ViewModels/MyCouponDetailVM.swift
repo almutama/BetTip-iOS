@@ -10,20 +10,24 @@ import ObjectMapper
 import RxSwift
 
 protocol MyCouponDetailVMType {
-    func getCredits() -> Observable<[CreditModel]>
+    var coupon: Variable<CouponModel>? { get set }
+    func getMatches() -> Observable<[MatchModel]>
+    init(coupon: Variable<CouponModel>)
 }
 
 class MyCouponDetailVM: BaseViewModel, MyCouponDetailVMType {
     
-    private let creditService: CreditServiceType!
-    private let disposeBag = DisposeBag()
+    var coupon: Variable<CouponModel>?
     
-    init(creditService: CreditServiceType) {
-        self.creditService = creditService
+    required init(coupon: Variable<CouponModel>) {
+        self.coupon = coupon
         super.init()
     }
     
-    func getCredits() -> Observable<[CreditModel]> {
-        return creditService.getCredits()
+    func getMatches() -> Observable<[MatchModel]> {
+        guard let matches = self.coupon?.value.matches else {
+            return Observable.just([])
+        }
+        return Observable.just(matches)
     }
 }

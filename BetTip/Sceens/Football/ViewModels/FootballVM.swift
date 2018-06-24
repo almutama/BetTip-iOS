@@ -11,19 +11,32 @@ import RxSwift
 
 protocol FootballVMType {
     func getFootballMatches() -> Observable<[MatchModel]>
+    func shouldAdsShow() -> Bool
+    func adsWasShown()
 }
 
 class FootballVM: BaseViewModel, FootballVMType {
     
-    private let footballService: FootballServiceType!
+    private let matchService: MatchServiceType!
+    private var userVariableProvider: UserVariableProviderType!
     private let disposeBag = DisposeBag()
     
-    init(footballService: FootballServiceType) {
-        self.footballService = footballService
+    init(matchService: MatchServiceType,
+         userVariableProvider: UserVariableProviderType) {
+        self.userVariableProvider = userVariableProvider
+        self.matchService = matchService
         super.init()
     }
     
     func getFootballMatches() -> Observable<[MatchModel]> {
-        return self.footballService.footballMatches()
+        return self.matchService.getMatches(matchType: Constants.footballType, isSpecial: false)
+    }
+    
+    func shouldAdsShow() -> Bool {
+        return self.userVariableProvider.shownAdsNumber % Constants.showAdsPerOpen == 0
+    }
+    
+    func adsWasShown() {
+        self.userVariableProvider.shownAdsNumber += 1
     }
 }

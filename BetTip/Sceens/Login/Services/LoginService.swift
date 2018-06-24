@@ -8,7 +8,6 @@
 
 import RxSwift
 import Firebase
-import Reactant
 import Result
 
 private let logger = Log.createLogger()
@@ -31,9 +30,9 @@ class LoginService: LoginServiceType {
     func login(email: String, password: String) -> Observable<Result<UserModel, FirebaseLoginError>> {
         return Observable<Result<User, FirebaseLoginError>>
             .create { observer in
-                Auth.auth().signIn(withEmail: email, password: password) { user, error in
-                    if let user = user {
-                        observer.onLast(.success(user))
+                Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                    if let result = result {
+                        observer.onLast(.success(result.user))
                     } else if let error = error {
                         observer.onLast(.failure(FirebaseLoginError(error: error as NSError)))
                     } else {
@@ -74,9 +73,9 @@ class LoginService: LoginServiceType {
     
     func register(email: String, password: String) -> Observable<Result<UserModel, FirebaseSignupError>> {
         return Observable<Result<UserModel, FirebaseSignupError>>.create { observer in
-            Auth.auth().createUser(withEmail: email, password: password) { user, error in
-                if let user = user {
-                    let profile = UserModel(user: user)
+            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                if let result = result {
+                    let profile = UserModel(user: result.user)
                     observer.onLast(.success(profile))
                 } else if let error = error {
                     observer.onLast(.failure(FirebaseSignupError(error: error as NSError)))

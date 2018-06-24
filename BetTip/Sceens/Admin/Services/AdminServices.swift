@@ -9,7 +9,6 @@
 import RxSwift
 import Firebase
 import FirebaseDatabase
-import Reactant
 import Result
 
 private let logger = Log.createLogger()
@@ -26,8 +25,8 @@ protocol AdminServiceType {
     func getUsers() -> Observable<[UserModel]>
     func changeUserRole(user: UserModel, role: Role) -> Observable<Bool>
     func disableUser(user: UserModel, disabled: Bool) -> Observable<Bool>
-    func basketballMatches() -> Observable<[MatchModel]>
-    func footballMatches() -> Observable<[MatchModel]>
+    func addMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>>
+    func getMatches(type: Int, isSpecial: Bool?) -> Observable<[MatchModel]>
 }
 
 class AdminService: AdminServiceType {
@@ -35,19 +34,16 @@ class AdminService: AdminServiceType {
     private let userService: UserServiceType
     private let creditService: CreditServiceType
     private let couponService: CouponServiceType
-    private let basketballService: BasketballServiceType
-    private let footballService: FootballServiceType
+    private let matchService: MatchServiceType
     
     init(userService: UserServiceType,
          creditService: CreditServiceType,
          couponService: CouponServiceType,
-         basketballService: BasketballServiceType,
-         footballService: FootballServiceType) {
+         matchService: MatchServiceType) {
         self.userService = userService
         self.creditService = creditService
         self.couponService = couponService
-        self.basketballService = basketballService
-        self.footballService = footballService
+        self.matchService = matchService
     }
     
     // MARK: Credit Services
@@ -98,11 +94,11 @@ class AdminService: AdminServiceType {
     }
     
     // MARK: Match Services
-    func basketballMatches() -> Observable<[MatchModel]> {
-        return basketballService.basketballMatches()
+    func addMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>> {
+        return matchService.addMatch(match: match)
     }
     
-    func footballMatches() -> Observable<[MatchModel]> {
-        return footballService.footballMatches()
+    func getMatches(type: Int, isSpecial: Bool? = false) -> Observable<[MatchModel]> {
+        return matchService.getMatches(matchType: type, isSpecial: isSpecial)
     }
 }

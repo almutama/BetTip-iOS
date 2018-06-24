@@ -1,29 +1,32 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.2'
+platform :ios, '10.0'
 use_frameworks!
 inhibit_all_warnings!
 
 def testing_pods
   pod 'Quick'
   pod 'Nimble'
+  pod 'RxBlocking'
+  pod 'RxTest'
+  pod 'Cuckoo'
 end
 
 def firebase_pods
+  pod 'Firebase/Analytics'
   pod 'Firebase/Core'
-  pod 'Firebase/Crash'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  pod 'Firebase/AdMob'
+  pod 'Firebase/RemoteConfig'
 end
 
 def ui_pods
   pod 'NVActivityIndicatorView'
   pod 'SwiftMessages'
-  pod 'Hero'
   pod 'DZNEmptyDataSet'
-  pod 'VegaScrollFlowLayout'
+  pod 'Eureka'
+  pod 'Kingfisher'
 end
 
 def reactive_pods
@@ -31,7 +34,7 @@ def reactive_pods
     pod 'RxCocoa'
     pod 'RxOptional'
     pod 'RxDataSources'
-    pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'Validation', 'StaticMap', 'Configuration']
+    pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'StaticMap', 'Configuration']
 end
 
 def general_pods
@@ -42,8 +45,9 @@ def general_pods
   pod 'Swinject'
   pod 'SwinjectStoryboard'
   pod 'SwiftKeychainWrapper'
+  pod 'SwiftyStoreKit'
   pod 'IQKeyboardManagerSwift'
-  
+
   plugin 'cocoapods-keys', {
       :project => "BetTip",
       :target => "BetTip",
@@ -64,6 +68,9 @@ end
 
 def ad_pods
   pod 'Heyzap'
+  pod 'AdColony'
+  pod 'ChartboostSDK', :inhibit_warnings => true
+  pod 'Google-Mobile-Ads-SDK'
 end
 
 target 'BetTip' do

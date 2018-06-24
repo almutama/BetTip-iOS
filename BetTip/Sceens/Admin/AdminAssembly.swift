@@ -21,8 +21,7 @@ class AdminAssembly: Assembly {
             AdminService(userService: r.resolve(UserServiceType.self)!,
                          creditService: r.resolve(CreditServiceType.self)!,
                          couponService: r.resolve(CouponServiceType.self)!,
-                         basketballService: r.resolve(BasketballServiceType.self)!,
-                         footballService: r.resolve(FootballServiceType.self)!)
+                         matchService: r.resolve(MatchServiceType.self)!)
         }
         
         // ViewModels
@@ -41,6 +40,12 @@ class AdminAssembly: Assembly {
         container.register(AddCouponVMType.self) { r in
             AddCouponVM(adminService: r.resolve(AdminServiceType.self)!)
         }
+        container.register(AddMatchVMType.self) { r in
+            AddMatchVM(adminService: r.resolve(AdminServiceType.self)!)
+        }
+        container.register(ControlMatchesVMType.self) { r in
+            ControlMatchesVM(adminService: r.resolve(AdminServiceType.self)!)
+        }
         
         // ViewControllers
         container.storyboardInitCompleted(AdminVC.self) {r, c in
@@ -57,6 +62,12 @@ class AdminAssembly: Assembly {
         }
         container.storyboardInitCompleted(AddCouponVC.self) {r, c in
             c.viewModel = r.resolve(AddCouponVMType.self)
+        }
+        container.storyboardInitCompleted(AddMatchVC.self) {r, c in
+            c.viewModel = r.resolve(AddMatchVMType.self)
+        }
+        container.storyboardInitCompleted(ControlMatchesVC.self) {r, c in
+            c.viewModel = r.resolve(ControlMatchesVMType.self)
         }
     }
 }

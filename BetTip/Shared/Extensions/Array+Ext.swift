@@ -29,3 +29,23 @@ extension Array where Element: Equatable {
     }
     
 }
+
+extension Array where Element == String {
+    func getFirstDateFromArray(with dateFormat: String) -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = dateFormat
+        formatter.locale = Locale.current
+        formatter.timeZone = TimeZone.current
+        
+        var convertedArray: [Date] = []
+        
+        for dat in self {
+            let date = formatter.date(from: dat)
+            if let date = date {
+                convertedArray.append(date)
+            }
+        }
+
+        return convertedArray.sorted(by: { $0.compare($1) == .orderedAscending }).first!
+    }
+}

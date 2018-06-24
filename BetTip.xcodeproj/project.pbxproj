@@ -12,11 +12,20 @@
 		B00E3C5B20112F5500802708 /* UpdateCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5A20112F5500802708 /* UpdateCouponVC.swift */; };
 		B00E3C5D20112F6400802708 /* AddCouponVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5C20112F6400802708 /* AddCouponVM.swift */; };
 		B00E3C5F20112F7100802708 /* UpdateCouponVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5E20112F7100802708 /* UpdateCouponVM.swift */; };
-		B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */; };
 		B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD61FD1F787007D9503 /* BaseModel.swift */; };
 		B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */; };
 		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
 		B025768020323680005FA7B8 /* MatchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025767F20323680005FA7B8 /* MatchAction.swift */; };
+		B02EEA0120B051090079A930 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0020B051090079A930 /* NotificationService.swift */; };
+		B02EEA0320B0A1E30079A930 /* HeyzapBanner+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */; };
+		B02EEA0C20B1CD6F0079A930 /* AdBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02EEA0B20B1CD6F0079A930 /* AdBannerView.xib */; };
+		B02EEA0E20B1CD8D0079A930 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0D20B1CD8D0079A930 /* AdBannerView.swift */; };
+		B02EEA1020B1CD9B0079A930 /* AdBannerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0F20B1CD9B0079A930 /* AdBannerVM.swift */; };
+		B02EEA1220B1EFE10079A930 /* AdServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA1120B1EFE10079A930 /* AdServices.swift */; };
+		B02EEA1420B1F02D0079A930 /* AdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA1320B1F02D0079A930 /* AdModel.swift */; };
+		B02EEA1820B73FE30079A930 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA1720B73FE30079A930 /* MainAssembly.swift */; };
+		B02EEA1A20BA1D8D0079A930 /* FirebaseStorage+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA1920BA1D8D0079A930 /* FirebaseStorage+Rx.swift */; };
+		B02EEA1C20BAAA2A0079A930 /* FirebaseRemoteConfig+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA1B20BAAA2A0079A930 /* FirebaseRemoteConfig+Rx.swift */; };
 		B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050639A1FE53E8E004CECEC /* UserCell.swift */; };
 		B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B050639B1FE53E8E004CECEC /* UserCell.xib */; };
 		B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063A51FE5A1A6004CECEC /* CouponModel.swift */; };
@@ -33,7 +42,7 @@
 		B05063BC1FE5CD54004CECEC /* MyCouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063BB1FE5CD54004CECEC /* MyCouponsVM.swift */; };
 		B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05063BE1FE5CDDD004CECEC /* MyCouponCell.swift */; };
 		B05063C11FE5CDDD004CECEC /* MyCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05063BF1FE5CDDD004CECEC /* MyCouponCell.xib */; };
-		B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyApp.swift */; };
+		B0569A0A1FC0A73300FF34A1 /* HockeyAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A091FC0A73300FF34A1 /* HockeyAppManager.swift */; };
 		B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */; };
 		B0569A0F1FC0B80E00FF34A1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */; };
 		B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A101FC0B9B400FF34A1 /* Reusable.swift */; };
@@ -66,9 +75,6 @@
 		B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A521FC3490C00FF34A1 /* Admin.storyboard */; };
 		B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A561FC35F7100FF34A1 /* Basketball.storyboard */; };
 		B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0569A591FC3745D00FF34A1 /* Credit.storyboard */; };
-		B0569A611FC37A6700FF34A1 /* BasketballServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A601FC37A6700FF34A1 /* BasketballServices.swift */; };
-		B0569A641FC37A9200FF34A1 /* BasketballCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A621FC37A9200FF34A1 /* BasketballCell.swift */; };
-		B0569A651FC37A9200FF34A1 /* BasketballCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0569A631FC37A9200FF34A1 /* BasketballCell.xib */; };
 		B0569A671FC37AA900FF34A1 /* BasketballVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A661FC37AA900FF34A1 /* BasketballVC.swift */; };
 		B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A681FC37AC300FF34A1 /* BasketballVM.swift */; };
 		B0569A6B1FC37AFD00FF34A1 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569A6A1FC37AFD00FF34A1 /* MatchModel.swift */; };
@@ -113,11 +119,8 @@
 		B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569ADB1FCDF6EC00FF34A1 /* BGUpdateUserEvent.swift */; };
 		B0569AE11FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AE01FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift */; };
 		B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AE21FCDF78800FF34A1 /* UIShowMainScreenEvent.swift */; };
-		B0569AEC1FCF3D7600FF34A1 /* FootballServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AEB1FCF3D7600FF34A1 /* FootballServices.swift */; };
 		B0569AEE1FCF3D8100FF34A1 /* FootballVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AED1FCF3D8100FF34A1 /* FootballVC.swift */; };
 		B0569AF01FCF3D8C00FF34A1 /* FootballVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AEF1FCF3D8C00FF34A1 /* FootballVM.swift */; };
-		B0569AF31FCF3DA100FF34A1 /* FootballCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF11FCF3DA100FF34A1 /* FootballCell.swift */; };
-		B0569AF41FCF3DA100FF34A1 /* FootballCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0569AF21FCF3DA100FF34A1 /* FootballCell.xib */; };
 		B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF51FCF3DB200FF34A1 /* FootballAssembly.swift */; };
 		B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF71FD07FF200FF34A1 /* StyledLabel.swift */; };
 		B0569AFA1FD0801100FF34A1 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF91FD0801100FF34A1 /* StyledButton.swift */; };
@@ -126,18 +129,37 @@
 		B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */; };
 		B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */; };
 		B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */; };
+		B07D834520D2F26200028BBF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834320D2F26200028BBF /* ProductCell.swift */; };
+		B07D834620D2F26200028BBF /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B07D834420D2F26200028BBF /* ProductCell.xib */; };
+		B07D834820D5930100028BBF /* BaseViewController+Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834720D5930100028BBF /* BaseViewController+Ad.swift */; };
+		B07D834B20D5CA7F00028BBF /* MainMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834920D5CA7F00028BBF /* MainMatchCell.swift */; };
+		B07D834C20D5CA7F00028BBF /* MainMatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B07D834A20D5CA7F00028BBF /* MainMatchCell.xib */; };
+		B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */; };
+		B08340CF20A7C6CF00A41F36 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */; };
+		B08340D720A87D1500A41F36 /* CouponActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340D620A87D1500A41F36 /* CouponActions.swift */; };
+		B08340D920A8DC6F00A41F36 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340D820A8DC6F00A41F36 /* UILabel+Ext.swift */; };
+		B08340DB20AA138600A41F36 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08340DA20AA138600A41F36 /* StoreKit.framework */; };
+		B08340DD20AB730600A41F36 /* PurchaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340DC20AB730600A41F36 /* PurchaseServices.swift */; };
+		B08340E120AB743000A41F36 /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E020AB743000A41F36 /* DataPoint.swift */; };
+		B08340E320AB744B00A41F36 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E220AB744B00A41F36 /* Event.swift */; };
+		B08340E520AB747B00A41F36 /* ErrorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E420AB747B00A41F36 /* ErrorEvent.swift */; };
+		B08340E720AB749100A41F36 /* Event+Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E620AB749100A41F36 /* Event+Categories.swift */; };
+		B08340E920AB7DFD00A41F36 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340E820AB7DFD00A41F36 /* AnalyticsManager.swift */; };
+		B08340EB20AB7E1B00A41F36 /* FirebaseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340EA20AB7E1B00A41F36 /* FirebaseAnalytics.swift */; };
+		B08340ED20AB7E2A00A41F36 /* AnalyticsLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340EC20AB7E2A00A41F36 /* AnalyticsLogger.swift */; };
 		B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A45791F9DD5430082BDD3 /* AppDelegate.swift */; };
 		B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A457B1F9DD5430082BDD3 /* MainVC.swift */; };
 		B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A457D1F9DD5430082BDD3 /* Main.storyboard */; };
 		B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B08A45801F9DD5430082BDD3 /* Assets.xcassets */; };
 		B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */; };
 		B08A458F1F9DD5430082BDD3 /* BetTipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */; };
+		B08CBE7020A61B5000815425 /* MatchFormRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CBE6F20A61B5000815425 /* MatchFormRows.swift */; };
 		B08D42152047498900426276 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08D42132047498900426276 /* MatchCell.swift */; };
 		B08D42162047498900426276 /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08D42142047498900426276 /* MatchCell.xib */; };
 		B08D4218204DDE4600426276 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08D4217204DDE4600426276 /* Array+Ext.swift */; };
 		B08D421A20508F7600426276 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08D421920508F7600426276 /* Date+Ext.swift */; };
 		B0A281A41FD59ADF00B7E892 /* UserCreditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A281A31FD59ADF00B7E892 /* UserCreditModel.swift */; };
-		B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */; };
+		B0A7AA1F1FC83F3600DC4F62 /* FirebaseDatabase+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA1E1FC83F3600DC4F62 /* FirebaseDatabase+Rx.swift */; };
 		B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */; };
 		B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA231FC85A7B00DC4F62 /* UserService.swift */; };
 		B0A7AA261FC8627800DC4F62 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */; };
@@ -163,7 +185,14 @@
 		B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */; };
 		B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */; };
 		B0BDD811200FEAEC00F3851A /* ControlMatchesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */; };
-		B0DACBEE209F90A400C59CCD /* AdMob+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBED209F90A400C59CCD /* AdMob+Rx.swift */; };
+		B0C38D0720D2D1AA00331207 /* CreditActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C38D0620D2D1AA00331207 /* CreditActions.swift */; };
+		B0DACBEE209F90A400C59CCD /* AdMobBanner+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */; };
+		B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */; };
+		B0DACBF220A0D33500C59CCD /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBF120A0D33500C59CCD /* Rule.swift */; };
+		B0DACBF520A0D37E00C59CCD /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBF420A0D37E00C59CCD /* Rules.swift */; };
+		B0DACBFD20A0F75500C59CCD /* MatchServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBFC20A0F75500C59CCD /* MatchServices.swift */; };
+		B0DACC0120A0FBD100C59CCD /* MatchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */; };
+		B0DACC0520A3765600C59CCD /* BaseFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACC0420A3765600C59CCD /* BaseFormViewController.swift */; };
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
@@ -191,11 +220,20 @@
 		B00E3C5A20112F5500802708 /* UpdateCouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCouponVC.swift; sourceTree = "<group>"; };
 		B00E3C5C20112F6400802708 /* AddCouponVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponVM.swift; sourceTree = "<group>"; };
 		B00E3C5E20112F7100802708 /* UpdateCouponVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCouponVM.swift; sourceTree = "<group>"; };
-		B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Ext.swift"; sourceTree = "<group>"; };
 		B00F3BD61FD1F787007D9503 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVC.swift; sourceTree = "<group>"; };
 		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
 		B025767F20323680005FA7B8 /* MatchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAction.swift; sourceTree = "<group>"; };
+		B02EEA0020B051090079A930 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeyzapBanner+Rx.swift"; sourceTree = "<group>"; };
+		B02EEA0B20B1CD6F0079A930 /* AdBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdBannerView.xib; sourceTree = "<group>"; };
+		B02EEA0D20B1CD8D0079A930 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
+		B02EEA0F20B1CD9B0079A930 /* AdBannerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerVM.swift; sourceTree = "<group>"; };
+		B02EEA1120B1EFE10079A930 /* AdServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdServices.swift; sourceTree = "<group>"; };
+		B02EEA1320B1F02D0079A930 /* AdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdModel.swift; sourceTree = "<group>"; };
+		B02EEA1720B73FE30079A930 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		B02EEA1920BA1D8D0079A930 /* FirebaseStorage+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseStorage+Rx.swift"; sourceTree = "<group>"; };
+		B02EEA1B20BAAA2A0079A930 /* FirebaseRemoteConfig+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseRemoteConfig+Rx.swift"; sourceTree = "<group>"; };
 		B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetTip-Bridging-Header.h"; sourceTree = "<group>"; };
 		B050639A1FE53E8E004CECEC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B050639B1FE53E8E004CECEC /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -213,7 +251,7 @@
 		B05063BB1FE5CD54004CECEC /* MyCouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponsVM.swift; sourceTree = "<group>"; };
 		B05063BE1FE5CDDD004CECEC /* MyCouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponCell.swift; sourceTree = "<group>"; };
 		B05063BF1FE5CDDD004CECEC /* MyCouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCouponCell.xib; sourceTree = "<group>"; };
-		B0569A091FC0A73300FF34A1 /* HockeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyApp.swift; sourceTree = "<group>"; };
+		B0569A091FC0A73300FF34A1 /* HockeyAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyAppManager.swift; sourceTree = "<group>"; };
 		B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B0569A0E1FC0B80E00FF34A1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		B0569A101FC0B9B400FF34A1 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -246,9 +284,6 @@
 		B0569A521FC3490C00FF34A1 /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		B0569A561FC35F7100FF34A1 /* Basketball.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Basketball.storyboard; sourceTree = "<group>"; };
 		B0569A591FC3745D00FF34A1 /* Credit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Credit.storyboard; sourceTree = "<group>"; };
-		B0569A601FC37A6700FF34A1 /* BasketballServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballServices.swift; sourceTree = "<group>"; };
-		B0569A621FC37A9200FF34A1 /* BasketballCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballCell.swift; sourceTree = "<group>"; };
-		B0569A631FC37A9200FF34A1 /* BasketballCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketballCell.xib; sourceTree = "<group>"; };
 		B0569A661FC37AA900FF34A1 /* BasketballVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballVC.swift; sourceTree = "<group>"; };
 		B0569A681FC37AC300FF34A1 /* BasketballVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballVM.swift; sourceTree = "<group>"; };
 		B0569A6A1FC37AFD00FF34A1 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
@@ -293,11 +328,8 @@
 		B0569ADB1FCDF6EC00FF34A1 /* BGUpdateUserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGUpdateUserEvent.swift; sourceTree = "<group>"; };
 		B0569AE01FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShowLoginScreenEvent.swift; sourceTree = "<group>"; };
 		B0569AE21FCDF78800FF34A1 /* UIShowMainScreenEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShowMainScreenEvent.swift; sourceTree = "<group>"; };
-		B0569AEB1FCF3D7600FF34A1 /* FootballServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballServices.swift; sourceTree = "<group>"; };
 		B0569AED1FCF3D8100FF34A1 /* FootballVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballVC.swift; sourceTree = "<group>"; };
 		B0569AEF1FCF3D8C00FF34A1 /* FootballVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballVM.swift; sourceTree = "<group>"; };
-		B0569AF11FCF3DA100FF34A1 /* FootballCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballCell.swift; sourceTree = "<group>"; };
-		B0569AF21FCF3DA100FF34A1 /* FootballCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootballCell.xib; sourceTree = "<group>"; };
 		B0569AF51FCF3DB200FF34A1 /* FootballAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAssembly.swift; sourceTree = "<group>"; };
 		B0569AF71FD07FF200FF34A1 /* StyledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLabel.swift; sourceTree = "<group>"; };
 		B0569AF91FD0801100FF34A1 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
@@ -306,6 +338,24 @@
 		B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVC.swift; sourceTree = "<group>"; };
 		B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlUsersVM.swift; sourceTree = "<group>"; };
 		B06BE0381FD73CFB00BA8EC8 /* ControlCreditsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVM.swift; sourceTree = "<group>"; };
+		B07D834320D2F26200028BBF /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B07D834420D2F26200028BBF /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		B07D834720D5930100028BBF /* BaseViewController+Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Ad.swift"; sourceTree = "<group>"; };
+		B07D834920D5CA7F00028BBF /* MainMatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMatchCell.swift; sourceTree = "<group>"; };
+		B07D834A20D5CA7F00028BBF /* MainMatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMatchCell.xib; sourceTree = "<group>"; };
+		B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optionals+Ext.swift"; sourceTree = "<group>"; };
+		B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		B08340D620A87D1500A41F36 /* CouponActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponActions.swift; sourceTree = "<group>"; };
+		B08340D820A8DC6F00A41F36 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		B08340DA20AA138600A41F36 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B08340DC20AB730600A41F36 /* PurchaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseServices.swift; sourceTree = "<group>"; };
+		B08340E020AB743000A41F36 /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
+		B08340E220AB744B00A41F36 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B08340E420AB747B00A41F36 /* ErrorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEvent.swift; sourceTree = "<group>"; };
+		B08340E620AB749100A41F36 /* Event+Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+Categories.swift"; sourceTree = "<group>"; };
+		B08340E820AB7DFD00A41F36 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		B08340EA20AB7E1B00A41F36 /* FirebaseAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalytics.swift; sourceTree = "<group>"; };
+		B08340EC20AB7E2A00A41F36 /* AnalyticsLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsLogger.swift; sourceTree = "<group>"; };
 		B08A45761F9DD5430082BDD3 /* BetTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A45791F9DD5430082BDD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08A457B1F9DD5430082BDD3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -316,12 +366,13 @@
 		B08A458A1F9DD5430082BDD3 /* BetTipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetTipTests.swift; sourceTree = "<group>"; };
 		B08A45901F9DD5430082BDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B08CBE6F20A61B5000815425 /* MatchFormRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchFormRows.swift; sourceTree = "<group>"; };
 		B08D42132047498900426276 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		B08D42142047498900426276 /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
 		B08D4217204DDE4600426276 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		B08D421920508F7600426276 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		B0A281A31FD59ADF00B7E892 /* UserCreditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreditModel.swift; sourceTree = "<group>"; };
-		B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Rx.swift"; sourceTree = "<group>"; };
+		B0A7AA1E1FC83F3600DC4F62 /* FirebaseDatabase+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseDatabase+Rx.swift"; sourceTree = "<group>"; };
 		B0A7AA201FC859F100DC4F62 /* UserRoleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleType.swift; sourceTree = "<group>"; };
 		B0A7AA231FC85A7B00DC4F62 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
@@ -349,7 +400,14 @@
 		B0BDD80C200A2DD300F3851A /* ControlCouponsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCouponsVM.swift; sourceTree = "<group>"; };
 		B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVC.swift; sourceTree = "<group>"; };
 		B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVM.swift; sourceTree = "<group>"; };
-		B0DACBED209F90A400C59CCD /* AdMob+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMob+Rx.swift"; sourceTree = "<group>"; };
+		B0C38D0620D2D1AA00331207 /* CreditActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditActions.swift; sourceTree = "<group>"; };
+		B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMobBanner+Rx.swift"; sourceTree = "<group>"; };
+		B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMobInterstitial+Rx.swift"; sourceTree = "<group>"; };
+		B0DACBF120A0D33500C59CCD /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		B0DACBF420A0D37E00C59CCD /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		B0DACBFC20A0F75500C59CCD /* MatchServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchServices.swift; sourceTree = "<group>"; };
+		B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAssembly.swift; sourceTree = "<group>"; };
+		B0DACC0420A3765600C59CCD /* BaseFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormViewController.swift; sourceTree = "<group>"; };
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
@@ -367,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB2F28AAA96B790E1286F06 /* Pods_BetTip.framework in Frameworks */,
+				B08340DB20AA138600A41F36 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +443,7 @@
 		462BBB1460F31C27D4A0C4CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B08340DA20AA138600A41F36 /* StoreKit.framework */,
 				368ECDF0EA2EEC9691508FDF /* Pods_BetTip.framework */,
 				BEFED22F6A9414B4697D7055 /* Pods_BetTipTests.framework */,
 			);
@@ -404,16 +464,35 @@
 		B00F3BD51FD1F774007D9503 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B02EEA1320B1F02D0079A930 /* AdModel.swift */,
 				B00F3BD61FD1F787007D9503 /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B02EE9FF20B045D30079A930 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B02EEA1120B1EFE10079A930 /* AdServices.swift */,
+				B02EEA0020B051090079A930 /* NotificationService.swift */,
+				B08340DC20AB730600A41F36 /* PurchaseServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B02EEA0A20B1CD320079A930 /* Advertisement */ = {
+			isa = PBXGroup;
+			children = (
+				B02EEA0D20B1CD8D0079A930 /* AdBannerView.swift */,
+				B02EEA0B20B1CD6F0079A930 /* AdBannerView.xib */,
+				B02EEA0F20B1CD9B0079A930 /* AdBannerVM.swift */,
+			);
+			path = Advertisement;
+			sourceTree = "<group>";
+		};
 		B05063991FE53E5F004CECEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B08D42132047498900426276 /* MatchCell.swift */,
-				B08D42142047498900426276 /* MatchCell.xib */,
 				B050639A1FE53E8E004CECEC /* UserCell.swift */,
 				B050639B1FE53E8E004CECEC /* UserCell.xib */,
 			);
@@ -437,8 +516,8 @@
 		B050639F1FE5A147004CECEC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B08340D620A87D1500A41F36 /* CouponActions.swift */,
 				B05063A51FE5A1A6004CECEC /* CouponModel.swift */,
-				B0569A6A1FC37AFD00FF34A1 /* MatchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -488,8 +567,8 @@
 		B0569A061FC061FA00FF34A1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B08340DE20AB73E200A41F36 /* Analytics */,
 				B0569AB21FC988D200FF34A1 /* Auth */,
-				B0569A081FC0A70F00FF34A1 /* Configuration */,
 				B0FE4A321FBAD33C008F2EE6 /* Constants */,
 				B0FE4A331FBAD34A008F2EE6 /* Events */,
 				B0569A0B1FC0AFED00FF34A1 /* Extensions */,
@@ -497,6 +576,7 @@
 				B00F3BD51FD1F774007D9503 /* Model */,
 				B0569A071FC0A61200FF34A1 /* Network */,
 				B0FE4A391FBAD3AC008F2EE6 /* Presenters */,
+				B02EE9FF20B045D30079A930 /* Services */,
 				B0FE4A361FBAD371008F2EE6 /* Storage */,
 				B0569A181FC0C3D200FF34A1 /* Theme */,
 				B0FE4A371FBAD37B008F2EE6 /* Utilities */,
@@ -515,28 +595,26 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		B0569A081FC0A70F00FF34A1 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				B0569A091FC0A73300FF34A1 /* HockeyApp.swift */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
 		B0569A0B1FC0AFED00FF34A1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				B0BDD8001FF42A8400F3851A /* ActivityIndicator+Rx.swift */,
-				B0DACBED209F90A400C59CCD /* AdMob+Rx.swift */,
+				B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */,
+				B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */,
 				B08D4217204DDE4600426276 /* Array+Ext.swift */,
 				B08D421920508F7600426276 /* Date+Ext.swift */,
-				B0A7AA1E1FC83F3600DC4F62 /* Firebase+Rx.swift */,
+				B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */,
+				B0A7AA1E1FC83F3600DC4F62 /* FirebaseDatabase+Rx.swift */,
+				B02EEA1B20BAAA2A0079A930 /* FirebaseRemoteConfig+Rx.swift */,
+				B02EEA1920BA1D8D0079A930 /* FirebaseStorage+Rx.swift */,
+				B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */,
+				B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */,
 				B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */,
-				B00F3BD31FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift */,
 				B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */,
 				B0569A141FC0BA1100FF34A1 /* UICollectionView+Ext.swift */,
 				B0569A251FC0CDF300FF34A1 /* UIColor+Ext.swift */,
 				B0569A231FC0CD9C00FF34A1 /* UIImage+Ext.swift */,
+				B08340D820A8DC6F00A41F36 /* UILabel+Ext.swift */,
 				B0569A211FC0CD4300FF34A1 /* UIScreen+Ext.swift */,
 				B0569A121FC0B9F800FF34A1 /* UITableView+Ext.swift */,
 			);
@@ -612,10 +690,8 @@
 		B0569A551FC35F5A00FF34A1 /* Basketball */ = {
 			isa = PBXGroup;
 			children = (
-				B0569A5F1FC374A500FF34A1 /* Services */,
 				B0569A5B1FC3748200FF34A1 /* ViewControllers */,
 				B0569A5C1FC3748B00FF34A1 /* ViewModels */,
-				B0569A5E1FC3749F00FF34A1 /* Views */,
 				B0569A561FC35F7100FF34A1 /* Basketball.storyboard */,
 				B0569A6C1FC37B2600FF34A1 /* BasketballAssembly.swift */,
 			);
@@ -652,23 +728,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		B0569A5E1FC3749F00FF34A1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B0569A621FC37A9200FF34A1 /* BasketballCell.swift */,
-				B0569A631FC37A9200FF34A1 /* BasketballCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B0569A5F1FC374A500FF34A1 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				B0569A601FC37A6700FF34A1 /* BasketballServices.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		B0569A6E1FC37B4C00FF34A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,6 +751,8 @@
 			children = (
 				B0569A781FC37C8E00FF34A1 /* CreditCell.swift */,
 				B0569A791FC37C8E00FF34A1 /* CreditCell.xib */,
+				B07D834320D2F26200028BBF /* ProductCell.swift */,
+				B07D834420D2F26200028BBF /* ProductCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -707,6 +768,7 @@
 		B0569A731FC37B7D00FF34A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B0C38D0620D2D1AA00331207 /* CreditActions.swift */,
 				B0569A741FC37C7200FF34A1 /* CreditModel.swift */,
 			);
 			path = Models;
@@ -856,15 +918,6 @@
 			path = ScreenEvents;
 			sourceTree = "<group>";
 		};
-		B0569AE41FCF3C8700FF34A1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B0569AF11FCF3DA100FF34A1 /* FootballCell.swift */,
-				B0569AF21FCF3DA100FF34A1 /* FootballCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		B0569AE51FCF3C9000FF34A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,12 +934,27 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		B0569AE71FCF3CA400FF34A1 /* Services */ = {
+		B08340DE20AB73E200A41F36 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				B0569AEB1FCF3D7600FF34A1 /* FootballServices.swift */,
+				B08340DF20AB741E00A41F36 /* Events */,
+				B08340EC20AB7E2A00A41F36 /* AnalyticsLogger.swift */,
+				B08340E820AB7DFD00A41F36 /* AnalyticsManager.swift */,
+				B08340EA20AB7E1B00A41F36 /* FirebaseAnalytics.swift */,
+				B0569A091FC0A73300FF34A1 /* HockeyAppManager.swift */,
 			);
-			path = Services;
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		B08340DF20AB741E00A41F36 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				B08340E020AB743000A41F36 /* DataPoint.swift */,
+				B08340E220AB744B00A41F36 /* Event.swift */,
+				B08340E420AB747B00A41F36 /* ErrorEvent.swift */,
+				B08340E620AB749100A41F36 /* Event+Categories.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		B08A456D1F9DD5430082BDD3 = {
@@ -993,6 +1061,7 @@
 				B0FE4A411FBAD44D008F2EE6 /* Football */,
 				B0FE4A3E1FBAD401008F2EE6 /* Login */,
 				B0A8E6741FA7B0BF001A8BBA /* Main */,
+				B0DACBFE20A0FB8F00C59CCD /* Match */,
 				B0569AC71FCDEA8900FF34A1 /* Splash */,
 				B0FE4A421FBAD467008F2EE6 /* User */,
 			);
@@ -1004,6 +1073,7 @@
 			children = (
 				B0A8E6761FA7B0CE001A8BBA /* ViewControllers */,
 				B08A457D1F9DD5430082BDD3 /* Main.storyboard */,
+				B02EEA1720B73FE30079A930 /* MainAssembly.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1043,6 +1113,55 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B0DACBF320A0D36100C59CCD /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				B0DACBF120A0D33500C59CCD /* Rule.swift */,
+				B0DACBF420A0D37E00C59CCD /* Rules.swift */,
+				B0A7AA271FCC057900DC4F62 /* Validator.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		B0DACBFE20A0FB8F00C59CCD /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				B0DACC0320A24A9200C59CCD /* Model */,
+				B0DACBFF20A0FBAD00C59CCD /* Services */,
+				B0DACC0220A2458E00C59CCD /* Views */,
+				B0DACC0020A0FBD100C59CCD /* MatchAssembly.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		B0DACBFF20A0FBAD00C59CCD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0DACBFC20A0F75500C59CCD /* MatchServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B0DACC0220A2458E00C59CCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B07D834920D5CA7F00028BBF /* MainMatchCell.swift */,
+				B07D834A20D5CA7F00028BBF /* MainMatchCell.xib */,
+				B08D42132047498900426276 /* MatchCell.swift */,
+				B08D42142047498900426276 /* MatchCell.xib */,
+				B08CBE6F20A61B5000815425 /* MatchFormRows.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0DACC0320A24A9200C59CCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0569A6A1FC37AFD00FF34A1 /* MatchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1075,10 +1194,10 @@
 			isa = PBXGroup;
 			children = (
 				B0BDD8041FFECAD900F3851A /* Actions */,
+				B0DACBF320A0D36100C59CCD /* Validation */,
 				B0569A2C1FC0E49800FF34A1 /* DebugDetector.swift */,
 				B0A7AA251FC8627800DC4F62 /* FirebaseError.swift */,
 				B0569A361FC226A600FF34A1 /* Logger.swift */,
-				B0A7AA271FCC057900DC4F62 /* Validator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1096,7 +1215,9 @@
 		B0FE4A3A1FBAD3B1008F2EE6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B0DACC0420A3765600C59CCD /* BaseFormViewController.swift */,
 				B0569A2E1FC0E55400FF34A1 /* BaseViewController.swift */,
+				B07D834720D5930100028BBF /* BaseViewController+Ad.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1112,6 +1233,7 @@
 		B0FE4A3C1FBAD3C6008F2EE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B02EEA0A20B1CD320079A930 /* Advertisement */,
 				B0569A161FC0BF2800FF34A1 /* NibView.swift */,
 				B0569A101FC0B9B400FF34A1 /* Reusable.swift */,
 				B0569AF91FD0801100FF34A1 /* StyledButton.swift */,
@@ -1137,10 +1259,8 @@
 		B0FE4A411FBAD44D008F2EE6 /* Football */ = {
 			isa = PBXGroup;
 			children = (
-				B0569AE71FCF3CA400FF34A1 /* Services */,
 				B0569AE61FCF3C9700FF34A1 /* ViewControllers */,
 				B0569AE51FCF3C9000FF34A1 /* ViewModels */,
-				B0569AE41FCF3C8700FF34A1 /* Views */,
 				B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */,
 				B0569AF51FCF3DB200FF34A1 /* FootballAssembly.swift */,
 			);
@@ -1196,7 +1316,6 @@
 				B08A45871F9DD5430082BDD3 /* Frameworks */,
 				B08A45881F9DD5430082BDD3 /* Resources */,
 				60BC9B534A1CC706259113F0 /* [CP] Embed Pods Frameworks */,
-				C35366029B3BCB78BD805CF8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1224,9 +1343,15 @@
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplePay = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
 							com.apple.Push = {
@@ -1270,17 +1395,18 @@
 				B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */,
 				B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */,
 				B0569AD11FCDEDC000FF34A1 /* Splash.storyboard in Resources */,
+				B07D834C20D5CA7F00028BBF /* MainMatchCell.xib in Resources */,
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
 				B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */,
 				B08D42162047498900426276 /* MatchCell.xib in Resources */,
+				B02EEA0C20B1CD6F0079A930 /* AdBannerView.xib in Resources */,
 				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
-				B0569A651FC37A9200FF34A1 /* BasketballCell.xib in Resources */,
 				B05063B41FE5A221004CECEC /* Coupon.storyboard in Resources */,
-				B0569AF41FCF3DA100FF34A1 /* FootballCell.xib in Resources */,
 				B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */,
 				B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */,
 				B05063B01FE5A1F5004CECEC /* CouponCell.xib in Resources */,
 				B0A7AA2B1FCC23D300DC4F62 /* Localizable.strings in Resources */,
+				B07D834620D2F26200028BBF /* ProductCell.xib in Resources */,
 				B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */,
 				B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */,
 				B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */,
@@ -1306,13 +1432,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BetTipTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		60BC9B534A1CC706259113F0 /* [CP] Embed Pods Frameworks */ = {
@@ -1321,9 +1450,62 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BetTipTests/Pods-BetTipTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Reactant/Reactant.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reactant.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1336,13 +1518,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BetTip-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B01B24821FA74BB6001F1466 /* SwiftLint */ = {
@@ -1387,30 +1572,18 @@
 			shellPath = /bin/sh;
 			shellScript = "# swiftgen bin from pods\nSWIFTGEN=\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n\n# Make sure it is there\nif which \"$SWIFTGEN\" >/dev/null; then\n\n# Folder for output\nSWIFTGEN_FOLDER=\"$SOURCE_ROOT/BetTip/Shared/GeneratedCodes\"\n\n# Project folder\nPROJECT_FOLDER=\"${SOURCE_ROOT}\"\n\n# Make sure output folder exists\nmkdir -p \"$SWIFTGEN_FOLDER\"\n\n# Get all storyboards into Storyboards.swift\n\"$SWIFTGEN\" storyboards -t swift4 \"$PROJECT_FOLDER\" --output \"$SWIFTGEN_FOLDER/Storyboards.swift\"\n\n# Get all images into Images.swift\n\"$SWIFTGEN\" xcassets -t swift4 \"BetTip/SupportedFiles/Assets.xcassets\" --output \"$SWIFTGEN_FOLDER/Images.swift\"\n\n# Get all english strings (as a base for all others) into Strings.swift\n\"$SWIFTGEN\" strings -t structured-swift4 \"BetTip/SupportedFiles/Base.lproj/Localizable.strings\" --output \"$SWIFTGEN_FOLDER/Localizables.swift\"\nelse\necho \"SwiftGen does not exist, download from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
-		C35366029B3BCB78BD805CF8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetTipTests/Pods-BetTipTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C544BE41E67FBB4478CD02D4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BetTip/Pods-BetTip-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1423,9 +1596,68 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BetTip/Pods-BetTip-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PaperTrailLumberjack/PaperTrailLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Reactant/Reactant.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PaperTrailLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reactant.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1439,9 +1671,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0DACC0120A0FBD100C59CCD /* MatchAssembly.swift in Sources */,
 				B08D42152047498900426276 /* MatchCell.swift in Sources */,
+				B07D834820D5930100028BBF /* BaseViewController+Ad.swift in Sources */,
+				B08340D920A8DC6F00A41F36 /* UILabel+Ext.swift in Sources */,
 				B0A7AA421FCE8D4A00DC4F62 /* UserVC.swift in Sources */,
+				B08340E520AB747B00A41F36 /* ErrorEvent.swift in Sources */,
 				B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */,
+				B02EEA1820B73FE30079A930 /* MainAssembly.swift in Sources */,
 				B05063B61FE5CD24004CECEC /* MyCouponsVC.swift in Sources */,
 				B0569A6B1FC37AFD00FF34A1 /* MatchModel.swift in Sources */,
 				B0569A991FC6216400FF34A1 /* LoginModel.swift in Sources */,
@@ -1449,23 +1686,29 @@
 				B05063AA1FE5A1C5004CECEC /* CouponsVC.swift in Sources */,
 				B0569A241FC0CD9C00FF34A1 /* UIImage+Ext.swift in Sources */,
 				B0569AD61FCDF6BD00FF34A1 /* BGDidLoginEvent.swift in Sources */,
+				B08340E320AB744B00A41F36 /* Event.swift in Sources */,
 				B0569AD81FCDF6CB00FF34A1 /* BGDidLogoutEvent.swift in Sources */,
 				B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */,
 				B0569A4C1FC22B3E00FF34A1 /* BGEventBusEvent.swift in Sources */,
+				B0C38D0720D2D1AA00331207 /* CreditActions.swift in Sources */,
 				B0569A441FC22A8F00FF34A1 /* BGApplicationDidBecomeActiveEvent.swift in Sources */,
+				B08340CF20A7C6CF00A41F36 /* Double+Ext.swift in Sources */,
 				B0569A3B1FC22A4800FF34A1 /* EventBus.swift in Sources */,
 				B0569A331FC220FB00FF34A1 /* BaseViewModel.swift in Sources */,
 				B0569A281FC0CF6700FF34A1 /* Constants.swift in Sources */,
+				B02EEA1420B1F02D0079A930 /* AdModel.swift in Sources */,
+				B02EEA1C20BAAA2A0079A930 /* FirebaseRemoteConfig+Rx.swift in Sources */,
 				B0569AE11FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift in Sources */,
 				B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */,
 				B0569ADA1FCDF6DE00FF34A1 /* BGDidRefreshEvent.swift in Sources */,
-				B0569A0A1FC0A73300FF34A1 /* HockeyApp.swift in Sources */,
+				B0569A0A1FC0A73300FF34A1 /* HockeyAppManager.swift in Sources */,
 				B0569A8C1FC37D3500FF34A1 /* AdminServices.swift in Sources */,
 				B0A7AA361FCC58C900DC4F62 /* Images.swift in Sources */,
 				B0569AFA1FD0801100FF34A1 /* StyledButton.swift in Sources */,
 				B0569A8E1FC37D3F00FF34A1 /* AdminVC.swift in Sources */,
 				B0569A4E1FC22BA200FF34A1 /* UIEventBus.swift in Sources */,
 				B0BB91AE206EF3A40082828E /* AddMatchVC.swift in Sources */,
+				B0DACBFD20A0F75500C59CCD /* MatchServices.swift in Sources */,
 				B08A457C1F9DD5430082BDD3 /* MainVC.swift in Sources */,
 				B0BDD8081FFED0A800F3851A /* UserRoleAction.swift in Sources */,
 				B0569A2F1FC0E55400FF34A1 /* BaseViewController.swift in Sources */,
@@ -1474,26 +1717,30 @@
 				B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */,
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
 				B0BDD80B200A2DBA00F3851A /* ControlCouponsVC.swift in Sources */,
-				B0569A641FC37A9200FF34A1 /* BasketballCell.swift in Sources */,
+				B02EEA1220B1EFE10079A930 /* AdServices.swift in Sources */,
 				B0569A811FC37CC600FF34A1 /* CreditAssembly.swift in Sources */,
-				B0569AF31FCF3DA100FF34A1 /* FootballCell.swift in Sources */,
 				B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */,
 				B0569A6D1FC37B2600FF34A1 /* BasketballAssembly.swift in Sources */,
 				B00E3C5920112F4500802708 /* AddCouponVC.swift in Sources */,
+				B0DACBF520A0D37E00C59CCD /* Rules.swift in Sources */,
 				B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */,
 				B0569AA31FC621C900FF34A1 /* LoginWelcomeVC.swift in Sources */,
 				B05063C01FE5CDDD004CECEC /* MyCouponCell.swift in Sources */,
 				B0BDD7FC1FE6CD7700F3851A /* AlertAction.swift in Sources */,
+				B02EEA0320B0A1E30079A930 /* HeyzapBanner+Rx.swift in Sources */,
 				B0A7AA261FC8627800DC4F62 /* FirebaseError.swift in Sources */,
 				B08D4218204DDE4600426276 /* Array+Ext.swift in Sources */,
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B05063A81FE5A1B3004CECEC /* CouponServices.swift in Sources */,
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
+				B0DACC0520A3765600C59CCD /* BaseFormViewController.swift in Sources */,
 				B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
 				B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */,
+				B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */,
 				B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */,
 				B0569AB41FC988EB00FF34A1 /* AuthManager.swift in Sources */,
+				B02EEA0120B051090079A930 /* NotificationService.swift in Sources */,
 				B0569A261FC0CDF300FF34A1 /* UIColor+Ext.swift in Sources */,
 				B0569A881FC37D1F00FF34A1 /* AdminAssembly.swift in Sources */,
 				B0569A0D1FC0B26E00FF34A1 /* String+Ext.swift in Sources */,
@@ -1501,38 +1748,47 @@
 				B0569A171FC0BF2800FF34A1 /* NibView.swift in Sources */,
 				B0A7AA371FCC58C900DC4F62 /* Storyboards.swift in Sources */,
 				B0569AEE1FCF3D8100FF34A1 /* FootballVC.swift in Sources */,
+				B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */,
+				B08340ED20AB7E2A00A41F36 /* AnalyticsLogger.swift in Sources */,
 				B08A457A1F9DD5430082BDD3 /* AppDelegate.swift in Sources */,
 				B0569A201FC0CCB500FF34A1 /* DefaultTheme.swift in Sources */,
 				B0569ACD1FCDED7C00FF34A1 /* SplashVM.swift in Sources */,
+				B08340EB20AB7E1B00A41F36 /* FirebaseAnalytics.swift in Sources */,
 				B0569AF01FCF3D8C00FF34A1 /* FootballVM.swift in Sources */,
 				B00E3C5B20112F5500802708 /* UpdateCouponVC.swift in Sources */,
 				B05063BA1FE5CD45004CECEC /* MyCouponDetailVM.swift in Sources */,
+				B08340D720A87D1500A41F36 /* CouponActions.swift in Sources */,
+				B02EEA1A20BA1D8D0079A930 /* FirebaseStorage+Rx.swift in Sources */,
 				B0569A771FC37C8100FF34A1 /* CreditServices.swift in Sources */,
+				B02EEA1020B1CD9B0079A930 /* AdBannerVM.swift in Sources */,
 				B08D421A20508F7600426276 /* Date+Ext.swift in Sources */,
 				B0569AF61FCF3DB200FF34A1 /* FootballAssembly.swift in Sources */,
 				B0569A351FC2243C00FF34A1 /* PrefrencesStorage.swift in Sources */,
 				B0BDD8011FF42A8400F3851A /* ActivityIndicator+Rx.swift in Sources */,
 				B0569A221FC0CD4300FF34A1 /* UIScreen+Ext.swift in Sources */,
+				B07D834520D2F26200028BBF /* ProductCell.swift in Sources */,
 				B0BDD7FA1FE69F6D00F3851A /* UIAlertController+Rx.swift in Sources */,
 				B05063B81FE5CD34004CECEC /* MyCouponDetailVC.swift in Sources */,
 				B0569ADC1FCDF6ED00FF34A1 /* BGUpdateUserEvent.swift in Sources */,
 				B0569ABC1FC9894800FF34A1 /* AuthProvider.swift in Sources */,
 				B0A281A41FD59ADF00B7E892 /* UserCreditModel.swift in Sources */,
 				B05063AF1FE5A1F5004CECEC /* CouponCell.swift in Sources */,
+				B07D834B20D5CA7F00028BBF /* MainMatchCell.swift in Sources */,
 				B0BB91B0206EF3BE0082828E /* AddMatchVM.swift in Sources */,
 				B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */,
 				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
+				B08CBE7020A61B5000815425 /* MatchFormRows.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CreditsVC.swift in Sources */,
 				B0569A461FC22A9D00FF34A1 /* BGApplicationDidEnterBackgroundEvent.swift in Sources */,
-				B0DACBEE209F90A400C59CCD /* AdMob+Rx.swift in Sources */,
+				B0DACBEE209F90A400C59CCD /* AdMobBanner+Rx.swift in Sources */,
 				B0569AA51FC621D400FF34A1 /* RegisterVC.swift in Sources */,
 				B0569A2B1FC0DC8200FF34A1 /* UserVariableProvider.swift in Sources */,
 				B0569ACA1FCDEAB600FF34A1 /* SplashVC.swift in Sources */,
 				B050639C1FE53E8E004CECEC /* UserCell.swift in Sources */,
 				B0A7AA351FCC58C900DC4F62 /* Localizables.swift in Sources */,
-				B00F3BD41FD0AF08007D9503 /* SwinjectStoryboard+Ext.swift in Sources */,
 				B0569AB11FC7663D00FF34A1 /* UserModel.swift in Sources */,
 				B0569A691FC37AC300FF34A1 /* BasketballVM.swift in Sources */,
+				B08340DD20AB730600A41F36 /* PurchaseServices.swift in Sources */,
 				B00E3C5F20112F7100802708 /* UpdateCouponVM.swift in Sources */,
 				B05063B21FE5A211004CECEC /* CouponAssembly.swift in Sources */,
 				B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */,
@@ -1543,6 +1799,7 @@
 				B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */,
 				B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */,
 				B00E3C5D20112F6400802708 /* AddCouponVM.swift in Sources */,
+				B0DACBF220A0D33500C59CCD /* Rule.swift in Sources */,
 				B0569ACF1FCDEDAD00FF34A1 /* SplashAssembly.swift in Sources */,
 				B05063A61FE5A1A6004CECEC /* CouponModel.swift in Sources */,
 				B0569A8A1FC37D2A00FF34A1 /* AdminVM.swift in Sources */,
@@ -1562,20 +1819,22 @@
 				B0569A481FC22ABD00FF34A1 /* BGNetworkReachabilityChangedEvent.swift in Sources */,
 				B0569AE31FCDF78800FF34A1 /* UIShowMainScreenEvent.swift in Sources */,
 				B0569A1C1FC0CB8700FF34A1 /* ThemeManager.swift in Sources */,
+				B08340E120AB743000A41F36 /* DataPoint.swift in Sources */,
 				B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */,
+				B08340E920AB7DFD00A41F36 /* AnalyticsManager.swift in Sources */,
 				B0BDD8061FFECAF600F3851A /* UserAction.swift in Sources */,
 				B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */,
-				B0569AEC1FCF3D7600FF34A1 /* FootballServices.swift in Sources */,
 				B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */,
-				B0A7AA1F1FC83F3600DC4F62 /* Firebase+Rx.swift in Sources */,
+				B0A7AA1F1FC83F3600DC4F62 /* FirebaseDatabase+Rx.swift in Sources */,
 				B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */,
-				B0569A611FC37A6700FF34A1 /* BasketballServices.swift in Sources */,
+				B02EEA0E20B1CD8D0079A930 /* AdBannerView.swift in Sources */,
 				B0569A671FC37AA900FF34A1 /* BasketballVC.swift in Sources */,
 				B05063AC1FE5A1DB004CECEC /* CouponsVM.swift in Sources */,
 				B0569A2D1FC0E49800FF34A1 /* DebugDetector.swift in Sources */,
 				B06BE0391FD73CFB00BA8EC8 /* ControlCreditsVM.swift in Sources */,
 				B0569A7A1FC37C8E00FF34A1 /* CreditCell.swift in Sources */,
 				B0569A961FC6214400FF34A1 /* LoginAssembly.swift in Sources */,
+				B08340E720AB749100A41F36 /* Event+Categories.swift in Sources */,
 				B0BDD7FF1FEC4CD800F3851A /* UserEventService.swift in Sources */,
 				B06BE0331FD73CCD00BA8EC8 /* ControlUsersVC.swift in Sources */,
 				B05063BC1FE5CD54004CECEC /* MyCouponsVM.swift in Sources */,
@@ -1755,6 +2014,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7UWG4ECEH7;
 				INFOPLIST_FILE = "$(SRCROOT)/BetTip/SupportedFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = salieri.BetTipAppFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1778,6 +2038,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7UWG4ECEH7;
 				INFOPLIST_FILE = "$(SRCROOT)/BetTip/SupportedFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = salieri.BetTipAppFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1793,7 +2054,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1E04B9CFB290BDC889BEE1C /* Pods-BetTipTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1813,7 +2074,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4973F39DC4820D359D81752 /* Pods-BetTipTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;

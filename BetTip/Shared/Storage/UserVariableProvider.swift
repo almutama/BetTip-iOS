@@ -10,6 +10,7 @@ import Foundation
 
 protocol UserVariableProviderType {
     var deviceUUID: String { get }
+    var shownAdsNumber: Int { get set }
 }
 
 class UserVariableProvider: UserVariableProviderType {
@@ -25,5 +26,10 @@ class UserVariableProvider: UserVariableProviderType {
             defaults.setValue(id, forKey: "deviceUUID")
         }
         return id!
+    }
+    
+    var shownAdsNumber: Int {
+        set { defaults.setValue(newValue, forKey: "shownAdsNumber") }
+        get { return defaults.integer(forKey: "shownAdsNumber") }
     }
 }

@@ -9,12 +9,12 @@
 import Foundation
 
 extension Date {
-    func dateWithFormat() -> String {
-        let todaysDate = NSDate()
+    func dateWithFormat(dateFormat format: String? = nil) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd:MM:yyyy HH:mm"//29:01:2015 16:31
-        let dateInFormat = dateFormatter.string(from: todaysDate as Date)
-        return dateInFormat
+        dateFormatter.dateFormat = format ?? "dd:MM:yyyy HH:mm"
+        dateFormatter.locale = Locale.current
+        dateFormatter.timeZone = TimeZone.current
+        return dateFormatter.string(from: self)
     }
     
     func monthInt() -> Int {
@@ -45,4 +45,25 @@ extension Date {
     var day: Int { return Calendar.current.component(.day, from: self) }
     var month: Int { return Calendar.current.component(.month, from: self) }
     var year: Int { return Calendar.current.component(.year, from: self) }
+}
+
+extension NSDate {
+    static func oneHourFromNow() -> NSDate {
+        return NSDate.hoursFormNow(numberOfHours: 1)
+    }
+    
+    static func hoursFormNow(numberOfHours: Int) -> NSDate {
+        let interval = Double(numberOfHours) * 60
+        return NSDate().addingTimeInterval(interval)
+    }
+}
+
+extension TimeInterval {
+    static var second: TimeInterval { return 1 }
+    static var minute: TimeInterval { return second * 60 }
+    static var hour: TimeInterval { return minute * 60 }
+    static var day: TimeInterval { return hour * 24 }
+    static var week: TimeInterval { return day * 7 }
+    static var month: TimeInterval { return day * 30 }
+    static var year: TimeInterval { return day * 365 }
 }

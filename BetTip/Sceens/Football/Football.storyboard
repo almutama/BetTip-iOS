@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gBB-ES-kvF">
-                                <rect key="frame" x="0.0" y="122" width="375" height="496"/>
+                                <rect key="frame" x="0.0" y="122" width="375" height="488"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z5m-0j-K7v">
                                     <size key="itemSize" width="50" height="50"/>
@@ -41,7 +42,7 @@
                             <constraint firstItem="e0O-ML-lhE" firstAttribute="top" secondItem="A9X-Lm-JdA" secondAttribute="top" id="0WV-Fk-Wrh"/>
                             <constraint firstItem="gBB-ES-kvF" firstAttribute="trailing" secondItem="A9X-Lm-JdA" secondAttribute="trailing" id="D5x-TP-O39"/>
                             <constraint firstItem="e0O-ML-lhE" firstAttribute="trailing" secondItem="A9X-Lm-JdA" secondAttribute="trailing" id="Xxe-Gn-ayg"/>
-                            <constraint firstItem="gBB-ES-kvF" firstAttribute="bottom" secondItem="A9X-Lm-JdA" secondAttribute="bottom" id="elW-mB-kSi"/>
+                            <constraint firstItem="gBB-ES-kvF" firstAttribute="bottom" secondItem="A9X-Lm-JdA" secondAttribute="bottom" constant="-8" id="elW-mB-kSi"/>
                             <constraint firstItem="e0O-ML-lhE" firstAttribute="leading" secondItem="A9X-Lm-JdA" secondAttribute="leading" id="fG3-Ce-Ss4"/>
                             <constraint firstItem="gBB-ES-kvF" firstAttribute="leading" secondItem="A9X-Lm-JdA" secondAttribute="leading" id="lzM-MM-KuR"/>
                             <constraint firstItem="gBB-ES-kvF" firstAttribute="top" secondItem="e0O-ML-lhE" secondAttribute="bottom" constant="8" id="nQU-2D-eWc"/>

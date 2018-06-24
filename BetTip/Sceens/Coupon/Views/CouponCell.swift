@@ -16,6 +16,8 @@ class CouponCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var dateLbl: StyledLabel!
     @IBOutlet weak var timeLbl: StyledLabel!
     @IBOutlet weak var rateLbl: StyledLabel!
+    @IBOutlet weak var tipsterLbl: StyledLabel!
+    @IBOutlet weak var favImg: UIImageView!
     
     var disposeBag = DisposeBag()
     var viewModel: Variable<CouponModel> = Variable<CouponModel>.init(CouponModel.init()) {
@@ -23,10 +25,23 @@ class CouponCell: UICollectionViewCell, Reusable {
             _ = viewModel.asObservable().observeOn(MainScheduler.instance)
                 .subscribe({ [unowned self] (event) in
                     if let entity = event.element {
-                        self.numberOfCreditLbl.text = "\(String(describing: entity.numOfCredit))"
-                        self.dateLbl.text = "\(String(describing: entity.startDate))"
-                        //self.timeLbl.text = "\(String(describing: entity.time))"
-                        self.rateLbl.text = "\(String(describing: entity.odd))"
+                        if let numOfCredit = entity.numOfCredit,
+                            let startDate = entity.startDate,
+                            let startTime = entity.startTime,
+                            let odd = entity.odd,
+                            let tipster = entity.tipster {
+                            self.numberOfCreditLbl.text = "\(numOfCredit)"
+                            self.dateLbl.text = "\(startDate)"
+                            self.timeLbl.text = "\(startTime)"
+                            self.rateLbl.text = "\(odd)"
+                            self.tipsterLbl.text = "\(tipster)"
+                        } else {
+                            self.numberOfCreditLbl.text = "-"
+                            self.dateLbl.text = "-"
+                            self.timeLbl.text = "-"
+                            self.rateLbl.text = "-"
+                            self.tipsterLbl.text = "-"
+                        }
                     }
                 })
                 .disposed(by: disposeBag)
@@ -35,7 +50,11 @@ class CouponCell: UICollectionViewCell, Reusable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        contentView.layer.cornerRadius = 5.0
+        contentView.layer.borderWidth = 2.0
+        contentView.layer.borderColor = UIColor.white.cgColor
+        contentView.layer.masksToBounds = true
+        layer.cornerRadius = 5.0
+        layer.masksToBounds = true
     }
-
 }

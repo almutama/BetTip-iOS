@@ -7,7 +7,6 @@
 //
 
 import RxSwift
-import Reactant
 import Result
 
 protocol AuthManagerType {
