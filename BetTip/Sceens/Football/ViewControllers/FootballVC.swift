@@ -51,10 +51,6 @@ class FootballVC: BaseViewController {
             .delaySubscription(0, scheduler: MainScheduler.instance)
             .trackActivity(loadingIndicator)
             .share(replay: 1)
-            .flatMap { value -> Observable<[MatchModel]> in
-                let sortedList =  value.sorted(by: {(match1, match2) -> Bool in match1 << match2})
-                return Observable.just(sortedList)
-            }
         
         matches.map { _ in false }.startWith(true)
             .catchErrorJustReturn(false)

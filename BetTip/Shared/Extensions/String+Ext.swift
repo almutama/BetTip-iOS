@@ -86,9 +86,8 @@ extension String {
     
     func dateValue(with format: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.calendar = Calendar(identifier: .iso8601)
-        dateFormatter.locale = Locale(identifier: "UTC")
-        dateFormatter.timeZone = TimeZone.init(secondsFromGMT: 0)
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
         dateFormatter.dateFormat = format
         return dateFormatter.date(from: self)
     }
