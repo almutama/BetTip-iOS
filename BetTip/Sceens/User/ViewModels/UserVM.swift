@@ -11,17 +11,27 @@ import RxSwift
 
 private let logger = Log.createLogger()
 
-class UserVM: BaseViewModel {
+protocol UserVMType {
+    func getUser() -> Variable<UserModel?>
+    func logout(initComplete: @escaping (Bool) -> Void)
+    func userCredit() -> Observable<(Int, Int)>
+}
+
+class UserVM: BaseViewModel, UserVMType {
     
-    private let authStore: AuthStoreType
-    private let authManager: AuthManagerType
+    private let authStore: AuthStoreType!
+    private let authManager: AuthManagerType!
+    private let userService: UserServiceType!
+    
     var userModel = Variable<UserModel?>(nil)
     let disposeBag = DisposeBag()
     
     init(authStore: AuthStoreType,
-         authManager: AuthManagerType) {
+         authManager: AuthManagerType,
+         userService: UserServiceType) {
         self.authStore = authStore
         self.authManager = authManager
+        self.userService = userService
     }
     
     func getUser() -> Variable<UserModel?> {
@@ -45,5 +55,12 @@ class UserVM: BaseViewModel {
                 }
             }
             .disposed(by: disposeBag)
+    }
+    
+    func userCredit() -> Observable<(Int, Int)> {
+        guard let user = UserEventService.shared.user.value else {
+            return Observable.just((0, 0))
+        }
+        return self.userService.userCredit(userId: user.id).map { ($0.value?.currentCredit ?? 0, $0.value?.usedCredit ?? 0) }
     }
 }

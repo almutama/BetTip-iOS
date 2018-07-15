@@ -53,7 +53,7 @@ class CouponsVC: BaseViewController {
             .asObservable()
             .bind(to: self.collectionView.rx.items(cellIdentifier: CouponCell.reuseIdentifier,
                                                    cellType: CouponCell.self)) { _, data, cell in
-                                                    cell.viewModel = Variable<CouponModel>(data)
+                                                    cell.viewModel = Variable(data)
             }.disposed(by: disposeBag)
         
         self.viewModel.userCredit()
@@ -66,18 +66,31 @@ class CouponsVC: BaseViewController {
             .disposed(by: disposeBag)
         
         self.collectionView.rx.modelSelected(CouponModel.self)
-            .flatMap { (coupon) -> ControlEvent<CouponAction> in
-                return UIAlertController.rx
-                    .presented(
-                        by: self,
-                        title: L10n.Coupon.title,
-                        message: "\(coupon.numOfCredit ?? 0)\(L10n.Coupon.buyCoupon)",
-                        preferredStyle: UIAlertControllerStyle.actionSheet,
-                        actions: [CouponAction.buy(coupon: coupon), CouponAction.cancel],
-                        animated: true
-                )
+            .flatMap { (coupon) -> Observable<CouponResult> in
+                if !coupon.isCouponExistForUser() {
+                    return self.startBuyCoupon(coupon: coupon)
+                }
+                return Observable.just(CouponResult(result: true, resultAction: .openCoupon(coupon: coupon)))
             }
-            .flatMap { [weak self] (action) -> Observable<Result<CouponModel, FirebaseStoreError>> in
+            .subscribe(onNext: {result in
+                switch result.resultAction {
+                case .buyCoupon: self.showNotification(result: result.result)
+                case .openCoupon(let coupon): self.openUserCoupon(coupon: coupon)
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func startBuyCoupon(coupon: CouponModel) -> Observable<CouponResult> {
+        return UIAlertController.rx
+            .presented(
+                by: self,
+                title: L10n.Coupon.title,
+                message: "\(coupon.numOfCredit ?? 0)\(L10n.Coupon.buyCoupon)",
+                preferredStyle: UIAlertControllerStyle.actionSheet,
+                actions: [CouponAction.buy(coupon: coupon), CouponAction.cancel],
+                animated: true
+            ).flatMap { [weak self] (action) -> Observable<Result<CouponModel, FirebaseStoreError>> in
                 guard let `self` = self else { return Observable.empty() }
                 switch action {
                 case .buy(let selectedCoupon):
@@ -86,18 +99,31 @@ class CouponsVC: BaseViewController {
                     return Observable.empty()
                 }
             }
-            .flatMap { [weak self] (result) -> Observable<Bool> in
+            .flatMap { [weak self] (result) -> Observable<CouponResult> in
                 guard let `self` = self else { return Observable.empty() }
                 switch result {
                 case .success(let coupon):
                     return self.viewModel.setUserCredit(coupon: coupon)
                 case .failure:
-                    return Observable.just(false)
+                    return Observable.just(CouponResult(result: false, resultAction: .buyCoupon))
                 }
+        }
+    }
+    
+    func openUserCoupon(coupon: CouponModel) {
+        self.performSegue(withIdentifier: StoryboardSegue.Coupon.couponDetailSegue.rawValue,
+                          sender: coupon)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == StoryboardSegue.Coupon.couponDetailSegue.rawValue {
+            guard let coupon = sender as? CouponModel else {
+                return
             }
-            .subscribe(onNext: {result in
-                self.showNotification(result: result)
-            })
-            .disposed(by: disposeBag)
+            guard let vc = segue.destination as? CouponDetailVC else {
+                return
+            }
+            vc.viewModel = CouponDetailVM(coupon: Variable(coupon))
+        }
     }
 }

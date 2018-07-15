@@ -13,8 +13,6 @@
 		B00E3C5D20112F6400802708 /* AddCouponVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5C20112F6400802708 /* AddCouponVM.swift */; };
 		B00E3C5F20112F7100802708 /* UpdateCouponVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E3C5E20112F7100802708 /* UpdateCouponVM.swift */; };
 		B00F3BD71FD1F787007D9503 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD61FD1F787007D9503 /* BaseModel.swift */; };
-		B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */; };
-		B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */; };
 		B025768020323680005FA7B8 /* MatchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025767F20323680005FA7B8 /* MatchAction.swift */; };
 		B02EEA0120B051090079A930 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0020B051090079A930 /* NotificationService.swift */; };
 		B02EEA0320B0A1E30079A930 /* HeyzapBanner+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */; };
@@ -134,6 +132,10 @@
 		B07D834820D5930100028BBF /* BaseViewController+Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834720D5930100028BBF /* BaseViewController+Ad.swift */; };
 		B07D834B20D5CA7F00028BBF /* MainMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D834920D5CA7F00028BBF /* MainMatchCell.swift */; };
 		B07D834C20D5CA7F00028BBF /* MainMatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B07D834A20D5CA7F00028BBF /* MainMatchCell.xib */; };
+		B07D835220DC50BC00028BBF /* CouponCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D835120DC50BC00028BBF /* CouponCellVM.swift */; };
+		B07D835420E0365200028BBF /* CouponResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D835320E0365200028BBF /* CouponResult.swift */; };
+		B07D835620E03A4F00028BBF /* CouponDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D835520E03A4F00028BBF /* CouponDetailVC.swift */; };
+		B07D835820E03A5E00028BBF /* CouponDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D835720E03A5E00028BBF /* CouponDetailVM.swift */; };
 		B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */; };
 		B08340CF20A7C6CF00A41F36 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */; };
 		B08340D720A87D1500A41F36 /* CouponActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08340D620A87D1500A41F36 /* CouponActions.swift */; };
@@ -221,8 +223,6 @@
 		B00E3C5C20112F6400802708 /* AddCouponVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponVM.swift; sourceTree = "<group>"; };
 		B00E3C5E20112F7100802708 /* UpdateCouponVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCouponVM.swift; sourceTree = "<group>"; };
 		B00F3BD61FD1F787007D9503 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVC.swift; sourceTree = "<group>"; };
-		B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCreditVM.swift; sourceTree = "<group>"; };
 		B025767F20323680005FA7B8 /* MatchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAction.swift; sourceTree = "<group>"; };
 		B02EEA0020B051090079A930 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeyzapBanner+Rx.swift"; sourceTree = "<group>"; };
@@ -343,6 +343,10 @@
 		B07D834720D5930100028BBF /* BaseViewController+Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Ad.swift"; sourceTree = "<group>"; };
 		B07D834920D5CA7F00028BBF /* MainMatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMatchCell.swift; sourceTree = "<group>"; };
 		B07D834A20D5CA7F00028BBF /* MainMatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMatchCell.xib; sourceTree = "<group>"; };
+		B07D835120DC50BC00028BBF /* CouponCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCellVM.swift; sourceTree = "<group>"; };
+		B07D835320E0365200028BBF /* CouponResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponResult.swift; sourceTree = "<group>"; };
+		B07D835520E03A4F00028BBF /* CouponDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDetailVC.swift; sourceTree = "<group>"; };
+		B07D835720E03A5E00028BBF /* CouponDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDetailVM.swift; sourceTree = "<group>"; };
 		B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optionals+Ext.swift"; sourceTree = "<group>"; };
 		B08340CE20A7C6CF00A41F36 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		B08340D620A87D1500A41F36 /* CouponActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponActions.swift; sourceTree = "<group>"; };
@@ -518,6 +522,7 @@
 			children = (
 				B08340D620A87D1500A41F36 /* CouponActions.swift */,
 				B05063A51FE5A1A6004CECEC /* CouponModel.swift */,
+				B07D835320E0365200028BBF /* CouponResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 		B05063A11FE5A15E004CECEC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B07D835520E03A4F00028BBF /* CouponDetailVC.swift */,
 				B05063A91FE5A1C5004CECEC /* CouponsVC.swift */,
 			);
 			path = ViewControllers;
@@ -541,6 +547,7 @@
 		B05063A21FE5A16C004CECEC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B07D835720E03A5E00028BBF /* CouponDetailVM.swift */,
 				B05063AB1FE5A1DB004CECEC /* CouponsVM.swift */,
 			);
 			path = ViewModels;
@@ -551,6 +558,7 @@
 			children = (
 				B05063AD1FE5A1F5004CECEC /* CouponCell.swift */,
 				B05063AE1FE5A1F5004CECEC /* CouponCell.xib */,
+				B07D835120DC50BC00028BBF /* CouponCellVM.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -731,7 +739,6 @@
 		B0569A6E1FC37B4C00FF34A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B00F3BD81FD208F5007D9503 /* BuyCreditVC.swift */,
 				B0569A7E1FC37CA600FF34A1 /* CreditsVC.swift */,
 			);
 			path = ViewControllers;
@@ -740,7 +747,6 @@
 		B0569A701FC37B5F00FF34A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B00F3BDA1FD20906007D9503 /* BuyCreditVM.swift */,
 				B0569A7C1FC37C9C00FF34A1 /* CreditsVM.swift */,
 			);
 			path = ViewModels;
@@ -1698,6 +1704,7 @@
 				B0569A281FC0CF6700FF34A1 /* Constants.swift in Sources */,
 				B02EEA1420B1F02D0079A930 /* AdModel.swift in Sources */,
 				B02EEA1C20BAAA2A0079A930 /* FirebaseRemoteConfig+Rx.swift in Sources */,
+				B07D835420E0365200028BBF /* CouponResult.swift in Sources */,
 				B0569AE11FCDF77400FF34A1 /* UIShowLoginScreenEvent.swift in Sources */,
 				B0569A111FC0B9B400FF34A1 /* Reusable.swift in Sources */,
 				B0569ADA1FCDF6DE00FF34A1 /* BGDidRefreshEvent.swift in Sources */,
@@ -1717,6 +1724,7 @@
 				B0569AC01FCB3FFB00FF34A1 /* ForgotPasswordVM.swift in Sources */,
 				B0569A371FC226A600FF34A1 /* Logger.swift in Sources */,
 				B0BDD80B200A2DBA00F3851A /* ControlCouponsVC.swift in Sources */,
+				B07D835620E03A4F00028BBF /* CouponDetailVC.swift in Sources */,
 				B02EEA1220B1EFE10079A930 /* AdServices.swift in Sources */,
 				B0569A811FC37CC600FF34A1 /* CreditAssembly.swift in Sources */,
 				B0BDD80D200A2DD300F3851A /* ControlCouponsVM.swift in Sources */,
@@ -1747,6 +1755,7 @@
 				B0569A131FC0B9F800FF34A1 /* UITableView+Ext.swift in Sources */,
 				B0569A171FC0BF2800FF34A1 /* NibView.swift in Sources */,
 				B0A7AA371FCC58C900DC4F62 /* Storyboards.swift in Sources */,
+				B07D835220DC50BC00028BBF /* CouponCellVM.swift in Sources */,
 				B0569AEE1FCF3D8100FF34A1 /* FootballVC.swift in Sources */,
 				B08340CD20A7B41600A41F36 /* Optionals+Ext.swift in Sources */,
 				B08340ED20AB7E2A00A41F36 /* AnalyticsLogger.swift in Sources */,
@@ -1775,7 +1784,7 @@
 				B05063AF1FE5A1F5004CECEC /* CouponCell.swift in Sources */,
 				B07D834B20D5CA7F00028BBF /* MainMatchCell.swift in Sources */,
 				B0BB91B0206EF3BE0082828E /* AddMatchVM.swift in Sources */,
-				B00F3BD91FD208F5007D9503 /* BuyCreditVC.swift in Sources */,
+				B07D835820E03A5E00028BBF /* CouponDetailVM.swift in Sources */,
 				B0A7AA401FCE8D3F00DC4F62 /* UserVM.swift in Sources */,
 				B08CBE7020A61B5000815425 /* MatchFormRows.swift in Sources */,
 				B0569A7F1FC37CA600FF34A1 /* CreditsVC.swift in Sources */,
@@ -1823,7 +1832,6 @@
 				B0A7AA241FC85A7B00DC4F62 /* UserService.swift in Sources */,
 				B08340E920AB7DFD00A41F36 /* AnalyticsManager.swift in Sources */,
 				B0BDD8061FFECAF600F3851A /* UserAction.swift in Sources */,
-				B00F3BDB1FD20906007D9503 /* BuyCreditVM.swift in Sources */,
 				B0569AC61FCCB12200FF34A1 /* LocalNotificationView.swift in Sources */,
 				B0A7AA1F1FC83F3600DC4F62 /* FirebaseDatabase+Rx.swift in Sources */,
 				B0569ABE1FCB3FEC00FF34A1 /* ForgotPasswordVC.swift in Sources */,

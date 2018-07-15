@@ -10,6 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+private let logger = Log.createLogger()
+
 class CouponCell: UICollectionViewCell, Reusable {
     
     @IBOutlet weak var numberOfCreditLbl: StyledLabel!
@@ -20,6 +22,7 @@ class CouponCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var favImg: UIImageView!
     
     var disposeBag = DisposeBag()
+    
     var viewModel: Variable<CouponModel> = Variable<CouponModel>.init(CouponModel.init()) {
         didSet {
             _ = viewModel.asObservable().observeOn(MainScheduler.instance)
@@ -35,6 +38,13 @@ class CouponCell: UICollectionViewCell, Reusable {
                             self.timeLbl.text = "\(startTime)"
                             self.rateLbl.text = "\(odd)"
                             self.tipsterLbl.text = "\(tipster)"
+                            
+                            self.isCouponExistForUser(coupon: entity).asObservable()
+                                .map({ result in
+                                    logger.log(.debug, "\(entity.id!) coupon exist for user is \(result)")
+                                    return !result
+                                }).bind(to: self.favImg.rx.isHidden)
+                                .disposed(by: self.disposeBag)
                         } else {
                             self.numberOfCreditLbl.text = "-"
                             self.dateLbl.text = "-"
@@ -56,5 +66,12 @@ class CouponCell: UICollectionViewCell, Reusable {
         contentView.layer.masksToBounds = true
         layer.cornerRadius = 5.0
         layer.masksToBounds = true
+    }
+    
+    func isCouponExistForUser(coupon: CouponModel) -> Observable<Bool> {
+        return Observable.create { observer in
+            observer.onLast(coupon.isCouponExistForUser())
+            return Disposables.create()
+        }
     }
 }

@@ -24,6 +24,13 @@ class BasketballVM: BaseViewModel, BasketballVMType {
     }
     
     func getBasketballMatches() -> Observable<[MatchModel]> {
-        return self.matchService.getMatches(matchType: Constants.basketballType, isSpecial: false)
+        return self.matchService.getMatches(matchType: Constants.basketballType).map({matches in
+            return matches.filter({ match in
+                guard let isSpecial = match.isSpecial else {
+                    return true
+                }
+                return isSpecial == false
+            })
+        })
     }
 }

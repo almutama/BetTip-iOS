@@ -29,7 +29,14 @@ class FootballVM: BaseViewModel, FootballVMType {
     }
     
     func getFootballMatches() -> Observable<[MatchModel]> {
-        return self.matchService.getMatches(matchType: Constants.footballType, isSpecial: false)
+        return self.matchService.getMatches(matchType: Constants.footballType).map({matches in
+            return matches.filter({ match in
+                guard let isSpecial = match.isSpecial else {
+                    return true
+                }
+                return isSpecial == false
+            })
+        })
     }
     
     func shouldAdsShow() -> Bool {

@@ -30,7 +30,11 @@ class CreditsVM: BaseViewModel, CreditsVMType {
     }
     
     func getProducts() -> Observable<[SKProduct]> {
-        return creditService.getProducts()
+        return creditService.getProducts().flatMap { products -> Observable<[SKProduct]> in
+            Observable.just(
+                products.sorted(by: {(p1, p2) -> Bool in return p1.price.intValue < p2.price.intValue})
+            )
+        }
     }
     
     func buyProduct(product: SKProduct) -> Observable<Result<PurchaseDetails, SKError>> {

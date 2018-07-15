@@ -15,7 +15,7 @@ private let logger = Log.createLogger()
 protocol CouponsVMType {
     func getCoupons() -> Observable<[CouponModel]>
     func buyCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>>
-    func setUserCredit(coupon: CouponModel) -> Observable<Bool>
+    func setUserCredit(coupon: CouponModel) -> Observable<CouponResult>
     func userCredit() -> Observable<Int> 
 }
 
@@ -49,20 +49,20 @@ class CouponsVM: BaseViewModel, CouponsVMType {
         }
     }
     
-    func setUserCredit(coupon: CouponModel) -> Observable<Bool> {
+    func setUserCredit(coupon: CouponModel) -> Observable<CouponResult> {
         guard let user = UserEventService.shared.user.value else {
-            return Observable.just(false)
+            return Observable.just(CouponResult(result: false, resultAction: .buyCoupon))
         }
         return self.userService.setUserCredit(userId: user.id,
                                               numberOfCredits: coupon.numOfCredit!,
-                                              creditAction: .subtrack).flatMapLatest { result -> Observable<Bool> in
+                                              creditAction: .subtrack).flatMapLatest { result -> Observable<CouponResult> in
                                                 switch result {
                                                 case .success(let userCredit):
                                                     logger.log(.debug, "set user credit successfull for: \(userCredit)")
-                                                    return Observable.just(true)
+                                                    return Observable.just(CouponResult(result: true, resultAction: .buyCoupon))
                                                 case .failure(let error):
                                                     logger.log(.debug, "error occured when set user credit: \(error) for \(coupon)")
-                                                    return Observable.just(false)
+                                                    return Observable.just(CouponResult(result: false, resultAction: .buyCoupon))
                                                 }
         }
     }

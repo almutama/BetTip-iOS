@@ -12,7 +12,7 @@ import FirebaseDatabase
 import Result
 
 protocol MatchServiceType {
-    func getMatches(matchType: Int, isSpecial: Bool?) -> Observable<[MatchModel]>
+    func getMatches(matchType: Int) -> Observable<[MatchModel]>
     func addMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>>
     func updateMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>>
     func deleteMatch(match: MatchModel) -> Observable<Bool>
@@ -20,7 +20,7 @@ protocol MatchServiceType {
 
 class MatchService: MatchServiceType {    
     
-    func getMatches(matchType: Int, isSpecial: Bool? = false) -> Observable<[MatchModel]> {
+    func getMatches(matchType: Int) -> Observable<[MatchModel]> {
         let matches: Observable<[MatchModel]> = Database.database().reference()
             .child(Constants.matches)
             .queryOrdered(byChild: Constants.type)
@@ -28,7 +28,25 @@ class MatchService: MatchServiceType {
             .queryLimited(toLast: Constants.queryLimit)
             .fetchArray()
             .recover([])
-        return matches
+        
+        let sortedMatches = matches.flatMap { value -> Observable<[MatchModel]> in
+            let incompletedMatches =  value.filter({match in
+                guard let status = match.status else {
+                    return false
+                }
+                return status == 1
+            }).sorted(by: {(match1, match2) -> Bool in match1 << match2})
+            
+            let completedMatches =  value.filter({match in
+                guard let status = match.status else {
+                    return false
+                }
+                return status == 0
+            }).sorted(by: {(match1, match2) -> Bool in match1 << match2})
+            
+            return Observable.just(incompletedMatches + completedMatches)
+        }
+        return sortedMatches
     }
     
     func addMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>> {

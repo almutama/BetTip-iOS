@@ -96,9 +96,16 @@ func !== (lhs: MatchModel, rhs: MatchModel) -> Bool {
 }
 
 func << (lhs: MatchModel, rhs: MatchModel) -> Bool {
-    guard let lStatus = lhs.status,
-        let rStatus = rhs.status else {
+    guard let lDate = lhs.date,
+        let rDate = rhs.date,
+        let lTime = lhs.time,
+        let rTime = rhs.time else {
         return false
     }
-    return lStatus < rStatus
+    guard let lMTime = "\(lDate) \(lTime)".dateValue(with: "dd.MM.yyyy HH:mm"),
+        let rMTime = "\(rDate) \(rTime)".dateValue(with: "dd.MM.yyyy HH:mm") else {
+            return false
+    }
+    
+    return lMTime <= rMTime
 }

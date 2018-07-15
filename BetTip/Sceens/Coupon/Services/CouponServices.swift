@@ -54,13 +54,14 @@ class CouponService: CouponServiceType {
     }
     
     func buyCoupon(coupon: CouponModel) -> Observable<Result<CouponModel, FirebaseStoreError>> {
+        var mutatingCoupon = coupon
         guard let user = UserEventService.shared.user.value else {
             return .just(.failure(FirebaseStoreError.serializeError))
         }
         guard let userCredit = user.userCredit?.currentCredit else {
             return .just(.failure(FirebaseStoreError.serializeError))
         }
-        guard let couponCredit = coupon.numOfCredit else {
+        guard let couponCredit = mutatingCoupon.numOfCredit else {
             return .just(.failure(FirebaseStoreError.serializeError))
         }
         if userCredit < couponCredit {
@@ -69,10 +70,12 @@ class CouponService: CouponServiceType {
             LocalNotificationView.shared.showError(title, body: body)
             return .just(.failure(FirebaseStoreError.serializeError))
         }
+        if !mutatingCoupon.users.contains(user.id) {
+            mutatingCoupon.users.append(user.id)
+        }
         
         return Database.database().reference()
-            .child(Constants.userCoupons)
-            .child(user.id)
-            .storeObject(coupon)
+            .child(Constants.coupons)
+            .update(mutatingCoupon)
     }
 }
