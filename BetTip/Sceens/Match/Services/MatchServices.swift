@@ -12,7 +12,7 @@ import FirebaseDatabase
 import Result
 
 protocol MatchServiceType {
-    func getMatches(matchType: Int, isSpecial: Bool?) -> Observable<[MatchModel]>
+    func getMatches(matchType: Int) -> Observable<[MatchModel]>
     func addMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>>
     func updateMatch(match: MatchModel) -> Observable<Result<MatchModel, FirebaseStoreError>>
     func deleteMatch(match: MatchModel) -> Observable<Bool>
@@ -20,7 +20,7 @@ protocol MatchServiceType {
 
 class MatchService: MatchServiceType {    
     
-    func getMatches(matchType: Int, isSpecial: Bool? = false) -> Observable<[MatchModel]> {
+    func getMatches(matchType: Int) -> Observable<[MatchModel]> {
         let matches: Observable<[MatchModel]> = Database.database().reference()
             .child(Constants.matches)
             .queryOrdered(byChild: Constants.type)

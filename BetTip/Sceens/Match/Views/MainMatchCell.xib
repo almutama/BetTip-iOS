@@ -39,19 +39,19 @@
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="mL9-Xf-4Px"/>
-                                <exclude reference="ZEI-82-ZH1"/>
-                                <exclude reference="uhY-AV-m5I"/>
                                 <exclude reference="0bO-57-nf3"/>
-                                <exclude reference="hRh-jQ-HAs"/>
                                 <exclude reference="WEI-jA-lR1"/>
+                                <exclude reference="ZEI-82-ZH1"/>
+                                <exclude reference="hRh-jQ-HAs"/>
+                                <exclude reference="mL9-Xf-4Px"/>
+                                <exclude reference="uhY-AV-m5I"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="constraints">
+                                <exclude reference="0bO-57-nf3"/>
                                 <include reference="mL9-Xf-4Px"/>
                                 <include reference="uhY-AV-m5I"/>
-                                <exclude reference="0bO-57-nf3"/>
                             </mask>
                         </variation>
                     </label>
@@ -68,16 +68,16 @@
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="uNW-iL-bc2"/>
-                                <exclude reference="nth-84-YJ5"/>
                                 <exclude reference="LCy-9C-aae"/>
+                                <exclude reference="nth-84-YJ5"/>
+                                <exclude reference="uNW-iL-bc2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="constraints">
-                                <include reference="uNW-iL-bc2"/>
-                                <exclude reference="ajK-m5-aq5"/>
                                 <include reference="LCy-9C-aae"/>
+                                <exclude reference="ajK-m5-aq5"/>
+                                <include reference="uNW-iL-bc2"/>
                             </mask>
                         </variation>
                     </label>
@@ -100,17 +100,17 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="xrt-ok-Woa"/>
-                                        <exclude reference="KG8-LE-f8o"/>
-                                        <exclude reference="2bd-AF-mGh"/>
                                         <exclude reference="2P0-Ke-wHi"/>
+                                        <exclude reference="2bd-AF-mGh"/>
+                                        <exclude reference="KG8-LE-f8o"/>
+                                        <exclude reference="xrt-ok-Woa"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                     <mask key="constraints">
-                                        <include reference="KG8-LE-f8o"/>
                                         <include reference="2P0-Ke-wHi"/>
+                                        <include reference="KG8-LE-f8o"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -129,8 +129,8 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Ig1-rM-xZ3"/>
                                         <exclude reference="3oY-vn-vhv"/>
+                                        <exclude reference="Ig1-rM-xZ3"/>
                                         <exclude reference="Sxl-Jq-Dup"/>
                                     </mask>
                                 </variation>
@@ -156,8 +156,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="ydi-AE-KQv"/>
                                         <exclude reference="pBv-ou-VQS"/>
+                                        <exclude reference="ydi-AE-KQv"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -183,18 +183,18 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Otz-iZ-qMF"/>
-                                        <exclude reference="Gyi-3W-b2D"/>
-                                        <exclude reference="y1I-vs-iOy"/>
                                         <exclude reference="3pW-TF-aZ5"/>
+                                        <exclude reference="Gyi-3W-b2D"/>
+                                        <exclude reference="Otz-iZ-qMF"/>
                                         <exclude reference="ph0-ko-nRl"/>
+                                        <exclude reference="y1I-vs-iOy"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="y1I-vs-iOy"/>
                                         <exclude reference="7J2-qG-0qs"/>
                                         <include reference="ph0-ko-nRl"/>
+                                        <include reference="y1I-vs-iOy"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -213,17 +213,17 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="BzB-jG-cE3"/>
-                                        <exclude reference="2yc-GQ-9Zy"/>
-                                        <exclude reference="FjW-Wu-adU"/>
-                                        <exclude reference="1yQ-0k-boj"/>
                                         <exclude reference="0UW-Ez-qYo"/>
+                                        <exclude reference="1yQ-0k-boj"/>
+                                        <exclude reference="2yc-GQ-9Zy"/>
+                                        <exclude reference="BzB-jG-cE3"/>
+                                        <exclude reference="FjW-Wu-adU"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="BzB-jG-cE3"/>
                                         <include reference="2yc-GQ-9Zy"/>
+                                        <include reference="BzB-jG-cE3"/>
                                         <exclude reference="vcl-8y-Zbx"/>
                                     </mask>
                                 </variation>
@@ -266,15 +266,15 @@
                                 <exclude reference="qxl-rz-zHU"/>
                                 <exclude reference="ACB-B2-0gg"/>
                                 <exclude reference="obD-GA-rNs"/>
+                                <exclude reference="EjN-JF-4js"/>
                                 <exclude reference="Tat-2u-8Tc"/>
                                 <exclude reference="lqq-A3-Oj4"/>
-                                <exclude reference="EjN-JF-4js"/>
                                 <exclude reference="JWC-os-0Kn"/>
                                 <exclude reference="KKW-7X-27X"/>
                                 <exclude reference="R86-GW-lm0"/>
                                 <exclude reference="uU4-Ae-zw0"/>
-                                <exclude reference="jT1-nc-J1L"/>
                                 <exclude reference="W8B-ZY-73J"/>
+                                <exclude reference="jT1-nc-J1L"/>
                                 <exclude reference="kLs-V3-PrV"/>
                             </mask>
                         </variation>
@@ -298,22 +298,22 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="vkM-DK-APP"/>
+                                        <exclude reference="3Hz-FX-zSa"/>
                                         <exclude reference="4qa-NK-6Em"/>
                                         <exclude reference="Bd5-wY-ock"/>
                                         <exclude reference="fat-NK-4nF"/>
-                                        <exclude reference="3Hz-FX-zSa"/>
                                         <exclude reference="kTh-nQ-GYN"/>
+                                        <exclude reference="vkM-DK-APP"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="vkM-DK-APP"/>
-                                        <include reference="Bd5-wY-ock"/>
-                                        <exclude reference="fat-NK-4nF"/>
-                                        <exclude reference="THA-Vg-kKK"/>
                                         <include reference="3Hz-FX-zSa"/>
+                                        <include reference="Bd5-wY-ock"/>
+                                        <exclude reference="THA-Vg-kKK"/>
+                                        <exclude reference="fat-NK-4nF"/>
                                         <exclude reference="kTh-nQ-GYN"/>
+                                        <include reference="vkM-DK-APP"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -333,22 +333,22 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="9gt-PI-k0j"/>
-                                        <exclude reference="kGb-ml-sKr"/>
-                                        <exclude reference="pur-am-bSa"/>
-                                        <exclude reference="lDf-od-9On"/>
                                         <exclude reference="7fn-c8-NPN"/>
+                                        <exclude reference="9gt-PI-k0j"/>
                                         <exclude reference="GfZ-sD-zFt"/>
+                                        <exclude reference="kGb-ml-sKr"/>
+                                        <exclude reference="lDf-od-9On"/>
+                                        <exclude reference="pur-am-bSa"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
+                                        <exclude reference="61U-7R-mQT"/>
+                                        <exclude reference="7fn-c8-NPN"/>
                                         <exclude reference="9gt-PI-k0j"/>
+                                        <include reference="GfZ-sD-zFt"/>
                                         <include reference="kGb-ml-sKr"/>
                                         <include reference="lDf-od-9On"/>
-                                        <exclude reference="7fn-c8-NPN"/>
-                                        <include reference="GfZ-sD-zFt"/>
-                                        <exclude reference="61U-7R-mQT"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -368,22 +368,22 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="HIn-jT-xR2"/>
-                                        <exclude reference="v6R-Oy-4S5"/>
-                                        <exclude reference="O2R-9h-NQL"/>
-                                        <exclude reference="y0o-ad-l0f"/>
-                                        <exclude reference="PzD-4c-Qjf"/>
                                         <exclude reference="0UQ-nI-qxS"/>
+                                        <exclude reference="HIn-jT-xR2"/>
+                                        <exclude reference="O2R-9h-NQL"/>
+                                        <exclude reference="PzD-4c-Qjf"/>
+                                        <exclude reference="v6R-Oy-4S5"/>
+                                        <exclude reference="y0o-ad-l0f"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
-                                        <exclude reference="MGL-I4-UF3"/>
                                         <include reference="HIn-jT-xR2"/>
-                                        <exclude reference="v6R-Oy-4S5"/>
+                                        <exclude reference="MGL-I4-UF3"/>
                                         <include reference="O2R-9h-NQL"/>
-                                        <exclude reference="y0o-ad-l0f"/>
                                         <include reference="PzD-4c-Qjf"/>
+                                        <exclude reference="v6R-Oy-4S5"/>
+                                        <exclude reference="y0o-ad-l0f"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -405,8 +405,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="ke9-cF-yW6"/>
                                 <exclude reference="Qfk-p8-Uhk"/>
+                                <exclude reference="ke9-cF-yW6"/>
                             </mask>
                         </variation>
                     </view>
@@ -441,6 +441,7 @@
                 <outlet property="dateLbl" destination="bdN-vs-qsX" id="zWz-hC-bzI"/>
                 <outlet property="homeLbl" destination="Eol-qE-alk" id="c1y-ts-QMe"/>
                 <outlet property="iddaaIdLbl" destination="W6t-ne-IhU" id="Tfn-Jz-1l7"/>
+                <outlet property="isSpecialView" destination="G7A-1u-lcq" id="ds9-nb-1GW"/>
                 <outlet property="leagueLbl" destination="5So-p5-bGY" id="9tC-CG-tIG"/>
                 <outlet property="oddLbl" destination="cO0-Hr-JtO" id="JLj-0d-zVG"/>
                 <outlet property="siteLbl" destination="p09-Gf-wC1" id="5Q9-B4-7RD"/>

@@ -22,6 +22,7 @@ class MatchCell: UITableViewCell, Reusable {
     @IBOutlet weak var oddLbl: StyledLabel!
     @IBOutlet weak var statusImg: UIImageView!
     @IBOutlet weak var siteLbl: StyledLabel!
+    @IBOutlet weak var isSpecialView: UIView!
     
     var disposeBag = DisposeBag()
     var viewModel: Variable<MatchModel> = Variable<MatchModel>.init(MatchModel.init()) {
@@ -52,6 +53,12 @@ class MatchCell: UITableViewCell, Reusable {
                                 self.statusImg.image = Asset.lost.image
                             } else {
                                 self.statusImg.image = Asset.won.image
+                            }
+                        }
+                        
+                        if let isSpecial = entity.isSpecial {
+                            if isSpecial == true {
+                                self.isSpecialView.backgroundColor = .secondary
                             }
                         }
                     }
