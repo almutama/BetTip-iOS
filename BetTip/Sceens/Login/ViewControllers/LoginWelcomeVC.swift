@@ -11,12 +11,23 @@ import RxSwift
 
 class LoginWelcomeVC: BaseViewController {
     
+    @IBOutlet weak var welcomeTitleLbl: UILabel!
+    @IBOutlet weak var signInBtn: StyledButton!
+    @IBOutlet weak var signUpBtn: StyledButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareUI()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func prepareUI() {
+        self.welcomeTitleLbl.text = L10n.Login.Welcome.title
+        self.signInBtn.setTitle(L10n.Login.Welcome.signIn, for: .normal)
+        self.signUpBtn.setTitle(L10n.Login.Welcome.signUp, for: .normal)
     }
 }
 

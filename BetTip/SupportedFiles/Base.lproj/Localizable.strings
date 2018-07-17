@@ -130,5 +130,5 @@
 "Login.SignUp.SignUpButton" = "SIGN UP";
 
 "Login.Forgot.Email" = "Email";
-"Login.SignUp.Message" = "Please enter your email address below to receive your password reset instructions";
+"Login.Forgot.Desc" = "Please enter your email address below to receive your password reset instructions";
 "Login.Forgot.Send" = "SEND";

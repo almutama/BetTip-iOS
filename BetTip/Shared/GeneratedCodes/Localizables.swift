@@ -139,6 +139,8 @@ internal enum L10n {
   internal enum Login {
 
     internal enum Forgot {
+      /// Please enter your email address below to receive your password reset instructions
+      internal static let desc = L10n.tr("Localizable", "Login.Forgot.Desc")
       /// Email
       internal static let email = L10n.tr("Localizable", "Login.Forgot.Email")
       /// SEND
@@ -161,8 +163,6 @@ internal enum L10n {
       internal static let confirm = L10n.tr("Localizable", "Login.SignUp.Confirm")
       /// Email *
       internal static let email = L10n.tr("Localizable", "Login.SignUp.Email")
-      /// Please enter your email address below to receive your password reset instructions
-      internal static let message = L10n.tr("Localizable", "Login.SignUp.Message")
       /// Password *
       internal static let password = L10n.tr("Localizable", "Login.SignUp.Password")
       /// * Required fields

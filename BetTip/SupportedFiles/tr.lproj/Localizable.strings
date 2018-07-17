@@ -130,5 +130,5 @@
 "Login.SignUp.SignUpButton" = "KAYIT OL";
 
 "Login.Forgot.Email" = "Email";
-"Login.SignUp.Message" = "Lütfen şifre hatırlatma işlemini başlatabilmek için email adresinizi girin.";
+"Login.Forgot.Desc" = "Lütfen şifre hatırlatma işlemini başlatabilmek için email adresinizi girin.";
 "Login.Forgot.Send" = "GÖNDER";
