@@ -419,6 +419,7 @@
 		B0FB089020FE8700001301C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B0FB089120FE870B001301C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B0FB089220FE8C3A001301C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0FB089420FE8CE7001301C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Football.storyboard; sourceTree = "<group>"; };
 		B0FE4A491FBAD518008F2EE6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -1878,6 +1879,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B08A457E1F9DD5430082BDD3 /* Base */,
+				B0FB089420FE8CE7001301C0 /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

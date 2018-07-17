@@ -25,6 +25,12 @@
 "Common.Buy" = "Buy";
 "Common.ID" = "Product ID, '.' '#' '$' '[' or ']'' don't use!";
 
+"Common.Tab.Football" = "Football";
+"Common.Tab.Basketball" = "Basketball";
+"Common.Tab.Coupon" = "Coupon";
+"Common.Tab.Premium" = "Premium";
+"Common.Tab.More" = "More";
+
 "Role.User" = "User";
 "Role.Moderator" = "Moderator";
 "Role.Admin" = "Administrator";

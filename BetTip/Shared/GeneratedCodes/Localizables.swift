@@ -93,6 +93,19 @@ internal enum L10n {
       /// Process has been finished successfully.
       internal static let success = L10n.tr("Localizable", "Common.Process.Success")
     }
+
+    internal enum Tab {
+      /// Basketball
+      internal static let basketball = L10n.tr("Localizable", "Common.Tab.Basketball")
+      /// Coupon
+      internal static let coupon = L10n.tr("Localizable", "Common.Tab.Coupon")
+      /// Football
+      internal static let football = L10n.tr("Localizable", "Common.Tab.Football")
+      /// More
+      internal static let more = L10n.tr("Localizable", "Common.Tab.More")
+      /// Premium
+      internal static let premium = L10n.tr("Localizable", "Common.Tab.Premium")
+    }
   }
 
   internal enum Coupon {

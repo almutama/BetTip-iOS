@@ -25,6 +25,12 @@
 "Common.Buy" = "Satın Al";
 "Common.ID" = "Ürün ID, '.' '#' '$' '[' yada ']'' girmeyin!";
 
+"Common.Tab.Football" = "Futbol";
+"Common.Tab.Basketball" = "Basketbol";
+"Common.Tab.Coupon" = "Kupon";
+"Common.Tab.Premium" = "Premium";
+"Common.Tab.More" = "Daha";
+
 "Role.User" = "Kullanıcı";
 "Role.Moderator" = "Moderatör";
 "Role.Admin" = "Yönetici";
