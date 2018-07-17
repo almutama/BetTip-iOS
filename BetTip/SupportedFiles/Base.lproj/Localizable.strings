@@ -113,3 +113,22 @@
 "Coupon.BuyCoupon" = " credits will be transfered from your wallet.";
 "Coupon.NotEnoughTitle" = "Credit Not Enough";
 "Coupon.NotEnough" = "Your credit is not enough to buy this coupon.";
+
+"Login.Welcome.Title" = "BET TIP";
+"Login.Welcome.SignIn" = "SIGN IN";
+"Login.Welcome.SignUp" = "SIGN UP";
+
+"Login.SignIn.Email" = "Email";
+"Login.SignIn.Password" = "Password";
+"Login.SignIn.Forgot" = "Forgot your password?";
+"Login.SignIn.SignInButton" = "SIGN IN";
+
+"Login.SignUp.Email" = "Email *";
+"Login.SignUp.Password" = "Password *";
+"Login.SignUp.Confirm" = "Confirm *";
+"Login.SignUp.Required" = "* Required fields";
+"Login.SignUp.SignUpButton" = "SIGN UP";
+
+"Login.Forgot.Email" = "Email";
+"Login.SignUp.Message" = "Please enter your email address below to receive your password reset instructions";
+"Login.Forgot.Send" = "SEND";

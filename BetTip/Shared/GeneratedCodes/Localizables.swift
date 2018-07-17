@@ -136,6 +136,51 @@ internal enum L10n {
     internal static let updateCredit = L10n.tr("Localizable", "Credit.UpdateCredit")
   }
 
+  internal enum Login {
+
+    internal enum Forgot {
+      /// Email
+      internal static let email = L10n.tr("Localizable", "Login.Forgot.Email")
+      /// SEND
+      internal static let send = L10n.tr("Localizable", "Login.Forgot.Send")
+    }
+
+    internal enum Signin {
+      /// Email
+      internal static let email = L10n.tr("Localizable", "Login.SignIn.Email")
+      /// Forgot your password?
+      internal static let forgot = L10n.tr("Localizable", "Login.SignIn.Forgot")
+      /// Password
+      internal static let password = L10n.tr("Localizable", "Login.SignIn.Password")
+      /// SIGN IN
+      internal static let signInButton = L10n.tr("Localizable", "Login.SignIn.SignInButton")
+    }
+
+    internal enum Signup {
+      /// Confirm *
+      internal static let confirm = L10n.tr("Localizable", "Login.SignUp.Confirm")
+      /// Email *
+      internal static let email = L10n.tr("Localizable", "Login.SignUp.Email")
+      /// Please enter your email address below to receive your password reset instructions
+      internal static let message = L10n.tr("Localizable", "Login.SignUp.Message")
+      /// Password *
+      internal static let password = L10n.tr("Localizable", "Login.SignUp.Password")
+      /// * Required fields
+      internal static let `required` = L10n.tr("Localizable", "Login.SignUp.Required")
+      /// SIGN UP
+      internal static let signUpButton = L10n.tr("Localizable", "Login.SignUp.SignUpButton")
+    }
+
+    internal enum Welcome {
+      /// SIGN IN
+      internal static let signIn = L10n.tr("Localizable", "Login.Welcome.SignIn")
+      /// SIGN UP
+      internal static let signUp = L10n.tr("Localizable", "Login.Welcome.SignUp")
+      /// BET TIP
+      internal static let title = L10n.tr("Localizable", "Login.Welcome.Title")
+    }
+  }
+
   internal enum Match {
     /// Basketball
     internal static let basketball = L10n.tr("Localizable", "Match.Basketball")

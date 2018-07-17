@@ -114,3 +114,21 @@
 "Coupon.NotEnoughTitle" = "Yetersiz Kredi";
 "Coupon.NotEnough" = "Krediniz bu kuponu satın almak için yeterli değil.";
 
+"Login.Welcome.Title" = "FIRSAT BAHİS";
+"Login.Welcome.SignIn" = "GİRİŞ YAP";
+"Login.Welcome.SignUp" = "KAYIT OL";
+
+"Login.SignIn.Email" = "Email";
+"Login.SignIn.Password" = "Şifre";
+"Login.SignIn.Forgot" = "Şifreni mi unuttun?";
+"Login.SignIn.SignInButton" = "GİRİŞ YAP";
+
+"Login.SignUp.Email" = "Email *";
+"Login.SignUp.Password" = "Şifre *";
+"Login.SignUp.Confirm" = "Şifre Tekrar *";
+"Login.SignUp.Required" = "* Gerekli alanlar";
+"Login.SignUp.SignUpButton" = "KAYIT OL";
+
+"Login.Forgot.Email" = "Email";
+"Login.SignUp.Message" = "Lütfen şifre hatırlatma işlemini başlatabilmek için email adresinizi girin.";
+"Login.Forgot.Send" = "GÖNDER";
