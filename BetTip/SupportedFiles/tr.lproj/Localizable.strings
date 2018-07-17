@@ -6,6 +6,7 @@
   Copyright © 2017 Haydar Karkin. All rights reserved.
 */
 
+"Common.Title" = "FIRSAT BAHİS";
 "Common.TryAgainLater" = "Lütfen tekrar deneyiniz.";
 "Common.Loading" = "Yükleniyor ..";
 "Common.OK" = "Tamam";

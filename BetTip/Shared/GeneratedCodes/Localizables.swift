@@ -78,6 +78,8 @@ internal enum L10n {
     internal static let success = L10n.tr("Localizable", "Common.Success")
     /// Are you sure?
     internal static let sure = L10n.tr("Localizable", "Common.Sure")
+    /// BET TIP
+    internal static let title = L10n.tr("Localizable", "Common.Title")
     /// Please try again later.
     internal static let tryAgainLater = L10n.tr("Localizable", "Common.TryAgainLater")
     /// Update

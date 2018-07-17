@@ -198,6 +198,7 @@
 		B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */; };
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
+		B0FB088C20FE86E8001301C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0FB088E20FE86E8001301C0 /* InfoPlist.strings */; };
 		B0FE4A441FBAD4EB008F2EE6 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */; };
 		B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */; };
 		B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A491FBAD518008F2EE6 /* Login.storyboard */; };
@@ -415,6 +416,9 @@
 		B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewAnimation.swift; sourceTree = "<group>"; };
+		B0FB089020FE8700001301C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0FB089120FE870B001301C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0FB089220FE8C3A001301C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Football.storyboard; sourceTree = "<group>"; };
 		B0FE4A491FBAD518008F2EE6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -1053,6 +1057,7 @@
 				B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */,
 				B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */,
 				B0A7AA2D1FCC23D300DC4F62 /* Localizable.strings */,
+				B0FB088E20FE86E8001301C0 /* InfoPlist.strings */,
 			);
 			path = SupportedFiles;
 			sourceTree = "<group>";
@@ -1406,6 +1411,7 @@
 				B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */,
 				B08D42162047498900426276 /* MatchCell.xib in Resources */,
 				B02EEA0C20B1CD6F0079A930 /* AdBannerView.xib in Resources */,
+				B0FB088C20FE86E8001301C0 /* InfoPlist.strings in Resources */,
 				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
 				B05063B41FE5A221004CECEC /* Coupon.storyboard in Resources */,
 				B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */,
@@ -1891,6 +1897,16 @@
 				B0A7AA311FCC54FF00DC4F62 /* Base */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B0FB088E20FE86E8001301C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0FB089020FE8700001301C0 /* Base */,
+				B0FB089120FE870B001301C0 /* tr */,
+				B0FB089220FE8C3A001301C0 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

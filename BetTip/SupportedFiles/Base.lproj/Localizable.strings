@@ -6,6 +6,7 @@
   Copyright © 2017 Haydar Karkin. All rights reserved.
 */
 
+"Common.Title" = "BET TIP";
 "Common.TryAgainLater" = "Please try again later.";
 "Common.Loading" = "Loading ..";
 "Common.OK" = "OK";
