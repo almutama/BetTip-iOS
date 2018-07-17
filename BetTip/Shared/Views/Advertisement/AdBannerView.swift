@@ -107,17 +107,19 @@ class AdBannerView: NibView, AdBannerViewType {
     func showBanner(initComplete: @escaping (Bool) -> Void) {
         self.showSpecificAd { result in
             guard let adModel = result else { return }
-            print("adModel: \(adModel)")
+            logger.log(.debug, "adModel: \(adModel)")
             guard let imgPath = adModel.imgPath, let adURL = adModel.adURL else { return }
             self.adURL = adURL
             
             self.getBannerImgURL(imgPath: imgPath) { result in
                 guard let imgURL = result else { return }
-                print("imgURL: \(imgURL)")
+                logger.log(.debug, "imgURL: \(imgURL)")
                 
                 self.bannerImageView.kf.setImage(with: imgURL) { (img, error, _, _) in
-                    print(error?.localizedDescription ?? "")
-                    print(img?.accessibilityIdentifier ?? "test")
+                    if error != nil {
+                        logger.log(.error, error?.localizedDescription ?? "there is an error for getting banner image")
+                    }
+                    
                     if img != nil {
                         initComplete(true)
                     } else {
