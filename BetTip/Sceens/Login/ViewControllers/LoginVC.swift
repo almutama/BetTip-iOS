@@ -13,20 +13,31 @@ import RxOptional
 
 class LoginVC: BaseViewController {
     
+    @IBOutlet weak var emailLbl: StyledLabel!
+    @IBOutlet weak var passwordLbl: StyledLabel!
     @IBOutlet weak var mailTextField: StyledTextField!
     @IBOutlet weak var passwordTextField: StyledTextField!
-    @IBOutlet var signInBtn: StyledButton!
+    @IBOutlet weak var signInBtn: StyledButton!
+    @IBOutlet weak var forgotBtn: StyledButton!
     
     var viewModel: LoginVMType!
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareUI()
         self.bindViewModel()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func prepareUI() {
+        self.emailLbl.text = L10n.Login.Signin.email
+        self.passwordLbl.text = L10n.Login.Signin.password
+        self.signInBtn.setTitle(L10n.Login.Signin.signInButton, for: .normal)
+        self.forgotBtn.setTitle(L10n.Login.Signin.forgot, for: .normal)
     }
     
     func bindViewModel() {

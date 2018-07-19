@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FIRSAT BAHİS-->
+        <!--UserVC-->
         <scene sceneID="HvK-br-WAi">
             <objects>
                 <viewController id="a87-DW-yzi" customClass="UserVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,16 +26,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="334.5" height="53.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwc-NR-91B" userLabel="Your Mail:">
-                                                <rect key="frame" x="8" y="16" width="100" height="21.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="B93-nm-Btj"/>
-                                                </constraints>
+                                                <rect key="frame" x="8" y="16" width="86" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="example@mail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="rI1-lX-suI" userLabel="current label" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
-                                                <rect key="frame" x="118" y="16" width="216.5" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="example@mail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="rI1-lX-suI" userLabel="current label" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                <rect key="frame" x="104" y="16" width="230.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -52,17 +49,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7z-XB-wJB">
                                         <rect key="frame" x="0.0" y="53.5" width="334.5" height="53.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Credit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEp-2q-FnK">
-                                                <rect key="frame" x="8" y="16" width="135" height="21.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="135" id="fGy-4J-Rkc"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Credit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEp-2q-FnK" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="16" width="130.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRn-ax-peE" userLabel="current label" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
-                                                <rect key="frame" x="153" y="16.5" width="12" height="21.5"/>
+                                                <rect key="frame" x="148.5" y="16.5" width="12" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -78,11 +72,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0r-0Z-cM9">
                                         <rect key="frame" x="0.0" y="107" width="334.5" height="53.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spent Credit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdU-l0-3un">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spent Credit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdU-l0-3un" customClass="StyledLabel" customModule="BetTip" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="16" width="115" height="21.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="115" id="0gR-Gq-XRK"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -104,7 +95,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="My4-Lz-ir3">
                                         <rect key="frame" x="0.0" y="160.5" width="334.5" height="53.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6N-nI-y9e">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6N-nI-y9e" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="4" width="301.5" height="45.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="My Coupons">
@@ -172,7 +163,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fc0-WT-LHZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FIRSAT BAHİS" id="gtY-9g-3qY">
+                    <navigationItem key="navigationItem" id="gtY-9g-3qY">
                         <barButtonItem key="backBarButtonItem" title=" " id="ugh-76-3OS"/>
                         <barButtonItem key="rightBarButtonItem" id="m9N-dg-icC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jyQ-yN-8k9" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
@@ -187,10 +178,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="currentCrdtTitleLbl" destination="AEp-2q-FnK" id="0J5-Da-ish"/>
                         <outlet property="currentCreditLbl" destination="HRn-ax-peE" id="KQI-ai-AWb"/>
                         <outlet property="logoutButton" destination="jyQ-yN-8k9" id="3c7-EJ-LWb"/>
                         <outlet property="mailLbl" destination="rI1-lX-suI" id="gtn-o9-jZ4"/>
+                        <outlet property="mailTitleLbl" destination="Hwc-NR-91B" id="Y6m-39-z1J"/>
+                        <outlet property="myCouponsBtn" destination="h6N-nI-y9e" id="f5h-o9-wnR"/>
                         <outlet property="usedCreditLbl" destination="QkX-uX-hfE" id="e4w-c5-18Y"/>
+                        <outlet property="usedCrtTitleLbl" destination="RdU-l0-3un" id="rUW-JN-sd5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzA-Cx-JlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

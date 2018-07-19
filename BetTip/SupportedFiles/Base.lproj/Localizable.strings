@@ -6,6 +6,7 @@
   Copyright © 2017 Haydar Karkin. All rights reserved.
 */
 
+"Common.Title" = "BET TIP";
 "Common.TryAgainLater" = "Please try again later.";
 "Common.Loading" = "Loading ..";
 "Common.OK" = "OK";
@@ -23,6 +24,12 @@
 "Common.Process.Error" = "Process couldn't be finished.";
 "Common.Buy" = "Buy";
 "Common.ID" = "Product ID, '.' '#' '$' '[' or ']'' don't use!";
+
+"Common.Tab.Football" = "Football";
+"Common.Tab.Basketball" = "Basketball";
+"Common.Tab.Coupon" = "Coupon";
+"Common.Tab.Premium" = "Premium";
+"Common.Tab.More" = "More";
 
 "Role.User" = "User";
 "Role.Moderator" = "Moderator";
@@ -106,3 +113,29 @@
 "Coupon.BuyCoupon" = " credits will be transfered from your wallet.";
 "Coupon.NotEnoughTitle" = "Credit Not Enough";
 "Coupon.NotEnough" = "Your credit is not enough to buy this coupon.";
+
+//Screens
+"Login.Welcome.Title" = "BET TIP";
+"Login.Welcome.SignIn" = "SIGN IN";
+"Login.Welcome.SignUp" = "SIGN UP";
+
+"Login.SignIn.Email" = "Email:";
+"Login.SignIn.Password" = "Password";
+"Login.SignIn.Forgot" = "Forgot your password?";
+"Login.SignIn.SignInButton" = "SIGN IN";
+
+"Login.SignUp.Email" = "Email *";
+"Login.SignUp.Password" = "Password *";
+"Login.SignUp.Confirm" = "Confirm *";
+"Login.SignUp.Required" = "* Required fields";
+"Login.SignUp.SignUpButton" = "SIGN UP";
+
+"Login.Forgot.Email" = "Email";
+"Login.Forgot.Desc" = "Please enter your email address below to receive your password reset instructions";
+"Login.Forgot.Send" = "SEND";
+
+"User.More.Logout" = "Logout";
+"User.More.Email" = "Email";
+"User.More.CurrentCredit" = "Current Credit:";
+"User.More.SpentCredit" = "Spent Credit:";
+"User.More.MyCoupons" = "My Coupons";

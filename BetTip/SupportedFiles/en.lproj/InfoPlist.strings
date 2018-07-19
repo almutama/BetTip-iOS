@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  BetTip
+
+  Created by Haydar Karkin on 17.07.2018.
+  Copyright © 2018 Haydar Karkin. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Bet Tip";
+"CFBundleName" = "Bet Tip";

@@ -30,7 +30,7 @@ class CouponsVC: BaseViewController {
     }
     
     func prepareUI() {
-        self.navigationItem.title = "FIRSAT BAHİS"
+        self.navigationItem.title = L10n.Common.title
         
         // CollectionView
         let layout = UICollectionViewFlowLayout()

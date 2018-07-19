@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2C-VJ-hqa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2C-VJ-hqa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -103,6 +103,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qcg-PE-nkz"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="signInBtn" destination="Ehj-bU-rtw" id="ex1-Er-agA"/>
+                        <outlet property="signUpBtn" destination="Gt2-g2-1DM" id="l16-wi-oce"/>
+                        <outlet property="welcomeTitleLbl" destination="VPi-mO-D3S" id="7a0-b1-Sb7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GST-OM-hJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,7 +245,10 @@
                         <viewLayoutGuide key="safeArea" id="zgY-t2-Gp0"/>
                     </view>
                     <connections>
+                        <outlet property="emailLbl" destination="NNG-Hn-uGc" id="EHu-pe-Mih"/>
+                        <outlet property="forgotBtn" destination="ziH-Xj-yXl" id="ghQ-c1-7vR"/>
                         <outlet property="mailTextField" destination="h1H-6F-JbR" id="a8j-qn-8pV"/>
+                        <outlet property="passwordLbl" destination="vTT-xZ-yzc" id="P2v-tR-JWe"/>
                         <outlet property="passwordTextField" destination="WKL-ND-wMR" id="86V-o7-d4N"/>
                         <outlet property="signInBtn" destination="Son-39-5ke" id="lVa-ud-GeS"/>
                         <segue destination="Av0-bH-kBb" kind="show" identifier="forgorPasswordSegue" id="1xN-R8-azN"/>
@@ -357,7 +365,10 @@
                         <viewLayoutGuide key="safeArea" id="aQd-du-MsG"/>
                     </view>
                     <connections>
+                        <outlet property="descLbl" destination="2qK-UB-SEt" id="qah-dU-cX3"/>
+                        <outlet property="emailLbl" destination="BsD-c2-Emf" id="Fx3-Ww-SaR"/>
                         <outlet property="mailTextField" destination="lxW-5p-YLu" id="wS9-8n-Xf7"/>
+                        <outlet property="sendBtn" destination="nZr-so-0Re" id="zX6-d1-qFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hO7-Vr-s29" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -541,9 +552,13 @@
                         <viewLayoutGuide key="safeArea" id="fcw-1t-mLA"/>
                     </view>
                     <connections>
+                        <outlet property="confirmLbl" destination="LNW-Nf-6gm" id="fWn-m9-i1U"/>
                         <outlet property="confirmTextField" destination="fUr-ik-W8m" id="ayC-as-Vvb"/>
+                        <outlet property="emailLbl" destination="hxU-ht-9oY" id="fJ0-mp-o4J"/>
                         <outlet property="mailTextField" destination="vQI-U9-fvp" id="tL7-56-ZPw"/>
+                        <outlet property="passwordLbl" destination="6oi-6y-iJb" id="lHu-im-zyf"/>
                         <outlet property="passwordTextField" destination="l09-bf-s11" id="dhT-dF-7CL"/>
+                        <outlet property="requiredLbl" destination="b7E-v1-NK9" id="Fcw-S7-RoG"/>
                         <outlet property="signUpBtn" destination="YE7-oN-QVu" id="8va-La-jVK"/>
                     </connections>
                 </viewController>

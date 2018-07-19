@@ -12,6 +12,10 @@ import RxCocoa
 
 class RegisterVC: BaseViewController {
     
+    @IBOutlet weak var requiredLbl: StyledLabel!
+    @IBOutlet weak var emailLbl: StyledLabel!
+    @IBOutlet weak var passwordLbl: StyledLabel!
+    @IBOutlet weak var confirmLbl: StyledLabel!
     @IBOutlet weak var mailTextField: StyledTextField!
     @IBOutlet weak var passwordTextField: StyledTextField!
     @IBOutlet weak var confirmTextField: StyledTextField!
@@ -22,6 +26,7 @@ class RegisterVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareUI()
         self.bindViewModel()
     }
     
@@ -29,6 +34,14 @@ class RegisterVC: BaseViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func prepareUI() {
+        self.emailLbl.text = L10n.Login.Signup.email
+        self.passwordLbl.text = L10n.Login.Signup.password
+        self.confirmLbl.text = L10n.Login.Signup.confirm
+        self.requiredLbl.text = L10n.Login.Signup.required
+        self.signUpBtn.setTitle(L10n.Login.Signup.signUpButton, for: .normal)
+    }
+
     func bindViewModel() {
         let username = mailTextField.rx.text
             .orEmpty

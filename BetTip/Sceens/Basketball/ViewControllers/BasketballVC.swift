@@ -34,7 +34,7 @@ class BasketballVC: BaseViewController {
     }
     
     func prepareUI() {
-        self.navigationItem.title = "FIRSAT BAHİS"
+        self.navigationItem.title = L10n.Common.title
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout

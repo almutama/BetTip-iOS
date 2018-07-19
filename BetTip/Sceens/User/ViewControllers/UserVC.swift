@@ -19,6 +19,10 @@ class UserVC: BaseViewController {
     @IBOutlet weak var mailLbl: StyledLabel!
     @IBOutlet weak var currentCreditLbl: StyledLabel!
     @IBOutlet weak var usedCreditLbl: StyledLabel!
+    @IBOutlet weak var mailTitleLbl: StyledLabel!
+    @IBOutlet weak var currentCrdtTitleLbl: StyledLabel!
+    @IBOutlet weak var usedCrtTitleLbl: StyledLabel!
+    @IBOutlet weak var myCouponsBtn: StyledButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,9 +95,15 @@ class UserVC: BaseViewController {
     }
     
     func prepareUI() {
-        self.navigationItem.title = "FIRSAT BAHİS"
+        self.navigationItem.title = L10n.Common.title
         self.logoutButton.layer.cornerRadius = 5
         self.logoutButton.clipsToBounds = true
+        
+        self.mailTitleLbl.text = L10n.User.More.email
+        self.currentCrdtTitleLbl.text = L10n.User.More.currentCredit
+        self.usedCrtTitleLbl.text = L10n.User.More.spentCredit
+        self.logoutButton.setTitle(L10n.User.More.logout, for: .normal)
+        self.myCouponsBtn.setTitle(L10n.User.More.myCoupons, for: .normal)
     }
 }
 

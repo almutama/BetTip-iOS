@@ -34,7 +34,14 @@ class FootballVC: BaseViewController {
     }
     
     func prepareUI() {
-        self.navigationItem.title = "FIRSAT BAHİS"
+        self.navigationItem.title = L10n.Common.title
+        
+        self.tabBarController?.tabBar.items![0].title = L10n.Common.Tab.football
+        self.tabBarController?.tabBar.items![1].title = L10n.Common.Tab.basketball
+        self.tabBarController?.tabBar.items![2].title = L10n.Common.Tab.coupon
+        self.tabBarController?.tabBar.items![3].title = L10n.Common.Tab.premium
+        self.tabBarController?.tabBar.items![4].title = L10n.Common.Tab.more
+        
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width-20, height: 100)
         self.collectionView.collectionViewLayout =  layout

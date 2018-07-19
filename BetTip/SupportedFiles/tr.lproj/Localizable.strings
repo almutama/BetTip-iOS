@@ -6,6 +6,7 @@
   Copyright © 2017 Haydar Karkin. All rights reserved.
 */
 
+"Common.Title" = "FIRSAT BAHİS";
 "Common.TryAgainLater" = "Lütfen tekrar deneyiniz.";
 "Common.Loading" = "Yükleniyor ..";
 "Common.OK" = "Tamam";
@@ -23,6 +24,12 @@
 "Common.Process.Error" = "İşlem tamamlanamadı.";
 "Common.Buy" = "Satın Al";
 "Common.ID" = "Ürün ID, '.' '#' '$' '[' yada ']'' girmeyin!";
+
+"Common.Tab.Football" = "Futbol";
+"Common.Tab.Basketball" = "Basketbol";
+"Common.Tab.Coupon" = "Kupon";
+"Common.Tab.Premium" = "Premium";
+"Common.Tab.More" = "Daha";
 
 "Role.User" = "Kullanıcı";
 "Role.Moderator" = "Moderatör";
@@ -106,4 +113,30 @@
 "Coupon.BuyCoupon" = " kredi hesabınızdan kesilecektir.";
 "Coupon.NotEnoughTitle" = "Yetersiz Kredi";
 "Coupon.NotEnough" = "Krediniz bu kuponu satın almak için yeterli değil.";
+
+//Screens
+"Login.Welcome.Title" = "FIRSAT BAHİS";
+"Login.Welcome.SignIn" = "GİRİŞ YAP";
+"Login.Welcome.SignUp" = "KAYIT OL";
+
+"Login.SignIn.Email" = "Email";
+"Login.SignIn.Password" = "Şifre";
+"Login.SignIn.Forgot" = "Şifreni mi unuttun?";
+"Login.SignIn.SignInButton" = "GİRİŞ YAP";
+
+"Login.SignUp.Email" = "Email *";
+"Login.SignUp.Password" = "Şifre *";
+"Login.SignUp.Confirm" = "Şifre Tekrar *";
+"Login.SignUp.Required" = "* Gerekli alanlar";
+"Login.SignUp.SignUpButton" = "KAYIT OL";
+
+"Login.Forgot.Email" = "Email";
+"Login.Forgot.Desc" = "Lütfen şifre hatırlatma işlemini başlatabilmek için email adresinizi girin.";
+"Login.Forgot.Send" = "GÖNDER";
+
+"User.More.Logout" = "Çıkış";
+"User.More.Email" = "Email:";
+"User.More.CurrentCredit" = "Kalan Krediniz:";
+"User.More.SpentCredit" = "Harcanan Kredi:";
+"User.More.MyCoupons" = "Kuponlarım";
 

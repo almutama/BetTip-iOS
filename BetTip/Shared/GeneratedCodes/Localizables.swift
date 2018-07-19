@@ -78,6 +78,8 @@ internal enum L10n {
     internal static let success = L10n.tr("Localizable", "Common.Success")
     /// Are you sure?
     internal static let sure = L10n.tr("Localizable", "Common.Sure")
+    /// BET TIP
+    internal static let title = L10n.tr("Localizable", "Common.Title")
     /// Please try again later.
     internal static let tryAgainLater = L10n.tr("Localizable", "Common.TryAgainLater")
     /// Update
@@ -90,6 +92,19 @@ internal enum L10n {
       internal static let error = L10n.tr("Localizable", "Common.Process.Error")
       /// Process has been finished successfully.
       internal static let success = L10n.tr("Localizable", "Common.Process.Success")
+    }
+
+    internal enum Tab {
+      /// Basketball
+      internal static let basketball = L10n.tr("Localizable", "Common.Tab.Basketball")
+      /// Coupon
+      internal static let coupon = L10n.tr("Localizable", "Common.Tab.Coupon")
+      /// Football
+      internal static let football = L10n.tr("Localizable", "Common.Tab.Football")
+      /// More
+      internal static let more = L10n.tr("Localizable", "Common.Tab.More")
+      /// Premium
+      internal static let premium = L10n.tr("Localizable", "Common.Tab.Premium")
     }
   }
 
@@ -119,6 +134,51 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "Credit.Title")
     /// Update requiremnt fields.
     internal static let updateCredit = L10n.tr("Localizable", "Credit.UpdateCredit")
+  }
+
+  internal enum Login {
+
+    internal enum Forgot {
+      /// Please enter your email address below to receive your password reset instructions
+      internal static let desc = L10n.tr("Localizable", "Login.Forgot.Desc")
+      /// Email
+      internal static let email = L10n.tr("Localizable", "Login.Forgot.Email")
+      /// SEND
+      internal static let send = L10n.tr("Localizable", "Login.Forgot.Send")
+    }
+
+    internal enum Signin {
+      /// Email:
+      internal static let email = L10n.tr("Localizable", "Login.SignIn.Email")
+      /// Forgot your password?
+      internal static let forgot = L10n.tr("Localizable", "Login.SignIn.Forgot")
+      /// Password
+      internal static let password = L10n.tr("Localizable", "Login.SignIn.Password")
+      /// SIGN IN
+      internal static let signInButton = L10n.tr("Localizable", "Login.SignIn.SignInButton")
+    }
+
+    internal enum Signup {
+      /// Confirm *
+      internal static let confirm = L10n.tr("Localizable", "Login.SignUp.Confirm")
+      /// Email *
+      internal static let email = L10n.tr("Localizable", "Login.SignUp.Email")
+      /// Password *
+      internal static let password = L10n.tr("Localizable", "Login.SignUp.Password")
+      /// * Required fields
+      internal static let `required` = L10n.tr("Localizable", "Login.SignUp.Required")
+      /// SIGN UP
+      internal static let signUpButton = L10n.tr("Localizable", "Login.SignUp.SignUpButton")
+    }
+
+    internal enum Welcome {
+      /// SIGN IN
+      internal static let signIn = L10n.tr("Localizable", "Login.Welcome.SignIn")
+      /// SIGN UP
+      internal static let signUp = L10n.tr("Localizable", "Login.Welcome.SignUp")
+      /// BET TIP
+      internal static let title = L10n.tr("Localizable", "Login.Welcome.Title")
+    }
   }
 
   internal enum Match {
@@ -248,6 +308,19 @@ internal enum L10n {
     internal enum Credit {
       /// Your rest of credit: 
       internal static let rest = L10n.tr("Localizable", "User.Credit.Rest")
+    }
+
+    internal enum More {
+      /// Current Credit:
+      internal static let currentCredit = L10n.tr("Localizable", "User.More.CurrentCredit")
+      /// Email
+      internal static let email = L10n.tr("Localizable", "User.More.Email")
+      /// Logout
+      internal static let logout = L10n.tr("Localizable", "User.More.Logout")
+      /// My Coupons
+      internal static let myCoupons = L10n.tr("Localizable", "User.More.MyCoupons")
+      /// Spent Credit:
+      internal static let spentCredit = L10n.tr("Localizable", "User.More.SpentCredit")
     }
 
     internal enum Role {
