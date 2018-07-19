@@ -34,7 +34,7 @@ class FootballVC: BaseViewController {
     }
     
     func prepareUI() {
-        self.navigationItem.title = "FIRSAT BAHİS"
+        self.navigationItem.title = L10n.Common.title
         
         self.tabBarController?.tabBar.items![0].title = L10n.Common.Tab.football
         self.tabBarController?.tabBar.items![1].title = L10n.Common.Tab.basketball

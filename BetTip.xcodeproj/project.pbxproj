@@ -199,6 +199,15 @@
 		B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */; };
 		B0F8429D1FD9B854005C6756 /* ShakeViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8429C1FD9B854005C6756 /* ShakeViewAnimation.swift */; };
 		B0FB088C20FE86E8001301C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0FB088E20FE86E8001301C0 /* InfoPlist.strings */; };
+		B0FB08A021012507001301C0 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0FB089821012506001301C0 /* Lato-Italic.ttf */; };
+		B0FB08A121012507001301C0 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0FB089921012506001301C0 /* Lato-Bold.ttf */; };
+		B0FB08A221012507001301C0 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0FB089A21012506001301C0 /* Lato-Light.ttf */; };
+		B0FB08A321012507001301C0 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0FB089B21012506001301C0 /* Lato-Regular.ttf */; };
+		B0FB08A421012507001301C0 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0FB089C21012506001301C0 /* Lato-Heavy.ttf */; };
+		B0FB08A521012507001301C0 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0FB089D21012506001301C0 /* Lato-Semibold.ttf */; };
+		B0FB08A621012507001301C0 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0FB089E21012506001301C0 /* Lato-Medium.ttf */; };
+		B0FB08A721012507001301C0 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0FB089F21012507001301C0 /* Lato-Black.ttf */; };
+		B0FB08AA21012743001301C0 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB08A921012743001301C0 /* Fonts.swift */; };
 		B0FE4A441FBAD4EB008F2EE6 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */; };
 		B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */; };
 		B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE4A491FBAD518008F2EE6 /* Login.storyboard */; };
@@ -419,6 +428,15 @@
 		B0FB089020FE8700001301C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B0FB089120FE870B001301C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B0FB089220FE8C3A001301C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0FB089821012506001301C0 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		B0FB089921012506001301C0 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		B0FB089A21012506001301C0 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		B0FB089B21012506001301C0 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		B0FB089C21012506001301C0 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		B0FB089D21012506001301C0 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		B0FB089E21012506001301C0 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		B0FB089F21012507001301C0 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		B0FB08A921012743001301C0 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		B0FE4A431FBAD4EB008F2EE6 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		B0FE4A451FBAD4F8008F2EE6 /* Football.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Football.storyboard; sourceTree = "<group>"; };
 		B0FE4A491FBAD518008F2EE6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -990,6 +1008,7 @@
 		B08A45781F9DD5430082BDD3 /* BetTip */ = {
 			isa = PBXGroup;
 			children = (
+				B0FB08A8210125A2001301C0 /* Resources */,
 				B0569A061FC061FA00FF34A1 /* Shared */,
 				B0A8E6731FA7B091001A8BBA /* Sceens */,
 				B0A8E6701FA7AE27001A8BBA /* SupportedFiles */,
@@ -1019,6 +1038,7 @@
 		B0A7AA301FCC54BD00DC4F62 /* GeneratedCodes */ = {
 			isa = PBXGroup;
 			children = (
+				B0FB08A921012743001301C0 /* Fonts.swift */,
 				B0A7AA331FCC58C900DC4F62 /* Images.swift */,
 				B0A7AA321FCC58C800DC4F62 /* Localizables.swift */,
 				B0A7AA341FCC58C900DC4F62 /* Storyboards.swift */,
@@ -1049,15 +1069,15 @@
 		B0A8E6701FA7AE27001A8BBA /* SupportedFiles */ = {
 			isa = PBXGroup;
 			children = (
-				B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */,
+				B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */,
 				B0A8E6711FA7AE9B001A8BBA /* BetTip.entitlements */,
-				B08A45851F9DD5430082BDD3 /* Info.plist */,
 				B08A45801F9DD5430082BDD3 /* Assets.xcassets */,
 				B0E8B07A1FAB37CC00491D6E /* Colors.xcassets */,
-				B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */,
-				B03BEB3E1FB2508200FF4A2C /* BetTip-Bridging-Header.h */,
-				B0A7AA2D1FCC23D300DC4F62 /* Localizable.strings */,
+				B0F8429A1FD9624D005C6756 /* GoogleService-Info.plist */,
+				B08A45851F9DD5430082BDD3 /* Info.plist */,
 				B0FB088E20FE86E8001301C0 /* InfoPlist.strings */,
+				B0A7AA2D1FCC23D300DC4F62 /* Localizable.strings */,
+				B08A45821F9DD5430082BDD3 /* LaunchScreen.storyboard */,
 			);
 			path = SupportedFiles;
 			sourceTree = "<group>";
@@ -1171,6 +1191,29 @@
 				B0569A6A1FC37AFD00FF34A1 /* MatchModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B0FB08972101247A001301C0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B0FB089F21012507001301C0 /* Lato-Black.ttf */,
+				B0FB089921012506001301C0 /* Lato-Bold.ttf */,
+				B0FB089C21012506001301C0 /* Lato-Heavy.ttf */,
+				B0FB089821012506001301C0 /* Lato-Italic.ttf */,
+				B0FB089A21012506001301C0 /* Lato-Light.ttf */,
+				B0FB089E21012506001301C0 /* Lato-Medium.ttf */,
+				B0FB089B21012506001301C0 /* Lato-Regular.ttf */,
+				B0FB089D21012506001301C0 /* Lato-Semibold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B0FB08A8210125A2001301C0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B0FB08972101247A001301C0 /* Fonts */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B0FE4A321FBAD33C008F2EE6 /* Constants */ = {
@@ -1402,17 +1445,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FB08A421012507001301C0 /* Lato-Heavy.ttf in Resources */,
 				B0FE4A441FBAD4EB008F2EE6 /* User.storyboard in Resources */,
+				B0FB08A221012507001301C0 /* Lato-Light.ttf in Resources */,
 				B0E8B07B1FAB37CC00491D6E /* Colors.xcassets in Resources */,
 				B0FE4A461FBAD4F8008F2EE6 /* Football.storyboard in Resources */,
+				B0FB08A321012507001301C0 /* Lato-Regular.ttf in Resources */,
+				B0FB08A721012507001301C0 /* Lato-Black.ttf in Resources */,
 				B0569AD11FCDEDC000FF34A1 /* Splash.storyboard in Resources */,
 				B07D834C20D5CA7F00028BBF /* MainMatchCell.xib in Resources */,
 				B08A45841F9DD5430082BDD3 /* LaunchScreen.storyboard in Resources */,
+				B0FB08A521012507001301C0 /* Lato-Semibold.ttf in Resources */,
 				B0569A5A1FC3745D00FF34A1 /* Credit.storyboard in Resources */,
 				B08D42162047498900426276 /* MatchCell.xib in Resources */,
 				B02EEA0C20B1CD6F0079A930 /* AdBannerView.xib in Resources */,
 				B0FB088C20FE86E8001301C0 /* InfoPlist.strings in Resources */,
 				B0569A571FC35F7100FF34A1 /* Basketball.storyboard in Resources */,
+				B0FB08A121012507001301C0 /* Lato-Bold.ttf in Resources */,
 				B05063B41FE5A221004CECEC /* Coupon.storyboard in Resources */,
 				B08A45811F9DD5430082BDD3 /* Assets.xcassets in Resources */,
 				B0569A531FC3490C00FF34A1 /* Admin.storyboard in Resources */,
@@ -1422,8 +1471,10 @@
 				B0F8429B1FD9624D005C6756 /* GoogleService-Info.plist in Resources */,
 				B08A457F1F9DD5430082BDD3 /* Main.storyboard in Resources */,
 				B050639D1FE53E8E004CECEC /* UserCell.xib in Resources */,
+				B0FB08A621012507001301C0 /* Lato-Medium.ttf in Resources */,
 				B0569A7B1FC37C8E00FF34A1 /* CreditCell.xib in Resources */,
 				B05063C11FE5CDDD004CECEC /* MyCouponCell.xib in Resources */,
+				B0FB08A021012507001301C0 /* Lato-Italic.ttf in Resources */,
 				B0FE4A4A1FBAD518008F2EE6 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1582,7 +1633,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# swiftgen bin from pods\nSWIFTGEN=\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n\n# Make sure it is there\nif which \"$SWIFTGEN\" >/dev/null; then\n\n# Folder for output\nSWIFTGEN_FOLDER=\"$SOURCE_ROOT/BetTip/Shared/GeneratedCodes\"\n\n# Project folder\nPROJECT_FOLDER=\"${SOURCE_ROOT}\"\n\n# Make sure output folder exists\nmkdir -p \"$SWIFTGEN_FOLDER\"\n\n# Get all storyboards into Storyboards.swift\n\"$SWIFTGEN\" storyboards -t swift4 \"$PROJECT_FOLDER\" --output \"$SWIFTGEN_FOLDER/Storyboards.swift\"\n\n# Get all images into Images.swift\n\"$SWIFTGEN\" xcassets -t swift4 \"BetTip/SupportedFiles/Assets.xcassets\" --output \"$SWIFTGEN_FOLDER/Images.swift\"\n\n# Get all english strings (as a base for all others) into Strings.swift\n\"$SWIFTGEN\" strings -t structured-swift4 \"BetTip/SupportedFiles/Base.lproj/Localizable.strings\" --output \"$SWIFTGEN_FOLDER/Localizables.swift\"\nelse\necho \"SwiftGen does not exist, download from https://github.com/AliSoftware/SwiftGen\"\nfi";
+			shellScript = "# swiftgen bin from pods\nSWIFTGEN=\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n\n# Make sure it is there\nif which \"$SWIFTGEN\" >/dev/null; then\n\n# Folder for output\nSWIFTGEN_FOLDER=\"$SOURCE_ROOT/BetTip/Shared/GeneratedCodes\"\n\n# Project folder\nPROJECT_FOLDER=\"${SOURCE_ROOT}\"\n\n# Make sure output folder exists\nmkdir -p \"$SWIFTGEN_FOLDER\"\n\n# Get all storyboards into Storyboards.swift\n\"$SWIFTGEN\" storyboards -t swift4 \"$PROJECT_FOLDER\" --output \"$SWIFTGEN_FOLDER/Storyboards.swift\"\n\n# Get all images into Images.swift\n\"$SWIFTGEN\" xcassets -t swift4 \"BetTip/SupportedFiles/Assets.xcassets\" --output \"$SWIFTGEN_FOLDER/Images.swift\"\n\n# Get all fonts into Images.swift\n\"$SWIFTGEN\" fonts -t swift4 \"BetTip/Resources/Fonts\" --output \"$SWIFTGEN_FOLDER/Fonts.swift\"\n\n# Get all english strings (as a base for all others) into Strings.swift\n\"$SWIFTGEN\" strings -t structured-swift4 \"BetTip/SupportedFiles/Base.lproj/Localizable.strings\" --output \"$SWIFTGEN_FOLDER/Localizables.swift\"\nelse\necho \"SwiftGen does not exist, download from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
 		C544BE41E67FBB4478CD02D4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1809,6 +1860,7 @@
 				B0569AAC1FC6221D00FF34A1 /* RegisterVM.swift in Sources */,
 				B0569A151FC0BA1100FF34A1 /* UICollectionView+Ext.swift in Sources */,
 				B0569AAA1FC6221200FF34A1 /* LoginVM.swift in Sources */,
+				B0FB08AA21012743001301C0 /* Fonts.swift in Sources */,
 				B0A7AA281FCC057900DC4F62 /* Validator.swift in Sources */,
 				B0569AB81FC9890D00FF34A1 /* AuthStore.swift in Sources */,
 				B0569ABA1FC9892600FF34A1 /* AuthError.swift in Sources */,

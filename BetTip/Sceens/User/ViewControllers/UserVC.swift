@@ -95,7 +95,7 @@ class UserVC: BaseViewController {
     }
     
     func prepareUI() {
-        self.navigationItem.title = "FIRSAT BAHİS"
+        self.navigationItem.title = L10n.Common.title
         self.logoutButton.layer.cornerRadius = 5
         self.logoutButton.clipsToBounds = true
         

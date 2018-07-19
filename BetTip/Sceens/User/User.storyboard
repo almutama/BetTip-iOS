@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FIRSAT BAHİS-->
+        <!--UserVC-->
         <scene sceneID="HvK-br-WAi">
             <objects>
                 <viewController id="a87-DW-yzi" customClass="UserVC" customModule="BetTip" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +163,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fc0-WT-LHZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FIRSAT BAHİS" id="gtY-9g-3qY">
+                    <navigationItem key="navigationItem" id="gtY-9g-3qY">
                         <barButtonItem key="backBarButtonItem" title=" " id="ugh-76-3OS"/>
                         <barButtonItem key="rightBarButtonItem" id="m9N-dg-icC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jyQ-yN-8k9" customClass="StyledButton" customModule="BetTip" customModuleProvider="target">
