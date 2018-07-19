@@ -148,7 +148,7 @@ internal enum L10n {
     }
 
     internal enum Signin {
-      /// Email
+      /// Email:
       internal static let email = L10n.tr("Localizable", "Login.SignIn.Email")
       /// Forgot your password?
       internal static let forgot = L10n.tr("Localizable", "Login.SignIn.Forgot")
@@ -308,6 +308,19 @@ internal enum L10n {
     internal enum Credit {
       /// Your rest of credit: 
       internal static let rest = L10n.tr("Localizable", "User.Credit.Rest")
+    }
+
+    internal enum More {
+      /// Current Credit:
+      internal static let currentCredit = L10n.tr("Localizable", "User.More.CurrentCredit")
+      /// Email
+      internal static let email = L10n.tr("Localizable", "User.More.Email")
+      /// Logout
+      internal static let logout = L10n.tr("Localizable", "User.More.Logout")
+      /// My Coupons
+      internal static let myCoupons = L10n.tr("Localizable", "User.More.MyCoupons")
+      /// Spent Credit:
+      internal static let spentCredit = L10n.tr("Localizable", "User.More.SpentCredit")
     }
 
     internal enum Role {

@@ -114,11 +114,12 @@
 "Coupon.NotEnoughTitle" = "Credit Not Enough";
 "Coupon.NotEnough" = "Your credit is not enough to buy this coupon.";
 
+//Screens
 "Login.Welcome.Title" = "BET TIP";
 "Login.Welcome.SignIn" = "SIGN IN";
 "Login.Welcome.SignUp" = "SIGN UP";
 
-"Login.SignIn.Email" = "Email";
+"Login.SignIn.Email" = "Email:";
 "Login.SignIn.Password" = "Password";
 "Login.SignIn.Forgot" = "Forgot your password?";
 "Login.SignIn.SignInButton" = "SIGN IN";
@@ -132,3 +133,9 @@
 "Login.Forgot.Email" = "Email";
 "Login.Forgot.Desc" = "Please enter your email address below to receive your password reset instructions";
 "Login.Forgot.Send" = "SEND";
+
+"User.More.Logout" = "Logout";
+"User.More.Email" = "Email";
+"User.More.CurrentCredit" = "Current Credit:";
+"User.More.SpentCredit" = "Spent Credit:";
+"User.More.MyCoupons" = "My Coupons";

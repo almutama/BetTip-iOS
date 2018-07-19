@@ -42,7 +42,6 @@ class RegisterVC: BaseViewController {
         self.signUpBtn.setTitle(L10n.Login.Signup.signUpButton, for: .normal)
     }
 
-    
     func bindViewModel() {
         let username = mailTextField.rx.text
             .orEmpty

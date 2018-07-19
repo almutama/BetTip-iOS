@@ -114,6 +114,7 @@
 "Coupon.NotEnoughTitle" = "Yetersiz Kredi";
 "Coupon.NotEnough" = "Krediniz bu kuponu satın almak için yeterli değil.";
 
+//Screens
 "Login.Welcome.Title" = "FIRSAT BAHİS";
 "Login.Welcome.SignIn" = "GİRİŞ YAP";
 "Login.Welcome.SignUp" = "KAYIT OL";
@@ -132,3 +133,10 @@
 "Login.Forgot.Email" = "Email";
 "Login.Forgot.Desc" = "Lütfen şifre hatırlatma işlemini başlatabilmek için email adresinizi girin.";
 "Login.Forgot.Send" = "GÖNDER";
+
+"User.More.Logout" = "Çıkış";
+"User.More.Email" = "Email:";
+"User.More.CurrentCredit" = "Kalan Krediniz:";
+"User.More.SpentCredit" = "Harcanan Kredi:";
+"User.More.MyCoupons" = "Kuponlarım";
+
