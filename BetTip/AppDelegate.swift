@@ -14,6 +14,8 @@ import UserNotifications
 import Keys
 import Swinject
 import SwinjectStoryboard
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -63,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #endif
         AnalyticsManager.sharedManager.register(newService: FirebaseAnalytics())
         AnalyticsManager.sharedManager.register(newService: AnalyticsLogger())
+        Fabric.with([Crashlytics.self])
         
         // MARK: Payment Transaction
         PurchaseService().cacheSubscriptionValidation()
