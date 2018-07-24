@@ -123,6 +123,9 @@
 		B0569AF81FD07FF200FF34A1 /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF71FD07FF200FF34A1 /* StyledLabel.swift */; };
 		B0569AFA1FD0801100FF34A1 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AF91FD0801100FF34A1 /* StyledButton.swift */; };
 		B0569AFC1FD0803200FF34A1 /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0569AFB1FD0803200FF34A1 /* StyledTextField.swift */; };
+		B06957AE2107B21E00FDC15A /* ValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06957AD2107B21E00FDC15A /* ValidatorSpec.swift */; };
+		B06957B02107BEAC00FDC15A /* Rx+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06957AF2107BEAC00FDC15A /* Rx+Ext.swift */; };
+		B06957B32107BF7F00FDC15A /* ObservableConvertibleType+ResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06957B22107BF7F00FDC15A /* ObservableConvertibleType+ResultSpec.swift */; };
 		B06BE0331FD73CCD00BA8EC8 /* ControlUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0321FD73CCD00BA8EC8 /* ControlUsersVC.swift */; };
 		B06BE0351FD73CDE00BA8EC8 /* ControlCreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */; };
 		B06BE0371FD73CEE00BA8EC8 /* ControlUsersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */; };
@@ -344,6 +347,9 @@
 		B0569AF71FD07FF200FF34A1 /* StyledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLabel.swift; sourceTree = "<group>"; };
 		B0569AF91FD0801100FF34A1 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 		B0569AFB1FD0803200FF34A1 /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
+		B06957AD2107B21E00FDC15A /* ValidatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorSpec.swift; sourceTree = "<group>"; };
+		B06957AF2107BEAC00FDC15A /* Rx+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Ext.swift"; sourceTree = "<group>"; };
+		B06957B22107BF7F00FDC15A /* ObservableConvertibleType+ResultSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableConvertibleType+ResultSpec.swift"; sourceTree = "<group>"; };
 		B06BE0321FD73CCD00BA8EC8 /* ControlUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlUsersVC.swift; sourceTree = "<group>"; };
 		B06BE0341FD73CDE00BA8EC8 /* ControlCreditsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCreditsVC.swift; sourceTree = "<group>"; };
 		B06BE0361FD73CEE00BA8EC8 /* ControlUsersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlUsersVM.swift; sourceTree = "<group>"; };
@@ -638,6 +644,7 @@
 				B02EEA1B20BAAA2A0079A930 /* FirebaseRemoteConfig+Rx.swift */,
 				B02EEA1920BA1D8D0079A930 /* FirebaseStorage+Rx.swift */,
 				B02EEA0220B0A1E30079A930 /* HeyzapBanner+Rx.swift */,
+				B06957AF2107BEAC00FDC15A /* Rx+Ext.swift */,
 				B08340CC20A7B41600A41F36 /* Optionals+Ext.swift */,
 				B0569A0C1FC0B26E00FF34A1 /* String+Ext.swift */,
 				B0BDD7F91FE69F6D00F3851A /* UIAlertController+Rx.swift */,
@@ -962,6 +969,31 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		B06957AB2107B17F00FDC15A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B06957B12107BF5E00FDC15A /* Extensions */,
+				B06957AC2107B18600FDC15A /* Validation */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B06957AC2107B18600FDC15A /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				B06957AD2107B21E00FDC15A /* ValidatorSpec.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		B06957B12107BF5E00FDC15A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B06957B22107BF7F00FDC15A /* ObservableConvertibleType+ResultSpec.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B08340DE20AB73E200A41F36 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -1022,6 +1054,7 @@
 			isa = PBXGroup;
 			children = (
 				B08A458E1F9DD5430082BDD3 /* BetTipTests.swift */,
+				B06957AB2107B17F00FDC15A /* Shared */,
 				B08A45901F9DD5430082BDD3 /* Info.plist */,
 			);
 			path = BetTipTests;
@@ -1522,13 +1555,11 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/Reactant/Reactant.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
@@ -1551,13 +1582,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reactant.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
@@ -1675,13 +1704,11 @@
 				"${BUILT_PRODUCTS_DIR}/PaperTrailLumberjack/PaperTrailLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/Reactant/Reactant.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
@@ -1707,13 +1734,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PaperTrailLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reactant.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
@@ -1798,6 +1823,7 @@
 				B0569A4A1FC22B3100FF34A1 /* BGEventBus.swift in Sources */,
 				B05063A81FE5A1B3004CECEC /* CouponServices.swift in Sources */,
 				B0A7AA211FC859F100DC4F62 /* UserRoleType.swift in Sources */,
+				B06957B02107BEAC00FDC15A /* Rx+Ext.swift in Sources */,
 				B0DACC0520A3765600C59CCD /* BaseFormViewController.swift in Sources */,
 				B0BDD8031FF6D4FE00F3851A /* SheetAction.swift in Sources */,
 				B0569A1E1FC0CCA800FF34A1 /* DefaultCompactTheme.swift in Sources */,
@@ -1912,6 +1938,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08A458F1F9DD5430082BDD3 /* BetTipTests.swift in Sources */,
+				B06957B32107BF7F00FDC15A /* ObservableConvertibleType+ResultSpec.swift in Sources */,
+				B06957AE2107B21E00FDC15A /* ValidatorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2137,6 +2165,161 @@
 				DEVELOPMENT_TEAM = V8VSC4H6R4;
 				INFOPLIST_FILE = BetTipTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Cuckoo/Cuckoo.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Differentiator/Differentiator.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth/FirebaseAuth.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseDatabase/FirebaseDatabase.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseMessaging/FirebaseMessaging.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage/FirebaseStorage.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Nimble/Nimble.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper/ObjectMapper.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Protobuf/Protobuf.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Quick/Quick.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Result/Result.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxBlocking/RxBlocking.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxDataSources/RxDataSources.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxOptional/RxOptional.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxTest/RxTest.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Swinject/Swinject.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library/leveldb.framework/Headers\"",
+					"-iquote",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Cuckoo\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"FirebaseABTesting\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseMessaging\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"FirebaseRemoteConfig\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Nimble\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Protobuf\"",
+					"-framework",
+					"\"Quick\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxBlocking\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxOptional\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxTest\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftKeychainWrapper\"",
+					"-framework",
+					"\"SwiftyStoreKit\"",
+					"-framework",
+					"\"Swinject\"",
+					"-framework",
+					"\"SwinjectStoryboard\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haydarkarkin.BetTipTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2157,6 +2340,96 @@
 				DEVELOPMENT_TEAM = V8VSC4H6R4;
 				INFOPLIST_FILE = BetTipTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Cuckoo\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"FirebaseABTesting\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseMessaging\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"FirebaseRemoteConfig\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Nimble\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Protobuf\"",
+					"-framework",
+					"\"Quick\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxBlocking\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxOptional\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxTest\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftKeychainWrapper\"",
+					"-framework",
+					"\"SwiftyStoreKit\"",
+					"-framework",
+					"\"Swinject\"",
+					"-framework",
+					"\"SwinjectStoryboard\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haydarkarkin.BetTipTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
