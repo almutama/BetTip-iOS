@@ -30,8 +30,8 @@ class AdminVC: BaseViewController {
     }
     
     func bindViewModel() {
-        self.closeButton.rx.tap.subscribe(onNext: {
-            self.dismiss()
+        self.closeButton.rx.tap.subscribe({ _ in
+            self.dismiss(animated: true)
         }).disposed(by: disposeBag)
     }
 }

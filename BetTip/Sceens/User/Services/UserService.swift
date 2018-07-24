@@ -9,7 +9,6 @@
 import RxSwift
 import Firebase
 import FirebaseDatabase
-import Reactant
 import Result
 
 private let logger = Log.createLogger()
