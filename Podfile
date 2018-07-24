@@ -34,7 +34,6 @@ def reactive_pods
     pod 'RxCocoa'
     pod 'RxOptional'
     pod 'RxDataSources'
-    pod 'Reactant', '~> 1.0', :subspecs => ['Core', 'Result', 'StaticMap', 'Configuration']
 end
 
 def general_pods
