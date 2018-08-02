@@ -72,7 +72,7 @@ def ad_pods
   pod 'Google-Mobile-Ads-SDK'
 end
 
-target 'BetTip' do
+def all_pods
   firebase_pods
   general_pods
   reactive_pods
@@ -81,11 +81,18 @@ target 'BetTip' do
   ad_pods
 end
 
+target 'BetTip' do
+  all_pods
+end
+
 target 'BetTipTests' do
+  all_pods
   testing_pods
-  firebase_pods
-  general_pods
-  reactive_pods
+end
+
+target 'BetTipUITests' do
+  all_pods
+  testing_pods
 end
 
 post_install do |installer_representation|

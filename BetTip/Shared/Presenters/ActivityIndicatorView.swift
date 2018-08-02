@@ -24,12 +24,12 @@ class LoadingIndicator {
     
     func show(color: UIColor? = .clear) {
         
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData, nil)
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
     func hide() {
-        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }

@@ -38,6 +38,16 @@
                ReferencedContainer = "container:BetTip.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B041E5A5211387F5003CB171"
+               BuildableName = "BetTipUITests.xctest"
+               BlueprintName = "BetTipUITests"
+               ReferencedContainer = "container:BetTip.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
