@@ -193,6 +193,7 @@
 		B0BDD80F200FEAC200F3851A /* ControlMatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */; };
 		B0BDD811200FEAEC00F3851A /* ControlMatchesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */; };
 		B0C38D0720D2D1AA00331207 /* CreditActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C38D0620D2D1AA00331207 /* CreditActions.swift */; };
+		B0D94D8B2114D0CB005B6597 /* Date+ExtSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D94D8A2114D0CB005B6597 /* Date+ExtSpec.swift */; };
 		B0DACBEE209F90A400C59CCD /* AdMobBanner+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */; };
 		B0DACBF020A0C69E00C59CCD /* AdMobInterstitial+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */; };
 		B0DACBF220A0D33500C59CCD /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DACBF120A0D33500C59CCD /* Rule.swift */; };
@@ -438,6 +439,7 @@
 		B0BDD80E200FEAC200F3851A /* ControlMatchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVC.swift; sourceTree = "<group>"; };
 		B0BDD810200FEAEC00F3851A /* ControlMatchesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMatchesVM.swift; sourceTree = "<group>"; };
 		B0C38D0620D2D1AA00331207 /* CreditActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditActions.swift; sourceTree = "<group>"; };
+		B0D94D8A2114D0CB005B6597 /* Date+ExtSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ExtSpec.swift"; sourceTree = "<group>"; };
 		B0DACBED209F90A400C59CCD /* AdMobBanner+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMobBanner+Rx.swift"; sourceTree = "<group>"; };
 		B0DACBEF20A0C69E00C59CCD /* AdMobInterstitial+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdMobInterstitial+Rx.swift"; sourceTree = "<group>"; };
 		B0DACBF120A0D33500C59CCD /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
@@ -1026,6 +1028,7 @@
 		B06957B12107BF5E00FDC15A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B0D94D8A2114D0CB005B6597 /* Date+ExtSpec.swift */,
 				B06EA2722112469C00444F44 /* Double+ExtSpec.swift */,
 				B06957B22107BF7F00FDC15A /* ObservableConvertibleType+ResultSpec.swift */,
 			);
@@ -2167,6 +2170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08A458F1F9DD5430082BDD3 /* BetTipTests.swift in Sources */,
+				B0D94D8B2114D0CB005B6597 /* Date+ExtSpec.swift in Sources */,
 				B06EA2732112469C00444F44 /* Double+ExtSpec.swift in Sources */,
 				B06957B32107BF7F00FDC15A /* ObservableConvertibleType+ResultSpec.swift in Sources */,
 				B06957AE2107B21E00FDC15A /* ValidatorSpec.swift in Sources */,
