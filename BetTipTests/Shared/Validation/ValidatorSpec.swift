@@ -19,7 +19,7 @@ class RuleTest: QuickSpec {
             let divBy2StringLengthRule = Rule<String, ValidationError> { string in
                 return string.count % 2 == 0 ? nil : .invalid
             }
-            describe("anything should pass permissive rule") {
+            it("anything should pass permissive rule") {
                 expect(permissiveRule.test("value")).to(beTrue())
                 expect(permissiveRule.test("")).to(beTrue())
                 expect(permissiveRule.test(nil)).to(beTrue())
@@ -31,7 +31,7 @@ class RuleTest: QuickSpec {
                     fail()
                 }
             }
-            describe("nothing should pass restrictive rule") {
+            it("nothing should pass restrictive rule") {
                 expect(restrictiveRule.test("value")).to(beFalse())
                 expect(restrictiveRule.test("")).to(beFalse())
                 expect(restrictiveRule.test(nil)).to(beFalse())
@@ -43,7 +43,7 @@ class RuleTest: QuickSpec {
                     fail()
                 }
             }
-            describe("strings appropriate should pass \"div by 2 string length rule\" and others should not") {
+            it("strings appropriate should pass \"div by 2 string length rule\" and others should not") {
                 expect(divBy2StringLengthRule.test("")).to(beTrue())
                 expect(divBy2StringLengthRule.test("nilu")).to(beTrue())
                 expect(divBy2StringLengthRule.test("value")).to(beFalse())
