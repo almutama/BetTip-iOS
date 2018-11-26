@@ -76,7 +76,7 @@ final class ThemeManager {
             window.backgroundColor = currentTheme.main
         }
         
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: currentTheme.body2Bold.font], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: currentTheme.body2Bold.font], for: .normal)
         
         UIPageControl.appearance().pageIndicatorTintColor = currentTheme.complementaryText
         UIPageControl.appearance().currentPageIndicatorTintColor = currentTheme.secondaryText
@@ -97,8 +97,8 @@ final class ThemeManager {
         UINavigationBar.appearance().tintColor = currentTheme.defaultAction
         
         UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: currentTheme.generalText,
-            NSAttributedStringKey.font: currentTheme.body2Bold.font
+            NSAttributedString.Key.foregroundColor: currentTheme.generalText,
+            NSAttributedString.Key.font: currentTheme.body2Bold.font
         ]
     }
 }

@@ -43,7 +43,7 @@ class CouponsVC: BaseViewController {
         let strNumber: NSString = fullText as NSString
         let range = (strNumber).range(of: changeText)
         let attribute = NSMutableAttributedString.init(string: fullText)
-        attribute.addAttribute(NSAttributedStringKey.foregroundColor, value: color, range: range)
+        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
         return attribute
     }
     
@@ -87,7 +87,7 @@ class CouponsVC: BaseViewController {
                 by: self,
                 title: L10n.Coupon.title,
                 message: "\(coupon.numOfCredit ?? 0)\(L10n.Coupon.buyCoupon)",
-                preferredStyle: UIAlertControllerStyle.actionSheet,
+                preferredStyle: UIAlertController.Style.actionSheet,
                 actions: [CouponAction.buy(coupon: coupon), CouponAction.cancel],
                 animated: true
             ).flatMap { [weak self] (action) -> Observable<Result<CouponModel, FirebaseStoreError>> in

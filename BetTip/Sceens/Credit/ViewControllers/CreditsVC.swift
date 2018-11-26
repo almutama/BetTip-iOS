@@ -66,7 +66,7 @@ class CreditsVC: BaseViewController {
                         by: self,
                         title: L10n.Credit.title,
                         message: "\(product.localizedDescription)",
-                        preferredStyle: UIAlertControllerStyle.actionSheet,
+                        preferredStyle: UIAlertController.Style.actionSheet,
                         actions: [CreditAction.buy(selectedProduct: product), CreditAction.cancel],
                         animated: true
                 )

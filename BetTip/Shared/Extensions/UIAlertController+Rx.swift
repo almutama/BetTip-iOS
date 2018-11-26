@@ -12,12 +12,12 @@ import RxCocoa
 
 public protocol AlertActionType {
     var title: String { get }
-    var style: UIAlertActionStyle { get }
+    var style: UIAlertAction.Style { get }
     var isEnabled: Bool { get }
 }
 
 extension AlertActionType {
-    public var style: UIAlertActionStyle {
+    public var style: UIAlertAction.Style {
         return .default
     }
     public var isEnabled: Bool {
@@ -83,7 +83,7 @@ extension Reactive where Base: UIAlertController {
         by vc: UIViewController,
         title: String? = nil,
         message: String? = nil,
-        preferredStyle: UIAlertControllerStyle = .alert,
+        preferredStyle: UIAlertController.Style = .alert,
         actions: [AlertAction],
         textFields: [TextFieldConfiguration?],
         animated: Bool = true,
@@ -97,7 +97,7 @@ extension Reactive where Base: UIAlertController {
         by vc: UIViewController,
         title: String? = nil,
         message: String? = nil,
-        preferredStyle: UIAlertControllerStyle = .alert,
+        preferredStyle: UIAlertController.Style = .alert,
         actions: [AlertAction],
         animated: Bool = true,
         completion: (() -> Void)? = nil)

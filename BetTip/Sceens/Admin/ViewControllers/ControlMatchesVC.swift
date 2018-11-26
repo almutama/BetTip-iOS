@@ -59,7 +59,7 @@ class ControlMatchesVC: BaseViewController {
                         by: self,
                         title: L10n.Credit.title,
                         message: L10n.Credit.addCredit,
-                        preferredStyle: UIAlertControllerStyle.actionSheet,
+                        preferredStyle: UIAlertController.Style.actionSheet,
                         actions: [MatchAction.basketball, MatchAction.football, MatchAction.cancel],
                         animated: true
                 )
@@ -76,9 +76,9 @@ class ControlMatchesVC: BaseViewController {
     
     func getMatchesWithType(type: MatchAction) {
         if type == .football {
-            self.selectMatchTypeButton.setImage(Asset.TabBar.tabSelFootball.image, for: .normal)
+            self.selectMatchTypeButton.setImage(Asset.tabSelFootball.image, for: .normal)
         } else if type == .basketball {
-            self.selectMatchTypeButton.setImage(Asset.TabBar.tabSelBasketball.image, for: .normal)
+            self.selectMatchTypeButton.setImage(Asset.tabSelBasketball.image, for: .normal)
         }
         self.viewModel.getMatchesWithType(type: type)
     }

@@ -113,7 +113,7 @@ extension DatabaseReference {
             if let id = mutableObject.id {
                 key = id
             } else {
-                key = self.childByAutoId().key
+                key = self.childByAutoId().key ?? ""
                 mutableObject.id = key
             }
             
@@ -131,7 +131,7 @@ extension DatabaseReference {
     }
     
     func storeWithKey<T: Mappable>(_ object: T, forKey key: String? = nil) ->
-        Observable<Result<(key: String, object: T), FirebaseStoreError>> {
+        Observable<Result<T, FirebaseStoreError>> {
             return Observable.create { observer in
                 var dictionary = Mapper<T>().toJSON(object)
                 
@@ -139,11 +139,11 @@ extension DatabaseReference {
                 
                 dictionary["id"] = childKey
                 
-                self.child(childKey).setValue(dictionary) { error, _ in
+                self.child(childKey ?? "").setValue(dictionary) { error, _ in
                     if let error = error {
                         observer.onLast(.failure(.writeDenied(error)))
                     } else {
-                        observer.onLast(.success((key: childKey, object: object)))
+                        observer.onLast(.success(object))
                     }
                 }
                 return Disposables.create()

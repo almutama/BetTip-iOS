@@ -16,7 +16,7 @@ class StyledButton: UIButton {
         }
     }
     
-    override func setTitle(_ title: String?, for state: UIControlState) {
+    override func setTitle(_ title: String?, for state: UIControl.State) {
         if let style = style {
             setAttributedTitle((title != nil ? title! : "").styled(with: style), for: state)
         } else {
@@ -25,7 +25,7 @@ class StyledButton: UIButton {
     }
     
     fileprivate func updateStyle() {
-        for state: UIControlState in [.normal, .highlighted, .disabled, .selected] {
+        for state: UIControl.State in [.normal, .highlighted, .disabled, .selected] {
             if let title = title(for: state) {
                 setTitle(title, for: state)
             }

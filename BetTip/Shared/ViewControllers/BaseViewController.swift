@@ -39,12 +39,12 @@ class BaseViewController: UIViewController {
     func makeTheme() {
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedStringKey.font: FontFamily.Lato.black.font(size: 18),
-             NSAttributedStringKey.foregroundColor: UIColor.secondary]
+            [NSAttributedString.Key.font: FontFamily.Lato.black.font(size: 18),
+             NSAttributedString.Key.foregroundColor: UIColor.secondary]
         self.navigationController?.navigationBar.barTintColor = UIColor.main
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         self.view.backgroundColor = UIColor.main
     }
     

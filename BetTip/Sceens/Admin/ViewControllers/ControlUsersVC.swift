@@ -54,7 +54,7 @@ class ControlUsersVC: BaseViewController {
                         by: self,
                         title: L10n.User.Action.title,
                         message: L10n.User.Action.desc,
-                        preferredStyle: UIAlertControllerStyle.actionSheet,
+                        preferredStyle: UIAlertController.Style.actionSheet,
                         actions: [UserAction.userDisabled(!user.disabled), UserAction.userRole, UserAction.cancel],
                         animated: true
                 )
@@ -106,7 +106,7 @@ class ControlUsersVC: BaseViewController {
                 by: self,
                 title: L10n.User.Role.title,
                 message: L10n.User.Role.changeRole,
-                preferredStyle: UIAlertControllerStyle.actionSheet,
+                preferredStyle:UIAlertController.Style.actionSheet,
                 actions: [UserRoleAction.user, UserRoleAction.moderator, UserRoleAction.admin, UserRoleAction.cancel],
                 animated: true
             ).flatMap { [weak self] action -> Observable<Bool> in

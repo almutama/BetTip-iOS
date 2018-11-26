@@ -56,7 +56,7 @@ class UIService: PubSubSubscriberProtocol, EventBusObservable {
         }
     }
     
-    private func showLoginScreen(_ transition: UIViewAnimationOptions) {
+    private func showLoginScreen(_ transition: UIView.AnimationOptions) {
         if let rootWindow = self.rootWindow {
             let vc = StoryboardScene.Login.initialScene.instantiate()
             rootWindow.rootViewController = vc

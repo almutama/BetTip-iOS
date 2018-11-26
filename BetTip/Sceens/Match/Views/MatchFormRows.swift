@@ -84,7 +84,7 @@ public final class MatchTimeCell: _TimeRow, RowType {
         cellSetup({ (cell, row) in
             cell.backgroundColor = .main
             cell.height = { 60 }
-            cell.datePicker.datePickerMode = UIDatePickerMode.time
+            cell.datePicker.datePickerMode = UIDatePicker.Mode.time
             row.dateFormatter?.dateStyle = .none
             row.dateFormatter?.timeStyle = .short
         })

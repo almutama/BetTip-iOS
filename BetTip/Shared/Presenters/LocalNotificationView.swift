@@ -14,14 +14,14 @@ class LocalNotificationView: SwiftMessages {
         return LocalNotificationView()
     }
     
-    open func showMessage(_ title: String?, body: String?, theme: Theme, level: UIWindowLevel, layout: MessageView.Layout) {
+    open func showMessage(_ title: String?, body: String?, theme: Theme, level: UIWindow.Level, layout: MessageView.Layout) {
         DispatchQueue.main.async { () -> Void in
             let messageTitle = title ?? ""
             let messageBody = body ?? ""
             
             var message: MessageView = try! SwiftMessages.viewFromNib()
             switch layout {
-            case .cardView, .messageView, .messageViewIOS8, .statusLine, .tabView, .centeredView:
+            case .cardView, .messageView, .statusLine, .tabView, .centeredView:
                 message = MessageView.viewFromNib(layout: layout)
             }
             
@@ -39,19 +39,19 @@ class LocalNotificationView: SwiftMessages {
     
     open func showSuccess(_ title: String?, body: String?) {
         DispatchQueue.main.async { () -> Void in
-            self.showMessage(title, body: body, theme: .success, level: UIWindowLevelStatusBar, layout: .cardView)
+            self.showMessage(title, body: body, theme: .success, level: UIWindow.Level.statusBar, layout: .cardView)
         }
     }
     
     open func showError(_ title: String?, body: String?) {
         DispatchQueue.main.async { () -> Void in
-            self.showMessage(title, body: body, theme: .error, level: UIWindowLevelStatusBar, layout: .cardView)
+            self.showMessage(title, body: body, theme: .error, level: UIWindow.Level.statusBar, layout: .cardView)
         }
     }
     
     open func showWarning(_ title: String?, body: String?) {
         DispatchQueue.main.async { () -> Void in
-            self.showMessage(title, body: body, theme: .warning, level: UIWindowLevelStatusBar, layout: .cardView)
+            self.showMessage(title, body: body, theme: .warning, level: UIWindow.Level.statusBar, layout: .cardView)
         }
     }
 }

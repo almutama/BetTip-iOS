@@ -1,3 +1,4 @@
+// swiftlint:disable all
 // Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
 
 import Foundation
@@ -5,10 +6,13 @@ import Foundation
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
 
-// swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
+// MARK: - Strings
+
+// swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
+// swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
 
-  internal enum Applepay {
+  internal enum ApplePay {
     /// Please set up Apple-Pay!
     internal static let setAccount = L10n.tr("Localizable", "ApplePay.SetAccount")
   }
@@ -26,7 +30,6 @@ internal enum L10n {
     internal static let password = L10n.tr("Localizable", "Auth.Password")
     /// Sign up
     internal static let signUp = L10n.tr("Localizable", "Auth.SignUp")
-
     internal enum Error {
       /// Email already registered.
       internal static let emailAlreadyInUse = L10n.tr("Localizable", "Auth.Error.EmailAlreadyInUse")
@@ -86,14 +89,12 @@ internal enum L10n {
     internal static let update = L10n.tr("Localizable", "Common.Update")
     /// Warning
     internal static let warning = L10n.tr("Localizable", "Common.Warning")
-
     internal enum Process {
       /// Process couldn't be finished.
       internal static let error = L10n.tr("Localizable", "Common.Process.Error")
       /// Process has been finished successfully.
       internal static let success = L10n.tr("Localizable", "Common.Process.Success")
     }
-
     internal enum Tab {
       /// Basketball
       internal static let basketball = L10n.tr("Localizable", "Common.Tab.Basketball")
@@ -137,7 +138,6 @@ internal enum L10n {
   }
 
   internal enum Login {
-
     internal enum Forgot {
       /// Please enter your email address below to receive your password reset instructions
       internal static let desc = L10n.tr("Localizable", "Login.Forgot.Desc")
@@ -146,8 +146,7 @@ internal enum L10n {
       /// SEND
       internal static let send = L10n.tr("Localizable", "Login.Forgot.Send")
     }
-
-    internal enum Signin {
+    internal enum SignIn {
       /// Email:
       internal static let email = L10n.tr("Localizable", "Login.SignIn.Email")
       /// Forgot your password?
@@ -157,8 +156,7 @@ internal enum L10n {
       /// SIGN IN
       internal static let signInButton = L10n.tr("Localizable", "Login.SignIn.SignInButton")
     }
-
-    internal enum Signup {
+    internal enum SignUp {
       /// Confirm *
       internal static let confirm = L10n.tr("Localizable", "Login.SignUp.Confirm")
       /// Email *
@@ -170,7 +168,6 @@ internal enum L10n {
       /// SIGN UP
       internal static let signUpButton = L10n.tr("Localizable", "Login.SignUp.SignUpButton")
     }
-
     internal enum Welcome {
       /// SIGN IN
       internal static let signIn = L10n.tr("Localizable", "Login.Welcome.SignIn")
@@ -188,7 +185,7 @@ internal enum L10n {
     internal static let football = L10n.tr("Localizable", "Match.Football")
   }
 
-  internal enum Matchform {
+  internal enum MatchForm {
     /// Away Team
     internal static let awayTeam = L10n.tr("Localizable", "MatchForm.AwayTeam")
     /// Bet
@@ -225,62 +222,50 @@ internal enum L10n {
     internal static let webSite = L10n.tr("Localizable", "MatchForm.WebSite")
     /// Won
     internal static let won = L10n.tr("Localizable", "MatchForm.Won")
-
-    internal enum Awayteam {
+    internal enum AwayTeam {
       /// Real Madrid
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.AwayTeam.Placeholder")
     }
-
     internal enum Bet {
       /// MS-2
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.Bet.Placeholder")
     }
-
-    internal enum Betid {
+    internal enum BetID {
       /// 740
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.BetID.Placeholder")
     }
-
     internal enum Country {
       /// spain
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.Country.Placeholder")
     }
-
-    internal enum Hometeam {
+    internal enum HomeTeam {
       /// Barcelona
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.HomeTeam.Placeholder")
     }
-
     internal enum League {
       /// ESP
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.League.Placeholder")
     }
-
-    internal enum Matchtype {
+    internal enum MatchType {
       /// 1 or 2
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.MatchType.Placeholder")
     }
-
     internal enum Odd {
       /// 1.77
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.Odd.Placeholder")
     }
-
     internal enum Status {
       /// 0
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.Status.Placeholder")
     }
-
     internal enum Tipster {
       /// mustafa@gmail.com
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.Tipster.Placeholder")
     }
-
-    internal enum Website {
+    internal enum WebSite {
       /// BetMe
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.WebSite.Placeholder")
     }
-
     internal enum Won {
       /// 0 or 1
       internal static let placeholder = L10n.tr("Localizable", "MatchForm.Won.Placeholder")
@@ -297,19 +282,16 @@ internal enum L10n {
   }
 
   internal enum User {
-
     internal enum Action {
       /// Please select an action.
       internal static let desc = L10n.tr("Localizable", "User.Action.Desc")
       /// User Actions
       internal static let title = L10n.tr("Localizable", "User.Action.Title")
     }
-
     internal enum Credit {
       /// Your rest of credit: 
       internal static let rest = L10n.tr("Localizable", "User.Credit.Rest")
     }
-
     internal enum More {
       /// Current Credit:
       internal static let currentCredit = L10n.tr("Localizable", "User.More.CurrentCredit")
@@ -322,7 +304,6 @@ internal enum L10n {
       /// Spent Credit:
       internal static let spentCredit = L10n.tr("Localizable", "User.More.SpentCredit")
     }
-
     internal enum Role {
       /// Admin
       internal static let admin = L10n.tr("Localizable", "User.Role.Admin")
@@ -341,7 +322,10 @@ internal enum L10n {
     }
   }
 }
-// swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
+// swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
+// swiftlint:enable nesting type_body_length type_name
+
+// MARK: - Implementation Details
 
 extension L10n {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {

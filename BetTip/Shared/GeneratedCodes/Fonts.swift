@@ -1,3 +1,4 @@
+// swiftlint:disable all
 // Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
 
 #if os(OSX)
@@ -11,6 +12,30 @@
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
 
+// MARK: - Fonts
+
+// swiftlint:disable identifier_name line_length type_body_length
+internal enum FontFamily {
+  internal enum Lato {
+    internal static let black = FontConvertible(name: "Lato-Black", family: "Lato", path: "Lato-Black.ttf")
+    internal static let bold = FontConvertible(name: "Lato-Bold", family: "Lato", path: "Lato-Bold.ttf")
+    internal static let heavy = FontConvertible(name: "Lato-Heavy", family: "Lato", path: "Lato-Heavy.ttf")
+    internal static let italic = FontConvertible(name: "Lato-Italic", family: "Lato", path: "Lato-Italic.ttf")
+    internal static let light = FontConvertible(name: "Lato-Light", family: "Lato", path: "Lato-Light.ttf")
+    internal static let medium = FontConvertible(name: "Lato-Medium", family: "Lato", path: "Lato-Medium.ttf")
+    internal static let regular = FontConvertible(name: "Lato-Regular", family: "Lato", path: "Lato-Regular.ttf")
+    internal static let semibold = FontConvertible(name: "Lato-Semibold", family: "Lato", path: "Lato-Semibold.ttf")
+    internal static let all: [FontConvertible] = [black, bold, heavy, italic, light, medium, regular, semibold]
+  }
+  internal static let allCustomFonts: [FontConvertible] = [Lato.all].flatMap { $0 }
+  internal static func registerAllCustomFonts() {
+    allCustomFonts.forEach { $0.register() }
+  }
+}
+// swiftlint:enable identifier_name line_length type_body_length
+
+// MARK: - Implementation Details
+
 internal struct FontConvertible {
   internal let name: String
   internal let family: String
@@ -21,9 +46,9 @@ internal struct FontConvertible {
   }
 
   internal func register() {
+    // swiftlint:disable:next conditional_returns_on_newline
     guard let url = url else { return }
-    var errorRef: Unmanaged<CFError>?
-    CTFontManagerRegisterFontsForURL(url as CFURL, .process, &errorRef)
+    CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
   }
 
   fileprivate var url: URL? {
@@ -47,20 +72,5 @@ internal extension Font {
     self.init(name: font.name, size: size)
   }
 }
-
-// swiftlint:disable identifier_name line_length type_body_length
-internal enum FontFamily {
-  internal enum Lato {
-    internal static let black = FontConvertible(name: "Lato-Black", family: "Lato", path: "Lato-Black.ttf")
-    internal static let bold = FontConvertible(name: "Lato-Bold", family: "Lato", path: "Lato-Bold.ttf")
-    internal static let heavy = FontConvertible(name: "Lato-Heavy", family: "Lato", path: "Lato-Heavy.ttf")
-    internal static let italic = FontConvertible(name: "Lato-Italic", family: "Lato", path: "Lato-Italic.ttf")
-    internal static let light = FontConvertible(name: "Lato-Light", family: "Lato", path: "Lato-Light.ttf")
-    internal static let medium = FontConvertible(name: "Lato-Medium", family: "Lato", path: "Lato-Medium.ttf")
-    internal static let regular = FontConvertible(name: "Lato-Regular", family: "Lato", path: "Lato-Regular.ttf")
-    internal static let semibold = FontConvertible(name: "Lato-Semibold", family: "Lato", path: "Lato-Semibold.ttf")
-  }
-}
-// swiftlint:enable identifier_name line_length type_body_length
 
 private final class BundleToken {}

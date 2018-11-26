@@ -34,10 +34,10 @@ class LoginVC: BaseViewController {
     }
     
     func prepareUI() {
-        self.emailLbl.text = L10n.Login.Signin.email
-        self.passwordLbl.text = L10n.Login.Signin.password
-        self.signInBtn.setTitle(L10n.Login.Signin.signInButton, for: .normal)
-        self.forgotBtn.setTitle(L10n.Login.Signin.forgot, for: .normal)
+        self.emailLbl.text = L10n.Login.SignIn.email
+        self.passwordLbl.text = L10n.Login.SignIn.password
+        self.signInBtn.setTitle(L10n.Login.SignIn.signInButton, for: .normal)
+        self.forgotBtn.setTitle(L10n.Login.SignIn.forgot, for: .normal)
     }
     
     func bindViewModel() {

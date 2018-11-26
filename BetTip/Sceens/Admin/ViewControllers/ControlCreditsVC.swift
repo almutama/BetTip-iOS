@@ -56,7 +56,7 @@ class ControlCreditsVC: BaseViewController {
                         by: self,
                         title: L10n.Auth.logout,
                         message: L10n.Auth.confirmLogout,
-                        preferredStyle: UIAlertControllerStyle.actionSheet,
+                        preferredStyle: UIAlertController.Style.actionSheet,
                         actions: [SheetAction.update, SheetAction.delete, SheetAction.cancel],
                         animated: true
                 )

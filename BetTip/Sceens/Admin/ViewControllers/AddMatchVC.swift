@@ -40,16 +40,16 @@ class AddMatchVC: BaseFormViewController {
     
     // swiftlint:disable cyclomatic_complexity
     private func matchSection() -> Section {
-        let headerTitle = L10n.Matchform.headerTitle
-        let footerTitle = L10n.Matchform.footerTitle
+        let headerTitle = L10n.MatchForm.headerTitle
+        let footerTitle = L10n.MatchForm.footerTitle
         
         return Section(header: headerTitle, footer: footerTitle) {
             $0.header?.height = { 50 }
             $0.footer?.height = { 30 }
             }
             <<< MatchTextCell("homeTeam") { row in
-                row.title = L10n.Matchform.homeTeam
-                row.placeholder = L10n.Matchform.Hometeam.placeholder
+                row.title = L10n.MatchForm.homeTeam
+                row.placeholder = L10n.MatchForm.HomeTeam.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -58,8 +58,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchTextCell("bet") { row in
-                row.title = L10n.Matchform.bet
-                row.placeholder = L10n.Matchform.Bet.placeholder
+                row.title = L10n.MatchForm.bet
+                row.placeholder = L10n.MatchForm.Bet.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -68,8 +68,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchTextCell("awayTeam") { row in
-                row.title = L10n.Matchform.awayTeam
-                row.placeholder = L10n.Matchform.Awayteam.placeholder
+                row.title = L10n.MatchForm.awayTeam
+                row.placeholder = L10n.MatchForm.AwayTeam.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -78,8 +78,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchTextCell("league") { row in
-                row.title = L10n.Matchform.league
-                row.placeholder = L10n.Matchform.League.placeholder
+                row.title = L10n.MatchForm.league
+                row.placeholder = L10n.MatchForm.League.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -88,8 +88,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchTextCell("country") { row in
-                row.title = L10n.Matchform.country
-                row.placeholder = L10n.Matchform.Country.placeholder
+                row.title = L10n.MatchForm.country
+                row.placeholder = L10n.MatchForm.Country.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -98,8 +98,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchIntCell("iddaaId") { row in
-                row.title = L10n.Matchform.betID
-                row.placeholder = L10n.Matchform.Betid.placeholder
+                row.title = L10n.MatchForm.betID
+                row.placeholder = L10n.MatchForm.BetID.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -108,8 +108,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchDecimalCell("odd") { row in
-                row.title = L10n.Matchform.odd
-                row.placeholder = L10n.Matchform.Odd.placeholder
+                row.title = L10n.MatchForm.odd
+                row.placeholder = L10n.MatchForm.Odd.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -119,7 +119,7 @@ class AddMatchVC: BaseFormViewController {
             }
 
             <<< MatchDateCell("date") {
-                $0.title = L10n.Matchform.date
+                $0.title = L10n.MatchForm.date
                 $0.add(rule: RuleRequired())
                 $0.validationOptions = .validatesOnChange
                 $0.value = Date()
@@ -136,7 +136,7 @@ class AddMatchVC: BaseFormViewController {
                     row.updateCell()
                 }
             <<< MatchTimeCell("time") {
-                $0.title = L10n.Matchform.time
+                $0.title = L10n.MatchForm.time
                 $0.add(rule: RuleRequired())
                 $0.validationOptions = .validatesOnChange
                 $0.value = NSDate.oneHourFromNow() as Date
@@ -153,8 +153,8 @@ class AddMatchVC: BaseFormViewController {
                     row.updateCell()
             }
             <<< MatchIntCell("type") { row in
-                row.title = L10n.Matchform.type
-                row.placeholder = L10n.Matchform.Matchtype.placeholder
+                row.title = L10n.MatchForm.type
+                row.placeholder = L10n.MatchForm.MatchType.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -163,8 +163,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchIntCell("won") { row in
-                row.title = L10n.Matchform.won
-                row.placeholder = L10n.Matchform.Won.placeholder
+                row.title = L10n.MatchForm.won
+                row.placeholder = L10n.MatchForm.Won.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -173,8 +173,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchMailCell("tipster") { row in
-                row.title = L10n.Matchform.tipster
-                row.placeholder = L10n.Matchform.Tipster.placeholder
+                row.title = L10n.MatchForm.tipster
+                row.placeholder = L10n.MatchForm.Tipster.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -183,8 +183,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchIntCell("status") { row in
-                row.title = L10n.Matchform.status
-                row.placeholder = L10n.Matchform.Status.placeholder
+                row.title = L10n.MatchForm.status
+                row.placeholder = L10n.MatchForm.Status.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -193,8 +193,8 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< MatchTextCell("site") { row in
-                row.title = L10n.Matchform.webSite
-                row.placeholder = L10n.Matchform.Website.placeholder
+                row.title = L10n.MatchForm.webSite
+                row.placeholder = L10n.MatchForm.WebSite.placeholder
                 }.cellUpdate { cell, row in
                     cell.titleLabel?.textColor = .secondary
                     cell.textField.textColor = .white
@@ -202,8 +202,9 @@ class AddMatchVC: BaseFormViewController {
                         cell.titleLabel?.textColor = .red
                     }
             }
-            <<< MatchSwitchCell("isSpecial") { row in
-                row.title = L10n.Matchform.isCoupon
+            <<< MatchSwitchCell() { row in
+                row.tag = "isSpecial"
+                row.title = L10n.MatchForm.isCoupon
                 }.cellUpdate { cell, row in
                     cell.textLabel?.textColor = .secondary
                     if !row.isValid {
@@ -211,7 +212,7 @@ class AddMatchVC: BaseFormViewController {
                     }
             }
             <<< ButtonRow {
-                $0.title = L10n.Matchform.saveMatch
+                $0.title = L10n.MatchForm.saveMatch
                 }
                 .cellUpdate { cell, _ in
                     cell.backgroundColor = .secondary

@@ -11,9 +11,9 @@ import Foundation
 class UIShowMainScreenEvent: UIEventBusEvent {
     typealias EventResult = UIShowMainScreenEvent
     
-    let transition: UIViewAnimationOptions
+    let transition: UIView.AnimationOptions
     
-    init(_ transition: UIViewAnimationOptions) {
+    init(_ transition: UIView.AnimationOptions) {
         self.transition = transition
     }
 }

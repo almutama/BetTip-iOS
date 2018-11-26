@@ -27,7 +27,7 @@ extension MatchAction: AlertActionType {
         }
     }
     
-    var style: UIAlertActionStyle {
+    var style: UIAlertAction.Style {
         switch self {
         case .cancel:
             return .cancel

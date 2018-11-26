@@ -74,7 +74,7 @@ class MatchCell: UITableViewCell, Reusable {
     override func layoutSubviews() {
         super.layoutSubviews()
         let insetForCell = UIEdgeInsets(top: 0, left: 5, bottom: 10, right: 5)
-        contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, insetForCell)
+        contentView.frame = frame.inset(by: insetForCell)
         contentView.layer.cornerRadius = 10
         contentView.layer.shadowColor = UIColor.black.cgColor
         contentView.layer.shadowOpacity = 0.3

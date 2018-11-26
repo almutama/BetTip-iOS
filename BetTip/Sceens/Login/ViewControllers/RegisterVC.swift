@@ -35,11 +35,11 @@ class RegisterVC: BaseViewController {
     }
     
     func prepareUI() {
-        self.emailLbl.text = L10n.Login.Signup.email
-        self.passwordLbl.text = L10n.Login.Signup.password
-        self.confirmLbl.text = L10n.Login.Signup.confirm
-        self.requiredLbl.text = L10n.Login.Signup.required
-        self.signUpBtn.setTitle(L10n.Login.Signup.signUpButton, for: .normal)
+        self.emailLbl.text = L10n.Login.SignUp.email
+        self.passwordLbl.text = L10n.Login.SignUp.password
+        self.confirmLbl.text = L10n.Login.SignUp.confirm
+        self.requiredLbl.text = L10n.Login.SignUp.required
+        self.signUpBtn.setTitle(L10n.Login.SignUp.signUpButton, for: .normal)
     }
 
     func bindViewModel() {

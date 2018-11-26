@@ -17,14 +17,14 @@ extension UICollectionView {
     
     func registerReusableHeaderNib<T: UICollectionReusableView>(_: T.Type) where T: Reusable {
         let nib = UINib(nibName: T.reuseIdentifier, bundle: nil)
-        self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier)
+        self.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier)
     }
     
     func registerReusableHeaderView<T: UICollectionReusableView>(_: T.Type) where T: Reusable {
         if let nib = T.nib {
-            self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier)
+            self.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier)
         } else {
-            self.register(T.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier)
+            self.register(T.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier)
         }
     }
     
@@ -36,7 +36,7 @@ extension UICollectionView {
     }
     
     func dequeueReusableHeader<T: UICollectionReusableView>(indexPath: IndexPath) -> T where T: Reusable {
-        guard let cell = self.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
+        guard let cell = self.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not deque table header cell")
         }
         return cell

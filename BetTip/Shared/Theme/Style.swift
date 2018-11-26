@@ -25,16 +25,16 @@ enum TypographyType {
 
 extension Style {
     
-    var attributes: [NSAttributedStringKey: Any] {
+    var attributes: [NSAttributedString.Key: Any] {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = alignment
         paragraphStyle.maximumLineHeight = lineHeight
         paragraphStyle.lineBreakMode = lineBreak
         
-        let attributes = [ NSAttributedStringKey.foregroundColor: color,
-                           NSAttributedStringKey.kern: kerning,
-                           NSAttributedStringKey.font: font,
-                           NSAttributedStringKey.paragraphStyle: paragraphStyle] as [NSAttributedStringKey: Any]
+        let attributes = [ NSAttributedString.Key.foregroundColor: color,
+                           NSAttributedString.Key.kern: kerning,
+                           NSAttributedString.Key.font: font,
+                           NSAttributedString.Key.paragraphStyle: paragraphStyle] as [NSAttributedString.Key: Any]
         
         return attributes
     }
@@ -79,7 +79,7 @@ extension String {
             if let range = self.range(of: " ") {
                 let location: Int = self.distance(from: self.startIndex, to: range.lowerBound)
                 let length: Int = self.distance(from: range.lowerBound, to: self.endIndex)
-                result.addAttributes([NSAttributedStringKey.font: style.font.withSize(style.font.pointSize*scale), NSAttributedStringKey.baselineOffset: type == .subscript ? 0 : style.font.pointSize*(1-scale)], range: NSRange(location: location, length: length))
+                result.addAttributes([NSAttributedString.Key.font: style.font.withSize(style.font.pointSize*scale), NSAttributedString.Key.baselineOffset: type == .subscript ? 0 : style.font.pointSize*(1-scale)], range: NSRange(location: location, length: length))
             }
         }
         return result

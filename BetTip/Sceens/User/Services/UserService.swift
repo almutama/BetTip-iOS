@@ -100,7 +100,7 @@ class UserService: UserServiceType {
         return Database.database().reference()
             .child(Constants.userCredits)
             .storeWithKey(UserCreditModel(id: userId, currentCredit: 0, usedCredit: 0), forKey: userId)
-            .mapValue { $0.object }
+            .mapValue { $0 }
             .mapError { error in .writeDenied(error) }
     }
     

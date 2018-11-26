@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate let appAssembler = AppAssembly.sharedInstance
     fileprivate let logger = Log.createLogger()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UIApplication.shared.statusBarStyle = .lightContent
         self.setupNotification(application: application)
         self.registerServices()
